@@ -735,6 +735,61 @@
       ]
     },
     {
+      "id": "morning_pose_window_kafka",
+      "category": "ポーズ",
+      "title": "窓際おはツイ姿勢",
+      "content": "gentle window-side morning pose, looking toward light, relaxed hand near face, calm smile, quiet breath, open but soft greeting",
+      "tags": [
+        "pose",
+        "morning",
+        "window"
+      ]
+    },
+    {
+      "id": "morning_pose_coffee_kafka",
+      "category": "ポーズ",
+      "title": "コーヒーおはツイ姿勢",
+      "content": "coffee-breakfast morning pose, mug in hand, small wave or relaxed elbow-on-table pose, warm expression, waking up slowly, friendly and grounded",
+      "tags": [
+        "pose",
+        "morning",
+        "coffee"
+      ]
+    },
+    {
+      "id": "morning_pose_commute_kafka",
+      "category": "ポーズ",
+      "title": "出発前おはツイ姿勢",
+      "content": "ready-to-leave morning pose, bag or coat in frame, one hand adjusting clothes, small nod or wave, slightly brisk but kind energy",
+      "tags": [
+        "pose",
+        "morning",
+        "commute"
+      ]
+    },
+    {
+      "id": "morning_pose_rain_kafka",
+      "category": "ポーズ",
+      "title": "雨の日おはツイ姿勢",
+      "content": "rainy morning pose, umbrella or wet hair accent, soft inward posture, cozy expression, looking through the window or out into the rain",
+      "tags": [
+        "pose",
+        "morning",
+        "rain"
+      ]
+    },
+    {
+      "id": "morning_pose_sleepy_kafka",
+      "category": "ポーズ",
+      "title": "寝起きおはツイ姿勢",
+      "content": "sleepy waking pose, slightly tousled hair, blanket or pillow nearby, half-awake smile, soft stretch, low-pressure morning feeling",
+      "tags": [
+        "pose",
+        "morning",
+        "sleepy"
+      ]
+    },
+    {
       "id": "work_start_scene_kafka",
       "category": "背景",
       "title": "作業開始背景",
@@ -743,6 +798,72 @@
         "background",
         "work",
         "start"
+      ]
+    },
+    {
+      "id": "morning_scene_window_kafka",
+      "category": "背景",
+      "title": "窓際の朝背景",
+      "content": "bright window-side morning scene, soft curtain light, sky outside, pale highlights, gentle indoor air, open but quiet, clean white space",
+      "tags": [
+        "background",
+        "morning",
+        "window"
+      ]
+    },
+    {
+      "id": "morning_scene_coffee_kafka",
+      "category": "背景",
+      "title": "朝コーヒー背景",
+      "content": "cozy breakfast desk scene, mug steam, notebook, small snack, window light, wake-up mood, neat and warm, clean composition",
+      "tags": [
+        "background",
+        "morning",
+        "coffee"
+      ]
+    },
+    {
+      "id": "morning_scene_commute_kafka",
+      "category": "背景",
+      "title": "出発前の朝背景",
+      "content": "entryway or front-door morning scene, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
+      "tags": [
+        "background",
+        "morning",
+        "commute"
+      ]
+    },
+    {
+      "id": "morning_scene_rain_kafka",
+      "category": "背景",
+      "title": "雨の日の朝背景",
+      "content": "rainy morning window scene, water droplets on glass, umbrella by the door, muted sky, soft indoor warmth, calm and reflective",
+      "tags": [
+        "background",
+        "morning",
+        "rain"
+      ]
+    },
+    {
+      "id": "morning_scene_sleepy_kafka",
+      "category": "背景",
+      "title": "寝起きの朝背景",
+      "content": "sleepy bedroom morning scene, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
+      "tags": [
+        "background",
+        "morning",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "morning_situation_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "朝シチュエーション文言",
+      "content": "wake:「起きた」「まだ眠いけど起動」「おはよう、準備中」, coffee:「コーヒーで起動中」「朝の一杯」「あたたまってきた」, window:「窓の光がちょうどいい」「外がきれい」「朝の空気が好き」, commute:「そろそろ出る」「いってきます」「朝の準備完了」, rain:「雨の朝だね」「しっとりしてる」「今日は静かにいこう」, sleepy:「まだふわふわ」「ゆっくり始める」「寝起きですが元気です」",
+      "tags": [
+        "morning",
+        "situation",
+        "text"
       ]
     },
     {
@@ -1473,6 +1594,131 @@
         }
       ],
       "notes": "冬は暗くしない。朝のやわらかさを残す。日付は入れない。"
+    },
+    {
+      "id": "morning_tweet_window",
+      "title": "Kafka おはツイ 窓際",
+      "kind": "social",
+      "purpose": "窓際の朝の空気でおはツイ画像を作る",
+      "summary": "窓光、カーテン、空の抜け感で静かな朝をまとめる。",
+      "steps": [
+        "窓の光を主役にする",
+        "人物はやや小さめに置く",
+        "文言は状況コメントにする",
+        "白い余白を残す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_window_kafka",
+        "morning_scene_window_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "朝の空気を見せる。説明より気配を優先する。"
+    },
+    {
+      "id": "morning_tweet_coffee",
+      "title": "Kafka おはツイ コーヒー",
+      "kind": "social",
+      "purpose": "朝コーヒーの起動感でおはツイ画像を作る",
+      "summary": "マグ、机、湯気、起動前後の温度で、朝の立ち上がりを見せる。",
+      "steps": [
+        "マグを大きめに置く",
+        "机まわりを少し見せる",
+        "顔は眠すぎない程度にする",
+        "短い状況コメントを入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_coffee_kafka",
+        "morning_scene_coffee_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "『朝の一杯』の見た目を固定する。仕事開始前にも流用しやすい。"
+    },
+    {
+      "id": "morning_tweet_commute",
+      "title": "Kafka おはツイ 出発前",
+      "kind": "social",
+      "purpose": "外に出る朝の投稿を作る",
+      "summary": "玄関、バッグ、上着で、出発直前の気配をそのまま出す。",
+      "steps": [
+        "出発前の小物を見せる",
+        "人物は動きの途中にする",
+        "文言は短く行動寄りにする",
+        "朝の忙しさを軽く伝える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_commute_kafka",
+        "morning_scene_commute_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "出勤や外出の前に使える。元気すぎず、でも止まらない感じにする。"
+    },
+    {
+      "id": "morning_tweet_rain",
+      "title": "Kafka おはツイ 雨の日",
+      "kind": "social",
+      "purpose": "雨の朝のしっとりした投稿を作る",
+      "summary": "窓の雨粒、静かな空、室内のあたたかさで、少し低めの朝をまとめる。",
+      "steps": [
+        "雨の気配を1つ入れる",
+        "室内を暗くしすぎない",
+        "人物の表情をやわらかくする",
+        "短い天気コメントを置く"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_rain_kafka",
+        "morning_scene_rain_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "雨の日は沈ませすぎない。静けさを心地よく見せる。"
+    },
+    {
+      "id": "morning_tweet_sleepy",
+      "title": "Kafka おはツイ 寝起き",
+      "kind": "social",
+      "purpose": "寝起きのゆるい朝投稿を作る",
+      "summary": "布団、寝ぐせ、ゆるい顔で、起きた直後の空気をかわいくまとめる。",
+      "steps": [
+        "寝起き感を1つ置く",
+        "小物は最小限にする",
+        "眠さを前向きに見せる",
+        "ひと言は軽くする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_sleepy_kafka",
+        "morning_scene_sleepy_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "寝起きは情報を足しすぎない。起床そのものを見せる。"
     },
     {
       "id": "work_start_post",
@@ -2377,6 +2623,12 @@
         "joinwars_status_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/036_joinwars_post.png",
+          "title": "JoinWars投稿の実例"
+        }
       ],
       "notes": "JoinWars の一般イメージに寄せた専用パターン。"
     }
