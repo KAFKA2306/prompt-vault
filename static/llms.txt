@@ -1,5 +1,7 @@
 # Prompt Vault
 
+> Prompt Vault is a Japanese image-generation prompt vault built around reusable prompt blocks and gallery-first templates.
+
 Prompt Vault is a Japanese prompt library for image generation.
 
 ## What this site is for

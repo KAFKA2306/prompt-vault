@@ -94,6 +94,12 @@
         <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
         <p class="lead">直感的に画像からプロンプトを探し出し、全文をそのままコピーできるギャラリーベースの保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで、使う場面からすぐ辿れます。</p>
+        <nav class="section-links" aria-label="ページ内リンク">
+          <a href="#featured-examples" class="section-link">Featured examples</a>
+          <a href="#gallery-section" class="section-link">Gallery</a>
+          <a href="#template-section" class="section-link">Templates</a>
+          <a href="/llms.txt" class="section-link">llms.txt</a>
+        </nav>
         <div class="stats" aria-label="サイトの概要">
           <div class="stat">
             <span class="stat__value" id="stat-blocks">104</span>
@@ -110,6 +116,39 @@
         </div>
       </div>
     </header>
+
+    <section class="panel featured" id="featured-examples" aria-labelledby="featured-title">
+      <div class="head">
+        <div>
+          <div class="subtle">静的プレビュー</div>
+          <h2 id="featured-title">Featured examples</h2>
+        </div>
+        <div class="subtle">AI bots にも拾われやすい見本画像</div>
+      </div>
+      <div class="featured-grid">
+        <a class="featured-card" href="#gallery-section">
+          <img src="artifacts/004_character_design_sheet.png" alt="Kafka キャラデザインシートの見本画像" loading="lazy" />
+          <div class="featured-card__body">
+            <strong>Character sheet</strong>
+            <span>画像生成プロンプトの設計図</span>
+          </div>
+        </a>
+        <a class="featured-card" href="#gallery-section">
+          <img src="artifacts/005_announcement_thumbnail.png" alt="告知サムネイルの見本画像" loading="lazy" />
+          <div class="featured-card__body">
+            <strong>Announcement</strong>
+            <span>告知・宣伝用バナー</span>
+          </div>
+        </a>
+        <a class="featured-card" href="#gallery-section">
+          <img src="artifacts/003_reaction_image.png" alt="反応画像の見本画像" loading="lazy" />
+          <div class="featured-card__body">
+            <strong>Reaction</strong>
+            <span>表情強調の実例</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <section class="panel seo-panel" aria-labelledby="seo-title">
       <div class="seo-panel__copy">
@@ -133,7 +172,7 @@
       </div>
     </section>
 
-    <section class="panel detail">
+    <section class="panel detail" id="gallery-section">
       <div class="head head--center">
         <div>
           <div class="subtle" id="gallery-count">0 items</div>
@@ -143,7 +182,7 @@
       </div>
 
       <div class="gallery" id="gallery"></div>
-      <div class="template-section">
+      <div class="template-section" id="template-section">
         <div class="head template-section__head">
           <div>
             <div class="subtle" id="template-count">0 templates</div>
