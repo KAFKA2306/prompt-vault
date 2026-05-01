@@ -4,19 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prompt Vault</title>
-  <style>
+    <style>
     :root {
-      --bg: #f6f8ff;
-      --panel: rgba(255,255,255,.76);
-      --line: rgba(88,110,170,.15);
-      --line-strong: rgba(88,110,170,.24);
-      --text: #182033;
-      --muted: #667087;
-      --accent: #6f8cff;
-      --accent-2: #b48cff;
-      --shadow: 0 30px 80px rgba(77,95,146,.14);
-      --radius: 24px;
-      --font: "Noto Sans JP","Inter",system-ui,sans-serif;
+      --bg: #f4f1ea;
+      --panel: rgba(255,255,255,.92);
+      --panel-soft: rgba(255,255,255,.72);
+      --line: rgba(16,24,40,.10);
+      --line-strong: rgba(15,118,110,.24);
+      --text: #111827;
+      --muted: #5b6472;
+      --accent: #0f766e;
+      --accent-2: #2563eb;
+      --shadow: 0 24px 60px rgba(17,24,39,.08);
+      --radius: 22px;
+      --font: "Inter","Noto Sans JP",system-ui,sans-serif;
+      --font-head: "Georgia","Times New Roman",serif;
     }
     * { box-sizing: border-box; }
     body {
@@ -24,21 +26,18 @@
       color: var(--text);
       font-family: var(--font);
       background:
-        radial-gradient(circle at 10% 15%, rgba(134,216,255,.28), transparent 26%),
-        radial-gradient(circle at 85% 18%, rgba(180,140,255,.20), transparent 24%),
-        radial-gradient(circle at 70% 82%, rgba(111,140,255,.16), transparent 22%),
-        linear-gradient(180deg, #f6f8ff, #eef3ff);
+        radial-gradient(circle at 12% 12%, rgba(15,118,110,.08), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(37,99,235,.08), transparent 22%),
+        radial-gradient(circle at 75% 82%, rgba(245,158,11,.07), transparent 26%),
+        linear-gradient(180deg, #f7f4ee, #efebe4);
       min-height: 100vh;
     }
-    .page { width: min(1440px,100%); margin: 0 auto; padding: 28px; }
-    .hero, .workspace, .panel, .card, .button, input, textarea, pre {
-      backdrop-filter: blur(16px);
-    }
+    .page { width: min(1280px,100%); margin: 0 auto; padding: 24px; }
     .hero {
       display: grid;
-      grid-template-columns: minmax(0,1.4fr) minmax(280px,.8fr);
-      gap: 18px;
-      margin-bottom: 18px;
+      grid-template-columns: minmax(0,1.2fr) minmax(280px,.8fr);
+      gap: 16px;
+      margin-bottom: 16px;
     }
     .panel {
       background: var(--panel);
@@ -46,57 +45,58 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .hero-copy { padding: 24px; }
+    .hero-copy { padding: 28px; }
     .eyebrow {
       display: inline-flex;
       gap: 8px;
       align-items: center;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(111,140,255,.09);
-      color: #4561c9;
-      border: 1px solid rgba(111,140,255,.16);
+      background: rgba(15,118,110,.08);
+      color: var(--accent);
+      border: 1px solid rgba(15,118,110,.16);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .04em;
     }
     h1 {
-      margin: 8px 0 12px;
-      font-size: clamp(32px,5vw,58px);
-      line-height: 1.02;
-      letter-spacing: -.04em;
+      margin: 10px 0 12px;
+      font-family: var(--font-head);
+      font-size: clamp(38px,5.4vw,64px);
+      line-height: .96;
+      letter-spacing: -.05em;
     }
     .lead {
       max-width: 64ch;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
       margin: 0;
       font-size: 15px;
     }
     .hero-side {
-      padding: 18px;
+      padding: 16px;
       display: grid;
       gap: 12px;
       align-content: start;
     }
     .metric {
       padding: 16px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.76);
+      border-radius: 18px;
+      background: var(--panel-soft);
       border: 1px solid var(--line);
     }
     .metric .label { font-size: 12px; color: var(--muted); }
     .metric .value {
       display: block;
       margin-top: 4px;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
-      letter-spacing: -.03em;
+      letter-spacing: -.04em;
     }
     .workspace {
       display: grid;
-      grid-template-columns: minmax(320px,.86fr) minmax(0,1.14fr);
-      gap: 18px;
+      grid-template-columns: minmax(320px,.82fr) minmax(0,1.18fr);
+      gap: 16px;
     }
     .sidebar, .detail { padding: 18px; }
     .head {
@@ -106,12 +106,12 @@
       gap: 12px;
       margin-bottom: 14px;
     }
-    .head h2, .head h3 { margin: 4px 0 0; letter-spacing: -.02em; }
+    .head h2, .head h3 { margin: 4px 0 0; letter-spacing: -.03em; font-family: var(--font-head); }
     .subtle { color: var(--muted); font-size: 12px; }
     .search {
       width: 100%;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.9);
+      background: rgba(255,255,255,.95);
       color: var(--text);
       border-radius: 16px;
       padding: 12px 14px;
@@ -120,8 +120,8 @@
       margin-bottom: 10px;
     }
     .search:focus {
-      border-color: rgba(111,140,255,.38);
-      box-shadow: 0 0 0 4px rgba(111,140,255,.08);
+      border-color: rgba(15,118,110,.36);
+      box-shadow: 0 0 0 4px rgba(15,118,110,.08);
     }
     .chips {
       display: flex;
@@ -132,9 +132,9 @@
     .chip, .button {
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.96);
       padding: 9px 12px;
-      color: #42506b;
+      color: #334155;
       font-size: 13px;
       cursor: pointer;
     }
@@ -153,14 +153,14 @@
     .card {
       padding: 14px;
       cursor: pointer;
-      transition: transform .16s ease, border-color .16s ease;
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
     }
     .card:hover { transform: translateY(-2px); border-color: var(--line-strong); }
     .card.active {
-      border-color: rgba(111,140,255,.36);
-      box-shadow: 0 18px 50px rgba(111,140,255,.12);
+      border-color: rgba(15,118,110,.34);
+      box-shadow: 0 18px 50px rgba(15,118,110,.10);
     }
-    .title { font-weight: 800; letter-spacing: -.02em; margin: 0; }
+    .title { font-weight: 800; letter-spacing: -.03em; margin: 0; }
     .meta, .preview { color: var(--muted); font-size: 12px; }
     .preview {
       margin: 10px 0 0;
@@ -180,9 +180,9 @@
       font-size: 12px;
       padding: 5px 9px;
       border-radius: 999px;
-      background: rgba(111,140,255,.08);
-      color: #4960b2;
-      border: 1px solid rgba(111,140,255,.12);
+      background: rgba(15,118,110,.08);
+      color: #0f766e;
+      border: 1px solid rgba(15,118,110,.14);
     }
     .detail {
       display: grid;
@@ -190,7 +190,7 @@
     }
     .block {
       padding: 16px;
-      background: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.94);
       border: 1px solid var(--line);
       border-radius: 20px;
     }
@@ -201,7 +201,7 @@
       overflow: auto;
       white-space: pre-wrap;
       word-break: break-word;
-      background: rgba(245,248,255,.95);
+      background: rgba(250,250,248,.98);
       border: 1px solid var(--line);
       border-radius: 18px;
       line-height: 1.7;
@@ -214,9 +214,9 @@
       padding: 18px;
       text-align: center;
       color: var(--muted);
-      border: 1px dashed rgba(111,140,255,.22);
+      border: 1px dashed rgba(15,118,110,.22);
       border-radius: 18px;
-      background: rgba(255,255,255,.52);
+      background: rgba(255,255,255,.62);
     }
     @media (max-width: 1100px) {
       .hero, .workspace { grid-template-columns: 1fr; }
@@ -233,14 +233,14 @@
   <main class="page">
     <section class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">用途別テンプレート / ローカルDB / 静的配信</div>
+        <div class="eyebrow">静的配信 / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
         <p class="lead">全文ではなく、用途別のブロックを保存する保管庫です。組み立て済み全文、ブロック単体、タグ、メモをそのままコピーできます。</p>
       </div>
       <aside class="panel hero-side">
         <div class="metric"><span class="label">ブロック数</span><span class="value" id="metric-blocks">0</span></div>
         <div class="metric"><span class="label">テンプレート数</span><span class="value" id="metric-templates">0</span></div>
-        <div class="metric"><span class="label">固定</span><span class="value" id="metric-pinned">0</span></div>
+        <div class="metric"><span class="label">配信</span><span class="value" id="metric-delivery">静的</span></div>
       </aside>
     </section>
 
@@ -324,7 +324,7 @@
     const renderMetrics = () => {
       el('metric-blocks').textContent = String(db.blocks.length);
       el('metric-templates').textContent = String(state.templates.length);
-      el('metric-pinned').textContent = String(state.templates.filter((item) => item.is_pinned).length);
+      el('metric-delivery').textContent = '静的';
     };
 
     const renderFilters = () => {

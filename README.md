@@ -6,6 +6,7 @@
 - [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
 - [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
 - [表示検証スクリプト](scripts/verify_pages.sh)
+- [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
 - [CLAUDE.md](CLAUDE.md)
 
