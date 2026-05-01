@@ -2529,6 +2529,12 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/053_trpg_character_sheet.png",
+          "title": "TRPGキャラシートの実例"
+        }
+      ],
       "notes": "現代日本TRPG（CoCなど）の探索者をイメージしたシート用。"
     },
     {
@@ -2549,6 +2555,12 @@
         "travel_bg_kyoto",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/054_travel_kyoto.png",
+          "title": "京都旅行の実例"
+        }
       ],
       "notes": "和風な雰囲気を楽しむ一枚。"
     },
@@ -2571,6 +2583,12 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/055_travel_tokyo.png",
+          "title": "東京旅行の実例"
+        }
+      ],
       "notes": "都会のエネルギーを楽しむ一枚。"
     },
     {
@@ -2592,6 +2610,12 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/056_travel_okinawa.png",
+          "title": "沖縄旅行の実例"
+        }
+      ],
       "notes": "南国のリラックスした雰囲気を楽しむ一枚。"
     },
     {
@@ -2612,6 +2636,12 @@
         "travel_bg_hokkaido",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/057_travel_hokkaido.png",
+          "title": "北海道旅行の実例"
+        }
       ],
       "notes": "広大な自然を楽しむ一枚。"
     }
