@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー</title>
-  <meta name="description" content="Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
+  <title>Prompt Vault | テンプレート一覧から探して全文コピー</title>
+  <meta name="description" content="Prompt Vault は、画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="KAFKA2306" />
   <link rel="canonical" href="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:site_name" content="Prompt Vault" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
-  <meta property="og:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
+  <meta property="og:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
+  <meta property="og:description" content="画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
   <meta property="og:url" content="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
-  <meta name="twitter:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
+  <meta name="twitter:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
+  <meta name="twitter:description" content="画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
   <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta name="theme-color" content="#0f766e" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -33,7 +33,7 @@
           "@id": "https://prompt-vault-cg3.pages.dev/#website",
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault",
-          "description": "画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。",
+          "description": "画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。",
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://prompt-vault-cg3.pages.dev/?q={search_term_string}",
@@ -45,7 +45,7 @@
           "@type": "CollectionPage",
           "@id": "https://prompt-vault-cg3.pages.dev/#webpage",
           "url": "https://prompt-vault-cg3.pages.dev/",
-          "name": "Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー",
+          "name": "Prompt Vault | テンプレート一覧から探して全文コピー",
           "description": "画像生成プロンプト保管庫です。",
           "isPartOf": {
             "@id": "https://prompt-vault-cg3.pages.dev/#website"
@@ -80,143 +80,35 @@
           ],
           "inLanguage": "ja-JP"
         },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://prompt-vault-cg3.pages.dev/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://prompt-vault-cg3.pages.dev/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Prompt Vault",
-              "item": "https://prompt-vault-cg3.pages.dev/"
-            }
-          ]
-        }
       ]
     }
   </script>
 </head>
 <body>
   <main class="page">
-    <nav class="breadcrumbs" aria-label="パンくずリスト">
-      <a href="/" class="breadcrumb">Home</a>
-      <span aria-hidden="true">/</span>
-      <span class="breadcrumb breadcrumb--current">Prompt Vault</span>
-    </nav>
-
     <header class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー</div>
         <h1>Prompt Vault</h1>
-        <p class="lead">画像からプロンプトを探し、全文をコピーできる保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。</p>
+        <p class="lead">テンプレート一覧から選び、詳細表示で全文をコピーする保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。</p>
         <div class="hero-actions" aria-label="主要操作">
-          <a href="#gallery-section" class="button button--link primary">ギャラリーへ</a>
           <a href="#template-section" class="button button--link">テンプレートへ</a>
-          <a href="https://github.com/KAFKA2306/prompt-vault" class="button button--link">GitHub</a>
-        </div>
-        <nav class="section-links" aria-label="ページ内リンク">
-          <a href="#featured-examples" class="section-link">画像例</a>
-          <a href="#gallery-section" class="section-link">Gallery</a>
-          <a href="#template-section" class="section-link">Templates</a>
-        </nav>
-        <div class="stats" aria-label="サイトの概要">
-          <div class="stat">
-            <span class="stat__value" id="stat-blocks">102</span>
-            <span class="stat__label">blocks</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value" id="stat-templates">46</span>
-            <span class="stat__label">templates</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value" id="stat-images">55</span>
-            <span class="stat__label">images</span>
-          </div>
         </div>
       </div>
     </header>
 
-    <section class="panel featured" id="featured-examples" aria-labelledby="featured-title">
-      <div class="head">
-        <div>
-          <div class="subtle">見本</div>
-          <h2 id="featured-title">画像例</h2>
-        </div>
-      </div>
-      <div class="featured-grid">
-        <a class="featured-card" href="#gallery-section">
-          <img src="artifacts/004_character_design_sheet.png" alt="Kafka キャラデザインシートの見本画像" loading="lazy" />
-          <div class="featured-card__body">
-            <strong>Character sheet</strong>
-            <span>画像生成プロンプトの設計図</span>
-          </div>
-        </a>
-        <a class="featured-card" href="#gallery-section">
-          <img src="artifacts/005_announcement_thumbnail.png" alt="告知サムネイルの見本画像" loading="lazy" />
-          <div class="featured-card__body">
-            <strong>Announcement</strong>
-            <span>告知・宣伝用バナー</span>
-          </div>
-        </a>
-        <a class="featured-card" href="#gallery-section">
-          <img src="artifacts/003_reaction_image.png" alt="反応画像の見本画像" loading="lazy" />
-          <div class="featured-card__body">
-            <strong>Reaction</strong>
-            <span>表情強調の実例</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="panel seo-panel" aria-labelledby="seo-title">
-      <div class="seo-panel__copy">
-        <div class="eyebrow">使い方</div>
-        <h2 id="seo-title">画像生成プロンプトを探して、コピーする。</h2>
-        <p>Prompt Vault は、ギャラリーとモーダルでプロンプトを扱うサイトです。</p>
-      </div>
-      <div class="seo-panel__facts" aria-label="特徴">
-        <div class="seo-fact">
-          <strong>検索</strong>
-          <span>タイトル / 目的 / ブロックID で絞り込み</span>
-        </div>
-        <div class="seo-fact">
-          <strong>コピー</strong>
-          <span>モーダル上部のボタンから全文を即コピー</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel detail" id="gallery-section">
+    <section class="panel detail" id="template-section">
       <div class="head head--center">
         <div>
-          <div class="subtle" id="gallery-count">0 items</div>
-          <h2 id="detail-title">ギャラリー</h2>
+          <div class="subtle" id="template-count">0 templates</div>
+          <h2 id="detail-title">テンプレート一覧</h2>
         </div>
         <input id="search" class="search search--compact" placeholder="検索: タイトル / 目的 / ブロックID" />
       </div>
-
-      <div class="gallery" id="gallery"></div>
-      <div class="template-section" id="template-section">
-        <div class="head template-section__head">
-          <div>
-            <div class="subtle" id="template-count">0 templates</div>
-            <h3>テンプレート一覧</h3>
-          </div>
-          <div class="subtle">画像がないものもあります</div>
-        </div>
-        <div class="template-rail" id="template-rail"></div>
+      <div class="template-section__head template-section__head--minimal">
+        <div class="subtle">画像がないものもあります</div>
       </div>
+      <div class="template-rail" id="template-rail"></div>
     </section>
-
-    <footer class="footer">
-      <a href="https://github.com/KAFKA2306/prompt-vault/issues" class="footer__contact">GitHub Issues</a>
-    </footer>
   </main>
 
   <div class="modal" id="modal">
@@ -230,7 +122,7 @@
           <div class="eyebrow" id="modal-kind">Category</div>
           <h2 id="modal-title">Title</h2>
           <p class="subtle modal-purpose" id="modal-purpose">Purpose</p>
-          <button class="button primary button--full" id="modal-copy">コピー</button>
+          <button class="button primary button--full" id="modal-copy">全文をコピー</button>
         </div>
         <div class="block" id="modal-primary-block">
           <div class="subtle" id="modal-primary-title">ノード</div>

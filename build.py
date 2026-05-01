@@ -45,6 +45,15 @@ def load_db() -> dict[str, Any]:
         for node_id in template.get("uses", []):
             if node_id not in all_nodes:
                 raise ValueError(f"unknown uses id in {template_id}: {node_id}")
+        artifact_paths = set()
+        for artifact in template.get("artifacts", []):
+            artifact_path = artifact["path"]
+            if artifact_path in artifact_paths:
+                raise ValueError(f"duplicate artifact path in {template_id}: {artifact_path}")
+            artifact_paths.add(artifact_path)
+            absolute_path = ROOT / artifact_path
+            if not absolute_path.exists():
+                raise ValueError(f"missing artifact in {template_id}: {artifact_path}")
     return db
 
 

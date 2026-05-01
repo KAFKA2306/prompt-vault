@@ -29,13 +29,6 @@ const state = {
   search: new URLSearchParams(window.location.search).get('q') || '',
 };
 
-const stats = {
-  blocks: db.blocks.length,
-  templates: templates.length,
-  images: db.blocks.reduce((count, block) => count + (block.artifacts?.length || 0), 0)
-    + templates.reduce((count, template) => count + (template.artifacts?.length || 0), 0),
-};
-
 const el = (id) => document.getElementById(id);
 
 const meta = (selector) => document.head.querySelector(selector);
@@ -46,8 +39,8 @@ const setMetaContent = (selector, value) => {
 };
 
 const setSeoCopy = () => {
-  const title = `Prompt Vault | ${stats.blocks}ブロック・${stats.templates}テンプレートの画像生成プロンプト集`;
-  const description = 'Prompt Vault は、画像からプロンプトを探し、全文をコピーできる保管庫です。';
+  const title = 'Prompt Vault | テンプレート一覧から探して全文コピー';
+  const description = 'Prompt Vault は、テンプレート一覧から探して、詳細表示で全文をコピーできる保管庫です。';
 
   document.title = title;
   setMetaContent('meta[name="description"]', description);
@@ -55,12 +48,6 @@ const setSeoCopy = () => {
   setMetaContent('meta[property="og:description"]', description);
   setMetaContent('meta[name="twitter:title"]', title);
   setMetaContent('meta[name="twitter:description"]', description);
-  const statBlocks = el('stat-blocks');
-  const statTemplates = el('stat-templates');
-  const statImages = el('stat-images');
-  if (statBlocks) statBlocks.textContent = String(stats.blocks);
-  if (statTemplates) statTemplates.textContent = String(stats.templates);
-  if (statImages) statImages.textContent = String(stats.images);
 };
 
 const getNodeType = (id) => {
@@ -374,29 +361,6 @@ const closeModal = () => {
   state.selectedNode = null;
 };
 
-const renderGallery = () => {
-  const list = filteredTemplates().filter(t => t.artifacts && t.artifacts.length > 0);
-  el('gallery-count').textContent = `${list.length} images`;
-  
-  el('gallery').innerHTML = list.map((template) => `
-    <div class="gallery-item" data-open="${template.id}">
-      <img src="${template.artifacts[0].path}" alt="${escapeHTML(template.artifacts[0].title || `${template.title} の実例画像`)}" loading="lazy" />
-      <div class="gallery-item__overlay">
-        <p class="gallery-item__title">${template.title}</p>
-        <p class="gallery-item__meta">${template.purpose}</p>
-      </div>
-    </div>
-  `).join('');
-
-  el('gallery').querySelectorAll('[data-open]').forEach((item) => {
-    item.addEventListener('click', () => openTemplate(item.dataset.open));
-  });
-
-  if (!list.length) {
-    el('gallery').innerHTML = '<div class="empty">一致する実例がありません。</div>';
-  }
-};
-
 const renderTemplateRail = () => {
   const list = filteredTemplates();
   el('template-count').textContent = `${list.length} templates`;
@@ -436,7 +400,6 @@ const renderTemplateRail = () => {
 
 
 const render = () => {
-  renderGallery();
   renderTemplateRail();
 };
 
