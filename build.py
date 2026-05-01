@@ -17,10 +17,21 @@ def generated_template_title(source_title: str, instruction: str, limit: int = 2
     if compact_instruction and len(compact_instruction) > limit:
         compact_instruction = compact_instruction[:limit].rstrip() + "…"
     if not compact_instruction:
-        compact_instruction = "生成版"
-    if source_title:
-        return f"{source_title} / {compact_instruction}"
+        compact_instruction = (source_title or "生成版").strip()
     return compact_instruction
+
+
+def normalized_generated_title(title: str, source_title: str, instruction: str) -> str:
+    candidate = " ".join(str(title).split()).strip()
+    if " / " in candidate:
+        candidate = candidate.split(" / ", 1)[-1].strip()
+    if source_title and candidate == source_title.strip():
+        candidate = ""
+    if candidate in {"新しいスタンプ", "生成版", "generated"}:
+        candidate = ""
+    if not candidate:
+        candidate = generated_template_title(source_title, instruction)
+    return candidate
 
 
 def load_db() -> dict[str, Any]:
@@ -72,7 +83,7 @@ def load_db() -> dict[str, Any]:
         source_template = next((item for item in db["templates"] if item["id"] == template.get("generated_from")), None)
         source_title = source_template["title"] if source_template else template.get("generated_from", "generated")
         generated_instruction = template.get("generated_instruction") or template.get("summary") or template.get("purpose") or ""
-        normalized_title = generated_template_title(source_title, generated_instruction)
+        normalized_title = normalized_generated_title(template.get("title", ""), source_title, generated_instruction)
         template["title"] = normalized_title
         template["generated_title"] = normalized_title
 
@@ -86,7 +97,11 @@ def load_db() -> dict[str, Any]:
 
         source_template = next((template for template in db["templates"] if template["id"] == record.get("template_id")), None)
         source_title = source_template["title"] if source_template else record.get("template_id", "generated")
-        generated_title = record.get("generated_title") or record.get("title") or generated_template_title(source_title, record.get("instruction", ""))
+        generated_title = normalized_generated_title(
+            record.get("generated_title") or record.get("title") or "",
+            source_title,
+            record.get("instruction", ""),
+        )
         generated_templates.append({
             "id": generated_template_id,
             "title": generated_title,
@@ -99,15 +114,27 @@ def load_db() -> dict[str, Any]:
             "generated_addition": record.get("generated_addition", ""),
             "generation_prompt_source": record.get("generation_prompt_source"),
             "generation_prompt_hash": record.get("generation_prompt_hash"),
+            "artifacts": record.get("artifacts", []),
             "generated_from": record.get("template_id"),
             "generated_instruction": record.get("instruction"),
             "generated_at": record.get("created_at"),
             "generated_request_id": record.get("id"),
+            "visibility": "internal",
         })
         existing_template_ids.add(generated_template_id)
 
     if generated_templates:
         db["templates"] = [*db["templates"], *generated_templates]
+        artifact_paths = set()
+        for template in generated_templates:
+            for artifact in template.get("artifacts", []):
+                artifact_path = artifact["path"]
+                if artifact_path in artifact_paths:
+                    raise ValueError(f"duplicate artifact path in {template['id']}: {artifact_path}")
+                artifact_paths.add(artifact_path)
+                absolute_path = ROOT / artifact_path
+                if not absolute_path.exists():
+                    raise ValueError(f"missing artifact in {template['id']}: {artifact_path}")
     return db
 
 

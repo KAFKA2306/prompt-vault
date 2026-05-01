@@ -1,6 +1,8 @@
 const db = __DB_JSON__;
-const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
-const templates = db.templates;
+const blocks = Object.fromEntries(db.blocks
+  .filter((block) => block.visibility !== 'internal')
+  .map((block) => [block.id, block]));
+const templates = db.templates.filter((template) => template.visibility !== 'internal');
 const templateMap = Object.fromEntries(templates.map((template) => [template.id, template]));
 const generatorBlockNodes = Object.values(blocks).sort((a, b) => (
   a.category.localeCompare(b.category, 'ja') || a.title.localeCompare(b.title, 'ja')

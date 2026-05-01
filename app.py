@@ -24,12 +24,16 @@ ARTIFACTS_PATH = ROOT / "artifacts"
 PROMPTS_PATH = ROOT / "db" / "prompts.json"
 CODEX_MODEL = os.environ.get("PROMPT_VAULT_CODEX_MODEL", "").strip()
 GEMINI_MODEL = os.environ.get("PROMPT_VAULT_GEMINI_MODEL", "gemini-1.5-flash").strip()
-DEFAULT_GENERATION_PROMPT = """あなたは既存ブロックをそのまま使い、新しい追加分だけを生成する編集者です。
+DEFAULT_GENERATION_PROMPT = """あなたは既存ブロックの構造を保ちながら、必要な部分だけを最小差分で更新する編集者です。
 出力は JSON のみ。キーは title, block_updates, addition の 3 つだけにする。
-title は毎回新しく定義する。固定の「生成版」ではなく、今回のシチュエーションに合う短い名前にする。
+title は毎回新しく定義する。固定の「生成版」や `テンプレート名 / ...` 形式は使わず、今回のシチュエーションだけで短く命名する。
+title は、指示文のメタ表現ではなく、実際のレイアウト用途だけで短く命名する。
 block_updates は、既存ブロックのうち文脈に合わないものだけを差し替えるための配列。各要素は {\"id\": \"...\", \"content\": \"...\"} にする。
-addition は、既存ブロックに入らない新しい補足だけを書く。不要なら空文字にする。
+addition は、既存ブロックに入らない新しい補足だけを書く。場面そのものをここに押し込まない。できるだけ空文字にする。新しい補足が 1 つだけ必要なときに限る。
 既存ブロックは原則流用する。ただし元のシチュエーションと違う場合は、該当ブロックの content を柔軟に更新する。
+ブロックの役割は壊さない。特に master_style / character / brand / negative / text_style は、明確な理由がない限り維持する。
+scene / pose / background / text_content / effects は、ユーザー指示に合わせて更新してよい。
+既存の構造を保ち、更新するブロックだけを書き換える。全体をひとつの一般文にまとめない。
 JSON 以外の説明、箇条書き、Markdown、コードフェンスは出さない。
 
 テンプレート名: {{template_title}}
@@ -47,8 +51,13 @@ JSON 以外の説明、箇条書き、Markdown、コードフェンスは出さ�
 - 既存ブロックの役割は壊さない
 - ユーザー指示に合わないブロックだけを更新する
 - 更新しないブロックはそのまま使う
-- 新しい追加分があるときだけ addition に入れる
+- 新しい追加分があるときだけ addition に入れる。addition は短くする
+- addition は 1 フレーズまで
 - 余計な短縮をしない
+- 既存の構造を維持する。addition に場面全体を書かない
+- 既存ブロックで足りるなら addition は空文字にする
+- タイトルに ` / ` を入れない
+- タイトルに「新しい」「生成版」「template」「generated」「案」「非スタンプ」「パターン」のような汎用語を入れない
 """
 
 
@@ -143,7 +152,7 @@ class Handler(BaseHTTPRequestHandler):
             selected_blocks = list(template.get("blocks", []))
 
         source_blocks = "\n\n".join(
-            f"- {blocks_by_id[block_id]['title']} ({block_id}): {blocks_by_id[block_id]['content']}"
+            f"- {blocks_by_id[block_id]['title']} [{blocks_by_id[block_id]['category']}] ({block_id}): {blocks_by_id[block_id]['content']}"
             for block_id in selected_blocks
         )
         source, source_path = self._load_generation_prompt_source(backend)
@@ -214,7 +223,8 @@ class Handler(BaseHTTPRequestHandler):
         addition = addition.strip()
         if addition:
             prefix_parts.append(addition)
-        return ", ".join(part for part in [*prefix_parts, *suffix_parts] if part)
+        parts = [part for part in [*prefix_parts, *suffix_parts] if part]
+        return "\n\n".join(parts)
 
     def _call_codex(self, prompt: str) -> str:
         if shutil.which("codex") is None:

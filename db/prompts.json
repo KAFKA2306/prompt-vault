@@ -423,7 +423,8 @@
         "memory",
         "summary",
         "context"
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "voice_pipeline_pack",
@@ -511,7 +512,8 @@
         "log",
         "review",
         "analysis"
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "logo_only_kafka",
@@ -1135,7 +1137,8 @@
         "sheet",
         "recap",
         "kafka"
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "prompt_archive_sheet_vlog",
@@ -1146,7 +1149,8 @@
         "prompt",
         "archive",
         "ledger"
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "archive_index_vlog",
@@ -1158,7 +1162,8 @@
         "index",
         "sheet",
         "kafka"
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "trpg_character_sheet_layout",
@@ -1225,14 +1230,110 @@
         "background",
         "hokkaido"
       ]
+    },
+    {
+      "id": "comparison_layout",
+      "title": "比較カード",
+      "category": "比較・整理",
+      "content": "2-column comparison card, split layout, paired panels, clear labels for left and right, before/after, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet"
+    },
+    {
+      "id": "timeline_layout",
+      "title": "タイムライン",
+      "category": "フロー・構造",
+      "content": "horizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, no clutter, process or history overview"
+    },
+    {
+      "id": "decision_tree_layout",
+      "title": "分岐フロー",
+      "category": "フロー・構造",
+      "content": "branching flowchart, question nodes, yes/no or option splits, decision diamonds, short labels, readable connectors, clear start and end, minimal but structured decision guide"
+    },
+    {
+      "id": "moodboard_layout",
+      "title": "ムードボード",
+      "category": "コンセプト・ムード",
+      "content": "collage mood board, inspiration board, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board"
+    },
+    {
+      "id": "checklist_layout",
+      "title": "チェックリスト",
+      "category": "フロー・構造",
+      "content": "checklist layout, tick boxes, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset"
+    },
+    {
+      "id": "before_after_layout",
+      "title": "ビフォーアフター",
+      "category": "比較・整理",
+      "content": "before and after layout, two-panel reveal, transformation comparison, clear labels, left/right or top/bottom split, emphasized change, easy to understand progression, minimal clutter, practical visual summary"
+    },
+    {
+      "id": "character_sheet_shafuka",
+      "category": "形式・レイアウト",
+      "title": "しゃふか キャラデザインシート",
+      "content": "Ultra high resolution character design sheet, clean white background, Japanese anime style, simple and cute illustration, low detail, flat coloring, minimal shading, clean lineart, 4k\n\nA cute jirai-kei gothic girl character design system sheet\n\nCharacter:\npetite teenage girl, soft and slightly chibi proportions, simple and approachable design\n\nHair:\nshort bob haircut with straight blunt bangs\nblack hair with soft pink inner color and a few pink streaks\nslightly rounded silhouette, simplified strands\n\nEyes:\nheterochromia, one eye light green, the other pinkish purple\nlarge simple anime eyes, minimal highlights\nsoft blush, small cute mouth\n\nHeadwear:\nblack baseball cap with a small ribbon on the front\nvery simple design, minimal detail\n\nOutfit:\nlight gray oversized cropped jacket\nblack fluffy fur collar\nvery simplified folds\nsleeves have simple lace-up ribbon design\n\nTop:\nblack inner top with a simple ribbon on chest\n\nSkirt:\nblack pleated skirt, simplified shape\nminimal lace detail\n\nGarter:\nsimple garter straps attached to skirt\n\nLegwear:\nblack thigh-high socks, flat color\n\nShoes:\nplatform shoes, rounded shape\nsimple ribbon decoration\nminimal detail\n\nAccessories:\nblack choker with a ring\nsimple waist chain\nsmall paw-shaped hair clip\n\nStyle:\nvery simple, slightly rough and cute drawing style\nintentionally low detail\nflat colors with almost no gradient\nthick and clean lineart\npop and friendly visual tone\n\nComposition:\ninclude front view, side view, back view\ninclude 2–3 simple facial expressions\ninclude small chibi version\n\nColor palette:\nblack, gray, soft pink, muted green\n\nno text, no watermark",
+      "tags": [
+        "shafuka",
+        "character-sheet",
+        "jirai-kei",
+        "prompt"
+      ]
+    },
+    {
+      "id": "character_sheet_miyu",
+      "category": "形式・レイアウト",
+      "title": "みゆ キャラデザインシート",
+      "content": "masterpiece, best quality, ultra detailed, dreamy pastel anime illustration, bright airy summer atmosphere, soft cinematic bloom, delicate lighting, extremely soft shading, white and sky-blue color palette, high-key exposure, glossy highlights, shallow depth of field, bokeh flowers in foreground, elegant cafe terrace scene, emotional healing mood, ultra clean rendering, polished commercial anime art style\n\ncute anime girl, petite build, sitting at a white round cafe table outdoors, upper body slightly leaning forward, relaxed and cheerful pose, eyes closed in a happy smile, small open mouth smile, soft blush on cheeks, right hand gently touching cheek, left arm resting naturally, calm and sweet expression\n\nvery light lavender-blue hair, silky semi-transparent hair texture, fluffy layered bangs covering eyebrows, long side ponytail gathered low on the right side, soft curled strands, translucent pastel highlights, multiple tiny pale pink ribbon hairpins scattered through bangs and side hair, two glossy dark navy heart-shaped hair clips on bangs\n\nlarge soft anime face, tiny nose, smooth pale skin, subtle pink blush gradient, thin eyelashes, glossy lips\n\nwhite sleeveless summer dress with thin straps, blue floral porcelain-style pattern, frilled shoulder straps, fitted bodice, tiny blue ribbon at waist, lightweight cotton fabric, soft folds, elegant feminine summer fashion\n\nsilver necklace, silver bracelet, delicate accessories, subtle sparkle highlights\n\nbright blue cream soda float on table, transparent curved glass, blue gradient liquid, ice cubes visible, scoop of vanilla ice cream on top, red cherry garnish, white straw, realistic glass reflections, coaster under glass\n\nwhite decorative metal cafe chair, white terrace interior, large open windows, vivid blue sky with fluffy white clouds outside, soft white flowers and blue flowers surrounding foreground and background, bright summer sunlight pouring in\n\ncomposition focused on character centered slightly left, drink placed lower right foreground, portrait orientation, chest-to-thigh framing, slight downward camera angle, intimate composition\n\nextremely soft ambient lighting, bloom around edges, atmospheric perspective, pastel haze, glowing rim light on hair and shoulders, gentle highlights on skin, dreamy watercolor-like atmosphere while retaining sharp facial rendering\n\nno text, no watermark, no logo, no extra people, no dark shadows, no harsh contrast, no messy background, no distorted anatomy, no extra fingers, no low detail, no AI artifacts, no bad hands, no duplicate accessories",
+      "tags": [
+        "miyu",
+        "character-sheet",
+        "summer",
+        "cafe",
+        "prompt"
+      ]
+    },
+    {
+      "id": "character_shafuka",
+      "category": "キャラクター",
+      "title": "しゃふか",
+      "content": "petite jirai-kei gothic girl, short bob haircut with straight blunt bangs, black hair with soft pink inner color and pink streaks, heterochromia with light green and pink-purple eyes, black baseball cap with a ribbon, light gray oversized cropped jacket with black fluffy fur collar, black inner top with a ribbon, black pleated skirt, simple garter straps, black thigh-high socks, platform shoes, black choker, simple waist chain, small paw-shaped hair clip, simple cute drawing style, flat colors, thick clean lineart, intentionally low detail",
+      "tags": [
+        "shafuka",
+        "character",
+        "jirai-kei"
+      ]
+    },
+    {
+      "id": "character_miyu",
+      "category": "キャラクター",
+      "title": "みゆ",
+      "content": "cute anime girl with very light lavender-blue hair, silky semi-transparent texture, fluffy layered bangs, long side ponytail gathered low on the right side, soft curled strands, tiny pale pink ribbon hairpins, glossy dark navy heart-shaped hair clips, large soft face, tiny nose, smooth pale skin, subtle pink blush, white sleeveless summer dress with thin straps and blue floral pattern, frilled shoulder straps, tiny blue waist ribbon, silver necklace and bracelet, bright airy summer cafe mood",
+      "tags": [
+        "miyu",
+        "character",
+        "summer",
+        "cafe"
+      ]
+    },
+    {
+      "id": "vacation_dining_trio_scene",
+      "category": "シーン・構図",
+      "title": "3人バカンス食事",
+      "content": "three-person vacation dining scene, Kafka, Shafuka, and Miyu sharing a bright meal together, ecstatic and delighted expressions, lively laughter, relaxed holiday mood, eating a lot, multiple plates and drinks on the table, sunny vacation terrace or cafe, generous food-forward composition, joyful and indulgent atmosphere, clear separation between the three characters, each with a distinct pose, clean readable arrangement, bright summer light, celebratory and satisfying feel",
+      "tags": [
+        "vacation",
+        "dining",
+        "trio",
+        "scene"
+      ]
     }
   ],
   "templates": [
     {
       "id": "stamp_sheet",
-      "title": "Kafka 新しいスタンプ",
+      "title": "Kafka スタンプ",
       "kind": "stamp",
-      "purpose": "いつものキャラを、いつものスタイルで新しいスタンプにする",
+      "purpose": "いつものキャラを、いつものスタイルでスタンプにする",
       "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。",
       "steps": [
         "キャラと衣装を固定する",
@@ -1255,6 +1356,10 @@
         {
           "path": "artifacts/001_sticker_sheet.png",
           "title": "表情スタンプの実例"
+        },
+        {
+          "path": "artifacts/073_boardgame_sticker_sheet.png",
+          "title": "ボドゲスタンプシートの実例"
         }
       ],
       "notes": "まずこれを開いてから、表情と文言だけ入れ替える。"
@@ -1919,7 +2024,8 @@
           "title": "記憶メモボードの実例"
         }
       ],
-      "notes": "長文ではなく、次回使える断片だけ残す。"
+      "notes": "長文ではなく、次回使える断片だけ残す。",
+      "visibility": "internal"
     },
     {
       "id": "poststream_review_board",
@@ -1952,7 +2058,8 @@
           "title": "配信後レビュー盤の実例"
         }
       ],
-      "notes": "改善ログとしてもそのまま使える。"
+      "notes": "改善ログとしてもそのまま使える。",
+      "visibility": "internal"
     },
     {
       "id": "archive_contact_sheet",
@@ -1985,7 +2092,8 @@
           "title": "成果物一覧の実例"
         }
       ],
-      "notes": "後から探す前提で、見出しより一覧性を優先する。"
+      "notes": "後から探す前提で、見出しより一覧性を優先する。",
+      "visibility": "internal"
     },
     {
       "id": "persona_sheet",
@@ -2051,7 +2159,8 @@
           "path": "artifacts/019_summary_sheet_2.png",
           "title": "配信後まとめカードの別実例"
         }
-      ]
+      ],
+      "visibility": "internal"
     },
     {
       "id": "archive_index",
@@ -2079,7 +2188,8 @@
           "title": "成果物回収カードの実例"
         }
       ],
-      "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。"
+      "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。",
+      "visibility": "internal"
     },
     {
       "id": "logo_only_sheet",
@@ -2715,7 +2825,6 @@
         }
       ]
     },
-
     {
       "id": "gen_20260501_090454_827936",
       "title": "Kafka おはツイ 春 / ドミニオン日和",
@@ -2742,9 +2851,114 @@
       ]
     },
     {
+      "id": "shafuka_character_sheet",
+      "title": "しゃふか キャラデザインシート",
+      "kind": "design_sheet",
+      "purpose": "しゃふか の見た目と基準を一枚にまとめる",
+      "summary": "ジラ系ゴシックのキャラクター設計を、そのまま再利用できる形にする。",
+      "steps": [
+        "髪型と目の色を固定する",
+        "衣装と小物を固定する",
+        "低精細でかわいく見せる",
+        "前後左右の見え方を崩さない"
+      ],
+      "blocks": [
+        "character_sheet_shafuka"
+      ],
+      "notes": "再利用時は顔と衣装の差し替えを最小にする。",
+      "artifacts": [
+        {
+          "path": "artifacts/071_shafuka_character_sheet.png",
+          "title": "しゃふか キャラデザインシート"
+        }
+      ]
+    },
+    {
+      "id": "miyu_character_sheet",
+      "title": "みゆ キャラデザインシート",
+      "kind": "design_sheet",
+      "purpose": "みゆ の見た目と基準を一枚にまとめる",
+      "summary": "夏カフェの空気感を持つ、やわらかなキャラクター設計。",
+      "steps": [
+        "髪とアクセサリーを固定する",
+        "白と青の夏服を固定する",
+        "カフェの空気感を保つ",
+        "表情とポーズを整理する"
+      ],
+      "blocks": [
+        "character_sheet_miyu"
+      ],
+      "notes": "夏の清涼感を崩さず、可読性を優先する。",
+      "artifacts": [
+        {
+          "path": "artifacts/072_miyu_character_sheet.png",
+          "title": "みゆ キャラデザインシート"
+        }
+      ]
+    },
+    {
+      "id": "trio_vacation_dining",
+      "title": "Kafka しゃふか みゆ バカンス食事",
+      "kind": "social",
+      "purpose": "かふか、しゃふか、みゆの3人がバカンス先で食事を楽しむ一枚を作る",
+      "summary": "三人のキャラ差を残しつつ、たくさん食べて楽しそうな空気を前面に出す。",
+      "steps": [
+        "3人の見た目を区別する",
+        "食事を主役にする",
+        "恍惚で楽しそうな表情にする",
+        "バカンス感を強く出す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_shafuka",
+        "character_miyu",
+        "vacation_dining_trio_scene",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "食べる量と幸福感を強めに出す。3人の位置関係は見分けやすくする。",
+      "artifacts": [
+        {
+          "path": "artifacts/070_trio_vacation_dining.png",
+          "title": "3人バカンス食事"
+        }
+      ]
+    },
+    {
+      "id": "sound_strong_reaction",
+      "title": "Kafka 音が強い",
+      "kind": "reaction",
+      "purpose": "音の強さを印象的に見せる反応画像を作る",
+      "summary": "ヘッドホンや音記号で、音が強い場面をそのまま見せる。",
+      "steps": [
+        "音の強さを主題にする",
+        "表情で反応を見せる",
+        "文字は短く大きくする",
+        "見た瞬間に強さが伝わるようにする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "reaction_focus",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/069_loud_sound.png",
+          "title": "音が強い"
+        }
+      ],
+      "notes": "音量反応の定番として再利用する。"
+    },
+    {
       "id": "generated_gen_20260501_092726_250951",
-      "title": "Kafka 新しいスタンプ / 上記の指示ノードに従いつつ、食事風景",
-      "generated_title": "Kafka 新しいスタンプ / 上記の指示ノードに従いつつ、食事風景",
+      "title": "KAFKA ごはんスタンプ",
+      "generated_title": "KAFKA ごはんスタンプ",
       "kind": "generated",
       "purpose": "上記の指示ノードに従いつつ、食事風景",
       "summary": "上記の指示ノードに従いつつ、食事風景",
@@ -2763,12 +2977,19 @@
       "generated_from": "stamp_sheet",
       "generated_instruction": "上記の指示ノードに従いつつ、食事風景",
       "generated_at": "2026-05-01T09:27:26.250951+00:00",
-      "generated_request_id": "gen_20260501_092726_250951"
+      "generated_request_id": "gen_20260501_092726_250951",
+      "artifacts": [
+        {
+          "path": "artifacts/062_mogumogu_kafka.png",
+          "title": "KAFKA ごはんスタンプ"
+        }
+      ],
+      "visibility": "internal"
     },
     {
       "id": "generated_gen_20260501_093234_339628",
-      "title": "Kafka 新しいスタンプ / 食事風景",
-      "generated_title": "Kafka 新しいスタンプ / 食事風景",
+      "title": "もぐもぐカフカ",
+      "generated_title": "もぐもぐカフカ",
       "kind": "generated",
       "purpose": "食事風景",
       "summary": "食事風景",
@@ -2790,34 +3011,14 @@
       "generated_from": "stamp_sheet",
       "generated_instruction": "食事風景",
       "generated_at": "2026-05-01T09:32:34.339628+00:00",
-      "generated_request_id": "gen_20260501_093234_339628"
-    },
-    {
-      "id": "generated_gen_20260501_093426_180104",
-      "title": "Kafka 新しいスタンプ / コメント返しスタンプ",
-      "generated_title": "Kafka 新しいスタンプ / コメント返しスタンプ",
-      "kind": "generated",
-      "purpose": "コメント返しスタンプ",
-      "summary": "コメント返しスタンプ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
+      "generated_request_id": "gen_20260501_093234_339628",
+      "artifacts": [
+        {
+          "path": "artifacts/062_mogumogu_kafka.png",
+          "title": "もぐもぐカフカ"
+        }
       ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling nod, grateful smile, replying face, listening face, surprised reaction, gentle laugh, thumbs up, waving hand, small bow, peace sign, heart hands, pointing gesture, holding phone, reading comment, typing reply\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ncomment reply:「ありがとう」「うれしい」「見たよ」「了解」「たすかる」, acknowledgement:「なるほど」「そうそう」「わかる」, response:「あとで返す」「読んだよ」「またね」「おつかれさま」, gentle:「やさしい」「うれしいね」「たしかに」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "4599235fbe3e44026c603a7c022f47af4eab18a08983f5201ae6d8e7ca8aa79d",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "コメント返しスタンプ",
-      "generated_at": "2026-05-01T09:34:26.180104+00:00",
-      "generated_request_id": "gen_20260501_093426_180104"
+      "visibility": "internal"
     },
     {
       "id": "generated_gen_20260501_093426_682458",
@@ -2844,7 +3045,372 @@
       "generated_from": "stamp_sheet",
       "generated_instruction": "Dominion Board Gameを楽しく遊ぶ様子",
       "generated_at": "2026-05-01T09:34:26.682458+00:00",
-      "generated_request_id": "gen_20260501_093426_682458"
+      "generated_request_id": "gen_20260501_093426_682458",
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093428_144020",
+      "title": "朝ごはんタイム",
+      "generated_title": "朝ごはんタイム",
+      "kind": "generated",
+      "purpose": "朝ごはんを食べている様子",
+      "summary": "朝ごはんを食べている様子",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face while eating breakfast, sleepy morning face, holding toast, sipping milk, using spoon, holding bowl, chewing softly, cheerful breakfast expression, small bite, excited about breakfast, warm satisfied smile, sitting at a table with breakfast items\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ngreeting:「おはよう」「いただきます」「あさだ」, eating:「もぐもぐ」「ぱくっ」「おいしい」, morning:「まだねむい」「エネルギー補給」「今日もがんばる」, closing:「ごちそうさま」「一日がはじまる」「朝ごはん大事」\n\nsparkles, tiny hearts, warm steam, small stars, soft morning light rays, speech emphasis marks, minimal manga effects\n\n朝食の皿、トースト、目玉焼き、スープ、牛乳\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "朝食の皿、トースト、目玉焼き、スープ、牛乳",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "4599235fbe3e44026c603a7c022f47af4eab18a08983f5201ae6d8e7ca8aa79d",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "朝ごはんを食べている様子",
+      "generated_at": "2026-05-01T09:34:28.144020+00:00",
+      "generated_request_id": "gen_20260501_093428_144020",
+      "artifacts": [
+        {
+          "path": "artifacts/063_breakfast_time.png",
+          "title": "朝ごはんタイム"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093534_246196",
+      "title": "コメント返し",
+      "generated_title": "コメント返し",
+      "kind": "generated",
+      "purpose": "コメント返しスタンプ",
+      "summary": "コメント返しスタンプ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, grateful nod, replying on smartphone, typing a comment reply, reading notifications, gentle laugh, wink, small hand gesture, thumbs up, holding phone, holding laptop, surprised happy face, slight bow\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「うれしい」「見てるよ」「たすかる」, reply:「返信するね」「あとで返すね」「コメントありがとう」「読んだよ」, hesitation:「ちょっとまって」「あとで書くね」, closing:「またね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "コメント返しスタンプ",
+      "generated_at": "2026-05-01T09:35:34.246196+00:00",
+      "generated_request_id": "gen_20260501_093534_246196",
+      "artifacts": [
+        {
+          "path": "artifacts/064_comment_reply.png",
+          "title": "コメント返し"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093722_155749",
+      "title": "指差し説明",
+      "generated_title": "指差し説明",
+      "kind": "generated",
+      "purpose": "指差しで説明している様子",
+      "summary": "指差しで説明している様子",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\npointing with one hand, explaining pose, direct gaze, small confident gesture, guiding attention, mild nod, readable body language, friendly demonstration\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「なるほど」「たしかに」「そうそう」「わかる」, hesitation:「うーん」「どうだろう」「ちょっと待って」, technical:「まず結論」「原因はここ」「切り分ける」, sensory:「光が近い」「音が強い」「温度が変わる」, closing:「一旦ここまで」「次いこう」「おつかれさま」「おやすみ」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "指差しで説明している様子",
+      "generated_at": "2026-05-01T09:37:22.155749+00:00",
+      "generated_request_id": "gen_20260501_093722_155749",
+      "artifacts": [
+        {
+          "path": "artifacts/068_pointing_explanation.png",
+          "title": "指差し説明"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093726_505516",
+      "title": "作業開始",
+      "generated_title": "作業開始",
+      "kind": "generated",
+      "purpose": "作業開始ポスト",
+      "summary": "作業開始ポスト",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nstart:「作業はじめます」「着手します」「ただいま作業中」, progress:「ここから進める」「順番にやる」「まず整える」, status:「集中中」「手を動かす」「少し待ってね」, closing:「終わったら戻る」「あとで報告する」「引き続き進行中」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "作業開始ポスト",
+      "generated_at": "2026-05-01T09:37:26.505516+00:00",
+      "generated_request_id": "gen_20260501_093726_505516",
+      "artifacts": [
+        {
+          "path": "artifacts/045_work_start_post.png",
+          "title": "作業開始"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093735_282597",
+      "title": "読書のひととき",
+      "generated_title": "読書のひととき",
+      "kind": "generated",
+      "purpose": "本を読んでいる静かな様子",
+      "summary": "本を読んでいる静かな様子",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nreading a book quietly, looking down at an open book, calm face, gentle focused eyes, relaxed posture, soft smile, thoughtful pause, holding a paperback book, turning a page, sitting still with a book in hand, quiet reading mood\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nreading:「読書中」「しずかに」「もう少し」「あとで」「すきな本」「ページをめくる」, calm:「落ち着く」「ゆっくり」「静かに」, closing:「一旦ここまで」「またあとで」「おつかれさま」\n\ntiny stars, soft sparkles, subtle page-turn lines, light emphasis marks, minimal manga effects, calm atmosphere\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "本を読んでいる静かな様子",
+      "generated_at": "2026-05-01T09:37:35.282597+00:00",
+      "generated_request_id": "gen_20260501_093735_282597",
+      "artifacts": [
+        {
+          "path": "artifacts/067_reading_time.png",
+          "title": "読書のひととき"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_093750_437816",
+      "title": "勝利の一瞬",
+      "generated_title": "勝利の一瞬",
+      "kind": "generated",
+      "purpose": "カードゲームで勝った瞬間",
+      "summary": "カードゲームで勝った瞬間",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\ntriumphant smile, victory pose, relieved smile, shocked win face, fist pump, peace sign, pointing at cards, laughing with eyes closed, leaning back in relief, holding winning hand, small celebratory clap, sparkling eyes, confident grin, final card reveal\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「やった」「勝った」「いける」「よし」, hesitation:「まさか」「まだある？」「これで決まり？」, technical:「最後の一枚」「逆転した」「勝負あり」, sensory:「手が震える」「心臓が速い」「空気が熱い」, closing:「いただき」「ドヤ」「キター」\n\nsparkles, small stars, confetti, victory burst lines, tiny hearts, speech emphasis marks, minimal manga effects, celebratory ribbons\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "カードゲームで勝った瞬間",
+      "generated_at": "2026-05-01T09:37:50.437816+00:00",
+      "generated_request_id": "gen_20260501_093750_437816",
+      "artifacts": [
+        {
+          "path": "artifacts/065_victory_moment.png",
+          "title": "勝利の一瞬"
+        }
+      ],
+      "visibility": "internal"
+    },
+    {
+      "id": "generated_gen_20260501_094000_869940",
+      "title": "返信ぎゅっ",
+      "generated_title": "返信ぎゅっ",
+      "kind": "generated",
+      "purpose": "コメント返しスタンプ",
+      "summary": "コメント返しスタンプ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, gentle nod, waving hand, reading phone, typing on smartphone, surprised smile, embarrassed smile, small thumbs up, soft laugh, wink, holding mug, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「見たよ」「うれしい」「助かる」, reply:「返事するね」「あとで見る」「こっちも見てるよ」「またね」, reaction:「いいね」「なるほど」「わかる」「すき」, closing:「またコメントしてね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "artifacts": [
+        {
+          "path": "artifacts/066_reply_hug.png",
+          "title": "返信ぎゅっ"
+        }
+      ],
+      "generated_from": "stamp_sheet",
+      "generated_instruction": "コメント返しスタンプ",
+      "generated_at": "2026-05-01T09:40:00.869940+00:00",
+      "generated_request_id": "gen_20260501_094000_869940",
+      "visibility": "internal"
+    },
+    {
+      "id": "comparison_sheet",
+      "title": "Kafka 比較カード",
+      "kind": "sheet",
+      "purpose": "2つの案を左右で比べる比較シートにする",
+      "summary": "比較や選択を一目で伝える2列カード。",
+      "steps": [
+        "比べたい2案を決める",
+        "左と右の役割を固定する",
+        "違いが一目でわかる見出しを置く",
+        "最後におすすめを1つ示す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "比較したい内容があるときは、A/B の差だけを短く書く。"
+    },
+    {
+      "id": "timeline_sheet",
+      "title": "Kafka タイムライン",
+      "kind": "sheet",
+      "purpose": "出来事や手順を時系列で見せる",
+      "summary": "過去から今までの流れを線でつなぐ整理シート。",
+      "steps": [
+        "始点と終点を決める",
+        "重要な出来事を 3〜5 個に絞る",
+        "矢印で流れをつなぐ",
+        "短いラベルだけを残す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "timeline_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "年表、進行手順、振り返りの流れに向く。"
+    },
+    {
+      "id": "decision_tree_sheet",
+      "title": "Kafka 分岐フロー",
+      "kind": "sheet",
+      "purpose": "選択肢から次の動きへ分岐する案内にする",
+      "summary": "Yes/No で進む、分岐型の案内シート。",
+      "steps": [
+        "最初の質問を 1 つ決める",
+        "分岐先を 2〜4 個に絞る",
+        "判断基準を短い語で書く",
+        "最後にゴールへつなぐ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "decision_tree_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "判断・案内・導線整理に向く。"
+    },
+    {
+      "id": "moodboard_sheet",
+      "title": "Kafka ムードボード",
+      "kind": "sheet",
+      "purpose": "雰囲気や方向性をコラージュでまとめる",
+      "summary": "色、質感、言葉、参考イメージを束ねる方向性ボード。",
+      "steps": [
+        "世界観のキーワードを選ぶ",
+        "色と質感を並べる",
+        "参考要素を重ねる",
+        "空白を残して雰囲気を保つ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "新規のビジュアル方向を固める最初の一枚。"
+    },
+    {
+      "id": "checklist_sheet",
+      "title": "Kafka チェックリスト",
+      "kind": "sheet",
+      "purpose": "やることを順番に並べたチェックシートにする",
+      "summary": "順番や確認事項を、見やすいチェック形式でまとめる。",
+      "steps": [
+        "やることを 5 個以内に絞る",
+        "順番をつける",
+        "チェック欄を置く",
+        "最後に完了条件を書く"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "作業手順、導入フロー、確認項目を整理したいときに使う。"
+    },
+    {
+      "id": "before_after_sheet",
+      "title": "Kafka ビフォーアフター",
+      "kind": "sheet",
+      "purpose": "変化の前後を並べて見せる",
+      "summary": "前と後を2枚で見比べる変化比較シート。",
+      "steps": [
+        "変化の前を決める",
+        "変化の後を決める",
+        "差分を短い言葉にする",
+        "視線誘導を付ける"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "before_after_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "改善前後、状態の変化、成長の記録に向く。"
     }
   ],
   "generated_prompts": [
@@ -2881,7 +3447,13 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors, female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth, sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects, cozy meal table scene, plate of breakfast or lunch, utensils and small side dish, warm indoor light, neat and inviting, clean composition, rainy day meal scene, dining table by the window, warm food and a drink, raindrops on glass outside, soft indoor warmth, calm and reflective, low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/062_mogumogu_kafka.png",
+          "title": "KAFKA ごはんスタンプ"
+        }
+      ]
     },
     {
       "id": "gen_20260501_093234_339628",
@@ -2923,6 +3495,12 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling while eating, small bite, chewing face, satisfied face, holding rice bowl, holding chopsticks, holding spoon, sipping soup, surprised by taste, gentle laugh with food, happy snack pose, offering a bite, relaxed meal expression\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nmeal:「いただきます」「もぐもぐ」「おいしい」「あつい」「ひとくちいる？」「ごちそうさま」, reaction:「しみる」「あったまる」「やさしい味」「おなかすいた」, closing:「また食べよう」「ごちそうさま」\n\nsparkles, small stars, tiny hearts, steam, soft food aroma lines, small chopstick motion lines, speech emphasis marks, minimal manga effects\n\nfood props: rice bowl, soup, toast, small side dishes\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/062_mogumogu_kafka.png",
+          "title": "もぐもぐカフカ"
+        }
+      ],
       "status": "draft"
     },
     {
@@ -2961,7 +3539,13 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling nod, grateful smile, replying face, listening face, surprised reaction, gentle laugh, thumbs up, waving hand, small bow, peace sign, heart hands, pointing gesture, holding phone, reading comment, typing reply\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ncomment reply:「ありがとう」「うれしい」「見たよ」「了解」「たすかる」, acknowledgement:「なるほど」「そうそう」「わかる」, response:「あとで返す」「読んだよ」「またね」「おつかれさま」, gentle:「やさしい」「うれしいね」「たしかに」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/064_comment_reply.png",
+          "title": "コメント返し"
+        }
+      ]
     },
     {
       "id": "gen_20260501_093426_682458",
@@ -3045,6 +3629,558 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face while eating breakfast, sleepy morning face, holding toast, sipping milk, using spoon, holding bowl, chewing softly, cheerful breakfast expression, small bite, excited about breakfast, warm satisfied smile, sitting at a table with breakfast items\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ngreeting:「おはよう」「いただきます」「あさだ」, eating:「もぐもぐ」「ぱくっ」「おいしい」, morning:「まだねむい」「エネルギー補給」「今日もがんばる」, closing:「ごちそうさま」「一日がはじまる」「朝ごはん大事」\n\nsparkles, tiny hearts, warm steam, small stars, soft morning light rays, speech emphasis marks, minimal manga effects\n\n朝食の皿、トースト、目玉焼き、スープ、牛乳\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/063_breakfast_time.png",
+          "title": "朝ごはんタイム"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_093534_246196",
+      "created_at": "2026-05-01T09:35:34.246196+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_093534_246196",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "コメント返しスタンプ",
+      "title": "コメント返し",
+      "generated_title": "コメント返し",
+      "generated_title_candidate": "コメント返し",
+      "generated_block_updates": [
+        {
+          "id": "expressions_pack",
+          "content": "smiling face, grateful nod, replying on smartphone, typing a comment reply, reading notifications, gentle laugh, wink, small hand gesture, thumbs up, holding phone, holding laptop, surprised happy face, slight bow"
+        },
+        {
+          "id": "text_content_pack",
+          "content": "acknowledgement:「ありがとう」「うれしい」「見てるよ」「たすかる」, reply:「返信するね」「あとで返すね」「コメントありがとう」「読んだよ」, hesitation:「ちょっとまって」「あとで書くね」, closing:「またね」「おつかれさま」「いつもありがとう」"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, grateful nod, replying on smartphone, typing a comment reply, reading notifications, gentle laugh, wink, small hand gesture, thumbs up, holding phone, holding laptop, surprised happy face, slight bow\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「うれしい」「見てるよ」「たすかる」, reply:「返信するね」「あとで返すね」「コメントありがとう」「読んだよ」, hesitation:「ちょっとまって」「あとで書くね」, closing:「またね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/064_comment_reply.png",
+          "title": "コメント返し"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_093722_155749",
+      "created_at": "2026-05-01T09:37:22.155749+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_093722_155749",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "指差しで説明している様子",
+      "title": "指差し説明",
+      "generated_title": "指差し説明",
+      "generated_title_candidate": "指差し説明",
+      "generated_block_updates": [
+        {
+          "id": "expressions_pack",
+          "content": "pointing with one hand, explaining pose, direct gaze, small confident gesture, guiding attention, mild nod, readable body language, friendly demonstration"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\npointing with one hand, explaining pose, direct gaze, small confident gesture, guiding attention, mild nod, readable body language, friendly demonstration\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「なるほど」「たしかに」「そうそう」「わかる」, hesitation:「うーん」「どうだろう」「ちょっと待って」, technical:「まず結論」「原因はここ」「切り分ける」, sensory:「光が近い」「音が強い」「温度が変わる」, closing:「一旦ここまで」「次いこう」「おつかれさま」「おやすみ」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/068_pointing_explanation.png",
+          "title": "指差し説明"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_093726_505516",
+      "created_at": "2026-05-01T09:37:26.505516+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_093726_505516",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "作業開始ポスト",
+      "title": "作業開始",
+      "generated_title": "作業開始",
+      "generated_title_candidate": "作業開始",
+      "generated_block_updates": [
+        {
+          "id": "text_content_pack",
+          "content": "start:「作業はじめます」「着手します」「ただいま作業中」, progress:「ここから進める」「順番にやる」「まず整える」, status:「集中中」「手を動かす」「少し待ってね」, closing:「終わったら戻る」「あとで報告する」「引き続き進行中」"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nstart:「作業はじめます」「着手します」「ただいま作業中」, progress:「ここから進める」「順番にやる」「まず整える」, status:「集中中」「手を動かす」「少し待ってね」, closing:「終わったら戻る」「あとで報告する」「引き続き進行中」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/045_work_start_post.png",
+          "title": "作業開始"
+        }
+      ]
+    },
+    {
+      "id": "gen_20260501_093735_282597",
+      "created_at": "2026-05-01T09:37:35.282597+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_093735_282597",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "本を読んでいる静かな様子",
+      "title": "読書のひととき",
+      "generated_title": "読書のひととき",
+      "generated_title_candidate": "読書のひととき",
+      "generated_block_updates": [
+        {
+          "id": "expressions_pack",
+          "content": "reading a book quietly, looking down at an open book, calm face, gentle focused eyes, relaxed posture, soft smile, thoughtful pause, holding a paperback book, turning a page, sitting still with a book in hand, quiet reading mood"
+        },
+        {
+          "id": "text_content_pack",
+          "content": "reading:「読書中」「しずかに」「もう少し」「あとで」「すきな本」「ページをめくる」, calm:「落ち着く」「ゆっくり」「静かに」, closing:「一旦ここまで」「またあとで」「おつかれさま」"
+        },
+        {
+          "id": "effects_pack",
+          "content": "tiny stars, soft sparkles, subtle page-turn lines, light emphasis marks, minimal manga effects, calm atmosphere"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nreading a book quietly, looking down at an open book, calm face, gentle focused eyes, relaxed posture, soft smile, thoughtful pause, holding a paperback book, turning a page, sitting still with a book in hand, quiet reading mood\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nreading:「読書中」「しずかに」「もう少し」「あとで」「すきな本」「ページをめくる」, calm:「落ち着く」「ゆっくり」「静かに」, closing:「一旦ここまで」「またあとで」「おつかれさま」\n\ntiny stars, soft sparkles, subtle page-turn lines, light emphasis marks, minimal manga effects, calm atmosphere\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/067_reading_time.png",
+          "title": "読書のひととき"
+        }
+      ]
+    },
+    {
+      "id": "gen_20260501_093750_437816",
+      "created_at": "2026-05-01T09:37:50.437816+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_093750_437816",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "カードゲームで勝った瞬間",
+      "title": "勝利の一瞬",
+      "generated_title": "勝利の一瞬",
+      "generated_title_candidate": "勝利の一瞬",
+      "generated_block_updates": [
+        {
+          "id": "expressions_pack",
+          "content": "triumphant smile, victory pose, relieved smile, shocked win face, fist pump, peace sign, pointing at cards, laughing with eyes closed, leaning back in relief, holding winning hand, small celebratory clap, sparkling eyes, confident grin, final card reveal"
+        },
+        {
+          "id": "text_content_pack",
+          "content": "acknowledgement:「やった」「勝った」「いける」「よし」, hesitation:「まさか」「まだある？」「これで決まり？」, technical:「最後の一枚」「逆転した」「勝負あり」, sensory:「手が震える」「心臓が速い」「空気が熱い」, closing:「いただき」「ドヤ」「キター」"
+        },
+        {
+          "id": "effects_pack",
+          "content": "sparkles, small stars, confetti, victory burst lines, tiny hearts, speech emphasis marks, minimal manga effects, celebratory ribbons"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\ntriumphant smile, victory pose, relieved smile, shocked win face, fist pump, peace sign, pointing at cards, laughing with eyes closed, leaning back in relief, holding winning hand, small celebratory clap, sparkling eyes, confident grin, final card reveal\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「やった」「勝った」「いける」「よし」, hesitation:「まさか」「まだある？」「これで決まり？」, technical:「最後の一枚」「逆転した」「勝負あり」, sensory:「手が震える」「心臓が速い」「空気が熱い」, closing:「いただき」「ドヤ」「キター」\n\nsparkles, small stars, confetti, victory burst lines, tiny hearts, speech emphasis marks, minimal manga effects, celebratory ribbons\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/065_victory_moment.png",
+          "title": "勝利の一瞬"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_094000_869940",
+      "created_at": "2026-05-01T09:40:00.869940+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_094000_869940",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "コメント返しスタンプ",
+      "title": "返信ぎゅっ",
+      "generated_title": "返信ぎゅっ",
+      "generated_title_candidate": "返信ぎゅっ",
+      "generated_block_updates": [
+        {
+          "id": "text_content_pack",
+          "content": "acknowledgement:「ありがとう」「見たよ」「うれしい」「助かる」, reply:「返事するね」「あとで見る」「こっちも見てるよ」「またね」, reaction:「いいね」「なるほど」「わかる」「すき」, closing:「またコメントしてね」「おつかれさま」「いつもありがとう」"
+        },
+        {
+          "id": "expressions_pack",
+          "content": "smiling face, gentle nod, waving hand, reading phone, typing on smartphone, surprised smile, embarrassed smile, small thumbs up, soft laugh, wink, holding mug, hugging cat plushie"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, gentle nod, waving hand, reading phone, typing on smartphone, surprised smile, embarrassed smile, small thumbs up, soft laugh, wink, holding mug, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「見たよ」「うれしい」「助かる」, reply:「返事するね」「あとで見る」「こっちも見てるよ」「またね」, reaction:「いいね」「なるほど」「わかる」「すき」, closing:「またコメントしてね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "artifacts": [
+        {
+          "path": "artifacts/066_reply_hug.png",
+          "title": "返信ぎゅっ"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_095318_007639",
+      "created_at": "2026-05-01T09:53:18.007639+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_095318_007639",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "新しい定番の比較カード",
+      "title": "比較カード",
+      "generated_title": "比較カード",
+      "generated_title_candidate": "比較カード",
+      "generated_block_updates": [
+        {
+          "id": "sticker_sheet_layout",
+          "content": "2-column comparison card, split layout, paired panels, clear labels for left and right, empty gutters, isolated subjects, large readable shapes, cutout-friendly silhouette, no background clutter, strong contrast for side-by-side comparison"
+        },
+        {
+          "id": "text_content_pack",
+          "content": "comparison:「こっちが本命」「まずこれ」「ここが違う」「使い分け」「比べるとわかる」「迷ったらこれ」, contrast:「左が軽い」「右が安心」「速さ重視」「見やすさ重視」"
+        },
+        {
+          "id": "effects_pack",
+          "content": "arrows, highlight frames, check marks, small stars, emphasis marks, comparison lines, soft sparkles, minimal manga effects"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n2-column comparison card, split layout, paired panels, clear labels for left and right, empty gutters, isolated subjects, large readable shapes, cutout-friendly silhouette, no background clutter, strong contrast for side-by-side comparison\n\nsmiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ncomparison:「こっちが本命」「まずこれ」「ここが違う」「使い分け」「比べるとわかる」「迷ったらこれ」, contrast:「左が軽い」「右が安心」「速さ重視」「見やすさ重視」\n\narrows, highlight frames, check marks, small stars, emphasis marks, comparison lines, soft sparkles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_095825_409023",
+      "created_at": "2026-05-01T09:58:25.409023+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_gen_20260501_095825_409023",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "このサイトのテンプレート一覧と、Prompt Generator の比較カード",
+      "title": "見比べカード",
+      "generated_title": "見比べカード",
+      "generated_title_candidate": "見比べカード",
+      "generated_block_updates": [
+        {
+          "id": "comparison_layout",
+          "content": "2-column comparison card, left side shows this site's template list overview, right side shows Prompt Generator comparison card, paired panels, clear labels for left and right, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n2-column comparison card, left side shows this site's template list overview, right side shows Prompt Generator comparison card, paired panels, clear labels for left and right, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100128_125507",
+      "created_at": "2026-05-01T10:01:28.125507+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_gen_20260501_100128_125507",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "このサイトのテンプレート一覧とPrompt Generatorの比較カード",
+      "title": "一覧対比カード",
+      "generated_title": "一覧対比カード",
+      "generated_title_candidate": "一覧対比カード",
+      "generated_block_updates": [
+        {
+          "id": "comparison_layout",
+          "content": "2-column comparison card, left panel shows this site's template list, right panel shows Prompt Generator, clear labels for left and right, side-by-side contrast, each side has one representative example, arrows or separators, minimal clutter, phone-readable comparison sheet"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n2-column comparison card, left panel shows this site's template list, right panel shows Prompt Generator, clear labels for left and right, side-by-side contrast, each side has one representative example, arrows or separators, minimal clutter, phone-readable comparison sheet\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100137_684091",
+      "created_at": "2026-05-01T10:01:37.684091+00:00",
+      "template_id": "timeline_sheet",
+      "generated_template_id": "generated_gen_20260501_100137_684091",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "timeline_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "テンプレート一覧が壊れた経緯を時系列でまとめる",
+      "title": "崩れの時系列",
+      "generated_title": "崩れの時系列",
+      "generated_title_candidate": "崩れの時系列",
+      "generated_block_updates": [
+        {
+          "id": "timeline_layout",
+          "content": "horizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, incident chronology of a broken template list, start point, breakdown point, recovery attempts, clear progression, no clutter"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nhorizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, incident chronology of a broken template list, start point, breakdown point, recovery attempts, clear progression, no clutter\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100144_822642",
+      "created_at": "2026-05-01T10:01:44.822642+00:00",
+      "template_id": "decision_tree_sheet",
+      "generated_template_id": "generated_gen_20260501_100144_822642",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "decision_tree_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "スタンプを使うか比較カードを使うかを分岐で案内する",
+      "title": "分岐案内",
+      "generated_title": "分岐案内",
+      "generated_title_candidate": "分岐案内",
+      "generated_block_updates": [
+        {
+          "id": "decision_tree_layout",
+          "content": "分岐フローチャート、最初に「スタンプを使う？」と「比較カードを使う？」の二択を示し、それぞれに進む短い分岐、見やすい接続線、はっきりした開始と終了、整理された案内構成"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n分岐フローチャート、最初に「スタンプを使う？」と「比較カードを使う？」の二択を示し、それぞれに進む短い分岐、見やすい接続線、はっきりした開始と終了、整理された案内構成\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100157_839919",
+      "created_at": "2026-05-01T10:01:57.839919+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_gen_20260501_100157_839919",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "新しい非スタンプパターンの方向性をまとめるムードボード",
+      "title": "非スタンプ案",
+      "generated_title": "非スタンプ案",
+      "generated_title_candidate": "非スタンプ案",
+      "generated_block_updates": [
+        {
+          "id": "moodboard_layout",
+          "content": "collage mood board, inspiration board, non-stamp pattern directions, repeating motifs, surface pattern variations, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ncollage mood board, inspiration board, non-stamp pattern directions, repeating motifs, surface pattern variations, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100447_145315",
+      "created_at": "2026-05-01T10:04:47.145315+00:00",
+      "template_id": "timeline_sheet",
+      "generated_template_id": "generated_gen_20260501_100447_145315",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "timeline_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "テンプレート一覧が壊れた経緯を時系列でまとめる",
+      "title": "崩れの経緯",
+      "generated_title": "崩れの経緯",
+      "generated_title_candidate": "崩れの経緯",
+      "generated_block_updates": [
+        {
+          "id": "timeline_layout",
+          "content": "timeline of the template list breaking over time, start point, triggering change, visible symptoms, partial recovery, final state, clear chronological markers, concise incident labels, readable cause and effect flow, no clutter"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "d1286c9d74fa9797ab8d2f30644e5cd67171d0f42845cdac8afbf37f1a6c4b7b",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ntimeline of the template list breaking over time, start point, triggering change, visible symptoms, partial recovery, final state, clear chronological markers, concise incident labels, readable cause and effect flow, no clutter\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100454_860314",
+      "created_at": "2026-05-01T10:04:54.860314+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_gen_20260501_100454_860314",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "新しい非スタンプパターンの方向性をまとめるムードボード",
+      "title": "淡色サンプル",
+      "generated_title": "淡色サンプル",
+      "generated_title_candidate": "淡色サンプル",
+      "generated_block_updates": [
+        {
+          "id": "moodboard_layout",
+          "content": "collage mood board, direction summary board, pattern samples, variation tiles, material swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative planning board, clear visual distinctions, repeated motif studies, non-stamp layout ideas"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "d1286c9d74fa9797ab8d2f30644e5cd67171d0f42845cdac8afbf37f1a6c4b7b",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ncollage mood board, direction summary board, pattern samples, variation tiles, material swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative planning board, clear visual distinctions, repeated motif studies, non-stamp layout ideas\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
+    },
+    {
+      "id": "gen_20260501_100713_847333",
+      "created_at": "2026-05-01T10:07:13.847333+00:00",
+      "template_id": "checklist_sheet",
+      "generated_template_id": "generated_gen_20260501_100713_847333",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "公開前の確認項目をまとめる",
+      "title": "公開前点検",
+      "generated_title": "公開前点検",
+      "generated_title_candidate": "公開前点検",
+      "generated_block_updates": [
+        {
+          "id": "checklist_layout",
+          "content": "checklist layout, tick boxes, pre-release verification items, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "d1286c9d74fa9797ab8d2f30644e5cd67171d0f42845cdac8afbf37f1a6c4b7b",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nchecklist layout, tick boxes, pre-release verification items, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "status": "draft"
     }
   ]
