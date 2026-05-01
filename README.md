@@ -9,6 +9,15 @@ KAFKA の世界観を保ちながら、次の3つを大事にしています。
 - 用途ごとに組み替えやすいこと
 - ブレを減らして、再現しやすいこと
 
+## まずは雰囲気
+
+<p>
+  <img src="static/og-image.png" alt="Prompt Vault の代表ビジュアル" width="640" />
+</p>
+
+まずは代表ビジュアルだけ置いています。  
+このリポジトリが何を集めているかを、言葉より先に伝えるための1枚です。
+
 ## すぐ開く場所
 
 - [ローカル表示](http://127.0.0.1:8787/)
@@ -56,8 +65,8 @@ python3 build.py
 
 ## 配信先
 
-- GitHub Pages
-- Cloudflare Pages
+- [GitHub Pages](https://kafka2306.github.io/prompt-vault/)
+- [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/)
 
 ## 検証
 
