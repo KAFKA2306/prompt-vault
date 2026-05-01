@@ -31,7 +31,7 @@
 6. リポジトリ `KAFKA2306/prompt-vault` を選ぶ
 7. 設定を次の通りにする
    - `Production branch`: `main`
-   - `Build command`: `python build.py`
+   - `Build command`: なし
    - `Build output directory`: `dist`
 8. `Save and Deploy` を押す
 
@@ -46,8 +46,8 @@
 
 ## 失敗したら見る点
 
-- `build command` が `python build.py` になっているか
 - `output directory` が `dist` になっているか
 - GitHub 接続先が正しいか
+- `dist/index.html` がリポジトリに入っているか
 - ログに `npx wrangler deploy` と出る場合は、Pages ではなく Workers 側のプロジェクトを作っている
 - その場合は今のプロジェクトを消して、`Workers & Pages -> Pages -> Connect to Git` から作り直す
