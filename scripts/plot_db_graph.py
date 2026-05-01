@@ -15,7 +15,6 @@ if str(ROOT) not in sys.path:
 from build import load_db  # noqa: E402
 
 OUTPUT_DIR = ROOT / "docs" / "generated"
-HTML_PATH = OUTPUT_DIR / "db_graph.html"
 MD_PATH = OUTPUT_DIR / "db_graph.md"
 
 PRESETS = [
@@ -357,69 +356,6 @@ def render_markdown(sections: list[tuple[str, str]]) -> str:
     return "\n\n".join(wrap_markdown(title, mermaid_source) for title, mermaid_source in sections) + "\n"
 
 
-def render_html(sections: list[tuple[str, str]], page_title: str) -> str:
-    section_html = []
-    for title, mermaid_source in sections:
-        section_html.extend(
-            [
-                "    <section>",
-                f"      <h2>{html.escape(title)}</h2>",
-                '      <div class="mermaid">',
-                mermaid_source,
-                "      </div>",
-                "    </section>",
-            ]
-        )
-
-    return "\n".join(
-        [
-            "<!doctype html>",
-            '<html lang="ja">',
-            "<head>",
-            '  <meta charset="utf-8" />',
-            '  <meta name="viewport" content="width=device-width, initial-scale=1" />',
-            f"  <title>{html.escape(page_title)}</title>",
-            "  <style>",
-            "    :root { color-scheme: light; }",
-            "    body { margin: 0; background: #f4f1ea; color: #111827; font-family: system-ui, sans-serif; }",
-            "    main { max-width: 1800px; margin: 0 auto; padding: 24px; }",
-            "    section { margin-bottom: 32px; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }",
-            "    h1 { margin: 0 0 12px; font-size: 28px; font-weight: 700; }",
-            "    h2 { margin: 0 0 14px; font-size: 18px; font-weight: 600; }",
-            "    .meta { margin: 0 0 20px; color: #5b6472; font-size: 13px; }",
-            "    .mermaid { overflow: auto; }",
-            "  </style>",
-            '  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>',
-            "  <script>",
-            "    mermaid.initialize({",
-            "      startOnLoad: true,",
-            "      securityLevel: 'loose',",
-            "      theme: 'base',",
-            "      flowchart: { curve: 'basis', htmlLabels: true },",
-            "      themeVariables: {",
-            "        background: '#ffffff',",
-            "        primaryColor: '#dbeafe',",
-            "        primaryBorderColor: '#2563eb',",
-            "        secondaryColor: '#dcfce7',",
-            "        secondaryBorderColor: '#059669',",
-            "        tertiaryColor: '#f3f4f6',",
-            "        fontFamily: 'system-ui, sans-serif',",
-            "      },",
-            "    });",
-            "  </script>",
-            "</head>",
-            "<body>",
-            "  <main>",
-            f"    <h1>{html.escape(page_title)}</h1>",
-            "    <p class=\"meta\">静的レンダリング出力。`--mode` / `--focus` / `--kind` / `--category` で絞り込み可能。</p>",
-            *section_html,
-            "  </main>",
-            "</body>",
-            "</html>",
-        ]
-    )
-
-
 def render_node_list_markdown(db: dict[str, Any]) -> str:
     lines = [
         "## Node List",
@@ -461,63 +397,6 @@ def render_relation_list_markdown(db: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def render_node_list_html(db: dict[str, Any]) -> str:
-    block_rows = "\n".join(
-        f"<tr><td>block</td><td><code>{html.escape(block['id'])}</code></td><td>{html.escape(block['title'])}</td><td>{html.escape(block.get('category', ''))}</td></tr>"
-        for block in ordered_nodes(db["blocks"])
-    )
-    template_rows = "\n".join(
-        f"<tr><td>template</td><td><code>{html.escape(template['id'])}</code></td><td>{html.escape(template['title'])}</td><td>{html.escape(template.get('kind', ''))}</td></tr>"
-        for template in ordered_nodes(db["templates"])
-    )
-    return "\n".join(
-        [
-            '<details class="list-block">',
-            "  <summary>Node List</summary>",
-            '  <table class="list-table">',
-            "    <thead><tr><th>Type</th><th>ID</th><th>Title</th><th>Kind / Category</th></tr></thead>",
-            "    <tbody>",
-            block_rows,
-            template_rows,
-            "    </tbody>",
-            "  </table>",
-            "</details>",
-        ]
-    )
-
-
-def render_relation_list_html(db: dict[str, Any]) -> str:
-    block_map, template_map = build_indexes(db)
-    rows = []
-    for template in ordered_nodes(db["templates"]):
-        for block_id in template.get("blocks", []):
-            if block_id in block_map:
-                rows.append(f"<tr><td><code>{html.escape(template['id'])}</code></td><td>blocks</td><td><code>{html.escape(block_id)}</code></td></tr>")
-        for node_id in template.get("uses", []):
-            if node_id in block_map or node_id in template_map:
-                rows.append(f"<tr><td><code>{html.escape(template['id'])}</code></td><td>uses</td><td><code>{html.escape(node_id)}</code></td></tr>")
-    for block in ordered_nodes(db["blocks"]):
-        for node_id in block.get("related", []):
-            if node_id in block_map or node_id in template_map:
-                rows.append(f"<tr><td><code>{html.escape(block['id'])}</code></td><td>related</td><td><code>{html.escape(node_id)}</code></td></tr>")
-        variant_of = block.get("variant_of")
-        if variant_of and (variant_of in block_map or variant_of in template_map):
-            rows.append(f"<tr><td><code>{html.escape(block['id'])}</code></td><td>variant_of</td><td><code>{html.escape(variant_of)}</code></td></tr>")
-    return "\n".join(
-        [
-            '<details class="list-block">',
-            "  <summary>Relation List</summary>",
-            '  <table class="list-table">',
-            "    <thead><tr><th>From</th><th>Relation</th><th>To</th></tr></thead>",
-            "    <tbody>",
-            *rows,
-            "    </tbody>",
-            "  </table>",
-            "</details>",
-        ]
-    )
-
-
 def render_combined_markdown(db: dict[str, Any]) -> str:
     parts = [
         "# Prompt Vault DB Graph",
@@ -546,175 +425,9 @@ def render_combined_markdown(db: dict[str, Any]) -> str:
     parts.append(render_node_list_markdown(db))
     parts.append(render_relation_list_markdown(db))
     return "\n".join(parts).rstrip() + "\n"
-
-
-def render_combined_html(db: dict[str, Any]) -> str:
-    sections_html = []
-    for preset in PRESETS:
-        diagram_sections, page_title = render_sections(
-            db,
-            preset["mode"],
-            preset["focus"],
-            normalize_values(preset["kinds"]),
-            normalize_values(preset["categories"]),
-        )
-        subsections = []
-        for section_title, mermaid_source in diagram_sections:
-            subsections.extend(
-                [
-                    '        <div class="subsection">',
-                    f"          <h3>{html.escape(section_title)}</h3>",
-                    '          <div class="mermaid">',
-                    mermaid_source,
-                    "          </div>",
-                    "        </div>",
-                ]
-            )
-        sections_html.extend(
-            [
-                '      <section class="preset">',
-                f"        <h2>{html.escape(preset['title'])}</h2>",
-                f"        <p class=\"meta\">{html.escape(page_title)}</p>",
-                *subsections,
-                "      </section>",
-            ]
-        )
-
-    node_list_html = render_node_list_html(db)
-    relation_list_html = render_relation_list_html(db)
-
-    return "\n".join(
-        [
-            "<!doctype html>",
-            '<html lang="ja">',
-            "<head>",
-            '  <meta charset="utf-8" />',
-            '  <meta name="viewport" content="width=device-width, initial-scale=1" />',
-            "  <title>Prompt Vault DB Graph</title>",
-            "  <style>",
-            "    :root { color-scheme: light; }",
-            "    body { margin: 0; background: #f4f1ea; color: #111827; font-family: system-ui, sans-serif; }",
-            "    main { max-width: 1800px; margin: 0 auto; padding: 24px; }",
-            "    header { margin-bottom: 24px; }",
-            "    h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }",
-            "    .intro { margin: 0; color: #5b6472; font-size: 14px; }",
-            "    .preset { margin-bottom: 24px; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }",
-            "    .preset h2 { margin: 0 0 6px; font-size: 22px; }",
-            "    .meta { margin: 0 0 16px; color: #5b6472; font-size: 13px; }",
-            "    .subsection { margin-top: 16px; padding-top: 16px; border-top: 1px solid #eef2f7; }",
-            "    .subsection h3 { margin: 0 0 12px; font-size: 16px; }",
-            "    .list-block { margin-bottom: 20px; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }",
-            "    .list-block summary { cursor: pointer; font-weight: 700; font-size: 16px; }",
-            "    .list-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }",
-            "    .list-table th, .list-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef2f7; vertical-align: top; }",
-            "    .list-table th { color: #5b6472; font-weight: 600; }",
-            "    .mermaid { overflow: auto; }",
-            "  </style>",
-            '  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>',
-            "  <script>",
-            "    mermaid.initialize({",
-            "      startOnLoad: true,",
-            "      securityLevel: 'loose',",
-            "      theme: 'base',",
-            "      flowchart: { curve: 'basis', htmlLabels: true },",
-            "      themeVariables: {",
-            "        background: '#ffffff',",
-            "        primaryColor: '#dbeafe',",
-            "        primaryBorderColor: '#2563eb',",
-            "        secondaryColor: '#dcfce7',",
-            "        secondaryBorderColor: '#059669',",
-            "        tertiaryColor: '#f3f4f6',",
-            "        fontFamily: 'system-ui, sans-serif',",
-            "      },",
-            "    });",
-            "  </script>",
-            "</head>",
-            "<body>",
-            "  <main>",
-            "    <header>",
-            "      <h1>Prompt Vault DB Graph</h1>",
-            "      <p class=\"intro\">複数の静的ビューを1枚に順番配置した版。全体から局所まで、上から読む。</p>",
-            "    </header>",
-            *sections_html,
-            f"    {node_list_html}",
-            f"    {relation_list_html}",
-            "  </main>",
-            "</body>",
-            "</html>",
-        ]
-    )
-
-
 def clean_generated_outputs(output_dir: Path) -> None:
     for path in output_dir.glob("db_graph_*.md"):
         path.unlink()
-    for path in output_dir.glob("db_graph_*.html"):
-        path.unlink()
-    for path in [output_dir / "db_graph_index.html"]:
-        if path.exists():
-            path.unlink()
-
-
-def render_index_html(entries: list[dict[str, str]]) -> str:
-    cards = []
-    for entry in entries:
-        cards.extend(
-            [
-                '      <a class="card" href="%s">' % html.escape(entry["html"]),
-                f'        <div class="card__title">{html.escape(entry["title"])}</div>',
-                f'        <div class="card__meta">{html.escape(entry["meta"])}</div>',
-                "      </a>",
-            ]
-        )
-    cards_html = "\n".join(cards)
-    return "\n".join(
-        [
-            "<!doctype html>",
-            '<html lang="ja">',
-            "<head>",
-            '  <meta charset="utf-8" />',
-            '  <meta name="viewport" content="width=device-width, initial-scale=1" />',
-            "  <title>Prompt Vault DB Graph Index</title>",
-            "  <style>",
-            "    body { margin: 0; background: #f4f1ea; color: #111827; font-family: system-ui, sans-serif; }",
-            "    main { max-width: 1200px; margin: 0 auto; padding: 24px; }",
-            "    h1 { margin: 0 0 8px; font-size: 28px; }",
-            "    p { margin: 0 0 20px; color: #5b6472; }",
-            "    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }",
-            "    .card { display: block; padding: 18px; border-radius: 16px; background: #fff; border: 1px solid #e5e7eb; text-decoration: none; color: inherit; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }",
-            "    .card__title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }",
-            "    .card__meta { font-size: 13px; color: #5b6472; }",
-            "  </style>",
-            "</head>",
-            "<body>",
-            "  <main>",
-            "    <h1>Prompt Vault DB Graph</h1>",
-            "    <p>静的に生成した図の入口。用途ごとに最初の視点を切り替える。</p>",
-            f"    <div class=\"grid\">{cards_html}</div>",
-            "  </main>",
-            "</body>",
-            "</html>",
-        ]
-    )
-
-
-def render_preset(
-    db: dict[str, Any],
-    preset: dict[str, Any],
-    output_dir: Path,
-) -> tuple[Path, Path]:
-    sections, page_title = render_sections(
-        db,
-        preset["mode"],
-        preset["focus"],
-        normalize_values(preset["kinds"]),
-        normalize_values(preset["categories"]),
-    )
-    html_path = output_dir / f"db_graph_{preset['slug']}.html"
-    md_path = output_dir / f"db_graph_{preset['slug']}.md"
-    html_path.write_text(render_html(sections, page_title), encoding="utf-8")
-    md_path.write_text(render_markdown(sections), encoding="utf-8")
-    return html_path, md_path
 
 
 def main() -> None:
@@ -765,17 +478,12 @@ def main() -> None:
             normalize_values(args.category),
         )
         markdown = render_markdown(sections)
-        html_output = render_html(sections, page_title)
     else:
         markdown = render_combined_markdown(db)
-        html_output = render_combined_html(db)
 
     md_path = output_dir / MD_PATH.name
-    html_path = output_dir / HTML_PATH.name
     md_path.write_text(markdown, encoding="utf-8")
-    html_path.write_text(html_output, encoding="utf-8")
     print(f"wrote {md_path}")
-    print(f"wrote {html_path}")
 
 
 if __name__ == "__main__":
