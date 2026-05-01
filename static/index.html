@@ -31,77 +31,37 @@
       <section class="panel detail">
         <div class="head">
           <div>
-            <div class="subtle">完成イメージ</div>
-            <h2 id="detail-title">テンプレートを選択</h2>
+            <div class="subtle" id="gallery-count">0 items</div>
+            <h2 id="detail-title">ギャラリー</h2>
           </div>
         </div>
 
-        <section class="preview-stage" id="preview-stage">
-          <div class="preview-stage__top">
-            <div>
-              <div class="preview-kicker" id="preview-kind">テンプレートを選択</div>
-              <h3 id="preview-title">上の一覧から1つ選ぶ</h3>
-              <p id="preview-purpose">ここに完成イメージの要点が出ます。</p>
-            </div>
-            <div class="preview-stats">
-              <div>
-                <span id="preview-block-count">0</span>
-                <small>blocks</small>
-              </div>
-              <div class="preview-stats__note" id="preview-copy-format">全文の末尾に指示を追加</div>
-            </div>
-          </div>
-          <div class="preview-stage__body">
-            <div class="preview-stage__lead">
-              <div class="subtle">完成後の見え方</div>
-              <p id="preview-summary">一覧から選んでください。</p>
-            </div>
-            <div class="preview-stage__steps">
-              <div class="subtle">組み立ての流れ</div>
-              <div class="step-list" id="preview-steps"></div>
-            </div>
-          </div>
-          <div class="preview-stage__chips" id="preview-blocks"></div>
-        </section>
-
-        <div class="block">
-          <div class="subtle">要点</div>
-          <div id="detail-summary" style="margin-top: 6px; line-height: 1.8;">一覧から選んでください。</div>
-        </div>
-
-        <div class="block">
-          <div class="subtle">用途メモ</div>
-          <div id="detail-notes" style="margin-top: 6px; line-height: 1.8;">一覧から選んでください。</div>
-        </div>
-
-        <div class="block">
-          <div class="subtle">生成実例</div>
-          <div class="artifact-grid" id="artifact-list"></div>
-        </div>
-
-        <div class="blocks" id="block-list"></div>
-
-        <div class="block">
-          <div class="head" style="margin:0 0 6px 0;">
-            <div>
-              <div class="subtle">全文</div>
-              <h3 style="margin:4px 0 0;">組み立て済みパック</h3>
-            </div>
-            <button class="button primary" id="copy-full">全文コピー</button>
-          </div>
-          <pre id="detail-full"></pre>
-        </div>
-
-        <div class="buttons">
-          <button class="button" id="copy-title">タイトルコピー</button>
-          <button class="button" id="copy-purpose">用途コピー</button>
-          <button class="button" id="copy-blocks">ブロックIDコピー</button>
-        </div>
-
+        <div class="gallery" id="gallery"></div>
         <div class="status" id="status"></div>
       </section>
     </section>
   </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-close" id="modal-close">&times;</div>
+    <div class="modal-content">
+      <div class="modal-image-view">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <div>
+          <div class="eyebrow" id="modal-kind">Category</div>
+          <h2 id="modal-title">Title</h2>
+          <p class="subtle" id="modal-purpose" style="margin-top: 4px; margin-bottom: 16px;">Purpose</p>
+          <button class="button primary" id="modal-copy" style="width: 100%; margin-bottom: 16px;">プロンプトをコピー</button>
+        </div>
+        <div class="block" style="margin-top: 0;">
+          <div class="subtle">全文プロンプト</div>
+          <pre id="modal-prompt"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js" defer></script>
 </body>

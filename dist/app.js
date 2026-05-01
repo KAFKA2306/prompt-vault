@@ -14,27 +14,15 @@ const kindLabels = {
   system: 'AI-Tuber / 基盤と運用',
 };
 
-const kindPalettes = {
-  stamp: { accent: '15,118,110', accent2: '37,99,235' },
-  comic: { accent: '99,102,241', accent2: '14,165,233' },
-  reaction: { accent: '236,72,153', accent2: '249,115,22' },
-  design_sheet: { accent: '59,130,246', accent2: '168,85,247' },
-  announcement: { accent: '244,114,182', accent2: '249,115,22' },
-  social: { accent: '250,204,21', accent2: '236,72,153' },
-  brand: { accent: '99,102,241', accent2: '168,85,247' },
-  system: { accent: '14,165,233', accent2: '59,130,246' },
-  default: { accent: '15,118,110', accent2: '37,99,235' },
-};
-
 const state = {
   templates,
-  selectedId: templates[0]?.id || null,
+  selectedId: null,
   search: '',
 };
 
 const el = (id) => document.getElementById(id);
 
-const renderBlock = (block) => [
+const renderBlockContent = (block) => [
   `## ${block.title}`,
   `ID: ${block.id}`,
   `カテゴリ: ${block.category}`,
@@ -42,63 +30,11 @@ const renderBlock = (block) => [
   block.content,
 ].filter(Boolean).join('\n');
 
-const renderTemplate = (template) => template.blocks.map((blockId) => renderBlock(blocks[blockId])).join('\n\n');
+const renderTemplatePrompt = (template) => template.blocks.map((blockId) => renderBlockContent(blocks[blockId])).join('\n\n');
 
-const renderFullCopyText = (template) => `${renderTemplate(template)}${fullCopySuffix}`;
+const renderFullCopyText = (template) => `${renderTemplatePrompt(template)}${fullCopySuffix}`;
 
 const kindLabel = (template) => kindLabels[template.kind] || 'テンプレート';
-
-const kindPalette = (template) => kindPalettes[template.kind] || kindPalettes.default;
-
-const renderPreviewSteps = (template) => template.steps?.length
-  ? template.steps.map((step, index) => `
-      <div class="step-item">
-        <span>${index + 1}</span>
-        <p>${step}</p>
-      </div>
-    `).join('')
-  : '<div class="empty">手順がありません。</div>';
-
-const renderPreviewBlocks = (template) => template.blocks.map((blockId) => {
-  const block = blocks[blockId];
-  return `<div class="preview-chip">${block.title}</div>`;
-}).join('');
-
-const renderArtifacts = (template) => {
-  const artifacts = template.artifacts || [];
-  if (!artifacts.length) {
-    return '<div class="empty">生成実例はありません。</div>';
-  }
-
-  const [primary, ...rest] = artifacts;
-  return `
-    <div class="artifact-showcase">
-      <a class="artifact-hero" href="${primary.path}" target="_blank" rel="noreferrer">
-        <div class="artifact-hero__media">
-          <img src="${primary.path}" alt="${primary.title}" loading="lazy" />
-        </div>
-        <div class="artifact-hero__meta">
-          <div class="artifact-hero__kicker">生成実例</div>
-          <div class="artifact-hero__title">${primary.title}</div>
-          <div class="artifact-hero__path">${primary.path}</div>
-          <div class="artifact-hero__action">原寸で開く</div>
-        </div>
-      </a>
-      ${rest.length ? `
-        <div class="artifact-strip">
-          ${rest.map((artifact) => `
-            <a class="artifact-thumb" href="${artifact.path}" target="_blank" rel="noreferrer">
-              <img src="${artifact.path}" alt="${artifact.title}" loading="lazy" />
-              <span>${artifact.title}</span>
-            </a>
-          `).join('')}
-        </div>
-      ` : ''}
-    </div>
-  `;
-};
-
-const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
 const filteredTemplates = () => {
   const query = state.search.trim().toLowerCase();
@@ -109,150 +45,134 @@ const filteredTemplates = () => {
       template.summary,
       template.notes,
       template.blocks.join(' '),
+      template.kind,
     ].join(' ').toLowerCase();
     return !query || haystack.includes(query);
   });
 };
 
+const openModal = (templateId) => {
+  const template = state.templates.find((t) => t.id === templateId);
+  if (!template) return;
+
+  const artifact = template.artifacts?.[0];
+  const imgView = document.querySelector('.modal-image-view');
+  const imgEl = el('modal-img');
+
+  if (artifact && artifact.path) {
+    imgEl.style.display = 'block';
+    imgEl.src = artifact.path;
+    imgEl.alt = artifact.title;
+    const noImage = imgView.querySelector('.no-image');
+    if (noImage) noImage.remove();
+  } else {
+    imgEl.style.display = 'none';
+    imgEl.src = '';
+    let noImage = imgView.querySelector('.no-image');
+    if (!noImage) {
+      noImage = document.createElement('div');
+      noImage.className = 'no-image subtle';
+      noImage.textContent = '画像がありません';
+      imgView.appendChild(noImage);
+    }
+  }
+  
+  el('modal-kind').textContent = kindLabel(template);
+  el('modal-title').textContent = template.title;
+  el('modal-purpose').textContent = template.purpose;
+  el('modal-prompt').textContent = renderTemplatePrompt(template);
+  
+  el('modal').classList.add('active');
+  state.selectedId = templateId;
+};
+
+const closeModal = () => {
+  el('modal').classList.remove('active');
+  state.selectedId = null;
+};
+
+const renderGallery = () => {
+  const list = filteredTemplates().filter(t => t.artifacts && t.artifacts.length > 0);
+  el('gallery-count').textContent = `${list.length} images`;
+  
+  el('gallery').innerHTML = list.map((template) => `
+    <div class="gallery-item" data-open="${template.id}">
+      <img src="${template.artifacts[0].path}" alt="${template.artifacts[0].title}" loading="lazy" />
+      <div class="gallery-item__overlay">
+        <p class="gallery-item__title">${template.title}</p>
+        <p class="subtle" style="color: rgba(255,255,255,.8); font-size: 11px;">${template.purpose}</p>
+      </div>
+    </div>
+  `).join('');
+
+  el('gallery').querySelectorAll('[data-open]').forEach((item) => {
+    item.addEventListener('click', () => openModal(item.dataset.open));
+  });
+
+  if (!list.length) {
+    el('gallery').innerHTML = '<div class="empty">一致する実例がありません。</div>';
+  }
+};
+
 const renderList = () => {
   const list = filteredTemplates();
   el('list').innerHTML = list.map((template) => `
-    <article class="panel card ${template.id === state.selectedId ? 'active' : ''}" data-id="${template.id}">
+    <article class="panel card" data-id="${template.id}">
       <div class="card-badge">${kindLabel(template)}</div>
       <p class="title">${template.title}</p>
       <div class="meta">${template.purpose}</div>
-      <p class="preview">${template.summary || template.notes || template.blocks.join(', ')}</p>
       <div class="card-foot">
         <span>${template.blocks.length} blocks</span>
-        <span>${template.steps?.length || 0} steps</span>
-      </div>
-      <div class="buttons" style="margin-top: 10px;">
-        <button class="button primary" data-copy-full="${template.id}">全文コピー</button>
       </div>
     </article>
   `).join('');
 
   el('list').querySelectorAll('[data-id]').forEach((card) =>
     card.addEventListener('click', () => {
-      state.selectedId = card.dataset.id;
-      renderDetail();
-      renderList();
-    })
-  );
-
-  el('list').querySelectorAll('[data-copy-full]').forEach((button) =>
-    button.addEventListener('click', async (event) => {
-      event.stopPropagation();
-      const template = state.templates.find((item) => item.id === button.dataset.copyFull);
-      if (!template) return;
-      await navigator.clipboard.writeText(renderFullCopyText(template));
-      el('status').textContent = `${template.title}の全文をコピーしました`;
+      openModal(card.dataset.id);
     })
   );
 
   if (!list.length) {
-    el('list').innerHTML = '<div class="empty">一致するテンプレートがありません。</div>';
+    el('list').innerHTML = '<div class="empty">テンプレートなし</div>';
   }
-};
-
-const renderDetail = () => {
-  const template = selected();
-  if (!template) {
-    el('detail-title').textContent = 'テンプレートを選択';
-    el('preview-kind').textContent = 'テンプレートを選択';
-    el('preview-title').textContent = '上の一覧から1つ選ぶ';
-    el('preview-purpose').textContent = 'ここに完成イメージの要点が出ます。';
-    el('preview-block-count').textContent = '0';
-    el('preview-summary').textContent = '一覧から選んでください。';
-    el('preview-steps').innerHTML = '';
-    el('preview-blocks').innerHTML = '';
-    el('detail-summary').textContent = '一覧から選んでください。';
-    el('detail-notes').textContent = '一覧から選んでください。';
-    el('artifact-list').innerHTML = '';
-    el('block-list').innerHTML = '';
-    el('detail-full').textContent = '';
-    el('preview-stage').style.removeProperty('--accent');
-    el('preview-stage').style.removeProperty('--accent-2');
-    return;
-  }
-
-  el('detail-title').textContent = template.title;
-  el('preview-kind').textContent = kindLabel(template);
-  el('preview-title').textContent = template.title;
-  el('preview-purpose').textContent = template.purpose;
-  el('preview-block-count').textContent = String(template.blocks.length);
-  el('preview-summary').textContent = template.summary || template.purpose;
-  el('preview-steps').innerHTML = renderPreviewSteps(template);
-  el('preview-blocks').innerHTML = renderPreviewBlocks(template);
-  el('detail-summary').textContent = template.summary || template.purpose;
-  el('detail-notes').textContent = template.notes || 'メモなし';
-  el('artifact-list').innerHTML = renderArtifacts(template);
-  el('detail-full').textContent = renderTemplate(template);
-  const palette = kindPalette(template);
-  el('preview-stage').style.setProperty('--accent', palette.accent);
-  el('preview-stage').style.setProperty('--accent-2', palette.accent2);
-  el('block-list').innerHTML = template.blocks.map((blockId) => {
-    const block = blocks[blockId];
-    return `
-      <div class="block">
-        <div class="head" style="margin:0 0 6px 0;">
-          <div>
-            <div class="subtle">${block.category}</div>
-            <h3 style="margin:4px 0 0;">${block.title}</h3>
-          </div>
-          <button class="button" data-copy="${block.id}">コピー</button>
-        </div>
-        <pre>${renderBlock(block)}</pre>
-      </div>
-    `;
-  }).join('');
-
-  el('block-list').querySelectorAll('[data-copy]').forEach((button) =>
-    button.addEventListener('click', async () => {
-      const block = blocks[button.dataset.copy];
-      await navigator.clipboard.writeText(renderBlock(block));
-      el('status').textContent = `${block.title}をコピーしました`;
-    })
-  );
-};
-
-const copyText = async (text, label) => {
-  await navigator.clipboard.writeText(text);
-  el('status').textContent = `${label}をコピーしました`;
 };
 
 const render = () => {
   renderList();
-  renderDetail();
+  renderGallery();
 };
 
 el('search').addEventListener('input', (event) => {
   state.search = event.target.value;
-  renderList();
+  render();
 });
 
-el('copy-full').addEventListener('click', () => {
-  const template = selected();
-  if (!template) return;
-  copyText(renderFullCopyText(template), '全文');
+el('modal-close').addEventListener('click', closeModal);
+el('modal').addEventListener('click', (e) => {
+  if (e.target === el('modal')) closeModal();
 });
 
-el('copy-title').addEventListener('click', () => {
-  const template = selected();
+el('modal-copy').addEventListener('click', async (e) => {
+  const template = state.templates.find((t) => t.id === state.selectedId);
   if (!template) return;
-  copyText(template.title, 'タイトル');
+  await navigator.clipboard.writeText(renderFullCopyText(template));
+  
+  const btn = e.target;
+  const originalText = btn.textContent;
+  btn.textContent = 'コピーしました！';
+  btn.style.background = '#0f766e'; // accent color
+  
+  setTimeout(() => { 
+    btn.textContent = originalText; 
+    btn.style.background = '';
+  }, 2000);
 });
 
-el('copy-purpose').addEventListener('click', () => {
-  const template = selected();
-  if (!template) return;
-  copyText(template.purpose, '用途');
-});
-
-el('copy-blocks').addEventListener('click', () => {
-  const template = selected();
-  if (!template) return;
-  copyText(template.blocks.join(', '), 'ブロックID');
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && el('modal').classList.contains('active')) {
+    closeModal();
+  }
 });
 
 render();

@@ -13,6 +13,7 @@
 ## 実行方針
 
 - `README.md` と `DESIGN.md` を先に読む
+- UIは「画像ギャラリーメイン＋拡大モーダルでの全文一発コピー」が基本。複雑なダッシュボード化はしない
 - `db/prompts.json` を先に直す
 - 必要なら `static/app.js` を直す
 - `python3 build.py` を実行する
