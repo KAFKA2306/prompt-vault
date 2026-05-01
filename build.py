@@ -363,9 +363,9 @@ def render_static(db: dict[str, Any]) -> str:
       `カテゴリ: ${{block.category}}`,
       block.tags?.length ? `タグ: ${{block.tags.map((tag) => `#${{tag}}`).join(' ')}}` : '',
       block.content,
-    ].filter(Boolean).join('\n');
+    ].filter(Boolean).join('\\n');
 
-    const renderTemplate = (template) => template.blocks.map((blockId) => renderBlock(blocks[blockId])).join('\n\n');
+    const renderTemplate = (template) => template.blocks.map((blockId) => renderBlock(blocks[blockId])).join('\\n\\n');
 
     const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 

@@ -44,3 +44,5 @@
 - `build command` が `python build.py` になっているか
 - `output directory` が `dist` になっているか
 - GitHub 接続先が正しいか
+- ログに `npx wrangler deploy` と出る場合は、Pages ではなく Workers 側のプロジェクトを作っている
+- その場合は今のプロジェクトを消して、`Workers & Pages -> Pages -> Connect to Git` から作り直す

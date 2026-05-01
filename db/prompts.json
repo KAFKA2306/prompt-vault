@@ -36,6 +36,13 @@
       "tags": ["jp", "text"]
     },
     {
+      "id": "text_content_pack",
+      "category": "文言",
+      "title": "短い日本語セリフ",
+      "content": "「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」",
+      "tags": ["jp", "dialogue", "phrases"]
+    },
+    {
       "id": "expressions_pack",
       "category": "表情",
       "title": "反応集",
@@ -62,7 +69,7 @@
       "id": "sticker_sheet",
       "title": "Discord Sticker Sheet",
       "purpose": "分解要素をまとめて、ステッカーシート用の全文を組み立てる",
-      "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "expressions_pack", "effects_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "text_content_pack", "expressions_pack", "effects_pack", "negative_common"],
       "notes": "画像生成ではなく、用途別に再利用するための構成。"
     }
   ]
