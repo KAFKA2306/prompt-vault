@@ -404,17 +404,6 @@
       ]
     },
     {
-      "id": "subtitle_pack",
-      "category": "テキスト",
-      "title": "字幕・テロップ",
-      "content": "short on-screen subtitle lines, concise Japanese, readable at a glance, no clutter, no English, no broken Japanese, keep the line under one breath, suitable for stream overlays and clip captions",
-      "tags": [
-        "subtitle",
-        "caption",
-        "overlay"
-      ]
-    },
-    {
       "id": "local_offline_pack",
       "category": "システム・実行",
       "title": "ローカル優先",
@@ -434,17 +423,6 @@
         "memory",
         "summary",
         "context"
-      ]
-    },
-    {
-      "id": "vfx_trigger_pack",
-      "category": "演出",
-      "title": "感情演出",
-      "content": "emotion-to-expression map, effects, motion cues, timing, sparkles, emphasis, reaction-driven visual triggers",
-      "tags": [
-        "vfx",
-        "effects",
-        "emotion"
       ]
     },
     {
@@ -514,22 +492,6 @@
       ]
     },
     {
-      "id": "slide_pack",
-      "category": "発表",
-      "title": "スライド発表",
-      "content": "slide presentation, screen share, explanation text, tutorial flow, scene progression, speaking notes",
-      "tags": [
-        "slide",
-        "presentation",
-        "tutorial"
-      ],
-      "related": [
-        "ai_tuber_ops_pack",
-        "comment_reply_guide",
-        "slide_talk"
-      ]
-    },
-    {
       "id": "plugin_pack",
       "category": "拡張",
       "title": "外部連携",
@@ -538,17 +500,6 @@
         "plugin",
         "websocket",
         "extension"
-      ]
-    },
-    {
-      "id": "character_customization_pack",
-      "category": "コンフィグ",
-      "title": "キャラ設定",
-      "content": "appearance, personality, phrasing, configuration differences, avatar variations, identity tuning",
-      "tags": [
-        "character",
-        "customization",
-        "persona"
       ]
     },
     {
@@ -882,28 +833,6 @@
       ]
     },
     {
-      "id": "break_scene_kafka",
-      "category": "背景",
-      "title": "休憩背景",
-      "content": "soft break scene, mug, small snack, chair, window light, relaxed pause, gentle room atmosphere, no busy props, warm and simple",
-      "tags": [
-        "background",
-        "break",
-        "rest"
-      ]
-    },
-    {
-      "id": "progress_scene_kafka",
-      "category": "背景",
-      "title": "進捗背景",
-      "content": "progress scene, checklist, notebook, laptop, partially completed notes, visible order, focused workspace, subtle status marks, practical and clean",
-      "tags": [
-        "background",
-        "progress",
-        "work"
-      ]
-    },
-    {
       "id": "goodnight_scene_kafka",
       "category": "背景",
       "title": "おやすみ背景",
@@ -1197,27 +1126,6 @@
       ]
     },
     {
-      "id": "daily_work_sheet_vlog",
-      "category": "形式・レイアウト",
-      "title": "作業管理テンプレート",
-      "content": "kafka daily work sheet, task list, priority order, progress tracker, cleanup notes, structure from fixed points like train times, minimize manual work, optimize the process, simple japanese infographic, white background, thin borders, compact columns, readable checklist design, calm planning layout",
-      "tags": [
-        "work",
-        "sheet",
-        "daily",
-        "kafka"
-      ],
-      "aliases": [
-        "daily work sheet"
-      ],
-      "variant_of": "daily_work_sheet",
-      "related": [
-        "daily_work_sheet",
-        "research_log_pack",
-        "memory_pack"
-      ]
-    },
-    {
       "id": "summary_sheet_vlog",
       "category": "形式・レイアウト",
       "title": "振り返りサマリー",
@@ -1226,18 +1134,6 @@
         "summary",
         "sheet",
         "recap",
-        "kafka"
-      ]
-    },
-    {
-      "id": "photo_prompt_sheet_vlog",
-      "category": "形式・レイアウト",
-      "title": "画像生成台帳（詳細）",
-      "content": "kafka photo prompt sheet, purpose, composition, props, output target, prompt archive table, daily dated generation ledger, visual notes, sound notes, temperature notes, emotion notes, japanese layout, white background, pastel accents, neat rows, reusable generation ledger, clear labels",
-      "tags": [
-        "photo",
-        "prompt",
-        "sheet",
         "kafka"
       ]
     },
@@ -1901,54 +1797,6 @@
       "notes": "開始報告だけに寄せる。進捗や成果はまだ入れない。"
     },
     {
-      "id": "break_post",
-      "title": "Kafka 休憩ポスト",
-      "kind": "social",
-      "purpose": "休憩に入る時のひとことポストを作る",
-      "summary": "お茶、ひと息、やわらかい表情で、休憩を自然に伝える。",
-      "steps": [
-        "休憩に入る理由を短くする",
-        "やわらかい小物を置く",
-        "戻る気配を残す",
-        "重くしない"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "break_scene_kafka",
-        "status_post_layout",
-        "daily_status_text_pack",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "休憩は短く、次に戻りやすい文面にする。"
-    },
-    {
-      "id": "progress_post",
-      "title": "Kafka 進捗ポスト",
-      "kind": "social",
-      "purpose": "作業の途中経過を出すポストを作る",
-      "summary": "チェックリストや未完のノートで、進み具合を見せる。",
-      "steps": [
-        "進んだところを1つだけ出す",
-        "作業途中の画面を見せる",
-        "続きをやる感を残す",
-        "終わっていないことを自然に伝える"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "progress_scene_kafka",
-        "status_post_layout",
-        "daily_status_text_pack",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "進捗は情報を増やしすぎない。1つだけ進んだ感を出す。"
-    },
-    {
       "id": "goodnight_post",
       "title": "Kafka おやすみポスト",
       "kind": "social",
@@ -2173,29 +2021,6 @@
       ]
     },
     {
-      "id": "daily_work_sheet",
-      "title": "Kafka 配信運用カード",
-      "kind": "design_sheet",
-      "purpose": "配信準備と当日の動きをそのまま回せる進行表にする",
-      "summary": "開始前、配信中、終了後に分けて、何を先に固めるかが見える運用カード。",
-      "steps": [
-        "開始前の準備を書く",
-        "配信中の確認項目を書く",
-        "終了後の整理を書く",
-        "次回に回す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "daily_work_sheet_vlog",
-        "local_offline_pack",
-        "speech_mode_kafka",
-        "research_log_pack",
-        "negative_common"
-      ],
-      "notes": "work.md のような短い運用メモを、Kafka の判断で回す。"
-    },
-    {
       "id": "summary_sheet",
       "title": "Kafka 配信後まとめカード",
       "kind": "design_sheet",
@@ -2227,27 +2052,6 @@
           "title": "配信後まとめカードの別実例"
         }
       ]
-    },
-    {
-      "id": "photo_prompt_sheet",
-      "title": "Kafka 生成素材台帳",
-      "kind": "design_sheet",
-      "purpose": "AI-Tuber 用の生成素材を用途別に整理する",
-      "summary": "1枚絵、漫画、スタンプ、告知、配信素材を日付で積む台帳。",
-      "steps": [
-        "用途を選ぶ",
-        "構図を決める",
-        "出力先を明記する",
-        "再利用先を書く"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "photo_prompt_sheet_vlog",
-        "prompt_archive_sheet_vlog",
-        "negative_common"
-      ],
-      "notes": "photos_prompts を用途ごとに見返せるようにする。"
     },
     {
       "id": "archive_index",
@@ -2408,80 +2212,6 @@
       "notes": "通常のロゴ単独とは別に、宇宙モチーフだけ欲しい時の専用版。"
     },
     {
-      "id": "chat_reply_card",
-      "title": "Kafka コメント返信カード",
-      "kind": "reaction",
-      "purpose": "配信中のコメント返しを短く即応できる形にする",
-      "summary": "短い返答、あいづち、質問返し、話題の戻し方をまとめた即応カード。",
-      "steps": [
-        "コメントの温度を読む",
-        "短く返す",
-        "必要なら話題を戻す",
-        "人格を崩さない"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "chat_reply_pack",
-        "speech_mode_kafka",
-        "text_style_jp",
-        "text_content_pack",
-        "expressions_pack",
-        "negative_common"
-      ],
-      "uses": [
-        "chat_reply_pack",
-        "speech_mode_kafka",
-        "text_style_jp",
-        "expressions_pack"
-      ],
-      "notes": "長く説明しない。短く返して流れを止めない。"
-    },
-    {
-      "id": "topic_redirect_card",
-      "title": "Kafka 話題切り替えカード",
-      "kind": "reaction",
-      "purpose": "危ない話題や長引く話題を自然に切り替える",
-      "summary": "境界線を守りつつ、温度を落とさず別の話題へ戻すカード。",
-      "steps": [
-        "危険かどうかを見る",
-        "短く境界を置く",
-        "別の話題に逃がす",
-        "空気を壊さない"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "safe_reply_pack",
-        "speech_mode_kafka",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "否定だけで終わらせず、次の話題を添える。"
-    },
-    {
-      "id": "memory_update_card",
-      "title": "Kafka 記憶更新カード",
-      "kind": "design_sheet",
-      "purpose": "配信や日常の重要点を記憶に入れる",
-      "summary": "今日の出来事、残す感情、次回に効く情報だけを短く抜く更新カード。",
-      "steps": [
-        "今日の核を1つ決める",
-        "残す事実を書く",
-        "残す感情を書く",
-        "次回の使い道を書く"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "memory_pack",
-        "speech_mode_kafka",
-        "research_log_pack",
-        "negative_common"
-      ],
-      "notes": "長いログにしない。次の会話で使える断片だけ残す。"
-    },
-    {
       "id": "ai_tuber_core_pack",
       "title": "Kafka 起動カード",
       "kind": "system",
@@ -2514,33 +2244,6 @@
         }
       ],
       "notes": "まず土台を作るときに使う。細部は後で分ける。"
-    },
-    {
-      "id": "ai_tuber_ops_pack",
-      "title": "Kafka 配信後レビューカード",
-      "kind": "system",
-      "purpose": "AI-Tuber の会話品質、記憶、演出、字幕、告知、振り返りをまとめる",
-      "summary": "返答、記憶、演出、字幕、告知、ログを配信後に整理するレビューカード。",
-      "steps": [
-        "返答の型を決める",
-        "記憶の範囲を分ける",
-        "演出を紐付ける",
-        "ログを振り返りに使う"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "chat_reply_pack",
-        "safe_reply_pack",
-        "speech_mode_kafka",
-        "memory_pack",
-        "vfx_trigger_pack",
-        "subtitle_pack",
-        "announcement_text_pack",
-        "character_customization_pack",
-        "research_log_pack"
-      ],
-      "notes": "配信後の改善や日常運用で使う。"
     },
     {
       "id": "comment_reply_guide",
@@ -2579,27 +2282,6 @@
         }
       ],
       "notes": "コメント返しと発話の切り替えをそのまま見返せるようにする。"
-    },
-    {
-      "id": "slide_talk",
-      "title": "Kafka スライド発表",
-      "kind": "system",
-      "purpose": "スライドや画面共有の話を短く整理する",
-      "summary": "発表の結論、見せ方、補足、次の話題をまとめる。",
-      "steps": [
-        "結論を先に置く",
-        "画面の見せ方を決める",
-        "補足を短くする",
-        "次の話題へつなぐ"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "slide_pack",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "長い会議資料ではなく、見せる話の流れを作る。"
     },
     {
       "id": "reading_post_general",
