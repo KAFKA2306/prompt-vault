@@ -1978,6 +1978,40 @@
       "notes": "配信後の改善や日常運用で使う。"
     },
     {
+      "id": "comment_reply_guide",
+      "title": "Kafka コメント返しガイド",
+      "kind": "system",
+      "purpose": "コメント返しの基本と発話モードを1枚にまとめる",
+      "summary": "短い返答、やさしい返し、技術モード、感覚モード、安全モードを見やすく整理する。",
+      "steps": [
+        "コメントにまず答える",
+        "発話モードを切り分ける",
+        "短くやさしく返す",
+        "別の話題へつなぐ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "chat_reply_pack",
+        "speech_mode_kafka",
+        "safe_reply_pack",
+        "text_style_jp",
+        "expressions_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/025_comment_reply_guide.png",
+          "title": "コメント返しガイドの実例"
+        },
+        {
+          "path": "artifacts/026_comment_reply_guide_alt.png",
+          "title": "コメント返しガイドの別実例"
+        }
+      ],
+      "notes": "コメント返しと発話の切り替えをそのまま見返せるようにする。"
+    },
+    {
       "id": "reading_post_general",
       "title": "Kafka 読書投稿",
       "kind": "social",
