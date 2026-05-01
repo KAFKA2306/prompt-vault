@@ -1263,6 +1263,28 @@
         "sheet",
         "kafka"
       ]
+    },
+    {
+      "id": "trpg_character_sheet_layout",
+      "category": "形式・レイアウト",
+      "title": "TRPGキャラシート",
+      "content": "TRPG character sheet layout, modern japanese tabletop roleplaying game investigator style, clean infographic grid, stats and attributes section, dice motifs, HP/MP/SAN bars, small inventory boxes, full body character portrait on the side, soft pastel colors, highly organized information design, readable typography, white background",
+      "tags": [
+        "trpg",
+        "character-sheet",
+        "layout"
+      ]
+    },
+    {
+      "id": "trpg_status_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "TRPGステータス文言",
+      "content": "「STR」「DEX」「INT」「CON」「APP」「POW」「HP」「MP」「SAN」「アイデア」「幸運」「知識」「探索者」「技能」「ダイスロール」",
+      "tags": [
+        "trpg",
+        "text",
+        "status"
+      ]
     }
   ],
   "templates": [
@@ -2759,6 +2781,29 @@
         }
       ],
       "notes": "JoinWars の一般イメージに寄せた専用パターン。"
+    },
+    {
+      "id": "trpg_character_sheet",
+      "title": "Kafka TRPGキャラシート",
+      "kind": "sheet",
+      "purpose": "TRPGの探索者としてのステータスや立ち絵をまとめる",
+      "summary": "TRPGのキャラクターシート風のレイアウトで、ステータスや所持品をそれっぽく配置する。",
+      "steps": [
+        "探索者の雰囲気に合わせて衣装を調整する",
+        "ステータス枠やダイスモチーフを配置する",
+        "全身の立ち絵を大きく置く",
+        "TRPG用語を散りばめる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "trpg_character_sheet_layout",
+        "trpg_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "現代日本TRPG（CoCなど）の探索者をイメージしたシート用。"
     }
   ]
 }
