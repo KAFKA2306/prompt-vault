@@ -172,7 +172,7 @@
       "id": "morning_tweet_layout",
       "category": "用途",
       "title": "おはツイレイアウト",
-      "content": "square or 4:5 social post, one large portrait, one short greeting line, date or tiny tag if needed, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter",
+      "content": "square or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout",
       "tags": [
         "morning",
         "tweet",
@@ -960,7 +960,7 @@
           "title": "おはツイ春の実例"
         }
       ],
-      "notes": "春は軽い羽織と花モチーフで寄せる。繰り返し使う前提の定番枠。"
+      "notes": "春は軽い羽織と花モチーフで寄せる。日付は入れない。繰り返し使う前提の定番枠。"
     },
     {
       "id": "morning_tweet_summer",
@@ -992,7 +992,7 @@
           "title": "おはツイ夏の実例"
         }
       ],
-      "notes": "夏は白と青を強めにして、軽さを優先する。"
+      "notes": "夏は白と青を強めにして、軽さを優先する。日付は入れない。"
     },
     {
       "id": "morning_tweet_autumn",
@@ -1024,7 +1024,7 @@
           "title": "おはツイ秋の実例"
         }
       ],
-      "notes": "秋はやわらかい静けさを入れる。重くしすぎない。"
+      "notes": "秋はやわらかい静けさを入れる。重くしすぎない。日付は入れない。"
     },
     {
       "id": "morning_tweet_winter",
@@ -1056,7 +1056,7 @@
           "title": "おはツイ冬の実例"
         }
       ],
-      "notes": "冬は暗くしない。朝のやわらかさを残す。"
+      "notes": "冬は暗くしない。朝のやわらかさを残す。日付は入れない。"
     },
     {
       "id": "reply_stamp_sheet",
