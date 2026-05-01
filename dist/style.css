@@ -68,7 +68,6 @@ h1 {
 }
 
 .lead {
-  max-width: 64ch;
   color: var(--muted);
   line-height: 1.9;
   margin: 0;
