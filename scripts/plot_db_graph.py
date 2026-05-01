@@ -19,48 +19,38 @@ MD_PATH = OUTPUT_DIR / "db_graph.md"
 
 PRESETS = [
     {
-        "name": "overview",
         "mode": "overview",
         "focus": None,
         "kinds": [],
         "categories": [],
-        "slug": "overview",
         "title": "Overview",
     },
     {
-        "name": "social-templates",
         "mode": "templates",
         "focus": None,
         "kinds": ["social"],
         "categories": [],
-        "slug": "templates_social",
         "title": "Templates / social",
     },
     {
-        "name": "design-sheet-templates",
         "mode": "templates",
         "focus": None,
         "kinds": ["design_sheet"],
         "categories": [],
-        "slug": "templates_design_sheet",
         "title": "Templates / design_sheet",
     },
     {
-        "name": "layout-blocks",
         "mode": "blocks",
         "focus": None,
         "kinds": [],
         "categories": ["形式・レイアウト"],
-        "slug": "blocks_layout",
         "title": "Blocks / layout",
     },
     {
-        "name": "morning-focus",
         "mode": "overview",
         "focus": "morning_tweet_layout",
         "kinds": [],
         "categories": [],
-        "slug": "focus_morning_tweet_layout",
         "title": "Focus / morning_tweet_layout",
     },
 ]
@@ -101,14 +91,10 @@ def build_indexes(db: dict[str, Any]) -> tuple[dict[str, dict[str, Any]], dict[s
 def filter_templates(
     templates: list[dict[str, Any]],
     allowed_kinds: set[str],
-    focus_template_ids: set[str] | None = None,
 ) -> list[dict[str, Any]]:
-    focus_template_ids = focus_template_ids or set()
     result = []
     for template in templates:
         if allowed_kinds and template.get("kind") not in allowed_kinds:
-            continue
-        if focus_template_ids and template["id"] not in focus_template_ids:
             continue
         result.append(template)
     return ordered_nodes(result)
@@ -117,14 +103,10 @@ def filter_templates(
 def filter_blocks(
     blocks: list[dict[str, Any]],
     allowed_categories: set[str],
-    focus_block_ids: set[str] | None = None,
 ) -> list[dict[str, Any]]:
-    focus_block_ids = focus_block_ids or set()
     result = []
     for block in blocks:
         if allowed_categories and block.get("category") not in allowed_categories:
-            continue
-        if focus_block_ids and block["id"] not in focus_block_ids:
             continue
         result.append(block)
     return ordered_nodes(result)
