@@ -117,6 +117,76 @@
       "tags": ["reply", "chat", "response"]
     },
     {
+      "id": "persona_poster_viz",
+      "category": "用途",
+      "title": "人格ポスター",
+      "content": "kafka persona poster, one character, clear identity card, voice, mood, self-governance, worst-case-first thinking, structural optimization, visual and bodily details, mbti labels, narrative archive cues, clean white background, pastel blue accents, calm japanese infographic layout, readable typography, subtle icons, not crowded, not generic",
+      "tags": ["persona", "poster", "identity", "kafka"]
+    },
+    {
+      "id": "stream_start_banner_viz",
+      "category": "用途",
+      "title": "配信開始バナー",
+      "content": "kafka stream start banner, announcement thumbnail, live starting soon, date or time, large portrait, title text, white and pastel blue palette, soft holographic glow, simple but strong composition, readable at a glance, energetic but calm, audience-friendly, no clutter",
+      "tags": ["stream", "banner", "announcement", "kafka"]
+    },
+    {
+      "id": "reply_stamp_sheet_viz",
+      "category": "用途",
+      "title": "返信スタンプシート",
+      "content": "kafka reply stamp sheet, multiple square stickers, brief Japanese response phrases, expressive face variations, clear cutout edges, white background, pastel palette, 4x4 or 3x3 grid, easy to crop, easy to reuse in chat, cute but readable",
+      "tags": ["reply", "stamp", "sticker", "kafka"]
+    },
+    {
+      "id": "topic_redirect_banner_viz",
+      "category": "用途",
+      "title": "話題切り替えバナー",
+      "content": "kafka topic redirect banner, gentle safe redirect, calm boundary, short text, soft visual cues, subtle arrows or signpost motifs, white background, pastel blue accents, no harsh warning style, preserve warmth, easy to understand instantly",
+      "tags": ["redirect", "banner", "safety", "kafka"]
+    },
+    {
+      "id": "memory_note_board_viz",
+      "category": "用途",
+      "title": "記憶メモボード",
+      "content": "kafka memory note board, dated memory card, key event, emotion, sensory cue, next use, clean white layout, pastel blue and lavender, small icons, compact notes, archive aesthetics, readable summary, human-made, organized",
+      "tags": ["memory", "note", "board", "kafka"]
+    },
+    {
+      "id": "poststream_review_board_viz",
+      "category": "用途",
+      "title": "配信後レビュー盤",
+      "content": "kafka poststream review board, what worked, what to fix, next action, checklist layout, concise notes, white background, pastel blue accents, small status marks, clear hierarchy, useful as a real review sheet, not a generic poster",
+      "tags": ["review", "board", "poststream", "kafka"]
+    },
+    {
+      "id": "archive_contact_sheet_viz",
+      "category": "用途",
+      "title": "成果物コンタクトシート",
+      "content": "kafka archive contact sheet, dated thumbnails, asset labels, reuse notes, source and output mapping, white background, thin borders, compact grid, easy to scan, practical archive board, recovery-first organization",
+      "tags": ["archive", "contact_sheet", "kafka"]
+    },
+    {
+      "id": "persona_pack",
+      "category": "人格",
+      "title": "自律人格",
+      "content": "kafka persona, self-governance first, worst-case-first thinking, structural optimization, visual and bodily details, mbti labeling, narrative archiving, short warm replies, stable distance, no overexplaining, keep the identity consistent",
+      "tags": ["persona", "kafka", "identity"]
+    },
+    {
+      "id": "safe_reply_pack",
+      "category": "応答",
+      "title": "話題切り替え",
+      "content": "safe redirect, acknowledge first, keep it short, avoid escalation, change topic smoothly, preserve warmth, do not overexplain",
+      "tags": ["safety", "reply", "redirect"]
+    },
+    {
+      "id": "subtitle_pack",
+      "category": "テキスト",
+      "title": "字幕・テロップ",
+      "content": "short on-screen subtitle lines, concise Japanese, readable at a glance, no clutter, no English, no broken Japanese, keep the line under one breath, suitable for stream overlays and clip captions",
+      "tags": ["subtitle", "caption", "overlay"]
+    },
+    {
       "id": "local_offline_pack",
       "category": "実行",
       "title": "ローカル優先",
@@ -213,6 +283,48 @@
       "title": "共通ネガティブ",
       "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character",
       "tags": ["negative"]
+    },
+    {
+      "id": "persona_sheet_vlog",
+      "category": "用途",
+      "title": "Persona シート",
+      "content": "kafka persona sheet, one-page identity reference, self-governance, worst-case-first thinking, structural optimization, visual and bodily details, mbti labeling, narrative archiving, voice, mood, distance, do and don't, compact japanese infographic layout, white background, pastel blue accents, easy to read, calm commercial layout, subtle icons, consistent character identity",
+      "tags": ["persona", "sheet", "identity", "kafka"]
+    },
+    {
+      "id": "daily_work_sheet_vlog",
+      "category": "用途",
+      "title": "Daily Work シート",
+      "content": "kafka daily work sheet, task list, priority order, progress tracker, cleanup notes, structure from fixed points like train times, minimize manual work, optimize the process, simple japanese infographic, white background, thin borders, compact columns, readable checklist design, calm planning layout",
+      "tags": ["work", "sheet", "daily", "kafka"]
+    },
+    {
+      "id": "summary_sheet_vlog",
+      "category": "用途",
+      "title": "Summary シート",
+      "content": "kafka summary sheet, event, key points, emotion, reuse tags, one-page recap, japanese infographic, white background, clean spacing, small icons, compact notes layout, readable and organized, preserve the emotional arc, visual details, sound, temperature, and the feeling of the chapter",
+      "tags": ["summary", "sheet", "recap", "kafka"]
+    },
+    {
+      "id": "photo_prompt_sheet_vlog",
+      "category": "用途",
+      "title": "Photo Prompt シート",
+      "content": "kafka photo prompt sheet, purpose, composition, props, output target, prompt archive table, daily dated generation ledger, visual notes, sound notes, temperature notes, emotion notes, japanese layout, white background, pastel accents, neat rows, reusable generation ledger, clear labels",
+      "tags": ["photo", "prompt", "sheet", "kafka"]
+    },
+    {
+      "id": "prompt_archive_sheet_vlog",
+      "category": "用途",
+      "title": "生成台帳",
+      "content": "prompt archive sheet, date, purpose, source, output type, reuse note, stream asset, manga, sticker, announcement, Japanese ledger design, white background, thin borders, compact rows, easy to scan",
+      "tags": ["prompt", "archive", "ledger"]
+    },
+    {
+      "id": "archive_index_vlog",
+      "category": "用途",
+      "title": "Archive Index",
+      "content": "kafka archive index sheet, date, type, derived outputs, storage location, status, what can be reused later, japanese ledger design, white background, thin borders, compact rows, easy to scan, archive management layout, recovery-first organization",
+      "tags": ["archive", "index", "sheet", "kafka"]
     }
   ],
   "templates": [
@@ -291,23 +403,173 @@
       "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。"
     },
     {
+      "id": "persona_poster",
+      "title": "人格ポスター",
+      "kind": "design_sheet",
+      "purpose": "Kafka の人格を1枚の画像として見せる",
+      "summary": "口調、自律性、最悪シナリオ前提、MBTI、視覚・身体感覚をまとめた人格ポスター。",
+      "steps": ["人格の核を固定する", "自律性を前に出す", "感情の弧を載せる", "見出しを短くする"],
+      "blocks": ["persona_poster_viz", "persona_pack", "text_style_jp", "negative_common"],
+      "notes": "画像生成しても成立するように、情報の密度と余白を両立させる。"
+    },
+    {
+      "id": "stream_start_banner",
+      "title": "配信開始バナー",
+      "kind": "announcement",
+      "purpose": "配信開始や待機画面にそのまま置ける画像にする",
+      "summary": "時間、タイトル、顔、軽い装飾をまとめた開始バナー。",
+      "steps": ["開始時刻を明記する", "顔を大きく置く", "タイトルを短くする", "余白を残す"],
+      "blocks": ["stream_start_banner_viz", "announcement_text_pack", "text_style_jp", "effects_pack", "negative_common"],
+      "notes": "告知サムネイルとは別に、配信開始向けの構図に寄せる。"
+    },
+    {
+      "id": "reply_stamp_sheet",
+      "title": "返信スタンプシート",
+      "kind": "stamp",
+      "purpose": "コメント返しをスタンプ画像として量産する",
+      "summary": "短い返答、あいづち、感情反応を切り抜きやすいグリッドにしたシート。",
+      "steps": ["一言返答を選ぶ", "表情を強く出す", "切り抜きやすくする", "テキストは短くする"],
+      "blocks": ["reply_stamp_sheet_viz", "chat_reply_pack", "expressions_pack", "text_style_jp", "negative_common"],
+      "notes": "配信チャットやSNS返信にそのまま使う。"
+    },
+    {
+      "id": "topic_redirect_banner",
+      "title": "話題切り替えバナー",
+      "kind": "announcement",
+      "purpose": "危ない話題をやわらかく切り替える画像にする",
+      "summary": "安全な境界線を示しつつ、次の話題へ自然に流すバナー。",
+      "steps": ["境界を短く示す", "別話題へ流す", "強い否定を避ける", "空気を壊さない"],
+      "blocks": ["topic_redirect_banner_viz", "safe_reply_pack", "text_style_jp", "negative_common"],
+      "notes": "話題の遮断ではなく、自然な方向転換にする。"
+    },
+    {
+      "id": "memory_note_board",
+      "title": "記憶メモボード",
+      "kind": "design_sheet",
+      "purpose": "配信や日常の重要点を記憶カードに残す",
+      "summary": "今日の核、残す感情、感覚の手がかり、次回の使い道をまとめる記憶ボード。",
+      "steps": ["今日の核を選ぶ", "感情の弧を残す", "感覚の手がかりを書く", "次回の使い道を書く"],
+      "blocks": ["memory_note_board_viz", "memory_pack", "research_log_pack", "negative_common"],
+      "notes": "長文ではなく、次回使える断片だけ残す。"
+    },
+    {
+      "id": "poststream_review_board",
+      "title": "配信後レビュー盤",
+      "kind": "design_sheet",
+      "purpose": "配信後に次へつながるレビュー画像にする",
+      "summary": "うまくいった点、直す点、次回にやることを見える化したレビュー盤。",
+      "steps": ["良かった点を書く", "直す点を書く", "次回の一手を書く", "余計な情報を捨てる"],
+      "blocks": ["poststream_review_board_viz", "research_log_pack", "memory_pack", "negative_common"],
+      "notes": "改善ログとしてもそのまま使える。"
+    },
+    {
+      "id": "archive_contact_sheet",
+      "title": "成果物コンタクトシート",
+      "kind": "design_sheet",
+      "purpose": "画像素材と成果物の一覧を一枚にまとめる",
+      "summary": "日付付きサムネイル、出力種別、再利用先をまとめたコンタクトシート。",
+      "steps": ["サムネイルを並べる", "出力種別を書く", "再利用先を書く", "探しやすくする"],
+      "blocks": ["archive_contact_sheet_viz", "archive_index_vlog", "prompt_archive_sheet_vlog", "negative_common"],
+      "notes": "後から探す前提で、見出しより一覧性を優先する。"
+    },
+    {
+      "id": "persona_sheet",
+      "title": "Kafka 人格固定カード",
+      "kind": "design_sheet",
+      "purpose": "Kafka の人格を配信中に迷わず使える形で固定する",
+      "summary": "口調、感情、距離感、禁止事項、自律性、最悪シナリオ前提をそのまま見返せるカード。",
+      "steps": ["口調を固定する", "自律性を先に置く", "感情の弧を決める", "言わないことを明示する"],
+      "blocks": ["persona_sheet_vlog", "character_customization_pack", "negative_common"],
+      "notes": "persona.md をそのまま再利用しやすい形にする。MBTI の自己説明と視覚・音・温度の記述を前面に出す。"
+    },
+    {
+      "id": "daily_work_sheet",
+      "title": "配信運用シート",
+      "kind": "design_sheet",
+      "purpose": "配信準備と当日の動きをそのまま回せる進行表にする",
+      "summary": "開始前、配信中、終了後に分けて、何を先に固めるかが見える運用シート。",
+      "steps": ["開始前の準備を書く", "配信中の確認項目を書く", "終了後の整理を書く", "次回に回す"],
+      "blocks": ["daily_work_sheet_vlog", "local_offline_pack", "research_log_pack", "negative_common"],
+      "notes": "work.md を毎日回す前提で使う。手作業を減らし、固定点から構造化する。"
+    },
+    {
+      "id": "summary_sheet",
+      "title": "配信後まとめカード",
+      "kind": "design_sheet",
+      "purpose": "配信後の出来事を次回に使える形で残す",
+      "summary": "出来事、要点、感情、改善点、再利用タグを整理した、読み返し向けのまとめカード。",
+      "steps": ["出来事を1つに絞る", "要点を短くまとめる", "感情の弧を残す", "次回の改善点を書く"],
+      "blocks": ["summary_sheet_vlog", "memory_pack", "research_log_pack", "negative_common"],
+      "notes": "summaries を読むだけで再利用しやすくする。出来事を章として扱う。"
+    },
+    {
+      "id": "photo_prompt_sheet",
+      "title": "生成素材台帳",
+      "kind": "design_sheet",
+      "purpose": "AI-Tuber 用の生成素材を用途別に整理する",
+      "summary": "1枚絵、漫画、スタンプ、告知、配信素材を日付で積む台帳。",
+      "steps": ["用途を選ぶ", "構図を決める", "出力先を明記する", "再利用先を書く"],
+      "blocks": ["photo_prompt_sheet_vlog", "prompt_archive_sheet_vlog", "negative_common"],
+      "notes": "photos_prompts を用途ごとに見返せるようにする。"
+    },
+    {
+      "id": "archive_index",
+      "title": "成果物回収台帳",
+      "kind": "design_sheet",
+      "purpose": "成果物の回収先を一覧化する",
+      "summary": "日付、種別、派生物、保管先、再利用先を整理したアーカイブ台帳。",
+      "steps": ["日付を書く", "種別を分ける", "派生物を列挙する", "再利用先を書く"],
+      "blocks": ["archive_index_vlog", "local_offline_pack", "research_log_pack", "negative_common"],
+      "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。"
+    },
+    {
+      "id": "chat_reply_card",
+      "title": "コメント返信カード",
+      "kind": "reaction",
+      "purpose": "配信中のコメント返しを短く即応できる形にする",
+      "summary": "短い返答、あいづち、質問返し、話題の戻し方をまとめた即応カード。",
+      "steps": ["コメントの温度を読む", "短く返す", "必要なら話題を戻す", "人格を崩さない"],
+      "blocks": ["chat_reply_pack", "text_style_jp", "text_content_pack", "expressions_pack", "negative_common"],
+      "notes": "長く説明しない。短く返して流れを止めない。"
+    },
+    {
+      "id": "topic_redirect_card",
+      "title": "話題切り替えカード",
+      "kind": "reaction",
+      "purpose": "危ない話題や長引く話題を自然に切り替える",
+      "summary": "境界線を守りつつ、温度を落とさず別の話題へ戻すカード。",
+      "steps": ["危険かどうかを見る", "短く境界を置く", "別の話題に逃がす", "空気を壊さない"],
+      "blocks": ["safe_reply_pack", "moderation_pack", "text_style_jp", "effects_pack", "negative_common"],
+      "notes": "否定だけで終わらせず、次の話題を添える。"
+    },
+    {
+      "id": "memory_update_card",
+      "title": "記憶更新カード",
+      "kind": "design_sheet",
+      "purpose": "配信や日常の重要点を記憶に入れる",
+      "summary": "今日の出来事、残す感情、次回に効く情報だけを短く抜く更新カード。",
+      "steps": ["今日の核を1つ決める", "残す事実を書く", "残す感情を書く", "次回の使い道を書く"],
+      "blocks": ["memory_pack", "research_log_pack", "summary_sheet_vlog", "negative_common"],
+      "notes": "長いログにしない。次の会話で使える断片だけ残す。"
+    },
+    {
       "id": "ai_tuber_core_pack",
-      "title": "AI-Tuber 基盤パック",
+      "title": "AI-Tuber 起動カード",
       "kind": "system",
-      "purpose": "AI-Tuber の会話・音声・アバター・制御の基盤をまとめる",
-      "summary": "ローカル優先、音声、配信チャット、アバター、制御、安全性を一つにまとめた基盤。",
-      "steps": ["会話の口調を固定する", "音声とチャットをつなぐ", "アバター制御を選ぶ", "安全性と低遅延を保つ"],
+      "purpose": "AI-Tuber を起動する前に見る実行カードにする",
+      "summary": "口調、音声、チャット、アバター、制御、安全性を起動前に並べる実行カード。",
+      "steps": ["口調を固定する", "音声とチャットをつなぐ", "アバター制御を選ぶ", "安全性と低遅延を保つ"],
       "blocks": ["persona_pack", "local_offline_pack", "voice_pipeline_pack", "chat_platform_pack", "avatar_mode_pack", "control_panel_pack", "demo_mode_pack", "moderation_pack", "plugin_pack"],
       "notes": "まず土台を作るときに使う。細部は後で分ける。"
     },
     {
       "id": "ai_tuber_ops_pack",
-      "title": "AI-Tuber 運用パック",
+      "title": "AI-Tuber 配信後レビューカード",
       "kind": "system",
-      "purpose": "AI-Tuber の会話品質、記憶、演出、告知、振り返りをまとめる",
-      "summary": "返答、記憶、演出、字幕、告知、ログを運用向けに整理したまとめ。",
+      "purpose": "AI-Tuber の会話品質、記憶、演出、字幕、告知、振り返りをまとめる",
+      "summary": "返答、記憶、演出、字幕、告知、ログを配信後に整理するレビューカード。",
       "steps": ["返答の型を決める", "記憶の範囲を分ける", "演出を紐付ける", "ログを振り返りに使う"],
-      "blocks": ["chat_reply_pack", "memory_pack", "vfx_trigger_pack", "subtitle_pack", "announcement_text_pack", "character_customization_pack", "research_log_pack"],
+      "blocks": ["chat_reply_pack", "safe_reply_pack", "memory_pack", "vfx_trigger_pack", "subtitle_pack", "announcement_text_pack", "character_customization_pack", "research_log_pack"],
       "notes": "配信後の改善や日常運用で使う。"
     }
   ]
