@@ -2716,7 +2716,7 @@
     },
     {
       "id": "gen_20260501_090454_827936",
-      "title": "Kafka おはツイ 春 / Dominion Board Gameを楽しく遊ぶ様子",
+      "title": "Kafka おはツイ 春 / ドミニオン日和",
       "kind": "social",
       "instruction": "Dominion Board Gameを楽しく遊ぶ様子",
       "status": "ready",
@@ -2735,9 +2735,46 @@
       "artifacts": [
         {
           "path": "artifacts/058_morning_dominion.png",
-          "title": "春のおはツイ・ドミニオン"
+          "title": "春のおはツイ・ドミニオン日和"
         }
       ]
+    }
+  ],
+  "generated_prompts": [
+    {
+      "id": "gen_20260501_092726_250951",
+      "created_at": "2026-05-01T09:27:26.250951+00:00",
+      "template_id": "stamp_sheet",
+      "generated_template_id": "generated_gen_20260501_092726_250951",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "effects_pack",
+        "negative_common",
+        "morning_scene_coffee_kafka",
+        "morning_scene_rain_kafka"
+      ],
+      "instruction": "上記の指示ノードに従いつつ、食事風景",
+      "title": "KAFKA ごはんスタンプ",
+      "generated_title": "KAFKA ごはんスタンプ",
+      "generated_title_candidate": "KAFKA ごはんスタンプ",
+      "generated_block_updates": [
+        {
+          "id": "morning_scene_coffee_kafka",
+          "content": "cozy meal table scene, plate of breakfast or lunch, utensils and small side dish, warm indoor light, neat and inviting, clean composition"
+        },
+        {
+          "id": "morning_scene_rain_kafka",
+          "content": "rainy day meal scene, dining table by the window, warm food and a drink, raindrops on glass outside, soft indoor warmth, calm and reflective"
+        }
+      ],
+      "generated_addition": "",
+      "generation_prompt_source": "prompts/frontend_codex.md",
+      "generation_prompt_hash": "f72d1dfa2c66847102a3fca9ec6c431d3b55d3dc78b1396e76a050473d55cc45",
+      "model": "gemini-1.5-flash",
+      "backend": "codex",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors, female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth, sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects, cozy meal table scene, plate of breakfast or lunch, utensils and small side dish, warm indoor light, neat and inviting, clean composition, rainy day meal scene, dining table by the window, warm food and a drink, raindrops on glass outside, soft indoor warmth, calm and reflective, low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "status": "draft"
     }
   ]
 }
