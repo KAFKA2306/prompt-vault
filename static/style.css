@@ -316,6 +316,163 @@ pre {
   margin-top: 10px;
 }
 
+.template-section {
+  margin-top: 18px;
+}
+
+.template-section__head {
+  margin-bottom: 10px;
+}
+
+.template-section__head h3 {
+  margin: 4px 0 0;
+  font-family: var(--font-head);
+  letter-spacing: -.03em;
+  font-size: 20px;
+}
+
+.template-rail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.template-card {
+  appearance: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 18px;
+  border: 1px solid rgba(16,24,40,.10);
+  background: rgba(255,255,255,.90);
+  box-shadow: 0 10px 24px rgba(17,24,39,.05);
+  padding: 10px;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+  display: grid;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.template-card--image {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(247,244,238,.92));
+}
+
+.template-card--empty {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(244,241,234,.90)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(37,99,235,.04) 0,
+      rgba(37,99,235,.04) 10px,
+      rgba(37,99,235,.01) 10px,
+      rgba(37,99,235,.01) 20px
+    );
+  border-style: dashed;
+  border-color: rgba(37,99,235,.22);
+}
+
+.template-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15,118,110,.24);
+  box-shadow: 0 16px 32px rgba(17,24,39,.08);
+}
+
+.template-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.template-card__kind,
+.template-card__flag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.template-card__kind {
+  color: var(--accent);
+  background: rgba(15,118,110,.08);
+}
+
+.template-card__flag {
+  color: #41506a;
+  background: rgba(37,99,235,.08);
+}
+
+.template-card--empty .template-card__flag {
+  color: #1d4ed8;
+  background: rgba(37,99,235,.14);
+}
+
+.template-card--image .template-card__flag {
+  color: #0f766e;
+  background: rgba(15,118,110,.12);
+}
+
+.template-card__thumb {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(16,24,40,.08);
+  background: #fff;
+}
+
+.template-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.template-card__placeholder {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  padding: 12px;
+  border: 1px dashed rgba(37,99,235,.28);
+  background: rgba(37,99,235,.06);
+  color: #1d4ed8;
+}
+
+.template-card__placeholder-label {
+  font-weight: 800;
+  letter-spacing: .04em;
+  font-size: 14px;
+}
+
+.template-card__placeholder-meta {
+  font-size: 11px;
+  color: #5b6472;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.template-card__body {
+  display: grid;
+  gap: 8px;
+}
+
+.template-card__title {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--text);
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+.template-card__meta {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
 .gallery-item {
   position: relative;
   border-radius: 20px;

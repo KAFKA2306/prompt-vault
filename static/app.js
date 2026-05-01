@@ -363,10 +363,47 @@ const renderGallery = () => {
   }
 };
 
+const renderTemplateRail = () => {
+  const list = filteredTemplates();
+  el('template-count').textContent = `${list.length} templates`;
+
+  el('template-rail').innerHTML = list.map((template) => `
+    <button type="button" class="template-card ${template.artifacts?.length ? 'template-card--image' : 'template-card--empty'}" data-template-id="${template.id}">
+      ${template.artifacts?.length ? `
+        <div class="template-card__thumb">
+          <img src="${escapeHTML(template.artifacts[0].path)}" alt="${escapeHTML(template.artifacts[0].title)}" loading="lazy" />
+        </div>
+      ` : `
+        <div class="template-card__placeholder">
+          <span class="template-card__placeholder-label">画像なし</span>
+          <span class="template-card__placeholder-meta">ブロックと全文から使います</span>
+        </div>
+      `}
+      <div class="template-card__body">
+        <div class="template-card__top">
+          <span class="template-card__kind">${escapeHTML(kindLabel(template))}</span>
+          <span class="template-card__flag">${template.artifacts?.length ? '画像あり' : '画像なし'}</span>
+        </div>
+        <div class="template-card__title">${escapeHTML(template.title)}</div>
+        <div class="template-card__meta">${escapeHTML(template.purpose || template.summary || '')}</div>
+      </div>
+    </button>
+  `).join('');
+
+  el('template-rail').querySelectorAll('[data-template-id]').forEach((item) => {
+    item.addEventListener('click', () => openTemplate(item.dataset.templateId));
+  });
+
+  if (!list.length) {
+    el('template-rail').innerHTML = '<div class="empty">テンプレートが見つかりません。</div>';
+  }
+};
+
 
 
 const render = () => {
   renderGallery();
+  renderTemplateRail();
 };
 
 el('search').addEventListener('input', (event) => {

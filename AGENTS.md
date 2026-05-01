@@ -1,44 +1,61 @@
 # AGENTS.md
 
-## いつも見るところ
+## まず見る
 
-- [README.md](README.md)
-- [DESIGN.md](DESIGN.md)
+- [README.md](README.md): 何を置くリポジトリか、ローカル実行とビルドの入口
+- [DESIGN.md](DESIGN.md): 画面の見た目、ギャラリー優先、モーダル優先の方針
+- [db/prompts.json](db/prompts.json): テンプレート、ブロック、`artifacts` の本体
+- [static/index.html](static/index.html): 画面構造とセクション配置
+- [static/app.js](static/app.js): 一覧、検索、モーダル、画像表示のロジック
+- [static/style.css](static/style.css): タイルサイズ、余白、画像/非画像の見た目
+- [scripts/verify_pages.sh](scripts/verify_pages.sh): 公開表示の検証
+- [docs/manual/001_cloudflare_pages.md](docs/manual/001_cloudflare_pages.md): Cloudflare Pages の確認手順
 - [ローカル表示](http://127.0.0.1:8787/)
 - [公開サイト](https://kafka2306.github.io/prompt-vault/)
-- [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
-- [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
-- [表示検証スクリプト](scripts/verify_pages.sh)
 
-## 実行方針
+## 変更の考え方
 
-- `README.md` と `DESIGN.md` を先に読む
-- UIは「画像ギャラリーメイン＋拡大モーダルでの全文一発コピー」が基本。複雑なダッシュボード化はしない
-- `db/prompts.json` を先に直す
-- 必要なら `static/app.js` を直す
-- `python3 build.py` を実行する
-- `python3 app.py` でローカル表示を見る
-- `scripts/verify_pages.sh` で公開表示を見る
-- `git add` → `git commit` → `git push` の順で出す
-- `gh run list` を見る
-- `gh run view --log` を見る
-- [GitHub Pages](https://kafka2306.github.io/prompt-vault/) を見る
-- [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md) を見る
-- `dist/` は直接編集しない
-- 補助スクリプトは `scripts/` に置く
+- 画像やテンプレートを増やすときは、まず `db/prompts.json` を直す
+- 画像が一覧に出ない、カードが崩れる、画像あり/なしの区別が分かりにくいときは、`static/app.js` と `static/style.css` を直す
+- セクションの並びや見出しを変えるときは、`static/index.html` を直す
+- `dist/` は直接編集しない。`python3 build.py` で再生成する
+- 補助スクリプトが必要なら `scripts/` に置く
 
-## いつもの手順
+## 変更手順
 
 1. `db/prompts.json` を直す
-2. `static/app.js` を直す
-3. `python3 build.py` を実行する
-4. `python3 app.py` でローカル表示を見る
-5. `scripts/verify_pages.sh` で公開表示を見る
-6. `git add` して `git commit` する
-7. `git push` する
-8. `gh run list` で GitHub Actions の実行一覧を見る
-9. `gh run view --log` で GitHub Actions のログを見る
-10. [GitHub Pages](https://kafka2306.github.io/prompt-vault/) を見る
-11. [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md) を見る
-12. `dist/` は直接編集しない
-13. 補助スクリプトは `scripts/` に置く
+   - テンプレートを増やす
+   - `blocks` のつながりを整える
+   - `artifacts` に実画像を追加する
+2. 必要なら `static/app.js` を直す
+   - 一覧の出し方を変える
+   - 画像あり/なしの分岐を変える
+   - モーダルやコピー動作を変える
+3. 必要なら `static/style.css` を直す
+   - タイルの大きさを変える
+   - 画像あり/なしの見た目を分ける
+   - モーダルのレイアウトを整える
+4. 必要なら `static/index.html` を直す
+   - セクションを増やす
+   - 見出しや説明文を変える
+5. `python3 build.py` を実行する
+   - `dist/index.html`
+   - `dist/style.css`
+   - `dist/app.js`
+   を更新する
+6. `python3 app.py` で `http://127.0.0.1:8787/` を見る
+   - 画像が大きすぎないか
+   - `画像あり` と `画像なし` が一目で分かるか
+   - モーダルで全文コピーできるか
+7. `scripts/verify_pages.sh` を実行する
+   - GitHub Pages の表示を確認する
+   - Cloudflare Pages は `CF_PAGES_URL` があるときだけ確認する
+8. 変更を出すなら `git add` → `git commit` → `git push` の順で進める
+9. push 後は `gh run list` と `gh run view --log` を見る
+10. 最後に [GitHub Pages](https://kafka2306.github.io/prompt-vault/) と [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md) を確認する
+
+## 例外なく守ること
+
+- `dist/` を手で編集しない
+- 重複した手順は増やさない
+- 変更点に応じたファイルだけを直す

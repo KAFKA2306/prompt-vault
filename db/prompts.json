@@ -1465,6 +1465,12 @@
         "effects_pack",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/051_stream_start_banner.png",
+          "title": "配信開始バナーの実例"
+        }
+      ],
       "notes": "告知サムネイルとは別に、配信開始向けの構図に寄せる。"
     },
     {
@@ -1618,6 +1624,16 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/038_morning_tweet_window.png",
+          "title": "おはツイ窓際の実例"
+        },
+        {
+          "path": "artifacts/050_morning_tweet_window_2.png",
+          "title": "おはツイ窓際の別実例"
+        }
+      ],
       "notes": "朝の空気を見せる。説明より気配を優先する。"
     },
     {
@@ -1642,6 +1658,12 @@
         "morning_situation_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/039_morning_tweet_coffee.png",
+          "title": "おはツイコーヒーの実例"
+        }
       ],
       "notes": "『朝の一杯』の見た目を固定する。仕事開始前にも流用しやすい。"
     },
@@ -1668,6 +1690,12 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/049_morning_tweet_commute.png",
+          "title": "おはツイ出発前の実例"
+        }
+      ],
       "notes": "出勤や外出の前に使える。元気すぎず、でも止まらない感じにする。"
     },
     {
@@ -1692,6 +1720,12 @@
         "morning_situation_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/052_morning_tweet_rain.png",
+          "title": "おはツイ雨の日の実例"
+        }
       ],
       "notes": "雨の日は沈ませすぎない。静けさを心地よく見せる。"
     },
@@ -1718,7 +1752,42 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/047_morning_tweet_sleepy.png",
+          "title": "おはツイ寝起きの実例"
+        }
+      ],
       "notes": "寝起きは情報を足しすぎない。起床そのものを見せる。"
+    },
+    {
+      "id": "morning_tweet_index",
+      "title": "Kafka おはツイ一覧",
+      "kind": "design_sheet",
+      "purpose": "おはツイの季節・状況バリエーションを一覧化する",
+      "summary": "春夏秋冬や起床直後、コーヒー、雨の日などの派生を比較しやすく並べる一覧シート。",
+      "steps": [
+        "代表例を並べる",
+        "季節と状況を混ぜる",
+        "小さく比較できるようにする",
+        "探しやすくする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "morning_situation_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/046_morning_tweet_index.png",
+          "title": "おはツイ一覧の実例"
+        }
+      ],
+      "notes": "派生の見取り図として置く。新しい朝パターンを足す時の入口にする。"
     },
     {
       "id": "work_start_post",
@@ -1741,6 +1810,12 @@
         "daily_status_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/045_work_start_post.png",
+          "title": "作業開始ポストの実例"
+        }
       ],
       "notes": "開始報告だけに寄せる。進捗や成果はまだ入れない。"
     },
@@ -1813,6 +1888,12 @@
         "daily_status_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/037_goodnight_post.png",
+          "title": "おやすみポストの実例"
+        }
       ],
       "notes": "夜は静かに閉じる。眠気を出しても、暗くしすぎない。"
     },
@@ -1969,6 +2050,12 @@
         "archive_index_vlog",
         "prompt_archive_sheet_vlog"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/048_archive_contact_sheet.png",
+          "title": "成果物一覧の実例"
+        }
+      ],
       "notes": "後から探す前提で、見出しより一覧性を優先する。"
     },
     {
@@ -1997,6 +2084,10 @@
         {
           "path": "artifacts/012_persona_sheet.png",
           "title": "人格固定カードの実例"
+        },
+        {
+          "path": "artifacts/042_persona_sheet_2.png",
+          "title": "人格固定カードの別実例"
         }
       ]
     },
@@ -2097,6 +2188,12 @@
         "speech_mode_kafka",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/044_archive_index.png",
+          "title": "成果物回収カードの実例"
+        }
+      ],
       "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。"
     },
     {
@@ -2193,6 +2290,12 @@
         "master_style",
         "icon_mark_only_kafka",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/043_icon_mark_sheet_2.png",
+          "title": "アイコンデザインの実例"
+        }
       ],
       "notes": "バナーの隅、区切り、タグ、UI飾りに使う。繰り返し描くより台帳化したい部分。"
     },
@@ -2388,6 +2491,10 @@
         {
           "path": "artifacts/026_comment_reply_guide_alt.png",
           "title": "コメント返しガイドの別実例"
+        },
+        {
+          "path": "artifacts/040_comment_reply_guide_2.png",
+          "title": "コメント返しガイドの別レイアウト実例"
         }
       ],
       "notes": "コメント返しと発話の切り替えをそのまま見返せるようにする。"
@@ -2435,6 +2542,12 @@
         "reading_status_text_pack",
         "text_style_jp",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/041_reading_post_general.png",
+          "title": "読書投稿の実例"
+        }
       ],
       "notes": "読書ポストの基本形。日付は入れない。"
     },

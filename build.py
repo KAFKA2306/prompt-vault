@@ -56,6 +56,8 @@ def render_app_js(db: dict[str, Any]) -> str:
 
 def write_dist() -> None:
     db = load_db()
+    if DIST_PATH.exists():
+        shutil.rmtree(DIST_PATH)
     DIST_PATH.mkdir(parents=True, exist_ok=True)
     (DIST_PATH / "artifacts").mkdir(parents=True, exist_ok=True)
     (DIST_PATH / "index.html").write_text((STATIC_PATH / "index.html").read_text(encoding="utf-8"), encoding="utf-8")
