@@ -1,22 +1,24 @@
 # Prompt Vault
 
 画像生成プロンプトを、全文のまま積み上げるのではなく、
-「あとで使えるかたち」にほどいて並べておくための保管庫です。
+あとで使えるかたちにほどいて並べておく保管庫です。
 
-KAFKA の世界観を保ちながら、次の3つを大事にしています。
+KAFKA の世界観を保ちながら、
+「すぐコピーできる」「組み替えやすい」「再現しやすい」を大事にしています。
 
-- すぐコピーできること
-- 用途ごとに組み替えやすいこと
-- ブレを減らして、再現しやすいこと
+## なぜつくったのか
 
-## まずは雰囲気
+- 毎回、長いプロンプトを最初から書きたくないから
+- 似た出力を、少ない差分で再現したいから
+- 完成イメージを先に見て、迷わず選びたいから
 
-<p>
-  <img src="static/og-image.png" alt="Prompt Vault の代表ビジュアル" width="640" />
-</p>
+## どんなものができたのか
 
-まずは代表ビジュアルだけ置いています。  
-このリポジトリが何を集めているかを、言葉より先に伝えるための1枚です。
+- 画像ギャラリーから完成イメージを探せる画面
+- 拡大モーダルから全文プロンプトを1クリックでコピーできる画面
+- ブロック、テンプレート、`artifacts` を JSON で管理するローカルDB
+- GitHub Pages と Cloudflare Pages でそのまま配信できる静的構成
+
 
 ## すぐ開く場所
 
@@ -30,14 +32,7 @@ KAFKA の世界観を保ちながら、次の3つを大事にしています。
 - [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
 
-## このリポジトリでできること
-
-- マスタースタイルを置く
-- キャラクターや衣装を分けて置く
-- 画像ギャラリーから、完成イメージを直感で探す
-- 拡大モーダルから、全文プロンプトをそのままコピーする
-
-## 使い方
+## どうやって簡単に再現するのか
 
 ### 1. ローカルで見る
 
@@ -53,6 +48,14 @@ python3 build.py
 
 `dist/index.html` と `dist/style.css`、`dist/app.js` が生成されます。
 
+### 3. 公開表示を確認する
+
+```bash
+bash scripts/verify_pages.sh
+```
+
+Cloudflare Pages を確認したいときは `CF_PAGES_URL` を渡します。
+
 ## データの置き場所
 
 - `db/prompts.json` がローカルDBです
@@ -67,11 +70,6 @@ python3 build.py
 
 - [GitHub Pages](https://kafka2306.github.io/prompt-vault/)
 - [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/)
-
-## 検証
-
-- `scripts/verify_pages.sh` で GitHub Pages と Cloudflare Pages の表示を確認します
-- Cloudflare Pages の URL は `CF_PAGES_URL` で渡します
 
 ## 補足
 

@@ -19,6 +19,10 @@
 - `artifacts/` に新規画像が入るときは、`db/prompts.json` の参照とファイル名を必ず確認する
 - `artifacts/` のファイル名は基本的に `NNN_slug.png` 形式にそろえる
 - `ChatGPT Image ...` のような命名規則外の新規画像は、そのまま増やさず、必要性と参照先を確認する
+- **画像パスの解釈:**
+  - `db/prompts.json` 内のパスは、すべてプロジェクトルートからの相対パス（例: `artifacts/042_persona_sheet_2.png`）で記述する。
+  - エージェントは、これらのファイルを操作する際、`/home/kafka/projects/prompt-vault/` をベースに解決すること。
+  - Web表示時（`app.py`）やビルド時（`build.py`）は、自動的に適切にマッピング・コピーされるため、JSON内の記述を変更してはならない。
 - 画像が一覧に出ない、カードが崩れる、画像あり/なしの区別が分かりにくいときは、`static/app.js` と `static/style.css` を直す
 - セクションの並びや見出しを変えるときは、`static/index.html` を直す
 - 数字や説明文は、実際に存在するデータと導線だけを書く
