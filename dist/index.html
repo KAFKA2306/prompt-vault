@@ -16,29 +16,16 @@
       </div>
     </section>
 
-    <section class="workspace">
-      <aside class="panel sidebar">
-        <div class="head">
-          <div>
-            <div class="subtle">テンプレート</div>
-            <h2>作業を選ぶ</h2>
-          </div>
+    <section class="panel detail">
+      <div class="head" style="align-items: center;">
+        <div>
+          <div class="subtle" id="gallery-count">0 items</div>
+          <h2 id="detail-title">ギャラリー</h2>
         </div>
-        <input id="search" class="search" placeholder="検索: タイトル / 目的 / ブロックID" />
-        <div class="list" id="list"></div>
-      </aside>
+        <input id="search" class="search" placeholder="検索: タイトル / 目的 / ブロックID" style="max-width: 320px; margin-bottom: 0;" />
+      </div>
 
-      <section class="panel detail">
-        <div class="head">
-          <div>
-            <div class="subtle" id="gallery-count">0 items</div>
-            <h2 id="detail-title">ギャラリー</h2>
-          </div>
-        </div>
-
-        <div class="gallery" id="gallery"></div>
-        <div class="status" id="status"></div>
-      </section>
+      <div class="gallery" id="gallery"></div>
     </section>
   </main>
 

@@ -68,7 +68,7 @@ const nodeLabel = (node, type) => {
 };
 
 const renderStepItems = (steps) => steps.map((step, index) => `
-  <div class="step-item">
+  <div class="recipe-item">
     <span>${index + 1}</span>
     <p>${escapeHTML(step)}</p>
   </div>
@@ -99,7 +99,7 @@ const renderRecommendItems = (ids) => ids
     const type = getNodeType(id);
     if (!node) return '';
 
-    const artifact = findNodeArtifact(node, type, id);
+    const { artifact, source } = findNodeDisplayArtifact(node, type, id);
     const title = escapeHTML(node.title);
     const kind = escapeHTML(nodeLabel(node, type));
     const nodeId = escapeHTML(id);
@@ -110,14 +110,17 @@ const renderRecommendItems = (ids) => ids
       return `
         <button
           type="button"
-          class="recommend-card recommend-card--image"
+          class="recommend-card recommend-card--image${source === 'fallback' ? ' is-fallback' : ''}"
           data-node-id="${nodeId}"
           data-node-type="${nodeType}"
+          data-fallback="${source === 'fallback' ? 'true' : 'false'}"
         >
+          ${source === 'fallback' ? '<span class="recommend-card__badge">関連画像</span>' : ''}
           <img src="${escapeHTML(artifact.path)}" alt="${imgAlt}" loading="lazy" />
           <div class="recommend-card__body">
             <span class="recommend-card__title">${title}</span>
             <span class="recommend-card__meta">${kind}</span>
+            ${source === 'fallback' ? '<span class="recommend-card__note">このノードの画像は未登録です</span>' : ''}
           </div>
         </button>
       `;
@@ -129,6 +132,7 @@ const renderRecommendItems = (ids) => ids
         class="recommend-card recommend-card--text"
         data-node-id="${nodeId}"
         data-node-type="${nodeType}"
+        data-fallback="false"
       >
         <div class="recommend-card__body">
           <span class="recommend-card__title">${title}</span>
@@ -191,8 +195,10 @@ const recommendNodeIds = (node, type) => {
     .sort((a, b) => nodeScore(b) - nodeScore(a) || getNode(a).title.localeCompare(getNode(b).title, 'ja'));
 };
 
-const findNodeArtifact = (node, type, nodeId) => {
-  if (node.artifacts?.length) return node.artifacts[0];
+const findNodeDisplayArtifact = (node, type, nodeId) => {
+  if (node.artifacts?.length) {
+    return { artifact: node.artifacts[0], source: 'direct' };
+  }
 
   const candidates = type === 'template'
     ? uniqueIds(node.blocks.flatMap((blockId) => relatedTemplatesFor(blockId)))
@@ -205,18 +211,20 @@ const findNodeArtifact = (node, type, nodeId) => {
   for (const candidateId of candidates.sort((a, b) => nodeScore(b) - nodeScore(a))) {
     const candidate = getNode(candidateId);
     if (candidate?.artifacts?.length) {
-      return candidate.artifacts[0];
+      return { artifact: candidate.artifacts[0], source: 'fallback', sourceNodeId: candidateId };
     }
   }
 
   if (type === 'template') {
     for (const blockId of node.blocks) {
       const block = blocks[blockId];
-      if (block?.artifacts?.length) return block.artifacts[0];
+      if (block?.artifacts?.length) {
+        return { artifact: block.artifacts[0], source: 'fallback', sourceNodeId: blockId };
+      }
     }
   }
 
-  return null;
+  return { artifact: null, source: 'none' };
 };
 
 const openNode = (nodeId, preferredType = null) => {
@@ -228,7 +236,8 @@ const openNode = (nodeId, preferredType = null) => {
 
   const imgView = document.querySelector('.modal-image-view');
   const imgEl = el('modal-img');
-  const artifact = findNodeArtifact(node, type, nodeId);
+  const displayArtifact = findNodeDisplayArtifact(node, type, nodeId);
+  const artifact = displayArtifact.artifact;
 
   if (artifact && artifact.path) {
     imgEl.style.display = 'block';
@@ -236,14 +245,30 @@ const openNode = (nodeId, preferredType = null) => {
     imgEl.alt = artifact.title;
     const noImage = imgView.querySelector('.no-image');
     if (noImage) noImage.remove();
+    let imageNote = imgView.querySelector('.image-note');
+    if (displayArtifact.source === 'fallback') {
+      if (!imageNote) {
+        imageNote = document.createElement('div');
+        imageNote.className = 'image-note';
+        imgView.appendChild(imageNote);
+      }
+      imageNote.innerHTML = '<span class="image-note__badge">関連画像</span><span class="image-note__text">このノードの画像は未登録です。近い実例を表示しています。</span>';
+      imgView.classList.add('is-fallback');
+    } else {
+      if (imageNote) imageNote.remove();
+      imgView.classList.remove('is-fallback');
+    }
   } else {
     imgEl.style.display = 'none';
     imgEl.src = '';
+    imgView.classList.remove('is-fallback');
+    const imageNote = imgView.querySelector('.image-note');
+    if (imageNote) imageNote.remove();
     let noImage = imgView.querySelector('.no-image');
     if (!noImage) {
       noImage = document.createElement('div');
       noImage.className = 'no-image subtle';
-      noImage.textContent = '画像がありません';
+      noImage.textContent = '画像が未登録です';
       imgView.appendChild(noImage);
     }
   }
@@ -338,32 +363,9 @@ const renderGallery = () => {
   }
 };
 
-const renderList = () => {
-  const list = filteredTemplates();
-  el('list').innerHTML = list.map((template) => `
-    <article class="panel card" data-id="${template.id}">
-      <div class="card-badge">${kindLabel(template)}</div>
-      <p class="title">${template.title}</p>
-      <div class="meta">${template.purpose}</div>
-      <div class="card-foot">
-        <span>${template.blocks.length} blocks</span>
-      </div>
-    </article>
-  `).join('');
 
-  el('list').querySelectorAll('[data-id]').forEach((card) =>
-    card.addEventListener('click', () => {
-      openTemplate(card.dataset.id);
-    })
-  );
-
-  if (!list.length) {
-    el('list').innerHTML = '<div class="empty">テンプレートなし</div>';
-  }
-};
 
 const render = () => {
-  renderList();
   renderGallery();
 };
 
