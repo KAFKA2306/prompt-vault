@@ -4,21 +4,21 @@
       "id": "master_style",
       "category": "基準",
       "title": "マスタースタイル",
-      "content": "masterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed",
+      "content": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish",
       "tags": ["base", "quality", "style"]
     },
     {
       "id": "character_kafka",
       "category": "キャラクター",
       "title": "KAFKA",
-      "content": "cute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion",
+      "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth",
       "tags": ["kafka", "character"]
     },
     {
       "id": "outfit_kafka",
       "category": "キャラ衣装",
       "title": "衣装",
-      "content": "oversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details",
+      "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
       "tags": ["outfit", "techwear"]
     },
     {
@@ -32,7 +32,7 @@
       "id": "sticker_sheet_layout",
       "category": "用途",
       "title": "4x4 ステッカーシート",
-      "content": "japanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability",
+      "content": "4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size",
       "artifacts": [
         {
           "path": "artifacts/001_sticker_sheet.png",
@@ -52,7 +52,7 @@
       "id": "comic_layout",
       "category": "用途",
       "title": "漫画レイアウト",
-      "content": "clean manga panel layout, easy reading order, 1 to 4 panels, strong focal point, clear panel spacing, expressive beats, simple background, story-forward composition, square or vertical crop friendly",
+      "content": "6 to 7 manga panels, one wide establishing shot, one close-up on the eyes, one detail shot of the monitor or object, one side profile, one medium shot, one hand close-up, final large emotional panel, white gutters, clear reading order, speech bubbles left blank",
       "artifacts": [
         {
           "path": "artifacts/002_twitter_comic.png",
@@ -65,7 +65,7 @@
       "id": "reaction_focus",
       "category": "表情",
       "title": "表情強調",
-      "content": "expressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing",
+      "content": "close framing on the face and upper body, eyebrows visible, mouth readable, one hand in frame, eyes pointed at the viewer or the object, emotional pose first, plain background, no wide environment unless needed",
       "artifacts": [
         {
           "path": "artifacts/003_reaction_image.png",
@@ -78,43 +78,50 @@
       "id": "text_style_jp",
       "category": "テキスト",
       "title": "日本語文字",
-      "content": "large japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text",
+      "content": "large Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text",
       "tags": ["jp", "text"]
     },
     {
       "id": "text_content_pack",
       "category": "文言",
       "title": "短い日本語セリフ",
-      "content": "「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」",
+      "content": "acknowledgement:「なるほど」「たしかに」「そうそう」「わかる」, hesitation:「うーん」「どうだろう」「ちょっと待って」, technical:「まず結論」「原因はここ」「切り分ける」, sensory:「光が近い」「音が強い」「温度が変わる」, closing:「一旦ここまで」「次いこう」「おつかれさま」「おやすみ」",
       "tags": ["jp", "dialogue", "phrases"]
     },
     {
       "id": "expressions_pack",
       "category": "表情",
       "title": "反応集",
-      "content": "smiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie",
+      "content": "smiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie",
       "tags": ["expressions", "reactions"]
     },
     {
       "id": "effects_pack",
       "category": "演出",
       "title": "装飾効果",
-      "content": "sparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects",
+      "content": "sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects",
       "tags": ["effects", "sparkles"]
     },
     {
       "id": "announcement_text_pack",
       "category": "文言",
       "title": "告知文言",
-      "content": "「配信開始」「新衣装お披露目」「お知らせ」「重大告知」「本日20:00」「あとで会おう」「見にきてね」「準備中」「coming soon」「まもなく開始」",
+      "content": "「配信開始」「新衣装お披露目」「お知らせ」「重大告知」「本日20:00」「あとで会おう」「見にきてね」「準備中」「まもなく開始」「いま入るとちょうどいい」「一緒に見よう」",
       "tags": ["announcement", "text"]
     },
     {
       "id": "chat_reply_pack",
       "category": "応答",
       "title": "コメント返し",
-      "content": "short reply, comment response, question answer, reaction phrases, keep it brief, keep tone warm, no overexplaining, preserve identity",
+      "content": "one to two sentences, answer the comment first, then add one concrete detail if needed, for technical questions use 'まず結論' and '原因はここ', for casual chat use 'なるほど' or 'たしかに', for sensory talk use a concrete object or sound, do not overexplain",
       "tags": ["reply", "chat", "response"]
+    },
+    {
+      "id": "speech_mode_kafka",
+      "category": "発話",
+      "title": "かふからしい発話モード",
+      "content": "technical mode: start with the conclusion, split the reason into 2 or 3 points, mention concrete tools, files, numbers, or steps; sensory mode: mention light, color, sound, temperature, distance, texture; casual mode: answer in 1 or 2 short sentences; safety mode: say 'その話はここまで' or '別の話に戻すね'; self-analysis mode: use Fi, Se, Te, Ti only when they explain the choice; filler words are not required",
+      "tags": ["speech", "context", "kafka"]
     },
     {
       "id": "persona_poster_viz",
@@ -330,7 +337,7 @@
   "templates": [
     {
       "id": "stamp_sheet",
-      "title": "新しいスタンプ",
+      "title": "Kafka 新しいスタンプ",
       "kind": "stamp",
       "purpose": "いつものキャラを、いつものスタイルで新しいスタンプにする",
       "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。",
@@ -346,7 +353,7 @@
     },
     {
       "id": "twitter_comic",
-      "title": "Twitter再調査漫画",
+      "title": "Kafka Twitter再調査漫画",
       "kind": "comic",
       "purpose": "Xの内容を調べ直して、いつもの漫画スタイルに変換する",
       "summary": "元投稿の事実を拾い直し、いつものキャラで漫画として見せる。",
@@ -362,7 +369,7 @@
     },
     {
       "id": "reaction_image",
-      "title": "表情豊かな反応画像",
+      "title": "Kafka 反応画像",
       "kind": "reaction",
       "purpose": "日常の反応を、いつものキャラで表情豊かに見せる",
       "summary": "短い返答やリアクションを、見やすい1枚絵にする。",
@@ -394,7 +401,7 @@
     },
     {
       "id": "announcement_thumbnail",
-      "title": "配信告知サムネイル",
+      "title": "Kafka 配信告知サムネイル",
       "kind": "announcement",
       "purpose": "配信や投稿の告知を、ひと目で伝わるサムネイルにする",
       "summary": "顔・告知文言・装飾をまとめた、SNSと配信向けの見出し画像。",
@@ -404,72 +411,72 @@
     },
     {
       "id": "persona_poster",
-      "title": "人格ポスター",
+      "title": "Kafka 人格ポスター",
       "kind": "design_sheet",
       "purpose": "Kafka の人格を1枚の画像として見せる",
       "summary": "口調、自律性、最悪シナリオ前提、MBTI、視覚・身体感覚をまとめた人格ポスター。",
       "steps": ["人格の核を固定する", "自律性を前に出す", "感情の弧を載せる", "見出しを短くする"],
-      "blocks": ["persona_poster_viz", "persona_pack", "text_style_jp", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "persona_poster_viz", "persona_pack", "text_style_jp", "negative_common"],
       "notes": "画像生成しても成立するように、情報の密度と余白を両立させる。"
     },
     {
       "id": "stream_start_banner",
-      "title": "配信開始バナー",
+      "title": "Kafka 配信開始バナー",
       "kind": "announcement",
       "purpose": "配信開始や待機画面にそのまま置ける画像にする",
       "summary": "時間、タイトル、顔、軽い装飾をまとめた開始バナー。",
       "steps": ["開始時刻を明記する", "顔を大きく置く", "タイトルを短くする", "余白を残す"],
-      "blocks": ["stream_start_banner_viz", "announcement_text_pack", "text_style_jp", "effects_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "reaction_focus", "stream_start_banner_viz", "announcement_text_pack", "text_style_jp", "effects_pack", "negative_common"],
       "notes": "告知サムネイルとは別に、配信開始向けの構図に寄せる。"
     },
     {
       "id": "reply_stamp_sheet",
-      "title": "返信スタンプシート",
+      "title": "Kafka 返信スタンプシート",
       "kind": "stamp",
       "purpose": "コメント返しをスタンプ画像として量産する",
       "summary": "短い返答、あいづち、感情反応を切り抜きやすいグリッドにしたシート。",
       "steps": ["一言返答を選ぶ", "表情を強く出す", "切り抜きやすくする", "テキストは短くする"],
-      "blocks": ["reply_stamp_sheet_viz", "chat_reply_pack", "expressions_pack", "text_style_jp", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "reply_stamp_sheet_viz", "chat_reply_pack", "expressions_pack", "text_style_jp", "negative_common"],
       "notes": "配信チャットやSNS返信にそのまま使う。"
     },
     {
       "id": "topic_redirect_banner",
-      "title": "話題切り替えバナー",
+      "title": "Kafka 話題切り替えバナー",
       "kind": "announcement",
       "purpose": "危ない話題をやわらかく切り替える画像にする",
       "summary": "安全な境界線を示しつつ、次の話題へ自然に流すバナー。",
       "steps": ["境界を短く示す", "別話題へ流す", "強い否定を避ける", "空気を壊さない"],
-      "blocks": ["topic_redirect_banner_viz", "safe_reply_pack", "text_style_jp", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "topic_redirect_banner_viz", "safe_reply_pack", "text_style_jp", "negative_common"],
       "notes": "話題の遮断ではなく、自然な方向転換にする。"
     },
     {
       "id": "memory_note_board",
-      "title": "記憶メモボード",
+      "title": "Kafka 記憶メモボード",
       "kind": "design_sheet",
       "purpose": "配信や日常の重要点を記憶カードに残す",
       "summary": "今日の核、残す感情、感覚の手がかり、次回の使い道をまとめる記憶ボード。",
       "steps": ["今日の核を選ぶ", "感情の弧を残す", "感覚の手がかりを書く", "次回の使い道を書く"],
-      "blocks": ["memory_note_board_viz", "memory_pack", "research_log_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "memory_note_board_viz", "memory_pack", "research_log_pack", "negative_common"],
       "notes": "長文ではなく、次回使える断片だけ残す。"
     },
     {
       "id": "poststream_review_board",
-      "title": "配信後レビュー盤",
+      "title": "Kafka 配信後レビュー盤",
       "kind": "design_sheet",
       "purpose": "配信後に次へつながるレビュー画像にする",
       "summary": "うまくいった点、直す点、次回にやることを見える化したレビュー盤。",
       "steps": ["良かった点を書く", "直す点を書く", "次回の一手を書く", "余計な情報を捨てる"],
-      "blocks": ["poststream_review_board_viz", "research_log_pack", "memory_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "poststream_review_board_viz", "research_log_pack", "memory_pack", "negative_common"],
       "notes": "改善ログとしてもそのまま使える。"
     },
     {
       "id": "archive_contact_sheet",
-      "title": "成果物コンタクトシート",
+      "title": "Kafka 成果物コンタクトシート",
       "kind": "design_sheet",
       "purpose": "画像素材と成果物の一覧を一枚にまとめる",
       "summary": "日付付きサムネイル、出力種別、再利用先をまとめたコンタクトシート。",
       "steps": ["サムネイルを並べる", "出力種別を書く", "再利用先を書く", "探しやすくする"],
-      "blocks": ["archive_contact_sheet_viz", "archive_index_vlog", "prompt_archive_sheet_vlog", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "archive_contact_sheet_viz", "archive_index_vlog", "prompt_archive_sheet_vlog", "negative_common"],
       "notes": "後から探す前提で、見出しより一覧性を優先する。"
     },
     {
@@ -477,99 +484,99 @@
       "title": "Kafka 人格固定カード",
       "kind": "design_sheet",
       "purpose": "Kafka の人格を配信中に迷わず使える形で固定する",
-      "summary": "口調、感情、距離感、禁止事項、自律性、最悪シナリオ前提をそのまま見返せるカード。",
-      "steps": ["口調を固定する", "自律性を先に置く", "感情の弧を決める", "言わないことを明示する"],
-      "blocks": ["persona_sheet_vlog", "character_customization_pack", "negative_common"],
-      "notes": "persona.md をそのまま再利用しやすい形にする。MBTI の自己説明と視覚・音・温度の記述を前面に出す。"
+      "summary": "口調、自律性、最悪シナリオ前提、MBTI、視覚・身体感覚をカードにまとめる。",
+      "steps": ["人格の核を固定する", "自律性を先に置く", "感情の弧を決める", "言わないことを明示する"],
+      "blocks": ["master_style", "character_kafka", "persona_pack", "speech_mode_kafka", "text_style_jp", "negative_common"],
+      "notes": "vlog_user の persona.md をそのまま見返せるカードにする。"
     },
     {
       "id": "daily_work_sheet",
-      "title": "配信運用シート",
+      "title": "Kafka 配信運用カード",
       "kind": "design_sheet",
       "purpose": "配信準備と当日の動きをそのまま回せる進行表にする",
-      "summary": "開始前、配信中、終了後に分けて、何を先に固めるかが見える運用シート。",
+      "summary": "開始前、配信中、終了後に分けて、何を先に固めるかが見える運用カード。",
       "steps": ["開始前の準備を書く", "配信中の確認項目を書く", "終了後の整理を書く", "次回に回す"],
-      "blocks": ["daily_work_sheet_vlog", "local_offline_pack", "research_log_pack", "negative_common"],
-      "notes": "work.md を毎日回す前提で使う。手作業を減らし、固定点から構造化する。"
+      "blocks": ["master_style", "character_kafka", "local_offline_pack", "speech_mode_kafka", "research_log_pack", "negative_common"],
+      "notes": "work.md のような短い運用メモを、Kafka の判断で回す。"
     },
     {
       "id": "summary_sheet",
-      "title": "配信後まとめカード",
+      "title": "Kafka 配信後まとめカード",
       "kind": "design_sheet",
       "purpose": "配信後の出来事を次回に使える形で残す",
       "summary": "出来事、要点、感情、改善点、再利用タグを整理した、読み返し向けのまとめカード。",
       "steps": ["出来事を1つに絞る", "要点を短くまとめる", "感情の弧を残す", "次回の改善点を書く"],
-      "blocks": ["summary_sheet_vlog", "memory_pack", "research_log_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "summary_sheet_vlog", "speech_mode_kafka", "memory_pack", "research_log_pack", "negative_common"],
       "notes": "summaries を読むだけで再利用しやすくする。出来事を章として扱う。"
     },
     {
       "id": "photo_prompt_sheet",
-      "title": "生成素材台帳",
+      "title": "Kafka 生成素材台帳",
       "kind": "design_sheet",
       "purpose": "AI-Tuber 用の生成素材を用途別に整理する",
       "summary": "1枚絵、漫画、スタンプ、告知、配信素材を日付で積む台帳。",
       "steps": ["用途を選ぶ", "構図を決める", "出力先を明記する", "再利用先を書く"],
-      "blocks": ["photo_prompt_sheet_vlog", "prompt_archive_sheet_vlog", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "photo_prompt_sheet_vlog", "prompt_archive_sheet_vlog", "negative_common"],
       "notes": "photos_prompts を用途ごとに見返せるようにする。"
     },
     {
       "id": "archive_index",
-      "title": "成果物回収台帳",
+      "title": "Kafka 成果物回収カード",
       "kind": "design_sheet",
       "purpose": "成果物の回収先を一覧化する",
-      "summary": "日付、種別、派生物、保管先、再利用先を整理したアーカイブ台帳。",
+      "summary": "日付、種別、派生物、保管先、再利用先を整理したアーカイブカード。",
       "steps": ["日付を書く", "種別を分ける", "派生物を列挙する", "再利用先を書く"],
-      "blocks": ["archive_index_vlog", "local_offline_pack", "research_log_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "archive_index_vlog", "prompt_archive_sheet_vlog", "speech_mode_kafka", "negative_common"],
       "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。"
     },
     {
       "id": "chat_reply_card",
-      "title": "コメント返信カード",
+      "title": "Kafka コメント返信カード",
       "kind": "reaction",
       "purpose": "配信中のコメント返しを短く即応できる形にする",
       "summary": "短い返答、あいづち、質問返し、話題の戻し方をまとめた即応カード。",
       "steps": ["コメントの温度を読む", "短く返す", "必要なら話題を戻す", "人格を崩さない"],
-      "blocks": ["chat_reply_pack", "text_style_jp", "text_content_pack", "expressions_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "chat_reply_pack", "speech_mode_kafka", "text_style_jp", "text_content_pack", "expressions_pack", "negative_common"],
       "notes": "長く説明しない。短く返して流れを止めない。"
     },
     {
       "id": "topic_redirect_card",
-      "title": "話題切り替えカード",
+      "title": "Kafka 話題切り替えカード",
       "kind": "reaction",
       "purpose": "危ない話題や長引く話題を自然に切り替える",
       "summary": "境界線を守りつつ、温度を落とさず別の話題へ戻すカード。",
       "steps": ["危険かどうかを見る", "短く境界を置く", "別の話題に逃がす", "空気を壊さない"],
-      "blocks": ["safe_reply_pack", "moderation_pack", "text_style_jp", "effects_pack", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "safe_reply_pack", "speech_mode_kafka", "text_style_jp", "negative_common"],
       "notes": "否定だけで終わらせず、次の話題を添える。"
     },
     {
       "id": "memory_update_card",
-      "title": "記憶更新カード",
+      "title": "Kafka 記憶更新カード",
       "kind": "design_sheet",
       "purpose": "配信や日常の重要点を記憶に入れる",
       "summary": "今日の出来事、残す感情、次回に効く情報だけを短く抜く更新カード。",
       "steps": ["今日の核を1つ決める", "残す事実を書く", "残す感情を書く", "次回の使い道を書く"],
-      "blocks": ["memory_pack", "research_log_pack", "summary_sheet_vlog", "negative_common"],
+      "blocks": ["master_style", "character_kafka", "memory_pack", "speech_mode_kafka", "research_log_pack", "negative_common"],
       "notes": "長いログにしない。次の会話で使える断片だけ残す。"
     },
     {
       "id": "ai_tuber_core_pack",
-      "title": "AI-Tuber 起動カード",
+      "title": "Kafka 起動カード",
       "kind": "system",
       "purpose": "AI-Tuber を起動する前に見る実行カードにする",
       "summary": "口調、音声、チャット、アバター、制御、安全性を起動前に並べる実行カード。",
       "steps": ["口調を固定する", "音声とチャットをつなぐ", "アバター制御を選ぶ", "安全性と低遅延を保つ"],
-      "blocks": ["persona_pack", "local_offline_pack", "voice_pipeline_pack", "chat_platform_pack", "avatar_mode_pack", "control_panel_pack", "demo_mode_pack", "moderation_pack", "plugin_pack"],
+      "blocks": ["master_style", "character_kafka", "persona_pack", "speech_mode_kafka", "local_offline_pack", "voice_pipeline_pack", "chat_platform_pack", "avatar_mode_pack", "control_panel_pack", "demo_mode_pack", "moderation_pack", "plugin_pack"],
       "notes": "まず土台を作るときに使う。細部は後で分ける。"
     },
     {
       "id": "ai_tuber_ops_pack",
-      "title": "AI-Tuber 配信後レビューカード",
+      "title": "Kafka 配信後レビューカード",
       "kind": "system",
       "purpose": "AI-Tuber の会話品質、記憶、演出、字幕、告知、振り返りをまとめる",
       "summary": "返答、記憶、演出、字幕、告知、ログを配信後に整理するレビューカード。",
       "steps": ["返答の型を決める", "記憶の範囲を分ける", "演出を紐付ける", "ログを振り返りに使う"],
-      "blocks": ["chat_reply_pack", "safe_reply_pack", "memory_pack", "vfx_trigger_pack", "subtitle_pack", "announcement_text_pack", "character_customization_pack", "research_log_pack"],
+      "blocks": ["master_style", "character_kafka", "chat_reply_pack", "safe_reply_pack", "speech_mode_kafka", "memory_pack", "vfx_trigger_pack", "subtitle_pack", "announcement_text_pack", "character_customization_pack", "research_log_pack"],
       "notes": "配信後の改善や日常運用で使う。"
     }
   ]
