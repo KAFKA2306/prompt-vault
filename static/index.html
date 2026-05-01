@@ -31,13 +31,41 @@
       <section class="panel detail">
         <div class="head">
           <div>
-            <div class="subtle">詳細</div>
+            <div class="subtle">完成イメージ</div>
             <h2 id="detail-title">テンプレートを選択</h2>
           </div>
         </div>
 
+        <section class="preview-stage" id="preview-stage">
+          <div class="preview-stage__top">
+            <div>
+              <div class="preview-kicker" id="preview-kind">テンプレートを選択</div>
+              <h3 id="preview-title">上の一覧から1つ選ぶ</h3>
+              <p id="preview-purpose">ここに完成イメージの要点が出ます。</p>
+            </div>
+            <div class="preview-stats">
+              <div>
+                <span id="preview-block-count">0</span>
+                <small>blocks</small>
+              </div>
+              <div class="preview-stats__note" id="preview-copy-format">全文の末尾に指示を追加</div>
+            </div>
+          </div>
+          <div class="preview-stage__body">
+            <div class="preview-stage__lead">
+              <div class="subtle">完成後の見え方</div>
+              <p id="preview-summary">一覧から選んでください。</p>
+            </div>
+            <div class="preview-stage__steps">
+              <div class="subtle">組み立ての流れ</div>
+              <div class="step-list" id="preview-steps"></div>
+            </div>
+          </div>
+          <div class="preview-stage__chips" id="preview-blocks"></div>
+        </section>
+
         <div class="block">
-          <div class="subtle">概要</div>
+          <div class="subtle">要点</div>
           <div id="detail-summary" style="margin-top: 6px; line-height: 1.8;">一覧から選んでください。</div>
         </div>
 

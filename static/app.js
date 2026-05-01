@@ -3,6 +3,19 @@ const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
 const templates = db.templates;
 const fullCopySuffix = '\n\n---\n# 指示\n画像生成する';
 
+const kindLabels = {
+  stamp: 'スタンプ / 切り抜きしやすい完成形',
+  comic: '漫画 / 物語を追いやすい完成形',
+  reaction: '反応画像 / 一発で伝わる完成形',
+};
+
+const kindPalettes = {
+  stamp: { accent: '15,118,110', accent2: '37,99,235' },
+  comic: { accent: '99,102,241', accent2: '14,165,233' },
+  reaction: { accent: '236,72,153', accent2: '249,115,22' },
+  default: { accent: '15,118,110', accent2: '37,99,235' },
+};
+
 const state = {
   templates,
   selectedId: templates[0]?.id || null,
@@ -22,6 +35,24 @@ const renderBlock = (block) => [
 const renderTemplate = (template) => template.blocks.map((blockId) => renderBlock(blocks[blockId])).join('\n\n');
 
 const renderFullCopyText = (template) => `${renderTemplate(template)}${fullCopySuffix}`;
+
+const kindLabel = (template) => kindLabels[template.kind] || 'テンプレート';
+
+const kindPalette = (template) => kindPalettes[template.kind] || kindPalettes.default;
+
+const renderPreviewSteps = (template) => template.steps?.length
+  ? template.steps.map((step, index) => `
+      <div class="step-item">
+        <span>${index + 1}</span>
+        <p>${step}</p>
+      </div>
+    `).join('')
+  : '<div class="empty">手順がありません。</div>';
+
+const renderPreviewBlocks = (template) => template.blocks.map((blockId) => {
+  const block = blocks[blockId];
+  return `<div class="preview-chip">${block.title}</div>`;
+}).join('');
 
 const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
@@ -43,13 +74,14 @@ const renderList = () => {
   const list = filteredTemplates();
   el('list').innerHTML = list.map((template) => `
     <article class="panel card ${template.id === state.selectedId ? 'active' : ''}" data-id="${template.id}">
-      <div class="card-top">
-        <div>
-          <p class="title">${template.title}</p>
-          <div class="meta">${template.purpose}</div>
-        </div>
-      </div>
+      <div class="card-badge">${kindLabel(template)}</div>
+      <p class="title">${template.title}</p>
+      <div class="meta">${template.purpose}</div>
       <p class="preview">${template.summary || template.notes || template.blocks.join(', ')}</p>
+      <div class="card-foot">
+        <span>${template.blocks.length} blocks</span>
+        <span>${template.steps?.length || 0} steps</span>
+      </div>
       <div class="buttons" style="margin-top: 10px;">
         <button class="button primary" data-copy-full="${template.id}">全文コピー</button>
       </div>
@@ -83,17 +115,36 @@ const renderDetail = () => {
   const template = selected();
   if (!template) {
     el('detail-title').textContent = 'テンプレートを選択';
+    el('preview-kind').textContent = 'テンプレートを選択';
+    el('preview-title').textContent = '上の一覧から1つ選ぶ';
+    el('preview-purpose').textContent = 'ここに完成イメージの要点が出ます。';
+    el('preview-block-count').textContent = '0';
+    el('preview-summary').textContent = '一覧から選んでください。';
+    el('preview-steps').innerHTML = '';
+    el('preview-blocks').innerHTML = '';
     el('detail-summary').textContent = '一覧から選んでください。';
     el('detail-notes').textContent = '一覧から選んでください。';
     el('block-list').innerHTML = '';
     el('detail-full').textContent = '';
+    el('preview-stage').style.removeProperty('--accent');
+    el('preview-stage').style.removeProperty('--accent-2');
     return;
   }
 
   el('detail-title').textContent = template.title;
+  el('preview-kind').textContent = kindLabel(template);
+  el('preview-title').textContent = template.title;
+  el('preview-purpose').textContent = template.purpose;
+  el('preview-block-count').textContent = String(template.blocks.length);
+  el('preview-summary').textContent = template.summary || template.purpose;
+  el('preview-steps').innerHTML = renderPreviewSteps(template);
+  el('preview-blocks').innerHTML = renderPreviewBlocks(template);
   el('detail-summary').textContent = template.summary || template.purpose;
   el('detail-notes').textContent = template.notes || 'メモなし';
   el('detail-full').textContent = renderTemplate(template);
+  const palette = kindPalette(template);
+  el('preview-stage').style.setProperty('--accent', palette.accent);
+  el('preview-stage').style.setProperty('--accent-2', palette.accent2);
   el('block-list').innerHTML = template.blocks.map((blockId) => {
     const block = blocks[blockId];
     return `

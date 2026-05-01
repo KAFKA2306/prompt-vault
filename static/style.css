@@ -190,6 +190,188 @@ h1 {
   gap: 14px;
 }
 
+.preview-stage {
+  --accent: 15,118,110;
+  --accent-2: 37,99,235;
+  padding: 18px;
+  border: 1px solid rgba(var(--accent), .18);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(var(--accent), .12), transparent 28%),
+    radial-gradient(circle at 84% 12%, rgba(var(--accent-2), .10), transparent 24%),
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(247,244,238,.88));
+  box-shadow: 0 24px 60px rgba(17,24,39,.08);
+}
+
+.preview-stage__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.preview-kicker {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(var(--accent), .08);
+  border: 1px solid rgba(var(--accent), .16);
+  color: rgb(var(--accent));
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.preview-stage h3 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: clamp(24px, 2.4vw, 38px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.preview-stage__top p {
+  margin: 10px 0 0;
+  max-width: 58ch;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.preview-stats {
+  min-width: 132px;
+  text-align: right;
+  display: grid;
+  gap: 10px;
+}
+
+.preview-stats span {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 42px;
+  line-height: .9;
+  letter-spacing: -.04em;
+  color: rgb(var(--accent));
+}
+
+.preview-stats small {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.preview-stats__note {
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(16,24,40,.08);
+  color: #41506a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.preview-stage__body {
+  margin-top: 16px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0,1.1fr) minmax(240px,.9fr);
+}
+
+.preview-stage__lead,
+.preview-stage__steps {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(16,24,40,.08);
+}
+
+.preview-stage__lead p {
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.step-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.step-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.step-item span {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(var(--accent), .12);
+  color: rgb(var(--accent));
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step-item p {
+  margin: 2px 0 0;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.preview-stage__chips {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preview-chip {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(var(--accent), .08);
+  border: 1px solid rgba(var(--accent), .14);
+  color: rgb(var(--accent));
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-badge {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15,118,110,.08);
+  color: var(--accent);
+  border: 1px solid rgba(15,118,110,.14);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.card-foot span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.7);
+  border: 1px solid rgba(16,24,40,.08);
+}
+
 .block {
   padding: 16px;
   background: rgba(255,255,255,.94);
@@ -257,10 +439,13 @@ pre {
 @media (max-width: 1100px) {
   .hero, .workspace { grid-template-columns: 1fr; }
   .list { max-height: none; }
+  .preview-stage__body { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
   .page { padding: 14px; }
   .buttons { flex-direction: column; }
   .buttons .button { width: 100%; }
+  .preview-stage__top { flex-direction: column; }
+  .preview-stats { text-align: left; }
 }
