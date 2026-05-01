@@ -1285,6 +1285,50 @@
         "text",
         "status"
       ]
+    },
+    {
+      "id": "travel_bg_kyoto",
+      "category": "背景",
+      "title": "京都の風景",
+      "content": "Kyoto travel background, traditional japanese architecture, ancient wooden shrine, torii gates, historical cobblestone street, soft morning sunlight, peaceful and elegant atmosphere",
+      "tags": [
+        "travel",
+        "background",
+        "kyoto"
+      ]
+    },
+    {
+      "id": "travel_bg_tokyo",
+      "category": "背景",
+      "title": "東京の風景",
+      "content": "Tokyo travel background, modern neon city street, bright billboards, bustling Shibuya crossing, Tokyo tower in the distance, urban energetic atmosphere",
+      "tags": [
+        "travel",
+        "background",
+        "tokyo"
+      ]
+    },
+    {
+      "id": "travel_bg_okinawa",
+      "category": "背景",
+      "title": "沖縄の風景",
+      "content": "Okinawa travel background, clear blue sky, sparkling turquoise ocean, white sandy beach, palm trees, tropical relaxing atmosphere",
+      "tags": [
+        "travel",
+        "background",
+        "okinawa"
+      ]
+    },
+    {
+      "id": "travel_bg_hokkaido",
+      "category": "背景",
+      "title": "北海道の風景",
+      "content": "Hokkaido travel background, vast lavender fields, clear blue sky, majestic snowy mountains in the distance, fresh and wide open atmosphere",
+      "tags": [
+        "travel",
+        "background",
+        "hokkaido"
+      ]
     }
   ],
   "templates": [
@@ -2804,6 +2848,90 @@
         "negative_common"
       ],
       "notes": "現代日本TRPG（CoCなど）の探索者をイメージしたシート用。"
+    },
+    {
+      "id": "travel_kyoto_post",
+      "title": "Kafka 京都旅行",
+      "kind": "social",
+      "purpose": "京都観光を満喫している様子を投稿する",
+      "summary": "古都の風情ある街並みと、旅行を楽しむキャラを合わせる。",
+      "steps": [
+        "京都らしい背景（神社や古い街並み）にする",
+        "観光地にあったポーズをとらせる",
+        "旅行らしい文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "travel_bg_kyoto",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "和風な雰囲気を楽しむ一枚。"
+    },
+    {
+      "id": "travel_tokyo_post",
+      "title": "Kafka 東京旅行",
+      "kind": "social",
+      "purpose": "東京の街並みを満喫している様子を投稿する",
+      "summary": "現代的な都市やネオンと、旅行を楽しむキャラを合わせる。",
+      "steps": [
+        "東京らしい背景（ネオンや高層ビル）にする",
+        "観光地にあったポーズをとらせる",
+        "旅行らしい文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "travel_bg_tokyo",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "都会のエネルギーを楽しむ一枚。"
+    },
+    {
+      "id": "travel_okinawa_post",
+      "title": "Kafka 沖縄旅行",
+      "kind": "social",
+      "purpose": "沖縄の海を満喫している様子を投稿する",
+      "summary": "南国の海や砂浜と、旅行を楽しむキャラを合わせる。",
+      "steps": [
+        "沖縄らしい背景（青い海やビーチ）にする",
+        "観光地にあったポーズをとらせる",
+        "旅行らしい文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "travel_bg_okinawa",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "南国のリラックスした雰囲気を楽しむ一枚。"
+    },
+    {
+      "id": "travel_hokkaido_post",
+      "title": "Kafka 北海道旅行",
+      "kind": "social",
+      "purpose": "北海道の大自然を満喫している様子を投稿する",
+      "summary": "広大な自然や花畑と、旅行を楽しむキャラを合わせる。",
+      "steps": [
+        "北海道らしい背景（花畑や雪山）にする",
+        "観光地にあったポーズをとらせる",
+        "旅行らしい文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "travel_bg_hokkaido",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "広大な自然を楽しむ一枚。"
     }
   ]
 }
