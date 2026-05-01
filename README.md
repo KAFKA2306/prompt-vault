@@ -1,5 +1,13 @@
 # Prompt Vault
 
+## リンク集
+
+- [公開サイト](https://kafka2306.github.io/prompt-vault-/)
+- [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault-)
+- [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
+- [AGENTS.md](AGENTS.md)
+- [CLAUDE.md](CLAUDE.md)
+
 画像生成プロンプトを、全文ではなく「使える部品」に分解して置いておく保管庫です。
 
 KAFKA の世界観を保ちながら、
@@ -41,9 +49,4 @@ python build.py
 
 - GitHub Pages
 - Cloudflare Pages
-
-## 補足
-
-- Cloudflare Pages の手順は [`docs/manual/001_cloudflare_pages.md`](docs/manual/001_cloudflare_pages.md)
-- 公開URLは [GitHub Pages](https://kafka2306.github.io/prompt-vault-/)
 
