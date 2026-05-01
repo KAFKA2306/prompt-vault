@@ -1,6 +1,15 @@
 # Prompt Vault
 
-## リンク集
+画像生成プロンプトを、全文のまま積み上げるのではなく、
+「あとで使えるかたち」にほどいて並べておくための保管庫です。
+
+KAFKA の世界観を保ちながら、次の3つを大事にしています。
+
+- すぐコピーできること
+- 用途ごとに組み替えやすいこと
+- ブレを減らして、再現しやすいこと
+
+## すぐ開く場所
 
 - [ローカル表示](http://127.0.0.1:8787/)
 - [公開サイト](https://kafka2306.github.io/prompt-vault/)
@@ -12,31 +21,22 @@
 - [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
 
-画像生成プロンプトを、全文ではなく「使える部品」に分解して置いておく保管庫です。
-
-KAFKA の世界観を保ちながら、
-- すぐコピーできる
-- 用途別に組み直せる
-- ブレを減らせる
-
-そんな最小構成を目指しています。
-
-## 何をするか
+## このリポジトリでできること
 
 - マスタースタイルを置く
 - キャラクターや衣装を分けて置く
-- **画像ギャラリーから直感的に完成イメージを探す**
-- **拡大モーダルからワンクリックで全文プロンプトをコピーする**
+- 画像ギャラリーから、完成イメージを直感で探す
+- 拡大モーダルから、全文プロンプトをそのままコピーする
 
 ## 使い方
 
-### ローカル表示
+### 1. ローカルで見る
 
 ```bash
 python3 app.py
 ```
 
-### 静的書き出し
+### 2. 静的に書き出す
 
 ```bash
 python3 build.py
@@ -44,17 +44,17 @@ python3 build.py
 
 `dist/index.html` と `dist/style.css`、`dist/app.js` が生成されます。
 
-## データ
+## データの置き場所
 
 - `db/prompts.json` がローカルDBです
-- ここにブロックとテンプレートを保存します
+- ブロック、テンプレート、`artifacts` はここで管理します
 - 設計の確定事項は `docs/ADR/` に残します
 - `static/index.html` が HTML の元です
 - `static/style.css` と `static/app.js` が画面の本体です
 - `dist/` は `python3 build.py` で作る生成物です
 - `dist/` は直接編集しません
 
-## 配信
+## 配信先
 
 - GitHub Pages
 - Cloudflare Pages
@@ -63,3 +63,8 @@ python3 build.py
 
 - `scripts/verify_pages.sh` で GitHub Pages と Cloudflare Pages の表示を確認します
 - Cloudflare Pages の URL は `CF_PAGES_URL` で渡します
+
+## 補足
+
+- 画面の見た目や操作方針は [DESIGN.md](DESIGN.md) を見てください
+- 作業の進め方は [AGENTS.md](AGENTS.md) にまとめています
