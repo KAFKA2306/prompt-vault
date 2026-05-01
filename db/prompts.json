@@ -110,6 +110,104 @@
       "tags": ["announcement", "text"]
     },
     {
+      "id": "chat_reply_pack",
+      "category": "応答",
+      "title": "コメント返し",
+      "content": "short reply, comment response, question answer, reaction phrases, keep it brief, keep tone warm, no overexplaining, preserve identity",
+      "tags": ["reply", "chat", "response"]
+    },
+    {
+      "id": "local_offline_pack",
+      "category": "実行",
+      "title": "ローカル優先",
+      "content": "local-first, low latency, small context, offline safe, avoid unnecessary network calls, prefer cached assets, keep outputs compact",
+      "tags": ["local", "offline", "performance"]
+    },
+    {
+      "id": "memory_pack",
+      "category": "記憶",
+      "title": "記憶管理",
+      "content": "short-term memory, long-term memory, conversation summary, recent context, facts to retain, clear state boundaries",
+      "tags": ["memory", "summary", "context"]
+    },
+    {
+      "id": "vfx_trigger_pack",
+      "category": "演出",
+      "title": "感情演出",
+      "content": "emotion-to-expression map, effects, motion cues, timing, sparkles, emphasis, reaction-driven visual triggers",
+      "tags": ["vfx", "effects", "emotion"]
+    },
+    {
+      "id": "voice_pipeline_pack",
+      "category": "音声",
+      "title": "音声パイプライン",
+      "content": "voice input, voice output, interruption handling, response latency budget, turn taking, ASR/TTS alignment",
+      "tags": ["voice", "asr", "tts"]
+    },
+    {
+      "id": "chat_platform_pack",
+      "category": "配信",
+      "title": "配信チャット",
+      "content": "YouTube, Twitch, Discord, live chat comments, platform-specific formatting, mention handling, emoji moderation",
+      "tags": ["platform", "chat", "streaming"]
+    },
+    {
+      "id": "avatar_mode_pack",
+      "category": "アバター",
+      "title": "アバターモード",
+      "content": "Live2D, VRM, PNGTuber, 3D avatar, mode switching, expression sync, lip sync, camera-safe framing",
+      "tags": ["avatar", "live2d", "vrm"]
+    },
+    {
+      "id": "control_panel_pack",
+      "category": "制御",
+      "title": "操作パネル",
+      "content": "model switching, voice switching, expression switching, status display, runtime toggles, simple controls",
+      "tags": ["control", "ui", "runtime"]
+    },
+    {
+      "id": "demo_mode_pack",
+      "category": "展示",
+      "title": "デモモード",
+      "content": "demo mode, signage mode, idle mode, auto speech, looped greetings, presentation-safe output",
+      "tags": ["demo", "signage", "idle"]
+    },
+    {
+      "id": "moderation_pack",
+      "category": "安全",
+      "title": "モデレーション",
+      "content": "NG words, forbidden topics, safe reply filter, output moderation, rate limiting, escalation avoidance",
+      "tags": ["moderation", "safety", "filter"]
+    },
+    {
+      "id": "slide_pack",
+      "category": "発表",
+      "title": "スライド発表",
+      "content": "slide presentation, screen share, explanation text, tutorial flow, scene progression, speaking notes",
+      "tags": ["slide", "presentation", "tutorial"]
+    },
+    {
+      "id": "plugin_pack",
+      "category": "拡張",
+      "title": "外部連携",
+      "content": "external integrations, WebSocket, extra commands, plugin hooks, extensions, add-on behaviors",
+      "tags": ["plugin", "websocket", "extension"]
+    },
+    {
+      "id": "character_customization_pack",
+      "category": "設定",
+      "title": "キャラ設定",
+      "content": "appearance, personality, phrasing, configuration differences, avatar variations, identity tuning",
+      "tags": ["character", "customization", "persona"]
+    },
+    {
+      "id": "research_log_pack",
+      "category": "ログ",
+      "title": "振り返りログ",
+      "content": "conversation log, evaluation log, summary log, review notes, improvement notes, retrospective cues",
+      "tags": ["log", "review", "analysis"]
+    },
+    {
       "id": "negative_common",
       "category": "禁止",
       "title": "共通ネガティブ",
@@ -191,6 +289,26 @@
       "steps": ["伝えたい告知を1つに絞る", "顔とタイトルを大きく置く", "配色を強くまとめる", "余計な情報を削る"],
       "blocks": ["master_style", "character_kafka", "reaction_focus", "announcement_text_pack", "text_style_jp", "effects_pack", "negative_common"],
       "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。"
+    },
+    {
+      "id": "ai_tuber_core_pack",
+      "title": "AI-Tuber 基盤パック",
+      "kind": "system",
+      "purpose": "AI-Tuber の会話・音声・アバター・制御の基盤をまとめる",
+      "summary": "ローカル優先、音声、配信チャット、アバター、制御、安全性を一つにまとめた基盤。",
+      "steps": ["会話の口調を固定する", "音声とチャットをつなぐ", "アバター制御を選ぶ", "安全性と低遅延を保つ"],
+      "blocks": ["persona_pack", "local_offline_pack", "voice_pipeline_pack", "chat_platform_pack", "avatar_mode_pack", "control_panel_pack", "demo_mode_pack", "moderation_pack", "plugin_pack"],
+      "notes": "まず土台を作るときに使う。細部は後で分ける。"
+    },
+    {
+      "id": "ai_tuber_ops_pack",
+      "title": "AI-Tuber 運用パック",
+      "kind": "system",
+      "purpose": "AI-Tuber の会話品質、記憶、演出、告知、振り返りをまとめる",
+      "summary": "返答、記憶、演出、字幕、告知、ログを運用向けに整理したまとめ。",
+      "steps": ["返答の型を決める", "記憶の範囲を分ける", "演出を紐付ける", "ログを振り返りに使う"],
+      "blocks": ["chat_reply_pack", "memory_pack", "vfx_trigger_pack", "subtitle_pack", "announcement_text_pack", "character_customization_pack", "research_log_pack"],
+      "notes": "配信後の改善や日常運用で使う。"
     }
   ]
 }

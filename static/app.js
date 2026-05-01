@@ -9,6 +9,7 @@ const kindLabels = {
   reaction: '反応画像 / 一発で伝わる完成形',
   design_sheet: 'デザインシート / 設定資料',
   announcement: '告知 / SNSサムネイル',
+  system: 'AI-Tuber / 基盤と運用',
 };
 
 const kindPalettes = {
@@ -17,6 +18,7 @@ const kindPalettes = {
   reaction: { accent: '236,72,153', accent2: '249,115,22' },
   design_sheet: { accent: '59,130,246', accent2: '168,85,247' },
   announcement: { accent: '244,114,182', accent2: '249,115,22' },
+  system: { accent: '14,165,233', accent2: '59,130,246' },
   default: { accent: '15,118,110', accent2: '37,99,235' },
 };
 
