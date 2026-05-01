@@ -454,7 +454,7 @@ def main() -> None:
     clean_generated_outputs(output_dir)
 
     if args.kind or args.category or args.focus or args.mode != "overview":
-        sections, page_title = render_sections(
+        sections, _ = render_sections(
             db,
             args.mode,
             args.focus,
@@ -467,7 +467,6 @@ def main() -> None:
 
     md_path = output_dir / MD_PATH.name
     md_path.write_text(markdown, encoding="utf-8")
-    print(f"wrote {md_path}")
 
 
 if __name__ == "__main__":

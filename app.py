@@ -43,6 +43,31 @@ class Handler(BaseHTTPRequestHandler):
             self._send(HTTPStatus.OK, "application/json; charset=utf-8", body)
             return
 
+        if self.path == "/llms.txt":
+            body = (STATIC_PATH / "llms.txt").read_bytes()
+            self._send(HTTPStatus.OK, "text/plain; charset=utf-8", body)
+            return
+
+        if self.path == "/robots.txt":
+            body = (STATIC_PATH / "robots.txt").read_bytes()
+            self._send(HTTPStatus.OK, "text/plain; charset=utf-8", body)
+            return
+
+        if self.path == "/sitemap.xml":
+            body = (STATIC_PATH / "sitemap.xml").read_bytes()
+            self._send(HTTPStatus.OK, "application/xml; charset=utf-8", body)
+            return
+
+        if self.path == "/.well-known/ucp":
+            body = (STATIC_PATH / ".well-known" / "ucp").read_bytes()
+            self._send(HTTPStatus.OK, "application/json; charset=utf-8", body)
+            return
+
+        if self.path == "/_headers":
+            body = (STATIC_PATH / "_headers").read_bytes()
+            self._send(HTTPStatus.OK, "text/plain; charset=utf-8", body)
+            return
+
         if self.path.startswith("/artifacts/"):
             rel = self.path.removeprefix("/artifacts/")
             target = ARTIFACTS_PATH / rel
