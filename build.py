@@ -63,6 +63,10 @@ def write_dist() -> None:
     (DIST_PATH / "index.html").write_text((STATIC_PATH / "index.html").read_text(encoding="utf-8"), encoding="utf-8")
     (DIST_PATH / "style.css").write_text((STATIC_PATH / "style.css").read_text(encoding="utf-8"), encoding="utf-8")
     (DIST_PATH / "app.js").write_text(render_app_js(db), encoding="utf-8")
+    for source in STATIC_PATH.iterdir():
+        if not source.is_file() or source.name in {"index.html", "style.css", "app.js"}:
+            continue
+        shutil.copy2(source, DIST_PATH / source.name)
     for source in ARTIFACTS_PATH.glob("*.png"):
         shutil.copy2(source, DIST_PATH / "artifacts" / source.name)
 

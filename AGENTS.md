@@ -54,6 +54,13 @@
 9. push 後は `gh run list` と `gh run view --log` を見る
 10. 最後に [GitHub Pages](https://kafka2306.github.io/prompt-vault/) と [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md) を確認する
 
+## 自律実行
+
+- 変更を伴う依頼は、原則として最後までやり切る
+- 途中で止めず、必要な修正・`python3 build.py`・ローカル確認・公開確認まで進める
+- 変更内容が妥当で、破壊的でないと判断できるときは `git add` → `git commit` → `git push` まで進める
+- ただし、ユーザーが明示的に止めた場合、または確認が必要な高リスク変更のときだけ止まる
+
 ## 例外なく守ること
 
 - `dist/` を手で編集しない

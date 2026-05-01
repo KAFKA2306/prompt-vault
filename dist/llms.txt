@@ -1,0 +1,23 @@
+# Prompt Vault
+
+Prompt Vault is a Japanese prompt library for image generation.
+
+## What this site is for
+
+- Search prompt blocks by title, purpose, or block ID
+- Open image-first templates from the gallery
+- Copy full prompts from the modal with one click
+- Recombine blocks for VTuber, social posts, reaction images, character sheets, banners, and comics
+
+## Key pages
+
+- [Home](https://prompt-vault-cg3.pages.dev/)
+- [README](https://github.com/KAFKA2306/prompt-vault/blob/main/README.md)
+- [Design notes](https://github.com/KAFKA2306/prompt-vault/blob/main/DESIGN.md)
+- [Prompt database](https://github.com/KAFKA2306/prompt-vault/blob/main/db/prompts.json)
+- [Pages verification](https://github.com/KAFKA2306/prompt-vault/blob/main/scripts/verify_pages.sh)
+
+## Local use
+
+- Run `python3 app.py` for local preview
+- Run `python3 build.py` to regenerate `dist/`

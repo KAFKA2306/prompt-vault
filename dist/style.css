@@ -10,7 +10,7 @@
   --accent-2: #2563eb;
   --shadow: 0 24px 60px rgba(17,24,39,.08);
   --radius: 22px;
-  --font: "Inter","Noto Sans JP",system-ui,sans-serif;
+  --font: "Noto Sans JP","Hiragino Sans","Yu Gothic UI",system-ui,sans-serif;
   --font-head: "Georgia","Times New Roman",serif;
 }
 
@@ -21,9 +21,9 @@ body {
   color: var(--text);
   font-family: var(--font);
   background:
-    radial-gradient(circle at 12% 12%, rgba(165,180,252,.08), transparent 24%), /* Pastel Blue */
-    radial-gradient(circle at 84% 18%, rgba(216,180,254,.08), transparent 22%), /* Lavender */
-    radial-gradient(circle at 75% 82%, rgba(165,243,252,.08), transparent 26%), /* Soft Cyan */
+    radial-gradient(circle at 12% 12%, rgba(165,180,252,.08), transparent 24%),
+    radial-gradient(circle at 84% 18%, rgba(216,180,254,.08), transparent 22%),
+    radial-gradient(circle at 75% 82%, rgba(165,243,252,.08), transparent 26%),
     linear-gradient(180deg, #f7f4ee, #efebe4);
   min-height: 100vh;
 }
@@ -74,6 +74,87 @@ h1 {
   font-size: 15px;
 }
 
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.stat {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(16,24,40,.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.stat__value {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.stat__label {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.seo-panel {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+.seo-panel__copy h2,
+.search-help h2 {
+  margin: 10px 0 12px;
+  font-family: var(--font-head);
+  letter-spacing: -.04em;
+  line-height: 1.08;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.seo-panel__copy p,
+.search-help__copy {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.seo-panel__facts {
+  display: grid;
+  gap: 10px;
+}
+
+.seo-fact {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(16,24,40,.08);
+}
+
+.seo-fact strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.seo-fact span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
 .detail { padding: 18px; }
 
 .head {
@@ -82,6 +163,10 @@ h1 {
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 14px;
+}
+
+.head--center {
+  align-items: center;
 }
 
 .head h2, .head h3 { margin: 4px 0 0; letter-spacing: -.03em; font-family: var(--font-head); }
@@ -98,6 +183,11 @@ h1 {
   font: inherit;
   outline: none;
   margin-bottom: 10px;
+}
+
+.search--compact {
+  max-width: 320px;
+  margin-bottom: 0;
 }
 
 .search:focus {
@@ -119,6 +209,15 @@ h1 {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;
   border-color: transparent;
+}
+
+.button.primary.is-copied {
+  background: #0f766e;
+}
+
+.button--full {
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 
@@ -238,6 +337,27 @@ h1 {
   gap: 14px;
 }
 
+.block--flush {
+  margin-top: 0;
+}
+
+.modal-purpose {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.search-help {
+  padding: 20px;
+}
+
+.keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
 
 
 .block {
@@ -304,11 +424,28 @@ pre {
   .hero { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 720px) {
-  .page { padding: 14px; }
+@media (max-width: 900px) {
+  .seo-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Gallery and Modal */
+@media (max-width: 720px) {
+  .page { padding: 14px; }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .stat__label {
+    margin-top: 0;
+  }
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -519,6 +656,13 @@ pre {
   font-weight: 700;
   margin: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+
+.gallery-item__meta {
+  color: rgba(255,255,255,.8);
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 4px 0 0;
 }
 
 .modal {

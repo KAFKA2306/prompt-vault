@@ -3,26 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prompt Vault</title>
+  <title>Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー</title>
+  <meta name="description" content="Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できます。" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="KAFKA2306" />
+  <link rel="canonical" href="https://prompt-vault-cg3.pages.dev/" />
+  <meta property="og:site_name" content="Prompt Vault" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
+  <meta property="og:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。" />
+  <meta property="og:url" content="https://prompt-vault-cg3.pages.dev/" />
+  <meta property="og:image" content="https://prompt-vault-cg3.pages.dev/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
+  <meta name="twitter:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。" />
+  <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.svg" />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://prompt-vault-cg3.pages.dev/#website",
+          "url": "https://prompt-vault-cg3.pages.dev/",
+          "name": "Prompt Vault",
+          "description": "画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。",
+          "inLanguage": "ja-JP"
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://prompt-vault-cg3.pages.dev/#webpage",
+          "url": "https://prompt-vault-cg3.pages.dev/",
+          "name": "Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー",
+          "description": "VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できる画像生成プロンプト保管庫です。",
+          "isPartOf": {
+            "@id": "https://prompt-vault-cg3.pages.dev/#website"
+          },
+          "about": [
+            "画像生成プロンプト",
+            "VTuber",
+            "SNS投稿",
+            "反応画像",
+            "キャラシート"
+          ],
+          "inLanguage": "ja-JP"
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <main class="page">
     <section class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">用途別テンプレート / ローカルDB / コピー中心</div>
+        <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
-        <p class="lead">直感的に画像からプロンプトを探し出し、全文をそのままコピーできるギャラリーベースの最小サイトです。</p>
+        <p class="lead">直感的に画像からプロンプトを探し出し、全文をそのままコピーできるギャラリーベースの保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで、使う場面からすぐ辿れます。</p>
+        <div class="stats" aria-label="サイトの概要">
+          <div class="stat">
+            <span class="stat__value" id="stat-blocks">104</span>
+            <span class="stat__label">blocks</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" id="stat-templates">50</span>
+            <span class="stat__label">templates</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" id="stat-images">55</span>
+            <span class="stat__label">images</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel seo-panel" aria-labelledby="seo-title">
+      <div class="seo-panel__copy">
+        <div class="eyebrow">検索される導線を強化</div>
+        <h2 id="seo-title">画像生成プロンプトを、探して・分解して・そのまま使う。</h2>
+        <p>Prompt Vault は、見た目で探しやすいギャラリーと、全文を一発コピーできるモーダルを両立したプロンプトライブラリです。ブロック単位で組み替えられるので、1つの完成形から別の用途へも流用しやすくなっています。</p>
+      </div>
+      <div class="seo-panel__facts" aria-label="特徴">
+        <div class="seo-fact">
+          <strong>検索</strong>
+          <span>タイトル / 目的 / ブロックID で絞り込み</span>
+        </div>
+        <div class="seo-fact">
+          <strong>コピー</strong>
+          <span>モーダル上部のボタンから全文を即コピー</span>
+        </div>
+        <div class="seo-fact">
+          <strong>再利用</strong>
+          <span>ブロックを分けて、別テンプレートに組み直しやすい</span>
+        </div>
       </div>
     </section>
 
     <section class="panel detail">
-      <div class="head" style="align-items: center;">
+      <div class="head head--center">
         <div>
           <div class="subtle" id="gallery-count">0 items</div>
           <h2 id="detail-title">ギャラリー</h2>
         </div>
-        <input id="search" class="search" placeholder="検索: タイトル / 目的 / ブロックID" style="max-width: 320px; margin-bottom: 0;" />
+        <input id="search" class="search search--compact" placeholder="検索: タイトル / 目的 / ブロックID" />
       </div>
 
       <div class="gallery" id="gallery"></div>
@@ -37,6 +124,28 @@
         <div class="template-rail" id="template-rail"></div>
       </div>
     </section>
+
+    <section class="panel search-help" aria-labelledby="search-help-title">
+      <div class="head">
+        <div>
+          <div class="subtle">検索の起点</div>
+          <h2 id="search-help-title">こんな用途で使えます</h2>
+        </div>
+      </div>
+      <div class="keyword-cloud" aria-label="用途キーワード">
+        <span class="tag">VTuber</span>
+        <span class="tag">キャラシート</span>
+        <span class="tag">SNS投稿</span>
+        <span class="tag">告知バナー</span>
+        <span class="tag">反応画像</span>
+        <span class="tag">配信</span>
+        <span class="tag">おはツイ</span>
+        <span class="tag">コメント返し</span>
+        <span class="tag">漫画レイアウト</span>
+        <span class="tag">ステッカーシート</span>
+      </div>
+      <p class="search-help__copy">「画像生成プロンプト」「プロンプト集」「VTuber 素材」「SNS 投稿 レイアウト」みたいな探し方でも、用途の近いテンプレートにすぐ辿り着けます。</p>
+    </section>
   </main>
 
   <div class="modal" id="modal">
@@ -49,8 +158,8 @@
         <div>
           <div class="eyebrow" id="modal-kind">Category</div>
           <h2 id="modal-title">Title</h2>
-          <p class="subtle" id="modal-purpose" style="margin-top: 4px; margin-bottom: 16px;">Purpose</p>
-          <button class="button primary" id="modal-copy" style="width: 100%; margin-bottom: 16px;">コピー</button>
+          <p class="subtle modal-purpose" id="modal-purpose">Purpose</p>
+          <button class="button primary button--full" id="modal-copy">コピー</button>
         </div>
         <div class="block" id="modal-primary-block">
           <div class="subtle" id="modal-primary-title">ノード</div>
@@ -80,7 +189,7 @@
           <div class="subtle">備考</div>
           <p id="modal-notes" class="modal-summary"></p>
         </div>
-        <div class="block" style="margin-top: 0;">
+        <div class="block block--flush">
           <div class="subtle" id="modal-prompt-title">全文プロンプト</div>
           <pre id="modal-prompt"></pre>
         </div>

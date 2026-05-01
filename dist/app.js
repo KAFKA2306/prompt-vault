@@ -29,7 +29,39 @@ const state = {
   search: '',
 };
 
+const stats = {
+  blocks: db.blocks.length,
+  templates: templates.length,
+  images: db.blocks.reduce((count, block) => count + (block.artifacts?.length || 0), 0)
+    + templates.reduce((count, template) => count + (template.artifacts?.length || 0), 0),
+};
+
 const el = (id) => document.getElementById(id);
+
+const meta = (selector) => document.head.querySelector(selector);
+
+const setMetaContent = (selector, value) => {
+  const node = meta(selector);
+  if (node) node.setAttribute('content', value);
+};
+
+const setSeoCopy = () => {
+  const title = `Prompt Vault | ${stats.blocks}ブロック・${stats.templates}テンプレートの画像生成プロンプト集`;
+  const description = 'Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できます。';
+
+  document.title = title;
+  setMetaContent('meta[name="description"]', description);
+  setMetaContent('meta[property="og:title"]', title);
+  setMetaContent('meta[property="og:description"]', description);
+  setMetaContent('meta[name="twitter:title"]', title);
+  setMetaContent('meta[name="twitter:description"]', description);
+  const statBlocks = el('stat-blocks');
+  const statTemplates = el('stat-templates');
+  const statImages = el('stat-images');
+  if (statBlocks) statBlocks.textContent = String(stats.blocks);
+  if (statTemplates) statTemplates.textContent = String(stats.templates);
+  if (statImages) statImages.textContent = String(stats.images);
+};
 
 const getNodeType = (id) => {
   if (templateMap[id]) return 'template';
@@ -46,6 +78,8 @@ const registerUsage = (templateId, ids) => {
 };
 
 templates.forEach((template) => registerUsage(template.id, [...template.blocks, ...(template.uses || [])]));
+
+setSeoCopy();
 
 const renderBlockContent = (block) => [
   `## ${block.title}`,
@@ -106,7 +140,7 @@ const renderRecommendItems = (ids) => ids
     const nodeType = escapeHTML(type || '');
 
     if (artifact?.path) {
-      const imgAlt = escapeHTML(artifact.title || node.title);
+      const imgAlt = escapeHTML(artifact.title || `${node.title} の関連画像`);
       return `
         <button
           type="button"
@@ -240,9 +274,9 @@ const openNode = (nodeId, preferredType = null) => {
   const artifact = displayArtifact.artifact;
 
   if (artifact && artifact.path) {
-    imgEl.style.display = 'block';
+    imgEl.hidden = false;
     imgEl.src = artifact.path;
-    imgEl.alt = artifact.title;
+    imgEl.alt = artifact.title || `${node.title} の画像`;
     const noImage = imgView.querySelector('.no-image');
     if (noImage) noImage.remove();
     let imageNote = imgView.querySelector('.image-note');
@@ -259,7 +293,7 @@ const openNode = (nodeId, preferredType = null) => {
       imgView.classList.remove('is-fallback');
     }
   } else {
-    imgEl.style.display = 'none';
+    imgEl.hidden = true;
     imgEl.src = '';
     imgView.classList.remove('is-fallback');
     const imageNote = imgView.querySelector('.image-note');
@@ -346,10 +380,10 @@ const renderGallery = () => {
   
   el('gallery').innerHTML = list.map((template) => `
     <div class="gallery-item" data-open="${template.id}">
-      <img src="${template.artifacts[0].path}" alt="${template.artifacts[0].title}" loading="lazy" />
+      <img src="${template.artifacts[0].path}" alt="${escapeHTML(template.artifacts[0].title || `${template.title} の実例画像`)}" loading="lazy" />
       <div class="gallery-item__overlay">
         <p class="gallery-item__title">${template.title}</p>
-        <p class="subtle" style="color: rgba(255,255,255,.8); font-size: 11px;">${template.purpose}</p>
+        <p class="gallery-item__meta">${template.purpose}</p>
       </div>
     </div>
   `).join('');
@@ -371,7 +405,7 @@ const renderTemplateRail = () => {
     <button type="button" class="template-card ${template.artifacts?.length ? 'template-card--image' : 'template-card--empty'}" data-template-id="${template.id}">
       ${template.artifacts?.length ? `
         <div class="template-card__thumb">
-          <img src="${escapeHTML(template.artifacts[0].path)}" alt="${escapeHTML(template.artifacts[0].title)}" loading="lazy" />
+          <img src="${escapeHTML(template.artifacts[0].path)}" alt="${escapeHTML(template.artifacts[0].title || `${template.title} のサムネイル`)}" loading="lazy" />
         </div>
       ` : `
         <div class="template-card__placeholder">
@@ -432,11 +466,11 @@ el('modal-copy').addEventListener('click', async (e) => {
   const btn = e.target;
   const originalText = btn.textContent;
   btn.textContent = 'コピーしました！';
-  btn.style.background = '#0f766e'; // accent color
+  btn.classList.add('is-copied');
   
   setTimeout(() => { 
     btn.textContent = originalText; 
-    btn.style.background = '';
+    btn.classList.remove('is-copied');
   }, 2000);
 });
 
