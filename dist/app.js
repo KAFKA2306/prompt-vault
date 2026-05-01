@@ -106,6 +106,45 @@ const nodeSearchText = (ids) => ids.flatMap((id) => {
   ];
 }).join(' ');
 
+const uniqueIds = (ids) => [...new Set(ids.filter(Boolean))];
+
+const relatedTemplatesFor = (blockId) => nodeUsageIndex[blockId] || [];
+
+const nodeScore = (id) => {
+  const node = getNode(id);
+  if (!node) return 0;
+  if (templateMap[id]) {
+    return (node.blocks?.length || 0) + (node.uses?.length || 0) + ((node.artifacts?.length || 0) * 2);
+  }
+  return (nodeUsageIndex[id]?.length || 0) + (node.related?.length || 0) + (node.variant_of ? 1 : 0) + ((node.artifacts?.length || 0) * 2);
+};
+
+const recommendNodeIds = (node, type) => {
+  if (type === 'template') {
+    const ids = node.blocks.flatMap((blockId) => {
+      const block = blocks[blockId];
+      if (!block) return [];
+      return [
+        ...(block.related || []),
+        block.variant_of,
+      ];
+    });
+    return uniqueIds(ids)
+      .filter((id) => id !== node.id && !node.blocks.includes(id))
+      .sort((a, b) => nodeScore(b) - nodeScore(a) || getNode(a).title.localeCompare(getNode(b).title, 'ja'));
+  }
+
+  const ids = [
+    ...(node.related || []),
+    node.variant_of,
+    ...uniqueIds((node.related || []).flatMap((relatedId) => relatedTemplatesFor(relatedId))),
+    ...relatedTemplatesFor(node.id),
+  ];
+  return uniqueIds(ids)
+    .filter((id) => id !== node.id)
+    .sort((a, b) => nodeScore(b) - nodeScore(a) || getNode(a).title.localeCompare(getNode(b).title, 'ja'));
+};
+
 const openNode = (nodeId, preferredType = null) => {
   const type = preferredType || getNodeType(nodeId);
   const node = type === 'template' ? templateMap[nodeId] : blocks[nodeId];
@@ -141,6 +180,7 @@ const openNode = (nodeId, preferredType = null) => {
     ...(node.variant_of ? [node.variant_of] : []),
   ];
   const secondaryIds = isTemplate ? (node.uses || []) : (nodeUsageIndex[nodeId] || []);
+  const recommendIds = recommendNodeIds(node, type);
 
   el('modal-kind').textContent = nodeLabel(node, type);
   el('modal-title').textContent = node.title;
@@ -155,6 +195,9 @@ const openNode = (nodeId, preferredType = null) => {
   el('modal-secondary-title').textContent = isTemplate ? '再利用ノード' : '使用テンプレート';
   el('modal-secondary').innerHTML = secondaryIds.length ? renderNodeChips(secondaryIds) : '';
   el('modal-secondary-block').hidden = !secondaryIds.length;
+
+  el('modal-recommend').innerHTML = recommendIds.length ? renderNodeChips(recommendIds) : '';
+  el('modal-recommend-block').hidden = !recommendIds.length;
 
   el('modal-aliases').innerHTML = node.aliases?.length ? renderTextChips(node.aliases) : '';
   el('modal-aliases-block').hidden = !(node.aliases?.length);
