@@ -8,7 +8,6 @@
 - [表示検証スクリプト](scripts/verify_pages.sh)
 - [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
-- [CLAUDE.md](CLAUDE.md)
 
 画像生成プロンプトを、全文ではなく「使える部品」に分解して置いておく保管庫です。
 
@@ -31,21 +30,25 @@ KAFKA の世界観を保ちながら、
 ### ローカル表示
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 ### 静的書き出し
 
 ```bash
-python build.py
+python3 build.py
 ```
 
-`dist/index.html` が生成されます。
+`dist/index.html` と `dist/style.css`、`dist/app.js` が生成されます。
 
 ## データ
 
 - `db/prompts.json` がローカルDBです
 - ここにブロックとテンプレートを保存します
+- `static/index.html` が HTML の元です
+- `static/style.css` と `static/app.js` が画面の本体です
+- `dist/` は `python3 build.py` で作る生成物です
+- `dist/` は直接編集しません
 
 ## 配信
 

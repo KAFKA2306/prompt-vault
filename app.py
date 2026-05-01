@@ -7,14 +7,10 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
 
-from build import render_static
+from build import load_db, render_app_js
 
 ROOT = Path(__file__).resolve().parent
-DB_PATH = ROOT / "db" / "prompts.json"
-
-
-def load_db() -> dict[str, Any]:
-    return json.loads(DB_PATH.read_text(encoding="utf-8"))
+STATIC_PATH = ROOT / "static"
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -26,9 +22,19 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self) -> None:
-        if self.path == "/":
-            body = render_static(load_db()).encode("utf-8")
+        if self.path in {"/", "/index.html"}:
+            body = (STATIC_PATH / "index.html").read_bytes()
             self._send(HTTPStatus.OK, "text/html; charset=utf-8", body)
+            return
+
+        if self.path == "/style.css":
+            body = (STATIC_PATH / "style.css").read_bytes()
+            self._send(HTTPStatus.OK, "text/css; charset=utf-8", body)
+            return
+
+        if self.path == "/app.js":
+            body = render_app_js(load_db()).encode("utf-8")
+            self._send(HTTPStatus.OK, "application/javascript; charset=utf-8", body)
             return
 
         if self.path == "/api/db":
