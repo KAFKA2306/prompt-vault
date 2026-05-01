@@ -1,72 +1,69 @@
-[
-  {
-    "id": "seed-master-style",
-    "title": "KAFKA Futuristic Infographic Manga 2026",
-    "category": "マスタースタイル",
-    "prompt_text": "ultra high quality Japanese infographic manga page, emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue and lavender palette, clean lineart, elegant typography, large central visual, multiple information panels, clean hierarchy, gentle emotion, human-made, carefully designed, soft indirect lighting, monitor glow, tiny sparkles, transparent UI, cozy intelligent future workstation, same character identity, same visual language, same emotional tone",
-    "negative_prompt": "low quality, low resolution, bad anatomy, extra fingers, random English text, broken Japanese, watermark, harsh shadows, oversaturated colors, cheap anime style, generic AI anime, plastic skin, cyberpunk overload, chaotic typography, soulless infographic",
-    "notes": "最上位の基準。まずはこれを貼る。",
-    "tags": ["master", "base", "kafka"],
-    "reference_url": "",
-    "is_pinned": true,
-    "created_at": "2026-05-01T00:00:00Z",
-    "updated_at": "2026-05-01T00:00:00Z",
-    "last_used_at": null
-  },
-  {
-    "id": "seed-human-style",
-    "title": "もっと人間っぽく",
-    "category": "変種",
-    "prompt_text": "reduce glow, simplify shadows, soften gradients, add sketch feeling, add asymmetry, reduce rendering perfection, add notebook feeling, increase emotional whitespace, human-made, carefully designed, emotionally warm, intimate and quiet",
-    "negative_prompt": "overly glossy skin, extreme lighting, corporate presentation style, soulless infographic",
-    "notes": "少し描き込みを抜いて、手触りを残す。",
-    "tags": ["variation", "human", "warm"],
-    "reference_url": "",
-    "is_pinned": true,
-    "created_at": "2026-05-01T00:00:00Z",
-    "updated_at": "2026-05-01T00:00:00Z",
-    "last_used_at": null
-  },
-  {
-    "id": "seed-intellectual-style",
-    "title": "もっと知的に",
-    "category": "変種",
-    "prompt_text": "increase systems diagrams, increase structured layouts, add mathematical visual metaphors, add dashboards and flow maps, reduce comedic exaggeration, clearer hierarchy, stronger information architecture",
-    "negative_prompt": "visual clutter, chaotic typography, empty background, random English text",
-    "notes": "構造説明と読みやすさを優先する版。",
-    "tags": ["variation", "intellectual", "systems"],
-    "reference_url": "",
-    "is_pinned": false,
-    "created_at": "2026-05-01T00:00:00Z",
-    "updated_at": "2026-05-01T00:00:00Z",
-    "last_used_at": null
-  },
-  {
-    "id": "seed-vtuber-style",
-    "title": "もっとVTuber寄りに",
-    "category": "変種",
-    "prompt_text": "larger expressions, softer pastel saturation, more sparkles, cute emotional symbols, stronger mascot energy, vivid but gentle eyes, slightly more playful presence",
-    "negative_prompt": "hypersexualized design, harsh shadows, generic AI anime, dark horror mood",
-    "notes": "表情の記号性を強める版。",
-    "tags": ["variation", "vtuber", "cute"],
-    "reference_url": "",
-    "is_pinned": false,
-    "created_at": "2026-05-01T00:00:00Z",
-    "updated_at": "2026-05-01T00:00:00Z",
-    "last_used_at": null
-  },
-  {
-    "id": "seed-serious-future-style",
-    "title": "もっと静かな未来感",
-    "category": "変種",
-    "prompt_text": "darker blue palette, larger environmental shots, subtle emotional expressions, larger system maps, quieter typography, more atmosphere, less decoration, still warm and human",
-    "negative_prompt": "too much neon, cyberpunk overload, overly glossy skin, corporate presentation style",
-    "notes": "落ち着いた未来感が欲しいときの版。",
-    "tags": ["variation", "future", "quiet"],
-    "reference_url": "",
-    "is_pinned": false,
-    "created_at": "2026-05-01T00:00:00Z",
-    "updated_at": "2026-05-01T00:00:00Z",
-    "last_used_at": null
-  }
-]
+{
+  "blocks": [
+    {
+      "id": "master_style",
+      "category": "基準",
+      "title": "マスタースタイル",
+      "content": "masterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed",
+      "tags": ["base", "quality", "style"]
+    },
+    {
+      "id": "character_kafka",
+      "category": "キャラクター",
+      "title": "KAFKA",
+      "content": "cute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion",
+      "tags": ["kafka", "character"]
+    },
+    {
+      "id": "outfit_kafka",
+      "category": "キャラ衣装",
+      "title": "衣装",
+      "content": "oversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details",
+      "tags": ["outfit", "techwear"]
+    },
+    {
+      "id": "sticker_sheet_layout",
+      "category": "用途",
+      "title": "4x4 ステッカーシート",
+      "content": "japanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability",
+      "tags": ["discord", "sticker", "layout"]
+    },
+    {
+      "id": "text_style_jp",
+      "category": "テキスト",
+      "title": "日本語文字",
+      "content": "large japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text",
+      "tags": ["jp", "text"]
+    },
+    {
+      "id": "expressions_pack",
+      "category": "表情",
+      "title": "反応集",
+      "content": "smiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie",
+      "tags": ["expressions", "reactions"]
+    },
+    {
+      "id": "effects_pack",
+      "category": "演出",
+      "title": "装飾効果",
+      "content": "sparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects",
+      "tags": ["effects", "sparkles"]
+    },
+    {
+      "id": "negative_common",
+      "category": "禁止",
+      "title": "共通ネガティブ",
+      "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character",
+      "tags": ["negative"]
+    }
+  ],
+  "templates": [
+    {
+      "id": "sticker_sheet",
+      "title": "Discord Sticker Sheet",
+      "purpose": "分解要素をまとめて、ステッカーシート用の全文を組み立てる",
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "expressions_pack", "effects_pack", "negative_common"],
+      "notes": "画像生成ではなく、用途別に再利用するための構成。"
+    }
+  ]
+}
