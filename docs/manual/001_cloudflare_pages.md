@@ -1,6 +1,7 @@
 # 001 Cloudflare Pages 作成手順
 
 この手順だけは、人間の Cloudflare アカウント操作が必要です。
+最重要: Workers を作らない。Pages だけを作る。
 
 ## リンク集
 
@@ -24,22 +25,24 @@
 
 1. Cloudflare にログインする
 2. `Workers & Pages` を開く
-3. `Create application` を押す
-4. `Pages` を選ぶ
-5. `Connect to Git` を選ぶ
-6. GitHub を接続する
-7. リポジトリ `KAFKA2306/prompt-vault` を選ぶ
-8. 設定を次の通りにする
+3. `Pages` タブを選ぶ
+4. `Connect to Git` を選ぶ
+5. GitHub を接続する
+6. リポジトリ `KAFKA2306/prompt-vault` を選ぶ
+7. 設定を次の通りにする
    - `Production branch`: `main`
    - `Build command`: `python build.py`
    - `Build output directory`: `dist`
-9. `Save and Deploy` を押す
+8. `Save and Deploy` を押す
 
 ## 成功確認
 
 - デプロイ完了後に公開 URL を開く
 - `dist/index.html` の内容が表示されれば成功
 - さらに `scripts/verify_pages.sh` を実行して GitHub Pages と Cloudflare Pages の両方を確認する
+- 成功 URL は `*.pages.dev`
+- `*.workers.dev` が出たら失敗
+- 画面に `Automatic deployment on upload` や `Workers ログ` が出ているなら、Pages ではなく Workers を作っている
 
 ## 失敗したら見る点
 
