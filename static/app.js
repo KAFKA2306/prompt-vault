@@ -1,63 +1,121 @@
 const db = __DB_JSON__;
 const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
 const templates = db.templates;
+const templateMap = Object.fromEntries(templates.map((template) => [template.id, template]));
+const nodeUsageIndex = Object.fromEntries([...Object.keys(blocks)].map((id) => [id, []]));
 const fullCopySuffix = '\n\n---\n# 指示\n画像生成する';
 
 const kindLabels = {
-  stamp: 'スタンプ / 切り抜きしやすい完成形',
-  comic: '漫画 / 物語を追いやすい完成形',
-  reaction: '反応画像 / 一発で伝わる完成形',
-  design_sheet: 'デザインシート / 設定資料',
-  announcement: '告知 / SNSサムネイル',
-  social: 'SNS / おはツイ',
-  brand: 'ブランド / ロゴと記号',
-  system: 'AI-Tuber / 基盤と運用',
+  stamp: 'スタンプ・素材',
+  comic: '漫画・ストーリー',
+  reaction: '反応画像・リアクション',
+  design_sheet: 'デザインシート・設計資料',
+  announcement: '告知・宣伝用バナー',
+  social: 'SNS投稿用レイアウト',
+  brand: 'ブランドロゴ・意匠',
+  system: '自律運用・基盤',
 };
+
+const escapeHTML = (value) => value
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
 
 const state = {
   templates,
-  selectedId: null,
+  selectedNode: null,
   search: '',
 };
 
 const el = (id) => document.getElementById(id);
+
+const getNodeType = (id) => {
+  if (templateMap[id]) return 'template';
+  if (blocks[id]) return 'block';
+  return null;
+};
+
+const getNode = (id) => templateMap[id] || blocks[id] || null;
+
+const registerUsage = (templateId, ids) => {
+  ids.forEach((id) => {
+    if (nodeUsageIndex[id]) nodeUsageIndex[id].push(templateId);
+  });
+};
+
+templates.forEach((template) => registerUsage(template.id, [...template.blocks, ...(template.uses || [])]));
 
 const renderBlockContent = (block) => [
   `## ${block.title}`,
   `ID: ${block.id}`,
   `カテゴリ: ${block.category}`,
   block.tags?.length ? `タグ: ${block.tags.map((tag) => `#${tag}`).join(' ')}` : '',
+  block.aliases?.length ? `別名: ${block.aliases.join(', ')}` : '',
+  block.related?.length ? `関連: ${block.related.join(', ')}` : '',
+  block.variant_of ? `派生元: ${block.variant_of}` : '',
   block.content,
 ].filter(Boolean).join('\n');
 
 const renderTemplatePrompt = (template) => template.blocks.map((blockId) => renderBlockContent(blocks[blockId])).join('\n\n');
 
-const renderFullCopyText = (template) => `${renderTemplatePrompt(template)}${fullCopySuffix}`;
+const kindLabel = (template) => kindLabels[template.kind] || template.kind || 'テンプレート';
 
-const kindLabel = (template) => kindLabels[template.kind] || 'テンプレート';
-
-const filteredTemplates = () => {
-  const query = state.search.trim().toLowerCase();
-  return state.templates.filter((template) => {
-    const haystack = [
-      template.title,
-      template.purpose,
-      template.summary,
-      template.notes,
-      template.blocks.join(' '),
-      template.kind,
-    ].join(' ').toLowerCase();
-    return !query || haystack.includes(query);
-  });
+const nodeLabel = (node, type) => {
+  if (type === 'template') return kindLabel(node);
+  return node.category || 'ブロック';
 };
 
-const openModal = (templateId) => {
-  const template = state.templates.find((t) => t.id === templateId);
-  if (!template) return;
+const renderStepItems = (steps) => steps.map((step, index) => `
+  <div class="step-item">
+    <span>${index + 1}</span>
+    <p>${escapeHTML(step)}</p>
+  </div>
+`).join('');
 
-  const artifact = template.artifacts?.[0];
+const renderNodeChips = (ids) => ids
+  .filter((id, index, list) => id && list.indexOf(id) === index)
+  .map((id) => {
+    const node = getNode(id);
+    const type = getNodeType(id);
+    const label = node ? node.title : id;
+    return `
+      <button
+        type="button"
+        class="tag tag-button"
+        data-node-id="${escapeHTML(id)}"
+        data-node-type="${escapeHTML(type || '')}"
+      >${escapeHTML(label)}</button>
+    `;
+  }).join('');
+
+const renderTextChips = (items) => items.map((item) => `<span class="tag">${escapeHTML(item)}</span>`).join('');
+
+const nodeSearchText = (ids) => ids.flatMap((id) => {
+  const node = getNode(id);
+  if (!node) return [id];
+  return [
+    node.id,
+    node.title,
+    node.category,
+    ...(node.aliases || []),
+    ...(node.tags || []),
+    ...(node.related || []),
+    node.variant_of || '',
+  ];
+}).join(' ');
+
+const openNode = (nodeId, preferredType = null) => {
+  const type = preferredType || getNodeType(nodeId);
+  const node = type === 'template' ? templateMap[nodeId] : blocks[nodeId];
+  if (!node) return;
+
+  state.selectedNode = { id: nodeId, type };
+
   const imgView = document.querySelector('.modal-image-view');
   const imgEl = el('modal-img');
+  const artifact = node.artifacts?.[0];
 
   if (artifact && artifact.path) {
     imgEl.style.display = 'block';
@@ -76,19 +134,66 @@ const openModal = (templateId) => {
       imgView.appendChild(noImage);
     }
   }
-  
-  el('modal-kind').textContent = kindLabel(template);
-  el('modal-title').textContent = template.title;
-  el('modal-purpose').textContent = template.purpose;
-  el('modal-prompt').textContent = renderTemplatePrompt(template);
-  
+
+  const isTemplate = type === 'template';
+  const primaryIds = isTemplate ? node.blocks : [
+    ...(node.related || []),
+    ...(node.variant_of ? [node.variant_of] : []),
+  ];
+  const secondaryIds = isTemplate ? (node.uses || []) : (nodeUsageIndex[nodeId] || []);
+
+  el('modal-kind').textContent = nodeLabel(node, type);
+  el('modal-title').textContent = node.title;
+  el('modal-purpose').textContent = isTemplate ? node.purpose : `カテゴリ: ${node.category}`;
+  el('modal-copy').textContent = isTemplate ? 'プロンプトをコピー' : 'ブロック本文をコピー';
+  el('modal-prompt-title').textContent = isTemplate ? '全文プロンプト' : 'ブロック本文';
+
+  el('modal-primary-title').textContent = isTemplate ? '構成ノード' : '関連ノード';
+  el('modal-primary').innerHTML = primaryIds.length ? renderNodeChips(primaryIds) : '';
+  el('modal-primary-block').hidden = !primaryIds.length;
+
+  el('modal-secondary-title').textContent = isTemplate ? '再利用ノード' : '使用テンプレート';
+  el('modal-secondary').innerHTML = secondaryIds.length ? renderNodeChips(secondaryIds) : '';
+  el('modal-secondary-block').hidden = !secondaryIds.length;
+
+  el('modal-aliases').innerHTML = node.aliases?.length ? renderTextChips(node.aliases) : '';
+  el('modal-aliases-block').hidden = !(node.aliases?.length);
+
+  el('modal-summary').textContent = isTemplate ? (node.summary || '') : '';
+  el('modal-summary-block').hidden = !isTemplate || !node.summary;
+  el('modal-steps').innerHTML = isTemplate && node.steps?.length ? renderStepItems(node.steps) : '';
+  el('modal-steps-block').hidden = !isTemplate || !(node.steps?.length);
+  el('modal-notes').textContent = isTemplate ? (node.notes || '') : '';
+  el('modal-notes-block').hidden = !isTemplate || !node.notes;
+  el('modal-prompt').textContent = isTemplate ? renderTemplatePrompt(node) : renderBlockContent(node);
+
   el('modal').classList.add('active');
-  state.selectedId = templateId;
+};
+
+const openTemplate = (templateId) => openNode(templateId, 'template');
+
+const filteredTemplates = () => {
+  const query = state.search.trim().toLowerCase();
+  return state.templates.filter((template) => {
+    const haystack = [
+      template.id,
+      template.title,
+      template.purpose,
+      template.summary,
+      template.notes,
+      nodeSearchText(template.blocks || []),
+      nodeSearchText(template.uses || []),
+      template.aliases?.join(' '),
+      template.labels?.join(' '),
+      template.kind,
+    ].join(' ').toLowerCase();
+    return !query || haystack.includes(query);
+  });
 };
 
 const closeModal = () => {
   el('modal').classList.remove('active');
-  state.selectedId = null;
+  state.selectedNode = null;
 };
 
 const renderGallery = () => {
@@ -106,7 +211,7 @@ const renderGallery = () => {
   `).join('');
 
   el('gallery').querySelectorAll('[data-open]').forEach((item) => {
-    item.addEventListener('click', () => openModal(item.dataset.open));
+    item.addEventListener('click', () => openTemplate(item.dataset.open));
   });
 
   if (!list.length) {
@@ -129,7 +234,7 @@ const renderList = () => {
 
   el('list').querySelectorAll('[data-id]').forEach((card) =>
     card.addEventListener('click', () => {
-      openModal(card.dataset.id);
+      openTemplate(card.dataset.id);
     })
   );
 
@@ -150,13 +255,21 @@ el('search').addEventListener('input', (event) => {
 
 el('modal-close').addEventListener('click', closeModal);
 el('modal').addEventListener('click', (e) => {
+  const nodeButton = e.target.closest?.('[data-node-id]');
+  if (nodeButton) {
+    openNode(nodeButton.dataset.nodeId, nodeButton.dataset.nodeType || null);
+    return;
+  }
   if (e.target === el('modal')) closeModal();
 });
 
 el('modal-copy').addEventListener('click', async (e) => {
-  const template = state.templates.find((t) => t.id === state.selectedId);
-  if (!template) return;
-  await navigator.clipboard.writeText(renderFullCopyText(template));
+  const selected = state.selectedNode;
+  if (!selected) return;
+  const node = getNode(selected.id);
+  if (!node) return;
+  const copyText = selected.type === 'template' ? `${renderTemplatePrompt(node)}${fullCopySuffix}` : renderBlockContent(node);
+  await navigator.clipboard.writeText(copyText);
   
   const btn = e.target;
   const originalText = btn.textContent;

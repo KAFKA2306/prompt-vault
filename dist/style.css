@@ -186,6 +186,17 @@ h1 {
   border: 1px solid rgba(15,118,110,.14);
 }
 
+.tag-button {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.tag-button:hover {
+  border-color: rgba(15,118,110,.28);
+  background: rgba(15,118,110,.12);
+}
+
 .detail {
   display: grid;
   gap: 14px;
@@ -694,6 +705,13 @@ pre {
   font-family: var(--font-head);
   font-size: 28px;
   letter-spacing: -.03em;
+}
+
+.modal-summary {
+  margin: 8px 0 0;
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 14px;
 }
 
 .modal-close {
