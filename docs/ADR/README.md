@@ -7,3 +7,4 @@
 - [0005 local は Codex CLI / cloud は Gemini API の生成バックエンド](0005-use-gemini-api-for-prompt-generation.md)
 - [0006 cloud の Gemini API キー管理](0006-secret-management-with-ai-gateway.md)
 - [0007 テンプレート一覧中心の最小トップ](0007-template-list-first-minimal-top.md)
+- [0008 外部ソースから Prompt Vault を更新する流れ](0008-prompt-vault-add-flow.md)
