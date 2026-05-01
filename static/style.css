@@ -176,6 +176,12 @@ h1 {
   line-height: 1.85;
 }
 
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 4px 0;
+}
+
 .seo-panel__facts {
   display: grid;
   gap: 10px;
