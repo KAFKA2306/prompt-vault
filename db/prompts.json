@@ -29,6 +29,27 @@
       "tags": ["discord", "sticker", "layout"]
     },
     {
+      "id": "source_research",
+      "category": "調査",
+      "title": "再調査メモ",
+      "content": "read the original tweet or thread carefully, extract the factual points, keep the emotional tone, identify the key visual beat, preserve names and dates exactly, rewrite only what is needed for a clean manga summary",
+      "tags": ["twitter", "research", "summary"]
+    },
+    {
+      "id": "comic_layout",
+      "category": "用途",
+      "title": "漫画レイアウト",
+      "content": "clean manga panel layout, easy reading order, 1 to 4 panels, strong focal point, clear panel spacing, expressive beats, simple background, story-forward composition, square or vertical crop friendly",
+      "tags": ["comic", "layout", "panels"]
+    },
+    {
+      "id": "reaction_focus",
+      "category": "表情",
+      "title": "表情強調",
+      "content": "expressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing",
+      "tags": ["reaction", "closeup", "expression"]
+    },
+    {
       "id": "text_style_jp",
       "category": "テキスト",
       "title": "日本語文字",
@@ -66,11 +87,34 @@
   ],
   "templates": [
     {
-      "id": "sticker_sheet",
-      "title": "Discord Sticker Sheet",
-      "purpose": "分解要素をまとめて、ステッカーシート用の全文を組み立てる",
-      "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "text_content_pack", "expressions_pack", "effects_pack", "negative_common"],
-      "notes": "画像生成ではなく、用途別に再利用するための構成。"
+      "id": "stamp_sheet",
+      "title": "新しいスタンプ",
+      "kind": "stamp",
+      "purpose": "いつものキャラを、いつものスタイルで新しいスタンプにする",
+      "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。",
+      "steps": ["キャラと衣装を固定する", "表情とポーズを1つ決める", "文字あり/なしを選ぶ", "白背景で切り抜きしやすくする"],
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "expressions_pack", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "notes": "まずこれを開いてから、表情と文言だけ入れ替える。"
+    },
+    {
+      "id": "twitter_comic",
+      "title": "Twitter再調査漫画",
+      "kind": "comic",
+      "purpose": "Xの内容を調べ直して、いつもの漫画スタイルに変換する",
+      "summary": "元投稿の事実を拾い直し、いつものキャラで漫画として見せる。",
+      "steps": ["元ポストの要点を整理する", "事実と感情を分ける", "1〜4コマの流れにする", "吹き出し文を短くする"],
+      "blocks": ["source_research", "master_style", "character_kafka", "comic_layout", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "notes": "再調査メモを先に読ませて、余計な誤読を減らす。"
+    },
+    {
+      "id": "reaction_image",
+      "title": "表情豊かな反応画像",
+      "kind": "reaction",
+      "purpose": "日常の反応を、いつものキャラで表情豊かに見せる",
+      "summary": "短い返答やリアクションを、見やすい1枚絵にする。",
+      "steps": ["感情を1つに絞る", "表情を強く出す", "セリフは短くする", "余白を残して読みやすくする"],
+      "blocks": ["master_style", "character_kafka", "outfit_kafka", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。"
     }
   ]
 }

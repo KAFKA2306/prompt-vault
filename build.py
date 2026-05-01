@@ -122,24 +122,12 @@ def render_static(db: dict[str, Any]) -> str:
       font-size: 15px;
     }}
     .hero-side {{
-      padding: 16px;
+      padding: 18px;
       display: grid;
       gap: 12px;
       align-content: start;
-    }}
-    .metric {{
-      padding: 16px;
-      border-radius: 18px;
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-    }}
-    .metric .label {{ font-size: 12px; color: var(--muted); }}
-    .metric .value {{
-      display: block;
-      margin-top: 4px;
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -.04em;
+      color: var(--muted);
+      line-height: 1.8;
     }}
     .workspace {{
       display: grid;
@@ -258,6 +246,31 @@ def render_static(db: dict[str, Any]) -> str:
     }}
     .buttons {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
     .status {{ color: #51607c; font-size: 13px; min-height: 18px; }}
+    .recipe {{
+      display: grid;
+      gap: 10px;
+    }}
+    .recipe-item {{
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.7;
+    }}
+    .recipe-item span {{
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(15,118,110,.10);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }}
     .empty {{
       padding: 18px;
       text-align: center;
@@ -281,14 +294,12 @@ def render_static(db: dict[str, Any]) -> str:
   <main class="page">
     <section class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">静的配信 / ローカルDB / コピー中心</div>
+        <div class="eyebrow">用途別テンプレート / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
-        <p class="lead">全文ではなく、用途別のブロックを保存する保管庫です。組み立て済み全文、ブロック単体、タグ、メモをそのままコピーできます。</p>
+        <p class="lead">作業ごとにテンプレートを選び、全文をそのままコピーするだけの最小サイトです。</p>
       </div>
       <aside class="panel hero-side">
-        <div class="metric"><span class="label">ブロック数</span><span class="value" id="metric-blocks">0</span></div>
-        <div class="metric"><span class="label">テンプレート数</span><span class="value" id="metric-templates">0</span></div>
-        <div class="metric"><span class="label">配信</span><span class="value" id="metric-delivery">静的</span></div>
+        テンプレートを選んで、全文コピーか、必要なら各ブロック単位でコピーします。
       </aside>
     </section>
 
@@ -297,12 +308,10 @@ def render_static(db: dict[str, Any]) -> str:
         <div class="head">
           <div>
             <div class="subtle">テンプレート</div>
-            <h2>用途を選ぶ</h2>
+            <h2>作業を選ぶ</h2>
           </div>
         </div>
-        <input id="search" class="search" placeholder="検索: タイトル / 説明 / ブロックID" />
-        <div class="chips" id="filters"></div>
-        <div class="subtle" id="list-meta">-</div>
+        <input id="search" class="search" placeholder="検索: タイトル / 目的 / ブロックID" />
         <div class="list" id="list"></div>
       </aside>
 
@@ -312,7 +321,11 @@ def render_static(db: dict[str, Any]) -> str:
             <div class="subtle">詳細</div>
             <h2 id="detail-title">テンプレートを選択</h2>
           </div>
-          <span class="subtle" id="detail-purpose">-</span>
+        </div>
+
+        <div class="block">
+          <div class="subtle">概要</div>
+          <div id="detail-summary" style="margin-top: 6px; line-height: 1.8;">一覧から選んでください。</div>
         </div>
 
         <div class="block">
@@ -352,7 +365,6 @@ def render_static(db: dict[str, Any]) -> str:
       templates,
       selectedId: templates[0]?.id || null,
       search: '',
-      category: 'すべて',
     }};
 
     const el = (id) => document.getElementById(id);
@@ -369,40 +381,22 @@ def render_static(db: dict[str, Any]) -> str:
 
     const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
-    const renderMetrics = () => {{
-      el('metric-blocks').textContent = String(db.blocks.length);
-      el('metric-templates').textContent = String(state.templates.length);
-      el('metric-delivery').textContent = '静的';
-    }};
-
-    const renderFilters = () => {{
-      const names = ['すべて', ...Array.from(new Set(state.templates.map((item) => item.purpose))).filter(Boolean)];
-      el('filters').innerHTML = names.map((name) => `<button class="chip ${{state.category === name ? 'active' : ''}}" data-category="${{name}}">${{name}}</button>`).join('');
-      el('filters').querySelectorAll('[data-category]').forEach((button) =>
-        button.addEventListener('click', () => {{
-          state.category = button.dataset.category;
-          render();
-        }})
-      );
-    }};
-
     const filteredTemplates = () => {{
       const query = state.search.trim().toLowerCase();
       return state.templates.filter((template) => {{
-        const matchesCategory = state.category === 'すべて' || template.purpose === state.category;
         const haystack = [
           template.title,
           template.purpose,
+          template.summary,
           template.notes,
           template.blocks.join(' '),
         ].join(' ').toLowerCase();
-        return matchesCategory && (!query || haystack.includes(query));
+        return !query || haystack.includes(query);
       }});
     }};
 
     const renderList = () => {{
       const list = filteredTemplates();
-      el('list-meta').textContent = `${{list.length}} 件表示 / ${{state.templates.length}} 件`;
       el('list').innerHTML = list.map((template) => `
         <article class="panel card ${{template.id === state.selectedId ? 'active' : ''}}" data-id="${{template.id}}">
           <div class="card-top">
@@ -410,10 +404,11 @@ def render_static(db: dict[str, Any]) -> str:
               <p class="title">${{template.title}}</p>
               <div class="meta">${{template.purpose}}</div>
             </div>
-            ${{template.is_pinned ? '<span class="tag">固定</span>' : ''}}
           </div>
-          <p class="preview">${{template.notes || template.blocks.join(', ')}}</p>
-          <div class="tagrow">${{template.blocks.slice(0, 5).map((blockId) => `<span class="tag">${{blockId}}</span>`).join('')}}</div>
+          <p class="preview">${{template.summary || template.notes || template.blocks.join(', ')}}</p>
+          <div class="buttons" style="margin-top: 10px;">
+            <button class="button primary" data-copy-full="${{template.id}}">全文コピー</button>
+          </div>
         </article>
       `).join('');
       el('list').querySelectorAll('[data-id]').forEach((card) =>
@@ -421,6 +416,15 @@ def render_static(db: dict[str, Any]) -> str:
           state.selectedId = card.dataset.id;
           renderDetail();
           renderList();
+        }})
+      );
+      el('list').querySelectorAll('[data-copy-full]').forEach((button) =>
+        button.addEventListener('click', async (event) => {{
+          event.stopPropagation();
+          const template = state.templates.find((item) => item.id === button.dataset.copyFull);
+          if (!template) return;
+          await navigator.clipboard.writeText(renderTemplate(template));
+          el('status').textContent = `${{template.title}}の全文をコピーしました`;
         }})
       );
       if (!list.length) {{
@@ -432,7 +436,7 @@ def render_static(db: dict[str, Any]) -> str:
       const template = selected();
       if (!template) {{
         el('detail-title').textContent = 'テンプレートを選択';
-        el('detail-purpose').textContent = '-';
+        el('detail-summary').textContent = '一覧から選んでください。';
         el('detail-notes').textContent = '一覧から選んでください。';
         el('block-list').innerHTML = '';
         el('detail-full').textContent = '';
@@ -440,7 +444,7 @@ def render_static(db: dict[str, Any]) -> str:
       }}
 
       el('detail-title').textContent = template.title;
-      el('detail-purpose').textContent = template.purpose;
+      el('detail-summary').textContent = template.summary || template.purpose;
       el('detail-notes').textContent = template.notes || 'メモなし';
       el('detail-full').textContent = renderTemplate(template);
       el('block-list').innerHTML = template.blocks.map((blockId) => {{
@@ -473,8 +477,6 @@ def render_static(db: dict[str, Any]) -> str:
     }};
 
     const render = () => {{
-      renderMetrics();
-      renderFilters();
       renderList();
       renderDetail();
     }};

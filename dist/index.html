@@ -74,24 +74,12 @@
       font-size: 15px;
     }
     .hero-side {
-      padding: 16px;
+      padding: 18px;
       display: grid;
       gap: 12px;
       align-content: start;
-    }
-    .metric {
-      padding: 16px;
-      border-radius: 18px;
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-    }
-    .metric .label { font-size: 12px; color: var(--muted); }
-    .metric .value {
-      display: block;
-      margin-top: 4px;
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -.04em;
+      color: var(--muted);
+      line-height: 1.8;
     }
     .workspace {
       display: grid;
@@ -210,6 +198,31 @@
     }
     .buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .status { color: #51607c; font-size: 13px; min-height: 18px; }
+    .recipe {
+      display: grid;
+      gap: 10px;
+    }
+    .recipe-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .recipe-item span {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(15,118,110,.10);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
     .empty {
       padding: 18px;
       text-align: center;
@@ -233,14 +246,12 @@
   <main class="page">
     <section class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">静的配信 / ローカルDB / コピー中心</div>
+        <div class="eyebrow">用途別テンプレート / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
-        <p class="lead">全文ではなく、用途別のブロックを保存する保管庫です。組み立て済み全文、ブロック単体、タグ、メモをそのままコピーできます。</p>
+        <p class="lead">作業ごとにテンプレートを選び、全文をそのままコピーするだけの最小サイトです。</p>
       </div>
       <aside class="panel hero-side">
-        <div class="metric"><span class="label">ブロック数</span><span class="value" id="metric-blocks">0</span></div>
-        <div class="metric"><span class="label">テンプレート数</span><span class="value" id="metric-templates">0</span></div>
-        <div class="metric"><span class="label">配信</span><span class="value" id="metric-delivery">静的</span></div>
+        テンプレートを選んで、全文コピーか、必要なら各ブロック単位でコピーします。
       </aside>
     </section>
 
@@ -249,12 +260,10 @@
         <div class="head">
           <div>
             <div class="subtle">テンプレート</div>
-            <h2>用途を選ぶ</h2>
+            <h2>作業を選ぶ</h2>
           </div>
         </div>
-        <input id="search" class="search" placeholder="検索: タイトル / 説明 / ブロックID" />
-        <div class="chips" id="filters"></div>
-        <div class="subtle" id="list-meta">-</div>
+        <input id="search" class="search" placeholder="検索: タイトル / 目的 / ブロックID" />
         <div class="list" id="list"></div>
       </aside>
 
@@ -264,7 +273,11 @@
             <div class="subtle">詳細</div>
             <h2 id="detail-title">テンプレートを選択</h2>
           </div>
-          <span class="subtle" id="detail-purpose">-</span>
+        </div>
+
+        <div class="block">
+          <div class="subtle">概要</div>
+          <div id="detail-summary" style="margin-top: 6px; line-height: 1.8;">一覧から選んでください。</div>
         </div>
 
         <div class="block">
@@ -297,14 +310,13 @@
   </main>
 
   <script>
-    const db = {"blocks": [{"id": "master_style", "category": "基準", "title": "マスタースタイル", "content": "masterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed", "tags": ["base", "quality", "style"]}, {"id": "character_kafka", "category": "キャラクター", "title": "KAFKA", "content": "cute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion", "tags": ["kafka", "character"]}, {"id": "outfit_kafka", "category": "キャラ衣装", "title": "衣装", "content": "oversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details", "tags": ["outfit", "techwear"]}, {"id": "sticker_sheet_layout", "category": "用途", "title": "4x4 ステッカーシート", "content": "japanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability", "tags": ["discord", "sticker", "layout"]}, {"id": "text_style_jp", "category": "テキスト", "title": "日本語文字", "content": "large japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text", "tags": ["jp", "text"]}, {"id": "text_content_pack", "category": "文言", "title": "短い日本語セリフ", "content": "「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」", "tags": ["jp", "dialogue", "phrases"]}, {"id": "expressions_pack", "category": "表情", "title": "反応集", "content": "smiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie", "tags": ["expressions", "reactions"]}, {"id": "effects_pack", "category": "演出", "title": "装飾効果", "content": "sparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects", "tags": ["effects", "sparkles"]}, {"id": "negative_common", "category": "禁止", "title": "共通ネガティブ", "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character", "tags": ["negative"]}], "templates": [{"id": "sticker_sheet", "title": "Discord Sticker Sheet", "purpose": "分解要素をまとめて、ステッカーシート用の全文を組み立てる", "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "text_content_pack", "expressions_pack", "effects_pack", "negative_common"], "notes": "画像生成ではなく、用途別に再利用するための構成。"}]};
-    const templates = [{"id": "sticker_sheet", "title": "Discord Sticker Sheet", "purpose": "分解要素をまとめて、ステッカーシート用の全文を組み立てる", "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "text_style_jp", "text_content_pack", "expressions_pack", "effects_pack", "negative_common"], "notes": "画像生成ではなく、用途別に再利用するための構成。", "full_text": "## マスタースタイル\nカテゴリ: 基準\nタグ: #base #quality #style\nmasterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed\n\n## KAFKA\nカテゴリ: キャラクター\nタグ: #kafka #character\ncute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion\n\n## 衣装\nカテゴリ: キャラ衣装\nタグ: #outfit #techwear\noversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details\n\n## 4x4 ステッカーシート\nカテゴリ: 用途\nタグ: #discord #sticker #layout\njapanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability\n\n## 日本語文字\nカテゴリ: テキスト\nタグ: #jp #text\nlarge japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text\n\n## 短い日本語セリフ\nカテゴリ: 文言\nタグ: #jp #dialogue #phrases\n「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」\n\n## 反応集\nカテゴリ: 表情\nタグ: #expressions #reactions\nsmiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie\n\n## 装飾効果\nカテゴリ: 演出\nタグ: #effects #sparkles\nsparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects\n\n## 共通ネガティブ\nカテゴリ: 禁止\nタグ: #negative\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character"}];
+    const db = {"blocks": [{"id": "master_style", "category": "基準", "title": "マスタースタイル", "content": "masterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed", "tags": ["base", "quality", "style"]}, {"id": "character_kafka", "category": "キャラクター", "title": "KAFKA", "content": "cute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion", "tags": ["kafka", "character"]}, {"id": "outfit_kafka", "category": "キャラ衣装", "title": "衣装", "content": "oversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details", "tags": ["outfit", "techwear"]}, {"id": "sticker_sheet_layout", "category": "用途", "title": "4x4 ステッカーシート", "content": "japanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability", "tags": ["discord", "sticker", "layout"]}, {"id": "source_research", "category": "調査", "title": "再調査メモ", "content": "read the original tweet or thread carefully, extract the factual points, keep the emotional tone, identify the key visual beat, preserve names and dates exactly, rewrite only what is needed for a clean manga summary", "tags": ["twitter", "research", "summary"]}, {"id": "comic_layout", "category": "用途", "title": "漫画レイアウト", "content": "clean manga panel layout, easy reading order, 1 to 4 panels, strong focal point, clear panel spacing, expressive beats, simple background, story-forward composition, square or vertical crop friendly", "tags": ["comic", "layout", "panels"]}, {"id": "reaction_focus", "category": "表情", "title": "表情強調", "content": "expressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing", "tags": ["reaction", "closeup", "expression"]}, {"id": "text_style_jp", "category": "テキスト", "title": "日本語文字", "content": "large japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text", "tags": ["jp", "text"]}, {"id": "text_content_pack", "category": "文言", "title": "短い日本語セリフ", "content": "「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」", "tags": ["jp", "dialogue", "phrases"]}, {"id": "expressions_pack", "category": "表情", "title": "反応集", "content": "smiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie", "tags": ["expressions", "reactions"]}, {"id": "effects_pack", "category": "演出", "title": "装飾効果", "content": "sparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects", "tags": ["effects", "sparkles"]}, {"id": "negative_common", "category": "禁止", "title": "共通ネガティブ", "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character", "tags": ["negative"]}], "templates": [{"id": "stamp_sheet", "title": "新しいスタンプ", "kind": "stamp", "purpose": "いつものキャラを、いつものスタイルで新しいスタンプにする", "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。", "steps": ["キャラと衣装を固定する", "表情とポーズを1つ決める", "文字あり/なしを選ぶ", "白背景で切り抜きしやすくする"], "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "expressions_pack", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "まずこれを開いてから、表情と文言だけ入れ替える。"}, {"id": "twitter_comic", "title": "Twitter再調査漫画", "kind": "comic", "purpose": "Xの内容を調べ直して、いつもの漫画スタイルに変換する", "summary": "元投稿の事実を拾い直し、いつものキャラで漫画として見せる。", "steps": ["元ポストの要点を整理する", "事実と感情を分ける", "1〜4コマの流れにする", "吹き出し文を短くする"], "blocks": ["source_research", "master_style", "character_kafka", "comic_layout", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "再調査メモを先に読ませて、余計な誤読を減らす。"}, {"id": "reaction_image", "title": "表情豊かな反応画像", "kind": "reaction", "purpose": "日常の反応を、いつものキャラで表情豊かに見せる", "summary": "短い返答やリアクションを、見やすい1枚絵にする。", "steps": ["感情を1つに絞る", "表情を強く出す", "セリフは短くする", "余白を残して読みやすくする"], "blocks": ["master_style", "character_kafka", "outfit_kafka", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。"}]};
+    const templates = [{"id": "stamp_sheet", "title": "新しいスタンプ", "kind": "stamp", "purpose": "いつものキャラを、いつものスタイルで新しいスタンプにする", "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。", "steps": ["キャラと衣装を固定する", "表情とポーズを1つ決める", "文字あり/なしを選ぶ", "白背景で切り抜きしやすくする"], "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "expressions_pack", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "まずこれを開いてから、表情と文言だけ入れ替える。", "full_text": "## マスタースタイル\nカテゴリ: 基準\nタグ: #base #quality #style\nmasterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed\n\n## KAFKA\nカテゴリ: キャラクター\nタグ: #kafka #character\ncute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion\n\n## 衣装\nカテゴリ: キャラ衣装\nタグ: #outfit #techwear\noversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details\n\n## 4x4 ステッカーシート\nカテゴリ: 用途\nタグ: #discord #sticker #layout\njapanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability\n\n## 反応集\nカテゴリ: 表情\nタグ: #expressions #reactions\nsmiling, happy, thinking, sleepy, focused, embarrassed, excited, gentle laugh, wink, soft emotional reactions, cute reaction poses, small hand gestures, holding mug, holding camera, using laptop, hugging cat plushie\n\n## 日本語文字\nカテゴリ: テキスト\nタグ: #jp #text\nlarge japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text\n\n## 短い日本語セリフ\nカテゴリ: 文言\nタグ: #jp #dialogue #phrases\n「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」\n\n## 装飾効果\nカテゴリ: 演出\nタグ: #effects #sparkles\nsparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects\n\n## 共通ネガティブ\nカテゴリ: 禁止\nタグ: #negative\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character"}, {"id": "twitter_comic", "title": "Twitter再調査漫画", "kind": "comic", "purpose": "Xの内容を調べ直して、いつもの漫画スタイルに変換する", "summary": "元投稿の事実を拾い直し、いつものキャラで漫画として見せる。", "steps": ["元ポストの要点を整理する", "事実と感情を分ける", "1〜4コマの流れにする", "吹き出し文を短くする"], "blocks": ["source_research", "master_style", "character_kafka", "comic_layout", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "再調査メモを先に読ませて、余計な誤読を減らす。", "full_text": "## 再調査メモ\nカテゴリ: 調査\nタグ: #twitter #research #summary\nread the original tweet or thread carefully, extract the factual points, keep the emotional tone, identify the key visual beat, preserve names and dates exactly, rewrite only what is needed for a clean manga summary\n\n## マスタースタイル\nカテゴリ: 基準\nタグ: #base #quality #style\nmasterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed\n\n## KAFKA\nカテゴリ: キャラクター\nタグ: #kafka #character\ncute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion\n\n## 漫画レイアウト\nカテゴリ: 用途\nタグ: #comic #layout #panels\nclean manga panel layout, easy reading order, 1 to 4 panels, strong focal point, clear panel spacing, expressive beats, simple background, story-forward composition, square or vertical crop friendly\n\n## 表情強調\nカテゴリ: 表情\nタグ: #reaction #closeup #expression\nexpressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing\n\n## 日本語文字\nカテゴリ: テキスト\nタグ: #jp #text\nlarge japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text\n\n## 短い日本語セリフ\nカテゴリ: 文言\nタグ: #jp #dialogue #phrases\n「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」\n\n## 装飾効果\nカテゴリ: 演出\nタグ: #effects #sparkles\nsparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects\n\n## 共通ネガティブ\nカテゴリ: 禁止\nタグ: #negative\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character"}, {"id": "reaction_image", "title": "表情豊かな反応画像", "kind": "reaction", "purpose": "日常の反応を、いつものキャラで表情豊かに見せる", "summary": "短い返答やリアクションを、見やすい1枚絵にする。", "steps": ["感情を1つに絞る", "表情を強く出す", "セリフは短くする", "余白を残して読みやすくする"], "blocks": ["master_style", "character_kafka", "outfit_kafka", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"], "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。", "full_text": "## マスタースタイル\nカテゴリ: 基準\nタグ: #base #quality #style\nmasterpiece, best quality, ultra detailed, japanese anime illustration, warm emotional slice-of-life manga, systems thinking visualization, VTuber aesthetics, soft futuristic atmosphere, educational infographic design, psychologically immersive storytelling, pastel blue, white, lavender, soft cyan, holographic glow, night lighting, transparent UI, clean lineart, thin elegant outlines, soft gradients, subtle shadows, tiny sparkles, floating particles, cozy atmosphere, gentle emotion, human-made, carefully designed\n\n## KAFKA\nカテゴリ: キャラクター\nタグ: #kafka #character\ncute anime girl, long pastel blue hair with lavender gradients, semi-transparent bangs, fluffy layered hair, sparkling blue-purple eyes, soft glowing skin, gentle blush, small cat-shaped hairpins, silver geometric hair clip, crystal earrings, pastel futuristic fashion\n\n## 衣装\nカテゴリ: キャラ衣装\nタグ: #outfit #techwear\noversized white techwear hoodie, navy ribbon, soft sailor-style inner outfit, short skirt, chunky sneakers, rings, necklace, futuristic accessories, pastel holographic details\n\n## 表情強調\nカテゴリ: 表情\nタグ: #reaction #closeup #expression\nexpressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing\n\n## 日本語文字\nカテゴリ: テキスト\nタグ: #jp #text\nlarge japanese typography only, bubble pop typography, professional digital rounded font, thick outlines, bright pastel colors, high readability, playful manga-like text effects, clean japanese rendering, no broken japanese, no english text\n\n## 短い日本語セリフ\nカテゴリ: 文言\nタグ: #jp #dialogue #phrases\n「やっほー！」「わーい！」「なるほど…」「おつかれさま！」「ありがとう！」「ナイス！」「すき〜！」「おやすみ…」「うーん…？」「ひらめいた！」「集中」「たのしい〜！」「記録しよ！」「いい感じ…」「がんばろう！」「この感じ、好きかも」\n\n## 装飾効果\nカテゴリ: 演出\nタグ: #effects #sparkles\nsparkles, music notes, tiny hearts, soft holographic particles, small stars, cute emphasis symbols, minimal manga effects\n\n## 共通ネガティブ\nカテゴリ: 禁止\nタグ: #negative\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character"}];
     const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
     const state = {
       templates,
       selectedId: templates[0]?.id || null,
       search: '',
-      category: 'すべて',
     };
 
     const el = (id) => document.getElementById(id);
@@ -321,40 +333,22 @@
 
     const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
-    const renderMetrics = () => {
-      el('metric-blocks').textContent = String(db.blocks.length);
-      el('metric-templates').textContent = String(state.templates.length);
-      el('metric-delivery').textContent = '静的';
-    };
-
-    const renderFilters = () => {
-      const names = ['すべて', ...Array.from(new Set(state.templates.map((item) => item.purpose))).filter(Boolean)];
-      el('filters').innerHTML = names.map((name) => `<button class="chip ${state.category === name ? 'active' : ''}" data-category="${name}">${name}</button>`).join('');
-      el('filters').querySelectorAll('[data-category]').forEach((button) =>
-        button.addEventListener('click', () => {
-          state.category = button.dataset.category;
-          render();
-        })
-      );
-    };
-
     const filteredTemplates = () => {
       const query = state.search.trim().toLowerCase();
       return state.templates.filter((template) => {
-        const matchesCategory = state.category === 'すべて' || template.purpose === state.category;
         const haystack = [
           template.title,
           template.purpose,
+          template.summary,
           template.notes,
           template.blocks.join(' '),
         ].join(' ').toLowerCase();
-        return matchesCategory && (!query || haystack.includes(query));
+        return !query || haystack.includes(query);
       });
     };
 
     const renderList = () => {
       const list = filteredTemplates();
-      el('list-meta').textContent = `${list.length} 件表示 / ${state.templates.length} 件`;
       el('list').innerHTML = list.map((template) => `
         <article class="panel card ${template.id === state.selectedId ? 'active' : ''}" data-id="${template.id}">
           <div class="card-top">
@@ -362,10 +356,11 @@
               <p class="title">${template.title}</p>
               <div class="meta">${template.purpose}</div>
             </div>
-            ${template.is_pinned ? '<span class="tag">固定</span>' : ''}
           </div>
-          <p class="preview">${template.notes || template.blocks.join(', ')}</p>
-          <div class="tagrow">${template.blocks.slice(0, 5).map((blockId) => `<span class="tag">${blockId}</span>`).join('')}</div>
+          <p class="preview">${template.summary || template.notes || template.blocks.join(', ')}</p>
+          <div class="buttons" style="margin-top: 10px;">
+            <button class="button primary" data-copy-full="${template.id}">全文コピー</button>
+          </div>
         </article>
       `).join('');
       el('list').querySelectorAll('[data-id]').forEach((card) =>
@@ -373,6 +368,15 @@
           state.selectedId = card.dataset.id;
           renderDetail();
           renderList();
+        })
+      );
+      el('list').querySelectorAll('[data-copy-full]').forEach((button) =>
+        button.addEventListener('click', async (event) => {
+          event.stopPropagation();
+          const template = state.templates.find((item) => item.id === button.dataset.copyFull);
+          if (!template) return;
+          await navigator.clipboard.writeText(renderTemplate(template));
+          el('status').textContent = `${template.title}の全文をコピーしました`;
         })
       );
       if (!list.length) {
@@ -384,7 +388,7 @@
       const template = selected();
       if (!template) {
         el('detail-title').textContent = 'テンプレートを選択';
-        el('detail-purpose').textContent = '-';
+        el('detail-summary').textContent = '一覧から選んでください。';
         el('detail-notes').textContent = '一覧から選んでください。';
         el('block-list').innerHTML = '';
         el('detail-full').textContent = '';
@@ -392,7 +396,7 @@
       }
 
       el('detail-title').textContent = template.title;
-      el('detail-purpose').textContent = template.purpose;
+      el('detail-summary').textContent = template.summary || template.purpose;
       el('detail-notes').textContent = template.notes || 'メモなし';
       el('detail-full').textContent = renderTemplate(template);
       el('block-list').innerHTML = template.blocks.map((blockId) => {
@@ -425,8 +429,6 @@
     };
 
     const render = () => {
-      renderMetrics();
-      renderFilters();
       renderList();
       renderDetail();
     };
