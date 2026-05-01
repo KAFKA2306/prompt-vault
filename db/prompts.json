@@ -505,6 +505,17 @@
       ]
     },
     {
+      "id": "logo_orbit_kafka",
+      "category": "ブランド",
+      "title": "宇宙ロゴ単独",
+      "content": "single logo only, Japanese hiragana typography saying 「かふか」 only, centered composition, rounded soft typography, thick rounded strokes, high readability, soft pastel blue and lavender gradient fill, subtle white inner glow, thick white outline, secondary thin pastel outline, smooth stable letter spacing, cute but structured typography, calm emotional atmosphere, commercial vtuber branding aesthetic\n\nsurrounding orbital system inspired by planetary orbits and atomic electron shells, multiple thin elliptical orbit lines around the text, overlapping orbital paths, transparent orbit trails, tiny pastel planets and electrons, soft glowing particles following the orbital curves, small astronomy symbols, subtle stars and sparkles, scientific but gentle mood, minimal quantum diagram aesthetic, gravitational center composition, balanced symmetry, floating orbital motion feeling\n\npastel blue, lavender, pale purple, soft cyan, extremely light gray shadows, clean vector-like lineart, soft anti-aliased edges, elegant negative space, minimal clutter, no character illustration, no panels, no infographic blocks, no neon cyberpunk, no dark background, no 3d render look, no metallic texture, no glossy plastic texture, no harsh contrast, no visual noise, human-designed logo feeling, soft atmospheric haze around the center\n\nhigh resolution, ultra crisp typography, soft layered glow, subtle depth, orbit lines partially behind and partially in front of the text, gentle celestial atmosphere, modern japanese kawaii science branding, emotionally warm but technically structured visual identity",
+      "tags": [
+        "logo",
+        "orbit",
+        "brand"
+      ]
+    },
+    {
       "id": "morning_pose_spring_kafka",
       "category": "ポーズ",
       "title": "春おはツイ姿勢",
@@ -943,6 +954,12 @@
         "effects_pack",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/022_morning_tweet_spring.png",
+          "title": "おはツイ春の実例"
+        }
+      ],
       "notes": "春は軽い羽織と花モチーフで寄せる。繰り返し使う前提の定番枠。"
     },
     {
@@ -968,6 +985,12 @@
         "text_style_jp",
         "effects_pack",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/021_morning_tweet_summer.png",
+          "title": "おはツイ夏の実例"
+        }
       ],
       "notes": "夏は白と青を強めにして、軽さを優先する。"
     },
@@ -995,6 +1018,12 @@
         "effects_pack",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/023_morning_tweet_autumn.png",
+          "title": "おはツイ秋の実例"
+        }
+      ],
       "notes": "秋はやわらかい静けさを入れる。重くしすぎない。"
     },
     {
@@ -1020,6 +1049,12 @@
         "text_style_jp",
         "effects_pack",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/024_morning_tweet_winter.png",
+          "title": "おはツイ冬の実例"
+        }
       ],
       "notes": "冬は暗くしない。朝のやわらかさを残す。"
     },
@@ -1304,6 +1339,12 @@
         "icon_mark_only_kafka",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/015_logo_only_sheet.png",
+          "title": "ロゴ単独シートの実例"
+        }
+      ],
       "notes": "サムネイルやコーナー表示に転用しやすい。繰り返し描かない部分をここに集約する。"
     },
     {
@@ -1324,6 +1365,12 @@
         "text_style_jp",
         "negative_common"
       ],
+      "artifacts": [
+        {
+          "path": "artifacts/016_wordmark_sheet.png",
+          "title": "ワードマークシートの実例"
+        }
+      ],
       "notes": "ロゴとは分けて、文字だけの使い回しを想定する。"
     },
     {
@@ -1342,6 +1389,12 @@
         "master_style",
         "frame_only_kafka",
         "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/017_frame_sheet.png",
+          "title": "フレーム単独の実例"
+        }
       ],
       "notes": "カードや告知の土台として使う。中身より枠が必要な時の専用テンプレート。"
     },
@@ -1363,6 +1416,33 @@
         "negative_common"
       ],
       "notes": "バナーの隅、区切り、タグ、UI飾りに使う。繰り返し描くより台帳化したい部分。"
+    },
+    {
+      "id": "orbit_logo_sheet",
+      "title": "Kafka 宇宙ロゴ単独シート",
+      "kind": "brand",
+      "purpose": "宇宙系のかふかロゴを単独で使う",
+      "summary": "文字ロゴと軌道モチーフだけで成立する、宇宙寄りのロゴシート。",
+      "steps": [
+        "文字を中央に置く",
+        "軌道線を回す",
+        "キャラを入れない",
+        "小サイズでも崩れないか見る"
+      ],
+      "blocks": [
+        "master_style",
+        "logo_orbit_kafka",
+        "wordmark_only_kafka",
+        "icon_mark_only_kafka",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/020_orbit_logo_sheet.png",
+          "title": "宇宙ロゴ単独の実例"
+        }
+      ],
+      "notes": "通常のロゴ単独とは別に、宇宙モチーフだけ欲しい時の専用版。"
     },
     {
       "id": "chat_reply_card",
@@ -1457,6 +1537,12 @@
         "demo_mode_pack",
         "moderation_pack",
         "plugin_pack"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/018_ai_tuber_core_pack.png",
+          "title": "自律人格パックの実例"
+        }
       ],
       "notes": "まず土台を作るときに使う。細部は後で分ける。"
     },
