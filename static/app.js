@@ -1,6 +1,7 @@
 const db = __DB_JSON__;
 const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
 const templates = db.templates;
+const fullCopySuffix = '\n\n画像生成する';
 
 const state = {
   templates,
@@ -19,6 +20,8 @@ const renderBlock = (block) => [
 ].filter(Boolean).join('\n');
 
 const renderTemplate = (template) => template.blocks.map((blockId) => renderBlock(blocks[blockId])).join('\n\n');
+
+const renderFullCopyText = (template) => `${renderTemplate(template)}${fullCopySuffix}`;
 
 const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
@@ -66,7 +69,7 @@ const renderList = () => {
       event.stopPropagation();
       const template = state.templates.find((item) => item.id === button.dataset.copyFull);
       if (!template) return;
-      await navigator.clipboard.writeText(renderTemplate(template));
+      await navigator.clipboard.writeText(renderFullCopyText(template));
       el('status').textContent = `${template.title}の全文をコピーしました`;
     })
   );
@@ -134,7 +137,7 @@ el('search').addEventListener('input', (event) => {
 el('copy-full').addEventListener('click', () => {
   const template = selected();
   if (!template) return;
-  copyText(renderTemplate(template), '全文');
+  copyText(renderFullCopyText(template), '全文');
 });
 
 el('copy-title').addEventListener('click', () => {

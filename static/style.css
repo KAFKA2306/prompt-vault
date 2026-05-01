@@ -32,8 +32,7 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0,1.2fr) minmax(280px,.8fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
   margin-bottom: 16px;
 }
 
@@ -74,15 +73,6 @@ h1 {
   line-height: 1.9;
   margin: 0;
   font-size: 15px;
-}
-
-.hero-side {
-  padding: 18px;
-  display: grid;
-  gap: 12px;
-  align-content: start;
-  color: var(--muted);
-  line-height: 1.8;
 }
 
 .workspace {
