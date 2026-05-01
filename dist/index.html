@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.svg" />
   <meta name="theme-color" content="#0f766e" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
     {
@@ -33,6 +34,11 @@
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault",
           "description": "画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://prompt-vault-cg3.pages.dev/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
           "inLanguage": "ja-JP"
         },
         {
@@ -52,6 +58,24 @@
             "キャラシート"
           ],
           "inLanguage": "ja-JP"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://prompt-vault-cg3.pages.dev/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://prompt-vault-cg3.pages.dev/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Prompt Vault",
+              "item": "https://prompt-vault-cg3.pages.dev/"
+            }
+          ]
         }
       ]
     }
@@ -59,7 +83,13 @@
 </head>
 <body>
   <main class="page">
-    <section class="hero">
+    <nav class="breadcrumbs" aria-label="パンくずリスト">
+      <a href="/" class="breadcrumb">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="breadcrumb breadcrumb--current">Prompt Vault</span>
+    </nav>
+
+    <header class="hero">
       <div class="panel hero-copy">
         <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
@@ -79,7 +109,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
     <section class="panel seo-panel" aria-labelledby="seo-title">
       <div class="seo-panel__copy">

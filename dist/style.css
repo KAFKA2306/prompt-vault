@@ -30,6 +30,29 @@ body {
 
 .page { width: min(1280px,100%); margin: 0 auto; padding: 24px; }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.breadcrumb {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb:hover {
+  color: var(--accent);
+}
+
+.breadcrumb--current {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr;

@@ -26,7 +26,7 @@ const escapeHTML = (value) => value
 const state = {
   templates,
   selectedNode: null,
-  search: '',
+  search: new URLSearchParams(window.location.search).get('q') || '',
 };
 
 const stats = {
@@ -444,6 +444,8 @@ el('search').addEventListener('input', (event) => {
   state.search = event.target.value;
   render();
 });
+
+el('search').value = state.search;
 
 el('modal-close').addEventListener('click', closeModal);
 el('modal').addEventListener('click', (e) => {
