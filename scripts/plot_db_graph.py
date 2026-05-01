@@ -425,6 +425,8 @@ def render_combined_markdown(db: dict[str, Any]) -> str:
     parts.append(render_node_list_markdown(db))
     parts.append(render_relation_list_markdown(db))
     return "\n".join(parts).rstrip() + "\n"
+
+
 def clean_generated_outputs(output_dir: Path) -> None:
     for path in output_dir.glob("db_graph_*.md"):
         path.unlink()
@@ -460,7 +462,7 @@ def main() -> None:
         "--output-dir",
         type=Path,
         default=OUTPUT_DIR,
-        help="directory to write db_graph.md and db_graph.html",
+        help="directory to write db_graph.md",
     )
     args = parser.parse_args()
 
