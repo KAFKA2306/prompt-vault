@@ -103,6 +103,13 @@
       "tags": ["effects", "sparkles"]
     },
     {
+      "id": "announcement_text_pack",
+      "category": "文言",
+      "title": "告知文言",
+      "content": "「配信開始」「新衣装お披露目」「お知らせ」「重大告知」「本日20:00」「あとで会おう」「見にきてね」「準備中」「coming soon」「まもなく開始」",
+      "tags": ["announcement", "text"]
+    },
+    {
       "id": "negative_common",
       "category": "禁止",
       "title": "共通ネガティブ",
@@ -174,6 +181,16 @@
         }
       ],
       "notes": "原文をそのまま保管する用途。全文コピーで使う前提。"
+    },
+    {
+      "id": "announcement_thumbnail",
+      "title": "配信告知サムネイル",
+      "kind": "announcement",
+      "purpose": "配信や投稿の告知を、ひと目で伝わるサムネイルにする",
+      "summary": "顔・告知文言・装飾をまとめた、SNSと配信向けの見出し画像。",
+      "steps": ["伝えたい告知を1つに絞る", "顔とタイトルを大きく置く", "配色を強くまとめる", "余計な情報を削る"],
+      "blocks": ["master_style", "character_kafka", "reaction_focus", "announcement_text_pack", "text_style_jp", "effects_pack", "negative_common"],
+      "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。"
     }
   ]
 }
