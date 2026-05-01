@@ -4,21 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー</title>
-  <meta name="description" content="Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できます。" />
+  <meta name="description" content="Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="KAFKA2306" />
   <link rel="canonical" href="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:site_name" content="Prompt Vault" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
-  <meta property="og:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。" />
+  <meta property="og:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
   <meta property="og:url" content="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー" />
-  <meta name="twitter:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。" />
+  <meta name="twitter:description" content="画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。" />
   <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta name="theme-color" content="#0f766e" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -33,7 +33,7 @@
           "@id": "https://prompt-vault-cg3.pages.dev/#website",
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault",
-          "description": "画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。",
+          "description": "画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をコピーできるプロンプト保管庫です。",
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://prompt-vault-cg3.pages.dev/?q={search_term_string}",
@@ -46,7 +46,7 @@
           "@id": "https://prompt-vault-cg3.pages.dev/#webpage",
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault | 画像生成プロンプトを分解・検索・全文コピー",
-          "description": "VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できる画像生成プロンプト保管庫です。",
+          "description": "画像生成プロンプト保管庫です。",
           "isPartOf": {
             "@id": "https://prompt-vault-cg3.pages.dev/#website"
           },
@@ -112,16 +112,16 @@
 
     <header class="hero">
       <div class="panel hero-copy">
-        <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー中心</div>
+        <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー</div>
         <h1>Prompt Vault</h1>
-        <p class="lead">直感的に画像からプロンプトを探し出し、全文をそのままコピーできるギャラリーベースの保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで、使う場面からすぐ辿れます。</p>
+        <p class="lead">画像からプロンプトを探し、全文をコピーできる保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。</p>
         <div class="hero-actions" aria-label="主要操作">
-          <a href="#gallery-section" class="button button--link primary">Browse gallery</a>
-          <a href="#template-section" class="button button--link">Open templates</a>
+          <a href="#gallery-section" class="button button--link primary">ギャラリーへ</a>
+          <a href="#template-section" class="button button--link">テンプレートへ</a>
           <a href="https://github.com/KAFKA2306/prompt-vault" class="button button--link">GitHub</a>
         </div>
         <nav class="section-links" aria-label="ページ内リンク">
-          <a href="#featured-examples" class="section-link">Featured examples</a>
+          <a href="#featured-examples" class="section-link">画像例</a>
           <a href="#gallery-section" class="section-link">Gallery</a>
           <a href="#template-section" class="section-link">Templates</a>
         </nav>
@@ -145,10 +145,10 @@
     <section class="panel featured" id="featured-examples" aria-labelledby="featured-title">
       <div class="head">
         <div>
-          <div class="subtle">静的プレビュー</div>
-          <h2 id="featured-title">Featured examples</h2>
+          <div class="subtle">画像例</div>
+          <h2 id="featured-title">例</h2>
         </div>
-        <div class="subtle">AI bots にも拾われやすい見本画像</div>
+        <div class="subtle">選んだ画像</div>
       </div>
       <div class="featured-grid">
         <a class="featured-card" href="#gallery-section">
@@ -177,9 +177,9 @@
 
     <section class="panel seo-panel" aria-labelledby="seo-title">
       <div class="seo-panel__copy">
-        <div class="eyebrow">検索される導線を強化</div>
-        <h2 id="seo-title">画像生成プロンプトを、探して・分解して・そのまま使う。</h2>
-        <p>Prompt Vault は、見た目で探しやすいギャラリーと、全文を一発コピーできるモーダルを両立したプロンプトライブラリです。ブロック単位で組み替えられるので、1つの完成形から別の用途へも流用しやすくなっています。</p>
+        <div class="eyebrow">使い方</div>
+        <h2 id="seo-title">画像生成プロンプトを探して、コピーする。</h2>
+        <p>Prompt Vault は、ギャラリーとモーダルでプロンプトを扱うサイトです。ブロック単位で分けてあるので、テンプレートごとの中身を確認できます。</p>
       </div>
       <div class="seo-panel__facts" aria-label="特徴">
         <div class="seo-fact">
@@ -213,7 +213,7 @@
             <div class="subtle" id="template-count">0 templates</div>
             <h3>テンプレート一覧</h3>
           </div>
-          <div class="subtle">画像がないものもここから開けます</div>
+          <div class="subtle">画像がないものもあります</div>
         </div>
         <div class="template-rail" id="template-rail"></div>
       </div>
@@ -238,14 +238,11 @@
         <span class="tag">漫画レイアウト</span>
         <span class="tag">ステッカーシート</span>
       </div>
-      <p class="search-help__copy">「画像生成プロンプト」「プロンプト集」「VTuber 素材」「SNS 投稿 レイアウト」みたいな探し方でも、用途の近いテンプレートにすぐ辿り着けます。</p>
+      <p class="search-help__copy">「画像生成プロンプト」「プロンプト集」「VTuber 素材」「SNS 投稿 レイアウト」などで探せます。</p>
     </section>
 
     <footer class="footer">
-      <div class="footer__meta">
-        <span class="subtle">Machine-readable metadata available.</span>
-        <a href="https://github.com/KAFKA2306/prompt-vault/issues" class="footer__contact">Contact / report an issue</a>
-      </div>
+      <a href="https://github.com/KAFKA2306/prompt-vault/issues" class="footer__contact">GitHub Issues</a>
     </footer>
   </main>
 

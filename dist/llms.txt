@@ -1,15 +1,15 @@
 # Prompt Vault
 
-> Prompt Vault is a Japanese image-generation prompt vault built around reusable prompt blocks and gallery-first templates.
+> Prompt Vault is a Japanese site for image-generation prompts.
 
-Prompt Vault is a Japanese prompt library for image generation.
+Prompt Vault is a Japanese site for image generation prompts.
 
 ## What this site is for
 
 - Search prompt blocks by title, purpose, or block ID
-- Open image-first templates from the gallery
-- Copy full prompts from the modal with one click
-- Recombine blocks for VTuber, social posts, reaction images, character sheets, banners, and comics
+- Open templates
+- Copy full prompts from the modal
+- Reuse blocks for VTuber, social posts, reaction images, character sheets, banners, and comics
 
 ## Key pages
 
