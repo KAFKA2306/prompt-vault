@@ -12,6 +12,17 @@ DIST_PATH = ROOT / "dist"
 ARTIFACTS_PATH = ROOT / "artifacts"
 
 
+def generated_template_title(source_title: str, instruction: str, limit: int = 28) -> str:
+    compact_instruction = " ".join(instruction.split()).strip()
+    if compact_instruction and len(compact_instruction) > limit:
+        compact_instruction = compact_instruction[:limit].rstrip() + "…"
+    if not compact_instruction:
+        compact_instruction = "生成版"
+    if source_title:
+        return f"{source_title} / {compact_instruction}"
+    return compact_instruction
+
+
 def load_db() -> dict[str, Any]:
     db = json.loads(DB_PATH.read_text(encoding="utf-8"))
     block_nodes = set()
@@ -54,6 +65,49 @@ def load_db() -> dict[str, Any]:
             absolute_path = ROOT / artifact_path
             if not absolute_path.exists():
                 raise ValueError(f"missing artifact in {template_id}: {artifact_path}")
+
+    for template in db["templates"]:
+        if template.get("kind") != "generated":
+            continue
+        source_template = next((item for item in db["templates"] if item["id"] == template.get("generated_from")), None)
+        source_title = source_template["title"] if source_template else template.get("generated_from", "generated")
+        generated_instruction = template.get("generated_instruction") or template.get("summary") or template.get("purpose") or ""
+        normalized_title = generated_template_title(source_title, generated_instruction)
+        template["title"] = normalized_title
+        template["generated_title"] = normalized_title
+
+    generated_prompts = db.get("generated_prompts", [])
+    generated_templates = []
+    existing_template_ids = {template["id"] for template in db["templates"]}
+    for record in generated_prompts:
+        generated_template_id = record.get("generated_template_id") or f"generated_{record.get('id', '')}"
+        if not generated_template_id or generated_template_id in existing_template_ids:
+            continue
+
+        source_template = next((template for template in db["templates"] if template["id"] == record.get("template_id")), None)
+        source_title = source_template["title"] if source_template else record.get("template_id", "generated")
+        generated_title = record.get("generated_title") or record.get("title") or generated_template_title(source_title, record.get("instruction", ""))
+        generated_templates.append({
+            "id": generated_template_id,
+            "title": generated_title,
+            "generated_title": generated_title,
+            "kind": "generated",
+            "purpose": record.get("instruction") or (source_template.get("purpose") if source_template else ""),
+            "summary": record.get("instruction") or "生成結果",
+            "blocks": record.get("block_ids") or (source_template.get("blocks") if source_template else []),
+            "generated_prompt": record.get("generated_prompt", ""),
+            "generated_addition": record.get("generated_addition", ""),
+            "generation_prompt_source": record.get("generation_prompt_source"),
+            "generation_prompt_hash": record.get("generation_prompt_hash"),
+            "generated_from": record.get("template_id"),
+            "generated_instruction": record.get("instruction"),
+            "generated_at": record.get("created_at"),
+            "generated_request_id": record.get("id"),
+        })
+        existing_template_ids.add(generated_template_id)
+
+    if generated_templates:
+        db["templates"] = [*db["templates"], *generated_templates]
     return db
 
 

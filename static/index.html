@@ -4,21 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prompt Vault | テンプレート一覧から探して全文コピー</title>
-  <meta name="description" content="Prompt Vault は、画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
+  <meta name="description" content="Prompt Vault は、テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="KAFKA2306" />
   <link rel="canonical" href="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:site_name" content="Prompt Vault" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
-  <meta property="og:description" content="画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
+  <meta property="og:description" content="テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
   <meta property="og:url" content="https://prompt-vault-cg3.pages.dev/" />
   <meta property="og:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
-  <meta name="twitter:description" content="画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。" />
+  <meta name="twitter:description" content="テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
   <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
   <meta name="theme-color" content="#0f766e" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -33,7 +33,7 @@
           "@id": "https://prompt-vault-cg3.pages.dev/#website",
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault",
-          "description": "画像生成プロンプトをテンプレート一覧から探して、詳細表示で全文をコピーできるプロンプト保管庫です。",
+          "description": "テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。",
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://prompt-vault-cg3.pages.dev/?q={search_term_string}",
@@ -46,7 +46,7 @@
           "@id": "https://prompt-vault-cg3.pages.dev/#webpage",
           "url": "https://prompt-vault-cg3.pages.dev/",
           "name": "Prompt Vault | テンプレート一覧から探して全文コピー",
-          "description": "画像生成プロンプト保管庫です。",
+          "description": "テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。",
           "isPartOf": {
             "@id": "https://prompt-vault-cg3.pages.dev/#website"
           },
@@ -79,7 +79,7 @@
             }
           ],
           "inLanguage": "ja-JP"
-        },
+        }
       ]
     }
   </script>
@@ -89,7 +89,7 @@
     <header class="hero">
       <div class="panel hero-copy">
         <h1>Prompt Vault</h1>
-        <p class="lead">テンプレート一覧から選び、詳細表示で全文をコピーする保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。</p>
+        <p class="lead">テンプレート一覧から選び、詳細表示で全文をコピーする保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。必要なら指示を足して生成もできます。</p>
         <div class="hero-actions" aria-label="主要操作">
           <a href="#template-section" class="button button--link">テンプレートへ</a>
         </div>
@@ -108,6 +108,47 @@
         <div class="subtle">画像がないものもあります</div>
       </div>
       <div class="template-rail" id="template-rail"></div>
+    </section>
+
+    <section class="panel generator" aria-labelledby="generator-title">
+      <div class="head head--center">
+        <div>
+          <div class="subtle">Prompt Generator</div>
+          <h2 id="generator-title">既存ノードを組み合わせる</h2>
+        </div>
+      </div>
+      <div class="generator-form">
+        <label class="generator-field">
+          <span>ベーステンプレート</span>
+          <select id="generator-template"></select>
+        </label>
+        <div class="generator-field generator-field--nodes">
+          <div class="generator-field__head">
+            <span>ノード</span>
+            <span class="subtle" id="generator-node-count">0 selected</span>
+          </div>
+          <div class="subtle">カードをクリックして複数選択。選択済みは × でオプトアウトできます。</div>
+          <div class="generator-node-picker" id="generator-node-picker"></div>
+          <div class="tagrow" id="generator-selected-nodes"></div>
+          <div class="generator-actions generator-actions--compact">
+            <button class="button button--soft" id="generator-reset-template" type="button">テンプレート既定に戻す</button>
+            <button class="button button--soft" id="generator-clear-nodes" type="button">全解除</button>
+          </div>
+        </div>
+        <label class="generator-field">
+          <span>指示</span>
+          <textarea id="generator-instruction" rows="4" placeholder="例: 朝向けに短く、やわらかくして"></textarea>
+        </label>
+        <div class="generator-actions">
+          <button class="button primary" id="generator-submit" type="button">生成</button>
+          <button class="button" id="generator-copy" type="button" disabled>結果をコピー</button>
+        </div>
+        <div class="block block--flush">
+          <div class="subtle">生成結果</div>
+          <pre id="generator-output">まだ生成されていません。</pre>
+        </div>
+        <div class="generator-status subtle" id="generator-status"></div>
+      </div>
     </section>
   </main>
 

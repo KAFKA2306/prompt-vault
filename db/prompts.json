@@ -2644,6 +2644,100 @@
         }
       ],
       "notes": "広大な自然を楽しむ一枚。"
+    },
+    {
+      "id": "gen_20260501_085644_421588",
+      "title": "ロシア鉄道・ボドゲ実演ポスト",
+      "kind": "social",
+      "instruction": "Kafkaが Russian Railroadを遊んでいる様子",
+      "status": "ready",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "poker_post_layout",
+        "poker_table_scene_kafka",
+        "poker_dealer_style_kafka",
+        "poker_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/059_russian_railroads_post.png",
+          "title": "ロシア鉄道を遊ぶ様子"
+        }
+      ]
+    },
+    {
+      "id": "gen_20260501_090149_072100",
+      "title": "ロシア鉄道・ボドゲ解説ガイド",
+      "kind": "announcement",
+      "instruction": "Kafkaが Russian Railroadを遊んでいる様子",
+      "status": "ready",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "poker_post_layout",
+        "poker_table_scene_kafka",
+        "poker_dealer_style_kafka",
+        "poker_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/061_russian_railroads_guide.png",
+          "title": "ロシア鉄道ガイド"
+        }
+      ]
+    },
+    {
+      "id": "gen_20260501_090151_919050",
+      "title": "ドミニオン・ルール紹介ガイド",
+      "kind": "announcement",
+      "instruction": "Dominion card gameのルール紹介!",
+      "status": "ready",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "chat_reply_pack",
+        "speech_mode_kafka",
+        "safe_reply_pack",
+        "text_style_jp",
+        "expressions_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/060_dominion_guide.png",
+          "title": "ドミニオン早わかりガイド"
+        }
+      ]
+    },
+    {
+      "id": "gen_20260501_090454_827936",
+      "title": "Kafka おはツイ 春 / Dominion Board Gameを楽しく遊ぶ様子",
+      "kind": "social",
+      "instruction": "Dominion Board Gameを楽しく遊ぶ様子",
+      "status": "ready",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "seasonal_outfit_spring_kafka",
+        "morning_pose_spring_kafka",
+        "morning_background_spring_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/058_morning_dominion.png",
+          "title": "春のおはツイ・ドミニオン"
+        }
+      ]
     }
   ]
 }

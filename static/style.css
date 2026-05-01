@@ -365,6 +365,125 @@ h1 {
   gap: 14px;
 }
 
+.generator {
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.generator-form {
+  display: grid;
+  gap: 12px;
+}
+
+.generator-field {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.generator-field__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.generator-field span {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.generator-field select,
+.generator-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.95);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.generator-field textarea {
+  resize: vertical;
+  min-height: 96px;
+  line-height: 1.7;
+}
+
+.generator-field select:focus,
+.generator-field textarea:focus {
+  border-color: rgba(15,118,110,.36);
+  box-shadow: 0 0 0 4px rgba(15,118,110,.08);
+}
+
+.generator-field--nodes {
+  gap: 10px;
+}
+
+.generator-node-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.generator-node-card {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.generator-node-card.is-selected {
+  border-color: rgba(15,118,110,.48);
+  box-shadow: 0 14px 28px rgba(15,118,110,.14);
+  transform: translateY(-1px);
+}
+
+.generator-node-card.is-selected::after {
+  content: '選択中';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(15,118,110,.92);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.generator-selected-nodes {
+  min-height: 24px;
+}
+
+.generator-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.generator-actions--compact {
+  margin-top: -2px;
+}
+
+.tag-button--remove {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tag-button--remove span {
+  font-size: 14px;
+  line-height: 1;
+}
+
 .block--flush {
   margin-top: 0;
 }

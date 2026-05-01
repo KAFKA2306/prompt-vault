@@ -19,5 +19,5 @@ check_url "github-pages" "$gh_url"
 if [ -n "$cf_url" ]; then
   check_url "cloudflare-pages" "$cf_url"
 else
-  echo "skip: cloudflare-pages (set CF_PAGES_URL to verify)"
+  echo "skip: cloudflare-pages (set CF_PAGES_URL=https://prompt-vault-cg3.pages.dev/ to verify)"
 fi

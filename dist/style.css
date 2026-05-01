@@ -30,57 +30,10 @@ body {
 
 .page { width: min(1280px,100%); margin: 0 auto; padding: 24px; }
 
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.breadcrumb {
-  color: inherit;
-  text-decoration: none;
-}
-
-.breadcrumb:hover {
-  color: var(--accent);
-}
-
-.breadcrumb--current {
-  color: var(--text);
-  font-weight: 700;
-}
-
 .hero {
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 16px;
-}
-
-.section-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.section-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(16,24,40,.08);
-  color: var(--text);
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.section-link:hover {
-  border-color: rgba(15,118,110,.24);
-  color: var(--accent);
 }
 
 .hero-actions {
@@ -126,59 +79,6 @@ h1 {
   line-height: 1.9;
   margin: 0;
   font-size: 15px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.stat {
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(16,24,40,.08);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
-}
-
-.stat__value {
-  display: block;
-  font-family: var(--font-head);
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -.04em;
-}
-
-.stat__label {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.seo-panel {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 16px;
-  padding: 20px;
-}
-
-.seo-panel__copy h2 {
-  margin: 10px 0 12px;
-  font-family: var(--font-head);
-  letter-spacing: -.04em;
-  line-height: 1.08;
-  font-size: clamp(24px, 3vw, 36px);
-}
-
-.seo-panel__copy p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.85;
 }
 
 .footer {
@@ -463,6 +363,125 @@ h1 {
 .detail {
   display: grid;
   gap: 14px;
+}
+
+.generator {
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.generator-form {
+  display: grid;
+  gap: 12px;
+}
+
+.generator-field {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.generator-field__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.generator-field span {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.generator-field select,
+.generator-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.95);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.generator-field textarea {
+  resize: vertical;
+  min-height: 96px;
+  line-height: 1.7;
+}
+
+.generator-field select:focus,
+.generator-field textarea:focus {
+  border-color: rgba(15,118,110,.36);
+  box-shadow: 0 0 0 4px rgba(15,118,110,.08);
+}
+
+.generator-field--nodes {
+  gap: 10px;
+}
+
+.generator-node-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.generator-node-card {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.generator-node-card.is-selected {
+  border-color: rgba(15,118,110,.48);
+  box-shadow: 0 14px 28px rgba(15,118,110,.14);
+  transform: translateY(-1px);
+}
+
+.generator-node-card.is-selected::after {
+  content: '選択中';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(15,118,110,.92);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.generator-selected-nodes {
+  min-height: 24px;
+}
+
+.generator-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.generator-actions--compact {
+  margin-top: -2px;
+}
+
+.tag-button--remove {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tag-button--remove span {
+  font-size: 14px;
+  line-height: 1;
 }
 
 .block--flush {
