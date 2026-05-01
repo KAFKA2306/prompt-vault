@@ -2,9 +2,10 @@
 
 ## リンク集
 
-- [公開サイト](https://kafka2306.github.io/prompt-vault-/)
-- [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault-)
+- [公開サイト](https://kafka2306.github.io/prompt-vault/)
+- [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
 - [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
+- [表示検証スクリプト](scripts/verify_pages.sh)
 - [AGENTS.md](AGENTS.md)
 - [CLAUDE.md](CLAUDE.md)
 
@@ -50,3 +51,7 @@ python build.py
 - GitHub Pages
 - Cloudflare Pages
 
+## 検証
+
+- `scripts/verify_pages.sh` で GitHub Pages と Cloudflare Pages の表示を確認します
+- Cloudflare Pages の URL は `CF_PAGES_URL` で渡します
