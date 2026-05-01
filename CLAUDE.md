@@ -19,3 +19,5 @@
 - ローカルDB
 - 静的配信
 - push 後は GitHub Pages と Cloudflare Pages の表示を確認する
+- Python 本体は現状のルート直下を維持
+- 補助スクリプトだけ `scripts/` に置く
