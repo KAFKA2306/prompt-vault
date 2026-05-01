@@ -1,0 +1,2414 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt Vault DB Graph</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; background: #f4f1ea; color: #111827; font-family: system-ui, sans-serif; }
+    main { max-width: 1800px; margin: 0 auto; padding: 24px; }
+    header { margin-bottom: 24px; }
+    h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }
+    .intro { margin: 0; color: #5b6472; font-size: 14px; }
+    .preset { margin-bottom: 24px; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }
+    .preset h2 { margin: 0 0 6px; font-size: 22px; }
+    .meta { margin: 0 0 16px; color: #5b6472; font-size: 13px; }
+    .subsection { margin-top: 16px; padding-top: 16px; border-top: 1px solid #eef2f7; }
+    .subsection h3 { margin: 0 0 12px; font-size: 16px; }
+    .list-block { margin-bottom: 20px; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px 20px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }
+    .list-block summary { cursor: pointer; font-weight: 700; font-size: 16px; }
+    .list-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+    .list-table th, .list-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eef2f7; vertical-align: top; }
+    .list-table th { color: #5b6472; font-weight: 600; }
+    .mermaid { overflow: auto; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'loose',
+      theme: 'base',
+      flowchart: { curve: 'basis', htmlLabels: true },
+      themeVariables: {
+        background: '#ffffff',
+        primaryColor: '#dbeafe',
+        primaryBorderColor: '#2563eb',
+        secondaryColor: '#dcfce7',
+        secondaryBorderColor: '#059669',
+        tertiaryColor: '#f3f4f6',
+        fontFamily: 'system-ui, sans-serif',
+      },
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Prompt Vault DB Graph</h1>
+      <p class="intro">複数の静的ビューを1枚に順番配置した版。全体から局所まで、上から読む。</p>
+    </header>
+      <section class="preset">
+        <h2>Overview</h2>
+        <p class="meta">Prompt Vault DB Graph</p>
+        <div class="subsection">
+          <h3>Template Composition</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph templates["Templates"]
+    direction TB
+    subgraph kind_01["social"]
+      direction TB
+      t_joinwars_post["Kafka JoinWars投稿<br/><small>joinwars_post</small>"]:::template
+      t_morning_tweet_coffee["Kafka おはツイ コーヒー<br/><small>morning_tweet_coffee</small>"]:::template
+      t_morning_tweet_winter["Kafka おはツイ 冬<br/><small>morning_tweet_winter</small>"]:::template
+      t_morning_tweet_commute["Kafka おはツイ 出発前<br/><small>morning_tweet_commute</small>"]:::template
+      t_morning_tweet_summer["Kafka おはツイ 夏<br/><small>morning_tweet_summer</small>"]:::template
+      t_morning_tweet_sleepy["Kafka おはツイ 寝起き<br/><small>morning_tweet_sleepy</small>"]:::template
+      t_morning_tweet_spring["Kafka おはツイ 春<br/><small>morning_tweet_spring</small>"]:::template
+      t_morning_tweet_autumn["Kafka おはツイ 秋<br/><small>morning_tweet_autumn</small>"]:::template
+      t_morning_tweet_window["Kafka おはツイ 窓際<br/><small>morning_tweet_window</small>"]:::template
+      t_morning_tweet_rain["Kafka おはツイ 雨の日<br/><small>morning_tweet_rain</small>"]:::template
+      t_goodnight_post["Kafka おやすみポスト<br/><small>goodnight_post</small>"]:::template
+      t_cardgame_post["Kafka カードゲーム投稿<br/><small>cardgame_post</small>"]:::template
+      t_cosplay_post["Kafka コスプレ投稿<br/><small>cosplay_post</small>"]:::template
+      t_poker_post["Kafka ポーカー投稿<br/><small>poker_post</small>"]:::template
+      t_break_post["Kafka 休憩ポスト<br/><small>break_post</small>"]:::template
+      t_work_start_post["Kafka 作業開始ポスト<br/><small>work_start_post</small>"]:::template
+      t_reading_post_seaside["Kafka 海辺の読書投稿<br/><small>reading_post_seaside</small>"]:::template
+      t_reading_post_general["Kafka 読書投稿<br/><small>reading_post_general</small>"]:::template
+      t_reading_post_anne["Kafka 赤毛のアン読書投稿<br/><small>reading_post_anne</small>"]:::template
+      t_progress_post["Kafka 進捗ポスト<br/><small>progress_post</small>"]:::template
+    end
+    subgraph kind_02["design_sheet"]
+      direction TB
+      t_morning_tweet_index["Kafka おはツイ一覧<br/><small>morning_tweet_index</small>"]:::template
+      t_character_design_sheet["Kafka キャラデザインシート<br/><small>character_design_sheet</small>"]:::template
+      t_persona_poster["Kafka 人格ポスター<br/><small>persona_poster</small>"]:::template
+      t_persona_sheet["Kafka 人格固定カード<br/><small>persona_sheet</small>"]:::template
+      t_archive_contact_sheet["Kafka 成果物一覧<br/><small>archive_contact_sheet</small>"]:::template
+      t_archive_index["Kafka 成果物回収カード<br/><small>archive_index</small>"]:::template
+      t_photo_prompt_sheet["Kafka 生成素材台帳<br/><small>photo_prompt_sheet</small>"]:::template
+      t_memory_note_board["Kafka 記憶メモボード<br/><small>memory_note_board</small>"]:::template
+      t_memory_update_card["Kafka 記憶更新カード<br/><small>memory_update_card</small>"]:::template
+      t_summary_sheet["Kafka 配信後まとめカード<br/><small>summary_sheet</small>"]:::template
+      t_poststream_review_board["Kafka 配信後レビュー盤<br/><small>poststream_review_board</small>"]:::template
+      t_daily_work_sheet["Kafka 配信運用カード<br/><small>daily_work_sheet</small>"]:::template
+    end
+    subgraph kind_03["brand"]
+      direction TB
+      t_icon_mark_sheet["Kafka アイコンデザイン<br/><small>icon_mark_sheet</small>"]:::template
+      t_frame_sheet["Kafka フレームデザイン<br/><small>frame_sheet</small>"]:::template
+      t_logo_only_sheet["Kafka ロゴデザイン<br/><small>logo_only_sheet</small>"]:::template
+      t_wordmark_sheet["Kafka ワードマークデザイン<br/><small>wordmark_sheet</small>"]:::template
+      t_orbit_logo_sheet["Kafka 宇宙ロゴデザイン<br/><small>orbit_logo_sheet</small>"]:::template
+    end
+    subgraph kind_04["system"]
+      direction TB
+      t_comment_reply_guide["Kafka コメント返しガイド<br/><small>comment_reply_guide</small>"]:::template
+      t_slide_talk["Kafka スライド発表<br/><small>slide_talk</small>"]:::template
+      t_ai_tuber_core_pack["Kafka 起動カード<br/><small>ai_tuber_core_pack</small>"]:::template
+      t_ai_tuber_ops_pack["Kafka 配信後レビューカード<br/><small>ai_tuber_ops_pack</small>"]:::template
+    end
+    subgraph kind_05["announcement"]
+      direction TB
+      t_topic_redirect_banner["Kafka 話題切り替えバナー<br/><small>topic_redirect_banner</small>"]:::template
+      t_announcement_thumbnail["Kafka 配信告知サムネイル<br/><small>announcement_thumbnail</small>"]:::template
+      t_stream_start_banner["Kafka 配信開始バナー<br/><small>stream_start_banner</small>"]:::template
+    end
+    subgraph kind_06["reaction"]
+      direction TB
+      t_chat_reply_card["Kafka コメント返信カード<br/><small>chat_reply_card</small>"]:::template
+      t_reaction_image["Kafka 反応画像<br/><small>reaction_image</small>"]:::template
+      t_topic_redirect_card["Kafka 話題切り替えカード<br/><small>topic_redirect_card</small>"]:::template
+    end
+    subgraph kind_07["stamp"]
+      direction TB
+      t_stamp_sheet["Kafka 新しいスタンプ<br/><small>stamp_sheet</small>"]:::template
+      t_reply_stamp_sheet["Kafka 返信スタンプ（一覧）<br/><small>reply_stamp_sheet</small>"]:::template
+    end
+    subgraph kind_08["comic"]
+      direction TB
+      t_twitter_comic["Kafka Twitter再調査漫画<br/><small>twitter_comic</small>"]:::template
+    end
+  end
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_sticker_sheet_layout["4x4 ステッカーシート<br/><small>sticker_sheet_layout</small>"]:::block
+      b_joinwars_layout["JoinWars用レイアウト<br/><small>joinwars_layout</small>"]:::block
+      b_character_sheet_kafka["Kafka キャラデザインシート<br/><small>character_sheet_kafka</small>"]:::block
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_archive_index_vlog["アーカイブ索引<br/><small>archive_index_vlog</small>"]:::block
+      b_cardgame_post_layout["カードゲームレイアウト<br/><small>cardgame_post_layout</small>"]:::block
+      b_cosplay_post_layout["コスプレレイアウト<br/><small>cosplay_post_layout</small>"]:::block
+      b_persona_sheet_vlog["パーソナ設定シート<br/><small>persona_sheet_vlog</small>"]:::block
+      b_poker_post_layout["ポーカーレイアウト<br/><small>poker_post_layout</small>"]:::block
+      b_persona_poster_viz["人格ポスター<br/><small>persona_poster_viz</small>"]:::block
+      b_daily_work_sheet_vlog["作業管理テンプレート<br/><small>daily_work_sheet_vlog</small>"]:::block
+      b_archive_contact_sheet_viz["成果物一覧（コンタクトシート）<br/><small>archive_contact_sheet_viz</small>"]:::block
+      b_summary_sheet_vlog["振り返りサマリー<br/><small>summary_sheet_vlog</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+      b_comic_layout["漫画レイアウト<br/><small>comic_layout</small>"]:::block
+      b_prompt_archive_sheet_vlog["生成台帳<br/><small>prompt_archive_sheet_vlog</small>"]:::block
+      b_photo_prompt_sheet_vlog["画像生成台帳（詳細）<br/><small>photo_prompt_sheet_vlog</small>"]:::block
+      b_memory_note_board_viz["記憶メモ（記録用ボード）<br/><small>memory_note_board_viz</small>"]:::block
+      b_topic_redirect_banner_viz["話題切り替え用バナー<br/><small>topic_redirect_banner_viz</small>"]:::block
+      b_reading_post_layout["読書シーン用レイアウト<br/><small>reading_post_layout</small>"]:::block
+      b_reply_stamp_sheet_viz["返信スタンプ（グリッド）<br/><small>reply_stamp_sheet_viz</small>"]:::block
+      b_poststream_review_board_viz["配信振り返り（レビュー用）<br/><small>poststream_review_board_viz</small>"]:::block
+      b_stream_start_banner_viz["配信開始バナー<br/><small>stream_start_banner_viz</small>"]:::block
+    end
+    subgraph cat_02["背景"]
+      direction TB
+      b_joinwars_scene_kafka["JoinWars背景<br/><small>joinwars_scene_kafka</small>"]:::block
+      b_goodnight_scene_kafka["おやすみ背景<br/><small>goodnight_scene_kafka</small>"]:::block
+      b_cosplay_scene_kafka["コスプレ撮影背景<br/><small>cosplay_scene_kafka</small>"]:::block
+      b_fantasy_card_game_scene_kafka["ファンタジーカード盤面<br/><small>fantasy_card_game_scene_kafka</small>"]:::block
+      b_poker_table_scene_kafka["ポーカーテーブル背景<br/><small>poker_table_scene_kafka</small>"]:::block
+      b_break_scene_kafka["休憩背景<br/><small>break_scene_kafka</small>"]:::block
+      b_work_start_scene_kafka["作業開始背景<br/><small>work_start_scene_kafka</small>"]:::block
+      b_morning_background_winter_kafka["冬朝背景<br/><small>morning_background_winter_kafka</small>"]:::block
+      b_morning_scene_commute_kafka["出発前の朝背景<br/><small>morning_scene_commute_kafka</small>"]:::block
+      b_morning_background_summer_kafka["夏朝背景<br/><small>morning_background_summer_kafka</small>"]:::block
+      b_morning_scene_sleepy_kafka["寝起きの朝背景<br/><small>morning_scene_sleepy_kafka</small>"]:::block
+      b_morning_background_spring_kafka["春朝背景<br/><small>morning_background_spring_kafka</small>"]:::block
+      b_morning_scene_coffee_kafka["朝コーヒー背景<br/><small>morning_scene_coffee_kafka</small>"]:::block
+      b_reading_scene_seaside_kafka["海辺の読書背景<br/><small>reading_scene_seaside_kafka</small>"]:::block
+      b_morning_background_autumn_kafka["秋朝背景<br/><small>morning_background_autumn_kafka</small>"]:::block
+      b_morning_scene_window_kafka["窓際の朝背景<br/><small>morning_scene_window_kafka</small>"]:::block
+      b_reading_scene_general_kafka["読書背景<br/><small>reading_scene_general_kafka</small>"]:::block
+      b_reading_scene_anne_kafka["赤毛のアン読書背景<br/><small>reading_scene_anne_kafka</small>"]:::block
+      b_progress_scene_kafka["進捗背景<br/><small>progress_scene_kafka</small>"]:::block
+      b_morning_scene_rain_kafka["雨の日の朝背景<br/><small>morning_scene_rain_kafka</small>"]:::block
+    end
+    subgraph cat_03["セリフ・フレーズ"]
+      direction TB
+      b_joinwars_status_text_pack["JoinWars文言<br/><small>joinwars_status_text_pack</small>"]:::block
+      b_morning_tweet_text_pack["おはツイ文言<br/><small>morning_tweet_text_pack</small>"]:::block
+      b_card_game_status_text_pack["カードゲーム文言<br/><small>card_game_status_text_pack</small>"]:::block
+      b_cosplay_status_text_pack["コスプレ文言<br/><small>cosplay_status_text_pack</small>"]:::block
+      b_poker_status_text_pack["ポーカーポスト文言<br/><small>poker_status_text_pack</small>"]:::block
+      b_announcement_text_pack["告知文言<br/><small>announcement_text_pack</small>"]:::block
+      b_daily_status_text_pack["日常ステータス文言<br/><small>daily_status_text_pack</small>"]:::block
+      b_morning_situation_text_pack["朝シチュエーション文言<br/><small>morning_situation_text_pack</small>"]:::block
+      b_text_content_pack["短い日本語セリフ<br/><small>text_content_pack</small>"]:::block
+      b_reading_status_text_pack["読書文言<br/><small>reading_status_text_pack</small>"]:::block
+    end
+    subgraph cat_04["ポーズ"]
+      direction TB
+      b_morning_pose_coffee_kafka["コーヒーおはツイ姿勢<br/><small>morning_pose_coffee_kafka</small>"]:::block
+      b_morning_pose_winter_kafka["冬おはツイ姿勢<br/><small>morning_pose_winter_kafka</small>"]:::block
+      b_morning_pose_commute_kafka["出発前おはツイ姿勢<br/><small>morning_pose_commute_kafka</small>"]:::block
+      b_morning_pose_summer_kafka["夏おはツイ姿勢<br/><small>morning_pose_summer_kafka</small>"]:::block
+      b_morning_pose_sleepy_kafka["寝起きおはツイ姿勢<br/><small>morning_pose_sleepy_kafka</small>"]:::block
+      b_morning_pose_spring_kafka["春おはツイ姿勢<br/><small>morning_pose_spring_kafka</small>"]:::block
+      b_morning_pose_autumn_kafka["秋おはツイ姿勢<br/><small>morning_pose_autumn_kafka</small>"]:::block
+      b_morning_pose_window_kafka["窓際おはツイ姿勢<br/><small>morning_pose_window_kafka</small>"]:::block
+      b_reading_pose_kafka["読書ポーズ<br/><small>reading_pose_kafka</small>"]:::block
+      b_morning_pose_rain_kafka["雨の日おはツイ姿勢<br/><small>morning_pose_rain_kafka</small>"]:::block
+    end
+    subgraph cat_05["衣装"]
+      direction TB
+      b_joinwars_style_kafka["JoinWars衣装<br/><small>joinwars_style_kafka</small>"]:::block
+      b_cosplay_event_outfit_kafka["コスプレ衣装<br/><small>cosplay_event_outfit_kafka</small>"]:::block
+      b_fantasy_card_game_style_kafka["ファンタジーカードゲーム衣装<br/><small>fantasy_card_game_style_kafka</small>"]:::block
+      b_poker_dealer_style_kafka["ポーカーディーラー衣装<br/><small>poker_dealer_style_kafka</small>"]:::block
+      b_seasonal_outfit_winter_kafka["冬衣装<br/><small>seasonal_outfit_winter_kafka</small>"]:::block
+      b_seasonal_outfit_summer_kafka["夏衣装<br/><small>seasonal_outfit_summer_kafka</small>"]:::block
+      b_seasonal_outfit_spring_kafka["春衣装<br/><small>seasonal_outfit_spring_kafka</small>"]:::block
+      b_seasonal_outfit_autumn_kafka["秋衣装<br/><small>seasonal_outfit_autumn_kafka</small>"]:::block
+      b_reading_outfit_kafka["読書衣装<br/><small>reading_outfit_kafka</small>"]:::block
+    end
+    subgraph cat_06["ブランド"]
+      direction TB
+      b_icon_mark_only_kafka["アイコン単独<br/><small>icon_mark_only_kafka</small>"]:::block
+      b_frame_only_kafka["フレーム単独<br/><small>frame_only_kafka</small>"]:::block
+      b_logo_only_kafka["ロゴ単独<br/><small>logo_only_kafka</small>"]:::block
+      b_logo_orbit_kafka["宇宙ロゴ単独<br/><small>logo_orbit_kafka</small>"]:::block
+      b_wordmark_only_kafka["文字ロゴ単独<br/><small>wordmark_only_kafka</small>"]:::block
+    end
+    subgraph cat_07["テキスト"]
+      direction TB
+      b_subtitle_pack["字幕・テロップ<br/><small>subtitle_pack</small>"]:::block
+      b_text_style_jp["日本語文字<br/><small>text_style_jp</small>"]:::block
+    end
+    subgraph cat_08["リプライ・対話"]
+      direction TB
+      b_chat_reply_pack["コメント返し<br/><small>chat_reply_pack</small>"]:::block
+      b_safe_reply_pack["話題切り替え<br/><small>safe_reply_pack</small>"]:::block
+    end
+    subgraph cat_09["演出"]
+      direction TB
+      b_vfx_trigger_pack["感情演出<br/><small>vfx_trigger_pack</small>"]:::block
+      b_effects_pack["装飾効果<br/><small>effects_pack</small>"]:::block
+    end
+    subgraph cat_10["表情"]
+      direction TB
+      b_expressions_pack["反応集<br/><small>expressions_pack</small>"]:::block
+      b_reaction_focus["表情強調<br/><small>reaction_focus</small>"]:::block
+    end
+    subgraph cat_11["アバター"]
+      direction TB
+      b_avatar_mode_pack["アバターモード<br/><small>avatar_mode_pack</small>"]:::block
+    end
+    subgraph cat_12["キャラクター"]
+      direction TB
+      b_character_kafka["KAFKA<br/><small>character_kafka</small>"]:::block
+    end
+    subgraph cat_13["キャラ衣装"]
+      direction TB
+      b_outfit_kafka["衣装<br/><small>outfit_kafka</small>"]:::block
+    end
+    subgraph cat_14["コンフィグ"]
+      direction TB
+      b_character_customization_pack["キャラ設定<br/><small>character_customization_pack</small>"]:::block
+    end
+    subgraph cat_15["システム・実行"]
+      direction TB
+      b_local_offline_pack["ローカル優先<br/><small>local_offline_pack</small>"]:::block
+    end
+    subgraph cat_16["ネガティブ"]
+      direction TB
+      b_negative_common["共通ネガティブ<br/><small>negative_common</small>"]:::block
+    end
+    subgraph cat_17["リサーチ"]
+      direction TB
+      b_source_research["再調査メモ<br/><small>source_research</small>"]:::block
+    end
+    subgraph cat_18["人格"]
+      direction TB
+      b_persona_pack["自律人格<br/><small>persona_pack</small>"]:::block
+    end
+    subgraph cat_19["制御"]
+      direction TB
+      b_control_panel_pack["操作パネル<br/><small>control_panel_pack</small>"]:::block
+    end
+    subgraph cat_20["基準"]
+      direction TB
+      b_master_style["マスタースタイル<br/><small>master_style</small>"]:::block
+    end
+    subgraph cat_21["安全"]
+      direction TB
+      b_moderation_pack["モデレーション<br/><small>moderation_pack</small>"]:::block
+    end
+    subgraph cat_22["展示・サイン"]
+      direction TB
+      b_demo_mode_pack["デモモード<br/><small>demo_mode_pack</small>"]:::block
+    end
+    subgraph cat_23["性格・トーン"]
+      direction TB
+      b_speech_mode_kafka["かふからしい発話モード<br/><small>speech_mode_kafka</small>"]:::block
+    end
+    subgraph cat_24["拡張"]
+      direction TB
+      b_plugin_pack["外部連携<br/><small>plugin_pack</small>"]:::block
+    end
+    subgraph cat_25["発表"]
+      direction TB
+      b_slide_pack["スライド発表<br/><small>slide_pack</small>"]:::block
+    end
+    subgraph cat_26["記憶"]
+      direction TB
+      b_memory_pack["記憶管理<br/><small>memory_pack</small>"]:::block
+    end
+    subgraph cat_27["記録・ログ"]
+      direction TB
+      b_research_log_pack["振り返りログ<br/><small>research_log_pack</small>"]:::block
+    end
+    subgraph cat_28["配信"]
+      direction TB
+      b_chat_platform_pack["配信チャット<br/><small>chat_platform_pack</small>"]:::block
+    end
+    subgraph cat_29["音声"]
+      direction TB
+      b_voice_pipeline_pack["音声パイプライン<br/><small>voice_pipeline_pack</small>"]:::block
+    end
+  end
+  t_joinwars_post --> b_master_style
+  t_joinwars_post --> b_character_kafka
+  t_joinwars_post --> b_joinwars_layout
+  t_joinwars_post --> b_joinwars_scene_kafka
+  t_joinwars_post --> b_joinwars_style_kafka
+  t_joinwars_post --> b_joinwars_status_text_pack
+  t_joinwars_post --> b_text_style_jp
+  t_joinwars_post --> b_negative_common
+  t_twitter_comic --> b_source_research
+  t_twitter_comic --> b_master_style
+  t_twitter_comic --> b_character_kafka
+  t_twitter_comic --> b_comic_layout
+  t_twitter_comic --> b_reaction_focus
+  t_twitter_comic --> b_text_style_jp
+  t_twitter_comic --> b_text_content_pack
+  t_twitter_comic --> b_effects_pack
+  t_twitter_comic --> b_negative_common
+  t_morning_tweet_coffee --> b_master_style
+  t_morning_tweet_coffee --> b_character_kafka
+  t_morning_tweet_coffee --> b_outfit_kafka
+  t_morning_tweet_coffee --> b_morning_pose_coffee_kafka
+  t_morning_tweet_coffee --> b_morning_scene_coffee_kafka
+  t_morning_tweet_coffee --> b_morning_tweet_layout
+  t_morning_tweet_coffee --> b_morning_situation_text_pack
+  t_morning_tweet_coffee --> b_text_style_jp
+  t_morning_tweet_coffee --> b_negative_common
+  t_morning_tweet_winter --> b_master_style
+  t_morning_tweet_winter --> b_character_kafka
+  t_morning_tweet_winter --> b_seasonal_outfit_winter_kafka
+  t_morning_tweet_winter --> b_morning_pose_winter_kafka
+  t_morning_tweet_winter --> b_morning_background_winter_kafka
+  t_morning_tweet_winter --> b_morning_tweet_layout
+  t_morning_tweet_winter --> b_morning_tweet_text_pack
+  t_morning_tweet_winter --> b_text_style_jp
+  t_morning_tweet_winter --> b_effects_pack
+  t_morning_tweet_winter --> b_negative_common
+  t_morning_tweet_commute --> b_master_style
+  t_morning_tweet_commute --> b_character_kafka
+  t_morning_tweet_commute --> b_outfit_kafka
+  t_morning_tweet_commute --> b_morning_pose_commute_kafka
+  t_morning_tweet_commute --> b_morning_scene_commute_kafka
+  t_morning_tweet_commute --> b_morning_tweet_layout
+  t_morning_tweet_commute --> b_morning_situation_text_pack
+  t_morning_tweet_commute --> b_text_style_jp
+  t_morning_tweet_commute --> b_negative_common
+  t_morning_tweet_summer --> b_master_style
+  t_morning_tweet_summer --> b_character_kafka
+  t_morning_tweet_summer --> b_seasonal_outfit_summer_kafka
+  t_morning_tweet_summer --> b_morning_pose_summer_kafka
+  t_morning_tweet_summer --> b_morning_background_summer_kafka
+  t_morning_tweet_summer --> b_morning_tweet_layout
+  t_morning_tweet_summer --> b_morning_tweet_text_pack
+  t_morning_tweet_summer --> b_text_style_jp
+  t_morning_tweet_summer --> b_effects_pack
+  t_morning_tweet_summer --> b_negative_common
+  t_morning_tweet_sleepy --> b_master_style
+  t_morning_tweet_sleepy --> b_character_kafka
+  t_morning_tweet_sleepy --> b_outfit_kafka
+  t_morning_tweet_sleepy --> b_morning_pose_sleepy_kafka
+  t_morning_tweet_sleepy --> b_morning_scene_sleepy_kafka
+  t_morning_tweet_sleepy --> b_morning_tweet_layout
+  t_morning_tweet_sleepy --> b_morning_situation_text_pack
+  t_morning_tweet_sleepy --> b_text_style_jp
+  t_morning_tweet_sleepy --> b_negative_common
+  t_morning_tweet_spring --> b_master_style
+  t_morning_tweet_spring --> b_character_kafka
+  t_morning_tweet_spring --> b_seasonal_outfit_spring_kafka
+  t_morning_tweet_spring --> b_morning_pose_spring_kafka
+  t_morning_tweet_spring --> b_morning_background_spring_kafka
+  t_morning_tweet_spring --> b_morning_tweet_layout
+  t_morning_tweet_spring --> b_morning_tweet_text_pack
+  t_morning_tweet_spring --> b_text_style_jp
+  t_morning_tweet_spring --> b_effects_pack
+  t_morning_tweet_spring --> b_negative_common
+  t_morning_tweet_autumn --> b_master_style
+  t_morning_tweet_autumn --> b_character_kafka
+  t_morning_tweet_autumn --> b_seasonal_outfit_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_pose_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_background_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_tweet_layout
+  t_morning_tweet_autumn --> b_morning_tweet_text_pack
+  t_morning_tweet_autumn --> b_text_style_jp
+  t_morning_tweet_autumn --> b_effects_pack
+  t_morning_tweet_autumn --> b_negative_common
+  t_morning_tweet_window --> b_master_style
+  t_morning_tweet_window --> b_character_kafka
+  t_morning_tweet_window --> b_outfit_kafka
+  t_morning_tweet_window --> b_morning_pose_window_kafka
+  t_morning_tweet_window --> b_morning_scene_window_kafka
+  t_morning_tweet_window --> b_morning_tweet_layout
+  t_morning_tweet_window --> b_morning_situation_text_pack
+  t_morning_tweet_window --> b_text_style_jp
+  t_morning_tweet_window --> b_negative_common
+  t_morning_tweet_rain --> b_master_style
+  t_morning_tweet_rain --> b_character_kafka
+  t_morning_tweet_rain --> b_outfit_kafka
+  t_morning_tweet_rain --> b_morning_pose_rain_kafka
+  t_morning_tweet_rain --> b_morning_scene_rain_kafka
+  t_morning_tweet_rain --> b_morning_tweet_layout
+  t_morning_tweet_rain --> b_morning_situation_text_pack
+  t_morning_tweet_rain --> b_text_style_jp
+  t_morning_tweet_rain --> b_negative_common
+  t_morning_tweet_index --> b_master_style
+  t_morning_tweet_index --> b_character_kafka
+  t_morning_tweet_index --> b_morning_tweet_layout
+  t_morning_tweet_index --> b_morning_tweet_text_pack
+  t_morning_tweet_index --> b_morning_situation_text_pack
+  t_morning_tweet_index --> b_text_style_jp
+  t_morning_tweet_index --> b_negative_common
+  t_goodnight_post --> b_master_style
+  t_goodnight_post --> b_character_kafka
+  t_goodnight_post --> b_outfit_kafka
+  t_goodnight_post --> b_goodnight_scene_kafka
+  t_goodnight_post --> b_status_post_layout
+  t_goodnight_post --> b_daily_status_text_pack
+  t_goodnight_post --> b_text_style_jp
+  t_goodnight_post --> b_negative_common
+  t_icon_mark_sheet --> b_master_style
+  t_icon_mark_sheet --> b_icon_mark_only_kafka
+  t_icon_mark_sheet --> b_negative_common
+  t_cardgame_post --> b_master_style
+  t_cardgame_post --> b_character_kafka
+  t_cardgame_post --> b_cardgame_post_layout
+  t_cardgame_post --> b_fantasy_card_game_scene_kafka
+  t_cardgame_post --> b_fantasy_card_game_style_kafka
+  t_cardgame_post --> b_card_game_status_text_pack
+  t_cardgame_post --> b_text_style_jp
+  t_cardgame_post --> b_negative_common
+  t_character_design_sheet --> b_character_sheet_kafka
+  t_cosplay_post --> b_master_style
+  t_cosplay_post --> b_character_kafka
+  t_cosplay_post --> b_cosplay_post_layout
+  t_cosplay_post --> b_cosplay_scene_kafka
+  t_cosplay_post --> b_cosplay_event_outfit_kafka
+  t_cosplay_post --> b_cosplay_status_text_pack
+  t_cosplay_post --> b_text_style_jp
+  t_cosplay_post --> b_negative_common
+  t_comment_reply_guide --> b_master_style
+  t_comment_reply_guide --> b_character_kafka
+  t_comment_reply_guide --> b_chat_reply_pack
+  t_comment_reply_guide --> b_speech_mode_kafka
+  t_comment_reply_guide --> b_safe_reply_pack
+  t_comment_reply_guide --> b_text_style_jp
+  t_comment_reply_guide --> b_expressions_pack
+  t_comment_reply_guide --> b_negative_common
+  t_chat_reply_card --> b_master_style
+  t_chat_reply_card --> b_character_kafka
+  t_chat_reply_card --> b_chat_reply_pack
+  t_chat_reply_card --> b_speech_mode_kafka
+  t_chat_reply_card --> b_text_style_jp
+  t_chat_reply_card --> b_text_content_pack
+  t_chat_reply_card --> b_expressions_pack
+  t_chat_reply_card --> b_negative_common
+  t_chat_reply_card -.-> b_chat_reply_pack
+  t_chat_reply_card -.-> b_speech_mode_kafka
+  t_chat_reply_card -.-> b_text_style_jp
+  t_chat_reply_card -.-> b_expressions_pack
+  t_slide_talk --> b_master_style
+  t_slide_talk --> b_character_kafka
+  t_slide_talk --> b_slide_pack
+  t_slide_talk --> b_text_style_jp
+  t_slide_talk --> b_negative_common
+  t_frame_sheet --> b_master_style
+  t_frame_sheet --> b_frame_only_kafka
+  t_frame_sheet --> b_negative_common
+  t_poker_post --> b_master_style
+  t_poker_post --> b_character_kafka
+  t_poker_post --> b_poker_post_layout
+  t_poker_post --> b_poker_table_scene_kafka
+  t_poker_post --> b_poker_dealer_style_kafka
+  t_poker_post --> b_poker_status_text_pack
+  t_poker_post --> b_text_style_jp
+  t_poker_post --> b_negative_common
+  t_logo_only_sheet --> b_master_style
+  t_logo_only_sheet --> b_logo_only_kafka
+  t_logo_only_sheet --> b_wordmark_only_kafka
+  t_logo_only_sheet --> b_icon_mark_only_kafka
+  t_logo_only_sheet --> b_negative_common
+  t_wordmark_sheet --> b_master_style
+  t_wordmark_sheet --> b_wordmark_only_kafka
+  t_wordmark_sheet --> b_text_style_jp
+  t_wordmark_sheet --> b_negative_common
+  t_persona_poster --> b_master_style
+  t_persona_poster --> b_character_kafka
+  t_persona_poster --> b_outfit_kafka
+  t_persona_poster --> b_persona_poster_viz
+  t_persona_poster --> b_persona_pack
+  t_persona_poster --> b_text_style_jp
+  t_persona_poster --> b_negative_common
+  t_persona_poster -.-> b_persona_poster_viz
+  t_persona_poster -.-> b_persona_pack
+  t_persona_poster -.-> b_text_style_jp
+  t_persona_sheet --> b_master_style
+  t_persona_sheet --> b_character_kafka
+  t_persona_sheet --> b_persona_sheet_vlog
+  t_persona_sheet --> b_persona_pack
+  t_persona_sheet --> b_speech_mode_kafka
+  t_persona_sheet --> b_text_style_jp
+  t_persona_sheet --> b_negative_common
+  t_break_post --> b_master_style
+  t_break_post --> b_character_kafka
+  t_break_post --> b_outfit_kafka
+  t_break_post --> b_break_scene_kafka
+  t_break_post --> b_status_post_layout
+  t_break_post --> b_daily_status_text_pack
+  t_break_post --> b_text_style_jp
+  t_break_post --> b_negative_common
+  t_work_start_post --> b_master_style
+  t_work_start_post --> b_character_kafka
+  t_work_start_post --> b_outfit_kafka
+  t_work_start_post --> b_work_start_scene_kafka
+  t_work_start_post --> b_status_post_layout
+  t_work_start_post --> b_daily_status_text_pack
+  t_work_start_post --> b_text_style_jp
+  t_work_start_post --> b_negative_common
+  t_reaction_image --> b_master_style
+  t_reaction_image --> b_character_kafka
+  t_reaction_image --> b_outfit_kafka
+  t_reaction_image --> b_reaction_focus
+  t_reaction_image --> b_text_style_jp
+  t_reaction_image --> b_text_content_pack
+  t_reaction_image --> b_effects_pack
+  t_reaction_image --> b_negative_common
+  t_reaction_image -.-> b_reaction_focus
+  t_reaction_image -.-> b_text_style_jp
+  t_reaction_image -.-> b_text_content_pack
+  t_reaction_image -.-> b_effects_pack
+  t_orbit_logo_sheet --> b_master_style
+  t_orbit_logo_sheet --> b_logo_orbit_kafka
+  t_orbit_logo_sheet --> b_wordmark_only_kafka
+  t_orbit_logo_sheet --> b_icon_mark_only_kafka
+  t_orbit_logo_sheet --> b_negative_common
+  t_archive_contact_sheet --> b_master_style
+  t_archive_contact_sheet --> b_character_kafka
+  t_archive_contact_sheet --> b_archive_contact_sheet_viz
+  t_archive_contact_sheet --> b_archive_index_vlog
+  t_archive_contact_sheet --> b_prompt_archive_sheet_vlog
+  t_archive_contact_sheet --> b_negative_common
+  t_archive_contact_sheet -.-> b_archive_contact_sheet_viz
+  t_archive_contact_sheet -.-> b_archive_index_vlog
+  t_archive_contact_sheet -.-> b_prompt_archive_sheet_vlog
+  t_archive_index --> b_master_style
+  t_archive_index --> b_character_kafka
+  t_archive_index --> b_archive_index_vlog
+  t_archive_index --> b_prompt_archive_sheet_vlog
+  t_archive_index --> b_speech_mode_kafka
+  t_archive_index --> b_negative_common
+  t_stamp_sheet --> b_master_style
+  t_stamp_sheet --> b_character_kafka
+  t_stamp_sheet --> b_outfit_kafka
+  t_stamp_sheet --> b_sticker_sheet_layout
+  t_stamp_sheet --> b_expressions_pack
+  t_stamp_sheet --> b_text_style_jp
+  t_stamp_sheet --> b_text_content_pack
+  t_stamp_sheet --> b_effects_pack
+  t_stamp_sheet --> b_negative_common
+  t_reading_post_seaside --> b_master_style
+  t_reading_post_seaside --> b_character_kafka
+  t_reading_post_seaside --> b_reading_post_layout
+  t_reading_post_seaside --> b_reading_scene_seaside_kafka
+  t_reading_post_seaside --> b_reading_pose_kafka
+  t_reading_post_seaside --> b_reading_outfit_kafka
+  t_reading_post_seaside --> b_reading_status_text_pack
+  t_reading_post_seaside --> b_text_style_jp
+  t_reading_post_seaside --> b_negative_common
+  t_photo_prompt_sheet --> b_master_style
+  t_photo_prompt_sheet --> b_character_kafka
+  t_photo_prompt_sheet --> b_photo_prompt_sheet_vlog
+  t_photo_prompt_sheet --> b_prompt_archive_sheet_vlog
+  t_photo_prompt_sheet --> b_negative_common
+  t_memory_note_board --> b_master_style
+  t_memory_note_board --> b_character_kafka
+  t_memory_note_board --> b_memory_note_board_viz
+  t_memory_note_board --> b_memory_pack
+  t_memory_note_board --> b_research_log_pack
+  t_memory_note_board --> b_negative_common
+  t_memory_note_board -.-> b_memory_note_board_viz
+  t_memory_note_board -.-> b_memory_pack
+  t_memory_note_board -.-> b_research_log_pack
+  t_memory_update_card --> b_master_style
+  t_memory_update_card --> b_character_kafka
+  t_memory_update_card --> b_memory_pack
+  t_memory_update_card --> b_speech_mode_kafka
+  t_memory_update_card --> b_research_log_pack
+  t_memory_update_card --> b_negative_common
+  t_topic_redirect_card --> b_master_style
+  t_topic_redirect_card --> b_character_kafka
+  t_topic_redirect_card --> b_safe_reply_pack
+  t_topic_redirect_card --> b_speech_mode_kafka
+  t_topic_redirect_card --> b_text_style_jp
+  t_topic_redirect_card --> b_negative_common
+  t_topic_redirect_banner --> b_master_style
+  t_topic_redirect_banner --> b_character_kafka
+  t_topic_redirect_banner --> b_topic_redirect_banner_viz
+  t_topic_redirect_banner --> b_safe_reply_pack
+  t_topic_redirect_banner --> b_text_style_jp
+  t_topic_redirect_banner --> b_negative_common
+  t_reading_post_general --> b_master_style
+  t_reading_post_general --> b_character_kafka
+  t_reading_post_general --> b_reading_post_layout
+  t_reading_post_general --> b_reading_scene_general_kafka
+  t_reading_post_general --> b_reading_pose_kafka
+  t_reading_post_general --> b_reading_outfit_kafka
+  t_reading_post_general --> b_reading_status_text_pack
+  t_reading_post_general --> b_text_style_jp
+  t_reading_post_general --> b_negative_common
+  t_reading_post_anne --> b_master_style
+  t_reading_post_anne --> b_character_kafka
+  t_reading_post_anne --> b_reading_post_layout
+  t_reading_post_anne --> b_reading_scene_anne_kafka
+  t_reading_post_anne --> b_reading_pose_kafka
+  t_reading_post_anne --> b_reading_outfit_kafka
+  t_reading_post_anne --> b_reading_status_text_pack
+  t_reading_post_anne --> b_text_style_jp
+  t_reading_post_anne --> b_negative_common
+  t_ai_tuber_core_pack --> b_master_style
+  t_ai_tuber_core_pack --> b_character_kafka
+  t_ai_tuber_core_pack --> b_persona_pack
+  t_ai_tuber_core_pack --> b_speech_mode_kafka
+  t_ai_tuber_core_pack --> b_local_offline_pack
+  t_ai_tuber_core_pack --> b_voice_pipeline_pack
+  t_ai_tuber_core_pack --> b_chat_platform_pack
+  t_ai_tuber_core_pack --> b_avatar_mode_pack
+  t_ai_tuber_core_pack --> b_control_panel_pack
+  t_ai_tuber_core_pack --> b_demo_mode_pack
+  t_ai_tuber_core_pack --> b_moderation_pack
+  t_ai_tuber_core_pack --> b_plugin_pack
+  t_reply_stamp_sheet --> b_master_style
+  t_reply_stamp_sheet --> b_character_kafka
+  t_reply_stamp_sheet --> b_outfit_kafka
+  t_reply_stamp_sheet --> b_reply_stamp_sheet_viz
+  t_reply_stamp_sheet --> b_chat_reply_pack
+  t_reply_stamp_sheet --> b_expressions_pack
+  t_reply_stamp_sheet --> b_text_style_jp
+  t_reply_stamp_sheet --> b_negative_common
+  t_progress_post --> b_master_style
+  t_progress_post --> b_character_kafka
+  t_progress_post --> b_outfit_kafka
+  t_progress_post --> b_progress_scene_kafka
+  t_progress_post --> b_status_post_layout
+  t_progress_post --> b_daily_status_text_pack
+  t_progress_post --> b_text_style_jp
+  t_progress_post --> b_negative_common
+  t_announcement_thumbnail --> b_master_style
+  t_announcement_thumbnail --> b_character_kafka
+  t_announcement_thumbnail --> b_reaction_focus
+  t_announcement_thumbnail --> b_announcement_text_pack
+  t_announcement_thumbnail --> b_text_style_jp
+  t_announcement_thumbnail --> b_effects_pack
+  t_announcement_thumbnail --> b_negative_common
+  t_summary_sheet --> b_master_style
+  t_summary_sheet --> b_character_kafka
+  t_summary_sheet --> b_summary_sheet_vlog
+  t_summary_sheet --> b_speech_mode_kafka
+  t_summary_sheet --> b_memory_pack
+  t_summary_sheet --> b_research_log_pack
+  t_summary_sheet --> b_negative_common
+  t_ai_tuber_ops_pack --> b_master_style
+  t_ai_tuber_ops_pack --> b_character_kafka
+  t_ai_tuber_ops_pack --> b_chat_reply_pack
+  t_ai_tuber_ops_pack --> b_safe_reply_pack
+  t_ai_tuber_ops_pack --> b_speech_mode_kafka
+  t_ai_tuber_ops_pack --> b_memory_pack
+  t_ai_tuber_ops_pack --> b_vfx_trigger_pack
+  t_ai_tuber_ops_pack --> b_subtitle_pack
+  t_ai_tuber_ops_pack --> b_announcement_text_pack
+  t_ai_tuber_ops_pack --> b_character_customization_pack
+  t_ai_tuber_ops_pack --> b_research_log_pack
+  t_poststream_review_board --> b_master_style
+  t_poststream_review_board --> b_character_kafka
+  t_poststream_review_board --> b_poststream_review_board_viz
+  t_poststream_review_board --> b_research_log_pack
+  t_poststream_review_board --> b_memory_pack
+  t_poststream_review_board --> b_negative_common
+  t_poststream_review_board -.-> b_poststream_review_board_viz
+  t_poststream_review_board -.-> b_research_log_pack
+  t_poststream_review_board -.-> b_memory_pack
+  t_daily_work_sheet --> b_master_style
+  t_daily_work_sheet --> b_character_kafka
+  t_daily_work_sheet --> b_daily_work_sheet_vlog
+  t_daily_work_sheet --> b_local_offline_pack
+  t_daily_work_sheet --> b_speech_mode_kafka
+  t_daily_work_sheet --> b_research_log_pack
+  t_daily_work_sheet --> b_negative_common
+  t_stream_start_banner --> b_master_style
+  t_stream_start_banner --> b_character_kafka
+  t_stream_start_banner --> b_reaction_focus
+  t_stream_start_banner --> b_stream_start_banner_viz
+  t_stream_start_banner --> b_announcement_text_pack
+  t_stream_start_banner --> b_text_style_jp
+  t_stream_start_banner --> b_effects_pack
+  t_stream_start_banner --> b_negative_common
+          </div>
+        </div>
+        <div class="subsection">
+          <h3>Block Relations</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_sticker_sheet_layout["4x4 ステッカーシート<br/><small>sticker_sheet_layout</small>"]:::block
+      b_joinwars_layout["JoinWars用レイアウト<br/><small>joinwars_layout</small>"]:::block
+      b_character_sheet_kafka["Kafka キャラデザインシート<br/><small>character_sheet_kafka</small>"]:::block
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_archive_index_vlog["アーカイブ索引<br/><small>archive_index_vlog</small>"]:::block
+      b_cardgame_post_layout["カードゲームレイアウト<br/><small>cardgame_post_layout</small>"]:::block
+      b_cosplay_post_layout["コスプレレイアウト<br/><small>cosplay_post_layout</small>"]:::block
+      b_persona_sheet_vlog["パーソナ設定シート<br/><small>persona_sheet_vlog</small>"]:::block
+      b_poker_post_layout["ポーカーレイアウト<br/><small>poker_post_layout</small>"]:::block
+      b_persona_poster_viz["人格ポスター<br/><small>persona_poster_viz</small>"]:::block
+      b_daily_work_sheet_vlog["作業管理テンプレート<br/><small>daily_work_sheet_vlog</small>"]:::block
+      b_archive_contact_sheet_viz["成果物一覧（コンタクトシート）<br/><small>archive_contact_sheet_viz</small>"]:::block
+      b_summary_sheet_vlog["振り返りサマリー<br/><small>summary_sheet_vlog</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+      b_comic_layout["漫画レイアウト<br/><small>comic_layout</small>"]:::block
+      b_prompt_archive_sheet_vlog["生成台帳<br/><small>prompt_archive_sheet_vlog</small>"]:::block
+      b_photo_prompt_sheet_vlog["画像生成台帳（詳細）<br/><small>photo_prompt_sheet_vlog</small>"]:::block
+      b_memory_note_board_viz["記憶メモ（記録用ボード）<br/><small>memory_note_board_viz</small>"]:::block
+      b_topic_redirect_banner_viz["話題切り替え用バナー<br/><small>topic_redirect_banner_viz</small>"]:::block
+      b_reading_post_layout["読書シーン用レイアウト<br/><small>reading_post_layout</small>"]:::block
+      b_reply_stamp_sheet_viz["返信スタンプ（グリッド）<br/><small>reply_stamp_sheet_viz</small>"]:::block
+      b_poststream_review_board_viz["配信振り返り（レビュー用）<br/><small>poststream_review_board_viz</small>"]:::block
+      b_stream_start_banner_viz["配信開始バナー<br/><small>stream_start_banner_viz</small>"]:::block
+    end
+    subgraph cat_02["背景"]
+      direction TB
+      b_joinwars_scene_kafka["JoinWars背景<br/><small>joinwars_scene_kafka</small>"]:::block
+      b_goodnight_scene_kafka["おやすみ背景<br/><small>goodnight_scene_kafka</small>"]:::block
+      b_cosplay_scene_kafka["コスプレ撮影背景<br/><small>cosplay_scene_kafka</small>"]:::block
+      b_fantasy_card_game_scene_kafka["ファンタジーカード盤面<br/><small>fantasy_card_game_scene_kafka</small>"]:::block
+      b_poker_table_scene_kafka["ポーカーテーブル背景<br/><small>poker_table_scene_kafka</small>"]:::block
+      b_break_scene_kafka["休憩背景<br/><small>break_scene_kafka</small>"]:::block
+      b_work_start_scene_kafka["作業開始背景<br/><small>work_start_scene_kafka</small>"]:::block
+      b_morning_background_winter_kafka["冬朝背景<br/><small>morning_background_winter_kafka</small>"]:::block
+      b_morning_scene_commute_kafka["出発前の朝背景<br/><small>morning_scene_commute_kafka</small>"]:::block
+      b_morning_background_summer_kafka["夏朝背景<br/><small>morning_background_summer_kafka</small>"]:::block
+      b_morning_scene_sleepy_kafka["寝起きの朝背景<br/><small>morning_scene_sleepy_kafka</small>"]:::block
+      b_morning_background_spring_kafka["春朝背景<br/><small>morning_background_spring_kafka</small>"]:::block
+      b_morning_scene_coffee_kafka["朝コーヒー背景<br/><small>morning_scene_coffee_kafka</small>"]:::block
+      b_reading_scene_seaside_kafka["海辺の読書背景<br/><small>reading_scene_seaside_kafka</small>"]:::block
+      b_morning_background_autumn_kafka["秋朝背景<br/><small>morning_background_autumn_kafka</small>"]:::block
+      b_morning_scene_window_kafka["窓際の朝背景<br/><small>morning_scene_window_kafka</small>"]:::block
+      b_reading_scene_general_kafka["読書背景<br/><small>reading_scene_general_kafka</small>"]:::block
+      b_reading_scene_anne_kafka["赤毛のアン読書背景<br/><small>reading_scene_anne_kafka</small>"]:::block
+      b_progress_scene_kafka["進捗背景<br/><small>progress_scene_kafka</small>"]:::block
+      b_morning_scene_rain_kafka["雨の日の朝背景<br/><small>morning_scene_rain_kafka</small>"]:::block
+    end
+    subgraph cat_03["セリフ・フレーズ"]
+      direction TB
+      b_joinwars_status_text_pack["JoinWars文言<br/><small>joinwars_status_text_pack</small>"]:::block
+      b_morning_tweet_text_pack["おはツイ文言<br/><small>morning_tweet_text_pack</small>"]:::block
+      b_card_game_status_text_pack["カードゲーム文言<br/><small>card_game_status_text_pack</small>"]:::block
+      b_cosplay_status_text_pack["コスプレ文言<br/><small>cosplay_status_text_pack</small>"]:::block
+      b_poker_status_text_pack["ポーカーポスト文言<br/><small>poker_status_text_pack</small>"]:::block
+      b_announcement_text_pack["告知文言<br/><small>announcement_text_pack</small>"]:::block
+      b_daily_status_text_pack["日常ステータス文言<br/><small>daily_status_text_pack</small>"]:::block
+      b_morning_situation_text_pack["朝シチュエーション文言<br/><small>morning_situation_text_pack</small>"]:::block
+      b_text_content_pack["短い日本語セリフ<br/><small>text_content_pack</small>"]:::block
+      b_reading_status_text_pack["読書文言<br/><small>reading_status_text_pack</small>"]:::block
+    end
+    subgraph cat_04["ポーズ"]
+      direction TB
+      b_morning_pose_coffee_kafka["コーヒーおはツイ姿勢<br/><small>morning_pose_coffee_kafka</small>"]:::block
+      b_morning_pose_winter_kafka["冬おはツイ姿勢<br/><small>morning_pose_winter_kafka</small>"]:::block
+      b_morning_pose_commute_kafka["出発前おはツイ姿勢<br/><small>morning_pose_commute_kafka</small>"]:::block
+      b_morning_pose_summer_kafka["夏おはツイ姿勢<br/><small>morning_pose_summer_kafka</small>"]:::block
+      b_morning_pose_sleepy_kafka["寝起きおはツイ姿勢<br/><small>morning_pose_sleepy_kafka</small>"]:::block
+      b_morning_pose_spring_kafka["春おはツイ姿勢<br/><small>morning_pose_spring_kafka</small>"]:::block
+      b_morning_pose_autumn_kafka["秋おはツイ姿勢<br/><small>morning_pose_autumn_kafka</small>"]:::block
+      b_morning_pose_window_kafka["窓際おはツイ姿勢<br/><small>morning_pose_window_kafka</small>"]:::block
+      b_reading_pose_kafka["読書ポーズ<br/><small>reading_pose_kafka</small>"]:::block
+      b_morning_pose_rain_kafka["雨の日おはツイ姿勢<br/><small>morning_pose_rain_kafka</small>"]:::block
+    end
+    subgraph cat_05["衣装"]
+      direction TB
+      b_joinwars_style_kafka["JoinWars衣装<br/><small>joinwars_style_kafka</small>"]:::block
+      b_cosplay_event_outfit_kafka["コスプレ衣装<br/><small>cosplay_event_outfit_kafka</small>"]:::block
+      b_fantasy_card_game_style_kafka["ファンタジーカードゲーム衣装<br/><small>fantasy_card_game_style_kafka</small>"]:::block
+      b_poker_dealer_style_kafka["ポーカーディーラー衣装<br/><small>poker_dealer_style_kafka</small>"]:::block
+      b_seasonal_outfit_winter_kafka["冬衣装<br/><small>seasonal_outfit_winter_kafka</small>"]:::block
+      b_seasonal_outfit_summer_kafka["夏衣装<br/><small>seasonal_outfit_summer_kafka</small>"]:::block
+      b_seasonal_outfit_spring_kafka["春衣装<br/><small>seasonal_outfit_spring_kafka</small>"]:::block
+      b_seasonal_outfit_autumn_kafka["秋衣装<br/><small>seasonal_outfit_autumn_kafka</small>"]:::block
+      b_reading_outfit_kafka["読書衣装<br/><small>reading_outfit_kafka</small>"]:::block
+    end
+    subgraph cat_06["ブランド"]
+      direction TB
+      b_icon_mark_only_kafka["アイコン単独<br/><small>icon_mark_only_kafka</small>"]:::block
+      b_frame_only_kafka["フレーム単独<br/><small>frame_only_kafka</small>"]:::block
+      b_logo_only_kafka["ロゴ単独<br/><small>logo_only_kafka</small>"]:::block
+      b_logo_orbit_kafka["宇宙ロゴ単独<br/><small>logo_orbit_kafka</small>"]:::block
+      b_wordmark_only_kafka["文字ロゴ単独<br/><small>wordmark_only_kafka</small>"]:::block
+    end
+    subgraph cat_07["テキスト"]
+      direction TB
+      b_subtitle_pack["字幕・テロップ<br/><small>subtitle_pack</small>"]:::block
+      b_text_style_jp["日本語文字<br/><small>text_style_jp</small>"]:::block
+    end
+    subgraph cat_08["リプライ・対話"]
+      direction TB
+      b_chat_reply_pack["コメント返し<br/><small>chat_reply_pack</small>"]:::block
+      b_safe_reply_pack["話題切り替え<br/><small>safe_reply_pack</small>"]:::block
+    end
+    subgraph cat_09["演出"]
+      direction TB
+      b_vfx_trigger_pack["感情演出<br/><small>vfx_trigger_pack</small>"]:::block
+      b_effects_pack["装飾効果<br/><small>effects_pack</small>"]:::block
+    end
+    subgraph cat_10["表情"]
+      direction TB
+      b_expressions_pack["反応集<br/><small>expressions_pack</small>"]:::block
+      b_reaction_focus["表情強調<br/><small>reaction_focus</small>"]:::block
+    end
+    subgraph cat_11["アバター"]
+      direction TB
+      b_avatar_mode_pack["アバターモード<br/><small>avatar_mode_pack</small>"]:::block
+    end
+    subgraph cat_12["キャラクター"]
+      direction TB
+      b_character_kafka["KAFKA<br/><small>character_kafka</small>"]:::block
+    end
+    subgraph cat_13["キャラ衣装"]
+      direction TB
+      b_outfit_kafka["衣装<br/><small>outfit_kafka</small>"]:::block
+    end
+    subgraph cat_14["コンフィグ"]
+      direction TB
+      b_character_customization_pack["キャラ設定<br/><small>character_customization_pack</small>"]:::block
+    end
+    subgraph cat_15["システム・実行"]
+      direction TB
+      b_local_offline_pack["ローカル優先<br/><small>local_offline_pack</small>"]:::block
+    end
+    subgraph cat_16["ネガティブ"]
+      direction TB
+      b_negative_common["共通ネガティブ<br/><small>negative_common</small>"]:::block
+    end
+    subgraph cat_17["リサーチ"]
+      direction TB
+      b_source_research["再調査メモ<br/><small>source_research</small>"]:::block
+    end
+    subgraph cat_18["人格"]
+      direction TB
+      b_persona_pack["自律人格<br/><small>persona_pack</small>"]:::block
+    end
+    subgraph cat_19["制御"]
+      direction TB
+      b_control_panel_pack["操作パネル<br/><small>control_panel_pack</small>"]:::block
+    end
+    subgraph cat_20["基準"]
+      direction TB
+      b_master_style["マスタースタイル<br/><small>master_style</small>"]:::block
+    end
+    subgraph cat_21["安全"]
+      direction TB
+      b_moderation_pack["モデレーション<br/><small>moderation_pack</small>"]:::block
+    end
+    subgraph cat_22["展示・サイン"]
+      direction TB
+      b_demo_mode_pack["デモモード<br/><small>demo_mode_pack</small>"]:::block
+    end
+    subgraph cat_23["性格・トーン"]
+      direction TB
+      b_speech_mode_kafka["かふからしい発話モード<br/><small>speech_mode_kafka</small>"]:::block
+    end
+    subgraph cat_24["拡張"]
+      direction TB
+      b_plugin_pack["外部連携<br/><small>plugin_pack</small>"]:::block
+    end
+    subgraph cat_25["発表"]
+      direction TB
+      b_slide_pack["スライド発表<br/><small>slide_pack</small>"]:::block
+    end
+    subgraph cat_26["記憶"]
+      direction TB
+      b_memory_pack["記憶管理<br/><small>memory_pack</small>"]:::block
+    end
+    subgraph cat_27["記録・ログ"]
+      direction TB
+      b_research_log_pack["振り返りログ<br/><small>research_log_pack</small>"]:::block
+    end
+    subgraph cat_28["配信"]
+      direction TB
+      b_chat_platform_pack["配信チャット<br/><small>chat_platform_pack</small>"]:::block
+    end
+    subgraph cat_29["音声"]
+      direction TB
+      b_voice_pipeline_pack["音声パイプライン<br/><small>voice_pipeline_pack</small>"]:::block
+    end
+  end
+  subgraph templates["Referenced Templates"]
+    direction TB
+      t_comment_reply_guide["Kafka コメント返しガイド<br/><small>comment_reply_guide</small>"]:::template
+      t_slide_talk["Kafka スライド発表<br/><small>slide_talk</small>"]:::template
+      t_persona_sheet["Kafka 人格固定カード<br/><small>persona_sheet</small>"]:::template
+      t_ai_tuber_ops_pack["Kafka 配信後レビューカード<br/><small>ai_tuber_ops_pack</small>"]:::template
+      t_daily_work_sheet["Kafka 配信運用カード<br/><small>daily_work_sheet</small>"]:::template
+  end
+  b_morning_tweet_layout -.-> b_status_post_layout
+  b_chat_reply_pack -.-> b_safe_reply_pack
+  b_chat_reply_pack -.-> b_speech_mode_kafka
+  b_slide_pack -.-> t_ai_tuber_ops_pack
+  b_slide_pack -.-> t_comment_reply_guide
+  b_slide_pack -.-> t_slide_talk
+  b_persona_sheet_vlog -.-> t_persona_sheet
+  b_persona_poster_viz -.-> b_persona_sheet_vlog
+  b_persona_pack -.-> b_persona_sheet_vlog
+  b_persona_pack -.-> b_persona_poster_viz
+  b_persona_poster_viz -.-> b_speech_mode_kafka
+  b_daily_work_sheet_vlog -.-> t_daily_work_sheet
+  b_daily_work_sheet_vlog -.-> t_daily_work_sheet
+  b_daily_work_sheet_vlog -.-> b_research_log_pack
+  b_daily_work_sheet_vlog -.-> b_memory_pack
+  b_expressions_pack -.-> b_reaction_focus
+  b_archive_contact_sheet_viz -.-> b_prompt_archive_sheet_vlog
+  b_archive_contact_sheet_viz -.-> b_prompt_archive_sheet_vlog
+  b_archive_contact_sheet_viz -.-> b_archive_index_vlog
+  b_morning_tweet_layout -.-> b_status_post_layout
+  b_persona_pack -.-> b_speech_mode_kafka
+  b_reaction_focus -.-> b_expressions_pack
+  b_reaction_focus -.-> b_text_content_pack
+  b_memory_note_board_viz -.-> b_memory_pack
+  b_memory_note_board_viz -.-> b_memory_pack
+  b_archive_contact_sheet_viz -.-> b_memory_note_board_viz
+  b_chat_reply_pack -.-> b_topic_redirect_banner_viz
+  b_safe_reply_pack -.-> b_topic_redirect_banner_viz
+  b_reply_stamp_sheet_viz -.-> b_reaction_focus
+  b_reaction_focus -.-> b_reply_stamp_sheet_viz
+  b_reply_stamp_sheet_viz -.-> b_text_style_jp
+  b_poststream_review_board_viz -.-> b_research_log_pack
+  b_memory_pack -.-> b_poststream_review_board_viz
+          </div>
+        </div>
+      </section>
+      <section class="preset">
+        <h2>Templates / social</h2>
+        <p class="meta">Prompt Vault DB Graph | Templates | kind:social</p>
+        <div class="subsection">
+          <h3>Template Composition</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph templates["Templates"]
+    direction TB
+    subgraph kind_01["social"]
+      direction TB
+      t_joinwars_post["Kafka JoinWars投稿<br/><small>joinwars_post</small>"]:::template
+      t_morning_tweet_coffee["Kafka おはツイ コーヒー<br/><small>morning_tweet_coffee</small>"]:::template
+      t_morning_tweet_winter["Kafka おはツイ 冬<br/><small>morning_tweet_winter</small>"]:::template
+      t_morning_tweet_commute["Kafka おはツイ 出発前<br/><small>morning_tweet_commute</small>"]:::template
+      t_morning_tweet_summer["Kafka おはツイ 夏<br/><small>morning_tweet_summer</small>"]:::template
+      t_morning_tweet_sleepy["Kafka おはツイ 寝起き<br/><small>morning_tweet_sleepy</small>"]:::template
+      t_morning_tweet_spring["Kafka おはツイ 春<br/><small>morning_tweet_spring</small>"]:::template
+      t_morning_tweet_autumn["Kafka おはツイ 秋<br/><small>morning_tweet_autumn</small>"]:::template
+      t_morning_tweet_window["Kafka おはツイ 窓際<br/><small>morning_tweet_window</small>"]:::template
+      t_morning_tweet_rain["Kafka おはツイ 雨の日<br/><small>morning_tweet_rain</small>"]:::template
+      t_goodnight_post["Kafka おやすみポスト<br/><small>goodnight_post</small>"]:::template
+      t_cardgame_post["Kafka カードゲーム投稿<br/><small>cardgame_post</small>"]:::template
+      t_cosplay_post["Kafka コスプレ投稿<br/><small>cosplay_post</small>"]:::template
+      t_poker_post["Kafka ポーカー投稿<br/><small>poker_post</small>"]:::template
+      t_break_post["Kafka 休憩ポスト<br/><small>break_post</small>"]:::template
+      t_work_start_post["Kafka 作業開始ポスト<br/><small>work_start_post</small>"]:::template
+      t_reading_post_seaside["Kafka 海辺の読書投稿<br/><small>reading_post_seaside</small>"]:::template
+      t_reading_post_general["Kafka 読書投稿<br/><small>reading_post_general</small>"]:::template
+      t_reading_post_anne["Kafka 赤毛のアン読書投稿<br/><small>reading_post_anne</small>"]:::template
+      t_progress_post["Kafka 進捗ポスト<br/><small>progress_post</small>"]:::template
+    end
+  end
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_sticker_sheet_layout["4x4 ステッカーシート<br/><small>sticker_sheet_layout</small>"]:::block
+      b_joinwars_layout["JoinWars用レイアウト<br/><small>joinwars_layout</small>"]:::block
+      b_character_sheet_kafka["Kafka キャラデザインシート<br/><small>character_sheet_kafka</small>"]:::block
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_archive_index_vlog["アーカイブ索引<br/><small>archive_index_vlog</small>"]:::block
+      b_cardgame_post_layout["カードゲームレイアウト<br/><small>cardgame_post_layout</small>"]:::block
+      b_cosplay_post_layout["コスプレレイアウト<br/><small>cosplay_post_layout</small>"]:::block
+      b_persona_sheet_vlog["パーソナ設定シート<br/><small>persona_sheet_vlog</small>"]:::block
+      b_poker_post_layout["ポーカーレイアウト<br/><small>poker_post_layout</small>"]:::block
+      b_persona_poster_viz["人格ポスター<br/><small>persona_poster_viz</small>"]:::block
+      b_daily_work_sheet_vlog["作業管理テンプレート<br/><small>daily_work_sheet_vlog</small>"]:::block
+      b_archive_contact_sheet_viz["成果物一覧（コンタクトシート）<br/><small>archive_contact_sheet_viz</small>"]:::block
+      b_summary_sheet_vlog["振り返りサマリー<br/><small>summary_sheet_vlog</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+      b_comic_layout["漫画レイアウト<br/><small>comic_layout</small>"]:::block
+      b_prompt_archive_sheet_vlog["生成台帳<br/><small>prompt_archive_sheet_vlog</small>"]:::block
+      b_photo_prompt_sheet_vlog["画像生成台帳（詳細）<br/><small>photo_prompt_sheet_vlog</small>"]:::block
+      b_memory_note_board_viz["記憶メモ（記録用ボード）<br/><small>memory_note_board_viz</small>"]:::block
+      b_topic_redirect_banner_viz["話題切り替え用バナー<br/><small>topic_redirect_banner_viz</small>"]:::block
+      b_reading_post_layout["読書シーン用レイアウト<br/><small>reading_post_layout</small>"]:::block
+      b_reply_stamp_sheet_viz["返信スタンプ（グリッド）<br/><small>reply_stamp_sheet_viz</small>"]:::block
+      b_poststream_review_board_viz["配信振り返り（レビュー用）<br/><small>poststream_review_board_viz</small>"]:::block
+      b_stream_start_banner_viz["配信開始バナー<br/><small>stream_start_banner_viz</small>"]:::block
+    end
+    subgraph cat_02["背景"]
+      direction TB
+      b_joinwars_scene_kafka["JoinWars背景<br/><small>joinwars_scene_kafka</small>"]:::block
+      b_goodnight_scene_kafka["おやすみ背景<br/><small>goodnight_scene_kafka</small>"]:::block
+      b_cosplay_scene_kafka["コスプレ撮影背景<br/><small>cosplay_scene_kafka</small>"]:::block
+      b_fantasy_card_game_scene_kafka["ファンタジーカード盤面<br/><small>fantasy_card_game_scene_kafka</small>"]:::block
+      b_poker_table_scene_kafka["ポーカーテーブル背景<br/><small>poker_table_scene_kafka</small>"]:::block
+      b_break_scene_kafka["休憩背景<br/><small>break_scene_kafka</small>"]:::block
+      b_work_start_scene_kafka["作業開始背景<br/><small>work_start_scene_kafka</small>"]:::block
+      b_morning_background_winter_kafka["冬朝背景<br/><small>morning_background_winter_kafka</small>"]:::block
+      b_morning_scene_commute_kafka["出発前の朝背景<br/><small>morning_scene_commute_kafka</small>"]:::block
+      b_morning_background_summer_kafka["夏朝背景<br/><small>morning_background_summer_kafka</small>"]:::block
+      b_morning_scene_sleepy_kafka["寝起きの朝背景<br/><small>morning_scene_sleepy_kafka</small>"]:::block
+      b_morning_background_spring_kafka["春朝背景<br/><small>morning_background_spring_kafka</small>"]:::block
+      b_morning_scene_coffee_kafka["朝コーヒー背景<br/><small>morning_scene_coffee_kafka</small>"]:::block
+      b_reading_scene_seaside_kafka["海辺の読書背景<br/><small>reading_scene_seaside_kafka</small>"]:::block
+      b_morning_background_autumn_kafka["秋朝背景<br/><small>morning_background_autumn_kafka</small>"]:::block
+      b_morning_scene_window_kafka["窓際の朝背景<br/><small>morning_scene_window_kafka</small>"]:::block
+      b_reading_scene_general_kafka["読書背景<br/><small>reading_scene_general_kafka</small>"]:::block
+      b_reading_scene_anne_kafka["赤毛のアン読書背景<br/><small>reading_scene_anne_kafka</small>"]:::block
+      b_progress_scene_kafka["進捗背景<br/><small>progress_scene_kafka</small>"]:::block
+      b_morning_scene_rain_kafka["雨の日の朝背景<br/><small>morning_scene_rain_kafka</small>"]:::block
+    end
+    subgraph cat_03["セリフ・フレーズ"]
+      direction TB
+      b_joinwars_status_text_pack["JoinWars文言<br/><small>joinwars_status_text_pack</small>"]:::block
+      b_morning_tweet_text_pack["おはツイ文言<br/><small>morning_tweet_text_pack</small>"]:::block
+      b_card_game_status_text_pack["カードゲーム文言<br/><small>card_game_status_text_pack</small>"]:::block
+      b_cosplay_status_text_pack["コスプレ文言<br/><small>cosplay_status_text_pack</small>"]:::block
+      b_poker_status_text_pack["ポーカーポスト文言<br/><small>poker_status_text_pack</small>"]:::block
+      b_announcement_text_pack["告知文言<br/><small>announcement_text_pack</small>"]:::block
+      b_daily_status_text_pack["日常ステータス文言<br/><small>daily_status_text_pack</small>"]:::block
+      b_morning_situation_text_pack["朝シチュエーション文言<br/><small>morning_situation_text_pack</small>"]:::block
+      b_text_content_pack["短い日本語セリフ<br/><small>text_content_pack</small>"]:::block
+      b_reading_status_text_pack["読書文言<br/><small>reading_status_text_pack</small>"]:::block
+    end
+    subgraph cat_04["ポーズ"]
+      direction TB
+      b_morning_pose_coffee_kafka["コーヒーおはツイ姿勢<br/><small>morning_pose_coffee_kafka</small>"]:::block
+      b_morning_pose_winter_kafka["冬おはツイ姿勢<br/><small>morning_pose_winter_kafka</small>"]:::block
+      b_morning_pose_commute_kafka["出発前おはツイ姿勢<br/><small>morning_pose_commute_kafka</small>"]:::block
+      b_morning_pose_summer_kafka["夏おはツイ姿勢<br/><small>morning_pose_summer_kafka</small>"]:::block
+      b_morning_pose_sleepy_kafka["寝起きおはツイ姿勢<br/><small>morning_pose_sleepy_kafka</small>"]:::block
+      b_morning_pose_spring_kafka["春おはツイ姿勢<br/><small>morning_pose_spring_kafka</small>"]:::block
+      b_morning_pose_autumn_kafka["秋おはツイ姿勢<br/><small>morning_pose_autumn_kafka</small>"]:::block
+      b_morning_pose_window_kafka["窓際おはツイ姿勢<br/><small>morning_pose_window_kafka</small>"]:::block
+      b_reading_pose_kafka["読書ポーズ<br/><small>reading_pose_kafka</small>"]:::block
+      b_morning_pose_rain_kafka["雨の日おはツイ姿勢<br/><small>morning_pose_rain_kafka</small>"]:::block
+    end
+    subgraph cat_05["衣装"]
+      direction TB
+      b_joinwars_style_kafka["JoinWars衣装<br/><small>joinwars_style_kafka</small>"]:::block
+      b_cosplay_event_outfit_kafka["コスプレ衣装<br/><small>cosplay_event_outfit_kafka</small>"]:::block
+      b_fantasy_card_game_style_kafka["ファンタジーカードゲーム衣装<br/><small>fantasy_card_game_style_kafka</small>"]:::block
+      b_poker_dealer_style_kafka["ポーカーディーラー衣装<br/><small>poker_dealer_style_kafka</small>"]:::block
+      b_seasonal_outfit_winter_kafka["冬衣装<br/><small>seasonal_outfit_winter_kafka</small>"]:::block
+      b_seasonal_outfit_summer_kafka["夏衣装<br/><small>seasonal_outfit_summer_kafka</small>"]:::block
+      b_seasonal_outfit_spring_kafka["春衣装<br/><small>seasonal_outfit_spring_kafka</small>"]:::block
+      b_seasonal_outfit_autumn_kafka["秋衣装<br/><small>seasonal_outfit_autumn_kafka</small>"]:::block
+      b_reading_outfit_kafka["読書衣装<br/><small>reading_outfit_kafka</small>"]:::block
+    end
+    subgraph cat_06["ブランド"]
+      direction TB
+      b_icon_mark_only_kafka["アイコン単独<br/><small>icon_mark_only_kafka</small>"]:::block
+      b_frame_only_kafka["フレーム単独<br/><small>frame_only_kafka</small>"]:::block
+      b_logo_only_kafka["ロゴ単独<br/><small>logo_only_kafka</small>"]:::block
+      b_logo_orbit_kafka["宇宙ロゴ単独<br/><small>logo_orbit_kafka</small>"]:::block
+      b_wordmark_only_kafka["文字ロゴ単独<br/><small>wordmark_only_kafka</small>"]:::block
+    end
+    subgraph cat_07["テキスト"]
+      direction TB
+      b_subtitle_pack["字幕・テロップ<br/><small>subtitle_pack</small>"]:::block
+      b_text_style_jp["日本語文字<br/><small>text_style_jp</small>"]:::block
+    end
+    subgraph cat_08["リプライ・対話"]
+      direction TB
+      b_chat_reply_pack["コメント返し<br/><small>chat_reply_pack</small>"]:::block
+      b_safe_reply_pack["話題切り替え<br/><small>safe_reply_pack</small>"]:::block
+    end
+    subgraph cat_09["演出"]
+      direction TB
+      b_vfx_trigger_pack["感情演出<br/><small>vfx_trigger_pack</small>"]:::block
+      b_effects_pack["装飾効果<br/><small>effects_pack</small>"]:::block
+    end
+    subgraph cat_10["表情"]
+      direction TB
+      b_expressions_pack["反応集<br/><small>expressions_pack</small>"]:::block
+      b_reaction_focus["表情強調<br/><small>reaction_focus</small>"]:::block
+    end
+    subgraph cat_11["アバター"]
+      direction TB
+      b_avatar_mode_pack["アバターモード<br/><small>avatar_mode_pack</small>"]:::block
+    end
+    subgraph cat_12["キャラクター"]
+      direction TB
+      b_character_kafka["KAFKA<br/><small>character_kafka</small>"]:::block
+    end
+    subgraph cat_13["キャラ衣装"]
+      direction TB
+      b_outfit_kafka["衣装<br/><small>outfit_kafka</small>"]:::block
+    end
+    subgraph cat_14["コンフィグ"]
+      direction TB
+      b_character_customization_pack["キャラ設定<br/><small>character_customization_pack</small>"]:::block
+    end
+    subgraph cat_15["システム・実行"]
+      direction TB
+      b_local_offline_pack["ローカル優先<br/><small>local_offline_pack</small>"]:::block
+    end
+    subgraph cat_16["ネガティブ"]
+      direction TB
+      b_negative_common["共通ネガティブ<br/><small>negative_common</small>"]:::block
+    end
+    subgraph cat_17["リサーチ"]
+      direction TB
+      b_source_research["再調査メモ<br/><small>source_research</small>"]:::block
+    end
+    subgraph cat_18["人格"]
+      direction TB
+      b_persona_pack["自律人格<br/><small>persona_pack</small>"]:::block
+    end
+    subgraph cat_19["制御"]
+      direction TB
+      b_control_panel_pack["操作パネル<br/><small>control_panel_pack</small>"]:::block
+    end
+    subgraph cat_20["基準"]
+      direction TB
+      b_master_style["マスタースタイル<br/><small>master_style</small>"]:::block
+    end
+    subgraph cat_21["安全"]
+      direction TB
+      b_moderation_pack["モデレーション<br/><small>moderation_pack</small>"]:::block
+    end
+    subgraph cat_22["展示・サイン"]
+      direction TB
+      b_demo_mode_pack["デモモード<br/><small>demo_mode_pack</small>"]:::block
+    end
+    subgraph cat_23["性格・トーン"]
+      direction TB
+      b_speech_mode_kafka["かふからしい発話モード<br/><small>speech_mode_kafka</small>"]:::block
+    end
+    subgraph cat_24["拡張"]
+      direction TB
+      b_plugin_pack["外部連携<br/><small>plugin_pack</small>"]:::block
+    end
+    subgraph cat_25["発表"]
+      direction TB
+      b_slide_pack["スライド発表<br/><small>slide_pack</small>"]:::block
+    end
+    subgraph cat_26["記憶"]
+      direction TB
+      b_memory_pack["記憶管理<br/><small>memory_pack</small>"]:::block
+    end
+    subgraph cat_27["記録・ログ"]
+      direction TB
+      b_research_log_pack["振り返りログ<br/><small>research_log_pack</small>"]:::block
+    end
+    subgraph cat_28["配信"]
+      direction TB
+      b_chat_platform_pack["配信チャット<br/><small>chat_platform_pack</small>"]:::block
+    end
+    subgraph cat_29["音声"]
+      direction TB
+      b_voice_pipeline_pack["音声パイプライン<br/><small>voice_pipeline_pack</small>"]:::block
+    end
+  end
+  t_joinwars_post --> b_master_style
+  t_joinwars_post --> b_character_kafka
+  t_joinwars_post --> b_joinwars_layout
+  t_joinwars_post --> b_joinwars_scene_kafka
+  t_joinwars_post --> b_joinwars_style_kafka
+  t_joinwars_post --> b_joinwars_status_text_pack
+  t_joinwars_post --> b_text_style_jp
+  t_joinwars_post --> b_negative_common
+  t_morning_tweet_coffee --> b_master_style
+  t_morning_tweet_coffee --> b_character_kafka
+  t_morning_tweet_coffee --> b_outfit_kafka
+  t_morning_tweet_coffee --> b_morning_pose_coffee_kafka
+  t_morning_tweet_coffee --> b_morning_scene_coffee_kafka
+  t_morning_tweet_coffee --> b_morning_tweet_layout
+  t_morning_tweet_coffee --> b_morning_situation_text_pack
+  t_morning_tweet_coffee --> b_text_style_jp
+  t_morning_tweet_coffee --> b_negative_common
+  t_morning_tweet_winter --> b_master_style
+  t_morning_tweet_winter --> b_character_kafka
+  t_morning_tweet_winter --> b_seasonal_outfit_winter_kafka
+  t_morning_tweet_winter --> b_morning_pose_winter_kafka
+  t_morning_tweet_winter --> b_morning_background_winter_kafka
+  t_morning_tweet_winter --> b_morning_tweet_layout
+  t_morning_tweet_winter --> b_morning_tweet_text_pack
+  t_morning_tweet_winter --> b_text_style_jp
+  t_morning_tweet_winter --> b_effects_pack
+  t_morning_tweet_winter --> b_negative_common
+  t_morning_tweet_commute --> b_master_style
+  t_morning_tweet_commute --> b_character_kafka
+  t_morning_tweet_commute --> b_outfit_kafka
+  t_morning_tweet_commute --> b_morning_pose_commute_kafka
+  t_morning_tweet_commute --> b_morning_scene_commute_kafka
+  t_morning_tweet_commute --> b_morning_tweet_layout
+  t_morning_tweet_commute --> b_morning_situation_text_pack
+  t_morning_tweet_commute --> b_text_style_jp
+  t_morning_tweet_commute --> b_negative_common
+  t_morning_tweet_summer --> b_master_style
+  t_morning_tweet_summer --> b_character_kafka
+  t_morning_tweet_summer --> b_seasonal_outfit_summer_kafka
+  t_morning_tweet_summer --> b_morning_pose_summer_kafka
+  t_morning_tweet_summer --> b_morning_background_summer_kafka
+  t_morning_tweet_summer --> b_morning_tweet_layout
+  t_morning_tweet_summer --> b_morning_tweet_text_pack
+  t_morning_tweet_summer --> b_text_style_jp
+  t_morning_tweet_summer --> b_effects_pack
+  t_morning_tweet_summer --> b_negative_common
+  t_morning_tweet_sleepy --> b_master_style
+  t_morning_tweet_sleepy --> b_character_kafka
+  t_morning_tweet_sleepy --> b_outfit_kafka
+  t_morning_tweet_sleepy --> b_morning_pose_sleepy_kafka
+  t_morning_tweet_sleepy --> b_morning_scene_sleepy_kafka
+  t_morning_tweet_sleepy --> b_morning_tweet_layout
+  t_morning_tweet_sleepy --> b_morning_situation_text_pack
+  t_morning_tweet_sleepy --> b_text_style_jp
+  t_morning_tweet_sleepy --> b_negative_common
+  t_morning_tweet_spring --> b_master_style
+  t_morning_tweet_spring --> b_character_kafka
+  t_morning_tweet_spring --> b_seasonal_outfit_spring_kafka
+  t_morning_tweet_spring --> b_morning_pose_spring_kafka
+  t_morning_tweet_spring --> b_morning_background_spring_kafka
+  t_morning_tweet_spring --> b_morning_tweet_layout
+  t_morning_tweet_spring --> b_morning_tweet_text_pack
+  t_morning_tweet_spring --> b_text_style_jp
+  t_morning_tweet_spring --> b_effects_pack
+  t_morning_tweet_spring --> b_negative_common
+  t_morning_tweet_autumn --> b_master_style
+  t_morning_tweet_autumn --> b_character_kafka
+  t_morning_tweet_autumn --> b_seasonal_outfit_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_pose_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_background_autumn_kafka
+  t_morning_tweet_autumn --> b_morning_tweet_layout
+  t_morning_tweet_autumn --> b_morning_tweet_text_pack
+  t_morning_tweet_autumn --> b_text_style_jp
+  t_morning_tweet_autumn --> b_effects_pack
+  t_morning_tweet_autumn --> b_negative_common
+  t_morning_tweet_window --> b_master_style
+  t_morning_tweet_window --> b_character_kafka
+  t_morning_tweet_window --> b_outfit_kafka
+  t_morning_tweet_window --> b_morning_pose_window_kafka
+  t_morning_tweet_window --> b_morning_scene_window_kafka
+  t_morning_tweet_window --> b_morning_tweet_layout
+  t_morning_tweet_window --> b_morning_situation_text_pack
+  t_morning_tweet_window --> b_text_style_jp
+  t_morning_tweet_window --> b_negative_common
+  t_morning_tweet_rain --> b_master_style
+  t_morning_tweet_rain --> b_character_kafka
+  t_morning_tweet_rain --> b_outfit_kafka
+  t_morning_tweet_rain --> b_morning_pose_rain_kafka
+  t_morning_tweet_rain --> b_morning_scene_rain_kafka
+  t_morning_tweet_rain --> b_morning_tweet_layout
+  t_morning_tweet_rain --> b_morning_situation_text_pack
+  t_morning_tweet_rain --> b_text_style_jp
+  t_morning_tweet_rain --> b_negative_common
+  t_goodnight_post --> b_master_style
+  t_goodnight_post --> b_character_kafka
+  t_goodnight_post --> b_outfit_kafka
+  t_goodnight_post --> b_goodnight_scene_kafka
+  t_goodnight_post --> b_status_post_layout
+  t_goodnight_post --> b_daily_status_text_pack
+  t_goodnight_post --> b_text_style_jp
+  t_goodnight_post --> b_negative_common
+  t_cardgame_post --> b_master_style
+  t_cardgame_post --> b_character_kafka
+  t_cardgame_post --> b_cardgame_post_layout
+  t_cardgame_post --> b_fantasy_card_game_scene_kafka
+  t_cardgame_post --> b_fantasy_card_game_style_kafka
+  t_cardgame_post --> b_card_game_status_text_pack
+  t_cardgame_post --> b_text_style_jp
+  t_cardgame_post --> b_negative_common
+  t_cosplay_post --> b_master_style
+  t_cosplay_post --> b_character_kafka
+  t_cosplay_post --> b_cosplay_post_layout
+  t_cosplay_post --> b_cosplay_scene_kafka
+  t_cosplay_post --> b_cosplay_event_outfit_kafka
+  t_cosplay_post --> b_cosplay_status_text_pack
+  t_cosplay_post --> b_text_style_jp
+  t_cosplay_post --> b_negative_common
+  t_poker_post --> b_master_style
+  t_poker_post --> b_character_kafka
+  t_poker_post --> b_poker_post_layout
+  t_poker_post --> b_poker_table_scene_kafka
+  t_poker_post --> b_poker_dealer_style_kafka
+  t_poker_post --> b_poker_status_text_pack
+  t_poker_post --> b_text_style_jp
+  t_poker_post --> b_negative_common
+  t_break_post --> b_master_style
+  t_break_post --> b_character_kafka
+  t_break_post --> b_outfit_kafka
+  t_break_post --> b_break_scene_kafka
+  t_break_post --> b_status_post_layout
+  t_break_post --> b_daily_status_text_pack
+  t_break_post --> b_text_style_jp
+  t_break_post --> b_negative_common
+  t_work_start_post --> b_master_style
+  t_work_start_post --> b_character_kafka
+  t_work_start_post --> b_outfit_kafka
+  t_work_start_post --> b_work_start_scene_kafka
+  t_work_start_post --> b_status_post_layout
+  t_work_start_post --> b_daily_status_text_pack
+  t_work_start_post --> b_text_style_jp
+  t_work_start_post --> b_negative_common
+  t_reading_post_seaside --> b_master_style
+  t_reading_post_seaside --> b_character_kafka
+  t_reading_post_seaside --> b_reading_post_layout
+  t_reading_post_seaside --> b_reading_scene_seaside_kafka
+  t_reading_post_seaside --> b_reading_pose_kafka
+  t_reading_post_seaside --> b_reading_outfit_kafka
+  t_reading_post_seaside --> b_reading_status_text_pack
+  t_reading_post_seaside --> b_text_style_jp
+  t_reading_post_seaside --> b_negative_common
+  t_reading_post_general --> b_master_style
+  t_reading_post_general --> b_character_kafka
+  t_reading_post_general --> b_reading_post_layout
+  t_reading_post_general --> b_reading_scene_general_kafka
+  t_reading_post_general --> b_reading_pose_kafka
+  t_reading_post_general --> b_reading_outfit_kafka
+  t_reading_post_general --> b_reading_status_text_pack
+  t_reading_post_general --> b_text_style_jp
+  t_reading_post_general --> b_negative_common
+  t_reading_post_anne --> b_master_style
+  t_reading_post_anne --> b_character_kafka
+  t_reading_post_anne --> b_reading_post_layout
+  t_reading_post_anne --> b_reading_scene_anne_kafka
+  t_reading_post_anne --> b_reading_pose_kafka
+  t_reading_post_anne --> b_reading_outfit_kafka
+  t_reading_post_anne --> b_reading_status_text_pack
+  t_reading_post_anne --> b_text_style_jp
+  t_reading_post_anne --> b_negative_common
+  t_progress_post --> b_master_style
+  t_progress_post --> b_character_kafka
+  t_progress_post --> b_outfit_kafka
+  t_progress_post --> b_progress_scene_kafka
+  t_progress_post --> b_status_post_layout
+  t_progress_post --> b_daily_status_text_pack
+  t_progress_post --> b_text_style_jp
+  t_progress_post --> b_negative_common
+          </div>
+        </div>
+      </section>
+      <section class="preset">
+        <h2>Templates / design_sheet</h2>
+        <p class="meta">Prompt Vault DB Graph | Templates | kind:design_sheet</p>
+        <div class="subsection">
+          <h3>Template Composition</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph templates["Templates"]
+    direction TB
+    subgraph kind_01["design_sheet"]
+      direction TB
+      t_morning_tweet_index["Kafka おはツイ一覧<br/><small>morning_tweet_index</small>"]:::template
+      t_character_design_sheet["Kafka キャラデザインシート<br/><small>character_design_sheet</small>"]:::template
+      t_persona_poster["Kafka 人格ポスター<br/><small>persona_poster</small>"]:::template
+      t_persona_sheet["Kafka 人格固定カード<br/><small>persona_sheet</small>"]:::template
+      t_archive_contact_sheet["Kafka 成果物一覧<br/><small>archive_contact_sheet</small>"]:::template
+      t_archive_index["Kafka 成果物回収カード<br/><small>archive_index</small>"]:::template
+      t_photo_prompt_sheet["Kafka 生成素材台帳<br/><small>photo_prompt_sheet</small>"]:::template
+      t_memory_note_board["Kafka 記憶メモボード<br/><small>memory_note_board</small>"]:::template
+      t_memory_update_card["Kafka 記憶更新カード<br/><small>memory_update_card</small>"]:::template
+      t_summary_sheet["Kafka 配信後まとめカード<br/><small>summary_sheet</small>"]:::template
+      t_poststream_review_board["Kafka 配信後レビュー盤<br/><small>poststream_review_board</small>"]:::template
+      t_daily_work_sheet["Kafka 配信運用カード<br/><small>daily_work_sheet</small>"]:::template
+    end
+  end
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_sticker_sheet_layout["4x4 ステッカーシート<br/><small>sticker_sheet_layout</small>"]:::block
+      b_joinwars_layout["JoinWars用レイアウト<br/><small>joinwars_layout</small>"]:::block
+      b_character_sheet_kafka["Kafka キャラデザインシート<br/><small>character_sheet_kafka</small>"]:::block
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_archive_index_vlog["アーカイブ索引<br/><small>archive_index_vlog</small>"]:::block
+      b_cardgame_post_layout["カードゲームレイアウト<br/><small>cardgame_post_layout</small>"]:::block
+      b_cosplay_post_layout["コスプレレイアウト<br/><small>cosplay_post_layout</small>"]:::block
+      b_persona_sheet_vlog["パーソナ設定シート<br/><small>persona_sheet_vlog</small>"]:::block
+      b_poker_post_layout["ポーカーレイアウト<br/><small>poker_post_layout</small>"]:::block
+      b_persona_poster_viz["人格ポスター<br/><small>persona_poster_viz</small>"]:::block
+      b_daily_work_sheet_vlog["作業管理テンプレート<br/><small>daily_work_sheet_vlog</small>"]:::block
+      b_archive_contact_sheet_viz["成果物一覧（コンタクトシート）<br/><small>archive_contact_sheet_viz</small>"]:::block
+      b_summary_sheet_vlog["振り返りサマリー<br/><small>summary_sheet_vlog</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+      b_comic_layout["漫画レイアウト<br/><small>comic_layout</small>"]:::block
+      b_prompt_archive_sheet_vlog["生成台帳<br/><small>prompt_archive_sheet_vlog</small>"]:::block
+      b_photo_prompt_sheet_vlog["画像生成台帳（詳細）<br/><small>photo_prompt_sheet_vlog</small>"]:::block
+      b_memory_note_board_viz["記憶メモ（記録用ボード）<br/><small>memory_note_board_viz</small>"]:::block
+      b_topic_redirect_banner_viz["話題切り替え用バナー<br/><small>topic_redirect_banner_viz</small>"]:::block
+      b_reading_post_layout["読書シーン用レイアウト<br/><small>reading_post_layout</small>"]:::block
+      b_reply_stamp_sheet_viz["返信スタンプ（グリッド）<br/><small>reply_stamp_sheet_viz</small>"]:::block
+      b_poststream_review_board_viz["配信振り返り（レビュー用）<br/><small>poststream_review_board_viz</small>"]:::block
+      b_stream_start_banner_viz["配信開始バナー<br/><small>stream_start_banner_viz</small>"]:::block
+    end
+    subgraph cat_02["背景"]
+      direction TB
+      b_joinwars_scene_kafka["JoinWars背景<br/><small>joinwars_scene_kafka</small>"]:::block
+      b_goodnight_scene_kafka["おやすみ背景<br/><small>goodnight_scene_kafka</small>"]:::block
+      b_cosplay_scene_kafka["コスプレ撮影背景<br/><small>cosplay_scene_kafka</small>"]:::block
+      b_fantasy_card_game_scene_kafka["ファンタジーカード盤面<br/><small>fantasy_card_game_scene_kafka</small>"]:::block
+      b_poker_table_scene_kafka["ポーカーテーブル背景<br/><small>poker_table_scene_kafka</small>"]:::block
+      b_break_scene_kafka["休憩背景<br/><small>break_scene_kafka</small>"]:::block
+      b_work_start_scene_kafka["作業開始背景<br/><small>work_start_scene_kafka</small>"]:::block
+      b_morning_background_winter_kafka["冬朝背景<br/><small>morning_background_winter_kafka</small>"]:::block
+      b_morning_scene_commute_kafka["出発前の朝背景<br/><small>morning_scene_commute_kafka</small>"]:::block
+      b_morning_background_summer_kafka["夏朝背景<br/><small>morning_background_summer_kafka</small>"]:::block
+      b_morning_scene_sleepy_kafka["寝起きの朝背景<br/><small>morning_scene_sleepy_kafka</small>"]:::block
+      b_morning_background_spring_kafka["春朝背景<br/><small>morning_background_spring_kafka</small>"]:::block
+      b_morning_scene_coffee_kafka["朝コーヒー背景<br/><small>morning_scene_coffee_kafka</small>"]:::block
+      b_reading_scene_seaside_kafka["海辺の読書背景<br/><small>reading_scene_seaside_kafka</small>"]:::block
+      b_morning_background_autumn_kafka["秋朝背景<br/><small>morning_background_autumn_kafka</small>"]:::block
+      b_morning_scene_window_kafka["窓際の朝背景<br/><small>morning_scene_window_kafka</small>"]:::block
+      b_reading_scene_general_kafka["読書背景<br/><small>reading_scene_general_kafka</small>"]:::block
+      b_reading_scene_anne_kafka["赤毛のアン読書背景<br/><small>reading_scene_anne_kafka</small>"]:::block
+      b_progress_scene_kafka["進捗背景<br/><small>progress_scene_kafka</small>"]:::block
+      b_morning_scene_rain_kafka["雨の日の朝背景<br/><small>morning_scene_rain_kafka</small>"]:::block
+    end
+    subgraph cat_03["セリフ・フレーズ"]
+      direction TB
+      b_joinwars_status_text_pack["JoinWars文言<br/><small>joinwars_status_text_pack</small>"]:::block
+      b_morning_tweet_text_pack["おはツイ文言<br/><small>morning_tweet_text_pack</small>"]:::block
+      b_card_game_status_text_pack["カードゲーム文言<br/><small>card_game_status_text_pack</small>"]:::block
+      b_cosplay_status_text_pack["コスプレ文言<br/><small>cosplay_status_text_pack</small>"]:::block
+      b_poker_status_text_pack["ポーカーポスト文言<br/><small>poker_status_text_pack</small>"]:::block
+      b_announcement_text_pack["告知文言<br/><small>announcement_text_pack</small>"]:::block
+      b_daily_status_text_pack["日常ステータス文言<br/><small>daily_status_text_pack</small>"]:::block
+      b_morning_situation_text_pack["朝シチュエーション文言<br/><small>morning_situation_text_pack</small>"]:::block
+      b_text_content_pack["短い日本語セリフ<br/><small>text_content_pack</small>"]:::block
+      b_reading_status_text_pack["読書文言<br/><small>reading_status_text_pack</small>"]:::block
+    end
+    subgraph cat_04["ポーズ"]
+      direction TB
+      b_morning_pose_coffee_kafka["コーヒーおはツイ姿勢<br/><small>morning_pose_coffee_kafka</small>"]:::block
+      b_morning_pose_winter_kafka["冬おはツイ姿勢<br/><small>morning_pose_winter_kafka</small>"]:::block
+      b_morning_pose_commute_kafka["出発前おはツイ姿勢<br/><small>morning_pose_commute_kafka</small>"]:::block
+      b_morning_pose_summer_kafka["夏おはツイ姿勢<br/><small>morning_pose_summer_kafka</small>"]:::block
+      b_morning_pose_sleepy_kafka["寝起きおはツイ姿勢<br/><small>morning_pose_sleepy_kafka</small>"]:::block
+      b_morning_pose_spring_kafka["春おはツイ姿勢<br/><small>morning_pose_spring_kafka</small>"]:::block
+      b_morning_pose_autumn_kafka["秋おはツイ姿勢<br/><small>morning_pose_autumn_kafka</small>"]:::block
+      b_morning_pose_window_kafka["窓際おはツイ姿勢<br/><small>morning_pose_window_kafka</small>"]:::block
+      b_reading_pose_kafka["読書ポーズ<br/><small>reading_pose_kafka</small>"]:::block
+      b_morning_pose_rain_kafka["雨の日おはツイ姿勢<br/><small>morning_pose_rain_kafka</small>"]:::block
+    end
+    subgraph cat_05["衣装"]
+      direction TB
+      b_joinwars_style_kafka["JoinWars衣装<br/><small>joinwars_style_kafka</small>"]:::block
+      b_cosplay_event_outfit_kafka["コスプレ衣装<br/><small>cosplay_event_outfit_kafka</small>"]:::block
+      b_fantasy_card_game_style_kafka["ファンタジーカードゲーム衣装<br/><small>fantasy_card_game_style_kafka</small>"]:::block
+      b_poker_dealer_style_kafka["ポーカーディーラー衣装<br/><small>poker_dealer_style_kafka</small>"]:::block
+      b_seasonal_outfit_winter_kafka["冬衣装<br/><small>seasonal_outfit_winter_kafka</small>"]:::block
+      b_seasonal_outfit_summer_kafka["夏衣装<br/><small>seasonal_outfit_summer_kafka</small>"]:::block
+      b_seasonal_outfit_spring_kafka["春衣装<br/><small>seasonal_outfit_spring_kafka</small>"]:::block
+      b_seasonal_outfit_autumn_kafka["秋衣装<br/><small>seasonal_outfit_autumn_kafka</small>"]:::block
+      b_reading_outfit_kafka["読書衣装<br/><small>reading_outfit_kafka</small>"]:::block
+    end
+    subgraph cat_06["ブランド"]
+      direction TB
+      b_icon_mark_only_kafka["アイコン単独<br/><small>icon_mark_only_kafka</small>"]:::block
+      b_frame_only_kafka["フレーム単独<br/><small>frame_only_kafka</small>"]:::block
+      b_logo_only_kafka["ロゴ単独<br/><small>logo_only_kafka</small>"]:::block
+      b_logo_orbit_kafka["宇宙ロゴ単独<br/><small>logo_orbit_kafka</small>"]:::block
+      b_wordmark_only_kafka["文字ロゴ単独<br/><small>wordmark_only_kafka</small>"]:::block
+    end
+    subgraph cat_07["テキスト"]
+      direction TB
+      b_subtitle_pack["字幕・テロップ<br/><small>subtitle_pack</small>"]:::block
+      b_text_style_jp["日本語文字<br/><small>text_style_jp</small>"]:::block
+    end
+    subgraph cat_08["リプライ・対話"]
+      direction TB
+      b_chat_reply_pack["コメント返し<br/><small>chat_reply_pack</small>"]:::block
+      b_safe_reply_pack["話題切り替え<br/><small>safe_reply_pack</small>"]:::block
+    end
+    subgraph cat_09["演出"]
+      direction TB
+      b_vfx_trigger_pack["感情演出<br/><small>vfx_trigger_pack</small>"]:::block
+      b_effects_pack["装飾効果<br/><small>effects_pack</small>"]:::block
+    end
+    subgraph cat_10["表情"]
+      direction TB
+      b_expressions_pack["反応集<br/><small>expressions_pack</small>"]:::block
+      b_reaction_focus["表情強調<br/><small>reaction_focus</small>"]:::block
+    end
+    subgraph cat_11["アバター"]
+      direction TB
+      b_avatar_mode_pack["アバターモード<br/><small>avatar_mode_pack</small>"]:::block
+    end
+    subgraph cat_12["キャラクター"]
+      direction TB
+      b_character_kafka["KAFKA<br/><small>character_kafka</small>"]:::block
+    end
+    subgraph cat_13["キャラ衣装"]
+      direction TB
+      b_outfit_kafka["衣装<br/><small>outfit_kafka</small>"]:::block
+    end
+    subgraph cat_14["コンフィグ"]
+      direction TB
+      b_character_customization_pack["キャラ設定<br/><small>character_customization_pack</small>"]:::block
+    end
+    subgraph cat_15["システム・実行"]
+      direction TB
+      b_local_offline_pack["ローカル優先<br/><small>local_offline_pack</small>"]:::block
+    end
+    subgraph cat_16["ネガティブ"]
+      direction TB
+      b_negative_common["共通ネガティブ<br/><small>negative_common</small>"]:::block
+    end
+    subgraph cat_17["リサーチ"]
+      direction TB
+      b_source_research["再調査メモ<br/><small>source_research</small>"]:::block
+    end
+    subgraph cat_18["人格"]
+      direction TB
+      b_persona_pack["自律人格<br/><small>persona_pack</small>"]:::block
+    end
+    subgraph cat_19["制御"]
+      direction TB
+      b_control_panel_pack["操作パネル<br/><small>control_panel_pack</small>"]:::block
+    end
+    subgraph cat_20["基準"]
+      direction TB
+      b_master_style["マスタースタイル<br/><small>master_style</small>"]:::block
+    end
+    subgraph cat_21["安全"]
+      direction TB
+      b_moderation_pack["モデレーション<br/><small>moderation_pack</small>"]:::block
+    end
+    subgraph cat_22["展示・サイン"]
+      direction TB
+      b_demo_mode_pack["デモモード<br/><small>demo_mode_pack</small>"]:::block
+    end
+    subgraph cat_23["性格・トーン"]
+      direction TB
+      b_speech_mode_kafka["かふからしい発話モード<br/><small>speech_mode_kafka</small>"]:::block
+    end
+    subgraph cat_24["拡張"]
+      direction TB
+      b_plugin_pack["外部連携<br/><small>plugin_pack</small>"]:::block
+    end
+    subgraph cat_25["発表"]
+      direction TB
+      b_slide_pack["スライド発表<br/><small>slide_pack</small>"]:::block
+    end
+    subgraph cat_26["記憶"]
+      direction TB
+      b_memory_pack["記憶管理<br/><small>memory_pack</small>"]:::block
+    end
+    subgraph cat_27["記録・ログ"]
+      direction TB
+      b_research_log_pack["振り返りログ<br/><small>research_log_pack</small>"]:::block
+    end
+    subgraph cat_28["配信"]
+      direction TB
+      b_chat_platform_pack["配信チャット<br/><small>chat_platform_pack</small>"]:::block
+    end
+    subgraph cat_29["音声"]
+      direction TB
+      b_voice_pipeline_pack["音声パイプライン<br/><small>voice_pipeline_pack</small>"]:::block
+    end
+  end
+  t_morning_tweet_index --> b_master_style
+  t_morning_tweet_index --> b_character_kafka
+  t_morning_tweet_index --> b_morning_tweet_layout
+  t_morning_tweet_index --> b_morning_tweet_text_pack
+  t_morning_tweet_index --> b_morning_situation_text_pack
+  t_morning_tweet_index --> b_text_style_jp
+  t_morning_tweet_index --> b_negative_common
+  t_character_design_sheet --> b_character_sheet_kafka
+  t_persona_poster --> b_master_style
+  t_persona_poster --> b_character_kafka
+  t_persona_poster --> b_outfit_kafka
+  t_persona_poster --> b_persona_poster_viz
+  t_persona_poster --> b_persona_pack
+  t_persona_poster --> b_text_style_jp
+  t_persona_poster --> b_negative_common
+  t_persona_poster -.-> b_persona_poster_viz
+  t_persona_poster -.-> b_persona_pack
+  t_persona_poster -.-> b_text_style_jp
+  t_persona_sheet --> b_master_style
+  t_persona_sheet --> b_character_kafka
+  t_persona_sheet --> b_persona_sheet_vlog
+  t_persona_sheet --> b_persona_pack
+  t_persona_sheet --> b_speech_mode_kafka
+  t_persona_sheet --> b_text_style_jp
+  t_persona_sheet --> b_negative_common
+  t_archive_contact_sheet --> b_master_style
+  t_archive_contact_sheet --> b_character_kafka
+  t_archive_contact_sheet --> b_archive_contact_sheet_viz
+  t_archive_contact_sheet --> b_archive_index_vlog
+  t_archive_contact_sheet --> b_prompt_archive_sheet_vlog
+  t_archive_contact_sheet --> b_negative_common
+  t_archive_contact_sheet -.-> b_archive_contact_sheet_viz
+  t_archive_contact_sheet -.-> b_archive_index_vlog
+  t_archive_contact_sheet -.-> b_prompt_archive_sheet_vlog
+  t_archive_index --> b_master_style
+  t_archive_index --> b_character_kafka
+  t_archive_index --> b_archive_index_vlog
+  t_archive_index --> b_prompt_archive_sheet_vlog
+  t_archive_index --> b_speech_mode_kafka
+  t_archive_index --> b_negative_common
+  t_photo_prompt_sheet --> b_master_style
+  t_photo_prompt_sheet --> b_character_kafka
+  t_photo_prompt_sheet --> b_photo_prompt_sheet_vlog
+  t_photo_prompt_sheet --> b_prompt_archive_sheet_vlog
+  t_photo_prompt_sheet --> b_negative_common
+  t_memory_note_board --> b_master_style
+  t_memory_note_board --> b_character_kafka
+  t_memory_note_board --> b_memory_note_board_viz
+  t_memory_note_board --> b_memory_pack
+  t_memory_note_board --> b_research_log_pack
+  t_memory_note_board --> b_negative_common
+  t_memory_note_board -.-> b_memory_note_board_viz
+  t_memory_note_board -.-> b_memory_pack
+  t_memory_note_board -.-> b_research_log_pack
+  t_memory_update_card --> b_master_style
+  t_memory_update_card --> b_character_kafka
+  t_memory_update_card --> b_memory_pack
+  t_memory_update_card --> b_speech_mode_kafka
+  t_memory_update_card --> b_research_log_pack
+  t_memory_update_card --> b_negative_common
+  t_summary_sheet --> b_master_style
+  t_summary_sheet --> b_character_kafka
+  t_summary_sheet --> b_summary_sheet_vlog
+  t_summary_sheet --> b_speech_mode_kafka
+  t_summary_sheet --> b_memory_pack
+  t_summary_sheet --> b_research_log_pack
+  t_summary_sheet --> b_negative_common
+  t_poststream_review_board --> b_master_style
+  t_poststream_review_board --> b_character_kafka
+  t_poststream_review_board --> b_poststream_review_board_viz
+  t_poststream_review_board --> b_research_log_pack
+  t_poststream_review_board --> b_memory_pack
+  t_poststream_review_board --> b_negative_common
+  t_poststream_review_board -.-> b_poststream_review_board_viz
+  t_poststream_review_board -.-> b_research_log_pack
+  t_poststream_review_board -.-> b_memory_pack
+  t_daily_work_sheet --> b_master_style
+  t_daily_work_sheet --> b_character_kafka
+  t_daily_work_sheet --> b_daily_work_sheet_vlog
+  t_daily_work_sheet --> b_local_offline_pack
+  t_daily_work_sheet --> b_speech_mode_kafka
+  t_daily_work_sheet --> b_research_log_pack
+  t_daily_work_sheet --> b_negative_common
+          </div>
+        </div>
+      </section>
+      <section class="preset">
+        <h2>Blocks / layout</h2>
+        <p class="meta">Prompt Vault DB Graph | Blocks | category:形式・レイアウト</p>
+        <div class="subsection">
+          <h3>Block Relations</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_sticker_sheet_layout["4x4 ステッカーシート<br/><small>sticker_sheet_layout</small>"]:::block
+      b_joinwars_layout["JoinWars用レイアウト<br/><small>joinwars_layout</small>"]:::block
+      b_character_sheet_kafka["Kafka キャラデザインシート<br/><small>character_sheet_kafka</small>"]:::block
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_archive_index_vlog["アーカイブ索引<br/><small>archive_index_vlog</small>"]:::block
+      b_cardgame_post_layout["カードゲームレイアウト<br/><small>cardgame_post_layout</small>"]:::block
+      b_cosplay_post_layout["コスプレレイアウト<br/><small>cosplay_post_layout</small>"]:::block
+      b_persona_sheet_vlog["パーソナ設定シート<br/><small>persona_sheet_vlog</small>"]:::block
+      b_poker_post_layout["ポーカーレイアウト<br/><small>poker_post_layout</small>"]:::block
+      b_persona_poster_viz["人格ポスター<br/><small>persona_poster_viz</small>"]:::block
+      b_daily_work_sheet_vlog["作業管理テンプレート<br/><small>daily_work_sheet_vlog</small>"]:::block
+      b_archive_contact_sheet_viz["成果物一覧（コンタクトシート）<br/><small>archive_contact_sheet_viz</small>"]:::block
+      b_summary_sheet_vlog["振り返りサマリー<br/><small>summary_sheet_vlog</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+      b_comic_layout["漫画レイアウト<br/><small>comic_layout</small>"]:::block
+      b_prompt_archive_sheet_vlog["生成台帳<br/><small>prompt_archive_sheet_vlog</small>"]:::block
+      b_photo_prompt_sheet_vlog["画像生成台帳（詳細）<br/><small>photo_prompt_sheet_vlog</small>"]:::block
+      b_memory_note_board_viz["記憶メモ（記録用ボード）<br/><small>memory_note_board_viz</small>"]:::block
+      b_topic_redirect_banner_viz["話題切り替え用バナー<br/><small>topic_redirect_banner_viz</small>"]:::block
+      b_reading_post_layout["読書シーン用レイアウト<br/><small>reading_post_layout</small>"]:::block
+      b_reply_stamp_sheet_viz["返信スタンプ（グリッド）<br/><small>reply_stamp_sheet_viz</small>"]:::block
+      b_poststream_review_board_viz["配信振り返り（レビュー用）<br/><small>poststream_review_board_viz</small>"]:::block
+      b_stream_start_banner_viz["配信開始バナー<br/><small>stream_start_banner_viz</small>"]:::block
+    end
+  end
+  subgraph templates["Referenced Templates"]
+    direction TB
+      t_persona_sheet["Kafka 人格固定カード<br/><small>persona_sheet</small>"]:::template
+      t_daily_work_sheet["Kafka 配信運用カード<br/><small>daily_work_sheet</small>"]:::template
+  end
+  b_morning_tweet_layout -.-> b_status_post_layout
+  b_persona_sheet_vlog -.-> t_persona_sheet
+  b_persona_poster_viz -.-> b_persona_sheet_vlog
+  b_daily_work_sheet_vlog -.-> t_daily_work_sheet
+  b_daily_work_sheet_vlog -.-> t_daily_work_sheet
+  b_archive_contact_sheet_viz -.-> b_prompt_archive_sheet_vlog
+  b_archive_contact_sheet_viz -.-> b_prompt_archive_sheet_vlog
+  b_archive_contact_sheet_viz -.-> b_archive_index_vlog
+  b_morning_tweet_layout -.-> b_status_post_layout
+  b_archive_contact_sheet_viz -.-> b_memory_note_board_viz
+          </div>
+        </div>
+      </section>
+      <section class="preset">
+        <h2>Focus / morning_tweet_layout</h2>
+        <p class="meta">Prompt Vault DB Graph | focus:morning_tweet_layout</p>
+        <div class="subsection">
+          <h3>Template Composition</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph templates["Templates"]
+    direction TB
+    subgraph kind_01["social"]
+      direction TB
+      t_morning_tweet_coffee["Kafka おはツイ コーヒー<br/><small>morning_tweet_coffee</small>"]:::template
+      t_morning_tweet_winter["Kafka おはツイ 冬<br/><small>morning_tweet_winter</small>"]:::template
+      t_morning_tweet_commute["Kafka おはツイ 出発前<br/><small>morning_tweet_commute</small>"]:::template
+      t_morning_tweet_summer["Kafka おはツイ 夏<br/><small>morning_tweet_summer</small>"]:::template
+      t_morning_tweet_sleepy["Kafka おはツイ 寝起き<br/><small>morning_tweet_sleepy</small>"]:::template
+      t_morning_tweet_spring["Kafka おはツイ 春<br/><small>morning_tweet_spring</small>"]:::template
+      t_morning_tweet_autumn["Kafka おはツイ 秋<br/><small>morning_tweet_autumn</small>"]:::template
+      t_morning_tweet_window["Kafka おはツイ 窓際<br/><small>morning_tweet_window</small>"]:::template
+      t_morning_tweet_rain["Kafka おはツイ 雨の日<br/><small>morning_tweet_rain</small>"]:::template
+      t_goodnight_post["Kafka おやすみポスト<br/><small>goodnight_post</small>"]:::template
+      t_break_post["Kafka 休憩ポスト<br/><small>break_post</small>"]:::template
+      t_work_start_post["Kafka 作業開始ポスト<br/><small>work_start_post</small>"]:::template
+      t_progress_post["Kafka 進捗ポスト<br/><small>progress_post</small>"]:::template
+    end
+    subgraph kind_02["design_sheet"]
+      direction TB
+      t_morning_tweet_index["Kafka おはツイ一覧<br/><small>morning_tweet_index</small>"]:::template
+    end
+  end
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+    end
+  end
+  t_morning_tweet_coffee --> b_morning_tweet_layout
+  t_morning_tweet_winter --> b_morning_tweet_layout
+  t_morning_tweet_commute --> b_morning_tweet_layout
+  t_morning_tweet_summer --> b_morning_tweet_layout
+  t_morning_tweet_sleepy --> b_morning_tweet_layout
+  t_morning_tweet_spring --> b_morning_tweet_layout
+  t_morning_tweet_autumn --> b_morning_tweet_layout
+  t_morning_tweet_window --> b_morning_tweet_layout
+  t_morning_tweet_rain --> b_morning_tweet_layout
+  t_morning_tweet_index --> b_morning_tweet_layout
+  t_goodnight_post --> b_status_post_layout
+  t_break_post --> b_status_post_layout
+  t_work_start_post --> b_status_post_layout
+  t_progress_post --> b_status_post_layout
+          </div>
+        </div>
+        <div class="subsection">
+          <h3>Block Relations</h3>
+          <div class="mermaid">
+flowchart LR
+  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;
+  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;
+  subgraph blocks["Blocks"]
+    direction TB
+    subgraph cat_01["形式・レイアウト"]
+      direction TB
+      b_morning_tweet_layout["おはツイレイアウト<br/><small>morning_tweet_layout</small>"]:::block
+      b_status_post_layout["日常ステータスレイアウト<br/><small>status_post_layout</small>"]:::block
+    end
+  end
+  b_morning_tweet_layout -.-> b_status_post_layout
+  b_morning_tweet_layout -.-> b_status_post_layout
+          </div>
+        </div>
+      </section>
+    <details class="list-block">
+  <summary>Node List</summary>
+  <table class="list-table">
+    <thead><tr><th>Type</th><th>ID</th><th>Title</th><th>Kind / Category</th></tr></thead>
+    <tbody>
+<tr><td>block</td><td><code>sticker_sheet_layout</code></td><td>4x4 ステッカーシート</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>joinwars_status_text_pack</code></td><td>JoinWars文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>joinwars_layout</code></td><td>JoinWars用レイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>joinwars_scene_kafka</code></td><td>JoinWars背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>joinwars_style_kafka</code></td><td>JoinWars衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>character_kafka</code></td><td>KAFKA</td><td>キャラクター</td></tr>
+<tr><td>block</td><td><code>character_sheet_kafka</code></td><td>Kafka キャラデザインシート</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>morning_tweet_layout</code></td><td>おはツイレイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>morning_tweet_text_pack</code></td><td>おはツイ文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>goodnight_scene_kafka</code></td><td>おやすみ背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>speech_mode_kafka</code></td><td>かふからしい発話モード</td><td>性格・トーン</td></tr>
+<tr><td>block</td><td><code>icon_mark_only_kafka</code></td><td>アイコン単独</td><td>ブランド</td></tr>
+<tr><td>block</td><td><code>avatar_mode_pack</code></td><td>アバターモード</td><td>アバター</td></tr>
+<tr><td>block</td><td><code>archive_index_vlog</code></td><td>アーカイブ索引</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>cardgame_post_layout</code></td><td>カードゲームレイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>card_game_status_text_pack</code></td><td>カードゲーム文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>character_customization_pack</code></td><td>キャラ設定</td><td>コンフィグ</td></tr>
+<tr><td>block</td><td><code>cosplay_post_layout</code></td><td>コスプレレイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>cosplay_scene_kafka</code></td><td>コスプレ撮影背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>cosplay_status_text_pack</code></td><td>コスプレ文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>cosplay_event_outfit_kafka</code></td><td>コスプレ衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>chat_reply_pack</code></td><td>コメント返し</td><td>リプライ・対話</td></tr>
+<tr><td>block</td><td><code>morning_pose_coffee_kafka</code></td><td>コーヒーおはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>slide_pack</code></td><td>スライド発表</td><td>発表</td></tr>
+<tr><td>block</td><td><code>demo_mode_pack</code></td><td>デモモード</td><td>展示・サイン</td></tr>
+<tr><td>block</td><td><code>persona_sheet_vlog</code></td><td>パーソナ設定シート</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>fantasy_card_game_style_kafka</code></td><td>ファンタジーカードゲーム衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>fantasy_card_game_scene_kafka</code></td><td>ファンタジーカード盤面</td><td>背景</td></tr>
+<tr><td>block</td><td><code>frame_only_kafka</code></td><td>フレーム単独</td><td>ブランド</td></tr>
+<tr><td>block</td><td><code>poker_table_scene_kafka</code></td><td>ポーカーテーブル背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>poker_dealer_style_kafka</code></td><td>ポーカーディーラー衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>poker_status_text_pack</code></td><td>ポーカーポスト文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>poker_post_layout</code></td><td>ポーカーレイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>master_style</code></td><td>マスタースタイル</td><td>基準</td></tr>
+<tr><td>block</td><td><code>moderation_pack</code></td><td>モデレーション</td><td>安全</td></tr>
+<tr><td>block</td><td><code>logo_only_kafka</code></td><td>ロゴ単独</td><td>ブランド</td></tr>
+<tr><td>block</td><td><code>local_offline_pack</code></td><td>ローカル優先</td><td>システム・実行</td></tr>
+<tr><td>block</td><td><code>persona_poster_viz</code></td><td>人格ポスター</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>break_scene_kafka</code></td><td>休憩背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>daily_work_sheet_vlog</code></td><td>作業管理テンプレート</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>work_start_scene_kafka</code></td><td>作業開始背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>negative_common</code></td><td>共通ネガティブ</td><td>ネガティブ</td></tr>
+<tr><td>block</td><td><code>source_research</code></td><td>再調査メモ</td><td>リサーチ</td></tr>
+<tr><td>block</td><td><code>morning_pose_winter_kafka</code></td><td>冬おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_background_winter_kafka</code></td><td>冬朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>seasonal_outfit_winter_kafka</code></td><td>冬衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>morning_pose_commute_kafka</code></td><td>出発前おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_scene_commute_kafka</code></td><td>出発前の朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>expressions_pack</code></td><td>反応集</td><td>表情</td></tr>
+<tr><td>block</td><td><code>announcement_text_pack</code></td><td>告知文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>morning_pose_summer_kafka</code></td><td>夏おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_background_summer_kafka</code></td><td>夏朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>seasonal_outfit_summer_kafka</code></td><td>夏衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>plugin_pack</code></td><td>外部連携</td><td>拡張</td></tr>
+<tr><td>block</td><td><code>subtitle_pack</code></td><td>字幕・テロップ</td><td>テキスト</td></tr>
+<tr><td>block</td><td><code>logo_orbit_kafka</code></td><td>宇宙ロゴ単独</td><td>ブランド</td></tr>
+<tr><td>block</td><td><code>morning_pose_sleepy_kafka</code></td><td>寝起きおはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_scene_sleepy_kafka</code></td><td>寝起きの朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>vfx_trigger_pack</code></td><td>感情演出</td><td>演出</td></tr>
+<tr><td>block</td><td><code>archive_contact_sheet_viz</code></td><td>成果物一覧（コンタクトシート）</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>summary_sheet_vlog</code></td><td>振り返りサマリー</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>research_log_pack</code></td><td>振り返りログ</td><td>記録・ログ</td></tr>
+<tr><td>block</td><td><code>control_panel_pack</code></td><td>操作パネル</td><td>制御</td></tr>
+<tr><td>block</td><td><code>wordmark_only_kafka</code></td><td>文字ロゴ単独</td><td>ブランド</td></tr>
+<tr><td>block</td><td><code>status_post_layout</code></td><td>日常ステータスレイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>daily_status_text_pack</code></td><td>日常ステータス文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>text_style_jp</code></td><td>日本語文字</td><td>テキスト</td></tr>
+<tr><td>block</td><td><code>morning_pose_spring_kafka</code></td><td>春おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_background_spring_kafka</code></td><td>春朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>seasonal_outfit_spring_kafka</code></td><td>春衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>morning_scene_coffee_kafka</code></td><td>朝コーヒー背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>morning_situation_text_pack</code></td><td>朝シチュエーション文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>reading_scene_seaside_kafka</code></td><td>海辺の読書背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>comic_layout</code></td><td>漫画レイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>prompt_archive_sheet_vlog</code></td><td>生成台帳</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>photo_prompt_sheet_vlog</code></td><td>画像生成台帳（詳細）</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>text_content_pack</code></td><td>短い日本語セリフ</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>morning_pose_autumn_kafka</code></td><td>秋おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_background_autumn_kafka</code></td><td>秋朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>seasonal_outfit_autumn_kafka</code></td><td>秋衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>morning_pose_window_kafka</code></td><td>窓際おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_scene_window_kafka</code></td><td>窓際の朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>persona_pack</code></td><td>自律人格</td><td>人格</td></tr>
+<tr><td>block</td><td><code>outfit_kafka</code></td><td>衣装</td><td>キャラ衣装</td></tr>
+<tr><td>block</td><td><code>reaction_focus</code></td><td>表情強調</td><td>表情</td></tr>
+<tr><td>block</td><td><code>effects_pack</code></td><td>装飾効果</td><td>演出</td></tr>
+<tr><td>block</td><td><code>memory_note_board_viz</code></td><td>記憶メモ（記録用ボード）</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>memory_pack</code></td><td>記憶管理</td><td>記憶</td></tr>
+<tr><td>block</td><td><code>safe_reply_pack</code></td><td>話題切り替え</td><td>リプライ・対話</td></tr>
+<tr><td>block</td><td><code>topic_redirect_banner_viz</code></td><td>話題切り替え用バナー</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>reading_post_layout</code></td><td>読書シーン用レイアウト</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>reading_pose_kafka</code></td><td>読書ポーズ</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>reading_status_text_pack</code></td><td>読書文言</td><td>セリフ・フレーズ</td></tr>
+<tr><td>block</td><td><code>reading_scene_general_kafka</code></td><td>読書背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>reading_outfit_kafka</code></td><td>読書衣装</td><td>衣装</td></tr>
+<tr><td>block</td><td><code>reading_scene_anne_kafka</code></td><td>赤毛のアン読書背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>reply_stamp_sheet_viz</code></td><td>返信スタンプ（グリッド）</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>progress_scene_kafka</code></td><td>進捗背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>chat_platform_pack</code></td><td>配信チャット</td><td>配信</td></tr>
+<tr><td>block</td><td><code>poststream_review_board_viz</code></td><td>配信振り返り（レビュー用）</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>stream_start_banner_viz</code></td><td>配信開始バナー</td><td>形式・レイアウト</td></tr>
+<tr><td>block</td><td><code>morning_pose_rain_kafka</code></td><td>雨の日おはツイ姿勢</td><td>ポーズ</td></tr>
+<tr><td>block</td><td><code>morning_scene_rain_kafka</code></td><td>雨の日の朝背景</td><td>背景</td></tr>
+<tr><td>block</td><td><code>voice_pipeline_pack</code></td><td>音声パイプライン</td><td>音声</td></tr>
+<tr><td>template</td><td><code>joinwars_post</code></td><td>Kafka JoinWars投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>twitter_comic</code></td><td>Kafka Twitter再調査漫画</td><td>comic</td></tr>
+<tr><td>template</td><td><code>morning_tweet_coffee</code></td><td>Kafka おはツイ コーヒー</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_winter</code></td><td>Kafka おはツイ 冬</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_commute</code></td><td>Kafka おはツイ 出発前</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_summer</code></td><td>Kafka おはツイ 夏</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_sleepy</code></td><td>Kafka おはツイ 寝起き</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_spring</code></td><td>Kafka おはツイ 春</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_autumn</code></td><td>Kafka おはツイ 秋</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_window</code></td><td>Kafka おはツイ 窓際</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_rain</code></td><td>Kafka おはツイ 雨の日</td><td>social</td></tr>
+<tr><td>template</td><td><code>morning_tweet_index</code></td><td>Kafka おはツイ一覧</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>goodnight_post</code></td><td>Kafka おやすみポスト</td><td>social</td></tr>
+<tr><td>template</td><td><code>icon_mark_sheet</code></td><td>Kafka アイコンデザイン</td><td>brand</td></tr>
+<tr><td>template</td><td><code>cardgame_post</code></td><td>Kafka カードゲーム投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>character_design_sheet</code></td><td>Kafka キャラデザインシート</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>cosplay_post</code></td><td>Kafka コスプレ投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>comment_reply_guide</code></td><td>Kafka コメント返しガイド</td><td>system</td></tr>
+<tr><td>template</td><td><code>chat_reply_card</code></td><td>Kafka コメント返信カード</td><td>reaction</td></tr>
+<tr><td>template</td><td><code>slide_talk</code></td><td>Kafka スライド発表</td><td>system</td></tr>
+<tr><td>template</td><td><code>frame_sheet</code></td><td>Kafka フレームデザイン</td><td>brand</td></tr>
+<tr><td>template</td><td><code>poker_post</code></td><td>Kafka ポーカー投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>logo_only_sheet</code></td><td>Kafka ロゴデザイン</td><td>brand</td></tr>
+<tr><td>template</td><td><code>wordmark_sheet</code></td><td>Kafka ワードマークデザイン</td><td>brand</td></tr>
+<tr><td>template</td><td><code>persona_poster</code></td><td>Kafka 人格ポスター</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>persona_sheet</code></td><td>Kafka 人格固定カード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>break_post</code></td><td>Kafka 休憩ポスト</td><td>social</td></tr>
+<tr><td>template</td><td><code>work_start_post</code></td><td>Kafka 作業開始ポスト</td><td>social</td></tr>
+<tr><td>template</td><td><code>reaction_image</code></td><td>Kafka 反応画像</td><td>reaction</td></tr>
+<tr><td>template</td><td><code>orbit_logo_sheet</code></td><td>Kafka 宇宙ロゴデザイン</td><td>brand</td></tr>
+<tr><td>template</td><td><code>archive_contact_sheet</code></td><td>Kafka 成果物一覧</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>archive_index</code></td><td>Kafka 成果物回収カード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>stamp_sheet</code></td><td>Kafka 新しいスタンプ</td><td>stamp</td></tr>
+<tr><td>template</td><td><code>reading_post_seaside</code></td><td>Kafka 海辺の読書投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>photo_prompt_sheet</code></td><td>Kafka 生成素材台帳</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>memory_note_board</code></td><td>Kafka 記憶メモボード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>memory_update_card</code></td><td>Kafka 記憶更新カード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>topic_redirect_card</code></td><td>Kafka 話題切り替えカード</td><td>reaction</td></tr>
+<tr><td>template</td><td><code>topic_redirect_banner</code></td><td>Kafka 話題切り替えバナー</td><td>announcement</td></tr>
+<tr><td>template</td><td><code>reading_post_general</code></td><td>Kafka 読書投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>reading_post_anne</code></td><td>Kafka 赤毛のアン読書投稿</td><td>social</td></tr>
+<tr><td>template</td><td><code>ai_tuber_core_pack</code></td><td>Kafka 起動カード</td><td>system</td></tr>
+<tr><td>template</td><td><code>reply_stamp_sheet</code></td><td>Kafka 返信スタンプ（一覧）</td><td>stamp</td></tr>
+<tr><td>template</td><td><code>progress_post</code></td><td>Kafka 進捗ポスト</td><td>social</td></tr>
+<tr><td>template</td><td><code>announcement_thumbnail</code></td><td>Kafka 配信告知サムネイル</td><td>announcement</td></tr>
+<tr><td>template</td><td><code>summary_sheet</code></td><td>Kafka 配信後まとめカード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>ai_tuber_ops_pack</code></td><td>Kafka 配信後レビューカード</td><td>system</td></tr>
+<tr><td>template</td><td><code>poststream_review_board</code></td><td>Kafka 配信後レビュー盤</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>daily_work_sheet</code></td><td>Kafka 配信運用カード</td><td>design_sheet</td></tr>
+<tr><td>template</td><td><code>stream_start_banner</code></td><td>Kafka 配信開始バナー</td><td>announcement</td></tr>
+    </tbody>
+  </table>
+</details>
+    <details class="list-block">
+  <summary>Relation List</summary>
+  <table class="list-table">
+    <thead><tr><th>From</th><th>Relation</th><th>To</th></tr></thead>
+    <tbody>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>joinwars_layout</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>joinwars_scene_kafka</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>joinwars_style_kafka</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>joinwars_status_text_pack</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>joinwars_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>source_research</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>comic_layout</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>twitter_comic</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>morning_pose_coffee_kafka</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>morning_scene_coffee_kafka</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_coffee</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>seasonal_outfit_winter_kafka</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>morning_pose_winter_kafka</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>morning_background_winter_kafka</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>morning_tweet_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>morning_tweet_winter</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>morning_pose_commute_kafka</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>morning_scene_commute_kafka</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_commute</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>seasonal_outfit_summer_kafka</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>morning_pose_summer_kafka</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>morning_background_summer_kafka</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>morning_tweet_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>morning_tweet_summer</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>morning_pose_sleepy_kafka</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>morning_scene_sleepy_kafka</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_sleepy</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>seasonal_outfit_spring_kafka</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>morning_pose_spring_kafka</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>morning_background_spring_kafka</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>morning_tweet_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>morning_tweet_spring</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>seasonal_outfit_autumn_kafka</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>morning_pose_autumn_kafka</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>morning_background_autumn_kafka</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>morning_tweet_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>morning_tweet_autumn</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>morning_pose_window_kafka</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>morning_scene_window_kafka</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_window</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>morning_pose_rain_kafka</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>morning_scene_rain_kafka</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_rain</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>morning_tweet_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>morning_situation_text_pack</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>morning_tweet_index</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>goodnight_scene_kafka</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>status_post_layout</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>daily_status_text_pack</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>goodnight_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>icon_mark_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>icon_mark_sheet</code></td><td>blocks</td><td><code>icon_mark_only_kafka</code></td></tr>
+<tr><td><code>icon_mark_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>cardgame_post_layout</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>fantasy_card_game_scene_kafka</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>fantasy_card_game_style_kafka</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>card_game_status_text_pack</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>cardgame_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>character_design_sheet</code></td><td>blocks</td><td><code>character_sheet_kafka</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>cosplay_post_layout</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>cosplay_scene_kafka</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>cosplay_event_outfit_kafka</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>cosplay_status_text_pack</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>cosplay_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>comment_reply_guide</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>uses</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>uses</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>uses</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>chat_reply_card</code></td><td>uses</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>slide_talk</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>slide_talk</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>slide_talk</code></td><td>blocks</td><td><code>slide_pack</code></td></tr>
+<tr><td><code>slide_talk</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>slide_talk</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>frame_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>frame_sheet</code></td><td>blocks</td><td><code>frame_only_kafka</code></td></tr>
+<tr><td><code>frame_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>poker_post_layout</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>poker_table_scene_kafka</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>poker_dealer_style_kafka</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>poker_status_text_pack</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>poker_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>logo_only_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>logo_only_sheet</code></td><td>blocks</td><td><code>logo_only_kafka</code></td></tr>
+<tr><td><code>logo_only_sheet</code></td><td>blocks</td><td><code>wordmark_only_kafka</code></td></tr>
+<tr><td><code>logo_only_sheet</code></td><td>blocks</td><td><code>icon_mark_only_kafka</code></td></tr>
+<tr><td><code>logo_only_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>wordmark_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>wordmark_sheet</code></td><td>blocks</td><td><code>wordmark_only_kafka</code></td></tr>
+<tr><td><code>wordmark_sheet</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>wordmark_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>persona_poster_viz</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>uses</td><td><code>persona_poster_viz</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>uses</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>persona_poster</code></td><td>uses</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>persona_sheet_vlog</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>persona_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>break_scene_kafka</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>status_post_layout</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>daily_status_text_pack</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>break_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>work_start_scene_kafka</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>status_post_layout</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>daily_status_text_pack</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>work_start_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>uses</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>uses</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>uses</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>reaction_image</code></td><td>uses</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>orbit_logo_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>orbit_logo_sheet</code></td><td>blocks</td><td><code>logo_orbit_kafka</code></td></tr>
+<tr><td><code>orbit_logo_sheet</code></td><td>blocks</td><td><code>wordmark_only_kafka</code></td></tr>
+<tr><td><code>orbit_logo_sheet</code></td><td>blocks</td><td><code>icon_mark_only_kafka</code></td></tr>
+<tr><td><code>orbit_logo_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>archive_contact_sheet_viz</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>archive_index_vlog</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>uses</td><td><code>archive_contact_sheet_viz</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>uses</td><td><code>archive_index_vlog</code></td></tr>
+<tr><td><code>archive_contact_sheet</code></td><td>uses</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>archive_index_vlog</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>archive_index</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>sticker_sheet_layout</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>stamp_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>reading_post_layout</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>reading_scene_seaside_kafka</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>reading_pose_kafka</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>reading_outfit_kafka</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>reading_status_text_pack</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reading_post_seaside</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>photo_prompt_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>photo_prompt_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>photo_prompt_sheet</code></td><td>blocks</td><td><code>photo_prompt_sheet_vlog</code></td></tr>
+<tr><td><code>photo_prompt_sheet</code></td><td>blocks</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>photo_prompt_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>memory_note_board_viz</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>uses</td><td><code>memory_note_board_viz</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>uses</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>memory_note_board</code></td><td>uses</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>memory_update_card</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>topic_redirect_card</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>topic_redirect_banner_viz</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>topic_redirect_banner</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>reading_post_layout</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>reading_scene_general_kafka</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>reading_pose_kafka</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>reading_outfit_kafka</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>reading_status_text_pack</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reading_post_general</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>reading_post_layout</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>reading_scene_anne_kafka</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>reading_pose_kafka</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>reading_outfit_kafka</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>reading_status_text_pack</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reading_post_anne</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>local_offline_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>voice_pipeline_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>chat_platform_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>avatar_mode_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>control_panel_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>demo_mode_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>moderation_pack</code></td></tr>
+<tr><td><code>ai_tuber_core_pack</code></td><td>blocks</td><td><code>plugin_pack</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>reply_stamp_sheet_viz</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reply_stamp_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>outfit_kafka</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>progress_scene_kafka</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>status_post_layout</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>daily_status_text_pack</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>progress_post</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>announcement_text_pack</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>announcement_thumbnail</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>summary_sheet_vlog</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>summary_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>vfx_trigger_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>subtitle_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>announcement_text_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>character_customization_pack</code></td></tr>
+<tr><td><code>ai_tuber_ops_pack</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>poststream_review_board_viz</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>uses</td><td><code>poststream_review_board_viz</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>uses</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>poststream_review_board</code></td><td>uses</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>daily_work_sheet_vlog</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>local_offline_pack</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>daily_work_sheet</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>master_style</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>character_kafka</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>stream_start_banner_viz</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>announcement_text_pack</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>effects_pack</code></td></tr>
+<tr><td><code>stream_start_banner</code></td><td>blocks</td><td><code>negative_common</code></td></tr>
+<tr><td><code>morning_tweet_layout</code></td><td>variant_of</td><td><code>status_post_layout</code></td></tr>
+<tr><td><code>chat_reply_pack</code></td><td>related</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>chat_reply_pack</code></td><td>related</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>slide_pack</code></td><td>related</td><td><code>ai_tuber_ops_pack</code></td></tr>
+<tr><td><code>slide_pack</code></td><td>related</td><td><code>comment_reply_guide</code></td></tr>
+<tr><td><code>slide_pack</code></td><td>related</td><td><code>slide_talk</code></td></tr>
+<tr><td><code>persona_sheet_vlog</code></td><td>related</td><td><code>persona_sheet</code></td></tr>
+<tr><td><code>persona_sheet_vlog</code></td><td>related</td><td><code>persona_poster_viz</code></td></tr>
+<tr><td><code>persona_sheet_vlog</code></td><td>related</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>persona_poster_viz</code></td><td>related</td><td><code>persona_pack</code></td></tr>
+<tr><td><code>persona_poster_viz</code></td><td>related</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>daily_work_sheet_vlog</code></td><td>related</td><td><code>daily_work_sheet</code></td></tr>
+<tr><td><code>daily_work_sheet_vlog</code></td><td>related</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>daily_work_sheet_vlog</code></td><td>related</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>daily_work_sheet_vlog</code></td><td>variant_of</td><td><code>daily_work_sheet</code></td></tr>
+<tr><td><code>expressions_pack</code></td><td>related</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>archive_contact_sheet_viz</code></td><td>related</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>archive_contact_sheet_viz</code></td><td>related</td><td><code>archive_index_vlog</code></td></tr>
+<tr><td><code>archive_contact_sheet_viz</code></td><td>variant_of</td><td><code>prompt_archive_sheet_vlog</code></td></tr>
+<tr><td><code>status_post_layout</code></td><td>related</td><td><code>morning_tweet_layout</code></td></tr>
+<tr><td><code>persona_pack</code></td><td>related</td><td><code>persona_poster_viz</code></td></tr>
+<tr><td><code>persona_pack</code></td><td>related</td><td><code>speech_mode_kafka</code></td></tr>
+<tr><td><code>reaction_focus</code></td><td>related</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>reaction_focus</code></td><td>related</td><td><code>text_content_pack</code></td></tr>
+<tr><td><code>reaction_focus</code></td><td>variant_of</td><td><code>expressions_pack</code></td></tr>
+<tr><td><code>memory_note_board_viz</code></td><td>related</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>memory_note_board_viz</code></td><td>related</td><td><code>archive_contact_sheet_viz</code></td></tr>
+<tr><td><code>memory_note_board_viz</code></td><td>variant_of</td><td><code>memory_pack</code></td></tr>
+<tr><td><code>topic_redirect_banner_viz</code></td><td>related</td><td><code>chat_reply_pack</code></td></tr>
+<tr><td><code>topic_redirect_banner_viz</code></td><td>related</td><td><code>safe_reply_pack</code></td></tr>
+<tr><td><code>reply_stamp_sheet_viz</code></td><td>related</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>reply_stamp_sheet_viz</code></td><td>related</td><td><code>text_style_jp</code></td></tr>
+<tr><td><code>reply_stamp_sheet_viz</code></td><td>variant_of</td><td><code>reaction_focus</code></td></tr>
+<tr><td><code>poststream_review_board_viz</code></td><td>related</td><td><code>research_log_pack</code></td></tr>
+<tr><td><code>poststream_review_board_viz</code></td><td>related</td><td><code>memory_pack</code></td></tr>
+    </tbody>
+  </table>
+</details>
+  </main>
+</body>
+</html>
