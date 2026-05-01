@@ -1,7 +1,7 @@
 const db = __DB_JSON__;
 const blocks = Object.fromEntries(db.blocks.map((block) => [block.id, block]));
 const templates = db.templates;
-const fullCopySuffix = '\n\n画像生成する';
+const fullCopySuffix = '\n\n---\n# 指示\n画像生成する';
 
 const state = {
   templates,
