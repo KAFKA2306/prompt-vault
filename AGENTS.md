@@ -10,6 +10,7 @@
 - [static/style.css](static/style.css): タイルサイズ、余白、画像/非画像の見た目
 - [scripts/verify_pages.sh](scripts/verify_pages.sh): 公開表示の検証
 - [docs/manual/001_cloudflare_pages.md](docs/manual/001_cloudflare_pages.md): Cloudflare Pages の確認手順
+- [docs/manual/002_cloudflare_api_secret.md](docs/manual/002_cloudflare_api_secret.md): Cloudflare Pages への GEMINI_API_KEY シークレット設定手順
 - [ローカル表示](http://127.0.0.1:8787/)
 - [公開サイト](https://kafka2306.github.io/prompt-vault/)
 

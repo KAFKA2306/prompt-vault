@@ -6,3 +6,4 @@ dist/*
 !dist/artifacts/
 !dist/artifacts/**
 *Zone.Identifier
+.dev.vars
