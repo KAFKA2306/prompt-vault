@@ -7,12 +7,14 @@ const kindLabels = {
   stamp: 'スタンプ / 切り抜きしやすい完成形',
   comic: '漫画 / 物語を追いやすい完成形',
   reaction: '反応画像 / 一発で伝わる完成形',
+  design_sheet: 'デザインシート / 設定資料',
 };
 
 const kindPalettes = {
   stamp: { accent: '15,118,110', accent2: '37,99,235' },
   comic: { accent: '99,102,241', accent2: '14,165,233' },
   reaction: { accent: '236,72,153', accent2: '249,115,22' },
+  design_sheet: { accent: '59,130,246', accent2: '168,85,247' },
   default: { accent: '15,118,110', accent2: '37,99,235' },
 };
 
@@ -53,6 +55,40 @@ const renderPreviewBlocks = (template) => template.blocks.map((blockId) => {
   const block = blocks[blockId];
   return `<div class="preview-chip">${block.title}</div>`;
 }).join('');
+
+const renderArtifacts = (template) => {
+  const artifacts = template.artifacts || [];
+  if (!artifacts.length) {
+    return '<div class="empty">生成実例はありません。</div>';
+  }
+
+  const [primary, ...rest] = artifacts;
+  return `
+    <div class="artifact-showcase">
+      <a class="artifact-hero" href="${primary.path}" target="_blank" rel="noreferrer">
+        <div class="artifact-hero__media">
+          <img src="${primary.path}" alt="${primary.title}" loading="lazy" />
+        </div>
+        <div class="artifact-hero__meta">
+          <div class="artifact-hero__kicker">生成実例</div>
+          <div class="artifact-hero__title">${primary.title}</div>
+          <div class="artifact-hero__path">${primary.path}</div>
+          <div class="artifact-hero__action">原寸で開く</div>
+        </div>
+      </a>
+      ${rest.length ? `
+        <div class="artifact-strip">
+          ${rest.map((artifact) => `
+            <a class="artifact-thumb" href="${artifact.path}" target="_blank" rel="noreferrer">
+              <img src="${artifact.path}" alt="${artifact.title}" loading="lazy" />
+              <span>${artifact.title}</span>
+            </a>
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+};
 
 const selected = () => state.templates.find((item) => item.id === state.selectedId) || null;
 
@@ -124,6 +160,7 @@ const renderDetail = () => {
     el('preview-blocks').innerHTML = '';
     el('detail-summary').textContent = '一覧から選んでください。';
     el('detail-notes').textContent = '一覧から選んでください。';
+    el('artifact-list').innerHTML = '';
     el('block-list').innerHTML = '';
     el('detail-full').textContent = '';
     el('preview-stage').style.removeProperty('--accent');
@@ -141,6 +178,7 @@ const renderDetail = () => {
   el('preview-blocks').innerHTML = renderPreviewBlocks(template);
   el('detail-summary').textContent = template.summary || template.purpose;
   el('detail-notes').textContent = template.notes || 'メモなし';
+  el('artifact-list').innerHTML = renderArtifacts(template);
   el('detail-full').textContent = renderTemplate(template);
   const palette = kindPalette(template);
   el('preview-stage').style.setProperty('--accent', palette.accent);

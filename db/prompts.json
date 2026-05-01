@@ -22,10 +22,23 @@
       "tags": ["outfit", "techwear"]
     },
     {
+      "id": "character_sheet_kafka",
+      "category": "用途",
+      "title": "Kafka キャラデザインシート",
+      "content": "masterpiece, best quality, ultra detailed, japanese anime vtuber character design system sheet, professional visual identity guide, highly cohesive character bible layout, clean white background, pastel futuristic aesthetic, soft emotional atmosphere, modern anime infographic design, ultra high resolution, razor sharp lineart, thin elegant outlines, soft gradients, subtle watercolor rendering, polished but human-crafted feeling, carefully designed visual system sheet\n\nMAIN CHARACTER:\ncute anime girl named Kafka, long pastel blue hair with lavender gradients, fluffy layered hair, semi-transparent bangs, sparkling blue-purple eyes, pale glowing skin, soft blush, expressive anime face, small smile, youthful vtuber aesthetic, soft emotional presence\n\nHAIR DETAILS:\nvery long wavy twin-layer hair,\nsoft transparent hair strands,\nlavender-blue gradients,\nsmall silver geometric hair clips,\ntiny futuristic ornaments,\ndelicate bead chains,\nsoft reflective highlights,\ncat-like gentle atmosphere\n\nOUTFIT DESIGN:\noversized white futuristic coat,\nsoft sailor-style inner outfit,\nlight blue and navy ribbon,\nshort pleated skirt,\nwhite oversized sleeves,\npastel techwear aesthetic,\nmany tiny accessories,\nhanging beads and chains,\nsoft holographic details,\ncute utility straps,\nwhite socks,\nlarge chunky futuristic sneakers,\nwhite and pastel blue color coordination\n\nHEAD ACCESSORY:\nwhite oversized cap with black circular “K” emblem,\nsmall decorative flowers and branches attached to cap,\nsoft futuristic military-vtuber hybrid aesthetic\n\nMAIN LAYOUT:\nlarge central full-body seated illustration on left side,\ncharacter reaching hand toward viewer,\nfriendly welcoming pose,\nlarge flowing hair across composition,\nhigh emotional readability\n\nDESIGN SHEET STRUCTURE:\nprofessional japanese character design reference sheet layout,\nmultiple organized panels with thin blue borders,\nclean spacing,\nhigh readability,\nbalanced infographic composition\n\nTOP LEFT:\nlarge “Kafka” logo in soft rounded typography,\ngradient blue-purple logo,\nsmall japanese subtitle “かふか | KAFKA”\n\nUPPER CENTER:\nthree-view character turnaround sheet,\nFRONT / SIDE / BACK views,\nfull body accurate design consistency\n\nUPPER RIGHT:\nfacial expression sheet grid,\nmultiple anime expressions,\nneutral face,\nhappy smile,\nwink,\nsurprised,\nembarrassed,\nthinking,\nsleepy,\nrelaxed,\nlaughing,\nall expressions maintain exact same face identity\n\nCENTER LEFT:\nconcept keyword infographic section,\nsmall pastel icon symbols,\nsoft blue minimal icons,\nclean japanese UI layout\n\nLOWER LEFT:\ncolor palette circles,\npastel blues,\nlavender,\nsoft cyan,\nwhite,\nnavy,\nsmall decorative icon motifs,\nlogo variations,\ntiny emblem designs\n\nCENTER:\naccessory breakdown panel,\nhat,\ncoat,\nsailor outfit,\nshoes,\nnecklace,\nhair accessories,\nrobot mascot,\nchains,\nbeads,\nclose-up detailed object references\n\nLOWER RIGHT:\npose variation panel,\nmultiple chibi/full-body poses,\npeace sign,\narms open,\nsitting pose,\nstanding pose,\ncute energetic gesture language\n\nBOTTOM:\nmoodboard/environment section,\nsoft futuristic cityscape,\nnight city lights,\ndreamy sky,\ncozy room,\npastel fantasy scenery,\nclean anime environment thumbnails\n\nVISUAL STYLE:\nhuman-made anime illustration feeling,\nnot generic AI anime,\nvery cohesive identity design,\nsoft emotional warmth,\ngentle futuristic atmosphere,\nclean commercial vtuber branding quality,\nprofessional Japanese artbook layout,\nhigh consistency across all panels,\ncarefully controlled anatomy,\nbeautiful typography spacing,\nsoft holographic glow,\ntiny sparkles,\nminimal floating particles,\nclean white negative space\n\nTYPOGRAPHY:\nlarge japanese typography only,\nprofessional rounded Japanese font,\nclean rendering,\nhigh readability,\nno broken Japanese,\nno English UI clutter except intentional logo/title elements,\norganized Japanese infographic labeling\n\nCOLOR PALETTE:\npastel blue,\nsoft cyan,\nlavender,\nwhite,\nlight navy,\nsmall pink accents,\nsoft transparent gradients,\nlow saturation,\ngentle atmospheric lighting\n\nNEGATIVE PROMPT:\nlow quality, low resolution, blurry image, bad anatomy, deformed hands, extra fingers, duplicate limbs, malformed face, crossed eyes, inconsistent hairstyle, inconsistent outfit, messy layout, chaotic composition, harsh shadows, strong contrast, dark cyberpunk, heavy neon, generic AI anime, overly glossy skin, plastic rendering, 3D render look, noisy details, cluttered infographic, broken Japanese text, random English text, watermark, signature, cropped panels, empty areas, flat expressions, emotionless face, corporate presentation style, hypersexualized design",
+      "tags": ["kafka", "character-sheet", "vtuber", "design", "prompt"]
+    },
+    {
       "id": "sticker_sheet_layout",
       "category": "用途",
       "title": "4x4 ステッカーシート",
       "content": "japanese anime sticker sheet, professional discord sticker pack, clean white background, die-cut sticker layout, 4x4 grid composition, simple isolated compositions, clear silhouette, large readable expressions, direct cropping friendly, minimal background, high contrast readability",
+      "artifacts": [
+        {
+          "path": "artifacts/001_sticker_sheet.png",
+          "title": "表情スタンプの実例"
+        }
+      ],
       "tags": ["discord", "sticker", "layout"]
     },
     {
@@ -40,6 +53,12 @@
       "category": "用途",
       "title": "漫画レイアウト",
       "content": "clean manga panel layout, easy reading order, 1 to 4 panels, strong focal point, clear panel spacing, expressive beats, simple background, story-forward composition, square or vertical crop friendly",
+      "artifacts": [
+        {
+          "path": "artifacts/002_twitter_comic.png",
+          "title": "再調査漫画の実例"
+        }
+      ],
       "tags": ["comic", "layout", "panels"]
     },
     {
@@ -47,6 +66,12 @@
       "category": "表情",
       "title": "表情強調",
       "content": "expressive face, clear eyebrows, strong eye shape, readable mouth shape, emotional pose, visible hand gesture, cinematic close-up, character centered, reaction-first framing",
+      "artifacts": [
+        {
+          "path": "artifacts/003_reaction_image.png",
+          "title": "反応画像の実例"
+        }
+      ],
       "tags": ["reaction", "closeup", "expression"]
     },
     {
@@ -94,6 +119,12 @@
       "summary": "スタンプ用の最短レシピ。いつもの見た目を崩さず、表情だけ差し替える。",
       "steps": ["キャラと衣装を固定する", "表情とポーズを1つ決める", "文字あり/なしを選ぶ", "白背景で切り抜きしやすくする"],
       "blocks": ["master_style", "character_kafka", "outfit_kafka", "sticker_sheet_layout", "expressions_pack", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "artifacts": [
+        {
+          "path": "artifacts/001_sticker_sheet.png",
+          "title": "表情スタンプの実例"
+        }
+      ],
       "notes": "まずこれを開いてから、表情と文言だけ入れ替える。"
     },
     {
@@ -104,6 +135,12 @@
       "summary": "元投稿の事実を拾い直し、いつものキャラで漫画として見せる。",
       "steps": ["元ポストの要点を整理する", "事実と感情を分ける", "1〜4コマの流れにする", "吹き出し文を短くする"],
       "blocks": ["source_research", "master_style", "character_kafka", "comic_layout", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "artifacts": [
+        {
+          "path": "artifacts/002_twitter_comic.png",
+          "title": "再調査漫画の実例"
+        }
+      ],
       "notes": "再調査メモを先に読ませて、余計な誤読を減らす。"
     },
     {
@@ -114,7 +151,29 @@
       "summary": "短い返答やリアクションを、見やすい1枚絵にする。",
       "steps": ["感情を1つに絞る", "表情を強く出す", "セリフは短くする", "余白を残して読みやすくする"],
       "blocks": ["master_style", "character_kafka", "outfit_kafka", "reaction_focus", "text_style_jp", "text_content_pack", "effects_pack", "negative_common"],
+      "artifacts": [
+        {
+          "path": "artifacts/003_reaction_image.png",
+          "title": "反応画像の実例"
+        }
+      ],
       "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。"
+    },
+    {
+      "id": "character_design_sheet",
+      "title": "Kafka キャラデザインシート",
+      "kind": "design_sheet",
+      "purpose": "キャラ設定と全体設計を1枚にまとめる",
+      "summary": "三面図、表情差分、色、装備、ポーズ、環境まで含むデザインシート。",
+      "steps": ["キャラの核を固定する", "三面図で形状を揃える", "表情と小物を整理する", "レイアウト全体を整える"],
+      "blocks": ["character_sheet_kafka"],
+      "artifacts": [
+        {
+          "path": "artifacts/004_character_design_sheet.png",
+          "title": "キャラデザインシートの実例"
+        }
+      ],
+      "notes": "原文をそのまま保管する用途。全文コピーで使う前提。"
     }
   ]
 }

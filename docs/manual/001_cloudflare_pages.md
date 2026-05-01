@@ -5,6 +5,7 @@
 
 ## リンク集
 
+- [ローカル表示](http://127.0.0.1:8787/)
 - [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
 - [GitHub Pages 公開先](https://kafka2306.github.io/prompt-vault/)
 - [Cloudflare Pages Git 連携](https://developers.cloudflare.com/pages/get-started/git-integration/)

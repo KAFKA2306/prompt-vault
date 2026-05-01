@@ -11,6 +11,7 @@ from build import load_db, render_app_js
 
 ROOT = Path(__file__).resolve().parent
 STATIC_PATH = ROOT / "static"
+ARTIFACTS_PATH = ROOT / "artifacts"
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -41,6 +42,15 @@ class Handler(BaseHTTPRequestHandler):
             body = json.dumps(load_db(), ensure_ascii=False).encode("utf-8")
             self._send(HTTPStatus.OK, "application/json; charset=utf-8", body)
             return
+
+        if self.path.startswith("/artifacts/"):
+            rel = self.path.removeprefix("/artifacts/")
+            target = ARTIFACTS_PATH / rel
+            if target.is_file():
+                body = target.read_bytes()
+                content_type = "image/png" if target.suffix.lower() == ".png" else "application/octet-stream"
+                self._send(HTTPStatus.OK, content_type, body)
+                return
 
         self.send_error(HTTPStatus.NOT_FOUND)
 
