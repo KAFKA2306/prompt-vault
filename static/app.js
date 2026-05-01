@@ -47,7 +47,7 @@ const setMetaContent = (selector, value) => {
 
 const setSeoCopy = () => {
   const title = `Prompt Vault | ${stats.blocks}ブロック・${stats.templates}テンプレートの画像生成プロンプト集`;
-  const description = 'Prompt Vault は、画像生成プロンプトをブロック単位で整理し、ギャラリーから探して、モーダルで全文をすぐコピーできるプロンプト保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで横断できます。';
+  const description = 'Prompt Vault は、画像からプロンプトを探し、全文をコピーできる保管庫です。';
 
   document.title = title;
   setMetaContent('meta[name="description"]', description);
