@@ -1976,6 +1976,177 @@
         "research_log_pack"
       ],
       "notes": "配信後の改善や日常運用で使う。"
+    },
+    {
+      "id": "reading_post_general",
+      "title": "Kafka 読書投稿",
+      "kind": "social",
+      "purpose": "本を読んでいる様子を、静かで見やすい投稿にする",
+      "summary": "読書中の姿、短い読書文言、落ち着いた背景を1枚にまとめる。",
+      "steps": [
+        "読む本を1冊に絞る",
+        "座る姿勢と手元を見せる",
+        "短い読書文言を置く",
+        "背景を静かにする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "reading_post_layout",
+        "reading_scene_general_kafka",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "reading_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "読書ポストの基本形。日付は入れない。"
+    },
+    {
+      "id": "reading_post_seaside",
+      "title": "Kafka 海辺の読書投稿",
+      "kind": "social",
+      "purpose": "海辺で本を読んでいる様子を、静かな投稿にする",
+      "summary": "海、風、光の中で読書している姿をそのまま見せる。",
+      "steps": [
+        "海辺の空気を決める",
+        "読んでいる本を見せる",
+        "座り方を静かにする",
+        "短い読書文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "reading_post_layout",
+        "reading_scene_seaside_kafka",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "reading_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "『海辺のカフカ』を読む投稿ではなく、海辺で読書している様子として使う。"
+    },
+    {
+      "id": "reading_post_anne",
+      "title": "Kafka 赤毛のアン読書投稿",
+      "kind": "social",
+      "purpose": "『赤毛のアン』を読んでいる様子を、やわらかい投稿にする",
+      "summary": "花ややさしい光のある読書シーンを、静かな一枚にする。",
+      "steps": [
+        "本の雰囲気を先に決める",
+        "柔らかい部屋か庭を置く",
+        "読書姿を落ち着かせる",
+        "読書文言を短く入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "reading_post_layout",
+        "reading_scene_anne_kafka",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "reading_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "作品例としての読書投稿。見た目は静かでやさしくする。"
+    },
+    {
+      "id": "cosplay_post",
+      "title": "Kafka コスプレ投稿",
+      "kind": "social",
+      "purpose": "コスプレしている様子を、撮影用の投稿にする",
+      "summary": "衣装の見え方と撮影感を優先して、イベントやスタジオの空気を出す。",
+      "steps": [
+        "衣装を主役にする",
+        "撮影場所を固定する",
+        "姿勢をわかりやすくする",
+        "短いコスプレ文言を入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "cosplay_post_layout",
+        "cosplay_scene_kafka",
+        "cosplay_event_outfit_kafka",
+        "cosplay_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "イベント会場、スタジオ、撮影ブースのどれでも使える基本形。"
+    },
+    {
+      "id": "poker_post",
+      "title": "Kafka ポーカー投稿",
+      "kind": "social",
+      "purpose": "ポーカー中のかっこいい様子を、そのまま投稿にする",
+      "summary": "ディーラー感、手札、チップ、テーブルを見せて、勝負の空気を出す。",
+      "steps": [
+        "ディーラーかプレイヤーかを決める",
+        "テーブル上の要素を置く",
+        "勝負の一瞬を切り取る",
+        "短いポーカー文言を入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "poker_post_layout",
+        "poker_table_scene_kafka",
+        "poker_dealer_style_kafka",
+        "poker_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "かっこよさ優先。日付は入れない。"
+    },
+    {
+      "id": "cardgame_post",
+      "title": "Kafka カードゲーム投稿",
+      "kind": "social",
+      "purpose": "カードゲーム中の様子を、読みやすい投稿にする",
+      "summary": "ファンタジー寄りの盤面とキャラを1枚にまとめる。",
+      "steps": [
+        "遊んでいるカードゲームを決める",
+        "盤面の見え方を整える",
+        "戦況が伝わるポーズにする",
+        "短いカードゲーム文言を入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "cardgame_post_layout",
+        "fantasy_card_game_scene_kafka",
+        "fantasy_card_game_style_kafka",
+        "card_game_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Hearthstone っぽい雰囲気を狙うときの基本形。"
+    },
+    {
+      "id": "joinwars_post",
+      "title": "Kafka JoinWars投稿",
+      "kind": "social",
+      "purpose": "JoinWars中の様子を、VRChat寄りの投稿にする",
+      "summary": "JoinWarsの盤面感、ターン感、競技感を1枚にまとめる。",
+      "steps": [
+        "JoinWarsの場面を決める",
+        "VRChatっぽい空気を置く",
+        "カードや盤面を見せる",
+        "JoinWars文言を短く入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "joinwars_layout",
+        "joinwars_scene_kafka",
+        "joinwars_style_kafka",
+        "joinwars_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "JoinWars の一般イメージに寄せた専用パターン。"
     }
   ]
 }
