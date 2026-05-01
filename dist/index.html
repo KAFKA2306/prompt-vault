@@ -60,6 +60,27 @@
           "inLanguage": "ja-JP"
         },
         {
+          "@type": "Organization",
+          "@id": "https://prompt-vault-cg3.pages.dev/#organization",
+          "name": "KAFKA2306",
+          "url": "https://prompt-vault-cg3.pages.dev/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://prompt-vault-cg3.pages.dev/favicon.svg"
+          },
+          "sameAs": [
+            "https://github.com/KAFKA2306/prompt-vault"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "support",
+              "url": "https://github.com/KAFKA2306/prompt-vault/issues"
+            }
+          ],
+          "inLanguage": "ja-JP"
+        },
+        {
           "@type": "BreadcrumbList",
           "@id": "https://prompt-vault-cg3.pages.dev/#breadcrumb",
           "itemListElement": [
@@ -94,6 +115,11 @@
         <div class="eyebrow">画像生成プロンプト / ローカルDB / コピー中心</div>
         <h1>Prompt Vault</h1>
         <p class="lead">直感的に画像からプロンプトを探し出し、全文をそのままコピーできるギャラリーベースの保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナーまで、使う場面からすぐ辿れます。</p>
+        <div class="hero-actions" aria-label="主要操作">
+          <a href="#gallery-section" class="button button--link primary">Browse gallery</a>
+          <a href="#template-section" class="button button--link">Open templates</a>
+          <a href="https://github.com/KAFKA2306/prompt-vault" class="button button--link">GitHub</a>
+        </div>
         <nav class="section-links" aria-label="ページ内リンク">
           <a href="#featured-examples" class="section-link">Featured examples</a>
           <a href="#gallery-section" class="section-link">Gallery</a>
@@ -216,7 +242,10 @@
     </section>
 
     <footer class="footer">
-      <span class="subtle">Machine-readable metadata available.</span>
+      <div class="footer__meta">
+        <span class="subtle">Machine-readable metadata available.</span>
+        <a href="https://github.com/KAFKA2306/prompt-vault/issues" class="footer__contact">Contact / report an issue</a>
+      </div>
     </footer>
   </main>
 

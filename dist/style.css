@@ -83,6 +83,13 @@ body {
   color: var(--accent);
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .panel {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -180,6 +187,25 @@ h1 {
   display: flex;
   justify-content: flex-end;
   padding: 4px 4px 0;
+}
+
+.footer__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer__contact {
+  color: var(--text);
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(16,24,40,.18);
+}
+
+.footer__contact:hover {
+  color: var(--accent);
+  border-bottom-color: rgba(15,118,110,.35);
 }
 
 .seo-panel__facts {
@@ -313,6 +339,13 @@ h1 {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;
   border-color: transparent;
+}
+
+.button--link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .button.primary.is-copied {
