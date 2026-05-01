@@ -169,6 +169,17 @@
       ]
     },
     {
+      "id": "daily_status_text_pack",
+      "category": "文言",
+      "title": "日常ステータス文言",
+      "content": "work start:「作業入る」「いまから進める」「手を動かす」, break:「ひと息」「休憩する」「お茶にする」, progress:「少し進んだ」「もう少し」「ここまできた」, finish:「終わった」「片付いた」「ここまでできた」, goodnight:「おやすみ」「今日はここまで」「また明日」",
+      "tags": [
+        "status",
+        "daily",
+        "text"
+      ]
+    },
+    {
       "id": "morning_tweet_layout",
       "category": "用途",
       "title": "おはツイレイアウト",
@@ -648,6 +659,303 @@
       ]
     },
     {
+      "id": "work_start_scene_kafka",
+      "category": "背景",
+      "title": "作業開始背景",
+      "content": "desk scene, laptop, notebook, coffee or tea, neat workspace, clean window light, calm focus, small pastel accents, no clutter, no dark mood",
+      "tags": [
+        "background",
+        "work",
+        "start"
+      ]
+    },
+    {
+      "id": "break_scene_kafka",
+      "category": "背景",
+      "title": "休憩背景",
+      "content": "soft break scene, mug, small snack, chair, window light, relaxed pause, gentle room atmosphere, no busy props, warm and simple",
+      "tags": [
+        "background",
+        "break",
+        "rest"
+      ]
+    },
+    {
+      "id": "progress_scene_kafka",
+      "category": "背景",
+      "title": "進捗背景",
+      "content": "progress scene, checklist, notebook, laptop, partially completed notes, visible order, focused workspace, subtle status marks, practical and clean",
+      "tags": [
+        "background",
+        "progress",
+        "work"
+      ]
+    },
+    {
+      "id": "goodnight_scene_kafka",
+      "category": "背景",
+      "title": "おやすみ背景",
+      "content": "night room scene, desk lamp, closed laptop, soft blanket, small moon accent, quiet warm light, sleepy but calm, no dark horror mood",
+      "tags": [
+        "background",
+        "night",
+        "sleep"
+      ]
+    },
+    {
+      "id": "poker_dealer_style_kafka",
+      "category": "衣装",
+      "title": "ポーカーディーラー衣装",
+      "content": "black vest, white shirt, slim red tie, gold trim, cufflinks, elegant gloves, casino dealer vibe, polished and cool, neat hair, confident gaze, warm low light",
+      "tags": [
+        "poker",
+        "dealer",
+        "outfit"
+      ]
+    },
+    {
+      "id": "poker_table_scene_kafka",
+      "category": "背景",
+      "title": "ポーカーテーブル背景",
+      "content": "green felt poker table, playing cards, chips, warm casino lighting, shallow depth, elegant and cinematic, no clutter, strong tabletop focus",
+      "tags": [
+        "poker",
+        "table",
+        "background"
+      ]
+    },
+    {
+      "id": "poker_status_text_pack",
+      "category": "文言",
+      "title": "ポーカーポスト文言",
+      "content": "「配る」「勝負」「降りる」「読む」「オールイン」「次の一手」「手札を見る」「今日は強気」「慎重にいく」「勝ち筋を探す」",
+      "tags": [
+        "poker",
+        "status",
+        "text"
+      ]
+    },
+    {
+      "id": "fantasy_card_game_style_kafka",
+      "category": "衣装",
+      "title": "ファンタジーカードゲーム衣装",
+      "content": "fantasy robe or layered coat, gem brooch, blue purple glow accents, card-game mage vibe, elegant but playful, bright magical lighting, hero-like pose, board-game inspired, not dark, not gothic",
+      "tags": [
+        "cardgame",
+        "fantasy",
+        "outfit"
+      ]
+    },
+    {
+      "id": "fantasy_card_game_scene_kafka",
+      "category": "背景",
+      "title": "ファンタジーカード盤面",
+      "content": "fantasy card game board, glowing mana-like gem, hero portrait frame, lane or arena feeling, warm tavern or magical room, readable UI-like composition, bright magical colors, not exact game copy",
+      "tags": [
+        "cardgame",
+        "fantasy",
+        "background"
+      ]
+    },
+    {
+      "id": "card_game_status_text_pack",
+      "category": "文言",
+      "title": "カードゲーム文言",
+      "content": "「ターン中」「盤面を見る」「一手考える」「ここが勝負」「手札が強い」「読み合いだね」「次を待つ」「いい盤面」「まだいける」「ここで決めたい」",
+      "tags": [
+        "cardgame",
+        "status",
+        "text"
+      ]
+    },
+    {
+      "id": "joinwars_status_text_pack",
+      "category": "文言",
+      "title": "JoinWars文言",
+      "content": "「JoinWars中」「勝負中」「デッキを整える」「ターンを見る」「もう一手」「いま考え中」「盤面が熱い」「読み合いだね」「ここで決めたい」「次を見てる」",
+      "tags": [
+        "joinwars",
+        "vrchat",
+        "text"
+      ]
+    },
+    {
+      "id": "joinwars_layout",
+      "category": "用途",
+      "title": "JoinWarsレイアウト",
+      "content": "square or 4:5 social post, one large portrait, one card game motif, no date, no timestamp, visible action or turn feeling, card-frame friendly, readable on mobile, competitive but fun",
+      "tags": [
+        "joinwars",
+        "layout",
+        "social"
+      ]
+    },
+    {
+      "id": "joinwars_scene_kafka",
+      "category": "背景",
+      "title": "JoinWars背景",
+      "content": "VRChat card game world, glowing card frame, deck-building table, turn-based board, join battle mood, bright cyan and violet accents, playful competition, no clutter, no exact logo reproduction",
+      "tags": [
+        "joinwars",
+        "background",
+        "vrchat"
+      ]
+    },
+    {
+      "id": "joinwars_style_kafka",
+      "category": "衣装",
+      "title": "JoinWars衣装",
+      "content": "competitive card game outfit, sleek jacket or vest, clean collar, smart but playful, blue violet accent, dealer or strategist mood, confident gaze, easy to read silhouette",
+      "tags": [
+        "joinwars",
+        "outfit",
+        "cardgame"
+      ]
+    },
+    {
+      "id": "reading_status_text_pack",
+      "category": "文言",
+      "title": "読書文言",
+      "content": "「読書中」「いまここ」「少しずつ読む」「このページが好き」「ひと息つく」「ゆっくりめくる」「静かに読む」「次の章へ」「今日はここまで」「本の時間」",
+      "tags": [
+        "reading",
+        "book",
+        "text"
+      ]
+    },
+    {
+      "id": "reading_post_layout",
+      "category": "用途",
+      "title": "読書中レイアウト",
+      "content": "square or 4:5 social post, one large seated portrait, book in hand, calm readable text, no date, no timestamp, no clutter, soft margins, book post friendly, room or outdoor reading mood",
+      "tags": [
+        "reading",
+        "layout",
+        "social"
+      ]
+    },
+    {
+      "id": "reading_scene_general_kafka",
+      "category": "背景",
+      "title": "読書背景",
+      "content": "quiet reading scene, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
+      "tags": [
+        "reading",
+        "background",
+        "general"
+      ]
+    },
+    {
+      "id": "reading_scene_seaside_kafka",
+      "category": "背景",
+      "title": "海辺の読書背景",
+      "content": "seaside reading scene, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
+      "tags": [
+        "reading",
+        "background",
+        "seaside"
+      ]
+    },
+    {
+      "id": "reading_scene_anne_kafka",
+      "category": "背景",
+      "title": "赤毛のアン読書背景",
+      "content": "storybook reading scene, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
+      "tags": [
+        "reading",
+        "background",
+        "storybook"
+      ]
+    },
+    {
+      "id": "reading_pose_kafka",
+      "category": "ポーズ",
+      "title": "読書ポーズ",
+      "content": "seated reading pose, book held open, one hand on page, calm gaze, shoulders relaxed, tea or mug nearby, quiet and focused, easy to read from the front",
+      "tags": [
+        "reading",
+        "pose",
+        "book"
+      ]
+    },
+    {
+      "id": "reading_outfit_kafka",
+      "category": "衣装",
+      "title": "読書衣装",
+      "content": "cozy reading outfit, cardigan, soft dress, calm ribbon, gentle layered fabric, comfortable and neat, quiet indoor mood, soft pastel colors",
+      "tags": [
+        "reading",
+        "outfit",
+        "cozy"
+      ]
+    },
+    {
+      "id": "cosplay_event_outfit_kafka",
+      "category": "衣装",
+      "title": "コスプレ衣装",
+      "content": "event-ready cosplay outfit, polished costume, clean seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance",
+      "tags": [
+        "cosplay",
+        "event",
+        "outfit"
+      ]
+    },
+    {
+      "id": "cosplay_scene_kafka",
+      "category": "背景",
+      "title": "コスプレ撮影背景",
+      "content": "cosplay photo scene, convention hall or studio backdrop, bright softbox light, simple background, photographer-friendly composition, pose centered, social media ready, no clutter",
+      "tags": [
+        "cosplay",
+        "photo",
+        "background"
+      ]
+    },
+    {
+      "id": "cosplay_status_text_pack",
+      "category": "文言",
+      "title": "コスプレ文言",
+      "content": "「コスプレ中」「撮影してる」「衣装完成」「今日はこの衣装」「次の衣装も楽しみ」「イベント来た」「写真ありがとう」「準備ばっちり」「見てほしい」「お気に入り」",
+      "tags": [
+        "cosplay",
+        "status",
+        "text"
+      ]
+    },
+    {
+      "id": "cosplay_post_layout",
+      "category": "用途",
+      "title": "コスプレレイアウト",
+      "content": "square or 4:5 social post, full body or three-quarter pose, pose centered, event or studio feel, no date, no timestamp, no clutter, photographer-friendly, clear costume visibility",
+      "tags": [
+        "cosplay",
+        "layout",
+        "social"
+      ]
+    },
+    {
+      "id": "poker_post_layout",
+      "category": "用途",
+      "title": "ポーカーレイアウト",
+      "content": "square or 4:5 social post, portrait plus cards or chips, no date, no timestamp, casino lighting, card frame visible, elegant composition, social media ready",
+      "tags": [
+        "poker",
+        "layout",
+        "social"
+      ]
+    },
+    {
+      "id": "cardgame_post_layout",
+      "category": "用途",
+      "title": "カードゲームレイアウト",
+      "content": "square or 4:5 social post, portrait plus card UI, no date, no timestamp, bright magical frame, readable board, turn-based mood, social media ready",
+      "tags": [
+        "cardgame",
+        "layout",
+        "social"
+      ]
+    },
+    {
       "id": "negative_common",
       "category": "禁止",
       "title": "共通ネガティブ",
@@ -1057,6 +1365,102 @@
         }
       ],
       "notes": "冬は暗くしない。朝のやわらかさを残す。日付は入れない。"
+    },
+    {
+      "id": "work_start_post",
+      "title": "Kafka 作業開始ポスト",
+      "kind": "social",
+      "purpose": "作業を始める時に出すポストを作る",
+      "summary": "机、PC、短い開始文言で、作業に入る合図を出す。",
+      "steps": [
+        "今日やることを1つに絞る",
+        "作業開始の文言を置く",
+        "机まわりを見せる",
+        "長く説明しない"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "work_start_scene_kafka",
+        "morning_tweet_layout",
+        "daily_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "開始報告だけに寄せる。進捗や成果はまだ入れない。"
+    },
+    {
+      "id": "break_post",
+      "title": "Kafka 休憩ポスト",
+      "kind": "social",
+      "purpose": "休憩に入る時のひとことポストを作る",
+      "summary": "お茶、ひと息、やわらかい表情で、休憩を自然に伝える。",
+      "steps": [
+        "休憩に入る理由を短くする",
+        "やわらかい小物を置く",
+        "戻る気配を残す",
+        "重くしない"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "break_scene_kafka",
+        "morning_tweet_layout",
+        "daily_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "休憩は短く、次に戻りやすい文面にする。"
+    },
+    {
+      "id": "progress_post",
+      "title": "Kafka 進捗ポスト",
+      "kind": "social",
+      "purpose": "作業の途中経過を出すポストを作る",
+      "summary": "チェックリストや未完のノートで、進み具合を見せる。",
+      "steps": [
+        "進んだところを1つだけ出す",
+        "作業途中の画面を見せる",
+        "続きをやる感を残す",
+        "終わっていないことを自然に伝える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "progress_scene_kafka",
+        "morning_tweet_layout",
+        "daily_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "進捗は情報を増やしすぎない。1つだけ進んだ感を出す。"
+    },
+    {
+      "id": "goodnight_post",
+      "title": "Kafka おやすみポスト",
+      "kind": "social",
+      "purpose": "一日の終わりに出すおやすみポストを作る",
+      "summary": "夜の部屋、やわらかい光、短い終わりの文言で閉じる。",
+      "steps": [
+        "夜の空気を作る",
+        "おやすみの文言を置く",
+        "温度を下げすぎない",
+        "次の日に繋がる余韻を残す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "goodnight_scene_kafka",
+        "morning_tweet_layout",
+        "daily_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "夜は静かに閉じる。眠気を出しても、暗くしすぎない。"
     },
     {
       "id": "reply_stamp_sheet",

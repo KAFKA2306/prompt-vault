@@ -1,4 +1,8 @@
 __pycache__/
 dist/*
 !dist/index.html
+!dist/style.css
+!dist/app.js
+!dist/artifacts/
+!dist/artifacts/**
 *Zone.Identifier

@@ -4,6 +4,7 @@
 
 - [ローカル表示](http://127.0.0.1:8787/)
 - [公開サイト](https://kafka2306.github.io/prompt-vault/)
+- [Cloudflare Pages 公開先](https://prompt-vault-cg3.pages.dev/)
 - [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
 - [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
 - [表示検証スクリプト](scripts/verify_pages.sh)
