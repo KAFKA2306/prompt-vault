@@ -9,7 +9,8 @@
         "base",
         "quality",
         "style"
-      ]
+      ],
+      "family": "core"
     },
     {
       "id": "character_kafka",
@@ -19,7 +20,8 @@
       "tags": [
         "kafka",
         "character"
-      ]
+      ],
+      "family": "character"
     },
     {
       "id": "outfit_kafka",
@@ -29,7 +31,8 @@
       "tags": [
         "outfit",
         "techwear"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "character_sheet_kafka",
@@ -42,7 +45,8 @@
         "vtuber",
         "design",
         "prompt"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "sticker_sheet_layout",
@@ -59,7 +63,8 @@
         "discord",
         "sticker",
         "layout"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "source_research",
@@ -70,7 +75,20 @@
         "twitter",
         "research",
         "summary"
-      ]
+      ],
+      "family": "research"
+    },
+    {
+      "id": "finance_source_research",
+      "category": "リサーチ",
+      "title": "金融ニュース再調査",
+      "content": "read the original market article or post carefully, verify index moves, company moves, and dates against follow-up coverage, keep monthly and weekly figures separate, preserve cautious market tone, and rewrite only what is needed for concise market storytelling",
+      "tags": [
+        "finance",
+        "market",
+        "research"
+      ],
+      "family": "research"
     },
     {
       "id": "comic_layout",
@@ -87,7 +105,8 @@
         "comic",
         "layout",
         "panels"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "reaction_focus",
@@ -113,7 +132,8 @@
         "expressions_pack",
         "text_content_pack"
       ],
-      "variant_of": "expressions_pack"
+      "variant_of": "expressions_pack",
+      "family": "expression"
     },
     {
       "id": "text_style_jp",
@@ -123,7 +143,8 @@
       "tags": [
         "jp",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "text_content_pack",
@@ -134,7 +155,8 @@
         "jp",
         "dialogue",
         "phrases"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "expressions_pack",
@@ -150,7 +172,8 @@
       ],
       "related": [
         "reaction_focus"
-      ]
+      ],
+      "family": "expression"
     },
     {
       "id": "effects_pack",
@@ -160,7 +183,8 @@
       "tags": [
         "effects",
         "sparkles"
-      ]
+      ],
+      "family": "effects"
     },
     {
       "id": "announcement_text_pack",
@@ -170,7 +194,8 @@
       "tags": [
         "announcement",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "morning_tweet_text_pack",
@@ -181,7 +206,8 @@
         "morning",
         "tweet",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "daily_status_text_pack",
@@ -192,7 +218,8 @@
         "status",
         "daily",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "status_post_layout",
@@ -206,7 +233,8 @@
       ],
       "related": [
         "morning_tweet_layout"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "morning_tweet_layout",
@@ -218,7 +246,8 @@
         "tweet",
         "layout"
       ],
-      "variant_of": "status_post_layout"
+      "variant_of": "status_post_layout",
+      "family": "layout"
     },
     {
       "id": "chat_reply_pack",
@@ -236,7 +265,8 @@
       "related": [
         "safe_reply_pack",
         "speech_mode_kafka"
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "speech_mode_kafka",
@@ -247,7 +277,8 @@
         "speech",
         "context",
         "kafka"
-      ]
+      ],
+      "family": "tone"
     },
     {
       "id": "persona_poster_viz",
@@ -266,7 +297,8 @@
       "related": [
         "persona_pack",
         "speech_mode_kafka"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "stream_start_banner_viz",
@@ -278,7 +310,85 @@
         "banner",
         "announcement",
         "kafka"
-      ]
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "news_card_layout",
+      "category": "形式・レイアウト",
+      "title": "ニュースカード",
+      "content": "official news card, bold headline, compact dateline, source line, two clear callouts for PDF and video, neutral press tone, white background, pastel blue accents, strong visual hierarchy, generous margins, no clutter, readable at phone size, suitable for official announcements",
+      "tags": [
+        "news",
+        "layout",
+        "official"
+      ],
+      "family": "news"
+    },
+    {
+      "id": "news_comic_layout",
+      "category": "形式・レイアウト",
+      "title": "ニュース漫画レイアウト",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one official PDF panel, one Governor Ueda press conference panel, one market reaction panel, one inflation outlook chart panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, manga emphasis symbols, small source box, PDF marker icon, video marker icon",
+      "tags": [
+        "news",
+        "comic",
+        "layout"
+      ],
+      "related": [
+        "comic_layout",
+        "news_card_layout"
+      ],
+      "family": "news"
+    },
+    {
+      "id": "market_rally_layout",
+      "category": "形式・レイアウト",
+      "title": "米国株ラリーレイアウト",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one index performance panel, one mega-cap tech panel, one market risk panel, one close panel for the takeaway, white gutters, rounded panel borders, clear mobile-readable layout, simple chart markers, small source box, calm newsroom rhythm",
+      "tags": [
+        "finance",
+        "market",
+        "layout"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "market_rally_panels",
+      "category": "ニュース・セリフ",
+      "title": "米国株ラリーのコマ文",
+      "content": "panel 1: Kafka smiling and pointing at a chart, speech bubble saying 「4月の米国株、強かった！」, headline typography saying 「2026年4月 米国株ラリー」\npanel 2: index performance panel with clean Japanese labels, text blocks showing 「ナスダック +15.3%」 「S&P500 +10.4%」 「ナスダックは2020年4月以来の最高月」 「S&P500は2020年11月以来の最高月」\npanel 3: Kafka reacting to the tech lead, speech bubble saying 「アルファベットが一気に伸びた」, callout saying 「アルファベット +33.8%」\npanel 4: インテル注目パネル, strong chart and bold callout saying 「インテル +114.1%」, smaller caption saying 「55年で最強の月」\npanel 5: market caution panel with oil and geopolitics motifs, captions saying 「原油高と地政学はまだ重い」 「でもテック集中はさらに拡大」\npanel 6: closing panel with Kafka making a small peace sign, large rounded typography saying 「テック大手、さらに巨大化」",
+      "tags": [
+        "finance",
+        "market",
+        "comic",
+        "captions"
+      ],
+      "family": "news"
+    },
+    {
+      "id": "comic_panels",
+      "category": "形式・レイアウト",
+      "title": "漫画コマ構成",
+      "content": "panel 1: Kafka smiling and pointing upward, speech bubble saying 「日銀の会見きたよ〜！」, headline typography saying 「2026年4月 金融政策決定会合」\npanel 2: official Bank of Japan PDF styled panel, clean typography, date shown exactly as 「2026年4月30日」, text blocks showing 「政策金利 0.5%程度で据え置き」 and 「中心的見通しの確度は低下」\npanel 3: Kafka thinking while holding a cat plushie, worried expression, speech bubble 「利上げはまだかな…？」, small yen symbol icons\npanel 4: realistic Governor Ueda press conference visual, formal meeting room, microphones, charts beside him, highlighted quote box saying 「データを丁寧に確認」\npanel 5: market reaction infographic panel, simple arrows and charts, captions 「市場は慎重ムード」 「円安反応」 「見通し下方修正」\npanel 6: final emotional panel, Kafka smiling gently and making a peace sign, large rounded Japanese typography saying 「急がず様子見ムード！」, soft sparkles and hearts",
+      "tags": [
+        "news",
+        "comic",
+        "panels"
+      ],
+      "family": "news"
+    },
+    {
+      "id": "rendering",
+      "category": "描画",
+      "title": "レンダリング",
+      "content": "high resolution, ultra clean anime rendering, soft commercial VTuber promotional style, polished illustration, infographic readability prioritized, balanced whitespace, consistent character proportions, soft lighting, visually human-made composition",
+      "tags": [
+        "rendering",
+        "quality",
+        "anime"
+      ],
+      "family": "style"
     },
     {
       "id": "reply_stamp_sheet_viz",
@@ -295,7 +405,8 @@
         "reaction_focus",
         "text_style_jp"
       ],
-      "variant_of": "reaction_focus"
+      "variant_of": "reaction_focus",
+      "family": "layout"
     },
     {
       "id": "topic_redirect_banner_viz",
@@ -314,7 +425,8 @@
       "related": [
         "chat_reply_pack",
         "safe_reply_pack"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "memory_note_board_viz",
@@ -334,7 +446,8 @@
         "memory_pack",
         "archive_contact_sheet_viz"
       ],
-      "variant_of": "memory_pack"
+      "variant_of": "memory_pack",
+      "family": "layout"
     },
     {
       "id": "poststream_review_board_viz",
@@ -353,7 +466,8 @@
       "related": [
         "research_log_pack",
         "memory_pack"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "archive_contact_sheet_viz",
@@ -372,7 +486,8 @@
         "prompt_archive_sheet_vlog",
         "archive_index_vlog"
       ],
-      "variant_of": "prompt_archive_sheet_vlog"
+      "variant_of": "prompt_archive_sheet_vlog",
+      "family": "layout"
     },
     {
       "id": "persona_pack",
@@ -390,7 +505,8 @@
       "related": [
         "persona_poster_viz",
         "speech_mode_kafka"
-      ]
+      ],
+      "family": "persona"
     },
     {
       "id": "safe_reply_pack",
@@ -401,7 +517,8 @@
         "safety",
         "reply",
         "redirect"
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "local_offline_pack",
@@ -412,7 +529,8 @@
         "local",
         "offline",
         "performance"
-      ]
+      ],
+      "family": "system"
     },
     {
       "id": "memory_pack",
@@ -424,7 +542,8 @@
         "summary",
         "context"
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "memory"
     },
     {
       "id": "voice_pipeline_pack",
@@ -435,7 +554,8 @@
         "voice",
         "asr",
         "tts"
-      ]
+      ],
+      "family": "audio"
     },
     {
       "id": "chat_platform_pack",
@@ -446,7 +566,8 @@
         "platform",
         "chat",
         "streaming"
-      ]
+      ],
+      "family": "stream"
     },
     {
       "id": "avatar_mode_pack",
@@ -457,7 +578,8 @@
         "avatar",
         "live2d",
         "vrm"
-      ]
+      ],
+      "family": "avatar"
     },
     {
       "id": "control_panel_pack",
@@ -468,7 +590,8 @@
         "control",
         "ui",
         "runtime"
-      ]
+      ],
+      "family": "control"
     },
     {
       "id": "demo_mode_pack",
@@ -479,7 +602,8 @@
         "demo",
         "signage",
         "idle"
-      ]
+      ],
+      "family": "signage"
     },
     {
       "id": "moderation_pack",
@@ -490,7 +614,8 @@
         "moderation",
         "safety",
         "filter"
-      ]
+      ],
+      "family": "safety"
     },
     {
       "id": "plugin_pack",
@@ -501,7 +626,8 @@
         "plugin",
         "websocket",
         "extension"
-      ]
+      ],
+      "family": "extension"
     },
     {
       "id": "research_log_pack",
@@ -513,7 +639,8 @@
         "review",
         "analysis"
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "logging"
     },
     {
       "id": "logo_only_kafka",
@@ -524,7 +651,8 @@
         "logo",
         "wordmark",
         "brand"
-      ]
+      ],
+      "family": "brand"
     },
     {
       "id": "wordmark_only_kafka",
@@ -535,7 +663,8 @@
         "wordmark",
         "typography",
         "brand"
-      ]
+      ],
+      "family": "brand"
     },
     {
       "id": "frame_only_kafka",
@@ -546,7 +675,8 @@
         "frame",
         "border",
         "layout"
-      ]
+      ],
+      "family": "brand"
     },
     {
       "id": "icon_mark_only_kafka",
@@ -557,7 +687,8 @@
         "icon",
         "emblem",
         "brand"
-      ]
+      ],
+      "family": "brand"
     },
     {
       "id": "logo_orbit_kafka",
@@ -568,7 +699,8 @@
         "logo",
         "orbit",
         "brand"
-      ]
+      ],
+      "family": "brand"
     },
     {
       "id": "morning_pose_spring_kafka",
@@ -579,7 +711,8 @@
         "pose",
         "morning",
         "spring"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_summer_kafka",
@@ -590,7 +723,8 @@
         "pose",
         "morning",
         "summer"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_autumn_kafka",
@@ -601,7 +735,8 @@
         "pose",
         "morning",
         "autumn"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_winter_kafka",
@@ -612,7 +747,8 @@
         "pose",
         "morning",
         "winter"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "seasonal_outfit_spring_kafka",
@@ -623,7 +759,8 @@
         "season",
         "spring",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "seasonal_outfit_summer_kafka",
@@ -634,7 +771,8 @@
         "season",
         "summer",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "seasonal_outfit_autumn_kafka",
@@ -645,7 +783,8 @@
         "season",
         "autumn",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "seasonal_outfit_winter_kafka",
@@ -656,7 +795,8 @@
         "season",
         "winter",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "morning_background_spring_kafka",
@@ -667,7 +807,8 @@
         "background",
         "spring",
         "morning"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_background_summer_kafka",
@@ -678,7 +819,8 @@
         "background",
         "summer",
         "morning"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_background_autumn_kafka",
@@ -689,7 +831,8 @@
         "background",
         "autumn",
         "morning"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_background_winter_kafka",
@@ -700,7 +843,8 @@
         "background",
         "winter",
         "morning"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_pose_window_kafka",
@@ -711,7 +855,8 @@
         "pose",
         "morning",
         "window"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_coffee_kafka",
@@ -722,7 +867,8 @@
         "pose",
         "morning",
         "coffee"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_commute_kafka",
@@ -733,7 +879,8 @@
         "pose",
         "morning",
         "commute"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_rain_kafka",
@@ -744,7 +891,8 @@
         "pose",
         "morning",
         "rain"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "morning_pose_sleepy_kafka",
@@ -755,7 +903,8 @@
         "pose",
         "morning",
         "sleepy"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "work_start_scene_kafka",
@@ -766,7 +915,8 @@
         "background",
         "work",
         "start"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_scene_window_kafka",
@@ -777,7 +927,8 @@
         "background",
         "morning",
         "window"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_scene_coffee_kafka",
@@ -788,7 +939,8 @@
         "background",
         "morning",
         "coffee"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_scene_commute_kafka",
@@ -799,7 +951,8 @@
         "background",
         "morning",
         "commute"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_scene_rain_kafka",
@@ -810,7 +963,8 @@
         "background",
         "morning",
         "rain"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_scene_sleepy_kafka",
@@ -821,7 +975,8 @@
         "background",
         "morning",
         "sleepy"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "morning_situation_text_pack",
@@ -832,7 +987,8 @@
         "morning",
         "situation",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "goodnight_scene_kafka",
@@ -843,7 +999,8 @@
         "background",
         "night",
         "sleep"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "poker_dealer_style_kafka",
@@ -854,7 +1011,8 @@
         "poker",
         "dealer",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "poker_table_scene_kafka",
@@ -865,7 +1023,8 @@
         "poker",
         "table",
         "background"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "poker_status_text_pack",
@@ -876,7 +1035,8 @@
         "poker",
         "status",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "fantasy_card_game_style_kafka",
@@ -887,7 +1047,8 @@
         "cardgame",
         "fantasy",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "fantasy_card_game_scene_kafka",
@@ -898,7 +1059,8 @@
         "cardgame",
         "fantasy",
         "background"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "card_game_status_text_pack",
@@ -909,7 +1071,8 @@
         "cardgame",
         "status",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "joinwars_status_text_pack",
@@ -920,7 +1083,8 @@
         "joinwars",
         "vrchat",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "joinwars_layout",
@@ -931,7 +1095,8 @@
         "joinwars",
         "layout",
         "social"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "joinwars_scene_kafka",
@@ -942,7 +1107,8 @@
         "joinwars",
         "background",
         "vrchat"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "joinwars_style_kafka",
@@ -953,7 +1119,8 @@
         "joinwars",
         "outfit",
         "cardgame"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "reading_status_text_pack",
@@ -964,7 +1131,8 @@
         "reading",
         "book",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "reading_post_layout",
@@ -975,7 +1143,8 @@
         "reading",
         "layout",
         "social"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "reading_scene_general_kafka",
@@ -986,7 +1155,8 @@
         "reading",
         "background",
         "general"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "reading_scene_seaside_kafka",
@@ -997,7 +1167,8 @@
         "reading",
         "background",
         "seaside"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "reading_scene_anne_kafka",
@@ -1008,7 +1179,8 @@
         "reading",
         "background",
         "storybook"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "reading_pose_kafka",
@@ -1019,7 +1191,8 @@
         "reading",
         "pose",
         "book"
-      ]
+      ],
+      "family": "pose"
     },
     {
       "id": "reading_outfit_kafka",
@@ -1030,7 +1203,8 @@
         "reading",
         "outfit",
         "cozy"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "cosplay_event_outfit_kafka",
@@ -1041,7 +1215,8 @@
         "cosplay",
         "event",
         "outfit"
-      ]
+      ],
+      "family": "costume"
     },
     {
       "id": "cosplay_scene_kafka",
@@ -1052,7 +1227,8 @@
         "cosplay",
         "photo",
         "background"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "cosplay_status_text_pack",
@@ -1063,7 +1239,8 @@
         "cosplay",
         "status",
         "text"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "cosplay_post_layout",
@@ -1074,7 +1251,8 @@
         "cosplay",
         "layout",
         "social"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "poker_post_layout",
@@ -1085,7 +1263,8 @@
         "poker",
         "layout",
         "social"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "cardgame_post_layout",
@@ -1096,7 +1275,8 @@
         "cardgame",
         "layout",
         "social"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "negative_common",
@@ -1105,7 +1285,8 @@
       "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "tags": [
         "negative"
-      ]
+      ],
+      "family": "safety"
     },
     {
       "id": "persona_sheet_vlog",
@@ -1125,7 +1306,8 @@
         "persona_sheet",
         "persona_poster_viz",
         "persona_pack"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "summary_sheet_vlog",
@@ -1138,7 +1320,8 @@
         "recap",
         "kafka"
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "layout"
     },
     {
       "id": "prompt_archive_sheet_vlog",
@@ -1150,7 +1333,20 @@
         "archive",
         "ledger"
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "layout"
+    },
+    {
+      "id": "prompt_vault_update_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "Prompt Vault 更新文言",
+      "content": "「読む」「調べる」「選ぶ」「作る」「更新する」「確認する」「local dev」「git add → commit」「DBとartifactsを揃える」「imagegenで作る」",
+      "tags": [
+        "prompt",
+        "guide",
+        "text"
+      ],
+      "family": "text"
     },
     {
       "id": "archive_index_vlog",
@@ -1163,7 +1359,41 @@
         "sheet",
         "kafka"
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "layout"
+    },
+    {
+      "id": "prompt_vault_update_intro",
+      "title": "Prompt Vault Update 紹介ガイド",
+      "kind": "sheet",
+      "purpose": "prompt-vault-update skill の使い方を一枚で紹介する",
+      "summary": "外部ソース入力から画像生成、DB更新、ローカル確認、git commit までを Kafka 案内で見せる。",
+      "steps": [
+        "入口の種類を見分ける",
+        "関連ソースを読む",
+        "最適な型を選ぶ",
+        "必要なら imagegen で画像を作る",
+        "db/prompts.json と artifacts を更新する",
+        "local dev と git commit まで通す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "prompt_vault_update_layout",
+        "prompt_vault_update_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "この skill 自体の説明用。外部ソースの更新フローを1枚で見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/081_prompt_vault_update_guide.png",
+          "title": "Prompt Vault Update 紹介ガイドの実例"
+        }
+      ],
+      "family": "sheet"
     },
     {
       "id": "trpg_character_sheet_layout",
@@ -1174,7 +1404,8 @@
         "trpg",
         "character-sheet",
         "layout"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "trpg_status_text_pack",
@@ -1185,7 +1416,8 @@
         "trpg",
         "text",
         "status"
-      ]
+      ],
+      "family": "text"
     },
     {
       "id": "travel_bg_kyoto",
@@ -1196,7 +1428,8 @@
         "travel",
         "background",
         "kyoto"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "travel_bg_tokyo",
@@ -1207,7 +1440,8 @@
         "travel",
         "background",
         "tokyo"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "travel_bg_okinawa",
@@ -1218,7 +1452,8 @@
         "travel",
         "background",
         "okinawa"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "travel_bg_hokkaido",
@@ -1229,43 +1464,74 @@
         "travel",
         "background",
         "hokkaido"
-      ]
+      ],
+      "family": "scene"
     },
     {
       "id": "comparison_layout",
       "title": "比較カード",
       "category": "比較・整理",
-      "content": "2-column comparison card, split layout, paired panels, clear labels for left and right, before/after, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet"
+      "content": "2-column comparison card, split layout, paired panels, clear labels for left and right, before/after, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet",
+      "family": "structure"
+    },
+    {
+      "id": "prompt_vault_update_layout",
+      "title": "Prompt Vault 更新ガイド",
+      "category": "形式・レイアウト",
+      "content": "one-page workflow poster, Kafka guide on the left, six numbered panels on the right, source icons, process arrows, source box, output box, white background, pastel blue borders, readable Japanese labels, build and local dev step, git add commit note, compact footer",
+      "tags": [
+        "prompt",
+        "guide",
+        "workflow"
+      ],
+      "family": "layout"
     },
     {
       "id": "timeline_layout",
       "title": "タイムライン",
       "category": "フロー・構造",
-      "content": "horizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, no clutter, process or history overview"
+      "content": "horizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, no clutter, process or history overview",
+      "family": "structure"
     },
     {
       "id": "decision_tree_layout",
       "title": "分岐フロー",
       "category": "フロー・構造",
-      "content": "branching flowchart, question nodes, yes/no or option splits, decision diamonds, short labels, readable connectors, clear start and end, minimal but structured decision guide"
+      "content": "branching flowchart, question nodes, yes/no or option splits, decision diamonds, short labels, readable connectors, clear start and end, minimal but structured decision guide",
+      "family": "structure"
     },
     {
       "id": "moodboard_layout",
       "title": "ムードボード",
       "category": "コンセプト・ムード",
-      "content": "collage mood board, inspiration board, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board"
+      "content": "collage mood board, inspiration board, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board",
+      "family": "mood"
+    },
+    {
+      "id": "outfit_exploration_layout",
+      "title": "衣装比較シート",
+      "category": "形式・レイアウト",
+      "content": "fashion design reference sheet, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished vtuber costume concept board, calm comparison layout",
+      "tags": [
+        "outfit",
+        "layout",
+        "comparison"
+      ],
+      "family": "layout"
     },
     {
       "id": "checklist_layout",
       "title": "チェックリスト",
       "category": "フロー・構造",
-      "content": "checklist layout, tick boxes, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset"
+      "content": "checklist layout, tick boxes, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset",
+      "family": "structure"
     },
     {
       "id": "before_after_layout",
       "title": "ビフォーアフター",
       "category": "比較・整理",
-      "content": "before and after layout, two-panel reveal, transformation comparison, clear labels, left/right or top/bottom split, emphasized change, easy to understand progression, minimal clutter, practical visual summary"
+      "content": "before and after layout, two-panel reveal, transformation comparison, clear labels, left/right or top/bottom split, emphasized change, easy to understand progression, minimal clutter, practical visual summary",
+      "family": "structure"
     },
     {
       "id": "character_sheet_shafuka",
@@ -1277,7 +1543,8 @@
         "character-sheet",
         "jirai-kei",
         "prompt"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "character_sheet_miyu",
@@ -1290,7 +1557,8 @@
         "summer",
         "cafe",
         "prompt"
-      ]
+      ],
+      "family": "layout"
     },
     {
       "id": "character_shafuka",
@@ -1301,7 +1569,8 @@
         "shafuka",
         "character",
         "jirai-kei"
-      ]
+      ],
+      "family": "character"
     },
     {
       "id": "character_miyu",
@@ -1313,7 +1582,8 @@
         "character",
         "summer",
         "cafe"
-      ]
+      ],
+      "family": "character"
     },
     {
       "id": "vacation_dining_trio_scene",
@@ -1325,7 +1595,8 @@
         "dining",
         "trio",
         "scene"
-      ]
+      ],
+      "family": "scene"
     }
   ],
   "templates": [
@@ -1362,7 +1633,8 @@
           "title": "ボドゲスタンプシートの実例"
         }
       ],
-      "notes": "まずこれを開いてから、表情と文言だけ入れ替える。"
+      "notes": "まずこれを開いてから、表情と文言だけ入れ替える。",
+      "family": "reply"
     },
     {
       "id": "twitter_comic",
@@ -1393,7 +1665,8 @@
           "title": "再調査漫画の実例"
         }
       ],
-      "notes": "再調査メモを先に読ませて、余計な誤読を減らす。"
+      "notes": "再調査メモを先に読ませて、余計な誤読を減らす。",
+      "family": "comic"
     },
     {
       "id": "reaction_image",
@@ -1429,7 +1702,8 @@
           "title": "反応画像の実例"
         }
       ],
-      "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。"
+      "notes": "SNS返信や軽い共有向けに、顔とセリフを主役にする。",
+      "family": "reply"
     },
     {
       "id": "character_design_sheet",
@@ -1454,9 +1728,43 @@
         {
           "path": "artifacts/013_character_design_sheet_2.png",
           "title": "キャラデザインシートの別実例"
+        },
+        {
+          "path": "artifacts/077_character_design_sheet_3.png",
+          "title": "キャラデザインシートの追加実例"
         }
       ],
-      "notes": "原文をそのまま保管する用途。全文コピーで使う前提。"
+      "notes": "原文をそのまま保管する用途。全文コピーで使う前提。",
+      "family": "sheet"
+    },
+    {
+      "id": "kafka_outfit_exploration_sheet",
+      "title": "Kafka 衣装比較シート",
+      "kind": "design_sheet",
+      "purpose": "Kafka の別衣装案を複数比較しながら固める",
+      "summary": "中心案を大きく、周囲に派生案を並べる衣装探索用の比較シート。",
+      "steps": [
+        "中心の本命案を決める",
+        "周辺に5つの別方向を置く",
+        "素材メモと配色を揃える",
+        "見比べやすい余白を作る"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "outfit_exploration_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "衣装の方向性を比較して、次の正式案を決めるための下敷きにする。",
+      "artifacts": [
+        {
+          "path": "artifacts/080_kafka_outfit_exploration.png",
+          "title": "Kafka 衣装比較シートの実例"
+        }
+      ],
+      "family": "sheet"
     },
     {
       "id": "announcement_thumbnail",
@@ -1485,7 +1793,76 @@
           "title": "配信告知サムネイルの実例"
         }
       ],
-      "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。"
+      "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。",
+      "family": "banner"
+    },
+    {
+      "id": "boj_press_news_card",
+      "title": "日銀 植田総裁 記者会見漫画",
+      "kind": "news",
+      "purpose": "日本銀行の記者会見資料を、Kafka 主役の漫画ニュースとして整理する",
+      "summary": "政策金利据え置き、1.0％への引き上げ提案の否決、中東情勢と原油高のリスク、物価見通しを6コマで追いやすくまとめる。",
+      "steps": [
+        "冒頭で据え置き決定を示す",
+        "1.0％提案が否決された流れを入れる",
+        "中東情勢と原油高のリスクを整理する",
+        "物価見通しの要点で締める"
+      ],
+      "blocks": [
+        "source_research",
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "news_comic_layout",
+        "comic_panels",
+        "comic_layout",
+        "reaction_focus",
+        "expressions_pack",
+        "text_style_jp",
+        "effects_pack",
+        "rendering",
+        "negative_common"
+      ],
+      "notes": "Source PDF: https://www.boj.or.jp/about/press/kaiken_2026/kk260430a.pdf\nSource video: https://video.twimg.com/ext_tw_video/2050183539606392832/pu/vid/avc1/1280x720/VxX0eTVjhUapf8DX.mp4?tag=12\nBoJ page: https://www.boj.or.jp/en/mopo/mpmdeci/index.htm\nKey facts: policy rate kept at 0.75% around, 1.0% hike proposal was rejected, Middle East uncertainty and oil prices are the main risks, inflation outlook is pushed up by energy prices.\nManga flow: 1) カフカ「日銀の会見きたよ〜！」 2) カフカ「据え置きです」 3) カフカ「1.0％案は否決」 4) カフカ「中東情勢と原油高が重い」 5) カフカ「市場は慎重ムード」 6) カフカ「急がず様子見ムード！」\nManga style: official press summary with comic panels, short captions, source callouts, and Kafka as the visual guide.",
+      "artifacts": [
+        {
+          "path": "artifacts/078_boj_press_news_comic.png",
+          "title": "BoJ 漫画ニュースの実例"
+        },
+        {
+          "path": "artifacts/079_boj_press_news_infographic.png",
+          "title": "BoJ 会見資料インフォグラフィックの別実例"
+        }
+      ],
+      "family": "news"
+    },
+    {
+      "id": "us_april_stock_rally_news",
+      "title": "4月の米国株ラリー漫画",
+      "kind": "news",
+      "purpose": "4月の米国株の月間ラリーを、Kafka 主役の漫画ニュースとして整理する",
+      "summary": "ナスダックとS&P500の月間上昇、アルファベットの急騰、インテルの急騰、そして原油高と地政学リスクを6コマで追いやすくまとめる。",
+      "steps": [
+        "指数の月間上昇を先に出す",
+        "アルファベットとインテルの強さを1コマずつ見せる",
+        "原油高と地政学リスクを添える",
+        "最後にテック集中の拡大で締める"
+      ],
+      "blocks": [
+        "finance_source_research",
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "market_rally_layout",
+        "market_rally_panels",
+        "reaction_focus",
+        "expressions_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "Reuters: https://www.marketscreener.com/news/wall-street-futures-mixed-as-oil-spike-overshadows-tech-earnings-strength-ce7f58dbdd80f627\nAP: https://apnews.com/article/42120b305ce6298712931e79b66a20de\nFollow-up market summary: https://invezz.com/news/2026/05/01/markets-shrug-off-oil-volatility-to-end-april-at-record-high/\nKey facts: S&P 500 rose 10.4% in April and logged its biggest monthly gain since November 2020; Nasdaq rose 15.3% in April and logged its biggest monthly gain since April 2020; アルファベット rose 33.8% in April; インテル rose 114.1% in April and was described as its strongest month ever.\nManga flow: 1) カフカ「4月の米国株、強かった！」 2) ナスダック +15.3% / S&P500 +10.4% 3) アルファベット +33.8% 4) インテル +114.1% 5) 原油高と地政学はまだ重い 6) テック大手、さらに巨大化\nTone: calm newsroom recap, not hype-first, with Kafka as the visual guide.",
+      "family": "news"
     },
     {
       "id": "persona_poster",
@@ -1523,7 +1900,8 @@
           "title": "人格ポスターの別実例"
         }
       ],
-      "notes": "画像生成しても成立するように、情報の密度と余白を両立させる。"
+      "notes": "画像生成しても成立するように、情報の密度と余白を両立させる。",
+      "family": "sheet"
     },
     {
       "id": "stream_start_banner",
@@ -1553,7 +1931,8 @@
           "title": "配信開始バナーの実例"
         }
       ],
-      "notes": "告知サムネイルとは別に、配信開始向けの構図に寄せる。"
+      "notes": "告知サムネイルとは別に、配信開始向けの構図に寄せる。",
+      "family": "banner"
     },
     {
       "id": "morning_tweet_spring",
@@ -1585,7 +1964,8 @@
           "title": "おはツイ春の実例"
         }
       ],
-      "notes": "春は軽い羽織と花モチーフで寄せる。日付は入れない。繰り返し使う前提の定番枠。"
+      "notes": "春は軽い羽織と花モチーフで寄せる。日付は入れない。繰り返し使う前提の定番枠。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_summer",
@@ -1617,7 +1997,8 @@
           "title": "おはツイ夏の実例"
         }
       ],
-      "notes": "夏は白と青を強めにして、軽さを優先する。日付は入れない。"
+      "notes": "夏は白と青を強めにして、軽さを優先する。日付は入れない。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_autumn",
@@ -1649,7 +2030,8 @@
           "title": "おはツイ秋の実例"
         }
       ],
-      "notes": "秋はやわらかい静けさを入れる。重くしすぎない。日付は入れない。"
+      "notes": "秋はやわらかい静けさを入れる。重くしすぎない。日付は入れない。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_winter",
@@ -1681,7 +2063,8 @@
           "title": "おはツイ冬の実例"
         }
       ],
-      "notes": "冬は暗くしない。朝のやわらかさを残す。日付は入れない。"
+      "notes": "冬は暗くしない。朝のやわらかさを残す。日付は入れない。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_window",
@@ -1716,7 +2099,8 @@
           "title": "おはツイ窓際の別実例"
         }
       ],
-      "notes": "朝の空気を見せる。説明より気配を優先する。"
+      "notes": "朝の空気を見せる。説明より気配を優先する。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_coffee",
@@ -1747,7 +2131,8 @@
           "title": "おはツイコーヒーの実例"
         }
       ],
-      "notes": "『朝の一杯』の見た目を固定する。仕事開始前にも流用しやすい。"
+      "notes": "『朝の一杯』の見た目を固定する。仕事開始前にも流用しやすい。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_commute",
@@ -1778,7 +2163,8 @@
           "title": "おはツイ出発前の実例"
         }
       ],
-      "notes": "出勤や外出の前に使える。元気すぎず、でも止まらない感じにする。"
+      "notes": "出勤や外出の前に使える。元気すぎず、でも止まらない感じにする。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_rain",
@@ -1809,7 +2195,8 @@
           "title": "おはツイ雨の日の実例"
         }
       ],
-      "notes": "雨の日は沈ませすぎない。静けさを心地よく見せる。"
+      "notes": "雨の日は沈ませすぎない。静けさを心地よく見せる。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_sleepy",
@@ -1840,7 +2227,8 @@
           "title": "おはツイ寝起きの実例"
         }
       ],
-      "notes": "寝起きは情報を足しすぎない。起床そのものを見せる。"
+      "notes": "寝起きは情報を足しすぎない。起床そのものを見せる。",
+      "family": "post"
     },
     {
       "id": "morning_tweet_index",
@@ -1869,7 +2257,8 @@
           "title": "おはツイ一覧の実例"
         }
       ],
-      "notes": "派生の見取り図として置く。新しい朝パターンを足す時の入口にする。"
+      "notes": "派生の見取り図として置く。新しい朝パターンを足す時の入口にする。",
+      "family": "sheet"
     },
     {
       "id": "work_start_post",
@@ -1899,7 +2288,8 @@
           "title": "作業開始ポストの実例"
         }
       ],
-      "notes": "開始報告だけに寄せる。進捗や成果はまだ入れない。"
+      "notes": "開始報告だけに寄せる。進捗や成果はまだ入れない。",
+      "family": "post"
     },
     {
       "id": "goodnight_post",
@@ -1929,7 +2319,8 @@
           "title": "おやすみポストの実例"
         }
       ],
-      "notes": "夜は静かに閉じる。眠気を出しても、暗くしすぎない。"
+      "notes": "夜は静かに閉じる。眠気を出しても、暗くしすぎない。",
+      "family": "post"
     },
     {
       "id": "reply_stamp_sheet",
@@ -1963,7 +2354,8 @@
           "title": "返信スタンプシートの別実例"
         }
       ],
-      "notes": "配信チャットやSNS返信にそのまま使う。"
+      "notes": "配信チャットやSNS返信にそのまま使う。",
+      "family": "reply"
     },
     {
       "id": "topic_redirect_banner",
@@ -1991,7 +2383,8 @@
           "title": "話題切り替えバナーの実例"
         }
       ],
-      "notes": "話題の遮断ではなく、自然な方向転換にする。"
+      "notes": "話題の遮断ではなく、自然な方向転換にする。",
+      "family": "banner"
     },
     {
       "id": "memory_note_board",
@@ -2025,7 +2418,8 @@
         }
       ],
       "notes": "長文ではなく、次回使える断片だけ残す。",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "sheet"
     },
     {
       "id": "poststream_review_board",
@@ -2059,7 +2453,8 @@
         }
       ],
       "notes": "改善ログとしてもそのまま使える。",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "sheet"
     },
     {
       "id": "archive_contact_sheet",
@@ -2093,7 +2488,8 @@
         }
       ],
       "notes": "後から探す前提で、見出しより一覧性を優先する。",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "sheet"
     },
     {
       "id": "persona_sheet",
@@ -2126,7 +2522,8 @@
           "path": "artifacts/042_persona_sheet_2.png",
           "title": "人格固定カードの別実例"
         }
-      ]
+      ],
+      "family": "sheet"
     },
     {
       "id": "summary_sheet",
@@ -2160,7 +2557,8 @@
           "title": "配信後まとめカードの別実例"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "sheet"
     },
     {
       "id": "archive_index",
@@ -2189,7 +2587,8 @@
         }
       ],
       "notes": "archives を後から追いやすくする。創作物の回収と再利用を優先する。",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "sheet"
     },
     {
       "id": "logo_only_sheet",
@@ -2216,7 +2615,8 @@
           "title": "ロゴ単独シートの実例"
         }
       ],
-      "notes": "サムネイルやコーナー表示に転用しやすい。繰り返し描かない部分をここに集約する。"
+      "notes": "サムネイルやコーナー表示に転用しやすい。繰り返し描かない部分をここに集約する。",
+      "family": "brand"
     },
     {
       "id": "wordmark_sheet",
@@ -2242,7 +2642,8 @@
           "title": "ワードマークシートの実例"
         }
       ],
-      "notes": "ロゴとは分けて、文字だけの使い回しを想定する。"
+      "notes": "ロゴとは分けて、文字だけの使い回しを想定する。",
+      "family": "brand"
     },
     {
       "id": "frame_sheet",
@@ -2267,7 +2668,8 @@
           "title": "フレーム単独の実例"
         }
       ],
-      "notes": "カードや告知の土台として使う。中身より枠が必要な時の専用テンプレート。"
+      "notes": "カードや告知の土台として使う。中身より枠が必要な時の専用テンプレート。",
+      "family": "brand"
     },
     {
       "id": "icon_mark_sheet",
@@ -2292,7 +2694,8 @@
           "title": "アイコンデザインの実例"
         }
       ],
-      "notes": "バナーの隅、区切り、タグ、UI飾りに使う。繰り返し描くより台帳化したい部分。"
+      "notes": "バナーの隅、区切り、タグ、UI飾りに使う。繰り返し描くより台帳化したい部分。",
+      "family": "brand"
     },
     {
       "id": "orbit_logo_sheet",
@@ -2319,7 +2722,8 @@
           "title": "宇宙ロゴ単独の実例"
         }
       ],
-      "notes": "通常のロゴ単独とは別に、宇宙モチーフだけ欲しい時の専用版。"
+      "notes": "通常のロゴ単独とは別に、宇宙モチーフだけ欲しい時の専用版。",
+      "family": "brand"
     },
     {
       "id": "ai_tuber_core_pack",
@@ -2353,7 +2757,8 @@
           "title": "自律人格パックの実例"
         }
       ],
-      "notes": "まず土台を作るときに使う。細部は後で分ける。"
+      "notes": "まず土台を作るときに使う。細部は後で分ける。",
+      "family": "system"
     },
     {
       "id": "comment_reply_guide",
@@ -2391,7 +2796,8 @@
           "title": "コメント返しガイドの別レイアウト実例"
         }
       ],
-      "notes": "コメント返しと発話の切り替えをそのまま見返せるようにする。"
+      "notes": "コメント返しと発話の切り替えをそのまま見返せるようにする。",
+      "family": "system"
     },
     {
       "id": "reading_post_general",
@@ -2422,7 +2828,8 @@
           "title": "読書投稿の実例"
         }
       ],
-      "notes": "読書ポストの基本形。日付は入れない。"
+      "notes": "読書ポストの基本形。日付は入れない。",
+      "family": "post"
     },
     {
       "id": "reading_post_seaside",
@@ -2457,7 +2864,8 @@
           "path": "artifacts/028_reading_seaside_alt.png",
           "title": "海辺の読書投稿の別実例"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "reading_post_anne",
@@ -2488,7 +2896,8 @@
           "path": "artifacts/029_reading_anne.png",
           "title": "赤毛のアン読書投稿の実例"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "cosplay_post",
@@ -2518,7 +2927,8 @@
           "path": "artifacts/030_cosplay_post.png",
           "title": "コスプレ投稿の実例"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "poker_post",
@@ -2552,7 +2962,8 @@
           "path": "artifacts/032_poker_post_alt.png",
           "title": "ポーカー投稿の別実例"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "cardgame_post",
@@ -2586,7 +2997,8 @@
           "path": "artifacts/034_cardgame_post_alt.png",
           "title": "カードゲーム投稿の別実例"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "joinwars_post",
@@ -2616,7 +3028,8 @@
           "title": "JoinWars投稿の実例"
         }
       ],
-      "notes": "JoinWars の一般イメージに寄せた専用パターン。"
+      "notes": "JoinWars の一般イメージに寄せた専用パターン。",
+      "family": "post"
     },
     {
       "id": "trpg_character_sheet",
@@ -2645,7 +3058,8 @@
           "title": "TRPGキャラシートの実例"
         }
       ],
-      "notes": "現代日本TRPG（CoCなど）の探索者をイメージしたシート用。"
+      "notes": "現代日本TRPG（CoCなど）の探索者をイメージしたシート用。",
+      "family": "sheet"
     },
     {
       "id": "travel_kyoto_post",
@@ -2672,7 +3086,8 @@
           "title": "京都旅行の実例"
         }
       ],
-      "notes": "和風な雰囲気を楽しむ一枚。"
+      "notes": "和風な雰囲気を楽しむ一枚。",
+      "family": "post"
     },
     {
       "id": "travel_tokyo_post",
@@ -2699,7 +3114,8 @@
           "title": "東京旅行の実例"
         }
       ],
-      "notes": "都会のエネルギーを楽しむ一枚。"
+      "notes": "都会のエネルギーを楽しむ一枚。",
+      "family": "post"
     },
     {
       "id": "travel_okinawa_post",
@@ -2726,7 +3142,8 @@
           "title": "沖縄旅行の実例"
         }
       ],
-      "notes": "南国のリラックスした雰囲気を楽しむ一枚。"
+      "notes": "南国のリラックスした雰囲気を楽しむ一枚。",
+      "family": "post"
     },
     {
       "id": "travel_hokkaido_post",
@@ -2753,7 +3170,8 @@
           "title": "北海道旅行の実例"
         }
       ],
-      "notes": "広大な自然を楽しむ一枚。"
+      "notes": "広大な自然を楽しむ一枚。",
+      "family": "post"
     },
     {
       "id": "gen_20260501_085644_421588",
@@ -2776,7 +3194,8 @@
           "path": "artifacts/059_russian_railroads_post.png",
           "title": "ロシア鉄道を遊ぶ様子"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "gen_20260501_090149_072100",
@@ -2799,7 +3218,8 @@
           "path": "artifacts/061_russian_railroads_guide.png",
           "title": "ロシア鉄道ガイド"
         }
-      ]
+      ],
+      "family": "banner"
     },
     {
       "id": "gen_20260501_090151_919050",
@@ -2823,7 +3243,8 @@
           "path": "artifacts/060_dominion_guide.png",
           "title": "ドミニオン早わかりガイド"
         }
-      ]
+      ],
+      "family": "banner"
     },
     {
       "id": "gen_20260501_090454_827936",
@@ -2848,7 +3269,8 @@
           "path": "artifacts/058_morning_dominion.png",
           "title": "春のおはツイ・ドミニオン日和"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "shafuka_character_sheet",
@@ -2871,7 +3293,8 @@
           "path": "artifacts/071_shafuka_character_sheet.png",
           "title": "しゃふか キャラデザインシート"
         }
-      ]
+      ],
+      "family": "sheet"
     },
     {
       "id": "miyu_character_sheet",
@@ -2894,7 +3317,8 @@
           "path": "artifacts/072_miyu_character_sheet.png",
           "title": "みゆ キャラデザインシート"
         }
-      ]
+      ],
+      "family": "sheet"
     },
     {
       "id": "trio_vacation_dining",
@@ -2923,7 +3347,8 @@
           "path": "artifacts/070_trio_vacation_dining.png",
           "title": "3人バカンス食事"
         }
-      ]
+      ],
+      "family": "post"
     },
     {
       "id": "sound_strong_reaction",
@@ -2953,7 +3378,8 @@
           "title": "音が強い"
         }
       ],
-      "notes": "音量反応の定番として再利用する。"
+      "notes": "音量反応の定番として再利用する。",
+      "family": "reply"
     },
     {
       "id": "generated_gen_20260501_092726_250951",
@@ -2984,7 +3410,8 @@
           "title": "KAFKA ごはんスタンプ"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093234_339628",
@@ -3018,7 +3445,8 @@
           "title": "もぐもぐカフカ"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093426_682458",
@@ -3046,7 +3474,8 @@
       "generated_instruction": "Dominion Board Gameを楽しく遊ぶ様子",
       "generated_at": "2026-05-01T09:34:26.682458+00:00",
       "generated_request_id": "gen_20260501_093426_682458",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093428_144020",
@@ -3080,7 +3509,8 @@
           "title": "朝ごはんタイム"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093534_246196",
@@ -3114,7 +3544,8 @@
           "title": "コメント返し"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093722_155749",
@@ -3148,7 +3579,8 @@
           "title": "指差し説明"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093726_505516",
@@ -3182,7 +3614,8 @@
           "title": "作業開始"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093735_282597",
@@ -3216,7 +3649,8 @@
           "title": "読書のひととき"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_093750_437816",
@@ -3250,7 +3684,8 @@
           "title": "勝利の一瞬"
         }
       ],
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "generated_gen_20260501_094000_869940",
@@ -3284,7 +3719,8 @@
       "generated_instruction": "コメント返しスタンプ",
       "generated_at": "2026-05-01T09:40:00.869940+00:00",
       "generated_request_id": "gen_20260501_094000_869940",
-      "visibility": "internal"
+      "visibility": "internal",
+      "family": "generated"
     },
     {
       "id": "comparison_sheet",
@@ -3305,7 +3741,8 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "比較したい内容があるときは、A/B の差だけを短く書く。"
+      "notes": "比較したい内容があるときは、A/B の差だけを短く書く。",
+      "family": "sheet"
     },
     {
       "id": "timeline_sheet",
@@ -3326,7 +3763,14 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "年表、進行手順、振り返りの流れに向く。"
+      "artifacts": [
+        {
+          "path": "artifacts/074_timeline_sheet.png",
+          "title": "タイムラインの実例"
+        }
+      ],
+      "notes": "年表、進行手順、振り返りの流れに向く。",
+      "family": "sheet"
     },
     {
       "id": "decision_tree_sheet",
@@ -3347,7 +3791,8 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "判断・案内・導線整理に向く。"
+      "notes": "判断・案内・導線整理に向く。",
+      "family": "sheet"
     },
     {
       "id": "moodboard_sheet",
@@ -3368,7 +3813,14 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "新規のビジュアル方向を固める最初の一枚。"
+      "artifacts": [
+        {
+          "path": "artifacts/075_moodboard_sheet.png",
+          "title": "ムードボードの実例"
+        }
+      ],
+      "notes": "新規のビジュアル方向を固める最初の一枚。",
+      "family": "sheet"
     },
     {
       "id": "checklist_sheet",
@@ -3389,7 +3841,8 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "作業手順、導入フロー、確認項目を整理したいときに使う。"
+      "notes": "作業手順、導入フロー、確認項目を整理したいときに使う。",
+      "family": "sheet"
     },
     {
       "id": "before_after_sheet",
@@ -3410,7 +3863,14 @@
         "text_style_jp",
         "negative_common"
       ],
-      "notes": "改善前後、状態の変化、成長の記録に向く。"
+      "artifacts": [
+        {
+          "path": "artifacts/076_before_after_sheet.png",
+          "title": "ビフォーアフターの実例"
+        }
+      ],
+      "notes": "改善前後、状態の変化、成長の記録に向く。",
+      "family": "sheet"
     }
   ],
   "generated_prompts": [
@@ -3453,7 +3913,8 @@
           "path": "artifacts/062_mogumogu_kafka.png",
           "title": "KAFKA ごはんスタンプ"
         }
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093234_339628",
@@ -3501,7 +3962,8 @@
           "title": "もぐもぐカフカ"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093426_180104",
@@ -3545,7 +4007,8 @@
           "path": "artifacts/064_comment_reply.png",
           "title": "コメント返し"
         }
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093426_682458",
@@ -3587,7 +4050,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, thinking face, laughing face, focused face, excited face, surprised face, triumphant grin, planning expression, holding cards, placing a card, counting coins, pointing at the play area, reacting to a combo, friendly rival moment\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ngaming:「もう一手」「この手でいく」「強い」「たのしい」「あと少し」「よし」「考える」「引くか」「買うぞ」「勝ちたい」\n\nsparkles, small stars, tiny hearts, card fan shapes, coin icons, point tokens, tiny arrows, speech emphasis marks, minimal manga effects\n\nwooden tabletop with Dominion cards, market piles, treasure and victory card tokens\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093428_144020",
@@ -3635,7 +4099,8 @@
           "title": "朝ごはんタイム"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093534_246196",
@@ -3679,7 +4144,8 @@
           "title": "コメント返し"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093722_155749",
@@ -3719,7 +4185,8 @@
           "title": "指差し説明"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093726_505516",
@@ -3759,7 +4226,8 @@
           "path": "artifacts/045_work_start_post.png",
           "title": "作業開始"
         }
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093735_282597",
@@ -3807,7 +4275,8 @@
           "path": "artifacts/067_reading_time.png",
           "title": "読書のひととき"
         }
-      ]
+      ],
+      "family": "reply"
     },
     {
       "id": "gen_20260501_093750_437816",
@@ -3855,7 +4324,8 @@
           "title": "勝利の一瞬"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_094000_869940",
@@ -3899,7 +4369,8 @@
           "title": "返信ぎゅっ"
         }
       ],
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_095318_007639",
@@ -3941,7 +4412,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n2-column comparison card, split layout, paired panels, clear labels for left and right, empty gutters, isolated subjects, large readable shapes, cutout-friendly silhouette, no background clutter, strong contrast for side-by-side comparison\n\nsmiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ncomparison:「こっちが本命」「まずこれ」「ここが違う」「使い分け」「比べるとわかる」「迷ったらこれ」, contrast:「左が軽い」「右が安心」「速さ重視」「見やすさ重視」\n\narrows, highlight frames, check marks, small stars, emphasis marks, comparison lines, soft sparkles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "reply"
     },
     {
       "id": "gen_20260501_095825_409023",
@@ -3971,7 +4443,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n2-column comparison card, left side shows this site's template list overview, right side shows Prompt Generator comparison card, paired panels, clear labels for left and right, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100128_125507",
@@ -4001,7 +4474,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n2-column comparison card, left panel shows this site's template list, right panel shows Prompt Generator, clear labels for left and right, side-by-side contrast, each side has one representative example, arrows or separators, minimal clutter, phone-readable comparison sheet\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100137_684091",
@@ -4031,7 +4505,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nhorizontal or vertical timeline, numbered steps, date markers, arrows connecting milestones, clear left-to-right or top-to-bottom flow, compact event labels, readable hierarchy, incident chronology of a broken template list, start point, breakdown point, recovery attempts, clear progression, no clutter\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100144_822642",
@@ -4061,7 +4536,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\n分岐フローチャート、最初に「スタンプを使う？」と「比較カードを使う？」の二択を示し、それぞれに進む短い分岐、見やすい接続線、はっきりした開始と終了、整理された案内構成\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100157_839919",
@@ -4091,7 +4567,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ncollage mood board, inspiration board, non-stamp pattern directions, repeating motifs, surface pattern variations, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100447_145315",
@@ -4121,7 +4598,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ntimeline of the template list breaking over time, start point, triggering change, visible symptoms, partial recovery, final state, clear chronological markers, concise incident labels, readable cause and effect flow, no clutter\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100454_860314",
@@ -4151,7 +4629,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\ncollage mood board, direction summary board, pattern samples, variation tiles, material swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative planning board, clear visual distinctions, repeated motif studies, non-stamp layout ideas\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     },
     {
       "id": "gen_20260501_100713_847333",
@@ -4181,7 +4660,8 @@
       "model": "gemini-1.5-flash",
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nchecklist layout, tick boxes, pre-release verification items, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "status": "draft"
+      "status": "draft",
+      "family": "sheet"
     }
   ]
 }
