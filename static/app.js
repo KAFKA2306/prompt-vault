@@ -5,23 +5,56 @@ const blocks = Object.fromEntries(db.blocks
 const templates = db.templates.filter((template) => template.visibility !== 'internal');
 const templateMap = Object.fromEntries(templates.map((template) => [template.id, template]));
 const generatorBlockNodes = Object.values(blocks).sort((a, b) => (
-  a.category.localeCompare(b.category, 'ja') || a.title.localeCompare(b.title, 'ja')
+  (a.family || a.category).localeCompare(b.family || b.category, 'ja')
+    || a.category.localeCompare(b.category, 'ja')
+    || a.title.localeCompare(b.title, 'ja')
 ));
 const nodeUsageIndex = Object.fromEntries([...Object.keys(blocks)].map((id) => [id, []]));
 const fullCopySuffix = '\n\n---\n# 指示\n画像生成する';
 const generatorEmptyText = 'まだ生成されていません。';
 const generatorDisabledText = '生成機能は未設定です。';
 
-const kindLabels = {
-  stamp: 'スタンプ・素材',
-  comic: '漫画・ストーリー',
-  reaction: '反応画像・リアクション',
-  design_sheet: 'デザインシート・設計資料',
-  announcement: '告知・宣伝用バナー',
-  social: 'SNS投稿用レイアウト',
-  brand: 'ブランドロゴ・意匠',
-  system: '自律運用・基盤',
+const familyLabels = {
+  post: '投稿',
+  banner: 'バナー',
+  news: 'ニュース',
+  sheet: 'シート',
+  brand: 'ブランド',
+  reply: '返信・反応',
+  comic: '漫画',
+  system: '運用・基盤',
   generated: '生成済み',
+};
+
+const blockFamilyLabels = {
+  core: '基盤',
+  character: 'キャラクター',
+  costume: '衣装',
+  layout: 'レイアウト',
+  news: 'ニュース',
+  scene: 'シーン',
+  pose: 'ポーズ',
+  text: 'テキスト',
+  expression: '表情',
+  effects: '演出',
+  reply: '返信・対話',
+  tone: '性格・トーン',
+  persona: '人格',
+  style: 'スタイル',
+  system: 'システム',
+  memory: '記憶',
+  audio: '音声',
+  stream: '配信',
+  avatar: 'アバター',
+  control: '制御',
+  signage: '展示・サイン',
+  safety: '安全',
+  extension: '拡張',
+  logging: 'ログ',
+  brand: 'ブランド',
+  mood: 'ムード',
+  structure: '構造',
+  research: 'リサーチ',
 };
 
 const escapeHTML = (value) => value
@@ -63,6 +96,8 @@ const setSeoCopy = () => {
   setMetaContent('meta[name="twitter:description"]', description);
 };
 
+const blockFamilyLabel = (block) => blockFamilyLabels[block.family] || block.family || block.category || 'ブロック';
+
 const getNodeType = (id) => {
   if (templateMap[id]) return 'template';
   if (blocks[id]) return 'block';
@@ -84,6 +119,7 @@ setSeoCopy();
 const renderBlockContent = (block) => [
   `## ${block.title}`,
   `ID: ${block.id}`,
+  `上位分類: ${blockFamilyLabel(block)}`,
   `カテゴリ: ${block.category}`,
   block.tags?.length ? `タグ: ${block.tags.map((tag) => `#${tag}`).join(' ')}` : '',
   block.aliases?.length ? `別名: ${block.aliases.join(', ')}` : '',
@@ -174,7 +210,7 @@ const renderGeneratorNodePicker = () => {
   picker.innerHTML = generatorBlockNodes.map((node) => {
     const { artifact, source } = findNodeDisplayArtifact(node, 'block', node.id);
     const selectedClass = selected.has(node.id) ? ' is-selected' : '';
-    const kind = escapeHTML(node.category || 'ブロック');
+    const kind = escapeHTML(blockFamilyLabel(node));
     const title = escapeHTML(node.title);
     const nodeId = escapeHTML(node.id);
     const badge = source === 'fallback' ? '<span class="recommend-card__badge">関連画像</span>' : '';
@@ -266,11 +302,11 @@ fetch('/api/config')
     setGeneratorEnabled(false);
   });
 
-const kindLabel = (template) => kindLabels[template.kind] || template.kind || 'テンプレート';
+const kindLabel = (template) => familyLabels[template.family] || familyLabels[template.kind] || template.family || template.kind || 'テンプレート';
 
 const nodeLabel = (node, type) => {
   if (type === 'template') return kindLabel(node);
-  return node.category || 'ブロック';
+  return blockFamilyLabel(node);
 };
 
 const renderStepItems = (steps) => steps.map((step, index) => `
@@ -354,6 +390,7 @@ const nodeSearchText = (ids) => ids.flatMap((id) => {
   return [
     node.id,
     node.title,
+    node.family,
     node.category,
     node.generated_prompt || '',
     ...(node.aliases || []),
@@ -490,7 +527,9 @@ const openNode = (nodeId, preferredType = null) => {
 
   el('modal-kind').textContent = nodeLabel(node, type);
   el('modal-title').textContent = node.title;
-  el('modal-purpose').textContent = isTemplate ? node.purpose : `カテゴリ: ${node.category}`;
+  el('modal-purpose').textContent = isTemplate
+    ? node.purpose
+    : `上位分類: ${blockFamilyLabel(node)} / カテゴリ: ${node.category}`;
   el('modal-copy').textContent = isTemplate ? 'プロンプトをコピー' : 'ブロック本文をコピー';
   el('modal-prompt-title').textContent = isTemplate ? '全文プロンプト' : 'ブロック本文';
 
@@ -539,6 +578,7 @@ const filteredTemplates = () => {
       nodeSearchText(template.uses || []),
       template.aliases?.join(' '),
       template.labels?.join(' '),
+      template.family,
       template.kind,
     ].join(' ').toLowerCase();
     return !query || haystack.includes(query);

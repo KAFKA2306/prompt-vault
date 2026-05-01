@@ -86,6 +86,8 @@ def load_db() -> dict[str, Any]:
         normalized_title = normalized_generated_title(template.get("title", ""), source_title, generated_instruction)
         template["title"] = normalized_title
         template["generated_title"] = normalized_title
+        if not template.get("family"):
+            template["family"] = source_template.get("family") if source_template else "generated"
 
     generated_prompts = db.get("generated_prompts", [])
     generated_templates = []
@@ -107,6 +109,7 @@ def load_db() -> dict[str, Any]:
             "title": generated_title,
             "generated_title": generated_title,
             "kind": "generated",
+            "family": record.get("family") or (source_template.get("family") if source_template else "generated"),
             "purpose": record.get("instruction") or (source_template.get("purpose") if source_template else ""),
             "summary": record.get("instruction") or "生成結果",
             "blocks": record.get("block_ids") or (source_template.get("blocks") if source_template else []),

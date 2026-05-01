@@ -191,8 +191,8 @@ def render_template_composition_diagram(
 
     lines.append('  subgraph templates["Templates"]')
     lines.append("    direction TB")
-    for index, (kind, items) in enumerate(group_nodes(templates, "kind", "template"), start=1):
-        lines.append(f'    subgraph {group_id("kind", index)}["{html.escape(kind, quote=True)}"]')
+    for index, (family, items) in enumerate(group_nodes(templates, "family", "template"), start=1):
+        lines.append(f'    subgraph {group_id("family", index)}["{html.escape(family, quote=True)}"]')
         lines.append("      direction TB")
         for template in ordered_nodes(items):
             lines.append(f'      t_{template["id"]}["{mermaid_label(template["title"], template["id"])}"]:::template')
@@ -201,8 +201,8 @@ def render_template_composition_diagram(
 
     lines.append('  subgraph blocks["Blocks"]')
     lines.append("    direction TB")
-    for index, (category, items) in enumerate(group_nodes(blocks, "category", "ブロック"), start=1):
-        lines.append(f'    subgraph {group_id("cat", index)}["{html.escape(category, quote=True)}"]')
+    for index, (family, items) in enumerate(group_nodes(blocks, "family", "ブロック"), start=1):
+        lines.append(f'    subgraph {group_id("fam", index)}["{html.escape(family, quote=True)}"]')
         lines.append("      direction TB")
         for block in ordered_nodes(items):
             lines.append(f'      b_{block["id"]}["{mermaid_label(block["title"], block["id"])}"]:::block')
@@ -237,8 +237,8 @@ def render_block_relations_diagram(
 
     lines.append('  subgraph blocks["Blocks"]')
     lines.append("    direction TB")
-    for index, (category, items) in enumerate(group_nodes(blocks, "category", "ブロック"), start=1):
-        lines.append(f'    subgraph {group_id("cat", index)}["{html.escape(category, quote=True)}"]')
+    for index, (family, items) in enumerate(group_nodes(blocks, "family", "ブロック"), start=1):
+        lines.append(f'    subgraph {group_id("fam", index)}["{html.escape(family, quote=True)}"]')
         lines.append("      direction TB")
         for block in ordered_nodes(items):
             lines.append(f'      b_{block["id"]}["{mermaid_label(block["title"], block["id"])}"]:::block')
