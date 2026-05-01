@@ -87,4 +87,4 @@
 - Users do not read complex documentation or perform granular copy-pasting. Always provide a single, obvious "Copy Full Prompt" button at the top of the modal.
 - Optimize for clarity and speed, not visual novelty.
 - Treat this project as a small static utility, not a full product suite.
-
+- Put fixed design decisions in `docs/ADR/` so future changes stay simple and explicit.

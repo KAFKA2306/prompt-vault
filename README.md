@@ -7,6 +7,7 @@
 - [Cloudflare Pages 公開先](https://prompt-vault-cg3.pages.dev/)
 - [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
 - [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
+- [ADR](docs/ADR/README.md)
 - [表示検証スクリプト](scripts/verify_pages.sh)
 - [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
@@ -47,6 +48,7 @@ python3 build.py
 
 - `db/prompts.json` がローカルDBです
 - ここにブロックとテンプレートを保存します
+- 設計の確定事項は `docs/ADR/` に残します
 - `static/index.html` が HTML の元です
 - `static/style.css` と `static/app.js` が画面の本体です
 - `dist/` は `python3 build.py` で作る生成物です

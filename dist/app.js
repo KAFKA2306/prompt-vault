@@ -92,6 +92,52 @@ const renderNodeChips = (ids) => ids
 
 const renderTextChips = (items) => items.map((item) => `<span class="tag">${escapeHTML(item)}</span>`).join('');
 
+const renderRecommendItems = (ids) => ids
+  .filter((id, index, list) => id && list.indexOf(id) === index)
+  .map((id) => {
+    const node = getNode(id);
+    const type = getNodeType(id);
+    if (!node) return '';
+
+    const artifact = findNodeArtifact(node, type, id);
+    const title = escapeHTML(node.title);
+    const kind = escapeHTML(nodeLabel(node, type));
+    const nodeId = escapeHTML(id);
+    const nodeType = escapeHTML(type || '');
+
+    if (artifact?.path) {
+      const imgAlt = escapeHTML(artifact.title || node.title);
+      return `
+        <button
+          type="button"
+          class="recommend-card recommend-card--image"
+          data-node-id="${nodeId}"
+          data-node-type="${nodeType}"
+        >
+          <img src="${escapeHTML(artifact.path)}" alt="${imgAlt}" loading="lazy" />
+          <div class="recommend-card__body">
+            <span class="recommend-card__title">${title}</span>
+            <span class="recommend-card__meta">${kind}</span>
+          </div>
+        </button>
+      `;
+    }
+
+    return `
+      <button
+        type="button"
+        class="recommend-card recommend-card--text"
+        data-node-id="${nodeId}"
+        data-node-type="${nodeType}"
+      >
+        <div class="recommend-card__body">
+          <span class="recommend-card__title">${title}</span>
+          <span class="recommend-card__meta">${kind}</span>
+        </div>
+      </button>
+    `;
+  }).join('');
+
 const nodeSearchText = (ids) => ids.flatMap((id) => {
   const node = getNode(id);
   if (!node) return [id];
@@ -145,6 +191,34 @@ const recommendNodeIds = (node, type) => {
     .sort((a, b) => nodeScore(b) - nodeScore(a) || getNode(a).title.localeCompare(getNode(b).title, 'ja'));
 };
 
+const findNodeArtifact = (node, type, nodeId) => {
+  if (node.artifacts?.length) return node.artifacts[0];
+
+  const candidates = type === 'template'
+    ? uniqueIds(node.blocks.flatMap((blockId) => relatedTemplatesFor(blockId)))
+    : uniqueIds([
+        ...(node.related || []),
+        ...(node.variant_of ? [node.variant_of] : []),
+        ...relatedTemplatesFor(nodeId),
+      ]);
+
+  for (const candidateId of candidates.sort((a, b) => nodeScore(b) - nodeScore(a))) {
+    const candidate = getNode(candidateId);
+    if (candidate?.artifacts?.length) {
+      return candidate.artifacts[0];
+    }
+  }
+
+  if (type === 'template') {
+    for (const blockId of node.blocks) {
+      const block = blocks[blockId];
+      if (block?.artifacts?.length) return block.artifacts[0];
+    }
+  }
+
+  return null;
+};
+
 const openNode = (nodeId, preferredType = null) => {
   const type = preferredType || getNodeType(nodeId);
   const node = type === 'template' ? templateMap[nodeId] : blocks[nodeId];
@@ -154,7 +228,7 @@ const openNode = (nodeId, preferredType = null) => {
 
   const imgView = document.querySelector('.modal-image-view');
   const imgEl = el('modal-img');
-  const artifact = node.artifacts?.[0];
+  const artifact = findNodeArtifact(node, type, nodeId);
 
   if (artifact && artifact.path) {
     imgEl.style.display = 'block';
@@ -196,7 +270,9 @@ const openNode = (nodeId, preferredType = null) => {
   el('modal-secondary').innerHTML = secondaryIds.length ? renderNodeChips(secondaryIds) : '';
   el('modal-secondary-block').hidden = !secondaryIds.length;
 
-  el('modal-recommend').innerHTML = recommendIds.length ? renderNodeChips(recommendIds) : '';
+  const recommendEl = el('modal-recommend');
+  recommendEl.className = 'recommend-grid';
+  recommendEl.innerHTML = recommendIds.length ? renderRecommendItems(recommendIds) : '';
   el('modal-recommend-block').hidden = !recommendIds.length;
 
   el('modal-aliases').innerHTML = node.aliases?.length ? renderTextChips(node.aliases) : '';
