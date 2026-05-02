@@ -201,7 +201,7 @@
       "id": "morning_tweet_text_pack",
       "category": "セリフ・フレーズ",
       "title": "おはツイ文言",
-      "content": "「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」",
+      "content": "「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」",
       "tags": [
         "morning",
         "tweet",
@@ -982,7 +982,7 @@
       "id": "morning_situation_text_pack",
       "category": "セリフ・フレーズ",
       "title": "朝シチュエーション文言",
-      "content": "wake:「起きた」「まだ眠いけど起動」「おはよう、準備中」, coffee:「コーヒーで起動中」「朝の一杯」「あたたまってきた」, window:「窓の光がちょうどいい」「外がきれい」「朝の空気が好き」, commute:「そろそろ出る」「いってきます」「朝の準備完了」, rain:「雨の朝だね」「しっとりしてる」「今日は静かにいこう」, sleepy:「まだふわふわ」「ゆっくり始める」「寝起きですが元気です」",
+      "content": "wake:「起きた」「まだ眠いけど起動」「おはよう、準備中」, coffee:「コーヒーで起動中」「朝の一杯」「あたたまってきた」, window:「窓の光がちょうどいい」「外がきれい」「朝の空気が好き」, commute:「そろそろ出る」「いってきます」「朝の準備完了」, rain:「雨の朝だね」「しっとりしてる」「今日は静かにいこう」, sleepy:「まだふわふわ」「ゆっくり始める」「寝起きですが元気です」, sneeze:「花粉なのかほこりなのか、くしゃみが出る」「朝からくしゃみが止まらない」「鼻がむずむずする朝」「花粉の薬がすぐなくなる」",
       "tags": [
         "morning",
         "situation",
@@ -2228,6 +2228,39 @@
         }
       ],
       "notes": "寝起きは情報を足しすぎない。起床そのものを見せる。",
+      "family": "post"
+    },
+    {
+      "id": "morning_tweet_sneeze",
+      "title": "Kafka おはツイ 花粉",
+      "kind": "social",
+      "purpose": "花粉やほこりでくしゃみが出る朝の投稿を作る",
+      "summary": "花粉症の薬がすぐなくなる朝の困りごとを、Kafka のおはツイとしてかわいくまとめる。",
+      "steps": [
+        "くしゃみの気配を1つ置く",
+        "朝の困りごとを短く言う",
+        "表情は軽くかわいくする",
+        "白背景で読みやすくする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_tweet_layout",
+        "morning_situation_text_pack",
+        "morning_tweet_text_pack",
+        "reaction_focus",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/082_morning_tweet_sneeze.png",
+          "title": "おはツイ花粉の実例"
+        }
+      ],
+      "notes": "花粉症の薬がすぐなくなる朝に使う。重くしすぎず、軽い困りごととして見せる。",
       "family": "post"
     },
     {

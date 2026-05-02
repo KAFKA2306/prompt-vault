@@ -13,10 +13,12 @@
 2. Search related or official follow-up sources.
 3. Compare with the closest existing Prompt Vault examples.
 4. Choose the best format.
-5. If the update needs a fresh image, generate it with `imagegen` and save it into `artifacts/`.
-6. Write or update `db/prompts.json`.
-7. Run `python3 build.py`.
-8. Check `http://127.0.0.1:8787/`.
+5. If the update needs a fresh image, generate it with `imagegen`.
+6. Inspect the generated image before copying it into the project.
+7. Save the selected image into `artifacts/`.
+8. Write or update `db/prompts.json`.
+9. Run `python3 build.py`.
+10. Check `http://127.0.0.1:8787/`.
 
 ## Format selection
 
@@ -31,7 +33,8 @@
 2. Update the `path` in `db/prompts.json`.
 3. Keep the display `title` short and descriptive.
 4. If a replacement visual is needed, generate it with `imagegen` first.
-5. Rebuild and verify locally.
+5. Inspect the image before keeping it.
+6. Rebuild and verify locally.
 
 ## Editing rules
 

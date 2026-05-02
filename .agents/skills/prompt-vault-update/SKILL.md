@@ -33,6 +33,7 @@ Use this skill to turn an incoming source or artifact request into a concrete Pr
 5. Update files.
    - Edit `db/prompts.json` first.
    - If a new visual is needed, call `imagegen` and save the result into `artifacts/` before wiring it into the DB.
+   - Inspect the generated image before copying it into the project so the artifact matches the intended prompt.
    - Add or rename artifact files to match the `NNN_slug.png` convention.
    - Keep `db/prompts.json` `path` values aligned with real file names.
    - Update `static/app.js` only if a new family or label is needed.
@@ -47,6 +48,7 @@ Use this skill to turn an incoming source or artifact request into a concrete Pr
 - Do not force everything into one old pattern.
 - Create a new format when it improves clarity or avoids repetition.
 - Use `imagegen` directly when the task needs a new bitmap visual, instead of asking for manual image creation.
+- Verify the generated image before treating it as the final artifact.
 - Do not edit `dist/` by hand.
 - Keep artifact renames and DB links in sync.
 - If a source is uncertain, verify before writing it into the DB.
