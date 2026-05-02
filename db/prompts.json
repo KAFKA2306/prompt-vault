@@ -980,6 +980,18 @@
       "family": "scene"
     },
     {
+      "id": "splendor_game_scene_kafka",
+      "category": "背景",
+      "title": "宝石の煌き対戦背景",
+      "content": "bright tabletop board game scene, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
+      "tags": [
+        "splendor",
+        "boardgame",
+        "background"
+      ],
+      "family": "scene"
+    },
+    {
       "id": "morning_scene_window_kafka",
       "category": "背景",
       "title": "窓際の朝背景",
@@ -1167,6 +1179,18 @@
       "tags": [
         "gaming",
         "status",
+        "text"
+      ],
+      "family": "text"
+    },
+    {
+      "id": "splendor_game_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "宝石の煌きゲーム文言",
+      "content": "「宝石を集めるよ」「ゴールドは万能」「買えるカードを増やす」「あと少しで勝てる」「貴族が来た」「この一手が大事」「得点が見えてきた」「うれしい」「逆転の流れ」「今日はこれで決める」",
+      "tags": [
+        "splendor",
+        "boardgame",
         "text"
       ],
       "family": "text"
@@ -3412,6 +3436,38 @@
         }
       ],
       "family": "post"
+    },
+    {
+      "id": "splendor_play_comic",
+      "title": "Kafka 宝石の煌き漫画",
+      "kind": "comic",
+      "purpose": "Splendor / 宝石の煌きで遊んでいる様子を、4コマ漫画として見せる",
+      "summary": "宝石トークンを集めてカードを買い、貴族の得点が見えてくる流れを、かわいく分かりやすく見せる。",
+      "steps": [
+        "最初に宝石を集める流れを見せる",
+        "カード購入で盤面が広がる様子を入れる",
+        "貴族や得点の気配を出す",
+        "最後に勝ち筋の嬉しさで締める"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "comic_layout",
+        "reaction_focus",
+        "splendor_game_scene_kafka",
+        "splendor_game_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "Splendorの宝石トークン、発展カード、貴族、ゴールドを見せる。ゲームの説明は短く、遊んでいる楽しさを優先する。",
+      "artifacts": [
+        {
+          "path": "artifacts/094_splendor_game_comic.png",
+          "title": "宝石の煌き漫画の実例"
+        }
+      ],
+      "family": "comic"
     },
     {
       "id": "joinwars_post",
