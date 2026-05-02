@@ -1135,6 +1135,18 @@
       "family": "costume"
     },
     {
+      "id": "vrchat_outfit_kafka",
+      "category": "衣装",
+      "title": "VRChat衣装",
+      "content": "VRChat-ready fashionable clothing, comfortable avatar-friendly silhouette, lightweight jacket, layered top, short skirt or wide-leg pants option, ribbon accents, small bag or accessories, white and pastel-blue palette with a little navy, practical for avatar use, easy to recognize silhouette",
+      "tags": [
+        "vrchat",
+        "outfit",
+        "avatar"
+      ],
+      "family": "costume"
+    },
+    {
       "id": "reading_status_text_pack",
       "category": "セリフ・フレーズ",
       "title": "読書文言",
@@ -1592,6 +1604,18 @@
       "family": "layout"
     },
     {
+      "id": "vrchat_outfit_sheet_layout",
+      "title": "VRChat衣装シート",
+      "category": "形式・レイアウト",
+      "content": "fashion design reference sheet for VRChat users, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished avatar outfit concept board, calm comparison layout",
+      "tags": [
+        "vrchat",
+        "outfit",
+        "layout"
+      ],
+      "family": "layout"
+    },
+    {
       "id": "checklist_layout",
       "title": "チェックリスト",
       "category": "フロー・構造",
@@ -1836,6 +1860,35 @@
           "title": "Kafka 衣装比較シートの実例"
         }
       ],
+      "family": "sheet"
+    },
+    {
+      "id": "vrchat_outfit_creation_sheet",
+      "title": "Kafka VRChat衣装制作シート",
+      "kind": "design_sheet",
+      "purpose": "VRChatユーザー向けの衣装案を比較しながら固める",
+      "summary": "本命案を大きく、周囲に実用的な別案を並べる衣装制作シート。",
+      "steps": [
+        "VRChatで使いやすい本命案を決める",
+        "周辺に3つの別方向を置く",
+        "素材感と配色を揃える",
+        "アバターで読めるシルエットにする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "vrchat_outfit_kafka",
+        "vrchat_outfit_sheet_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/088_vrchat_outfit_sheet.png",
+          "title": "VRChat衣装制作シートの実例"
+        }
+      ],
+      "notes": "VRChatユーザー向けの衣装制作で、そのまま使いやすい本命案と派生案を並べる下敷きにする。衣装は固定せず、シーンに合うファッションへ寄せる。",
       "family": "sheet"
     },
     {
