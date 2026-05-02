@@ -35,6 +35,18 @@
       "family": "costume"
     },
     {
+      "id": "spring_fashion_kafka",
+      "category": "キャラ衣装",
+      "title": "春のお出かけ服",
+      "content": "fashionable spring outfit, light beige or pale blue coat, airy dress or skirt, ribbon accents, small crossbody bag, elegant shoes, polished seasonal styling, coordinated and photo-ready",
+      "tags": [
+        "spring",
+        "fashion",
+        "outfit"
+      ],
+      "family": "costume"
+    },
+    {
       "id": "character_sheet_kafka",
       "category": "形式・レイアウト",
       "title": "Kafka キャラデザインシート",
@@ -1488,6 +1500,30 @@
         "germany",
         "expat",
         "background"
+      ],
+      "family": "scene"
+    },
+    {
+      "id": "germany_expat_daily_scene",
+      "category": "背景",
+      "title": "ドイツの日常",
+      "content": "German everyday life scene, morning kitchen table, tram stop, grocery checkout, recycling bins, weekly rhythm board, bright practical atmosphere, calm city living",
+      "tags": [
+        "germany",
+        "expat",
+        "daily"
+      ],
+      "family": "scene"
+    },
+    {
+      "id": "kansai_hanami_scene",
+      "category": "背景",
+      "title": "関西のお花見",
+      "content": "Kansai cherry blossom sightseeing background, Kyoto temple path with sakura, Osaka Castle with petals, Nara spring scenery, riverside promenade, airy spring travel atmosphere",
+      "tags": [
+        "kansai",
+        "hanami",
+        "travel"
       ],
       "family": "scene"
     },
@@ -3285,6 +3321,63 @@
         }
       ],
       "notes": "Source: https://www.make-it-in-germany.com/en/living-in-germany/housing-mobility/housing-registration\nSource: https://www.make-it-in-germany.com/en/living-in-germany/learn-german\nSource: https://www.make-it-in-germany.com/en/living-in-germany/settling/useful-everyday-knowledge\nSource: https://service.berlin.de/dienstleistung/327974/en/\nKey facts: residence registration is required within two weeks of arrival; demand for accommodation is high especially in major cities; German helps daily life and settling in; shops and supermarkets remain closed on Sundays and public holidays in the official guidance.\nManga flow: 1) カフカ「まず住所登録！」 2) カフカ「家探しと書類が多い…」 3) カフカ「日曜はお店が閉まる！」 4) カフカ「でも慣れると暮らしやすいよ」\nTone: friendly, relatable, lightly humorous, not blog-like.",
+      "family": "post"
+    },
+    {
+      "id": "germany_expat_daily_post",
+      "title": "Kafka ドイツ生活あるある 日常編",
+      "kind": "social",
+      "purpose": "ドイツ生活の毎日の慣れを、落ち着いた日常として見せる",
+      "summary": "朝、移動、買い物、分別という日常の流れをやさしくまとめる。",
+      "steps": [
+        "朝のゆっくりしたスタートを1コマ目で見せる",
+        "公共交通での移動を2コマ目で見せる",
+        "現金とカードの使い分けを3コマ目で見せる",
+        "ごみ分別と一週間のリズムを4コマ目で閉じる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "germany_expat_daily_scene",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/085_deutsch_aruaru_daily.png",
+          "title": "ドイツ生活あるある日常編の実例"
+        }
+      ],
+      "notes": "Source: https://www.make-it-in-germany.com/en/living-in-germany/settling/useful-everyday-knowledge\nSource: https://www.make-it-in-germany.com/en/living-in-germany/learn-german\nSource: https://www.umweltbundesamt.de/en/topics/waste-resources\nKey facts: everyday routines get easier once settled; public transport is a practical part of daily life; cash and card both matter in ordinary errands; recycling rules are part of settling in.\nManga flow: 1) カフカ「朝はゆっくりスタート」 2) カフカ「移動は公共交通が便利」 3) カフカ「現金も少しあると安心」 4) カフカ「分別に慣れると日常が回るよ」\nTone: friendly, calm, everyday-life recap, sequel to the registration struggle post.",
+      "family": "post"
+    },
+    {
+      "id": "kansai_hanami_post",
+      "title": "Kafka 関西お花見めぐり",
+      "kind": "social",
+      "purpose": "関西の桜名所をめぐる春の旅行ポストを作る",
+      "summary": "京都、大阪、奈良を中心に、春の関西の花見スポットを巡る。",
+      "steps": [
+        "京都の桜を1コマ目で見せる",
+        "大阪城と桜を2コマ目で見せる",
+        "奈良の春景色を3コマ目で見せる",
+        "春の関西をまとめて4コマ目で閉じる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "spring_fashion_kafka",
+        "kansai_hanami_scene",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/086_kansai_hanami_tour.png",
+          "title": "関西お花見めぐりの実例"
+        }
+      ],
+      "notes": "Source: https://kyoto.travel/en/season/sakura/\nSource: https://osaka-info.jp/en/spot/osaka-castle-park/\nSource: https://narashikanko.or.jp/en/spot/park/1396/\nKey facts: Kyoto, Osaka, and Nara are all well-known spring sightseeing choices; the poster should feel like a travel recap, not a guidebook.\nManga flow: 1) カフカ「京都でお花見スタート」 2) カフカ「大阪城と桜がきれい」 3) カフカ「のんびり歩くのもいいね」 4) カフカ「春の関西めぐり、最高！」\nTone: bright, elegant, photo-post-like, with a fashionable spring outfit.",
       "family": "post"
     },
     {

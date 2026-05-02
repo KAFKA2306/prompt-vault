@@ -24,6 +24,7 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
    - Pick one existing template when it already fits the job.
    - Create one new template or block when the old one would force the content into the wrong shape.
    - Use Kafka by default, but lower her presence when she hurts readability or factual precision.
+   - Do not lock Kafka into one costume; choose a scene-appropriate fashionable outfit for each update.
 
 4. Draft the update.
    - Preserve factual wording, names, numbers, and dates exactly.
