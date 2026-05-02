@@ -262,6 +262,19 @@
       "family": "layout"
     },
     {
+      "id": "gaming_post_layout",
+      "category": "形式・レイアウト",
+      "title": "ゲーム投稿レイアウト",
+      "content": "square or 4:5 social post, one large gaming portrait, one short caption, no date, no timestamp, no clutter, readable at phone size, controller or screen glow visible, cozy but playful gaming mood",
+      "tags": [
+        "gaming",
+        "layout",
+        "post"
+      ],
+      "variant_of": "status_post_layout",
+      "family": "layout"
+    },
+    {
       "id": "chat_reply_pack",
       "category": "リプライ・対話",
       "title": "コメント返し",
@@ -955,6 +968,18 @@
       "family": "scene"
     },
     {
+      "id": "gaming_scene_kafka",
+      "category": "背景",
+      "title": "ゲーム遊び背景",
+      "content": "cozy gaming room, Kafka sitting on a sofa or gaming chair, fashionable comfy homewear with a knit hoodie or soft sweater, controller in hand, monitor glow, snacks or drink nearby, pastel blue and lavender accents, tidy and playful, no clutter",
+      "tags": [
+        "gaming",
+        "background",
+        "play"
+      ],
+      "family": "scene"
+    },
+    {
       "id": "morning_scene_window_kafka",
       "category": "背景",
       "title": "窓際の朝背景",
@@ -1135,6 +1160,18 @@
       "family": "text"
     },
     {
+      "id": "gaming_status_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "ゲーム文言",
+      "content": "「ゲーム中」「もう一戦」「集中」「いくよ」「いい感じ」「勝ちたい」「ここから」「楽しい」「あと少し」「やる気出る」",
+      "tags": [
+        "gaming",
+        "status",
+        "text"
+      ],
+      "family": "text"
+    },
+    {
       "id": "joinwars_status_text_pack",
       "category": "セリフ・フレーズ",
       "title": "JoinWars文言",
@@ -1222,7 +1259,7 @@
       "id": "tax_truth_text_pack",
       "category": "セリフ・フレーズ",
       "title": "税の真実文言",
-      "content": "myth:「iDeCoはNISAより必ず得？」, truth:「拠出時の控除と受取時課税まで見る」, nisa:「運用益は非課税、拠出控除はなし」, ideco:「掛金は所得控除、運用益は非課税、受取時は課税」, taxable:「運用益に20.315%課税」, verdict:「優劣は今の税率と受取時の税率で変わる」",
+      "content": "myth:「iDeCoはNISAより必ず得？」, truth:「比べるのは拠出控除・運用益・受取時課税」, nisa:「運用益は非課税、拠出控除はなし」, ideco:「掛金は全額所得控除、運用益は非課税、受取時は課税あり」, taxable:「運用益・配当に20.315%」, verdict:「iDeCoは万能ではない」",
       "tags": [
         "tax",
         "nisa",
@@ -2137,11 +2174,11 @@
       ],
       "artifacts": [
         {
-          "path": "artifacts/090_tax_truth_sheet.png",
-          "title": "税の真実比較シートの実例"
+          "path": "artifacts/092_tax_truth_sheet.png",
+          "title": "税の真実比較シートの改訂版"
         }
       ],
-      "notes": "Source: https://www.fsa.go.jp/policy/nisa2/know/\nSource: https://www.ideco-koushiki.jp/guide/tax/\nSource: https://www.ideco-koushiki.jp/guide/receiving/\nSource: https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1476.htm\nSource: https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1523.htm\nKey facts: NISA has tax-free investment gains/dividends but no contribution deduction; iDeCo contributions are deductible and investment gains are tax-free, but withdrawals are taxed; taxable brokerage accounts are taxed on gains/dividends at 20.315%; the precise winner depends on contribution and withdrawal tax conditions, so iDeCo is not universally better than NISA.\nManga flow: 1) カフカ「NISA、iDeCo、特定口座を比べるよ」 2) カフカ「NISAは運用益が非課税」 3) カフカ「iDeCoは掛金が控除だけど受取時に課税」 4) カフカ「特定口座は運用益に税がかかる」 5) カフカ「優劣は今の税率と受取時の条件で変わる」\nTone: factual, careful, not financial advice, and not overly simplified.",
+      "notes": "Source: https://www.fsa.go.jp/policy/nisa2/know/\nSource: https://www.ideco-koushiki.jp/guide/tax/\nSource: https://www.ideco-koushiki.jp/guide/receiving/\nSource: https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1476.htm\nSource: https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1523.htm\nKey facts: NISA has tax-free investment gains/dividends but no contribution deduction; iDeCo contributions are fully deductible and investment gains are tax-free, but withdrawals are taxed at payout time; taxable brokerage accounts are taxed on gains/dividends at 20.315%; iDeCo is not universally better than NISA because the winner depends on contribution-time deduction and withdrawal-time taxation.\nManga flow: 1) カフカ「NISA、iDeCo、特定口座を比べるよ」 2) カフカ「NISAは運用益が非課税」 3) カフカ「iDeCoは掛金が全額控除だけど受取時に課税」 4) カフカ「特定口座は運用益に20.315%の税がかかる」 5) カフカ「優劣は今の税率と受取時の条件で変わる」\nTone: factual, careful, not financial advice, and not overly simplified.",
       "family": "sheet"
     },
     {
@@ -3342,6 +3379,36 @@
         {
           "path": "artifacts/034_cardgame_post_alt.png",
           "title": "カードゲーム投稿の別実例"
+        }
+      ],
+      "family": "post"
+    },
+    {
+      "id": "gaming_post",
+      "title": "Kafka ゲーム遊びシーン",
+      "kind": "social",
+      "purpose": "Kafka が家でゲームを遊んでいる様子を、投稿用の1枚にする",
+      "summary": "コントローラと画面の光で、遊んでいる楽しさと集中感を出す。",
+      "steps": [
+        "ゲーム中の集中感を決める",
+        "コントローラと画面の光を見せる",
+        "表情を楽しげで読みやすくする",
+        "短いゲーム文言を入れる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "gaming_post_layout",
+        "gaming_scene_kafka",
+        "gaming_status_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "ゲーム名は固定しない。コントローラ遊びの汎用シーンとして使う。",
+      "artifacts": [
+        {
+          "path": "artifacts/093_kafka_gaming_scene.png",
+          "title": "ゲーム遊びシーンの実例"
         }
       ],
       "family": "post"
