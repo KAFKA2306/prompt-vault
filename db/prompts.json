@@ -1528,6 +1528,18 @@
       "family": "scene"
     },
     {
+      "id": "kansai_hanami_route_scene",
+      "category": "背景",
+      "title": "関西お花見ルート",
+      "content": "Kansai cherry blossom route background, Kyoto Maruyama Park, Osaka Castle Nishinomaru Garden, Kema Sakuranomiya Park riverside, Nara Park spring scenery, route arrows, practical travel atmosphere",
+      "tags": [
+        "kansai",
+        "hanami",
+        "route"
+      ],
+      "family": "scene"
+    },
+    {
       "id": "comparison_layout",
       "title": "比較カード",
       "category": "比較・整理",
@@ -3378,6 +3390,35 @@
         }
       ],
       "notes": "Source: https://kyoto.travel/en/season/sakura/\nSource: https://osaka-info.jp/en/spot/osaka-castle-park/\nSource: https://narashikanko.or.jp/en/spot/park/1396/\nKey facts: Kyoto, Osaka, and Nara are all well-known spring sightseeing choices; the poster should feel like a travel recap, not a guidebook.\nManga flow: 1) カフカ「京都でお花見スタート」 2) カフカ「大阪城と桜がきれい」 3) カフカ「のんびり歩くのもいいね」 4) カフカ「春の関西めぐり、最高！」\nTone: bright, elegant, photo-post-like, with a fashionable spring outfit.",
+      "family": "post"
+    },
+    {
+      "id": "kansai_hanami_route_post",
+      "title": "Kafka 関西お花見ルート",
+      "kind": "social",
+      "purpose": "明日そのまま使える関西花見ルートを、具体的な名所で見せる",
+      "summary": "京都円山公園、大阪城公園、毛馬桜之宮公園、奈良で回る一日ルートをまとめる。",
+      "steps": [
+        "朝の京都円山公園を1コマ目で見せる",
+        "昼の大阪城公園を2コマ目で見せる",
+        "午後の毛馬桜之宮公園を3コマ目で見せる",
+        "夕方の奈良で締める4コマ目で閉じる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "spring_fashion_kafka",
+        "kansai_hanami_route_scene",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/087_kansai_hanami_route.png",
+          "title": "関西お花見ルートの実例"
+        }
+      ],
+      "notes": "Source: https://kyoto.travel/en/season/sakura/\nSource: https://osaka-info.jp/en/spot/osaka-castle-park/\nSource: https://www.osaka-info.jp/en/spot/kema-sakuranomiya-park/\nSource: https://narashikanko.or.jp/en/spot/park/1396/\nKey facts: Kyoto Maruyama Park, Osaka Castle Park, and Kema Sakuranomiya Park are concrete spring stops; the poster should read like a practical one-day route, not a guidebook.\nManga flow: 1) カフカ「朝は京都・円山公園から」 2) カフカ「昼は大阪城で桜の名所」 3) カフカ「午後は川沿いをのんびり」 4) カフカ「最後は奈良でゆったり締め」\nTone: practical, concrete, and ready to use tomorrow, with a fashionable spring outfit.",
       "family": "post"
     },
     {
