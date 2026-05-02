@@ -1892,6 +1892,35 @@
       "family": "sheet"
     },
     {
+      "id": "splendor_outfit_sheet",
+      "title": "Kafka 宝石の煌き衣装シート",
+      "kind": "design_sheet",
+      "purpose": "宝石の煌きの雰囲気に合う上品な衣装案を比較しながら固める",
+      "summary": "宝石色やルネサンス感を意識した、きらびやかで上品な衣装制作シート。",
+      "steps": [
+        "本命案をひとつ大きく置く",
+        "宝石色の派生案を周囲に並べる",
+        "ルネサンス感と上品さを揃える",
+        "ゲーム卓でも映えるシルエットにする"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "vrchat_outfit_kafka",
+        "vrchat_outfit_sheet_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/089_splendor_outfit_sheet.png",
+          "title": "宝石の煌き衣装シートの実例"
+        }
+      ],
+      "notes": "Splendor / 宝石の煌きの雰囲気に寄せた衣装制作で、宝石色と上品さを両立させる。本命案を中心に、ルビー・サファイア・エメラルド系の別案を見比べる想定にする。splender という表記は Splendor として扱う。",
+      "family": "sheet"
+    },
+    {
       "id": "announcement_thumbnail",
       "title": "Kafka 配信告知サムネイル",
       "kind": "announcement",
