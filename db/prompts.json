@@ -1468,6 +1468,30 @@
       "family": "scene"
     },
     {
+      "id": "travel_bg_venice",
+      "category": "背景",
+      "title": "ヴェネツィアの風景",
+      "content": "Venice travel background, bright Venetian canal, Rialto bridge, gondola, warm stone buildings, flowers on balconies, sparkling water reflections, elegant European atmosphere",
+      "tags": [
+        "travel",
+        "background",
+        "venice"
+      ],
+      "family": "scene"
+    },
+    {
+      "id": "germany_expat_scene",
+      "category": "背景",
+      "title": "ドイツの街角",
+      "content": "German city street, apartment search board, Bürgeramt office, bakery storefront, Sunday closed sign, calm apartment facades, subtle Berlin skyline, bright European atmosphere",
+      "tags": [
+        "germany",
+        "expat",
+        "background"
+      ],
+      "family": "scene"
+    },
+    {
       "id": "comparison_layout",
       "title": "比較カード",
       "category": "比較・整理",
@@ -3204,6 +3228,63 @@
         }
       ],
       "notes": "広大な自然を楽しむ一枚。",
+      "family": "post"
+    },
+    {
+      "id": "travel_venice_post",
+      "title": "Kafka ヴェネツィア旅行",
+      "kind": "social",
+      "purpose": "ヴェネツィアの水路を散歩している様子を投稿する",
+      "summary": "水の都の運河やゴンドラと、旅行を楽しむキャラを合わせる。",
+      "steps": [
+        "ヴェネツィアらしい背景（運河や橋）にする",
+        "観光地にあったポーズをとらせる",
+        "旅行らしい文言を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "travel_bg_venice",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/083_travel_venice.png",
+          "title": "ヴェネツィア旅行の実例"
+        }
+      ],
+      "notes": "水の都の空気を楽しむ一枚。",
+      "family": "post"
+    },
+    {
+      "id": "germany_expat_aruaru_post",
+      "title": "Kafka ドイツ生活あるある",
+      "kind": "social",
+      "purpose": "ドイツ生活で最初につまずきやすい点と、慣れると暮らしやすい点を4コマで見せる",
+      "summary": "住所登録、家探し、日曜休業、慣れると住みやすい点をやさしくまとめる。",
+      "steps": [
+        "入居後の住所登録を1コマ目で見せる",
+        "家探しと書類の多さを2コマ目で見せる",
+        "日曜に店が閉まるあるあるを3コマ目で見せる",
+        "慣れると暮らしやすい安心感を4コマ目で閉じる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "germany_expat_scene",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/084_deutsch_aruaru_manga.png",
+          "title": "ドイツ生活あるあるの実例"
+        }
+      ],
+      "notes": "Source: https://www.make-it-in-germany.com/en/living-in-germany/housing-mobility/housing-registration\nSource: https://www.make-it-in-germany.com/en/living-in-germany/learn-german\nSource: https://www.make-it-in-germany.com/en/living-in-germany/settling/useful-everyday-knowledge\nSource: https://service.berlin.de/dienstleistung/327974/en/\nKey facts: residence registration is required within two weeks of arrival; demand for accommodation is high especially in major cities; German helps daily life and settling in; shops and supermarkets remain closed on Sundays and public holidays in the official guidance.\nManga flow: 1) カフカ「まず住所登録！」 2) カフカ「家探しと書類が多い…」 3) カフカ「日曜はお店が閉まる！」 4) カフカ「でも慣れると暮らしやすいよ」\nTone: friendly, relatable, lightly humorous, not blog-like.",
       "family": "post"
     },
     {
