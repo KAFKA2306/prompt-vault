@@ -7,47 +7,46 @@ description: Turn pasted links, tweets, posts, articles, PDFs, videos, or artifa
 
 ## Overview
 
-Use this skill to turn an incoming source or artifact request into a concrete Prompt Vault update. Read the source, search related context, choose or design the best format, generate a new image with `imagegen` when needed, then update `db/prompts.json`, artifacts, and generated output.
+Use this skill to turn one user input into one concrete Prompt Vault update. Treat the request as either source ingestion or artifact maintenance, read the minimum needed context, choose one format, generate a new image with `imagegen` when the task needs a bitmap, then update `db/prompts.json`, artifacts, and generated output.
 
 ## Workflow
 
 1. Classify the input.
-   - Link, tweet, PDF, or video: source ingestion.
-   - `artifacts*` or rename request: artifact maintenance.
+   - Link, tweet, PDF, video, article, or post: source ingestion.
+   - `artifacts*`, `rename`, `view artifact`, or `replace image`: artifact maintenance.
 
 2. Gather context.
-   - Read the primary source carefully.
-   - Search related or official follow-up sources when needed.
-   - Inspect the closest examples in `db/prompts.json` and `artifacts/`.
+   - Read the primary source first.
+   - Search one or two official or close follow-up sources when the facts or dates are not obvious.
+   - Inspect the closest matching examples in `db/prompts.json` and `artifacts/`.
 
 3. Choose the format.
-   - Prefer the best-fitting existing template when it is clearly appropriate.
-   - Design a new format when repetition would feel forced or stale.
-   - Keep Kafka as the default visual anchor, but reduce or remove her when she hurts clarity or factual precision.
+   - Pick one existing template when it already fits the job.
+   - Create one new template or block when the old one would force the content into the wrong shape.
+   - Use Kafka by default, but lower her presence when she hurts readability or factual precision.
 
 4. Draft the update.
-   - Preserve factual wording and dates.
-   - Keep any emotional tone that matters to the source.
-   - For manga/news outputs, identify the key beats and make them readable as short panels or callouts.
+   - Preserve factual wording, names, numbers, and dates exactly.
+   - Keep the source tone when it matters.
+   - Reduce the story to the few beats that must appear on screen.
 
 5. Update files.
    - Edit `db/prompts.json` first.
-   - If a new visual is needed, call `imagegen` and save the result into `artifacts/` before wiring it into the DB.
-   - Inspect the generated image before copying it into the project so the artifact matches the intended prompt.
-   - Add or rename artifact files to match the `NNN_slug.png` convention.
-   - Keep `db/prompts.json` `path` values aligned with real file names.
-   - Update `static/app.js` only if a new family or label is needed.
+   - If the task needs a new bitmap, call `imagegen`, inspect the result, then copy the selected file into `artifacts/`.
+   - Rename or add artifact files to match `NNN_slug.png`.
+   - Keep every `db/prompts.json` `path` value aligned with a real file name.
+   - Update `static/app.js` only when a new family or label is required.
 
 6. Build and verify.
    - Run `python3 build.py`.
-   - Check `http://127.0.0.1:8787/`.
-   - Confirm the artifact appears, the labels read correctly, and the layout still works.
+   - Open `http://127.0.0.1:8787/`.
+   - Confirm the new item appears, the labels read correctly, and the image matches the DB reference.
 
 ## Rules
 
 - Do not force everything into one old pattern.
 - Create a new format when it improves clarity or avoids repetition.
-- Use `imagegen` directly when the task needs a new bitmap visual, instead of asking for manual image creation.
+- Use `imagegen` directly when the task needs a new bitmap visual.
 - Verify the generated image before treating it as the final artifact.
 - Do not edit `dist/` by hand.
 - Keep artifact renames and DB links in sync.

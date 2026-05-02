@@ -1,6 +1,6 @@
 interface:
   display_name: "Prompt Vault Update"
-  short_description: "Add sources, news, imagegen, and artifacts"
-  default_prompt: "Use $prompt-vault-update to turn a pasted link, tweet, article, PDF, video, or artifact request into the right Prompt Vault DB update, and generate a new image with `imagegen` when needed."
+  short_description: "Turn sources or artifact requests into DB updates"
+  default_prompt: "Use $prompt-vault-update to turn a pasted link, tweet, article, PDF, video, or artifact request into one Prompt Vault DB update, and call `imagegen` when a new bitmap is needed."
 policy:
   allow_implicit_invocation: true

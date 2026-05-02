@@ -4,18 +4,20 @@
 
 - `link`, `tweet`, `PDF`, `video`
   - Treat as source ingestion.
-- `artifacts*`, `rename`, `view artifact`
+- `article`, `post`
+  - Treat as source ingestion.
+- `artifacts*`, `rename`, `view artifact`, `replace image`
   - Treat as artifact maintenance.
 
 ## Source ingestion
 
 1. Read the primary source.
-2. Search related or official follow-up sources.
+2. Search one or two official or close follow-up sources if the facts or dates are unclear.
 3. Compare with the closest existing Prompt Vault examples.
-4. Choose the best format.
-5. If the update needs a fresh image, generate it with `imagegen`.
-6. Inspect the generated image before copying it into the project.
-7. Save the selected image into `artifacts/`.
+4. Choose one output format.
+5. If the update needs a fresh bitmap, generate it with `imagegen`.
+6. Inspect the generated image.
+7. Copy the selected image into `artifacts/`.
 8. Write or update `db/prompts.json`.
 9. Run `python3 build.py`.
 10. Check `http://127.0.0.1:8787/`.
@@ -23,7 +25,7 @@
 ## Format selection
 
 - Prefer an existing template when it already matches the material.
-- Create a new template or block when the content would feel repetitive.
+- Create a new template or block when the content would be forced into the wrong shape.
 - Use `Kafka` by default as the visual anchor.
 - Reduce `Kafka` when factual precision or readability matters more.
 
@@ -42,6 +44,8 @@
 - Do not hand-edit `dist/`.
 - Keep file paths relative to the repo root.
 - If the UI needs a new label family, update `static/app.js`.
+- If multiple candidate formats exist, choose one and do not mix them in the same update.
+- If the source is still ambiguous after one search pass, stop and verify before writing facts into the DB.
 
 ## Output checklist
 
