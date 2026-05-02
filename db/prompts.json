@@ -1259,7 +1259,7 @@
       "id": "tax_truth_text_pack",
       "category": "セリフ・フレーズ",
       "title": "税の真実文言",
-      "content": "myth:「iDeCoはNISAより必ず得？」, truth:「比べるのは拠出控除・運用益・受取時課税」, nisa:「運用益は非課税、拠出控除はなし」, ideco:「掛金は全額所得控除、運用益は非課税、受取時は課税あり」, taxable:「運用益・配当に20.315%」, verdict:「iDeCoは万能ではない」",
+      "content": "myth:「iDeCoはNISAより必ず得？」, truth:「比べるのは拠出控除・運用益・受取時課税」, nisa:「運用益は非課税、拠出控除はなし」, ideco:「掛金は全額所得控除、運用益は非課税、受取時は課税あり」, taxable:「拠出控除はなし、運用益・配当に20.315%」, verdict:「iDeCoは万能ではない」",
       "tags": [
         "tax",
         "nisa",
