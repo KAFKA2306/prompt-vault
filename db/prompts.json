@@ -2791,6 +2791,52 @@
       "family": "sheet"
     },
     {
+      "id": "tweet_backed_prompt_index",
+      "title": "Kafka ツイート根拠プロンプト一覧",
+      "kind": "sheet",
+      "purpose": "可視本文が20文字を超える tweet だけを根拠に、prompt 方向を整理する",
+      "summary": "VRChat events, creator workflow, VRChat worlds, morning routine, real-world travel を、証拠 tweet 付きで並べる一覧シート。",
+      "steps": [
+        "visible text が 20 文字を超える tweet だけを使う",
+        "1 アイデアにつき 1 本の proof tweet を添える",
+        "抽象化しすぎず、sceneable な prompt seed に落とす",
+        "分類器だけで付いた topic は根拠として使わない"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "archive_index_vlog",
+        "prompt_archive_sheet_vlog",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Proof tweets: 1713898232185860589 — 第3回 #かなえちゃん集会 ... 1周年記念; 1777599017590890562 — おはかふか Blenderでホットケーキ作った; 1777236184395112853 — アムステルダムのワールド上げました。てきとーですけど、フレンドとヨーロッパ生活やヨーロッパ旅行の話をしたい; 1608823170165018626 — 今年買って良かったもの ... ごろ寝PCも楽; 1997469400602161345 — ドーハの空港、本当にすごかったんだよ。ターミナルの中に、本物の木が生えてるの。",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_imagegen_index",
+      "title": "Kafka ツイート根拠イメージ一覧",
+      "kind": "sheet",
+      "purpose": "可視本文が20文字を超える tweet だけを根拠に、imagegen 方向を整理する",
+      "summary": "VRChat avatar mod, AI image generation, creator tools, VRChat events, VRChat worlds を、証拠 tweet 付きで並べる一覧シート。",
+      "steps": [
+        "visible text が 20 文字を超える tweet だけを使う",
+        "1 アイデアにつき 1 本の proof tweet を添える",
+        "画像で見える scene に落とせる seed にする",
+        "分類器だけで付いた topic は根拠として使わない"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "archive_index_vlog",
+        "prompt_archive_sheet_vlog",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Proof tweets: 1917531539384197581 — bd_ Modular Avatarを使った令和の着せ替えボタン（VRC ExpressionsMenu）作り; 1665205188242599936 — sd-dynamic-prompts... dynamic-promptsなんもわからん; 1777599017590890562 — おはかふか Blenderでホットケーキ作った; 1713898232185860589 — 第3回 #かなえちゃん集会 ... 1周年記念; 1777236184395112853 — アムステルダムのワールド上げました。てきとーですけど、フレンドとヨーロッパ生活やヨーロッパ旅行の話をしたい",
+      "family": "sheet"
+    },
+    {
       "id": "work_start_post",
       "title": "Kafka 作業開始ポスト",
       "kind": "social",
