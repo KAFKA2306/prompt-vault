@@ -416,6 +416,18 @@
       "family": "style"
     },
     {
+      "id": "clean_quality_rendering",
+      "category": "描画",
+      "title": "クリーン品質レンダリング",
+      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish",
+      "tags": [
+        "rendering",
+        "quality",
+        "clean"
+      ],
+      "family": "style"
+    },
+    {
       "id": "reply_stamp_sheet_viz",
       "category": "形式・レイアウト",
       "title": "返信スタンプ（グリッド）",
@@ -432,6 +444,36 @@
       ],
       "variant_of": "reaction_focus",
       "family": "layout"
+    },
+    {
+      "id": "rendering_quality_check",
+      "category": "描画",
+      "title": "レンダリング品質検証",
+      "kind": "design_sheet",
+      "purpose": "画像生成の塗り・影・表面品質を、少ない情報で検証する",
+      "summary": "均一な塗り、滑らかなグラデーション、柔らかい光、ノイズの少ない表面が出るかを確認する。",
+      "steps": [
+        "単独のキャラで塗りを見やすくする",
+        "影を控えめにして表面を整える",
+        "高コントラストすぎない配色にする",
+        "細部より全体の均一さを確認する"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "clean_quality_rendering",
+        "reaction_focus",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "検証対象は塗り、影、表面の滑らかさ。情報量は少なくして、品質の崩れを見つけやすくする。",
+      "artifacts": [
+        {
+          "path": "artifacts/096_rendering_quality_check.png",
+          "title": "レンダリング品質検証の実例"
+        }
+      ],
+      "family": "sheet"
     },
     {
       "id": "topic_redirect_banner_viz",
