@@ -392,6 +392,31 @@
       "family": "news"
     },
     {
+      "id": "us_concerns_layout",
+      "category": "形式・レイアウト",
+      "title": "米国最新懸念レイアウト",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one inflation and gasoline panel, one Fed policy panel, one housing panel, one labor panel, one growth panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, simple chart markers, small source box, calm newsroom rhythm, no clutter",
+      "tags": [
+        "news",
+        "infographic",
+        "panels"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "us_concerns_panels",
+      "category": "ニュース・セリフ",
+      "title": "米国最新懸念のコマ文",
+      "content": "panel 1: Kafka looking at a news chart, speech bubble saying 「いまの米国、何が気になる？」, headline typography saying 「2026年 春の米国懸念」\npanel 2: inflation panel with gas pump and price arrows, captions saying 「物価とガソリンが重い」 「消費者マインドも弱い」\npanel 3: Fed panel with rate icon and cautious note, captions saying 「利下げは急がない」 「インフレはなお高い」\npanel 4: housing panel with house and mortgage icons, captions saying 「住宅はまだ弱い」 「借りるコストが重い」\npanel 5: labor and GDP panel, clean chart labels saying 「失業率 4.3%」 「Q1 GDP 年率 +2.0%」\npanel 6: closing takeaway panel with Kafka making a small nod, large rounded typography saying 「景気はあるけど不確実性が重い」",
+      "tags": [
+        "news",
+        "us",
+        "captions",
+        "economy"
+      ],
+      "family": "news"
+    },
+    {
       "id": "comic_panels",
       "category": "形式・レイアウト",
       "title": "漫画コマ構成",
@@ -3563,6 +3588,40 @@
         {
           "path": "artifacts/094_splendor_game_comic.png",
           "title": "宝石の煌き漫画の実例"
+        }
+      ],
+      "family": "comic"
+    },
+    {
+      "id": "us_latest_concerns_news",
+      "title": "Kafka 米国最新懸念ニュース",
+      "kind": "comic",
+      "purpose": "米国の最新の懸念材料を、Kafka が短く分かりやすく案内するニュースグラフィックにする",
+      "summary": "インフレ、ガソリン、Fed、住宅、雇用、GDPをまとめて、いまの米国の気分を1枚で見せる。",
+      "steps": [
+        "物価とガソリンの圧力を出す",
+        "Fedの据え置きと慎重姿勢を入れる",
+        "住宅の弱さを短く示す",
+        "雇用とGDPで景気の底堅さも入れる",
+        "最後に『景気はあるが不確実性が重い』で締める"
+      ],
+      "blocks": [
+        "source_research",
+        "master_style",
+        "character_kafka",
+        "us_concerns_layout",
+        "us_concerns_panels",
+        "reaction_focus",
+        "text_style_jp",
+        "rendering",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "Source: https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260429.pdf\nSource: https://www.bea.gov/news/2026/gdp-advance-estimate-1st-quarter-2026\nSource: https://www.bls.gov/eag/eag.us.htm\nSource: https://www.apnews.com/article/91e835feb0bf4f998c8b2f4dc112c28b\nSource: https://www.reuters.com/world/us/consumer-sentiment-hits-record-low-amid-war-gas-price-concerns-2026-04-18/\nKey facts: consumer sentiment fell to a record low in April as war-linked inflation and gas prices weighed on households; the Fed left rates unchanged and said inflation has moved up and is elevated; housing remained weak; unemployment was 4.3 percent in March; real GDP increased at an annual rate of 2.0 percent in Q1 2026.\nManga flow: 1) カフカ「いまの米国、何が気になる？」 2) カフカ「物価とガソリンが重い」 3) カフカ「Fedは据え置き」 4) カフカ「住宅はまだ弱い」 5) カフカ「雇用は4.3%、GDPは2.0%」 6) カフカ「景気はあるけど不確実性が重い」\nTone: factual, current, cautious, and concise.",
+      "artifacts": [
+        {
+          "path": "artifacts/098_us_latest_concerns_news.png",
+          "title": "米国最新懸念ニュースの実例"
         }
       ],
       "family": "comic"
