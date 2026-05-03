@@ -428,6 +428,32 @@
       "family": "style"
     },
     {
+      "id": "clean_quality_rendering_strong",
+      "category": "描画",
+      "title": "クリーン品質レンダリング強化版",
+      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, soft atmospheric balance, restrained contrast, even illumination, polished but human-made finish",
+      "tags": [
+        "rendering",
+        "quality",
+        "clean",
+        "strong"
+      ],
+      "family": "style"
+    },
+    {
+      "id": "clean_quality_rendering_contrast",
+      "category": "描画",
+      "title": "クリーン品質レンダリング高コントラスト版",
+      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, clear contrast between light and dark areas, dark areas stay dark, bright areas stay bright, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, polished but human-made finish",
+      "tags": [
+        "rendering",
+        "quality",
+        "clean",
+        "contrast"
+      ],
+      "family": "style"
+    },
+    {
       "id": "reply_stamp_sheet_viz",
       "category": "形式・レイアウト",
       "title": "返信スタンプ（グリッド）",
@@ -471,6 +497,36 @@
         {
           "path": "artifacts/096_rendering_quality_check.png",
           "title": "レンダリング品質検証の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
+      "id": "rendering_quality_check_soft",
+      "category": "描画",
+      "title": "レンダリング品質検証高コントラスト版",
+      "kind": "design_sheet",
+      "purpose": "画像生成のコントラストと塗りの均一さを、さらに強く検証する",
+      "summary": "暗いところは暗く、明るいところは明るく、でもギラつかずにまとまるかを見る。",
+      "steps": [
+        "暗部と明部の差を出す",
+        "髪のグラデーションを滑らかにする",
+        "布と肌の境界をきれいに保つ",
+        "背景をほぼ白で保つ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "clean_quality_rendering_strong",
+        "reaction_focus",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "品質検証の比較用。暗部をちゃんと落としつつ、ノイズやギラつきが増えないかを確認する。",
+      "artifacts": [
+        {
+          "path": "artifacts/097_rendering_quality_check_contrast.png",
+          "title": "レンダリング品質検証高コントラスト版の実例"
         }
       ],
       "family": "sheet"
