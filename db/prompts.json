@@ -1824,6 +1824,40 @@
       "family": "sheet"
     },
     {
+      "id": "hermes_agent_overview_sheet",
+      "title": "Hermes Agent 概要図",
+      "kind": "sheet",
+      "purpose": "Hermes Agent の学習ループ、memory、skills、cron、MCP を一枚で見せる",
+      "summary": "CLI と gateway、永続メモリ、skills、cron、ツール、MCP の関係を整理する。",
+      "steps": [
+        "hermes / hermes gateway から入る",
+        "MEMORY.md と USER.md を残す",
+        "skills を再利用する",
+        "cron で定期実行する",
+        "tools と model switching を使う",
+        "MCP 連携と feedback loop で学ぶ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "hermes_agent_overview_layout",
+        "hermes_agent_overview_text_pack",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "Based on the official Hermes Agent README and docs. Show the closed learning loop with the exact terms used by the project: hermes, hermes gateway, MEMORY.md, USER.md, skills, cron, and MCP.",
+      "artifacts": [
+        {
+          "path": "artifacts/108_hermes_agent_overview.png",
+          "title": "Hermes Agent 概要図の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "trpg_character_sheet_layout",
       "category": "形式・レイアウト",
       "title": "TRPGキャラシート",
@@ -2088,6 +2122,34 @@
         "text",
         "code",
         "concrete"
+      ],
+      "family": "text"
+    },
+    {
+      "id": "hermes_agent_overview_layout",
+      "title": "Hermes Agent 概要パネル",
+      "category": "形式・レイアウト",
+      "content": "one-page agent system diagram, Kafka narrator on the left, six numbered panels on the right, hermes entry, gateway platforms, persistent memories, reusable skills, cron jobs, tools and model switching, MCP integration, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
+      "tags": [
+        "hermes",
+        "agent",
+        "workflow",
+        "code",
+        "memory"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "hermes_agent_overview_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "Hermes Agent 文言",
+      "content": "1. hermes / hermes gateway 2. MEMORY.md USER.md session_search 3. skills 4. cron 5. tools and model switching 6. MCP and feedback loop",
+      "tags": [
+        "hermes",
+        "agent",
+        "text",
+        "code",
+        "memory"
       ],
       "family": "text"
     },
