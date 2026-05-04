@@ -1756,6 +1756,40 @@
       "family": "sheet"
     },
     {
+      "id": "tweetsdb_py_generate_explainer",
+      "title": "tweetsdb.py generate 図解",
+      "kind": "sheet",
+      "purpose": "tweetsdb.py の generate_db() 側の処理を一枚で見せる",
+      "summary": "raw tweets を record にし、summary と profile をまとめて tweetsdb.json に書く流れを見せる。",
+      "steps": [
+        "archive zip を読み込む",
+        "build_record() で record 化する",
+        "summarize() で集計する",
+        "build_profile() で特徴を作る",
+        "generate_db() で payload を組む",
+        "tweetsdb.json に保存する"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "tweetsdb_generate_layout",
+        "tweetsdb_generate_text_pack",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "This sheet explains scripts/tweetsdb.py generate_db() only. Show the save path and the final database payload.",
+      "artifacts": [
+        {
+          "path": "artifacts/106_tweetsdb_generate_map.png",
+          "title": "tweetsdb.py generate 図解の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "trpg_character_sheet_layout",
       "category": "形式・レイアウト",
       "title": "TRPGキャラシート",
@@ -1964,6 +1998,32 @@
       "tags": [
         "tweetsdb",
         "idea",
+        "text",
+        "code"
+      ],
+      "family": "text"
+    },
+    {
+      "id": "tweetsdb_generate_layout",
+      "title": "tweetsdb.py generate パネル",
+      "category": "形式・レイアウト",
+      "content": "one-page save pipeline diagram, Kafka narrator on the left, six numbered panels on the right, raw tweets, build_record, summarize, build_profile, generate_db save path, final tweetsdb.json, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
+      "tags": [
+        "tweetsdb",
+        "generate",
+        "workflow",
+        "code"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "tweetsdb_generate_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "tweetsdb.py generate 文言",
+      "content": "raw tweets -> records -> summary -> profile -> payload -> tweetsdb.json",
+      "tags": [
+        "tweetsdb",
+        "generate",
         "text",
         "code"
       ],
