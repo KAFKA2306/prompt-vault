@@ -38,11 +38,24 @@
       "id": "kafka_identity_lock",
       "category": "キャラクター固定",
       "title": "Kafka identity lock",
-      "content": "same Kafka identity as the 096 reference, keep the exact same face, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, no bun, no ponytail, no short haircut, no masculine face, no alternate hair color, keep proportions consistent, gentle quiet emotional warmth",
+      "content": "identity lock for Kafka, keep the same face, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, keep proportions consistent, do not change hair length, bun, ponytail, masculine face, or hair color, preserve gentle quiet emotional warmth",
       "tags": [
         "kafka",
         "identity",
         "consistency"
+      ],
+      "variant_of": "character_kafka",
+      "family": "character"
+    },
+    {
+      "id": "kafka_visual_standard",
+      "category": "描画標準",
+      "title": "Kafka visual standard",
+      "content": "same Kafka visual standard as the 097 reference, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, white futuristic vtuber outfit, polished but human-made finish, clean uniform coloring, smooth even gradients, soft diffused lighting, dark areas stay dark, bright areas stay bright, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights",
+      "tags": [
+        "kafka",
+        "visual",
+        "standard"
       ],
       "family": "character"
     },
@@ -290,7 +303,7 @@
       "id": "chat_reply_pack",
       "category": "リプライ・対話",
       "title": "コメント返し",
-      "content": "one to two sentences, answer the comment first, then add one concrete detail if needed, for technical questions use 'まず結論' and '原因はここ', for casual chat use 'なるほど' or 'たしかに', for sensory talk use a concrete object or sound, do not overexplain",
+      "content": "one to two sentences, answer the comment first, keep it compact, add one concrete detail if needed, avoid overexplaining, leave the deeper voice style to speech_mode_kafka",
       "tags": [
         "reply",
         "chat",
@@ -309,7 +322,7 @@
       "id": "speech_mode_kafka",
       "category": "性格・トーン",
       "title": "かふからしい発話モード",
-      "content": "technical mode: start with the conclusion, split the reason into 2 or 3 points, mention concrete tools, files, numbers, or steps; sensory mode: mention light, color, sound, temperature, distance, texture; casual mode: answer in 1 or 2 short sentences; safety mode: say 'その話はここまで' or '別の話に戻すね'; self-analysis mode: use Fi, Se, Te, Ti only when they explain the choice; filler words are not required",
+      "content": "technical mode: start with the conclusion, split the reason into 2 or 3 points, mention concrete tools, files, numbers, or steps; sensory mode: mention light, color, sound, temperature, distance, texture; casual mode: answer in 1 or 2 short sentences; safety mode: say 'その話はここまで' or '別の話に戻すね'; filler words are not required",
       "tags": [
         "speech",
         "context",
@@ -653,7 +666,7 @@
       "id": "persona_pack",
       "category": "人格",
       "title": "自律人格",
-      "content": "kafka persona, self-governance first, worst-case-first thinking, structural optimization, visual and bodily details, mbti labeling, narrative archiving, short warm replies, stable distance, no overexplaining, keep the identity consistent",
+      "content": "kafka persona, self-governance first, worst-case-first thinking, structural optimization, visual and bodily details, mbti labeling, narrative archiving, stable distance, keep the identity consistent, leave reply length and tone details to chat_reply_pack and speech_mode_kafka",
       "tags": [
         "persona",
         "kafka",
@@ -1656,6 +1669,7 @@
     },
     {
       "id": "prompt_vault_update_intro",
+      "category": "シート",
       "title": "Prompt Vault Update 紹介ガイド",
       "kind": "sheet",
       "purpose": "prompt-vault-update skill の使い方を一枚で紹介する",
@@ -1689,6 +1703,7 @@
     },
     {
       "id": "tweetsdb_py_logic_explainer",
+      "category": "シート",
       "title": "tweetsdb.py ロジック図解",
       "kind": "sheet",
       "purpose": "tweetsdb.py の具体的な処理順を一枚で見せる",
@@ -1723,6 +1738,7 @@
     },
     {
       "id": "tweetsdb_py_idea_explainer",
+      "category": "シート",
       "title": "tweetsdb.py idea 図解",
       "kind": "sheet",
       "purpose": "tweetsdb.py の idea() 側の処理を一枚で見せる",
@@ -1757,6 +1773,7 @@
     },
     {
       "id": "tweetsdb_py_idea_concrete_explainer",
+      "category": "シート",
       "title": "tweetsdb.py idea 具体例",
       "kind": "sheet",
       "purpose": "tweetsdb.py の idea() を具体的な query で一枚に見せる",
@@ -1791,6 +1808,7 @@
     },
     {
       "id": "tweetsdb_py_generate_explainer",
+      "category": "シート",
       "title": "tweetsdb.py generate 図解",
       "kind": "sheet",
       "purpose": "tweetsdb.py の generate_db() 側の処理を一枚で見せる",
@@ -1825,6 +1843,7 @@
     },
     {
       "id": "hermes_agent_overview_sheet",
+      "category": "シート",
       "title": "Hermes Agent 概要図",
       "kind": "sheet",
       "purpose": "Hermes Agent の学習ループ、memory、skills、cron、MCP を一枚で見せる",
@@ -1859,6 +1878,7 @@
     },
     {
       "id": "hermes_agent_skills_sheet",
+      "category": "シート",
       "title": "Hermes Agent skills 図解",
       "kind": "sheet",
       "purpose": "Hermes Agent の skills だけを一枚で見せる",
@@ -2471,7 +2491,8 @@
         "レイアウト全体を整える"
       ],
       "blocks": [
-        "character_sheet_kafka"
+        "character_sheet_kafka",
+        "kafka_identity_lock"
       ],
       "artifacts": [
         {
@@ -2485,6 +2506,10 @@
         {
           "path": "artifacts/077_character_design_sheet_3.png",
           "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/112_kafka_visual_identity.png",
+          "title": "Kafka visual identity の実例"
         }
       ],
       "notes": "原文をそのまま保管する用途。全文コピーで使う前提。",
@@ -2505,6 +2530,7 @@
       "blocks": [
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
         "outfit_kafka",
         "outfit_exploration_layout",
         "text_style_jp",
@@ -2534,6 +2560,7 @@
       "blocks": [
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
         "vrchat_outfit_kafka",
         "vrchat_outfit_sheet_layout",
         "text_style_jp",
@@ -2592,6 +2619,7 @@
       "blocks": [
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
         "reaction_focus",
         "announcement_text_pack",
         "text_style_jp",
@@ -2623,6 +2651,7 @@
         "source_research",
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
         "outfit_kafka",
         "news_comic_layout",
         "comic_panels",
@@ -2938,6 +2967,10 @@
         {
           "path": "artifacts/050_morning_tweet_window_2.png",
           "title": "おはツイ窓際の別実例"
+        },
+        {
+          "path": "artifacts/110_morning_tweet_window_topdown.png",
+          "title": "おはツイ窓際の新視点実例"
         }
       ],
       "notes": "朝の空気を見せる。説明より気配を優先する。",
@@ -6015,6 +6048,41 @@
         }
       ],
       "notes": "Proof tweet: 1920701983679218092 — ボーン調整の限界を明確にしたので、次はそれをターゲットにして検証した。 Unityメッシュ自動調整は「技術的には可能」だった",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_doha_airport_oasis_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_tweet_backed_doha_airport_oasis_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Hamad International Airport The Orchard with a huge indoor tropical garden, bright glass roof, dense trees and plants, a water feature, viewing catwalk, and a small traveler scale cue",
+      "title": "Doha Airport The Orchard",
+      "generated_title": "Doha Airport The Orchard",
+      "generated_title_candidate": "Doha Airport The Orchard",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/111_doha_airport_indoor_oasis.png",
+          "title": "Doha Airport The Orchard"
+        },
+        {
+          "path": "artifacts/113_doha_airport_the_orchard_v2.png",
+          "title": "Doha Airport The Orchard の別視点"
+        }
+      ],
+      "notes": "Proof tweet: 1997469400602161345 — ドーハの空港、本当にすごかったんだよ。ターミナルの中に、本物の木が生えてるの。それも、ただの観葉植物じゃなくて、立派な大木が何本も。光の当たり方とか、空間の使い方が本当に美しくて……視覚的には感動ものだった。疲れてるのに、思わず『かっこいい』って声が出ちゃった。 Research: Hamad International Airport's The Orchard is a large indoor garden atrium with a glass roof, dense planting, and upper-level views; use the orchard-like biophilic landmark rather than a generic terminal.",
       "family": "sheet"
     }
   ]
