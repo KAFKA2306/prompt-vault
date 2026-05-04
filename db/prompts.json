@@ -1688,6 +1688,40 @@
       "family": "sheet"
     },
     {
+      "id": "tweetsdb_py_logic_explainer",
+      "title": "tweetsdb.py ロジック図解",
+      "kind": "sheet",
+      "purpose": "tweetsdb.py の具体的な処理順を一枚で見せる",
+      "summary": "archive zip から record を作り、summary と profile を作り、idea extraction もあることを見せる。",
+      "steps": [
+        "archive zip を読み込む",
+        "tweet ごとに classify する",
+        "record を build する",
+        "summary と profile を作る",
+        "generate_db() で保存する",
+        "idea() でおすすめを返す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "tweetsdb_pipeline_layout",
+        "tweetsdb_logic_text_pack",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "This sheet explains scripts/tweetsdb.py only. Show the concrete code path and the generated data structures.",
+      "artifacts": [
+        {
+          "path": "artifacts/104_tweetsdb_logic_map.png",
+          "title": "tweetsdb.py ロジック図解の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "trpg_character_sheet_layout",
       "category": "形式・レイアウト",
       "title": "TRPGキャラシート",
@@ -1849,6 +1883,31 @@
         "workflow"
       ],
       "family": "layout"
+    },
+    {
+      "id": "tweetsdb_pipeline_layout",
+      "title": "tweetsdb.py パイプライン",
+      "category": "形式・レイアウト",
+      "content": "one-page code flow diagram, Kafka narrator on the left, six numbered panels on the right, archive input, parsing, classification, record build, summary build, idea extraction, white background, pastel blue borders, readable code labels, compact footer, calm technical infographic",
+      "tags": [
+        "tweetsdb",
+        "workflow",
+        "code",
+        "diagram"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "tweetsdb_logic_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "tweetsdb.py 文言",
+      "content": "1. load_archive_tweets() 2. detect_kind() 3. classify_topics() 4. build_record() 5. summarize() / build_profile() 6. generate_db() 7. build_idea() / cmd_idea() 8. topic mood function prompt_seed imagegen_seed artifacts generated_prompts",
+      "tags": [
+        "tweetsdb",
+        "text",
+        "code"
+      ],
+      "family": "text"
     },
     {
       "id": "timeline_layout",
