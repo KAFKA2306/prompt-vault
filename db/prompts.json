@@ -1858,6 +1858,40 @@
       "family": "sheet"
     },
     {
+      "id": "hermes_agent_skills_sheet",
+      "title": "Hermes Agent skills 図解",
+      "kind": "sheet",
+      "purpose": "Hermes Agent の skills だけを一枚で見せる",
+      "summary": "skills library にある Markdown skill docs を選び、実行し、改善し、次回に再利用する流れを見せる。",
+      "steps": [
+        "skill library に保存する",
+        "task に合う skill を選ぶ",
+        "skill doc を読む",
+        "skill を実行する",
+        "必要なら improve する",
+        "次の似たタスクで reuse する"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "hermes_agent_skills_layout",
+        "hermes_agent_skills_text_pack",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "Based on the official Hermes Agent docs. Focus only on the skills system: skill library, skill docs, reuse, and improve.",
+      "artifacts": [
+        {
+          "path": "artifacts/109_hermes_agent_skills.png",
+          "title": "Hermes Agent skills 図解の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "trpg_character_sheet_layout",
       "category": "形式・レイアウト",
       "title": "TRPGキャラシート",
@@ -2147,6 +2181,34 @@
       "tags": [
         "hermes",
         "agent",
+        "text",
+        "code",
+        "memory"
+      ],
+      "family": "text"
+    },
+    {
+      "id": "hermes_agent_skills_layout",
+      "title": "Hermes Agent skills パネル",
+      "category": "形式・レイアウト",
+      "content": "one-page skills-only diagram, Kafka narrator on the left, five numbered panels on the right, skill library shelf, task matching, skill doc execution, improve step, reuse step, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
+      "tags": [
+        "hermes",
+        "skills",
+        "workflow",
+        "code",
+        "memory"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "hermes_agent_skills_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "Hermes Agent skills 文言",
+      "content": "1. skill library 2. task matching 3. skill doc 4. improve 5. reuse; Markdown skill docs turn repeated work into reusable procedures",
+      "tags": [
+        "hermes",
+        "skills",
         "text",
         "code",
         "memory"
