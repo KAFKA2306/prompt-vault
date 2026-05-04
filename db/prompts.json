@@ -1722,6 +1722,40 @@
       "family": "sheet"
     },
     {
+      "id": "tweetsdb_py_idea_explainer",
+      "title": "tweetsdb.py idea 図解",
+      "kind": "sheet",
+      "purpose": "tweetsdb.py の idea() 側の処理を一枚で見せる",
+      "summary": "query から top matches を作り、prompt_seed と imagegen_seed を返す流れを見せる。",
+      "steps": [
+        "load_db() で tweetsdb を読む",
+        "topic / mood / function を受け取る",
+        "score_record() で候補を並べる",
+        "top 5 を選ぶ",
+        "seed を取り出す",
+        "new_idea を返す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "tweetsdb_idea_layout",
+        "tweetsdb_idea_text_pack",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "This sheet explains scripts/tweetsdb.py idea() only. Show the query, score, top results, and seeds clearly.",
+      "artifacts": [
+        {
+          "path": "artifacts/105_tweetsdb_idea_map.png",
+          "title": "tweetsdb.py idea 図解の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "trpg_character_sheet_layout",
       "category": "形式・レイアウト",
       "title": "TRPGキャラシート",
@@ -1904,6 +1938,32 @@
       "content": "1. load_archive_tweets() 2. detect_kind() 3. classify_topics() 4. build_record() 5. summarize() / build_profile() 6. generate_db() 7. build_idea() / cmd_idea() 8. topic mood function prompt_seed imagegen_seed artifacts generated_prompts",
       "tags": [
         "tweetsdb",
+        "text",
+        "code"
+      ],
+      "family": "text"
+    },
+    {
+      "id": "tweetsdb_idea_layout",
+      "title": "tweetsdb.py idea パネル",
+      "category": "形式・レイアウト",
+      "content": "one-page idea lookup diagram, Kafka narrator on the left, six numbered panels on the right, query filters, score ranking, top five matches, seed extraction, reference tweets, new idea result, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
+      "tags": [
+        "tweetsdb",
+        "idea",
+        "workflow",
+        "code"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "tweetsdb_idea_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "tweetsdb.py idea 文言",
+      "content": "query: topic mood function limit; rank: score_record(); top 5 reference_tweets; seed: prompt_seed imagegen_seed; result: prompt_direction image_direction",
+      "tags": [
+        "tweetsdb",
+        "idea",
         "text",
         "code"
       ],
