@@ -35,6 +35,18 @@
       "family": "costume"
     },
     {
+      "id": "kafka_identity_lock",
+      "category": "キャラクター固定",
+      "title": "Kafka identity lock",
+      "content": "same Kafka identity as the 096 reference, keep the exact same face, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, no bun, no ponytail, no short haircut, no masculine face, no alternate hair color, keep proportions consistent, gentle quiet emotional warmth",
+      "tags": [
+        "kafka",
+        "identity",
+        "consistency"
+      ],
+      "family": "character"
+    },
+    {
       "id": "spring_fashion_kafka",
       "category": "キャラ衣装",
       "title": "春のお出かけ服",
@@ -5362,6 +5374,9 @@
       "block_ids": [
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
         "moodboard_layout",
         "text_style_jp",
         "negative_common"
@@ -5424,6 +5439,9 @@
       "block_ids": [
         "master_style",
         "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
         "moodboard_layout",
         "text_style_jp",
         "negative_common"
@@ -5476,6 +5494,162 @@
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nchecklist layout, tick boxes, pre-release verification items, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "status": "draft",
+      "family": "sheet"
+    }
+    ,
+    {
+      "id": "tweet_backed_ai_imagegen_meeting_20260504",
+      "created_at": "2026-05-04T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_tweet_backed_ai_imagegen_meeting_20260504",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "AI image generation meeting board with agenda, model roundup, extension ideas, and prompt cards",
+      "title": "AI Imagegen Meeting",
+      "generated_title": "AI Imagegen Meeting",
+      "generated_title_candidate": "AI Imagegen Meeting",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/099_ai_imagegen_meeting.png",
+          "title": "AI Imagegen Meeting"
+        }
+      ],
+      "notes": "Proof tweet: 1674088605747380225 — 6/30(金)21:30-22:30 第二回 #プロンプト集会 やります〜 ... AIイラストのおすすめモデルや拡張機能は！？",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_vrchat_avatar_mod_workbench_20260504",
+      "created_at": "2026-05-04T00:00:00+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_tweet_backed_vrchat_avatar_mod_workbench_20260504",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "VRChat avatar customization workbench with modular parts, toggle notes, and a laptop editor",
+      "title": "VRChat Avatar Mod Workbench",
+      "generated_title": "VRChat Avatar Mod Workbench",
+      "generated_title_candidate": "VRChat Avatar Mod Workbench",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/100_vrchat_avatar_mod_workbench.png",
+          "title": "VRChat Avatar Mod Workbench"
+        }
+      ],
+      "notes": "Proof tweet: 1568255797347635200 — 服「beautiful_kimono」と髪「glass pastel hair」を改変！ ... Pythonのインストールから始めて２時間弱でした！",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_vrchat_event_gathering_20260504",
+      "created_at": "2026-05-04T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_tweet_backed_vrchat_event_gathering_20260504",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "VRChat event gathering poster with people, signage, balloons, and a festive community mood",
+      "title": "VRChat Event Gathering",
+      "generated_title": "VRChat Event Gathering",
+      "generated_title_candidate": "VRChat Event Gathering",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/101_vrchat_event_gathering.png",
+          "title": "VRChat Event Gathering"
+        }
+      ],
+      "notes": "Proof tweet: 1769377985851781143 — 第4回 #VRCかなえちゃん集会 & #Cherryneru 衣装集会 ... 写真&改変歓迎",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_vrchat_world_exploration_20260504",
+      "created_at": "2026-05-04T00:00:00+00:00",
+      "template_id": "timeline_sheet",
+      "generated_template_id": "generated_tweet_backed_vrchat_world_exploration_20260504",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "timeline_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "VRChat world exploration poster with an Amsterdam-inspired street, map, and discovery atmosphere",
+      "title": "VRChat World Exploration",
+      "generated_title": "VRChat World Exploration",
+      "generated_title_candidate": "VRChat World Exploration",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/102_vrchat_world_exploration.png",
+          "title": "VRChat World Exploration"
+        }
+      ],
+      "notes": "Proof tweet: 1718196581852414188 — #VRC世界旅行 イタリア旅行編！！ 綺麗な街並みが多くて写真がはかどった！",
+      "family": "sheet"
+    },
+    {
+      "id": "tweet_backed_creator_workflow_desk_20260504",
+      "created_at": "2026-05-04T00:00:00+00:00",
+      "template_id": "checklist_sheet",
+      "generated_template_id": "generated_tweet_backed_creator_workflow_desk_20260504",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "creator workflow desk with Blender, Unity, scripts, checklists, and a pipeline view",
+      "title": "Creator Workflow Desk",
+      "generated_title": "Creator Workflow Desk",
+      "generated_title_candidate": "Creator Workflow Desk",
+      "generated_addition": "",
+      "generation_prompt_source": "tweet_backed_imagegen_index",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/103_creator_workflow_desk.png",
+          "title": "Creator Workflow Desk"
+        }
+      ],
+      "notes": "Proof tweet: 1920701983679218092 — ボーン調整の限界を明確にしたので、次はそれをターゲットにして検証した。 Unityメッシュ自動調整は「技術的には可能」だった",
       "family": "sheet"
     }
   ]
