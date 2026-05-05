@@ -9,12 +9,24 @@ const esc = (v) => v ? v.toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'
 const state = {
   search: '',
   genTpl: templates[0]?.id || '',
-  genBids: [...(templates[0]?.blocks || [])]
+  genBids: [...(templates[0]?.blocks || [])],
+  localGenerated: JSON.parse(localStorage.getItem('prompt-vault-gen') || '[]')
+};
+
+const saveLocal = (item) => {
+  state.localGenerated = [item, ...state.localGenerated].slice(0, 50);
+  localStorage.setItem('prompt-vault-gen', JSON.stringify(state.localGenerated));
+  renderRail();
 };
 
 const renderRail = () => {
   const q = state.search.toLowerCase();
-  const list = templates.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
+  const all = [...templates, ...state.localGenerated.map(g => ({
+    ...g,
+    kind: 'generated',
+    purpose: g.purpose || 'LocalStorage'
+  }))];
+  const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
   el('template-count').textContent = `${list.length} templates`;
   el('template-rail').innerHTML = list.map(t => `
     <button class="template-card" onclick="openNode('${t.id}')">
@@ -29,7 +41,7 @@ const renderRail = () => {
 };
 
 const openNode = (id, type = 'template') => {
-  const t = type === 'template' ? templateMap[id] : blocks[id];
+  const t = type === 'template' ? (templateMap[id] || state.localGenerated.find(g => g.id === id)) : blocks[id];
   if (!t) return;
   el('modal-title').textContent = t.title;
   el('modal-kind').textContent = t.kind || t.category;
@@ -86,7 +98,22 @@ el('generator-submit').onclick = async () => {
   const data = await res.json();
   el('generator-output').textContent = data.generated_prompt;
   el('generator-status').textContent = `完了: ${data.request_id}`;
+  el('generator-copy').disabled = false;
   btn.disabled = false;
+  
+  saveLocal({
+    id: `local_${Date.now()}`,
+    title: data.title || 'Generated',
+    generated_prompt: data.generated_prompt,
+    blocks: state.genBids
+  });
+};
+
+el('generator-copy').onclick = (e) => {
+  navigator.clipboard.writeText(el('generator-output').textContent);
+  const old = e.target.textContent;
+  e.target.textContent = 'コピー完了！';
+  setTimeout(() => e.target.textContent = old, 2000);
 };
 
 el('generator-reset-template').onclick = () => {

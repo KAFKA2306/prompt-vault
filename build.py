@@ -16,8 +16,6 @@ ARTIFACTS_PATH = ROOT / "artifacts"
 def load_db() -> PromptDB:
     db = PromptDB.model_validate_json(DB_PATH.read_text(encoding="utf-8"))
     block_ids = {b.id for b in db.blocks}
-    
-    # Validation
     for t in db.templates:
         for bid in t.blocks:
             if bid not in block_ids:
@@ -26,7 +24,6 @@ def load_db() -> PromptDB:
             if not (ROOT / a.path).exists():
                 raise ValueError(f"missing artifact: {a.path}")
 
-    # Process generated prompts
     template_ids = {t.id for t in db.templates}
     for r in db.generated_prompts:
         if r.get("id") in template_ids:
@@ -38,8 +35,6 @@ def load_db() -> PromptDB:
                 kind="generated",
                 blocks=r.get("block_ids") or r.get("blocks") or [],
                 generated_prompt=r.get("generated_prompt", ""),
-                generated_from=r.get("template_id"),
-                generated_at=r.get("created_at"),
             )
         )
     return db

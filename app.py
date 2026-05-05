@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -15,6 +15,7 @@ from build import load_db, render_app_js
 ROOT = Path(__file__).resolve().parent
 STATIC_PATH, ARTIFACTS_PATH = ROOT / "static", ROOT / "artifacts"
 DB_PATH, CONFIG_PATH = ROOT / "db" / "prompts.json", ROOT / "config.yaml"
+CODEX_PATH = ROOT / "prompts" / "frontend_codex.md"
 CONFIG = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
@@ -30,26 +31,20 @@ class Handler(BaseHTTPRequestHandler):
         self._send(code, "application/json; charset=utf-8", json.dumps(data, ensure_ascii=False).encode("utf-8"))
 
     def do_GET(self) -> None:
-        routes = {
-            "/": ("index.html", "text/html"),
-            "/style.css": ("style.css", "text/css"),
-            "/app.js": ("app.js", "js"),
-        }
+        routes = {"/": "index.html", "/style.css": "style.css", "/app.js": "app.js"}
         if self.path in routes:
-            name, mime = routes[self.path]
-            if mime == "js":
+            name = routes[self.path]
+            if name == "app.js":
                 return self._send(200, "application/javascript", render_app_js(load_db()).encode("utf-8"))
+            mime = "text/css" if name == "style.css" else "text/html"
             return self._send(200, f"{mime}; charset=utf-8", (STATIC_PATH / name).read_bytes())
         if self.path == "/api/db":
             return self._json(200, load_db().model_dump(exclude_none=True))
-        if self.path == "/api/config":
-            return self._json(200, {"backend": "gemini", "model": CONFIG["model"]})
         if self.path.startswith("/artifacts/"):
             f = ARTIFACTS_PATH / self.path.removeprefix("/artifacts/")
             if f.exists():
                 return self._send(200, "image/png", f.read_bytes())
-        self.send_error(404)
-        return None
+        return self.send_error(404)
 
     def do_POST(self) -> None:
         if self.path != "/api/prompt-generate":
@@ -61,7 +56,7 @@ class Handler(BaseHTTPRequestHandler):
         bids = req.get("block_ids") or tpl.blocks
         src = "\n".join(f"- {blocks[id].title} ({id}): {blocks[id].content}" for id in bids if id in blocks)
         prompt = (
-            CONFIG["generation_prompt"]
+            CODEX_PATH.read_text(encoding="utf-8")
             .replace("{{template_title}}", tpl.title)
             .replace("{{source_blocks}}", src)
             .replace("{{instruction}}", req["instruction"])
@@ -73,24 +68,18 @@ class Handler(BaseHTTPRequestHandler):
                 headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]},
             )
         )
-        out = json.loads(
-            json.loads(res.read().decode("utf-8"))["candidates"][0]["content"]["parts"][0]["text"]
-            .strip()
-            .strip("`")
-            .removeprefix("json")
-            .strip()
-        )
+        data = json.loads(res.read().decode("utf-8"))
+        raw = data["candidates"][0]["content"]["parts"][0]["text"].strip().strip("`").removeprefix("json").strip()
+        out = json.loads(raw)
         gen = "\n\n".join(
             [out.get("block_updates", {}).get(id, blocks[id].content) for id in bids if id in blocks]
             + ([out["addition"]] if out.get("addition") else [])
         )
-        now = datetime.now(timezone.utc).isoformat()
-        db.generated_prompts.append(
-            {"id": f"gen_{now}", "created_at": now, "title": out["title"], "generated_prompt": gen}
-        )
+        now = datetime.now(UTC).isoformat()
+        res_data = {"id": f"gen_{now}", "created_at": now, "title": out["title"], "generated_prompt": gen}
+        db.generated_prompts.append(res_data)
         DB_PATH.write_text(json.dumps(db.model_dump(exclude_none=True), ensure_ascii=False, indent=2), encoding="utf-8")
-        self._json(200, {"request_id": now, "generated_prompt": gen})
-        return None
+        return self._json(200, {"request_id": now, "generated_prompt": gen})
 
 
 if __name__ == "__main__":

@@ -15,12 +15,6 @@ class Block(BaseModel):
     title: str
     content: str
     category: str = ""
-    family: str = ""
-    tags: list[str] = Field(default_factory=list)
-    variant_of: str | None = None
-    aliases: list[str] = Field(default_factory=list)
-    related: list[str] = Field(default_factory=list)
-    notes: str | None = None
 
 
 class Template(BaseModel):
@@ -30,14 +24,8 @@ class Template(BaseModel):
     kind: str = "standard"
     purpose: str = ""
     summary: str = ""
-    steps: list[str] = Field(default_factory=list)
     artifacts: list[Artifact] = Field(default_factory=list)
-    family: str = ""
-    visibility: str = "public"
-    notes: str | None = None
     generated_prompt: str | None = None
-    generated_from: str | None = None
-    generated_at: str | None = None
 
 
 class PromptDB(BaseModel):

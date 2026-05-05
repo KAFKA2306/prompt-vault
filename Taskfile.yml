@@ -4,12 +4,12 @@ tasks:
   run:
     desc: Run the development server
     cmds:
-      - python3 app.py
+      - uv run app.py
 
   build:
     desc: Build the static site
     cmds:
-      - python3 build.py
+      - uv run build.py
 
   validate:
     desc: Validate the database
