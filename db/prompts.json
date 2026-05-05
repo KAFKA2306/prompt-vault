@@ -284,6 +284,22 @@
       "family": "text"
     },
     {
+      "id": "movie_release_text_pack",
+      "category": "セリフ・フレーズ",
+      "title": "映画公開文言",
+      "content": "「公開日決定」「映画『温泉シャーク２ 九州大決戦』」「2026年9月4日（金）」「九州の日」「全国公開」「九州を舞台にした温泉シャークが、ついに9.4に公開されます。」「#温泉シャーク2」「#九州の日」",
+      "tags": [
+        "movie",
+        "release",
+        "text"
+      ],
+      "related": [
+        "announcement_text_pack",
+        "stream_start_banner_viz"
+      ],
+      "family": "text"
+    },
+    {
       "id": "morning_tweet_text_pack",
       "category": "セリフ・フレーズ",
       "title": "おはツイ文言",
@@ -443,6 +459,23 @@
         "banner",
         "announcement",
         "kafka"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "movie_release_banner_viz",
+      "category": "形式・レイアウト",
+      "title": "映画公開告知バナー",
+      "content": "movie release announcement banner, bold title lockup, shark and hot-spring motifs, release date emphasis, white or pale aqua background, cinematic but playful, strong Japanese typography, simple wave or steam accents, readable at a glance, mobile friendly, no clutter",
+      "tags": [
+        "movie",
+        "banner",
+        "announcement",
+        "release"
+      ],
+      "related": [
+        "announcement_text_pack",
+        "stream_start_banner_viz"
       ],
       "family": "layout"
     },
@@ -2330,6 +2363,29 @@
         }
       ],
       "notes": "配信枠、告知、記念日投稿の最初の1枚に使う。",
+      "family": "banner"
+    },
+    {
+      "id": "movie_release_banner",
+      "title": "映画公開告知バナー",
+      "kind": "announcement",
+      "purpose": "映画の公開日告知を、作品名と日付を主役にして伝える",
+      "summary": "作品名、公開日、全国公開、記念日表現を大きくまとめた告知バナー。",
+      "steps": [
+        "作品名を大きく置く",
+        "公開日と記念日を強く見せる",
+        "映画らしい勢いを足す",
+        "余計な情報を削る"
+      ],
+      "blocks": [
+        "master_style",
+        "movie_release_banner_viz",
+        "movie_release_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "notes": "映画公開の最初の1枚に使う。作品名と公開日を読み落とさない密度にする。",
       "family": "banner"
     },
     {
@@ -5528,6 +5584,36 @@
       "family": "sheet"
     },
     {
+      "id": "artifact_rendering_quality_check_reference_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_artifact_rendering_quality_check_reference_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "clean_quality_rendering",
+        "rendering",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Rendering quality check reference frame for the contiguous PNG sequence",
+      "title": "Rendering Quality Check Reference",
+      "generated_title": "Rendering Quality Check Reference",
+      "generated_title_candidate": "Rendering Quality Check Reference",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/095_rendering_quality_check_reference.png",
+          "title": "Rendering Quality Check Reference"
+        }
+      ],
+      "notes": "Artifact sync record for the restored missing PNG slot.",
+      "family": "sheet"
+    },
+    {
       "id": "artifact_tweetsdb_graph_notes_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "template_id": "moodboard_sheet",
@@ -5832,6 +5918,30 @@
       ],
       "notes": "Artifact sync record for the previously unreferenced PNG.",
       "family": "sheet"
+    },
+    {
+      "id": "movie_release_onsen_shark2_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "movie_release_banner",
+      "generated_template_id": "generated_movie_release_onsen_shark2_20260505",
+      "block_ids": [
+        "master_style",
+        "movie_release_banner_viz",
+        "movie_release_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "instruction": "映画『温泉シャーク２ 九州大決戦』の公開告知バナー",
+      "title": "温泉シャーク２ 九州大決戦 公開告知",
+      "generated_title": "温泉シャーク２ 九州大決戦 公開告知",
+      "generated_title_candidate": "温泉シャーク２ 九州大決戦 公開告知",
+      "generated_addition": "2026年9月4日（金）「九州の日」全国公開",
+      "generation_prompt_source": "source_ingest",
+      "status": "draft",
+      "generated_prompt": "white background, pale aqua and seafoam palette, bold cinematic Japanese movie announcement banner, shark and hot-spring motifs, strong date emphasis, clean typography, mobile-readable layout, high contrast, crisp title lockup, playful but polished, no clutter, no neon overload, simple wave or steam accents\n\nmovie release announcement for 映画『温泉シャーク２ 九州大決戦』, emphasize 2026年9月4日（金） and 「九州の日」, nationwide release, keep the title readable at a glance, include the feel of 九州を舞台にした温泉シャークが、ついに9.4に公開されます。, small footer hashtags #温泉シャーク2 #九州の日, cinematic but friendly, poster-like announcement card",
+      "notes": "Source announcement: https://plana.biz/%E6%98%A0%E7%94%BB%E3%80%8E%E6%B8%A9%E6%B3%89%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%EF%BC%92-%E4%B9%9D%E5%B7%9E%E5%A4%A7%E6%B1%BA%E6%88%A6%E3%80%8F2026%E5%B9%B49%E6%9C%884%E6%97%A5%EF%BC%88%E9%87%91%EF%BC%89%E5%85%A8%E5%9B%BD%E5%85%AC%E9%96%8B%E6%B1%BA%E5%AE%9A/\nFollow-up update: https://camp-fire.jp/projects/788475/view/activities/832705\nKey facts to preserve: 映画『温泉シャーク２ 九州大決戦』, 2026年9月4日（金）, 「九州の日」, 全国公開.\nUser copy preserved: 公開日決定 / 映画『温泉シャーク２ 九州大決戦』 / 2026年9月4日（金）「九州の日」全国公開。 / 九州を舞台にした温泉シャークが、ついに9.4に公開されます。 / #温泉シャーク2 #九州の日",
+      "family": "banner"
     }
   ]
 }
