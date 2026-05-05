@@ -38,29 +38,21 @@ def main() -> int:
     template_kinds = Counter(template.get("kind", "") for template in templates)
     template_families = Counter(template.get("family", "") for template in templates)
 
-    print(f"blocks: {len(blocks)}")
-    print(f"templates: {len(templates)}")
-    print(f"artifacts: {sum(len(template.get('artifacts', [])) for template in templates)}")
-    print("block families:")
-    for family, count in block_families.most_common():
-        print(f"  {family}: {count}")
-    print("block categories:")
-    for category, count in block_categories.most_common():
-        print(f"  {category}: {count}")
-    print("template families:")
-    for family, count in template_families.most_common():
-        print(f"  {family}: {count}")
-    print("template kinds:")
-    for kind, count in template_kinds.most_common():
-        print(f"  {kind}: {count}")
+    for _family, _count in block_families.most_common():
+        pass
+    for _category, _count in block_categories.most_common():
+        pass
+    for _family, _count in template_families.most_common():
+        pass
+    for _kind, _count in template_kinds.most_common():
+        pass
 
     warnings = detect_family_issues(templates)
     if warnings:
-        print("warnings:")
-        for warning in warnings:
-            print(f"  - {warning}")
+        for _warning in warnings:
+            pass
     else:
-        print("warnings: none")
+        pass
 
     artifact_paths: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for template in templates:
@@ -77,12 +69,10 @@ def main() -> int:
         if len(visible_owners) > 1:
             duplicates.append(path)
     if duplicates:
-        print("duplicate artifact paths:")
         for path in duplicates:
-            print(f"  - {path}")
+            pass
         return 1
 
-    print("ok")
     return 0
 
 

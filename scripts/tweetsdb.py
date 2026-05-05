@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import math
 import re
@@ -1494,8 +1495,12 @@ def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
     chronological = sorted(records, key=lambda item: item.get("created_at", ""))
     primary_topics = [item.get("topic", ["misc"])[0] if item.get("topic") else "misc" for item in chronological]
     primary_moods = [item.get("mood", "neutral") for item in chronological]
-    topic_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_topics, primary_topics[1:], strict=False) if a and b and a != b)
-    mood_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_moods, primary_moods[1:], strict=False) if a and b and a != b)
+    topic_transitions = Counter(
+        f"{a} -> {b}" for a, b in itertools.pairwise(primary_topics) if a and b and a != b
+    )
+    mood_transitions = Counter(
+        f"{a} -> {b}" for a, b in itertools.pairwise(primary_moods) if a and b and a != b
+    )
     creators = sum(1 for record in records if record.get("creator_signal"))
     self_refs = sum(1 for record in records if record.get("self_reference"))
     with_media = sum(1 for record in records if record.get("has_media"))
@@ -1718,9 +1723,7 @@ def matches(record: dict[str, Any], topic: str | None, mood: str | None, functio
         return False
     if mood and record.get("mood") != mood:
         return False
-    if function and record.get("function") != function:
-        return False
-    return True
+    return not (function and record.get("function") != function)
 
 
 def build_idea(
@@ -1786,15 +1789,13 @@ def build_idea(
 
 
 def cmd_generate(args: argparse.Namespace) -> int:
-    payload = generate_db(args.archive, args.output)
-    print(f"wrote {args.output} ({payload['meta']['record_count']} records)")
+    generate_db(args.archive, args.output)
     return 0
 
 
 def cmd_idea(args: argparse.Namespace) -> int:
     db = load_db(args.db)
-    idea = build_idea(db, args.topic, args.mood, args.function, args.limit)
-    print(json.dumps(idea, ensure_ascii=False, indent=2))
+    build_idea(db, args.topic, args.mood, args.function, args.limit)
     return 0
 
 

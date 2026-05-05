@@ -28,13 +28,13 @@ def load_db() -> dict[str, Any]:
             continue
         db["templates"].append(
             {
-                "id": r["id"],
-                "title": r["title"],
+                "id": r.get("id"),
+                "title": r.get("title"),
                 "kind": "generated",
                 "blocks": r.get("block_ids", []),
-                "generated_prompt": r["generated_prompt"],
+                "generated_prompt": r.get("generated_prompt", ""),
                 "generated_from": r.get("template_id"),
-                "generated_at": r["created_at"],
+                "generated_at": r.get("created_at"),
             }
         )
     return db
@@ -46,7 +46,7 @@ def render_app_js(db: dict[str, Any]) -> str:
     )
 
 
-def write_dist():
+def write_dist() -> None:
     db = load_db()
     if DIST_PATH.exists():
         shutil.rmtree(DIST_PATH)

@@ -4,13 +4,12 @@ const templates = db.templates;
 const templateMap = Object.fromEntries(templates.map(t => [t.id, t]));
 
 const el = (id) => document.getElementById(id);
-const escape = (v) => v.toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const esc = (v) => v ? v.toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])) : '';
 
 const state = {
   search: '',
-  generatorTemplateId: templates[0]?.id || '',
-  generatorBlockIds: [...(templates[0]?.blocks || [])],
-  output: 'まだ生成されていません。'
+  genTpl: templates[0]?.id || '',
+  genBids: [...(templates[0]?.blocks || [])]
 };
 
 const renderRail = () => {
@@ -19,53 +18,95 @@ const renderRail = () => {
   el('template-count').textContent = `${list.length} templates`;
   el('template-rail').innerHTML = list.map(t => `
     <button class="template-card" onclick="openNode('${t.id}')">
-      <div class="template-card__thumb">
-        ${t.artifacts?.[0] ? `<img src="${t.artifacts[0].path}" loading="lazy">` : '<span>画像なし</span>'}
-      </div>
+      <div class="template-card__thumb">${t.artifacts?.[0] ? `<img src="${t.artifacts[0].path}" loading="lazy">` : '<div class="template-card__placeholder">画像なし</div>'}</div>
       <div class="template-card__body">
-        <div class="template-card__title">${escape(t.title)}</div>
-        <div class="template-card__meta">${escape(t.purpose || t.summary || '')}</div>
+        <div class="template-card__top"><span class="template-card__kind">${esc(t.kind)}</span></div>
+        <div class="template-card__title">${esc(t.title)}</div>
+        <div class="template-card__meta">${esc(t.purpose || t.summary)}</div>
       </div>
     </button>
-  `).join('') || '<div class="empty">なし</div>';
+  `).join('');
 };
 
-const openNode = (id) => {
-  const t = templateMap[id] || blocks[id];
+const openNode = (id, type = 'template') => {
+  const t = type === 'template' ? templateMap[id] : blocks[id];
   if (!t) return;
   el('modal-title').textContent = t.title;
-  el('modal-prompt').textContent = t.generated_prompt || (t.blocks || []).map(bid => blocks[bid]?.content).join('\n\n');
+  el('modal-kind').textContent = t.kind || t.category;
+  el('modal-purpose').textContent = t.purpose || t.summary;
   el('modal-img').src = t.artifacts?.[0]?.path || '';
   el('modal-img').hidden = !t.artifacts?.[0];
+  el('modal-prompt').textContent = t.generated_prompt || (t.blocks || [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
+  
+  const chips = (ids) => (ids || []).map(bid => `<button class="tag tag-button" onclick="openNode('${bid}', 'block')">${esc(blocks[bid]?.title || bid)}</button>`).join('');
+  el('modal-primary').innerHTML = chips(t.blocks);
+  el('modal-primary-block').hidden = !t.blocks;
+  
   el('modal').classList.add('active');
 };
 
-const generate = async () => {
+const renderGen = () => {
+  el('generator-node-picker').innerHTML = db.blocks.map(b => `
+    <button class="recommend-card ${state.genBids.includes(b.id) ? 'is-selected' : ''}" onclick="toggleGenBlock('${b.id}')">
+      <div class="recommend-card__body">
+        <div class="recommend-card__title">${esc(b.title)}</div>
+        <div class="recommend-card__meta">${esc(b.category)}</div>
+      </div>
+    </button>
+  `).join('');
+  el('generator-selected-nodes').innerHTML = state.genBids.map(bid => `
+    <button class="tag tag-button" onclick="toggleGenBlock('${bid}')">${esc(blocks[bid]?.title || bid)} ×</button>
+  `).join('');
+  el('generator-node-count').textContent = `${state.genBids.length} selected`;
+};
+
+window.toggleGenBlock = (id) => {
+  state.genBids = state.genBids.includes(id) ? state.genBids.filter(b => b !== id) : [...state.genBids, id];
+  renderGen();
+};
+
+window.openNode = openNode;
+
+el('search').oninput = (e) => { state.search = e.target.value; renderRail(); };
+el('generator-template').onchange = (e) => {
+  state.genTpl = e.target.value;
+  state.genBids = [...(templateMap[state.genTpl]?.blocks || [])];
+  renderGen();
+};
+
+el('generator-submit').onclick = async () => {
   const btn = el('generator-submit');
   btn.disabled = true;
   el('generator-status').textContent = '生成中...';
   const res = await fetch('/api/prompt-generate', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      template_id: el('generator-template').value,
-      instruction: el('generator-instruction').value
-    })
+    body: JSON.stringify({ template_id: state.genTpl, block_ids: state.genBids, instruction: el('generator-instruction').value })
   });
   const data = await res.json();
   el('generator-output').textContent = data.generated_prompt;
-  el('generator-status').textContent = `生成完了: ${data.request_id}`;
+  el('generator-status').textContent = `完了: ${data.request_id}`;
   btn.disabled = false;
 };
 
-el('search').oninput = (e) => { state.search = e.target.value; renderRail(); };
-el('generator-submit').onclick = generate;
-el('modal-close').onclick = () => el('modal').classList.remove('active');
-el('modal-copy').onclick = () => {
-  navigator.clipboard.writeText(el('modal-prompt').textContent);
-  el('modal-copy').textContent = 'コピーしました！';
-  setTimeout(() => el('modal-copy').textContent = 'プロンプトをコピー', 2000);
+el('generator-reset-template').onclick = () => {
+  state.genBids = [...(templateMap[state.genTpl]?.blocks || [])];
+  renderGen();
 };
 
-el('generator-template').innerHTML = templates.map(t => `<option value="${t.id}">${escape(t.title)}</option>`).join('');
+el('generator-clear-nodes').onclick = () => {
+  state.genBids = [];
+  renderGen();
+};
+
+el('modal-close').onclick = () => el('modal').classList.remove('active');
+el('modal-copy').onclick = (e) => {
+  navigator.clipboard.writeText(el('modal-prompt').textContent);
+  const old = e.target.textContent;
+  e.target.textContent = 'コピー完了！';
+  setTimeout(() => e.target.textContent = old, 2000);
+};
+
+el('generator-template').innerHTML = templates.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('');
 renderRail();
+renderGen();
