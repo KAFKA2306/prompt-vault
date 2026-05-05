@@ -312,40 +312,6 @@
       "family": "text"
     },
     {
-      "id": "morning_kafka_sheet",
-      "category": "人格",
-      "title": "Kafka 朝のやさしい光",
-      "kind": "sheet",
-      "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
-      "summary": "窓光、やわらかい部屋着、静かな朝、ゆっくり整える気分を、Kafka の朝テンプレートとして固定する。共有のおはツイ文言より少しだけ情緒寄りで、やさしい光と落ち着きを前面に出す。",
-      "steps": [
-        "朝の光を置く",
-        "Kafka の静かな表情を置く",
-        "やさしい朝文を1つ合わせる"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "kafka_identity_lock",
-        "morning_tweet_layout",
-        "morning_tweet_text_pack",
-        "morning_pose_window_kafka",
-        "morning_scene_window_kafka",
-        "morning_home_outfit_kafka",
-        "clean_quality_rendering_contrast",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "Use this as the reusable Kafka morning preset. Keep it gentler than the generic morning packs and make the light, not the event, the subject. Reference the existing morning asset for reuse.",
-      "artifacts": [
-        {
-          "path": "artifacts/127_kafka_morning_soft_light.png",
-          "title": "Kafka 朝のやさしい光"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
       "id": "daily_status_text_pack",
       "category": "セリフ・フレーズ",
       "title": "日常ステータス文言",
@@ -2100,9 +2066,91 @@
         "scene"
       ],
       "family": "scene"
+    },
+    {
+      "id": "morning_pose_stretch_kafka",
+      "category": "ポーズ",
+      "title": "朝のストレッチ",
+      "content": "morning yoga pose, gentle stretching, arms raised slightly or hands on hips, relaxed and flexible, airy room, soft morning glow, peaceful expression",
+      "tags": ["pose", "morning", "stretch"],
+      "family": "pose"
+    },
+    {
+      "id": "morning_pose_reading_kafka",
+      "category": "ポーズ",
+      "title": "朝のニュースチェック",
+      "content": "morning reading scene, holding a futuristic tablet or glowing hologram screen, focused but gentle expression, intellectual morning mood, soft lighting, quiet atmosphere",
+      "tags": ["pose", "morning", "reading"],
+      "family": "pose"
+    },
+    {
+      "id": "morning_pose_plants_kafka",
+      "category": "ポーズ",
+      "title": "窓辺の水やり",
+      "content": "watering plants on a window sill, holding a small pastel watering can, looking at a tiny green sprout, soft morning sun, refreshing and calm, gentle smile",
+      "tags": ["pose", "morning", "plants"],
+      "family": "pose"
+    },
+    {
+      "id": "morning_pose_haircare_kafka",
+      "category": "ポーズ",
+      "title": "朝の身支度（髪）",
+      "content": "brushing long blue hair, holding a silver brush, looking toward the viewer as if at a mirror, soft morning light, intimate and quiet, gentle expression",
+      "tags": ["pose", "morning", "haircare"],
+      "family": "pose"
+    },
+    {
+      "id": "morning_pose_bag_kafka",
+      "category": "ポーズ",
+      "title": "持ち物チェック",
+      "content": "checking a small bag or belongings, holding a futuristic key or a small accessory, prepared for the day, focused but organized, soft morning room, bright atmosphere",
+      "tags": ["pose", "morning", "bag"],
+      "family": "pose"
+    },
+    {
+      "id": "morning_pose_curtains_kafka",
+      "category": "ポーズ",
+      "title": "カーテンを開ける",
+      "content": "opening curtains, hands on white sheer fabric, bright sunlight flooding the room, looking out the window with a hopeful expression, refreshing morning light, airy and bright",
+      "tags": ["pose", "morning", "curtains"],
+      "family": "pose"
     }
   ],
   "templates": [
+    {
+      "id": "morning_kafka_sheet",
+      "category": "人格",
+      "title": "Kafka 朝のやさしい光",
+      "kind": "sheet",
+      "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
+      "summary": "窓光、やわらかい部屋着、静かな朝、ゆっくり整える気分を、Kafka の朝テンプレートとして固定する。共有のおはツイ文言より少しだけ情緒寄りで、やさしい光と落ち着きを前面に出す。",
+      "steps": [
+        "朝の光を置く",
+        "Kafka の静かな表情を置く",
+        "やさしい朝文を1つ合わせる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "morning_pose_window_kafka",
+        "morning_scene_window_kafka",
+        "morning_home_outfit_kafka",
+        "clean_quality_rendering",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Use this as the reusable Kafka morning preset. Keep it gentler than the generic morning packs and make the light, not the event, the subject. Reference the existing morning asset for reuse.",
+      "artifacts": [
+        {
+          "path": "artifacts/127_kafka_morning_soft_light.png",
+          "title": "Kafka 朝のやさしい光"
+        }
+      ],
+      "family": "sheet"
+    },
     {
       "id": "stamp_sheet",
       "title": "Kafka スタンプ",
@@ -4508,6 +4556,144 @@
       ],
       "notes": "改善前後、状態の変化、成長の記録に向く。",
       "family": "sheet"
+    },
+    {
+      "id": "morning_tweet_stretch",
+      "title": "Kafka おはツイ ストレッチ",
+      "kind": "social",
+      "purpose": "朝のストレッチ風景でおはツイ画像を作る",
+      "summary": "伸びをするポーズ、爽やかな空気感、短い挨拶でまとめる朝の投稿。",
+      "steps": [
+        "ストレッチのポーズを選ぶ",
+        "部屋の明るさを調整する",
+        "挨拶を1つ選ぶ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_stretch_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
+    },
+    {
+      "id": "morning_tweet_reading",
+      "title": "Kafka おはツイ 読書・ニュース",
+      "kind": "social",
+      "purpose": "朝のニュースチェック風景でおはツイ画像を作る",
+      "summary": "タブレットを見る知的な雰囲気、静かな朝の光でまとめる投稿。",
+      "steps": [
+        "ニュースチェックの表情を選ぶ",
+        "光の向きを横からにする",
+        "落ち着いた挨拶を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_reading_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
+    },
+    {
+      "id": "morning_tweet_plants",
+      "title": "Kafka おはツイ 水やり",
+      "kind": "social",
+      "purpose": "植物への水やり風景でおはツイ画像を作る",
+      "summary": "窓辺の緑、優しい笑顔、みずみずしい空気感でまとめる投稿。",
+      "steps": [
+        "水やりのポーズを固定する",
+        "植物の緑を強調する",
+        "優しい挨拶を選ぶ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_plants_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
+    },
+    {
+      "id": "morning_tweet_haircare",
+      "title": "Kafka おはツイ 髪の手入れ",
+      "kind": "social",
+      "purpose": "朝の身支度風景でおはツイ画像を作る",
+      "summary": "髪を梳かす日常的な仕草、柔らかい光、少しプライベートな雰囲気の投稿。",
+      "steps": [
+        "鏡越しの視線を意識する",
+        "髪の質感を丁寧に描写する",
+        "柔らかな挨拶を添える"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_haircare_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
+    },
+    {
+      "id": "morning_tweet_bag",
+      "title": "Kafka おはツイ 持ち物確認",
+      "kind": "social",
+      "purpose": "出発前の準備風景でおはツイ画像を作る",
+      "summary": "鞄を確認する仕草、整った雰囲気、いってきますの文言でまとめる投稿。",
+      "steps": [
+        "準備ができた様子を出す",
+        "小物のディテールを入れる",
+        "前向きな挨拶を選ぶ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_bag_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
+    },
+    {
+      "id": "morning_tweet_curtains",
+      "title": "Kafka おはツイ カーテンを開ける",
+      "kind": "social",
+      "purpose": "一日の始まりを告げる風景でおはツイ画像を作る",
+      "summary": "溢れる朝の光、開かれたカーテン、希望を感じさせる表情の投稿。",
+      "steps": [
+        "逆光の美しさを活かす",
+        "布の透明感を出す",
+        "明るい挨拶を選ぶ"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_curtains_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "family": "social"
     }
   ],
   "generated_prompts": [
@@ -5972,6 +6158,132 @@
       "generated_prompt": "white background, pale aqua and seafoam palette, bold cinematic Japanese movie announcement banner, shark and hot-spring motifs, strong date emphasis, clean typography, mobile-readable layout, high contrast, crisp title lockup, playful but polished, no clutter, no neon overload, simple wave or steam accents\n\nmovie release announcement for 映画『温泉シャーク２ 九州大決戦』, emphasize 2026年9月4日（金） and 「九州の日」, nationwide release, keep the title readable at a glance, include the feel of 九州を舞台にした温泉シャークが、ついに9.4に公開されます。, small footer hashtags #温泉シャーク2 #九州の日, cinematic but friendly, poster-like announcement card",
       "notes": "Source announcement: https://plana.biz/%E6%98%A0%E7%94%BB%E3%80%8E%E6%B8%A9%E6%B3%89%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%EF%BC%92-%E4%B9%9D%E5%B7%9E%E5%A4%A7%E6%B1%BA%E6%88%A6%E3%80%8F2026%E5%B9%B49%E6%9C%884%E6%97%A5%EF%BC%88%E9%87%91%EF%BC%89%E5%85%A8%E5%9B%BD%E5%85%AC%E9%96%8B%E6%B1%BA%E5%AE%9A/\nFollow-up update: https://camp-fire.jp/projects/788475/view/activities/832705\nKey facts to preserve: 映画『温泉シャーク２ 九州大決戦』, 2026年9月4日（金）, 「九州の日」, 全国公開.\nUser copy preserved: 公開日決定 / 映画『温泉シャーク２ 九州大決戦』 / 2026年9月4日（金）「九州の日」全国公開。 / 九州を舞台にした温泉シャークが、ついに9.4に公開されます。 / #温泉シャーク2 #九州の日",
       "family": "banner"
+    },
+    {
+      "id": "gen_20260506_morning_stretch",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_stretch",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_stretch_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "朝のストレッチ風景でおはツイ画像を作る",
+      "title": "朝のストレッチ",
+      "generated_title": "朝のストレッチ",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nmorning yoga pose, gentle stretching, arms raised slightly or hands on hips, relaxed and flexible, airy room, soft morning glow, peaceful expression\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
+    },
+    {
+      "id": "gen_20260506_morning_reading",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_reading",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_reading_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "朝のニュースチェック風景でおはツイ画像を作る",
+      "title": "朝のニュースチェック",
+      "generated_title": "朝のニュースチェック",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nmorning reading scene, holding a futuristic tablet or glowing hologram screen, focused but gentle expression, intellectual morning mood, soft lighting, quiet atmosphere\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
+    },
+    {
+      "id": "gen_20260506_morning_plants",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_plants",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_plants_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "植物への水やり風景でおはツイ画像を作る",
+      "title": "窓辺の水やり",
+      "generated_title": "窓辺の水やり",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nwatering plants on a window sill, holding a small pastel watering can, looking at a tiny green sprout, soft morning sun, refreshing and calm, gentle smile\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
+    },
+    {
+      "id": "gen_20260506_morning_haircare",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_haircare",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_haircare_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "朝の身支度風景でおはツイ画像を作る",
+      "title": "朝の身支度（髪）",
+      "generated_title": "朝の身支度（髪）",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nbrushing long blue hair, holding a silver brush, looking toward the viewer as if at a mirror, soft morning light, intimate and quiet, gentle expression\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
+    },
+    {
+      "id": "gen_20260506_morning_bag",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_bag",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_bag_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "出発前の準備風景でおはツイ画像を作る",
+      "title": "持ち物確認",
+      "generated_title": "持ち物確認",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nchecking a small bag or belongings, holding a futuristic key or a small accessory, prepared for the day, focused but organized, soft morning room, bright atmosphere\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
+    },
+    {
+      "id": "gen_20260506_morning_curtains",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "morning_tweet_curtains",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "morning_pose_curtains_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "一日の始まりを告げる風景でおはツイ画像を作る",
+      "title": "カーテンを開ける",
+      "generated_title": "カーテンを開ける",
+      "status": "draft",
+      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\nopening curtains, hands on white sheer fabric, bright sunlight flooding the room, looking out the window with a hopeful expression, refreshing morning light, airy and bright\n\nsquare or 4:5 social post, one large portrait, one short greeting line, no date, no timestamp, no event label, lots of white space, simple morning mood, tweet-friendly composition, readable at phone size, no clutter, reusable layout\n\n「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "family": "social"
     }
   ]
 }

@@ -112,6 +112,66 @@ def filter_blocks(
     return ordered_nodes(result)
 
 
+def _expand_template_focus(
+    focus_id: str, block_map: dict[str, dict[str, Any]], template_map: dict[str, dict[str, Any]]
+) -> tuple[set[str], set[str]]:
+    selected_templates = {focus_id}
+    selected_blocks = set(template_map[focus_id].get("blocks", []))
+    selected_blocks.update(template_map[focus_id].get("uses", []))
+    for block_id in list(selected_blocks):
+        block = block_map.get(block_id)
+        if not block:
+            continue
+        selected_blocks.update(block.get("related", []))
+        variant_of = block.get("variant_of")
+        if variant_of and variant_of in block_map:
+            selected_blocks.add(variant_of)
+    for block_id, block in block_map.items():
+        related = set(block.get("related", []))
+        variant_of = block.get("variant_of")
+        if block_id in selected_blocks or related & selected_blocks or variant_of in selected_templates:
+            selected_blocks.add(block_id)
+            if variant_of and variant_of in template_map:
+                selected_templates.add(variant_of)
+            for template in template_map.values():
+                if block_id in template.get("blocks", []) or block_id in template.get("uses", []):
+                    selected_templates.add(template["id"])
+    return selected_templates, selected_blocks
+
+
+def _expand_block_focus(
+    focus_id: str, block_map: dict[str, dict[str, Any]], template_map: dict[str, dict[str, Any]]
+) -> tuple[set[str], set[str]]:
+    selected_blocks = {focus_id}
+    selected_templates = set()
+    block = block_map[focus_id]
+    selected_blocks.update(block.get("related", []))
+    variant_of = block.get("variant_of")
+    if variant_of and variant_of in block_map:
+        selected_blocks.add(variant_of)
+    if variant_of and variant_of in template_map:
+        selected_templates.add(variant_of)
+    for template in template_map.values():
+        template_blocks = set(template.get("blocks", []))
+        template_uses = set(template.get("uses", []))
+        if focus_id in template_blocks or focus_id in template_uses:
+            selected_templates.add(template["id"])
+    for block_id in list(selected_blocks):
+        block_node = block_map.get(block_id)
+        if not block_node:
+            continue
+        selected_blocks.update(block_node.get("related", []))
+        parent = block_node.get("variant_of")
+        if parent and parent in block_map:
+            selected_blocks.add(parent)
+        if parent and parent in template_map:
+            selected_templates.add(parent)
+    for template in template_map.values():
+        if set(template.get("blocks", [])) & selected_blocks or set(template.get("uses", [])) & selected_blocks:
+            selected_templates.add(template["id"])
+    return selected_templates, selected_blocks
+
+
 def expand_focus(
     focus_id: str | None,
     block_map: dict[str, dict[str, Any]],
@@ -119,61 +179,10 @@ def expand_focus(
 ) -> tuple[set[str], set[str]]:
     if not focus_id:
         return set(), set()
-
     if focus_id in template_map:
-        selected_templates = {focus_id}
-        selected_blocks = set(template_map[focus_id].get("blocks", []))
-        selected_blocks.update(template_map[focus_id].get("uses", []))
-        for block_id in list(selected_blocks):
-            block = block_map.get(block_id)
-            if not block:
-                continue
-            selected_blocks.update(block.get("related", []))
-            variant_of = block.get("variant_of")
-            if variant_of and variant_of in block_map:
-                selected_blocks.add(variant_of)
-        for block_id, block in block_map.items():
-            related = set(block.get("related", []))
-            variant_of = block.get("variant_of")
-            if block_id in selected_blocks or related & selected_blocks or variant_of in selected_templates:
-                selected_blocks.add(block_id)
-                if variant_of and variant_of in template_map:
-                    selected_templates.add(variant_of)
-                for template in template_map.values():
-                    if block_id in template.get("blocks", []) or block_id in template.get("uses", []):
-                        selected_templates.add(template["id"])
-        return selected_templates, selected_blocks
-
+        return _expand_template_focus(focus_id, block_map, template_map)
     if focus_id in block_map:
-        selected_blocks = {focus_id}
-        selected_templates = set()
-        block = block_map[focus_id]
-        selected_blocks.update(block.get("related", []))
-        variant_of = block.get("variant_of")
-        if variant_of and variant_of in block_map:
-            selected_blocks.add(variant_of)
-        if variant_of and variant_of in template_map:
-            selected_templates.add(variant_of)
-        for template in template_map.values():
-            template_blocks = set(template.get("blocks", []))
-            template_uses = set(template.get("uses", []))
-            if focus_id in template_blocks or focus_id in template_uses:
-                selected_templates.add(template["id"])
-        for block_id in list(selected_blocks):
-            block_node = block_map.get(block_id)
-            if not block_node:
-                continue
-            selected_blocks.update(block_node.get("related", []))
-            parent = block_node.get("variant_of")
-            if parent and parent in block_map:
-                selected_blocks.add(parent)
-            if parent and parent in template_map:
-                selected_templates.add(parent)
-        for template in template_map.values():
-            if set(template.get("blocks", [])) & selected_blocks or set(template.get("uses", [])) & selected_blocks:
-                selected_templates.add(template["id"])
-        return selected_templates, selected_blocks
-
+        return _expand_block_focus(focus_id, block_map, template_map)
     return set(), set()
 
 
@@ -222,6 +231,40 @@ def render_template_composition_diagram(
     return "\n".join(lines)
 
 
+def _render_block_subgraph(blocks: list[dict[str, Any]]) -> list[str]:
+    lines = ['  subgraph blocks["Blocks"]', "    direction TB"]
+    for index, (family, items) in enumerate(group_nodes(blocks, "family", "ブロック"), start=1):
+        lines.append(f'    subgraph {group_id("fam", index)}["{html.escape(family, quote=True)}"]')
+        lines.append("      direction TB")
+        for block in ordered_nodes(items):
+            lines.append(f'      b_{block["id"]}["{mermaid_label(block["title"], block["id"])}"]:::block')
+        lines.append("    end")
+    lines.append("  end")
+    return lines
+
+
+def _render_referenced_templates(
+    blocks: list[dict[str, Any]], template_map: dict[str, dict[str, Any]]
+) -> list[str]:
+    template_targets: dict[str, dict[str, Any]] = {}
+    for block in blocks:
+        for node_id in block.get("related", []):
+            if node_id in template_map:
+                template_targets[node_id] = template_map[node_id]
+        variant_of = block.get("variant_of")
+        if variant_of and variant_of in template_map:
+            template_targets[variant_of] = template_map[variant_of]
+
+    lines = []
+    if template_targets:
+        lines.append('  subgraph templates["Referenced Templates"]')
+        lines.append("    direction TB")
+        for template in ordered_nodes(list(template_targets.values())):
+            lines.append(f'      t_{template["id"]}["{mermaid_label(template["title"], template["id"])}"]:::template')
+        lines.append("  end")
+    return lines
+
+
 def render_block_relations_diagram(
     blocks: list[dict[str, Any]],
     template_map: dict[str, dict[str, Any]],
@@ -233,31 +276,8 @@ def render_block_relations_diagram(
         "  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;",
     ]
 
-    lines.append('  subgraph blocks["Blocks"]')
-    lines.append("    direction TB")
-    for index, (family, items) in enumerate(group_nodes(blocks, "family", "ブロック"), start=1):
-        lines.append(f'    subgraph {group_id("fam", index)}["{html.escape(family, quote=True)}"]')
-        lines.append("      direction TB")
-        for block in ordered_nodes(items):
-            lines.append(f'      b_{block["id"]}["{mermaid_label(block["title"], block["id"])}"]:::block')
-        lines.append("    end")
-    lines.append("  end")
-
-    template_targets: dict[str, dict[str, Any]] = {}
-    for block in blocks:
-        for node_id in block.get("related", []):
-            if node_id in template_map:
-                template_targets[node_id] = template_map[node_id]
-        variant_of = block.get("variant_of")
-        if variant_of and variant_of in template_map:
-            template_targets[variant_of] = template_map[variant_of]
-
-    if template_targets:
-        lines.append('  subgraph templates["Referenced Templates"]')
-        lines.append("    direction TB")
-        for template in ordered_nodes(list(template_targets.values())):
-            lines.append(f'      t_{template["id"]}["{mermaid_label(template["title"], template["id"])}"]:::template')
-        lines.append("  end")
+    lines.extend(_render_block_subgraph(blocks))
+    lines.extend(_render_referenced_templates(blocks, template_map))
 
     related_edges: set[tuple[str, str]] = set()
     for block in blocks:

@@ -11,6 +11,11 @@ tasks:
     cmds:
       - python3 build.py
 
+  validate:
+    desc: Validate the database
+    cmds:
+      - python3 scripts/validate_db.py
+
   lint:
     desc: Lint the project
     cmds:

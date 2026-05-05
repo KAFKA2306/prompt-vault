@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -41,7 +41,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, "application/javascript", render_app_js(load_db()).encode("utf-8"))
             return self._send(200, f"{mime}; charset=utf-8", (STATIC_PATH / name).read_bytes())
         if self.path == "/api/db":
-            return self._json(200, load_db())
+            return self._json(200, load_db().model_dump(exclude_none=True))
         if self.path == "/api/config":
             return self._json(200, {"backend": "gemini", "model": CONFIG["model"]})
         if self.path.startswith("/artifacts/"):
@@ -56,13 +56,13 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_error(404)
         req = json.loads(self.rfile.read(int(self.headers["Content-Length"])).decode("utf-8"))
         db = load_db()
-        tpl = next(t for t in db["templates"] if t["id"] == req["template_id"])
-        blocks = {b["id"]: b for b in db["blocks"]}
-        bids = req.get("block_ids") or tpl["blocks"]
-        src = "\n".join(f"- {blocks[id]['title']} ({id}): {blocks[id]['content']}" for id in bids)
+        tpl = next(t for t in db.templates if t.id == req["template_id"])
+        blocks = {b.id: b for b in db.blocks}
+        bids = req.get("block_ids") or tpl.blocks
+        src = "\n".join(f"- {blocks[id].title} ({id}): {blocks[id].content}" for id in bids if id in blocks)
         prompt = (
             CONFIG["generation_prompt"]
-            .replace("{{template_title}}", tpl["title"])
+            .replace("{{template_title}}", tpl.title)
             .replace("{{source_blocks}}", src)
             .replace("{{instruction}}", req["instruction"])
         )
@@ -81,14 +81,14 @@ class Handler(BaseHTTPRequestHandler):
             .strip()
         )
         gen = "\n\n".join(
-            [out.get("block_updates", {}).get(id, blocks[id]["content"]) for id in bids if id in blocks]
+            [out.get("block_updates", {}).get(id, blocks[id].content) for id in bids if id in blocks]
             + ([out["addition"]] if out.get("addition") else [])
         )
-        now = datetime.now(UTC).isoformat()
-        db.setdefault("generated_prompts", []).append(
+        now = datetime.now(timezone.utc).isoformat()
+        db.generated_prompts.append(
             {"id": f"gen_{now}", "created_at": now, "title": out["title"], "generated_prompt": gen}
         )
-        DB_PATH.write_text(json.dumps(db, ensure_ascii=False, indent=2), encoding="utf-8")
+        DB_PATH.write_text(json.dumps(db.model_dump(exclude_none=True), ensure_ascii=False, indent=2), encoding="utf-8")
         self._json(200, {"request_id": now, "generated_prompt": gen})
         return None
 
