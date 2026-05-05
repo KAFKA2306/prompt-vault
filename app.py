@@ -33,13 +33,13 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         if self.path == "/api/db":
             return self._json(200, load_db().model_dump(exclude_none=True))
-        
+
         # Static files
         p = self.path.split("?")[0]
         if p == "/":
             p = "/index.html"
         f = STATIC_PATH / p.lstrip("/")
-        
+
         if f.exists() and f.is_file():
             ext = f.suffix.lower()
             mime = {
@@ -51,19 +51,20 @@ class Handler(BaseHTTPRequestHandler):
                 ".jpg": "image/jpeg",
                 ".ico": "image/x-icon",
                 ".txt": "text/plain",
-                ".json": "application/json"
+                ".json": "application/json",
             }.get(ext, "application/octet-stream")
-            
+
             content = render_app_js(load_db()).encode("utf-8") if p == "/app.js" else f.read_bytes()
             return self._send(200, mime, content)
-        
+
         # Artifacts
         if p.startswith("/artifacts/"):
             af = ROOT / p.lstrip("/")
             if af.exists():
                 return self._send(200, "image/png", af.read_bytes())
-            
+
         self.send_error(404)
+        return None
 
     def do_POST(self) -> None:
         if self.path != "/api/prompt-generate":
