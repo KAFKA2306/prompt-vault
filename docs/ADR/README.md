@@ -10,3 +10,4 @@
 - [0008 外部ソースから Prompt Vault を更新する流れ](0008-prompt-vault-add-flow.md)
 - [0009 tweetsdb を人格再利用 DB として扱う](0009-tweetsdb-persona-db.md)
 - [0010 Prompt Vault を prompt operating system として整理する](0010-prompt-operating-system.md)
+- [0011 `artifacts` は必ず DB に接続する](0011-artifact-graph-connectivity.md)
