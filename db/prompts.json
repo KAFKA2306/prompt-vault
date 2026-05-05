@@ -128,6 +128,66 @@
       "family": "research"
     },
     {
+      "id": "rsi_source_research",
+      "category": "リサーチ",
+      "title": "RSI 再調査メモ",
+      "content": "read the source carefully, separate recursive self-improvement from general automation, keep AI R&D automation distinct from intelligence explosion claims, preserve named examples, benchmarks, and dates exactly, and rewrite only what is needed for a clear technical summary",
+      "tags": [
+        "rsi",
+        "ai",
+        "research"
+      ],
+      "related": [
+        "source_research"
+      ],
+      "family": "research"
+    },
+    {
+      "id": "rsi_overview_layout",
+      "category": "形式・レイアウト",
+      "title": "RSI 概要レイアウト",
+      "content": "one-page RSI explainer sheet, clean Japanese infographic, top header with a clear RSI title, Kafka presenter on one side, center feedback loop diagram with four simple steps, right-side risk callout, arrows that show improvement and verification, pastel blue and lavender, thin borders, lots of white space, readable labels for code, eval, meta-improvement, and guardrails, calm technical mood, no clutter",
+      "tags": [
+        "rsi",
+        "layout",
+        "sheet"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "rsi_overview_sheet",
+      "category": "シート",
+      "title": "RSI 概要図",
+      "kind": "sheet",
+      "purpose": "RSI と AI R&D automation を一枚で整理する",
+      "summary": "再帰的自己改善のループ、評価、改善、リスクを分けて見せる。RSI を一般的な自動化や知能爆発の話と混ぜない。",
+      "steps": [
+        "現在のモデルが改善案を出す",
+        "改善案を実行して評価する",
+        "改善手順そのものを見直す",
+        "人間が見たい論点と限界を残す"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "kafka_identity_lock",
+        "rsi_overview_layout",
+        "rsi_source_research",
+        "clean_quality_rendering_contrast",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Show the recursive loop clearly, keep RSI separate from general automation, and keep named examples, benchmarks, and dates exact.",
+      "artifacts": [
+        {
+          "path": "artifacts/115_rsi_overview.png",
+          "title": "RSI 概要図の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "comic_layout",
       "category": "形式・レイアウト",
       "title": "漫画レイアウト",
@@ -626,7 +686,7 @@
       "id": "poststream_review_board_viz",
       "category": "形式・レイアウト",
       "title": "配信振り返り（レビュー用）",
-      "content": "kafka poststream review board, what worked, what to fix, next action, checklist layout, concise notes, white background, pastel blue accents, small status marks, clear hierarchy, useful as a real review sheet, not a generic poster",
+      "content": "kafka poststream review board, what worked, what to fix, next action, checklist layout, concise notes, white background, pastel blue accents, small status marks, clear hierarchy, run_id, model, seed, params, scores, decision, useful as a real review sheet, not a generic poster",
       "tags": [
         "review",
         "board",
@@ -638,7 +698,8 @@
       ],
       "related": [
         "research_log_pack",
-        "memory_pack"
+        "memory_pack",
+        "review_record_pack"
       ],
       "family": "layout"
     },
@@ -811,6 +872,19 @@
         "log",
         "review",
         "analysis"
+      ],
+      "visibility": "internal",
+      "family": "logging"
+    },
+    {
+      "id": "review_record_pack",
+      "category": "記録・ログ",
+      "title": "レビュー記録",
+      "content": "run_id, block_ids, intent, model, seed, params, artifact, scores, decision, keep, revise, reject, before, after, reason",
+      "tags": [
+        "review",
+        "record",
+        "evaluation"
       ],
       "visibility": "internal",
       "family": "logging"
@@ -1588,10 +1662,103 @@
       "category": "ネガティブ",
       "title": "共通ネガティブ",
       "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "related": [
+        "negative_anatomy",
+        "negative_skin",
+        "negative_shadow",
+        "negative_color",
+        "negative_layout",
+        "negative_text",
+        "negative_artifact"
+      ],
       "tags": [
         "negative"
       ],
       "family": "safety"
+    },
+    {
+      "id": "negative_anatomy",
+      "category": "ネガティブ",
+      "title": "身体・構造ネガティブ",
+      "content": "bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, inconsistent outfit, body distortion, broken proportions",
+      "tags": [
+        "negative",
+        "anatomy",
+        "body"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_skin",
+      "category": "ネガティブ",
+      "title": "肌ネガティブ",
+      "content": "plastic skin, overly glossy skin, blotchy skin, dirty skin, dead skin tone, greasy highlights, uneven skin shading",
+      "tags": [
+        "negative",
+        "skin",
+        "face"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_shadow",
+      "category": "ネガティブ",
+      "title": "影ネガティブ",
+      "content": "harsh shadows, extreme lighting, dark horror mood, muddy shadows, blotchy shadows, dirty shadows, noisy shading, uneven shading",
+      "tags": [
+        "negative",
+        "shadow",
+        "lighting"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_color",
+      "category": "ネガティブ",
+      "title": "色ネガティブ",
+      "content": "oversaturated colors, muddy colors, dull colors, inconsistent palette, color banding, dirty shadows, uneven rendering, messy gradients, blotchy skin",
+      "tags": [
+        "negative",
+        "color",
+        "palette"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_layout",
+      "category": "ネガティブ",
+      "title": "レイアウトネガティブ",
+      "content": "poor layout, messy composition, empty background, visual clutter, chaotic typography, corporate presentation style, soulless infographic, crowded panels, broken hierarchy",
+      "tags": [
+        "negative",
+        "layout",
+        "composition"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_text",
+      "category": "ネガティブ",
+      "title": "文字ネガティブ",
+      "content": "blurry text, broken Japanese, random English text, unreadable typography, garbled labels, wrong glyphs",
+      "tags": [
+        "negative",
+        "text",
+        "typography"
+      ],
+      "family": "negative"
+    },
+    {
+      "id": "negative_artifact",
+      "category": "ネガティブ",
+      "title": "生成物アーティファクトネガティブ",
+      "content": "grainy textures, visual artifacts, watermark, signature, jpeg artifacts, aliasing, banding, noisy details, low resolution",
+      "tags": [
+        "negative",
+        "artifact",
+        "quality"
+      ],
+      "family": "negative"
     },
     {
       "id": "persona_sheet_vlog",

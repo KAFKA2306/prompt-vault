@@ -31,6 +31,8 @@
 - Use `db/prompts.json`'s `kafka_visual_standard` block and `artifacts/097_rendering_quality_check_contrast.png` as the default Kafka visual references when judging face, hair, color balance, shading, and polish.
 - Reduce `Kafka` when factual precision or readability matters more.
 - Keep Kafka's face and identity consistent, but change the outfit to match the specific situation, place, time of day, weather, season, and activity.
+- When negative prompts are needed, choose the narrowest matching negative block before falling back to `negative_common`.
+- When the update is review-oriented, preserve `run_id`, `model`, `seed`, `params`, `scores`, and `decision` in the closest available record block or notes.
 
 ## Artifact maintenance
 

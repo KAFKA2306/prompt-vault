@@ -1,6 +1,6 @@
 interface:
   display_name: "Prompt Vault Update"
   short_description: "Turn sources or artifact requests into DB updates"
-  default_prompt: "Use $prompt-vault-update to turn a pasted link, tweet, article, PDF, video, or artifact request into one Prompt Vault DB update, base the new work on the closest existing Prompt Vault prompts in db/prompts.json first, use db/prompts.json's kafka_visual_standard block and artifacts/097_rendering_quality_check_contrast.png as the default Kafka visual references, call `imagegen` when a new bitmap is needed, and keep Kafka's identity stable while varying the outfit for the specific situation, place, time of day, weather, season, and activity."
+  default_prompt: "Use $prompt-vault-update to turn a pasted link, tweet, article, PDF, video, or artifact request into one Prompt Vault DB update, base the new work on the closest existing Prompt Vault prompts in db/prompts.json first, prefer the narrowest matching negative taxonomy block and review record shape when they fit, use db/prompts.json's kafka_visual_standard block and artifacts/097_rendering_quality_check_contrast.png as the default Kafka visual references, call `imagegen` when a new bitmap is needed, and keep Kafka's identity stable while varying the outfit for the specific situation, place, time of day, weather, season, and activity."
 policy:
   allow_implicit_invocation: true
