@@ -5920,6 +5920,36 @@
       "family": "sheet"
     },
     {
+      "id": "128",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_128",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Kafka evening twilight scene with a reflective, cool-toned moodboard composition. Looking out a window at a purple dusk sky, holding a warm cup of tea, calm and thoughtful atmosphere.",
+      "title": "Kafka Evening Twilight",
+      "generated_title": "Kafka Evening Twilight",
+      "generated_title_candidate": "Kafka Evening Twilight",
+      "generated_addition": "",
+      "generation_prompt_source": "manual",
+      "status": "published",
+      "artifacts": [
+        {
+          "path": "artifacts/128_kafka_evening_twilight.png",
+          "title": "Kafka Evening Twilight"
+        }
+      ],
+      "notes": "New situation based on artifact 127, shifting from morning light to evening twilight.",
+      "family": "sheet"
+    },
+    {
       "id": "movie_release_onsen_shark2_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "template_id": "movie_release_banner",
