@@ -31,20 +31,39 @@ class Handler(BaseHTTPRequestHandler):
         self._send(code, "application/json; charset=utf-8", json.dumps(data, ensure_ascii=False).encode("utf-8"))
 
     def do_GET(self) -> None:
-        routes = {"/": "index.html", "/style.css": "style.css", "/app.js": "app.js"}
-        if self.path in routes:
-            name = routes[self.path]
-            if name == "app.js":
-                return self._send(200, "application/javascript", render_app_js(load_db()).encode("utf-8"))
-            mime = "text/css" if name == "style.css" else "text/html"
-            return self._send(200, f"{mime}; charset=utf-8", (STATIC_PATH / name).read_bytes())
         if self.path == "/api/db":
             return self._json(200, load_db().model_dump(exclude_none=True))
-        if self.path.startswith("/artifacts/"):
-            f = ARTIFACTS_PATH / self.path.removeprefix("/artifacts/")
-            if f.exists():
-                return self._send(200, "image/png", f.read_bytes())
-        return self.send_error(404)
+        
+        # Static files
+        p = self.path.split("?")[0]
+        if p == "/":
+            p = "/index.html"
+        f = STATIC_PATH / p.lstrip("/")
+        
+        if f.exists() and f.is_file():
+            ext = f.suffix.lower()
+            mime = {
+                ".html": "text/html",
+                ".js": "application/javascript",
+                ".css": "text/css",
+                ".svg": "image/svg+xml",
+                ".png": "image/png",
+                ".jpg": "image/jpeg",
+                ".ico": "image/x-icon",
+                ".txt": "text/plain",
+                ".json": "application/json"
+            }.get(ext, "application/octet-stream")
+            
+            content = render_app_js(load_db()).encode("utf-8") if p == "/app.js" else f.read_bytes()
+            return self._send(200, mime, content)
+        
+        # Artifacts
+        if p.startswith("/artifacts/"):
+            af = ROOT / p.lstrip("/")
+            if af.exists():
+                return self._send(200, "image/png", af.read_bytes())
+            
+        self.send_error(404)
 
     def do_POST(self) -> None:
         if self.path != "/api/prompt-generate":

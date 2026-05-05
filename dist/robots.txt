@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-# As a condition of accessing this website, you agree to abide by the following content signals:
-# Content-Signal: search=yes, ai-train=no, ai-input=no
-
-Sitemap: https://prompt-vault-cg3.pages.dev/sitemap.xml
