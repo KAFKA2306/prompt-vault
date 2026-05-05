@@ -12,7 +12,6 @@ if str(ROOT) not in sys.path:
 
 from build import load_db  # noqa: E402
 
-
 EXPECTED_TEMPLATE_FAMILIES = {"post", "sheet", "banner", "brand", "reply", "comic", "system", "generated", "news"}
 
 
@@ -70,7 +69,11 @@ def main() -> int:
 
     duplicates = []
     for path, owners in artifact_paths.items():
-        visible_owners = [template for template in owners if template.get("kind") != "generated" and template.get("visibility") != "internal"]
+        visible_owners = [
+            template
+            for template in owners
+            if template.get("kind") != "generated" and template.get("visibility") != "internal"
+        ]
         if len(visible_owners) > 1:
             duplicates.append(path)
     if duplicates:

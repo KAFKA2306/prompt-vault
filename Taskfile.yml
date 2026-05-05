@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+  run:
+    desc: Run the development server
+    cmds:
+      - python3 app.py
+
+  build:
+    desc: Build the static site
+    cmds:
+      - python3 build.py
+
+  lint:
+    desc: Lint the project
+    cmds:
+      - uv run ruff check .
+
+  format:
+    desc: Format the project
+    cmds:
+      - uv run ruff format .
+
+  verify:
+    desc: Verify the pages
+    cmds:
+      - bash scripts/verify_pages.sh

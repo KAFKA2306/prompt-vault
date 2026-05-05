@@ -182,11 +182,10 @@ def render_template_composition_diagram(
     blocks: list[dict[str, Any]],
     block_map: dict[str, dict[str, Any]],
 ) -> str:
-
     lines: list[str] = [
         "flowchart LR",
-        '  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;',
-        '  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;',
+        "  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;",
+        "  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;",
     ]
 
     lines.append('  subgraph templates["Templates"]')
@@ -210,7 +209,7 @@ def render_template_composition_diagram(
     lines.append("  end")
 
     for template in templates:
-        template_node = f't_{template["id"]}'
+        template_node = f"t_{template['id']}"
         for block_id in template.get("blocks", []):
             if block_id in block_map:
                 lines.append(f"  {template_node} --> b_{block_id}")
@@ -228,11 +227,10 @@ def render_block_relations_diagram(
     template_map: dict[str, dict[str, Any]],
     block_map: dict[str, dict[str, Any]],
 ) -> str:
-
     lines: list[str] = [
         "flowchart LR",
-        '  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;',
-        '  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;',
+        "  classDef template fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:1px;",
+        "  classDef block fill:#dcfce7,stroke:#059669,color:#0f172a,stroke-width:1px;",
     ]
 
     lines.append('  subgraph blocks["Blocks"]')
@@ -263,7 +261,7 @@ def render_block_relations_diagram(
 
     related_edges: set[tuple[str, str]] = set()
     for block in blocks:
-        block_node = f'b_{block["id"]}'
+        block_node = f"b_{block['id']}"
         variant_of = block.get("variant_of")
         if variant_of:
             if variant_of in block_map:

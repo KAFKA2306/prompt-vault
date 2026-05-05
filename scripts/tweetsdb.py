@@ -6,9 +6,9 @@ import json
 import math
 import re
 import zipfile
-from functools import lru_cache
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -21,10 +21,14 @@ except Exception:  # pragma: no cover - optional dependency
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "db" / "tweetsdb.json"
-ARCHIVE_PATH = ROOT / "artifacts" / "twitter-2026-05-02-741b09a4d07b6875e14faaed1104872c99f2c1d9574872876fd3d2342d11756c.zip"
+ARCHIVE_PATH = (
+    ROOT / "artifacts" / "twitter-2026-05-02-741b09a4d07b6875e14faaed1104872c99f2c1d9574872876fd3d2342d11756c.zip"
+)
 
 
-AI_PATTERN = re.compile(r"(?:\bai\b|生成ai|人工知能|chatgpt|openai|gpt|llm|gemini|claude|copilot|prompt)", re.IGNORECASE)
+AI_PATTERN = re.compile(
+    r"(?:\bai\b|生成ai|人工知能|chatgpt|openai|gpt|llm|gemini|claude|copilot|prompt)", re.IGNORECASE
+)
 IMAGEGEN_PATTERN = re.compile(
     r"(画像生成|aiイラスト|イラスト生成|stable diffusion|stablediffusion|sdxl|sd1\.5|midjourney|dall[- ]?e|comfyui|controlnet|img2img|i2i|t2i|text2image|waifu[- ]?diffusion|automatic1111|webui|novelai|novel ai|lora|vae)",
     re.IGNORECASE,
@@ -38,32 +42,205 @@ _TAGGER: Any | None = None
 
 TOPIC_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("vrchat-events", ("集会", "周年", "meetup", "event", "anniversary", "host", "ホスト", "告知", "お知らせ")),
-    ("vrchat-avatar-mod", ("modular avatar", "expressionsmenu", "expressions menu", "shape changer", "menu item", "menu installer", "色改変", "衣装改変", "アバター改変", "改変", "着せ替え")),
-    ("vrchat-worlds", ("madewithvrchat", "world travel", "world tour", "worlds", "ワールド", "vket", "世界旅行", "ワールド巡り", "ホームワールド")),
+    (
+        "vrchat-avatar-mod",
+        (
+            "modular avatar",
+            "expressionsmenu",
+            "expressions menu",
+            "shape changer",
+            "menu item",
+            "menu installer",
+            "色改変",
+            "衣装改変",
+            "アバター改変",
+            "改変",
+            "着せ替え",
+        ),
+    ),
+    (
+        "vrchat-worlds",
+        (
+            "madewithvrchat",
+            "world travel",
+            "world tour",
+            "worlds",
+            "ワールド",
+            "vket",
+            "世界旅行",
+            "ワールド巡り",
+            "ホームワールド",
+        ),
+    ),
     ("vrchat-mobile", ("vrchat android", "vrchat mobile", "推奨スマホ", "スマホ", "mocopi")),
-    ("creator-tools", ("blender", "unity", "c#", "dll", "script", "api", "workflow", "gradio", "kohya", "sd-scripts", "github", "template", "automation")),
+    (
+        "creator-tools",
+        (
+            "blender",
+            "unity",
+            "c#",
+            "dll",
+            "script",
+            "api",
+            "workflow",
+            "gradio",
+            "kohya",
+            "sd-scripts",
+            "github",
+            "template",
+            "automation",
+        ),
+    ),
     ("finance-tax", ("tax", "税", "確定申告", "ふるさと納税", "住民税", "所得税", "税関", "納税", "e-tax", "etax")),
     ("finance-jp", ("boj", "日銀", "nisa", "株", "円", "carry", "投機", "金利", "market")),
-    ("shopping-gadgets", ("aliexpress", "power bank", "charger", "amazon", "ガジェット", "充電器", "バッテリー", "ロボット掃除機", "pico", "quest", "hmd", "スマホ")),
-    ("music-listening", ("playlist", "music", "音楽", "alexa", "spotify", "sound", "カラオケ", "歌詞", "イヤホン", "ヘッドホン", "BGM")),
-    ("travel-real-world", ("travel", "旅行", "旅", "tokyo", "京都", "kyoto", "北海道", "hokkaido", "沖縄", "okinawa", "venice", "観光", "空港", "hotel", "flight", "tour")),
-    ("food-drink", ("food", "ごはん", "ご飯", "食べる", "食べ", "料理", "coffee", "cafe", "breakfast", "dinner", "mogumogu", "コーヒー", "お茶", "夕食", "朝食", "飲み", "飲む", "食事")),
-    ("sleep-morning", ("おはよ", "おはよう", "おはしゃふ", "おはかふ", "おはツイ", "おやすみ", "sleep", "眠い", "寝る", "起床", "早起き", "morning", "sleepy", "朝活")),
+    (
+        "shopping-gadgets",
+        (
+            "aliexpress",
+            "power bank",
+            "charger",
+            "amazon",
+            "ガジェット",
+            "充電器",
+            "バッテリー",
+            "ロボット掃除機",
+            "pico",
+            "quest",
+            "hmd",
+            "スマホ",
+        ),
+    ),
+    (
+        "music-listening",
+        ("playlist", "music", "音楽", "alexa", "spotify", "sound", "カラオケ", "歌詞", "イヤホン", "ヘッドホン", "BGM"),
+    ),
+    (
+        "travel-real-world",
+        (
+            "travel",
+            "旅行",
+            "旅",
+            "tokyo",
+            "京都",
+            "kyoto",
+            "北海道",
+            "hokkaido",
+            "沖縄",
+            "okinawa",
+            "venice",
+            "観光",
+            "空港",
+            "hotel",
+            "flight",
+            "tour",
+        ),
+    ),
+    (
+        "food-drink",
+        (
+            "food",
+            "ごはん",
+            "ご飯",
+            "食べる",
+            "食べ",
+            "料理",
+            "coffee",
+            "cafe",
+            "breakfast",
+            "dinner",
+            "mogumogu",
+            "コーヒー",
+            "お茶",
+            "夕食",
+            "朝食",
+            "飲み",
+            "飲む",
+            "食事",
+        ),
+    ),
+    (
+        "sleep-morning",
+        (
+            "おはよ",
+            "おはよう",
+            "おはしゃふ",
+            "おはかふ",
+            "おはツイ",
+            "おやすみ",
+            "sleep",
+            "眠い",
+            "寝る",
+            "起床",
+            "早起き",
+            "morning",
+            "sleepy",
+            "朝活",
+        ),
+    ),
     ("weather-mood", ("rain", "雨", "weather", "天気", "寒い", "暑い", "花粉", "曇り", "雪", "気温", "台風", "暴風")),
-    ("art-illustration", ("illustration", "drawing", "draw", "illustrator", "イラスト", "お絵かき", "描いた", "描いて", "sketch", "絵描き", "AIイラスト")),
-    ("games", ("boardgame", "board game", "麻雀", "マダミス", "trpg", "poker", "dominion", "splendor", "ゲーム", "カード")),
+    (
+        "art-illustration",
+        (
+            "illustration",
+            "drawing",
+            "draw",
+            "illustrator",
+            "イラスト",
+            "お絵かき",
+            "描いた",
+            "描いて",
+            "sketch",
+            "絵描き",
+            "AIイラスト",
+        ),
+    ),
+    (
+        "games",
+        ("boardgame", "board game", "麻雀", "マダミス", "trpg", "poker", "dominion", "splendor", "ゲーム", "カード"),
+    ),
     ("unity", ("unity", "blender", "c#", "dll", "agent", "skill")),
     ("travel", ("travel", "旅", "tokyo", "京都", "kyoto", "北海道", "hokkaido", "沖縄", "okinawa", "venice", "観光")),
-    ("food", ("food", "ごはん", "ご飯", "食べる", "食べ", "料理", "coffee", "cafe", "breakfast", "dinner", "mogumogu", "コーヒー", "お茶", "食事")),
+    (
+        "food",
+        (
+            "food",
+            "ごはん",
+            "ご飯",
+            "食べる",
+            "食べ",
+            "料理",
+            "coffee",
+            "cafe",
+            "breakfast",
+            "dinner",
+            "mogumogu",
+            "コーヒー",
+            "お茶",
+            "食事",
+        ),
+    ),
     ("finance", ("finance", "market", "boj", "日銀", "tax", "税", "株", "press")),
-    ("daily-life", ("日常", "生活", "通勤", "騒音", "花粉", "くしゃみ", "家事", "ルーティン", "おでかけ", "疲れ", "体調", "眠気")),
+    (
+        "daily-life",
+        ("日常", "生活", "通勤", "騒音", "花粉", "くしゃみ", "家事", "ルーティン", "おでかけ", "疲れ", "体調", "眠気"),
+    ),
 ]
 
 ENTITY_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("ChatGPT", ("chatgpt", "openai", "gpt", "llm", "生成ai", "人工知能")),
     ("VRChat", ("vrchat", "vrc", "udon")),
     ("VRChat Android", ("vrchat android", "vrchat mobile", "android")),
-    ("Modular Avatar", ("modular avatar", "ma object toggle", "ma menu item", "ma menu installer", "ma shape changer", "expressionsmenu")),
+    (
+        "Modular Avatar",
+        (
+            "modular avatar",
+            "ma object toggle",
+            "ma menu item",
+            "ma menu installer",
+            "ma shape changer",
+            "expressionsmenu",
+        ),
+    ),
     ("Unity", ("unity",)),
     ("Blender", ("blender",)),
     ("Kafka", ("kafka", "かふか", "しゃふか")),
@@ -226,7 +403,16 @@ TOPIC_SPECIFICITY: dict[str, float] = {
 }
 VISUAL_REUSE_TOPICS = {"ai-imagegen", "art-illustration", "vrchat-avatar-mod", "vrchat-events", "vrchat-worlds"}
 REFERENCE_REUSE_TOPICS = {"finance-jp", "finance-tax", "travel-real-world", "weather-mood", "finance"}
-TEXTUAL_REUSE_TOPICS = {"creator-tools", "sleep-morning", "music-listening", "daily-life", "social", "vrchat-social", "vrchat-technical", "misc"}
+TEXTUAL_REUSE_TOPICS = {
+    "creator-tools",
+    "sleep-morning",
+    "music-listening",
+    "daily-life",
+    "social",
+    "vrchat-social",
+    "vrchat-technical",
+    "misc",
+}
 FACTUAL_REUSE_TOPICS = REFERENCE_REUSE_TOPICS | {"vrchat-events", "vrchat-worlds", "vrchat-mobile", "shopping-gadgets"}
 VRCHAT_CONTEXT_WORDS = (
     "avatar",
@@ -482,7 +668,10 @@ def topic_confidence(topic: str, keywords: list[str], kind: str) -> float:
     kind_bonus = 0.0
     if topic in {"social", "misc"} and kind in {"reply", "quote", "retweet"}:
         kind_bonus = 0.08
-    if topic in {"ai-imagegen", "vrchat-avatar-mod", "vrchat-events", "vrchat-worlds", "vrchat-technical"} and len(keywords) >= 2:
+    if (
+        topic in {"ai-imagegen", "vrchat-avatar-mod", "vrchat-events", "vrchat-worlds", "vrchat-technical"}
+        and len(keywords) >= 2
+    ):
         kind_bonus += 0.06
     return round(max(0.0, min(1.0, base + hit_bonus + kind_bonus)), 3)
 
@@ -545,7 +734,15 @@ def build_latent_profile(record: dict[str, Any], analysis: dict[str, Any]) -> di
     topics = record.get("topic", [])
     primary = topics[0] if topics else "misc"
     reuse_type = record.get("reuse_type", "文体")
-    prompt_bias = "visual" if reuse_type == "画像" else "textual" if reuse_type == "文体" else "factual" if reuse_type == "事実参照" else "playful"
+    prompt_bias = (
+        "visual"
+        if reuse_type == "画像"
+        else "textual"
+        if reuse_type == "文体"
+        else "factual"
+        if reuse_type == "事実参照"
+        else "playful"
+    )
     return {
         "topic_primary": primary,
         "topic_stack": topics[:4],
@@ -586,21 +783,27 @@ def classify_topics(text: str, kind: str, analysis: dict[str, Any] | None = None
             }
         )
 
-    ai_hits = [kw for kw in ("生成ai", "chatgpt", "openai", "gpt", "llm", "gemini", "claude", "copilot", "prompt") if keyword_matches_analysis(kw, analysis)]
+    ai_hits = [
+        kw
+        for kw in ("生成ai", "chatgpt", "openai", "gpt", "llm", "gemini", "claude", "copilot", "prompt")
+        if keyword_matches_analysis(kw, analysis)
+    ]
     if ai_hits:
         add_topic("ai", ai_hits, analysis_source_label(analysis))
     elif has_keyword("ai", analysis) and has_ai_context(analysis):
         add_topic("ai", ["ai"], analysis_source_label(analysis))
 
     imagegen_hits = []
-    if any(keyword_matches_analysis(kw, analysis) for kw in ("画像生成", "aiイラスト", "イラスト生成", "stable diffusion", "stablediffusion", "sdxl", "sd1.5", "midjourney", "dall-e", "comfyui", "controlnet", "img2img", "i2i", "t2i", "text2image", "waifu diffusion", "automatic1111", "webui", "novelai", "novel ai", "lora", "vae")):
-        imagegen_hits = [kw for kw in (
+    if any(
+        keyword_matches_analysis(kw, analysis)
+        for kw in (
             "画像生成",
             "aiイラスト",
             "イラスト生成",
             "stable diffusion",
             "stablediffusion",
             "sdxl",
+            "sd1.5",
             "midjourney",
             "dall-e",
             "comfyui",
@@ -608,10 +811,38 @@ def classify_topics(text: str, kind: str, analysis: dict[str, Any] | None = None
             "img2img",
             "i2i",
             "t2i",
+            "text2image",
+            "waifu diffusion",
+            "automatic1111",
             "webui",
+            "novelai",
+            "novel ai",
             "lora",
             "vae",
-        ) if keyword_matches_analysis(kw, analysis)]
+        )
+    ):
+        imagegen_hits = [
+            kw
+            for kw in (
+                "画像生成",
+                "aiイラスト",
+                "イラスト生成",
+                "stable diffusion",
+                "stablediffusion",
+                "sdxl",
+                "midjourney",
+                "dall-e",
+                "comfyui",
+                "controlnet",
+                "img2img",
+                "i2i",
+                "t2i",
+                "webui",
+                "lora",
+                "vae",
+            )
+            if keyword_matches_analysis(kw, analysis)
+        ]
         if not imagegen_hits:
             imagegen_hits = ["imagegen"]
         add_topic("ai-imagegen", imagegen_hits, analysis_source_label(analysis))
@@ -629,18 +860,71 @@ def classify_topics(text: str, kind: str, analysis: dict[str, Any] | None = None
         add_topic("vrchat-social", social_hits, analysis_source_label(analysis))
 
     if vrchat_anchor_hits and has_vrchat_technical_context(analysis):
-        technical_hits = vrchat_anchor_hits + [kw for kw in VRCHAT_TECHNICAL_WORDS if keyword_matches_analysis(kw, analysis)]
+        technical_hits = vrchat_anchor_hits + [
+            kw for kw in VRCHAT_TECHNICAL_WORDS if keyword_matches_analysis(kw, analysis)
+        ]
         add_topic("vrchat-technical", technical_hits, analysis_source_label(analysis))
 
-    finance_tax_hits = [kw for kw in ("tax", "税", "確定申告", "ふるさと納税", "住民税", "所得税", "税関", "納税", "e-tax", "etax") if keyword_matches_analysis(kw, analysis)]
+    finance_tax_hits = [
+        kw
+        for kw in ("tax", "税", "確定申告", "ふるさと納税", "住民税", "所得税", "税関", "納税", "e-tax", "etax")
+        if keyword_matches_analysis(kw, analysis)
+    ]
     if finance_tax_hits:
         add_topic("finance-tax", finance_tax_hits, analysis_source_label(analysis))
 
-    finance_jp_hits = [kw for kw in ("boj", "日銀", "nisa", "株", "carry", "投機", "金利", "market", "fomc", "etf", "投資", "資産", "配当", "決算", "関税", "インフレ", "景気") if keyword_matches_analysis(kw, analysis)]
+    finance_jp_hits = [
+        kw
+        for kw in (
+            "boj",
+            "日銀",
+            "nisa",
+            "株",
+            "carry",
+            "投機",
+            "金利",
+            "market",
+            "fomc",
+            "etf",
+            "投資",
+            "資産",
+            "配当",
+            "決算",
+            "関税",
+            "インフレ",
+            "景気",
+        )
+        if keyword_matches_analysis(kw, analysis)
+    ]
     if finance_jp_hits or (keyword_matches_analysis("円", analysis) and has_finance_context(analysis)):
         add_topic("finance-jp", finance_jp_hits or ["円"], analysis_source_label(analysis))
 
-    finance_hits = [kw for kw in ("finance", "market", "boj", "日銀", "nisa", "株", "円", "carry", "投機", "金利", "market", "fomc", "etf", "投資", "資産", "配当", "決算", "関税", "インフレ", "景気") if keyword_matches_analysis(kw, analysis)]
+    finance_hits = [
+        kw
+        for kw in (
+            "finance",
+            "market",
+            "boj",
+            "日銀",
+            "nisa",
+            "株",
+            "円",
+            "carry",
+            "投機",
+            "金利",
+            "market",
+            "fomc",
+            "etf",
+            "投資",
+            "資産",
+            "配当",
+            "決算",
+            "関税",
+            "インフレ",
+            "景気",
+        )
+        if keyword_matches_analysis(kw, analysis)
+    ]
     if finance_hits and has_finance_context(analysis):
         add_topic("finance", finance_hits, analysis_source_label(analysis))
 
@@ -660,9 +944,7 @@ def classify_topics(text: str, kind: str, analysis: dict[str, Any] | None = None
         topics = filtered_topics
         topic_evidence = filtered_evidence
         matched_keywords = unique_keep_order(
-            keyword
-            for item in topic_evidence
-            for keyword in item.get("matched_keywords", [])
+            keyword for item in topic_evidence for keyword in item.get("matched_keywords", [])
         )
 
     matched_keywords = unique_keep_order(matched_keywords)
@@ -717,14 +999,13 @@ def build_scene_hook(record: dict[str, Any]) -> str:
 def parse_created_at(value: str | None) -> tuple[str, str]:
     if not value:
         return "", ""
-    dt = datetime.strptime(value, "%a %b %d %H:%M:%S %z %Y").astimezone(timezone.utc)
+    dt = datetime.strptime(value, "%a %b %d %H:%M:%S %z %Y").astimezone(UTC)
     return dt.isoformat().replace("+00:00", "Z"), dt.strftime("%Y-%m")
 
 
 def load_archive_tweets(archive_path: Path) -> list[dict[str, Any]]:
-    with zipfile.ZipFile(archive_path) as zf:
-        with zf.open("data/tweets.js") as fh:
-            text = fh.read().decode("utf-8", errors="replace")
+    with zipfile.ZipFile(archive_path) as zf, zf.open("data/tweets.js") as fh:
+        text = fh.read().decode("utf-8", errors="replace")
     start = text.find("[")
     end = text.rfind("]")
     if start < 0 or end < start:
@@ -814,9 +1095,13 @@ def detect_style(text: str, kind: str, has_media: bool) -> list[str]:
         styles.append("link_only")
     if any(token in lc for token in ("w", "笑", "めっちゃ", "かな", "ねー", "だよ", "だね", "〜")):
         styles.append("casual")
-    if any(char.isdigit() for char in text) or any(word in lc for word in ("東京", "京都", "北海道", "トランプ", "boj", "unity", "vrchat")):
+    if any(char.isdigit() for char in text) or any(
+        word in lc for word in ("東京", "京都", "北海道", "トランプ", "boj", "unity", "vrchat")
+    ):
         styles.append("concrete")
-    if AI_PATTERN.search(lc) or any(word in lc for word in ("unity", "vrchat", "blender", "api", "code", "dll", "skill", "db")):
+    if AI_PATTERN.search(lc) or any(
+        word in lc for word in ("unity", "vrchat", "blender", "api", "code", "dll", "skill", "db")
+    ):
         styles.append("technical")
     if kind == "reply":
         styles.append("reply_shaped")
@@ -835,23 +1120,26 @@ def detect_creator_signal(text: str) -> bool:
     return bool(
         AI_PATTERN.search(lc)
         or IMAGEGEN_PATTERN.search(lc)
-        or contains_any(lc, (
-            "unity",
-            "vrchat",
-            "blender",
-            "db",
-            "api",
-            "template",
-            "graph",
-            "github",
-            "code",
-            "script",
-            "workflow",
-            "kohya",
-            "sd-scripts",
-            "gradio",
-            "dll",
-        ))
+        or contains_any(
+            lc,
+            (
+                "unity",
+                "vrchat",
+                "blender",
+                "db",
+                "api",
+                "template",
+                "graph",
+                "github",
+                "code",
+                "script",
+                "workflow",
+                "kohya",
+                "sd-scripts",
+                "gradio",
+                "dll",
+            ),
+        )
     )
 
 
@@ -873,7 +1161,9 @@ def detect_concreteness(text: str, has_media: bool, urls: int) -> str:
         score += 1
     if any(char.isdigit() for char in text):
         score += 1
-    if any(word in text_lc(text) for word in ("東京", "京都", "北海道", "unity", "vrchat", "boj")) or AI_PATTERN.search(text_lc(text)):
+    if any(word in text_lc(text) for word in ("東京", "京都", "北海道", "unity", "vrchat", "boj")) or AI_PATTERN.search(
+        text_lc(text)
+    ):
         score += 1
     if score >= 3:
         return "high"
@@ -901,10 +1191,13 @@ def infer_entities(tweet: dict[str, Any], text: str) -> list[str]:
 
 def build_essence(topic: list[str], function: str, mood: str, creator_signal: bool, kind: str) -> str:
     primary = topic[0] if topic else "misc"
-    primary_phrase = TOPIC_ESSENCE_PHRASES.get(primary, {
-        "ai": "AI/tool behavior",
-        "misc": "general observation",
-    }.get(primary, "general observation"))
+    primary_phrase = TOPIC_ESSENCE_PHRASES.get(
+        primary,
+        {
+            "ai": "AI/tool behavior",
+            "misc": "general observation",
+        }.get(primary, "general observation"),
+    )
     function_phrase = {
         "reply": "reply-shaped reaction",
         "RT": "reshared item",
@@ -931,7 +1224,9 @@ def build_essence(topic: list[str], function: str, mood: str, creator_signal: bo
     return f"{function_phrase} about {primary_phrase} in a {mood_phrase} {creator_phrase}"
 
 
-def build_trait_tags(topic: list[str], function: str, mood: str, creator_signal: bool, self_reference: bool, kind: str) -> list[str]:
+def build_trait_tags(
+    topic: list[str], function: str, mood: str, creator_signal: bool, self_reference: bool, kind: str
+) -> list[str]:
     tags: list[str] = []
     primary = topic[0] if topic else "misc"
     if kind == "reply":
@@ -952,9 +1247,18 @@ def build_trait_tags(topic: list[str], function: str, mood: str, creator_signal:
         for hint in TOPIC_TRAIT_HINTS[primary]:
             if hint not in tags:
                 tags.append(hint)
-    if ("ai" in topic or "unity" in topic or "vrchat-technical" in topic or "ai-imagegen" in topic or "creator-tools" in topic or "vrchat-avatar-mod" in topic) and "tool-aware" not in tags:
+    if (
+        "ai" in topic
+        or "unity" in topic
+        or "vrchat-technical" in topic
+        or "ai-imagegen" in topic
+        or "creator-tools" in topic
+        or "vrchat-avatar-mod" in topic
+    ) and "tool-aware" not in tags:
         tags.append("tool-aware")
-    if ("daily-life" in topic or "sleep-morning" in topic or "weather-mood" in topic or "food-drink" in topic) and "everyday-observation" not in tags:
+    if (
+        "daily-life" in topic or "sleep-morning" in topic or "weather-mood" in topic or "food-drink" in topic
+    ) and "everyday-observation" not in tags:
         tags.append("everyday-observation")
     if function in {"observation", "opinion"}:
         tags.append("observational")
@@ -965,11 +1269,23 @@ def build_trait_tags(topic: list[str], function: str, mood: str, creator_signal:
 
 def build_prompt_seed(topic: list[str], function: str, mood: str, creator_signal: bool) -> str:
     primary = topic[0] if topic else "misc"
-    prompt = TOPIC_PROMPT_FRAGMENTS.get(primary, {
-        "ai": "AI tool surprise",
-        "misc": "short personal observation",
-    }.get(primary, "short personal observation"))
-    if creator_signal and primary not in {"ai", "unity", "vrchat-avatar-mod", "vrchat-events", "vrchat-mobile", "vrchat-social", "vrchat-technical", "vrchat-worlds"}:
+    prompt = TOPIC_PROMPT_FRAGMENTS.get(
+        primary,
+        {
+            "ai": "AI tool surprise",
+            "misc": "short personal observation",
+        }.get(primary, "short personal observation"),
+    )
+    if creator_signal and primary not in {
+        "ai",
+        "unity",
+        "vrchat-avatar-mod",
+        "vrchat-events",
+        "vrchat-mobile",
+        "vrchat-social",
+        "vrchat-technical",
+        "vrchat-worlds",
+    }:
         prompt = f"creator-style {prompt}"
     if function == "process_log":
         prompt = f"process note about {prompt}"
@@ -988,10 +1304,13 @@ def build_prompt_seed(topic: list[str], function: str, mood: str, creator_signal
 
 def build_imagegen_seed(topic: list[str], function: str, mood: str, has_media: bool) -> str:
     primary = topic[0] if topic else "misc"
-    visual = TOPIC_IMAGEGEN_FRAGMENTS.get(primary, {
-        "ai": "a small visual metaphor for an AI tool exceeding expectations",
-        "misc": "a compact scene built from a fleeting daily observation",
-    }.get(primary, "a compact scene built from a fleeting daily observation"))
+    visual = TOPIC_IMAGEGEN_FRAGMENTS.get(
+        primary,
+        {
+            "ai": "a small visual metaphor for an AI tool exceeding expectations",
+            "misc": "a compact scene built from a fleeting daily observation",
+        }.get(primary, "a compact scene built from a fleeting daily observation"),
+    )
     if has_media:
         visual = f"{visual}, grounded in a real posted image"
     if function == "reply":
@@ -1132,7 +1451,9 @@ def build_record(item: dict[str, Any], source_archive_id: str) -> dict[str, Any]
         else visible_text(text)[:180]
     )
     record["reuse_type"] = classify_reuse_type(record)
-    record["quality_flags"] = build_quality_flags(kind, record["classification_confidence"], topic, len(urls), text, owner_signal)
+    record["quality_flags"] = build_quality_flags(
+        kind, record["classification_confidence"], topic, len(urls), text, owner_signal
+    )
     if not record["quality_flags"]:
         record["quality_flags"] = ["clean"]
     record["latent_profile"] = build_latent_profile(record, analysis)
@@ -1173,8 +1494,8 @@ def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
     chronological = sorted(records, key=lambda item: item.get("created_at", ""))
     primary_topics = [item.get("topic", ["misc"])[0] if item.get("topic") else "misc" for item in chronological]
     primary_moods = [item.get("mood", "neutral") for item in chronological]
-    topic_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_topics, primary_topics[1:]) if a and b and a != b)
-    mood_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_moods, primary_moods[1:]) if a and b and a != b)
+    topic_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_topics, primary_topics[1:], strict=False) if a and b and a != b)
+    mood_transitions = Counter(f"{a} -> {b}" for a, b in zip(primary_moods, primary_moods[1:], strict=False) if a and b and a != b)
     creators = sum(1 for record in records if record.get("creator_signal"))
     self_refs = sum(1 for record in records if record.get("self_reference"))
     with_media = sum(1 for record in records if record.get("has_media"))
@@ -1336,7 +1657,7 @@ def build_schema() -> dict[str, Any]:
                     "evidence_text",
                 ],
             },
-        ]
+        ],
     }
 
 
@@ -1351,7 +1672,7 @@ def generate_db(archive_path: Path, output_path: Path) -> dict[str, Any]:
             "name": "tweetsdb",
             "source_archive": str(archive_path),
             "source_archive_id": source_archive_id,
-            "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "generated_at": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
             "record_count": len(records),
             "status": "generated",
             "version": 2,
@@ -1402,11 +1723,14 @@ def matches(record: dict[str, Any], topic: str | None, mood: str | None, functio
     return True
 
 
-def build_idea(db: dict[str, Any], topic: str | None, mood: str | None, function: str | None, limit: int) -> dict[str, Any]:
+def build_idea(
+    db: dict[str, Any], topic: str | None, mood: str | None, function: str | None, limit: int
+) -> dict[str, Any]:
     records = db["records"]
     long_records = [record for record in records if len(visible_text(record.get("text", ""))) > 20]
     pool = long_records or records
     filtered = [record for record in pool if matches(record, topic, mood, function)]
+
     def rank(record: dict[str, Any]) -> tuple[int, float]:
         primary = (record.get("topic") or [""])[0]
         return (1 if topic and primary == topic else 0, score_record(record))
