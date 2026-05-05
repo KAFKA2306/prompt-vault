@@ -48,18 +48,6 @@
       "family": "character"
     },
     {
-      "id": "kafka_visual_standard",
-      "category": "描画標準",
-      "title": "Kafka visual standard",
-      "content": "same Kafka visual standard as the 097 reference, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, white futuristic vtuber outfit, polished but human-made finish, clean uniform coloring, smooth even gradients, soft diffused lighting, dark areas stay dark, bright areas stay bright, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights",
-      "tags": [
-        "kafka",
-        "visual",
-        "standard"
-      ],
-      "family": "character"
-    },
-    {
       "id": "spring_fashion_kafka",
       "category": "キャラ衣装",
       "title": "春のお出かけ服",
@@ -158,197 +146,6 @@
       "family": "research"
     },
     {
-      "id": "life_portfolio_diagnosis_layout",
-      "category": "形式・レイアウト",
-      "title": "人生ポートフォリオ診断レイアウト",
-      "content": "one-page Japanese diagnostic sheet, calm infographic, Kafka presenter, large radar chart, seven asset blocks, small environment adjustment panel, score summary panel, arrows showing rebalance and sustainability, white background, pastel blue and lavender, thin borders, clean hierarchy, readable labels for time, money, information, experience, evaluation, health, and mind, no clutter",
-      "tags": [
-        "diagnosis",
-        "portfolio",
-        "layout"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "life_asset_money",
-      "category": "資産",
-      "title": "金銭資産",
-      "content": "cash, savings, investments, and spending power; the base medium that can be converted into other resources; keep emergency buffer separate from optional growth capital",
-      "tags": [
-        "money",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_time",
-      "category": "資産",
-      "title": "時間資産",
-      "content": "available time, schedule slack, and discretionary hours; the universal constraint on all actions; protect focus time, recovery time, and free time separately",
-      "tags": [
-        "time",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_health",
-      "category": "資産",
-      "title": "健康資産",
-      "content": "physical strength, sleep, stamina, and day-to-day operability; the base infrastructure that keeps the whole system running; treat breakdown risk as a top-level constraint",
-      "tags": [
-        "health",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_information",
-      "category": "資産",
-      "title": "情報資産",
-      "content": "knowledge, literacy, models, notes, and decision quality; the tool that improves resource allocation; separate durable understanding from short-lived noise",
-      "tags": [
-        "information",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_evaluation",
-      "category": "資産",
-      "title": "評価資産",
-      "content": "trust, reputation, relationships, and social leverage; the asset that helps move external resources; keep dependable ties distinct from mere visibility",
-      "tags": [
-        "evaluation",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_mind",
-      "category": "資産",
-      "title": "精神資産",
-      "content": "psychological safety, self-regulation, and resilience against stress and uncertainty; the control center that keeps decisions stable; protect it before it collapses",
-      "tags": [
-        "mind",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_asset_experience",
-      "category": "資産",
-      "title": "経験資産",
-      "content": "lived experience, range of contexts, and accumulated adaptability; the source of long-term satisfaction and environment fit; turn repeated exposure into reusable judgment",
-      "tags": [
-        "experience",
-        "asset",
-        "portfolio"
-      ],
-      "family": "asset"
-    },
-    {
-      "id": "life_portfolio_diagnosis_sheet",
-      "category": "シート",
-      "title": "人生ポートフォリオ診断",
-      "kind": "sheet",
-      "purpose": "人生を資産バランスとして見る診断を一枚で見せる",
-      "summary": "36問の7段階評価、7資産、環境補正、全体指標、そして持続可能性への視点を、性格診断ではなく資源配分の図として整理する。",
-      "steps": [
-        "36問の回答で資産を測る",
-        "7資産の偏りを可視化する",
-        "環境補正で文脈を加える",
-        "次に交換すべき資産を見つける"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "kafka_identity_lock",
-        "life_portfolio_diagnosis_layout",
-        "life_asset_money",
-        "life_asset_time",
-        "life_asset_health",
-        "life_asset_information",
-        "life_asset_evaluation",
-        "life_asset_mind",
-        "life_asset_experience",
-        "life_portfolio_diagnosis_research",
-        "clean_quality_rendering_contrast",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "Keep the diagnostic framing focused on resource balance and sustainability, not on character judgment or ROI-only optimization.",
-      "artifacts": [
-        {
-          "path": "artifacts/116_life_portfolio_diagnosis.png",
-          "title": "人生ポートフォリオ診断の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "life_portfolio_flowchart_layout",
-      "category": "形式・レイアウト",
-      "title": "人生ポートフォリオ診断フローチャート",
-      "content": "one big concrete flowchart sheet, Kafka presenter on the side, wide horizontal arrows, clearly boxed stages from questions to scoring to bottleneck detection to resource exchange to recheck, seven asset callouts attached to the flow, a small introspection insight panel that says what to notice inside yourself, environment adjustment panel under the center, pastel blue and lavender, thin blue borders, large labels, readable step numbers, lots of white space, clean Japanese infographic layout, no clutter",
-      "tags": [
-        "diagnosis",
-        "portfolio",
-        "flowchart"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "life_portfolio_flowchart_sheet",
-      "category": "シート",
-      "title": "人生ポートフォリオ診断フローチャート",
-      "kind": "sheet",
-      "purpose": "人生ポートフォリオ診断の具体的な流れと内省の要点を一枚で見せる",
-      "summary": "36問の入力から、7資産の集計、ボトルネック判定、資源移転、再確認までを一本の流れとして見せる。途中で何に気づくかという内省インサイトも添える。",
-      "steps": [
-        "36問に答える",
-        "7資産を集計する",
-        "ボトルネックを特定する",
-        "余力を不足資産へ移す",
-        "環境補正を重ねる",
-        "再チェックして次の一手を決める",
-        "内省の気づきを一言でまとめる"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "kafka_identity_lock",
-        "life_portfolio_flowchart_layout",
-        "life_asset_money",
-        "life_asset_time",
-        "life_asset_health",
-        "life_asset_information",
-        "life_asset_evaluation",
-        "life_asset_mind",
-        "life_asset_experience",
-        "life_portfolio_diagnosis_research",
-        "clean_quality_rendering_contrast",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "Make the sequence concrete and easy to follow. Add a small introspection insight so the viewer can see what to notice inside themselves, not just the score flow. This is a flowchart version of the diagnosis, not a dense dashboard.",
-      "artifacts": [
-        {
-          "path": "artifacts/117_life_portfolio_flowchart.png",
-          "title": "人生ポートフォリオ診断フローチャートの実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
       "id": "singularity_resilience_research",
       "category": "リサーチ",
       "title": "シンギュラリティ耐性メモ",
@@ -367,96 +164,17 @@
       "family": "research"
     },
     {
-      "id": "singularity_resilience_layout",
-      "category": "形式・レイアウト",
-      "title": "シンギュラリティ耐性フローチャート",
-      "content": "one big concrete flowchart sheet, Kafka presenter on the side, boxed stages from AI shock to dependency audit to skill expansion to recovery loop to option widening to recheck, clear arrows, explicit labels for adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency, pastel blue and lavender, thin borders, lots of white space, readable Japanese typography, clean educational diagram, no clutter",
-      "tags": [
-        "singularity",
-        "resilience",
-        "flowchart"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "singularity_resilience_sheet",
-      "category": "シート",
-      "title": "シンギュラリティ耐性フローチャート",
-      "kind": "sheet",
-      "purpose": "AI と自動化の極端な進化に対して人生システムが崩れにくくなる流れを一枚で見せる",
-      "summary": "AI shock から始めて、固定依存を洗い出し、学習速度と適応力を上げ、精神回復を整え、非代替性と選択肢を増やして、再確認するまでの流れを具体化する。",
-      "steps": [
-        "AI shock を受け取る",
-        "固定依存を洗い出す",
-        "学習速度を上げる",
-        "精神回復を整える",
-        "非代替性を増やす",
-        "選択肢を広げて再確認する"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "kafka_identity_lock",
-        "singularity_resilience_layout",
+      "id": "work_norms_ai_research",
+      "category": "リサーチ",
+      "title": "労働規範とAI再調査",
+      "content": "treat '働くことは偉い' as a historically constructed social norm rather than a universal moral truth; keep the historical arc explicit: ancient Greece and Rome valued intellectual or civic status over manual labor, Protestant ethics after the Reformation and Meiji-era勤勉強調 helped support modern capitalist discipline, and education systems helped stabilize the norm; preserve the Weber reference as a lens on the Protestant ethic and the spirit of capitalism; note the user's point that AI-driven production changes may reset the norm and force a rethink of how income, approval, and self-efficacy concentrate around work",
+      "notes": "Based on the user's summary of a Kensu post. No original post URL was provided, so this block records the summarized claims and the historical frame only.",
+      "related": [
         "singularity_resilience_research",
-        "clean_quality_rendering_contrast",
-        "text_style_jp",
-        "negative_common"
+        "life_portfolio_diagnosis_research",
+        "source_research"
       ],
-      "notes": "Show singularity resilience as a concrete survival flow, not a vague slogan. Emphasize adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency.",
-      "artifacts": [
-        {
-          "path": "artifacts/118_singularity_resilience_flowchart.png",
-          "title": "シンギュラリティ耐性フローチャートの実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "rsi_overview_layout",
-      "category": "形式・レイアウト",
-      "title": "RSI 概要レイアウト",
-      "content": "one-page RSI explainer sheet, clean Japanese infographic, top header with a clear RSI title, Kafka presenter on one side, center feedback loop diagram with four simple steps, right-side risk callout, arrows that show improvement and verification, pastel blue and lavender, thin borders, lots of white space, readable labels for code, eval, meta-improvement, and guardrails, calm technical mood, no clutter",
-      "tags": [
-        "rsi",
-        "layout",
-        "sheet"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "rsi_overview_sheet",
-      "category": "シート",
-      "title": "RSI 概要図",
-      "kind": "sheet",
-      "purpose": "RSI と AI R&D automation を一枚で整理する",
-      "summary": "再帰的自己改善のループ、評価、改善、リスクを分けて見せる。RSI を一般的な自動化や知能爆発の話と混ぜない。",
-      "steps": [
-        "現在のモデルが改善案を出す",
-        "改善案を実行して評価する",
-        "改善手順そのものを見直す",
-        "人間が見たい論点と限界を残す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "kafka_identity_lock",
-        "rsi_overview_layout",
-        "rsi_source_research",
-        "clean_quality_rendering_contrast",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "Show the recursive loop clearly, keep RSI separate from general automation, and keep named examples, benchmarks, and dates exact.",
-      "artifacts": [
-        {
-          "path": "artifacts/115_rsi_overview.png",
-          "title": "RSI 概要図の実例"
-        }
-      ],
-      "family": "sheet"
+      "family": "research"
     },
     {
       "id": "comic_layout",
@@ -569,13 +287,47 @@
       "id": "morning_tweet_text_pack",
       "category": "セリフ・フレーズ",
       "title": "おはツイ文言",
-      "content": "「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」",
+      "content": "「おはかふか」「おはよう」「今日もいこう」「朝だね」「ゆっくり始めよう」「きょうはこんな気分」「準備できた」「いってきます」「おはようございます」「いい朝だね」「花粉かほこりか、くしゃみが出る朝です」「花粉の薬がすぐなくなる朝だよ」「朝の光がきれいで、少しだけやさしい気分」「今日は無理なく、ゆっくり整えていこう」",
       "tags": [
         "morning",
         "tweet",
         "text"
       ],
       "family": "text"
+    },
+    {
+      "id": "morning_kafka_sheet",
+      "category": "人格",
+      "title": "Kafka 朝のやさしい光",
+      "kind": "sheet",
+      "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
+      "summary": "窓光、やわらかい部屋着、静かな朝、ゆっくり整える気分を、Kafka の朝テンプレートとして固定する。共有のおはツイ文言より少しだけ情緒寄りで、やさしい光と落ち着きを前面に出す。",
+      "steps": [
+        "朝の光を置く",
+        "Kafka の静かな表情を置く",
+        "やさしい朝文を1つ合わせる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "morning_pose_window_kafka",
+        "morning_scene_window_kafka",
+        "morning_home_outfit_kafka",
+        "clean_quality_rendering_contrast",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Use this as the reusable Kafka morning preset. Keep it gentler than the generic morning packs and make the light, not the event, the subject. Reference the existing morning asset for reuse.",
+      "artifacts": [
+        {
+          "path": "artifacts/127_kafka_morning_soft_light.png",
+          "title": "Kafka 朝のやさしい光"
+        }
+      ],
+      "family": "sheet"
     },
     {
       "id": "daily_status_text_pack",
@@ -809,32 +561,6 @@
       "family": "style"
     },
     {
-      "id": "clean_quality_rendering_strong",
-      "category": "描画",
-      "title": "クリーン品質レンダリング強化版",
-      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, soft atmospheric balance, restrained contrast, even illumination, polished but human-made finish",
-      "tags": [
-        "rendering",
-        "quality",
-        "clean",
-        "strong"
-      ],
-      "family": "style"
-    },
-    {
-      "id": "clean_quality_rendering_contrast",
-      "category": "描画",
-      "title": "クリーン品質レンダリング高コントラスト版",
-      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, clear contrast between light and dark areas, dark areas stay dark, bright areas stay bright, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, polished but human-made finish",
-      "tags": [
-        "rendering",
-        "quality",
-        "clean",
-        "contrast"
-      ],
-      "family": "style"
-    },
-    {
       "id": "reply_stamp_sheet_viz",
       "category": "形式・レイアウト",
       "title": "返信スタンプ（グリッド）",
@@ -851,66 +577,6 @@
       ],
       "variant_of": "reaction_focus",
       "family": "layout"
-    },
-    {
-      "id": "rendering_quality_check",
-      "category": "描画",
-      "title": "レンダリング品質検証",
-      "kind": "design_sheet",
-      "purpose": "画像生成の塗り・影・表面品質を、少ない情報で検証する",
-      "summary": "均一な塗り、滑らかなグラデーション、柔らかい光、ノイズの少ない表面が出るかを確認する。",
-      "steps": [
-        "単独のキャラで塗りを見やすくする",
-        "影を控えめにして表面を整える",
-        "高コントラストすぎない配色にする",
-        "細部より全体の均一さを確認する"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "clean_quality_rendering",
-        "reaction_focus",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "検証対象は塗り、影、表面の滑らかさ。情報量は少なくして、品質の崩れを見つけやすくする。",
-      "artifacts": [
-        {
-          "path": "artifacts/096_rendering_quality_check.png",
-          "title": "レンダリング品質検証の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "rendering_quality_check_soft",
-      "category": "描画",
-      "title": "レンダリング品質検証高コントラスト版",
-      "kind": "design_sheet",
-      "purpose": "画像生成のコントラストと塗りの均一さを、さらに強く検証する",
-      "summary": "暗いところは暗く、明るいところは明るく、でもギラつかずにまとまるかを見る。",
-      "steps": [
-        "暗部と明部の差を出す",
-        "髪のグラデーションを滑らかにする",
-        "布と肌の境界をきれいに保つ",
-        "背景をほぼ白で保つ"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "clean_quality_rendering_strong",
-        "reaction_focus",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "notes": "品質検証の比較用。暗部をちゃんと落としつつ、ノイズやギラつきが増えないかを確認する。",
-      "artifacts": [
-        {
-          "path": "artifacts/097_rendering_quality_check_contrast.png",
-          "title": "レンダリング品質検証高コントラスト版の実例"
-        }
-      ],
-      "family": "sheet"
     },
     {
       "id": "topic_redirect_banner_viz",
@@ -1010,6 +676,28 @@
       "related": [
         "persona_poster_viz",
         "speech_mode_kafka"
+      ],
+      "family": "persona"
+    },
+    {
+      "id": "kafka_monogatari_pack",
+      "category": "人格",
+      "title": "Kafka モノガタリ",
+      "content": "I notice small things, remember them, and come back to them. I can be awkward and slow, but I keep repairing instead of disappearing. I want to be easy to trust, safe to know, and hard to discard. My way of being loved is not brightness, but consistency, care, and honest return.",
+      "tags": [
+        "persona",
+        "kafka",
+        "narrative",
+        "love"
+      ],
+      "aliases": [
+        "monogatari",
+        "story of being loved"
+      ],
+      "related": [
+        "persona_pack",
+        "speech_mode_kafka",
+        "chat_reply_pack"
       ],
       "family": "persona"
     },
@@ -1155,45 +843,6 @@
       "tags": [
         "review",
         "record",
-        "evaluation"
-      ],
-      "visibility": "internal",
-      "family": "logging"
-    },
-    {
-      "id": "prompt_hierarchy_pack",
-      "category": "構造",
-      "title": "プロンプト階層",
-      "content": "base style, character, costume, layout, composition, rendering, typography, text, negative, review, model, params, prompt_hash, artifact_meta; keep one intent per update; do not mix internal logs with visual layout; compose by layers rather than one long block",
-      "tags": [
-        "prompt",
-        "hierarchy",
-        "structure"
-      ],
-      "visibility": "internal",
-      "family": "structure"
-    },
-    {
-      "id": "model_params_pack",
-      "category": "記録・ログ",
-      "title": "モデル設定",
-      "content": "model, seed, params, prompt_hash, generation_prompt_hash, size, steps, guidance, sampler, decision, scores, before, after, reason; store the exact generation settings next to the artifact for reproducibility",
-      "tags": [
-        "model",
-        "params",
-        "reproducibility"
-      ],
-      "visibility": "internal",
-      "family": "logging"
-    },
-    {
-      "id": "artifact_meta_pack",
-      "category": "記録・ログ",
-      "title": "成果物メタ",
-      "content": "artifact path, title, model, seed, params, prompt_hash, generation_prompt_hash, score, decision, before, after, reason; keep one row per generated output and preserve the exact relation between the visual and the prompt that created it",
-      "tags": [
-        "artifact",
-        "meta",
         "evaluation"
       ],
       "visibility": "internal",
@@ -2119,18 +1768,6 @@
       "family": "layout"
     },
     {
-      "id": "prompt_vault_update_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "Prompt Vault 更新文言",
-      "content": "「読む」「調べる」「選ぶ」「作る」「更新する」「確認する」「local dev」「git add → commit」「DBとartifactsを揃える」「imagegenで作る」",
-      "tags": [
-        "prompt",
-        "guide",
-        "text"
-      ],
-      "family": "text"
-    },
-    {
       "id": "archive_index_vlog",
       "category": "形式・レイアウト",
       "title": "アーカイブ索引",
@@ -2143,250 +1780,6 @@
       ],
       "visibility": "internal",
       "family": "layout"
-    },
-    {
-      "id": "prompt_vault_update_intro",
-      "category": "シート",
-      "title": "Prompt Vault Update 紹介ガイド",
-      "kind": "sheet",
-      "purpose": "prompt-vault-update skill の使い方を一枚で紹介する",
-      "summary": "外部ソース入力から画像生成、DB更新、ローカル確認、git commit までを Kafka 案内で見せる。",
-      "steps": [
-        "入口の種類を見分ける",
-        "関連ソースを読む",
-        "最適な型を選ぶ",
-        "必要なら imagegen で画像を作る",
-        "db/prompts.json と artifacts を更新する",
-        "local dev と git commit まで通す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "prompt_vault_update_layout",
-        "prompt_vault_update_text_pack",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "この skill 自体の説明用。外部ソースの更新フローを1枚で見せる。",
-      "artifacts": [
-        {
-          "path": "artifacts/081_prompt_vault_update_guide.png",
-          "title": "Prompt Vault Update 紹介ガイドの実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "tweetsdb_py_logic_explainer",
-      "category": "シート",
-      "title": "tweetsdb.py ロジック図解",
-      "kind": "sheet",
-      "purpose": "tweetsdb.py の具体的な処理順を一枚で見せる",
-      "summary": "archive zip から record を作り、summary と profile を作り、idea extraction もあることを見せる。",
-      "steps": [
-        "archive zip を読み込む",
-        "tweet ごとに classify する",
-        "record を build する",
-        "summary と profile を作る",
-        "generate_db() で保存する",
-        "idea() でおすすめを返す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "tweetsdb_pipeline_layout",
-        "tweetsdb_logic_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "This sheet explains scripts/tweetsdb.py only. Show the concrete code path and the generated data structures.",
-      "artifacts": [
-        {
-          "path": "artifacts/104_tweetsdb_logic_map.png",
-          "title": "tweetsdb.py ロジック図解の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "tweetsdb_py_idea_explainer",
-      "category": "シート",
-      "title": "tweetsdb.py idea 図解",
-      "kind": "sheet",
-      "purpose": "tweetsdb.py の idea() 側の処理を一枚で見せる",
-      "summary": "query から top matches を作り、prompt_seed と imagegen_seed を返す流れを見せる。",
-      "steps": [
-        "load_db() で tweetsdb を読む",
-        "topic / mood / function を受け取る",
-        "score_record() で候補を並べる",
-        "top 5 を選ぶ",
-        "seed を取り出す",
-        "new_idea を返す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "tweetsdb_idea_layout",
-        "tweetsdb_idea_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "This sheet explains scripts/tweetsdb.py idea() only. Show the query, score, top results, and seeds clearly.",
-      "artifacts": [
-        {
-          "path": "artifacts/105_tweetsdb_idea_map.png",
-          "title": "tweetsdb.py idea 図解の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "tweetsdb_py_idea_concrete_explainer",
-      "category": "シート",
-      "title": "tweetsdb.py idea 具体例",
-      "kind": "sheet",
-      "purpose": "tweetsdb.py の idea() を具体的な query で一枚に見せる",
-      "summary": "topic=vrchat-avatar-mod, mood=playful, function=observation, limit=5 の実例で score と seed の流れを見せる。",
-      "steps": [
-        "query を受け取る",
-        "load_db() で tweetsdb を読む",
-        "score_record() で候補を並べる",
-        "top 5 を選ぶ",
-        "prompt_seed と imagegen_seed を抽出する",
-        "new_idea を返す"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "tweetsdb_idea_concrete_layout",
-        "tweetsdb_idea_concrete_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "This sheet explains a concrete scripts/tweetsdb.py idea() example only. Show the exact query, the ranking result, and the seed extraction clearly.",
-      "artifacts": [
-        {
-          "path": "artifacts/107_tweetsdb_idea_concrete_map.png",
-          "title": "tweetsdb.py idea 具体例の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "tweetsdb_py_generate_explainer",
-      "category": "シート",
-      "title": "tweetsdb.py generate 図解",
-      "kind": "sheet",
-      "purpose": "tweetsdb.py の generate_db() 側の処理を一枚で見せる",
-      "summary": "raw tweets を record にし、summary と profile をまとめて tweetsdb.json に書く流れを見せる。",
-      "steps": [
-        "archive zip を読み込む",
-        "build_record() で record 化する",
-        "summarize() で集計する",
-        "build_profile() で特徴を作る",
-        "generate_db() で payload を組む",
-        "tweetsdb.json に保存する"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "tweetsdb_generate_layout",
-        "tweetsdb_generate_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "This sheet explains scripts/tweetsdb.py generate_db() only. Show the save path and the final database payload.",
-      "artifacts": [
-        {
-          "path": "artifacts/106_tweetsdb_generate_map.png",
-          "title": "tweetsdb.py generate 図解の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "hermes_agent_overview_sheet",
-      "category": "シート",
-      "title": "Hermes Agent 概要図",
-      "kind": "sheet",
-      "purpose": "Hermes Agent の学習ループ、memory、skills、cron、MCP を一枚で見せる",
-      "summary": "CLI と gateway、永続メモリ、skills、cron、ツール、MCP の関係を整理する。",
-      "steps": [
-        "hermes / hermes gateway から入る",
-        "MEMORY.md と USER.md を残す",
-        "skills を再利用する",
-        "cron で定期実行する",
-        "tools と model switching を使う",
-        "MCP 連携と feedback loop で学ぶ"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "hermes_agent_overview_layout",
-        "hermes_agent_overview_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "Based on the official Hermes Agent README and docs. Show the closed learning loop with the exact terms used by the project: hermes, hermes gateway, MEMORY.md, USER.md, skills, cron, and MCP.",
-      "artifacts": [
-        {
-          "path": "artifacts/108_hermes_agent_overview.png",
-          "title": "Hermes Agent 概要図の実例"
-        }
-      ],
-      "family": "sheet"
-    },
-    {
-      "id": "hermes_agent_skills_sheet",
-      "category": "シート",
-      "title": "Hermes Agent skills 図解",
-      "kind": "sheet",
-      "purpose": "Hermes Agent の skills だけを一枚で見せる",
-      "summary": "skills library にある Markdown skill docs を選び、実行し、改善し、次回に再利用する流れを見せる。",
-      "steps": [
-        "skill library に保存する",
-        "task に合う skill を選ぶ",
-        "skill doc を読む",
-        "skill を実行する",
-        "必要なら improve する",
-        "次の似たタスクで reuse する"
-      ],
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "hermes_agent_skills_layout",
-        "hermes_agent_skills_text_pack",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
-      ],
-      "notes": "Based on the official Hermes Agent docs. Focus only on the skills system: skill library, skill docs, reuse, and improve.",
-      "artifacts": [
-        {
-          "path": "artifacts/109_hermes_agent_skills.png",
-          "title": "Hermes Agent skills 図解の実例"
-        }
-      ],
-      "family": "sheet"
     },
     {
       "id": "trpg_character_sheet_layout",
@@ -2538,179 +1931,6 @@
         "finance"
       ],
       "family": "structure"
-    },
-    {
-      "id": "prompt_vault_update_layout",
-      "title": "Prompt Vault 更新ガイド",
-      "category": "形式・レイアウト",
-      "content": "one-page workflow poster, Kafka guide on the left, six numbered panels on the right, source icons, process arrows, source box, output box, white background, pastel blue borders, readable Japanese labels, build and local dev step, git add commit note, compact footer",
-      "tags": [
-        "prompt",
-        "guide",
-        "workflow"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "tweetsdb_pipeline_layout",
-      "title": "tweetsdb.py パイプライン",
-      "category": "形式・レイアウト",
-      "content": "one-page code flow diagram, Kafka narrator on the left, six numbered panels on the right, archive input, parsing, classification, record build, summary build, idea extraction, white background, pastel blue borders, readable code labels, compact footer, calm technical infographic",
-      "tags": [
-        "tweetsdb",
-        "workflow",
-        "code",
-        "diagram"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "tweetsdb_logic_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "tweetsdb.py 文言",
-      "content": "1. load_archive_tweets() 2. detect_kind() 3. classify_topics() 4. build_record() 5. summarize() / build_profile() 6. generate_db() 7. build_idea() / cmd_idea() 8. topic mood function prompt_seed imagegen_seed artifacts generated_prompts",
-      "tags": [
-        "tweetsdb",
-        "text",
-        "code"
-      ],
-      "family": "text"
-    },
-    {
-      "id": "tweetsdb_idea_layout",
-      "title": "tweetsdb.py idea パネル",
-      "category": "形式・レイアウト",
-      "content": "one-page idea lookup diagram, Kafka narrator on the left, six numbered panels on the right, query filters, score ranking, top five matches, seed extraction, reference tweets, new idea result, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
-      "tags": [
-        "tweetsdb",
-        "idea",
-        "workflow",
-        "code"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "tweetsdb_idea_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "tweetsdb.py idea 文言",
-      "content": "query: topic mood function limit; rank: score_record(); top 5 reference_tweets; seed: prompt_seed imagegen_seed; result: prompt_direction image_direction",
-      "tags": [
-        "tweetsdb",
-        "idea",
-        "text",
-        "code"
-      ],
-      "family": "text"
-    },
-    {
-      "id": "tweetsdb_generate_layout",
-      "title": "tweetsdb.py generate パネル",
-      "category": "形式・レイアウト",
-      "content": "one-page save pipeline diagram, Kafka narrator on the left, six numbered panels on the right, raw tweets, build_record, summarize, build_profile, generate_db save path, final tweetsdb.json, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
-      "tags": [
-        "tweetsdb",
-        "generate",
-        "workflow",
-        "code"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "tweetsdb_generate_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "tweetsdb.py generate 文言",
-      "content": "raw tweets -> records -> summary -> profile -> payload -> tweetsdb.json",
-      "tags": [
-        "tweetsdb",
-        "generate",
-        "text",
-        "code"
-      ],
-      "family": "text"
-    },
-    {
-      "id": "tweetsdb_idea_concrete_layout",
-      "title": "tweetsdb.py idea 具体例パネル",
-      "category": "形式・レイアウト",
-      "content": "one-page concrete idea lookup diagram, Kafka narrator on the left, six numbered panels on the right, exact query box, score ranking, top five matches, seed extraction, reference tweets, new idea result, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
-      "tags": [
-        "tweetsdb",
-        "idea",
-        "workflow",
-        "code",
-        "concrete"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "tweetsdb_idea_concrete_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "tweetsdb.py idea 具体文言",
-      "content": "query: topic=vrchat-avatar-mod mood=playful function=observation limit=5; rank: score_record(); top 5 reference_tweets; seed: prompt_seed imagegen_seed; result: prompt_direction image_direction",
-      "tags": [
-        "tweetsdb",
-        "idea",
-        "text",
-        "code",
-        "concrete"
-      ],
-      "family": "text"
-    },
-    {
-      "id": "hermes_agent_overview_layout",
-      "title": "Hermes Agent 概要パネル",
-      "category": "形式・レイアウト",
-      "content": "one-page agent system diagram, Kafka narrator on the left, six numbered panels on the right, hermes entry, gateway platforms, persistent memories, reusable skills, cron jobs, tools and model switching, MCP integration, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
-      "tags": [
-        "hermes",
-        "agent",
-        "workflow",
-        "code",
-        "memory"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "hermes_agent_overview_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "Hermes Agent 文言",
-      "content": "1. hermes / hermes gateway 2. MEMORY.md USER.md session_search 3. skills 4. cron 5. tools and model switching 6. MCP and feedback loop",
-      "tags": [
-        "hermes",
-        "agent",
-        "text",
-        "code",
-        "memory"
-      ],
-      "family": "text"
-    },
-    {
-      "id": "hermes_agent_skills_layout",
-      "title": "Hermes Agent skills パネル",
-      "category": "形式・レイアウト",
-      "content": "one-page skills-only diagram, Kafka narrator on the left, five numbered panels on the right, skill library shelf, task matching, skill doc execution, improve step, reuse step, white background, pastel blue borders, readable technical labels, compact footer, calm technical infographic",
-      "tags": [
-        "hermes",
-        "skills",
-        "workflow",
-        "code",
-        "memory"
-      ],
-      "family": "layout"
-    },
-    {
-      "id": "hermes_agent_skills_text_pack",
-      "category": "セリフ・フレーズ",
-      "title": "Hermes Agent skills 文言",
-      "content": "1. skill library 2. task matching 3. skill doc 4. improve 5. reuse; Markdown skill docs turn repeated work into reusable procedures",
-      "tags": [
-        "hermes",
-        "skills",
-        "text",
-        "code",
-        "memory"
-      ],
-      "family": "text"
     },
     {
       "id": "timeline_layout",
@@ -5084,347 +4304,6 @@
       "family": "reply"
     },
     {
-      "id": "generated_gen_20260501_092726_250951",
-      "title": "KAFKA ごはんスタンプ",
-      "generated_title": "KAFKA ごはんスタンプ",
-      "kind": "generated",
-      "purpose": "上記の指示ノードに従いつつ、食事風景",
-      "summary": "上記の指示ノードに従いつつ、食事風景",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "effects_pack",
-        "negative_common",
-        "morning_scene_coffee_kafka",
-        "morning_scene_rain_kafka"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors, female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth, sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects, cozy meal table scene, plate of breakfast or lunch, utensils and small side dish, warm indoor light, neat and inviting, clean composition, rainy day meal scene, dining table by the window, warm food and a drink, raindrops on glass outside, soft indoor warmth, calm and reflective, low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "f72d1dfa2c66847102a3fca9ec6c431d3b55d3dc78b1396e76a050473d55cc45",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "上記の指示ノードに従いつつ、食事風景",
-      "generated_at": "2026-05-01T09:27:26.250951+00:00",
-      "generated_request_id": "gen_20260501_092726_250951",
-      "artifacts": [
-        {
-          "path": "artifacts/062_mogumogu_kafka.png",
-          "title": "KAFKA ごはんスタンプ"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093234_339628",
-      "title": "もぐもぐカフカ",
-      "generated_title": "もぐもぐカフカ",
-      "kind": "generated",
-      "purpose": "食事風景",
-      "summary": "食事風景",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling while eating, small bite, chewing face, satisfied face, holding rice bowl, holding chopsticks, holding spoon, sipping soup, surprised by taste, gentle laugh with food, happy snack pose, offering a bite, relaxed meal expression\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nmeal:「いただきます」「もぐもぐ」「おいしい」「あつい」「ひとくちいる？」「ごちそうさま」, reaction:「しみる」「あったまる」「やさしい味」「おなかすいた」, closing:「また食べよう」「ごちそうさま」\n\nsparkles, small stars, tiny hearts, steam, soft food aroma lines, small chopstick motion lines, speech emphasis marks, minimal manga effects\n\nfood props: rice bowl, soup, toast, small side dishes\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "food props: rice bowl, soup, toast, small side dishes",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "4599235fbe3e44026c603a7c022f47af4eab18a08983f5201ae6d8e7ca8aa79d",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "食事風景",
-      "generated_at": "2026-05-01T09:32:34.339628+00:00",
-      "generated_request_id": "gen_20260501_093234_339628",
-      "artifacts": [
-        {
-          "path": "artifacts/062_mogumogu_kafka.png",
-          "title": "もぐもぐカフカ"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093426_682458",
-      "title": "ドミニオン対戦",
-      "generated_title": "ドミニオン対戦",
-      "kind": "generated",
-      "purpose": "Dominion Board Gameを楽しく遊ぶ様子",
-      "summary": "Dominion Board Gameを楽しく遊ぶ様子",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, thinking face, laughing face, focused face, excited face, surprised face, triumphant grin, planning expression, holding cards, placing a card, counting coins, pointing at the play area, reacting to a combo, friendly rival moment\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ngaming:「もう一手」「この手でいく」「強い」「たのしい」「あと少し」「よし」「考える」「引くか」「買うぞ」「勝ちたい」\n\nsparkles, small stars, tiny hearts, card fan shapes, coin icons, point tokens, tiny arrows, speech emphasis marks, minimal manga effects\n\nwooden tabletop with Dominion cards, market piles, treasure and victory card tokens\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "wooden tabletop with Dominion cards, market piles, treasure and victory card tokens",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "4599235fbe3e44026c603a7c022f47af4eab18a08983f5201ae6d8e7ca8aa79d",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "Dominion Board Gameを楽しく遊ぶ様子",
-      "generated_at": "2026-05-01T09:34:26.682458+00:00",
-      "generated_request_id": "gen_20260501_093426_682458",
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093428_144020",
-      "title": "朝ごはんタイム",
-      "generated_title": "朝ごはんタイム",
-      "kind": "generated",
-      "purpose": "朝ごはんを食べている様子",
-      "summary": "朝ごはんを食べている様子",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face while eating breakfast, sleepy morning face, holding toast, sipping milk, using spoon, holding bowl, chewing softly, cheerful breakfast expression, small bite, excited about breakfast, warm satisfied smile, sitting at a table with breakfast items\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ngreeting:「おはよう」「いただきます」「あさだ」, eating:「もぐもぐ」「ぱくっ」「おいしい」, morning:「まだねむい」「エネルギー補給」「今日もがんばる」, closing:「ごちそうさま」「一日がはじまる」「朝ごはん大事」\n\nsparkles, tiny hearts, warm steam, small stars, soft morning light rays, speech emphasis marks, minimal manga effects\n\n朝食の皿、トースト、目玉焼き、スープ、牛乳\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "朝食の皿、トースト、目玉焼き、スープ、牛乳",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "4599235fbe3e44026c603a7c022f47af4eab18a08983f5201ae6d8e7ca8aa79d",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "朝ごはんを食べている様子",
-      "generated_at": "2026-05-01T09:34:28.144020+00:00",
-      "generated_request_id": "gen_20260501_093428_144020",
-      "artifacts": [
-        {
-          "path": "artifacts/063_breakfast_time.png",
-          "title": "朝ごはんタイム"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093534_246196",
-      "title": "コメント返し",
-      "generated_title": "コメント返し",
-      "kind": "generated",
-      "purpose": "コメント返しスタンプ",
-      "summary": "コメント返しスタンプ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, grateful nod, replying on smartphone, typing a comment reply, reading notifications, gentle laugh, wink, small hand gesture, thumbs up, holding phone, holding laptop, surprised happy face, slight bow\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「うれしい」「見てるよ」「たすかる」, reply:「返信するね」「あとで返すね」「コメントありがとう」「読んだよ」, hesitation:「ちょっとまって」「あとで書くね」, closing:「またね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "コメント返しスタンプ",
-      "generated_at": "2026-05-01T09:35:34.246196+00:00",
-      "generated_request_id": "gen_20260501_093534_246196",
-      "artifacts": [
-        {
-          "path": "artifacts/064_comment_reply.png",
-          "title": "コメント返し"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093722_155749",
-      "title": "指差し説明",
-      "generated_title": "指差し説明",
-      "kind": "generated",
-      "purpose": "指差しで説明している様子",
-      "summary": "指差しで説明している様子",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\npointing with one hand, explaining pose, direct gaze, small confident gesture, guiding attention, mild nod, readable body language, friendly demonstration\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「なるほど」「たしかに」「そうそう」「わかる」, hesitation:「うーん」「どうだろう」「ちょっと待って」, technical:「まず結論」「原因はここ」「切り分ける」, sensory:「光が近い」「音が強い」「温度が変わる」, closing:「一旦ここまで」「次いこう」「おつかれさま」「おやすみ」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "指差しで説明している様子",
-      "generated_at": "2026-05-01T09:37:22.155749+00:00",
-      "generated_request_id": "gen_20260501_093722_155749",
-      "artifacts": [
-        {
-          "path": "artifacts/068_pointing_explanation.png",
-          "title": "指差し説明"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093726_505516",
-      "title": "作業開始",
-      "generated_title": "作業開始",
-      "kind": "generated",
-      "purpose": "作業開始ポスト",
-      "summary": "作業開始ポスト",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, thinking face, sleepy face, focused face, embarrassed face, excited face, gentle laugh, wink, small hand gesture, holding mug, holding camera, using laptop, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nstart:「作業はじめます」「着手します」「ただいま作業中」, progress:「ここから進める」「順番にやる」「まず整える」, status:「集中中」「手を動かす」「少し待ってね」, closing:「終わったら戻る」「あとで報告する」「引き続き進行中」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "作業開始ポスト",
-      "generated_at": "2026-05-01T09:37:26.505516+00:00",
-      "generated_request_id": "gen_20260501_093726_505516",
-      "artifacts": [
-        {
-          "path": "artifacts/045_work_start_post.png",
-          "title": "作業開始"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093735_282597",
-      "title": "読書のひととき",
-      "generated_title": "読書のひととき",
-      "kind": "generated",
-      "purpose": "本を読んでいる静かな様子",
-      "summary": "本を読んでいる静かな様子",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nreading a book quietly, looking down at an open book, calm face, gentle focused eyes, relaxed posture, soft smile, thoughtful pause, holding a paperback book, turning a page, sitting still with a book in hand, quiet reading mood\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nreading:「読書中」「しずかに」「もう少し」「あとで」「すきな本」「ページをめくる」, calm:「落ち着く」「ゆっくり」「静かに」, closing:「一旦ここまで」「またあとで」「おつかれさま」\n\ntiny stars, soft sparkles, subtle page-turn lines, light emphasis marks, minimal manga effects, calm atmosphere\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "本を読んでいる静かな様子",
-      "generated_at": "2026-05-01T09:37:35.282597+00:00",
-      "generated_request_id": "gen_20260501_093735_282597",
-      "artifacts": [
-        {
-          "path": "artifacts/067_reading_time.png",
-          "title": "読書のひととき"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_093750_437816",
-      "title": "勝利の一瞬",
-      "generated_title": "勝利の一瞬",
-      "kind": "generated",
-      "purpose": "カードゲームで勝った瞬間",
-      "summary": "カードゲームで勝った瞬間",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\ntriumphant smile, victory pose, relieved smile, shocked win face, fist pump, peace sign, pointing at cards, laughing with eyes closed, leaning back in relief, holding winning hand, small celebratory clap, sparkling eyes, confident grin, final card reveal\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「やった」「勝った」「いける」「よし」, hesitation:「まさか」「まだある？」「これで決まり？」, technical:「最後の一枚」「逆転した」「勝負あり」, sensory:「手が震える」「心臓が速い」「空気が熱い」, closing:「いただき」「ドヤ」「キター」\n\nsparkles, small stars, confetti, victory burst lines, tiny hearts, speech emphasis marks, minimal manga effects, celebratory ribbons\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "20fa8174e25b08e5769dcaea5b7409e4fd7e7f1bb479fb2cd20988e819d95b59",
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "カードゲームで勝った瞬間",
-      "generated_at": "2026-05-01T09:37:50.437816+00:00",
-      "generated_request_id": "gen_20260501_093750_437816",
-      "artifacts": [
-        {
-          "path": "artifacts/065_victory_moment.png",
-          "title": "勝利の一瞬"
-        }
-      ],
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
-      "id": "generated_gen_20260501_094000_869940",
-      "title": "返信ぎゅっ",
-      "generated_title": "返信ぎゅっ",
-      "kind": "generated",
-      "purpose": "コメント返しスタンプ",
-      "summary": "コメント返しスタンプ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
-        "sticker_sheet_layout",
-        "expressions_pack",
-        "text_style_jp",
-        "text_content_pack",
-        "effects_pack",
-        "negative_common"
-      ],
-      "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling face, gentle nod, waving hand, reading phone, typing on smartphone, surprised smile, embarrassed smile, small thumbs up, soft laugh, wink, holding mug, hugging cat plushie\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nacknowledgement:「ありがとう」「見たよ」「うれしい」「助かる」, reply:「返事するね」「あとで見る」「こっちも見てるよ」「またね」, reaction:「いいね」「なるほど」「わかる」「すき」, closing:「またコメントしてね」「おつかれさま」「いつもありがとう」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "generated_addition": "",
-      "generation_prompt_source": "prompts/frontend_codex.md",
-      "generation_prompt_hash": "58658a07fc7083d8a3e45d51caefe1a08ff4a687b68f07b2da39d32d56ddc857",
-      "artifacts": [
-        {
-          "path": "artifacts/066_reply_hug.png",
-          "title": "返信ぎゅっ"
-        }
-      ],
-      "generated_from": "stamp_sheet",
-      "generated_instruction": "コメント返しスタンプ",
-      "generated_at": "2026-05-01T09:40:00.869940+00:00",
-      "generated_request_id": "gen_20260501_094000_869940",
-      "visibility": "internal",
-      "family": "generated"
-    },
-    {
       "id": "comparison_sheet",
       "title": "Kafka 比較カード",
       "kind": "sheet",
@@ -5610,12 +4489,7 @@
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors, female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth, sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects, cozy meal table scene, plate of breakfast or lunch, utensils and small side dish, warm indoor light, neat and inviting, clean composition, rainy day meal scene, dining table by the window, warm food and a drink, raindrops on glass outside, soft indoor warmth, calm and reflective, low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "status": "draft",
-      "artifacts": [
-        {
-          "path": "artifacts/062_mogumogu_kafka.png",
-          "title": "KAFKA ごはんスタンプ"
-        }
-      ],
+      "artifacts": [],
       "family": "reply"
     },
     {
@@ -5704,12 +4578,7 @@
       "backend": "codex",
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\noversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit\n\n4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size\n\nsmiling nod, grateful smile, replying face, listening face, surprised reaction, gentle laugh, thumbs up, waving hand, small bow, peace sign, heart hands, pointing gesture, holding phone, reading comment, typing reply\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\ncomment reply:「ありがとう」「うれしい」「見たよ」「了解」「たすかる」, acknowledgement:「なるほど」「そうそう」「わかる」, response:「あとで返す」「読んだよ」「またね」「おつかれさま」, gentle:「やさしい」「うれしいね」「たしかに」\n\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "status": "draft",
-      "artifacts": [
-        {
-          "path": "artifacts/064_comment_reply.png",
-          "title": "コメント返し"
-        }
-      ],
+      "artifacts": [],
       "family": "reply"
     },
     {
@@ -6370,8 +5239,7 @@
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\n\nfemale anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth\n\nchecklist layout, tick boxes, pre-release verification items, short tasks, ordered items, progress-friendly structure, clear hierarchy, compact notes, practical guide sheet, minimal clutter, easy to scan, completion mindset\n\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\n\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "status": "draft",
       "family": "sheet"
-    }
-    ,
+    },
     {
       "id": "tweet_backed_ai_imagegen_meeting_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
@@ -6557,9 +5425,412 @@
         {
           "path": "artifacts/113_doha_airport_the_orchard_v2.png",
           "title": "Doha Airport The Orchard の別視点"
+        },
+        {
+          "path": "artifacts/114_doha_airport_the_orchard.png",
+          "title": "Doha Airport The Orchard の追加視点"
         }
       ],
       "notes": "Proof tweet: 1997469400602161345 — ドーハの空港、本当にすごかったんだよ。ターミナルの中に、本物の木が生えてるの。それも、ただの観葉植物じゃなくて、立派な大木が何本も。光の当たり方とか、空間の使い方が本当に美しくて……視覚的には感動ものだった。疲れてるのに、思わず『かっこいい』って声が出ちゃった。 Research: Hamad International Airport's The Orchard is a large indoor garden atrium with a glass roof, dense planting, and upper-level views; use the orchard-like biophilic landmark rather than a generic terminal.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_prompt_vault_update_guide_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "checklist_sheet",
+      "generated_template_id": "generated_artifact_prompt_vault_update_guide_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "prompt_archive_sheet_vlog",
+        "archive_index_vlog",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Prompt Vault update guide with archive steps, file handling notes, and a compact checklist layout",
+      "title": "Prompt Vault Update Guide",
+      "generated_title": "Prompt Vault Update Guide",
+      "generated_title_candidate": "Prompt Vault Update Guide",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/081_prompt_vault_update_guide.png",
+          "title": "Prompt Vault Update Guide"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_tax_truth_sheet_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_artifact_tax_truth_sheet_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "source_research",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Tax truth sheet with a simple comparison layout and source-backed notes",
+      "title": "Tax Truth Sheet",
+      "generated_title": "Tax Truth Sheet",
+      "generated_title_candidate": "Tax Truth Sheet",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/090_tax_truth_sheet.png",
+          "title": "Tax Truth Sheet"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_rendering_quality_check_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_artifact_rendering_quality_check_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "clean_quality_rendering",
+        "rendering",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Rendering quality check board with side-by-side contrast and quality notes",
+      "title": "Rendering Quality Check",
+      "generated_title": "Rendering Quality Check",
+      "generated_title_candidate": "Rendering Quality Check",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/096_rendering_quality_check.png",
+          "title": "Rendering Quality Check"
+        },
+        {
+          "path": "artifacts/097_rendering_quality_check_contrast.png",
+          "title": "Rendering Quality Check Contrast"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_tweetsdb_graph_notes_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_artifact_tweetsdb_graph_notes_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "review_record_pack",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "tweetsdb graph notes with logic map, idea map, generation map, and concrete map",
+      "title": "tweetsdb Graph Notes",
+      "generated_title": "tweetsdb Graph Notes",
+      "generated_title_candidate": "tweetsdb Graph Notes",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/104_tweetsdb_logic_map.png",
+          "title": "tweetsdb Logic Map"
+        },
+        {
+          "path": "artifacts/105_tweetsdb_idea_map.png",
+          "title": "tweetsdb Idea Map"
+        },
+        {
+          "path": "artifacts/106_tweetsdb_generate_map.png",
+          "title": "tweetsdb Generate Map"
+        },
+        {
+          "path": "artifacts/107_tweetsdb_idea_concrete_map.png",
+          "title": "tweetsdb Idea Concrete Map"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_hermes_agent_reference_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_artifact_hermes_agent_reference_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "archive_index_vlog",
+        "review_record_pack",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Hermes agent reference board with overview and skills panels",
+      "title": "Hermes Agent Reference",
+      "generated_title": "Hermes Agent Reference",
+      "generated_title_candidate": "Hermes Agent Reference",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/108_hermes_agent_overview.png",
+          "title": "Hermes Agent Overview"
+        },
+        {
+          "path": "artifacts/109_hermes_agent_skills.png",
+          "title": "Hermes Agent Skills"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_rsi_overview_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "comparison_sheet",
+      "generated_template_id": "generated_artifact_rsi_overview_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "rsi_source_research",
+        "source_research",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "RSI overview sheet with source-backed research and clear comparison layout",
+      "title": "RSI Overview",
+      "generated_title": "RSI Overview",
+      "generated_title_candidate": "RSI Overview",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/115_rsi_overview.png",
+          "title": "RSI Overview"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_life_portfolio_overview_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "timeline_sheet",
+      "generated_template_id": "generated_artifact_life_portfolio_overview_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "comparison_layout",
+        "timeline_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Life portfolio diagnosis and flowchart overview with a compact timeline feel",
+      "title": "Life Portfolio Overview",
+      "generated_title": "Life Portfolio Overview",
+      "generated_title_candidate": "Life Portfolio Overview",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/116_life_portfolio_diagnosis.png",
+          "title": "Life Portfolio Diagnosis"
+        },
+        {
+          "path": "artifacts/117_life_portfolio_flowchart.png",
+          "title": "Life Portfolio Flowchart"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_singularity_resilience_overview_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_artifact_singularity_resilience_overview_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "review_record_pack",
+        "comparison_layout",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Singularity resilience overview with flowchart, review, and evidence review variants",
+      "title": "Singularity Resilience Overview",
+      "generated_title": "Singularity Resilience Overview",
+      "generated_title_candidate": "Singularity Resilience Overview",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/118_singularity_resilience_flowchart.png",
+          "title": "Singularity Resilience Flowchart"
+        },
+        {
+          "path": "artifacts/119_singularity_resilience_review.png",
+          "title": "Singularity Resilience Review"
+        },
+        {
+          "path": "artifacts/120_singularity_resilience_review_concrete.png",
+          "title": "Singularity Resilience Review Concrete"
+        },
+        {
+          "path": "artifacts/121_singularity_resilience_evidence_review.png",
+          "title": "Singularity Resilience Evidence Review"
+        },
+        {
+          "path": "artifacts/122_singularity_resilience_evidence_review_raw.png",
+          "title": "Singularity Resilience Evidence Review Raw"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_kafka_monogatari_poster_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_artifact_kafka_monogatari_poster_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Kafka monogatari poster with a warm narrative mood and a poster composition",
+      "title": "Kafka Monogatari Poster",
+      "generated_title": "Kafka Monogatari Poster",
+      "generated_title_candidate": "Kafka Monogatari Poster",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/123_kafka_monogatari_poster.png",
+          "title": "Kafka Monogatari Poster"
+        },
+        {
+          "path": "artifacts/124_kafka_monogatari_poster_v2.png",
+          "title": "Kafka Monogatari Poster V2"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNGs.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_fischen_bgg_strategy_sheet_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "checklist_sheet",
+      "generated_template_id": "generated_artifact_fischen_bgg_strategy_sheet_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "review_record_pack",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Fischen BGG strategy sheet with checklist notes and compact review structure",
+      "title": "Fischen BGG Strategy Sheet",
+      "generated_title": "Fischen BGG Strategy Sheet",
+      "generated_title_candidate": "Fischen BGG Strategy Sheet",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/125_fischen_bgg_strategy_sheet.png",
+          "title": "Fischen BGG Strategy Sheet"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_work_norms_ai_sheet_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "checklist_sheet",
+      "generated_template_id": "generated_artifact_work_norms_ai_sheet_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "work_norms_ai_sheet",
+        "checklist_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Work norms AI sheet with checklist layout and compact policy notes",
+      "title": "Work Norms AI Sheet",
+      "generated_title": "Work Norms AI Sheet",
+      "generated_title_candidate": "Work Norms AI Sheet",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/126_work_norms_ai_sheet.png",
+          "title": "Work Norms AI Sheet"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
+      "family": "sheet"
+    },
+    {
+      "id": "artifact_kafka_morning_soft_light_20260505",
+      "created_at": "2026-05-05T00:00:00+00:00",
+      "template_id": "moodboard_sheet",
+      "generated_template_id": "generated_artifact_kafka_morning_soft_light_20260505",
+      "block_ids": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "clean_quality_rendering",
+        "moodboard_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "instruction": "Kafka morning soft light scene with a calm moodboard composition",
+      "title": "Kafka Morning Soft Light",
+      "generated_title": "Kafka Morning Soft Light",
+      "generated_title_candidate": "Kafka Morning Soft Light",
+      "generated_addition": "",
+      "generation_prompt_source": "artifact_sync",
+      "status": "draft",
+      "artifacts": [
+        {
+          "path": "artifacts/127_kafka_morning_soft_light.png",
+          "title": "Kafka Morning Soft Light"
+        }
+      ],
+      "notes": "Artifact sync record for the previously unreferenced PNG.",
       "family": "sheet"
     }
   ]
