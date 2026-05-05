@@ -143,6 +143,277 @@
       "family": "research"
     },
     {
+      "id": "life_portfolio_diagnosis_research",
+      "category": "リサーチ",
+      "title": "人生ポートフォリオ診断メモ",
+      "content": "treat the diagnosis as a resource-balance tool, not a personality test; keep the 36-question seven-point structure, the seven assets, environment adjustments, and the final radar-chart output separate; preserve the seven assets in this order: 金銭資産, 時間資産, 健康資産, 情報資産, 評価資産, 精神資産, 経験資産; preserve the core shift from effort-based self-judgment to sustainability and portfolio management; keep the bottleneck principle, resource circulation, flow-to-stock conversion, and the risks of optimization bias and ROI thinking explicit",
+      "tags": [
+        "diagnosis",
+        "portfolio",
+        "research"
+      ],
+      "related": [
+        "source_research"
+      ],
+      "family": "research"
+    },
+    {
+      "id": "life_portfolio_diagnosis_layout",
+      "category": "形式・レイアウト",
+      "title": "人生ポートフォリオ診断レイアウト",
+      "content": "one-page Japanese diagnostic sheet, calm infographic, Kafka presenter, large radar chart, seven asset blocks, small environment adjustment panel, score summary panel, arrows showing rebalance and sustainability, white background, pastel blue and lavender, thin borders, clean hierarchy, readable labels for time, money, information, experience, evaluation, health, and mind, no clutter",
+      "tags": [
+        "diagnosis",
+        "portfolio",
+        "layout"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "life_asset_money",
+      "category": "資産",
+      "title": "金銭資産",
+      "content": "cash, savings, investments, and spending power; the base medium that can be converted into other resources; keep emergency buffer separate from optional growth capital",
+      "tags": [
+        "money",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_time",
+      "category": "資産",
+      "title": "時間資産",
+      "content": "available time, schedule slack, and discretionary hours; the universal constraint on all actions; protect focus time, recovery time, and free time separately",
+      "tags": [
+        "time",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_health",
+      "category": "資産",
+      "title": "健康資産",
+      "content": "physical strength, sleep, stamina, and day-to-day operability; the base infrastructure that keeps the whole system running; treat breakdown risk as a top-level constraint",
+      "tags": [
+        "health",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_information",
+      "category": "資産",
+      "title": "情報資産",
+      "content": "knowledge, literacy, models, notes, and decision quality; the tool that improves resource allocation; separate durable understanding from short-lived noise",
+      "tags": [
+        "information",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_evaluation",
+      "category": "資産",
+      "title": "評価資産",
+      "content": "trust, reputation, relationships, and social leverage; the asset that helps move external resources; keep dependable ties distinct from mere visibility",
+      "tags": [
+        "evaluation",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_mind",
+      "category": "資産",
+      "title": "精神資産",
+      "content": "psychological safety, self-regulation, and resilience against stress and uncertainty; the control center that keeps decisions stable; protect it before it collapses",
+      "tags": [
+        "mind",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_asset_experience",
+      "category": "資産",
+      "title": "経験資産",
+      "content": "lived experience, range of contexts, and accumulated adaptability; the source of long-term satisfaction and environment fit; turn repeated exposure into reusable judgment",
+      "tags": [
+        "experience",
+        "asset",
+        "portfolio"
+      ],
+      "family": "asset"
+    },
+    {
+      "id": "life_portfolio_diagnosis_sheet",
+      "category": "シート",
+      "title": "人生ポートフォリオ診断",
+      "kind": "sheet",
+      "purpose": "人生を資産バランスとして見る診断を一枚で見せる",
+      "summary": "36問の7段階評価、7資産、環境補正、全体指標、そして持続可能性への視点を、性格診断ではなく資源配分の図として整理する。",
+      "steps": [
+        "36問の回答で資産を測る",
+        "7資産の偏りを可視化する",
+        "環境補正で文脈を加える",
+        "次に交換すべき資産を見つける"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "kafka_identity_lock",
+        "life_portfolio_diagnosis_layout",
+        "life_asset_money",
+        "life_asset_time",
+        "life_asset_health",
+        "life_asset_information",
+        "life_asset_evaluation",
+        "life_asset_mind",
+        "life_asset_experience",
+        "life_portfolio_diagnosis_research",
+        "clean_quality_rendering_contrast",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Keep the diagnostic framing focused on resource balance and sustainability, not on character judgment or ROI-only optimization.",
+      "artifacts": [
+        {
+          "path": "artifacts/116_life_portfolio_diagnosis.png",
+          "title": "人生ポートフォリオ診断の実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
+      "id": "life_portfolio_flowchart_layout",
+      "category": "形式・レイアウト",
+      "title": "人生ポートフォリオ診断フローチャート",
+      "content": "one big concrete flowchart sheet, Kafka presenter on the side, wide horizontal arrows, clearly boxed stages from questions to scoring to bottleneck detection to resource exchange to recheck, seven asset callouts attached to the flow, a small introspection insight panel that says what to notice inside yourself, environment adjustment panel under the center, pastel blue and lavender, thin blue borders, large labels, readable step numbers, lots of white space, clean Japanese infographic layout, no clutter",
+      "tags": [
+        "diagnosis",
+        "portfolio",
+        "flowchart"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "life_portfolio_flowchart_sheet",
+      "category": "シート",
+      "title": "人生ポートフォリオ診断フローチャート",
+      "kind": "sheet",
+      "purpose": "人生ポートフォリオ診断の具体的な流れと内省の要点を一枚で見せる",
+      "summary": "36問の入力から、7資産の集計、ボトルネック判定、資源移転、再確認までを一本の流れとして見せる。途中で何に気づくかという内省インサイトも添える。",
+      "steps": [
+        "36問に答える",
+        "7資産を集計する",
+        "ボトルネックを特定する",
+        "余力を不足資産へ移す",
+        "環境補正を重ねる",
+        "再チェックして次の一手を決める",
+        "内省の気づきを一言でまとめる"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "kafka_identity_lock",
+        "life_portfolio_flowchart_layout",
+        "life_asset_money",
+        "life_asset_time",
+        "life_asset_health",
+        "life_asset_information",
+        "life_asset_evaluation",
+        "life_asset_mind",
+        "life_asset_experience",
+        "life_portfolio_diagnosis_research",
+        "clean_quality_rendering_contrast",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Make the sequence concrete and easy to follow. Add a small introspection insight so the viewer can see what to notice inside themselves, not just the score flow. This is a flowchart version of the diagnosis, not a dense dashboard.",
+      "artifacts": [
+        {
+          "path": "artifacts/117_life_portfolio_flowchart.png",
+          "title": "人生ポートフォリオ診断フローチャートの実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
+      "id": "singularity_resilience_research",
+      "category": "リサーチ",
+      "title": "シンギュラリティ耐性メモ",
+      "content": "treat singularity resilience as a practical framework for surviving extreme AI and automation change; keep the core dimensions explicit: adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency; note that the exact term is not common in academic papers, so use adjacent research on human resilience in the AI era, workforce resilience, adaptability, critical thinking, epistemic resilience, and non-substitutable human skills; preserve the distinction between weak patterns that rely on fixed skills and strong patterns that combine multiple income streams, AI use, relationships, health, and recovery",
+      "tags": [
+        "singularity",
+        "resilience",
+        "ai",
+        "research"
+      ],
+      "related": [
+        "life_portfolio_diagnosis_research",
+        "rsi_source_research",
+        "source_research"
+      ],
+      "family": "research"
+    },
+    {
+      "id": "singularity_resilience_layout",
+      "category": "形式・レイアウト",
+      "title": "シンギュラリティ耐性フローチャート",
+      "content": "one big concrete flowchart sheet, Kafka presenter on the side, boxed stages from AI shock to dependency audit to skill expansion to recovery loop to option widening to recheck, clear arrows, explicit labels for adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency, pastel blue and lavender, thin borders, lots of white space, readable Japanese typography, clean educational diagram, no clutter",
+      "tags": [
+        "singularity",
+        "resilience",
+        "flowchart"
+      ],
+      "family": "layout"
+    },
+    {
+      "id": "singularity_resilience_sheet",
+      "category": "シート",
+      "title": "シンギュラリティ耐性フローチャート",
+      "kind": "sheet",
+      "purpose": "AI と自動化の極端な進化に対して人生システムが崩れにくくなる流れを一枚で見せる",
+      "summary": "AI shock から始めて、固定依存を洗い出し、学習速度と適応力を上げ、精神回復を整え、非代替性と選択肢を増やして、再確認するまでの流れを具体化する。",
+      "steps": [
+        "AI shock を受け取る",
+        "固定依存を洗い出す",
+        "学習速度を上げる",
+        "精神回復を整える",
+        "非代替性を増やす",
+        "選択肢を広げて再確認する"
+      ],
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "kafka_identity_lock",
+        "singularity_resilience_layout",
+        "singularity_resilience_research",
+        "clean_quality_rendering_contrast",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "notes": "Show singularity resilience as a concrete survival flow, not a vague slogan. Emphasize adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency.",
+      "artifacts": [
+        {
+          "path": "artifacts/118_singularity_resilience_flowchart.png",
+          "title": "シンギュラリティ耐性フローチャートの実例"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
       "id": "rsi_overview_layout",
       "category": "形式・レイアウト",
       "title": "RSI 概要レイアウト",
@@ -880,10 +1151,49 @@
       "id": "review_record_pack",
       "category": "記録・ログ",
       "title": "レビュー記録",
-      "content": "run_id, block_ids, intent, model, seed, params, artifact, scores, decision, keep, revise, reject, before, after, reason",
+      "content": "run_id, block_ids, intent, model, seed, params, prompt_hash, generation_prompt_hash, artifact, scores, decision, keep, revise, reject, before, after, reason",
       "tags": [
         "review",
         "record",
+        "evaluation"
+      ],
+      "visibility": "internal",
+      "family": "logging"
+    },
+    {
+      "id": "prompt_hierarchy_pack",
+      "category": "構造",
+      "title": "プロンプト階層",
+      "content": "base style, character, costume, layout, composition, rendering, typography, text, negative, review, model, params, prompt_hash, artifact_meta; keep one intent per update; do not mix internal logs with visual layout; compose by layers rather than one long block",
+      "tags": [
+        "prompt",
+        "hierarchy",
+        "structure"
+      ],
+      "visibility": "internal",
+      "family": "structure"
+    },
+    {
+      "id": "model_params_pack",
+      "category": "記録・ログ",
+      "title": "モデル設定",
+      "content": "model, seed, params, prompt_hash, generation_prompt_hash, size, steps, guidance, sampler, decision, scores, before, after, reason; store the exact generation settings next to the artifact for reproducibility",
+      "tags": [
+        "model",
+        "params",
+        "reproducibility"
+      ],
+      "visibility": "internal",
+      "family": "logging"
+    },
+    {
+      "id": "artifact_meta_pack",
+      "category": "記録・ログ",
+      "title": "成果物メタ",
+      "content": "artifact path, title, model, seed, params, prompt_hash, generation_prompt_hash, score, decision, before, after, reason; keep one row per generated output and preserve the exact relation between the visual and the prompt that created it",
+      "tags": [
+        "artifact",
+        "meta",
         "evaluation"
       ],
       "visibility": "internal",

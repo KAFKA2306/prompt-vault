@@ -20,6 +20,7 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
    - Search one or two official or close follow-up sources when the facts or dates are not obvious.
    - Inspect the closest matching examples in `db/prompts.json` and `artifacts/`.
    - Treat existing Prompt Vault prompts as the default style and structure reference unless the user explicitly asks for a new direction.
+   - Use layered prompt structure when possible: `base`, `character`, `costume`, `layout`, `composition`, `rendering`, `typography`, `text`, `negative`, `review`, `model`, `params`.
    - Prefer the narrowest matching negative taxonomy block instead of always reusing `negative_common`.
 
 3. Choose the format.
@@ -41,6 +42,7 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
    - Keep every `db/prompts.json` `path` value aligned with a real file name.
    - Update `static/app.js` only when a new family or label is required.
    - When the work is review-oriented, capture `run_id`, `model`, `seed`, `params`, `scores`, and `decision` in the DB or notes before moving on.
+   - Also capture `prompt_hash` and `generation_prompt_hash` when the update is reproducibility-sensitive.
 
 6. Build and verify.
    - Run `python3 build.py`.
@@ -53,6 +55,7 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
 - Create a new format when it improves clarity or avoids repetition.
 - Start from the closest existing `db/prompts.json` examples before inventing a new prompt shape.
 - For Kafka visuals, use `kafka_visual_standard` and `097_rendering_quality_check_contrast.png` as the default references and align new prompts to that look.
+- Prefer `prompt_hierarchy_pack`, `model_params_pack`, and `artifact_meta_pack` when the task needs layer separation, reproducibility, or artifact traceability.
 - Prefer `review_record_pack` and the negative taxonomy blocks (`negative_anatomy`, `negative_skin`, `negative_shadow`, `negative_color`, `negative_layout`, `negative_text`, `negative_artifact`) when they are a better fit than the broad fallback blocks.
 - Use `imagegen` directly when the task needs a new bitmap visual.
 - Verify the generated image before treating it as the final artifact.

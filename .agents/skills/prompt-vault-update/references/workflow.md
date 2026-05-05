@@ -27,12 +27,15 @@
 - Prefer an existing template when it already matches the material.
 - Create a new template or block when the content would be forced into the wrong shape.
 - Use the closest saved Prompt Vault prompt as the default reference for wording, structure, and visual tone.
+- Prefer a layered structure instead of one long mixed block: `base`, `character`, `costume`, `layout`, `composition`, `rendering`, `typography`, `text`, `negative`, `review`, `model`, `params`.
 - Use `Kafka` by default as the visual anchor.
 - Use `db/prompts.json`'s `kafka_visual_standard` block and `artifacts/097_rendering_quality_check_contrast.png` as the default Kafka visual references when judging face, hair, color balance, shading, and polish.
 - Reduce `Kafka` when factual precision or readability matters more.
 - Keep Kafka's face and identity consistent, but change the outfit to match the specific situation, place, time of day, weather, season, and activity.
+- Prefer `prompt_hierarchy_pack`, `model_params_pack`, and `artifact_meta_pack` when the task needs structure, reproducibility, or traceability.
 - When negative prompts are needed, choose the narrowest matching negative block before falling back to `negative_common`.
 - When the update is review-oriented, preserve `run_id`, `model`, `seed`, `params`, `scores`, and `decision` in the closest available record block or notes.
+- Preserve `prompt_hash` and `generation_prompt_hash` when they are available.
 
 ## Artifact maintenance
 
@@ -55,6 +58,7 @@
 - If the user says to base the work on existing Prompt Vault prompts, do not invent a new style unless the current entries clearly fail.
 - If the user says Kafka looks wrong, compare against `kafka_visual_standard` and `097_rendering_quality_check_contrast.png` before changing anything else.
 - Treat a missing `dist/artifacts/*.png` copy as a sync bug, not as an acceptable partial build.
+- If the prompt shape feels too mixed, split it into layer blocks instead of growing one block indefinitely.
 
 ## Output checklist
 
