@@ -4,19 +4,22 @@
       "id": "master_style",
       "title": "マスタースタイル",
       "content": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors",
-      "category": "基準"
+      "category": "基準",
+      "deprecated": true
     },
     {
       "id": "character_kafka",
       "title": "キャラクター: KAFKA",
       "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth",
-      "category": "キャラクター"
+      "category": "キャラクター",
+      "deprecated": true
     },
     {
       "id": "outfit_kafka",
       "title": "衣装: KAFKA基本",
       "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
-      "category": "キャラ衣装"
+      "category": "キャラ衣装",
+      "deprecated": true
     },
     {
       "id": "kafka_identity_lock",
@@ -40,7 +43,8 @@
           "path": "artifacts/004_character_design_sheet.png",
           "title": "Kafka キャラデザインシート"
         }
-      ]
+      ],
+      "deprecated": true
     },
     {
       "id": "sticker_sheet_layout",
@@ -1157,6 +1161,144 @@
       "title": "戦略: AI時代の人脈構築術",
       "content": "# AI時代の人脈構築術: 物語の「演者」になる\n\nAIがタスクを代替する時代、人間関係の基盤は「能力補完（ギブアンドテイク）」から「物語補完」へとシフトする。\n\n## 1. キャラクター構想力（物語の演者）\n相手が主人公として生きるストーリーの中で、理想の「脇役・パートナー・理解者」として機能する力。メリットの対価を超えた、感情的なつながりと長期的な関係を構築する。\n\n- **実践**: 相手の自己像（革新的な起業家、孤独な天才など）を察知し、それに対する「信頼できる共感者」や「唯一の理解者」を演じる。\n\n## 2. 人間味と独自の文脈\nAIには出せない「体験」「人間的な洞察」「ユーモア」「倫理的判断」を提供し、希少価値を高める。\n\n## 3. AIの戦略的活用\n- 相手の公開情報をAIで分析し、核心となる「ストーリー」を抽出。\n- フォローアップの話題提案にAIを活用しつつ、対面や非言語コミュニケーションで信頼を固める。\n\n## 4. 完了定義\n「何ができるか」ではなく「この人といると、どんな自分（主人公）になれるか」を相手に思わせることができれば、代替不可能な人脈となる。",
       "category": "戦略"
+    },
+    {
+      "id": "master_style_background",
+      "title": "マスタースタイル (background)",
+      "content": "white background, roomy margins",
+      "category": "background"
+    },
+    {
+      "id": "master_style_composition",
+      "title": "マスタースタイル (composition)",
+      "content": "thin blue borders, clear grid layout, readable spacing",
+      "category": "composition"
+    },
+    {
+      "id": "master_style_lighting",
+      "title": "マスタースタイル (lighting)",
+      "content": "soft shadows, flat lighting, no blotchy shadows",
+      "category": "lighting"
+    },
+    {
+      "id": "master_style_style",
+      "title": "マスタースタイル (style)",
+      "content": "clean lineart, minimal clutter, no 3d gloss, commercial vtuber reference-sheet feel",
+      "category": "style"
+    },
+    {
+      "id": "master_style_mood",
+      "title": "マスタースタイル (mood)",
+      "content": "no cyberpunk mood, calm visual hierarchy",
+      "category": "mood"
+    },
+    {
+      "id": "master_style_expression",
+      "title": "マスタースタイル (expression)",
+      "content": "clean surfaces",
+      "category": "expression"
+    },
+    {
+      "id": "character_kafka_style",
+      "title": "キャラクター: KAFKA (style)",
+      "content": "female anime character",
+      "category": "style"
+    },
+    {
+      "id": "character_kafka_lighting",
+      "title": "キャラクター: KAFKA (lighting)",
+      "content": "long light-blue hair with lavender gradient",
+      "category": "lighting"
+    },
+    {
+      "id": "character_kafka_expression",
+      "title": "キャラクター: KAFKA (expression)",
+      "content": "small smile, gentle face",
+      "category": "expression"
+    },
+    {
+      "id": "character_kafka_mood",
+      "title": "キャラクター: KAFKA (mood)",
+      "content": "quiet emotional warmth",
+      "category": "mood"
+    },
+    {
+      "id": "outfit_kafka_outfit",
+      "title": "衣装: KAFKA基本 (outfit)",
+      "content": "oversized white futuristic jacket, short pleated skirt, white socks, chunky white-and-pastel sneakers, futuristic but gentle vtuber outfit",
+      "category": "outfit"
+    },
+    {
+      "id": "outfit_kafka_style",
+      "title": "衣装: KAFKA基本 (style)",
+      "content": "navy sailor-style inner top",
+      "category": "style"
+    },
+    {
+      "id": "outfit_kafka_lighting",
+      "title": "衣装: KAFKA基本 (lighting)",
+      "content": "light blue and navy ribbon",
+      "category": "lighting"
+    },
+    {
+      "id": "character_sheet_kafka_quality",
+      "title": "形式: Kafkaデザインシート (quality)",
+      "content": "masterpiece, best quality, ultra detailed, ultra high resolution, low quality",
+      "category": "quality"
+    },
+    {
+      "id": "character_sheet_kafka_style",
+      "title": "形式: Kafkaデザインシート (style)",
+      "content": "japanese anime vtuber character design system sheet, pastel futuristic aesthetic, modern anime infographic design, razor sharp lineart, subtle watercolor rendering, cute anime girl named Kafka, youthful vtuber aesthetic, soft futuristic military-vtuber hybrid aesthetic, large “Kafka” logo in soft rounded typography, concept keyword infographic section, color palette circles, clean anime environment thumbnails, VISUAL STYLE:, human-made anime illustration feeling, not generic AI anime, clean commercial vtuber branding quality, TYPOGRAPHY:, large japanese typography only, professional rounded Japanese font, clean rendering, no English UI clutter except intentional logo/title elements, organized Japanese infographic labeling, COLOR PALETTE:, inconsistent hairstyle, generic AI anime, overly glossy skin, plastic rendering, cluttered infographic, corporate presentation style, uneven rendering, grainy textures",
+      "category": "style"
+    },
+    {
+      "id": "character_sheet_kafka_composition",
+      "title": "形式: Kafkaデザインシート (composition)",
+      "content": "highly cohesive character bible layout, MAIN LAYOUT:, large flowing hair across composition, professional japanese character design reference sheet layout, multiple organized panels with thin blue borders, clean spacing, balanced infographic composition, clean japanese UI layout, accessory breakdown panel, close-up detailed object references, professional Japanese artbook layout, high consistency across all panels, beautiful typography spacing, messy layout, chaotic composition, cropped panels",
+      "category": "composition"
+    },
+    {
+      "id": "character_sheet_kafka_background",
+      "title": "形式: Kafkaデザインシート (background)",
+      "content": "clean white background, soft futuristic cityscape, night city lights, dreamy sky, cozy room, pastel fantasy scenery",
+      "category": "background"
+    },
+    {
+      "id": "character_sheet_kafka_mood",
+      "title": "形式: Kafkaデザインシート (mood)",
+      "content": "soft emotional atmosphere, soft emotional presence, cat-like gentle atmosphere, high emotional readability, moodboard/environment section, soft emotional warmth, gentle futuristic atmosphere",
+      "category": "mood"
+    },
+    {
+      "id": "character_sheet_kafka_lighting",
+      "title": "形式: Kafkaデザインシート (lighting)",
+      "content": "pale glowing skin, soft reflective highlights, light blue and navy ribbon, soft holographic glow, light navy, gentle atmospheric lighting, harsh shadows, dirty shadows",
+      "category": "lighting"
+    },
+    {
+      "id": "character_sheet_kafka_expression",
+      "title": "形式: Kafkaデザインシート (expression)",
+      "content": "expressive anime face, small smile, facial expression sheet grid, multiple anime expressions, neutral face, happy smile, wink, surprised, embarrassed, thinking, sleepy, laughing, all expressions maintain exact same face identity, malformed face, flat expressions, emotionless face",
+      "category": "expression"
+    },
+    {
+      "id": "character_sheet_kafka_outfit",
+      "title": "形式: Kafkaデザインシート (outfit)",
+      "content": "OUTFIT DESIGN:, oversized white futuristic coat, soft sailor-style inner outfit, short pleated skirt, pastel techwear aesthetic, white socks, large chunky futuristic sneakers, coat, sailor outfit, inconsistent outfit",
+      "category": "outfit"
+    },
+    {
+      "id": "character_sheet_kafka_season",
+      "title": "形式: Kafkaデザインシート (season)",
+      "content": "small decorative flowers and branches attached to cap",
+      "category": "season"
+    },
+    {
+      "id": "character_sheet_kafka_pose",
+      "title": "形式: Kafkaデザインシート (pose)",
+      "content": "character reaching hand toward viewer, friendly welcoming pose, pose variation panel, multiple chibi/full-body poses, sitting pose, standing pose, cute energetic gesture language",
+      "category": "pose"
     }
   ],
   "templates": [
@@ -1276,10 +1418,18 @@
     },
     {
       "id": "morning_kafka_sheet",
-      "title": "Kafka 朝のやさしい光",
+      "title": "朝のやさしい光",
       "blocks": [
-        "master_style",
-        "character_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
         "kafka_identity_lock",
         "morning_tweet_layout",
         "morning_tweet_text_pack",
@@ -1292,7 +1442,7 @@
       ],
       "kind": "sheet",
       "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
-      "summary": "窓光、やわらかい部屋着、静かな朝、ゆっくり整える気分を、Kafka の朝テンプレートとして固定する。共有のおはツイ文言より少しだけ情緒寄りで、やさしい光と落ち着きを前面に出す。",
+      "summary": "朝のやさしい光用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/127_kafka_morning_soft_light.png",
@@ -1325,11 +1475,21 @@
     },
     {
       "id": "morning_tweet_curtains",
-      "title": "Kafka おはツイ カーテンを開ける",
+      "title": "おはツイ カーテンを開ける",
       "blocks": [
-        "master_style",
-        "character_kafka",
-        "outfit_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
+        "outfit_kafka_outfit",
+        "outfit_kafka_style",
+        "outfit_kafka_lighting",
         "morning_pose_curtains_kafka",
         "morning_tweet_layout",
         "morning_tweet_text_pack",
@@ -1338,7 +1498,7 @@
       ],
       "kind": "social",
       "purpose": "一日の始まりを告げる風景でおはツイ画像を作る",
-      "summary": "溢れる朝の光、開かれたカーテン、希望を感じさせる表情の投稿。",
+      "summary": "おはツイ カーテンを開ける用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/134_kafka_morning_tweet_curtains.png",
@@ -1620,7 +1780,13 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "master_style_lighting",
+        "character_kafka_lighting",
+        "outfit_kafka_outfit"
+      ],
+      "purpose": "Kafka Evening Twilight用の構成テンプレート。",
+      "summary": "Kafka Evening Twilightの構成要素を定義した標準レシピ。"
     },
     {
       "id": "ai_tuber_core_pack",
@@ -2515,10 +2681,18 @@
     },
     {
       "id": "morning_tweet_autumn",
-      "title": "Kafka おはツイ 秋",
+      "title": "おはツイ 秋",
       "blocks": [
-        "master_style",
-        "character_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
         "seasonal_outfit_autumn_kafka",
         "morning_pose_autumn_kafka",
         "morning_background_autumn_kafka",
@@ -2530,7 +2704,7 @@
       ],
       "kind": "social",
       "purpose": "秋の朝に使うおはツイ画像を作る",
-      "summary": "秋衣装、落ち着いた朝光、少し静かな文言でまとめる朝投稿。",
+      "summary": "おはツイ 秋用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/023_morning_tweet_autumn.png",
@@ -2686,10 +2860,18 @@
     },
     {
       "id": "morning_tweet_spring",
-      "title": "Kafka おはツイ 春",
+      "title": "おはツイ 春",
       "blocks": [
-        "master_style",
-        "character_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
         "seasonal_outfit_spring_kafka",
         "morning_pose_spring_kafka",
         "morning_background_spring_kafka",
@@ -2701,7 +2883,7 @@
       ],
       "kind": "social",
       "purpose": "春の朝に使うおはツイ画像を作る",
-      "summary": "春衣装、やわらかい朝光、短いおはよう文言でまとめる朝投稿。",
+      "summary": "おはツイ 春用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/022_morning_tweet_spring.png",
@@ -2711,10 +2893,18 @@
     },
     {
       "id": "morning_tweet_summer",
-      "title": "Kafka おはツイ 夏",
+      "title": "おはツイ 夏",
       "blocks": [
-        "master_style",
-        "character_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
         "seasonal_outfit_summer_kafka",
         "morning_pose_summer_kafka",
         "morning_background_summer_kafka",
@@ -2726,7 +2916,7 @@
       ],
       "kind": "social",
       "purpose": "夏の朝に使うおはツイ画像を作る",
-      "summary": "夏衣装、明るい朝光、涼しい色でまとめる朝投稿。",
+      "summary": "おはツイ 夏用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/021_morning_tweet_summer.png",
@@ -2736,10 +2926,18 @@
     },
     {
       "id": "morning_tweet_winter",
-      "title": "Kafka おはツイ 冬",
+      "title": "おはツイ 冬",
       "blocks": [
-        "master_style",
-        "character_kafka",
+        "master_style_background",
+        "master_style_composition",
+        "master_style_lighting",
+        "master_style_style",
+        "master_style_mood",
+        "master_style_expression",
+        "character_kafka_style",
+        "character_kafka_lighting",
+        "character_kafka_expression",
+        "character_kafka_mood",
         "seasonal_outfit_winter_kafka",
         "morning_pose_winter_kafka",
         "morning_background_winter_kafka",
@@ -2751,7 +2949,7 @@
       ],
       "kind": "social",
       "purpose": "冬の朝に使うおはツイ画像を作る",
-      "summary": "冬衣装、冷たい朝光、あたたかい空気感でまとめる朝投稿。",
+      "summary": "おはツイ 冬用の標準的な構成テンプレート。",
       "artifacts": [
         {
           "path": "artifacts/024_morning_tweet_winter.png",
@@ -3518,7 +3716,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "master_style_composition",
+        "character_sheet_kafka_style",
+        "character_kafka_lighting",
+        "outfit_kafka_outfit"
+      ],
+      "purpose": "Fischen BGG Strategy Sheet用の構成テンプレート。",
+      "summary": "Fischen BGG Strategy Sheetの構成要素を定義した標準レシピ。"
     },
     {
       "id": "artifact_hermes_agent_reference_20260505",
@@ -3535,7 +3740,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "character_sheet_kafka_composition",
+        "character_sheet_kafka_style",
+        "character_kafka_lighting",
+        "outfit_kafka_outfit"
+      ],
+      "purpose": "Hermes Agent Reference用の構成テンプレート。",
+      "summary": "Hermes Agent Referenceの構成要素を定義した標準レシピ。"
     },
     {
       "id": "artifact_kafka_monogatari_poster_20260505",

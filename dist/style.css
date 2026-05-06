@@ -363,3 +363,37 @@ pre {
   .modal { padding: 12px; }
   .modal-content { padding: 24px; border-radius: 12px; }
 }
+
+/* Emergency measures for empty templates */
+.template-card.is-example {
+    opacity: 0.8;
+    filter: grayscale(0.5);
+    border-style: dashed;
+}
+
+.template-card__thumb {
+    position: relative;
+}
+
+.example-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--bg-surface);
+    color: var(--text-subtle);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.modal-title-text:empty::after {
+    content: "(Example Only)";
+    font-size: 0.8em;
+    color: var(--text-subtle);
+    margin-left: 8px;
+}

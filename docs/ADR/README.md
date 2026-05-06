@@ -16,3 +16,4 @@
 - [0014 WebP 最適化による配信パフォーマンスの向上](0014-webp-optimization.md)
 - [0015 事前ビルド資産の確実なデプロイ](0015-resilient-prebuilt-deployment.md)
 - [0016 Quiet UI (2026年基準の最適化)](0016-quiet-ui-2026-optimization.md)
+- [0017 「レシピと素材」の責務分離とデータベース・ガードレールの導入](0017-recipe-ingredient-separation-and-integrity-guardrails.md)

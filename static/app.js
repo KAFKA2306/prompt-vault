@@ -31,20 +31,24 @@ const renderRail = () => {
   const all = [...templates, ...localItems];
   const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
   
-  el('template-rail').innerHTML = list.map(t => `
-    <div class="card template-card" onclick="openModal('${t.id}')">
-      <div class="template-card__thumb">
-        ${t.artifacts?.[0] 
-          ? `<img src="${t.artifacts[0].path}" loading="lazy" alt="${esc(t.title)}">` 
-          : '<div class="placeholder-box">No Image</div>'}
+  el('template-rail').innerHTML = list.map(t => {
+    const isExample = t.blocks && t.blocks.length === 0;
+    return `
+      <div class="card template-card ${isExample ? 'is-example' : ''}" onclick="openModal('${t.id}')">
+        <div class="template-card__thumb">
+          ${t.artifacts?.[0] 
+            ? `<img src="${t.artifacts[0].path}" loading="lazy" alt="${esc(t.title)}">` 
+            : '<div class="placeholder-box">No Image</div>'}
+          ${isExample ? '<div class="example-badge">Example Only</div>' : ''}
+        </div>
+        <div class="template-card__body">
+          <span class="template-card__kind">${esc(t.kind)}</span>
+          <div class="template-card__title">${esc(t.title)}</div>
+          <div class="template-card__summary">${esc(t.summary || t.purpose || '')}</div>
+        </div>
       </div>
-      <div class="template-card__body">
-        <span class="template-card__kind">${esc(t.kind)}</span>
-        <div class="template-card__title">${esc(t.title)}</div>
-        <div class="template-card__summary">${esc(t.summary || t.purpose || '')}</div>
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
   
   if (el('template-count')) {
     el('template-count').textContent = `${list.length} items`;
@@ -68,13 +72,15 @@ window.openModal = (id, saveToHistory = true) => {
   }
   if (!t) return;
 
+  const isExample = t.blocks && t.blocks.length === 0;
+
   if (saveToHistory && state.currentModalId && state.currentModalId !== id) {
     state.modalHistory.push(state.currentModalId);
   }
   state.currentModalId = id;
   el('modal-back').style.display = state.modalHistory.length > 0 ? 'flex' : 'none';
 
-  el('modal-title').textContent = t.title;
+  el('modal-title').textContent = t.title + (isExample ? ' (Example Only)' : '');
   el('modal-kind').textContent = t.kind;
   el('modal-purpose').textContent = t.summary || t.purpose || '';
   el('modal-img').src = t.artifacts?.[0]?.path || '';
@@ -85,14 +91,21 @@ window.openModal = (id, saveToHistory = true) => {
     <img src="${a.path}" class="modal-artifact-thumb ${i === 0 ? 'is-active' : ''}" onclick="switchModalImg(this, '${a.path}')" alt="${esc(a.title)}">
   `).join('');
 
-  el('modal-prompt').textContent = t.generated_prompt || (t.blocks && t.blocks.length ? t.blocks : [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
-  
-  const chips = (ids) => (ids || []).map(bid => `
-    <span class="tag is-clickable" onclick="openModal('${bid}')">
-      ${esc(blocks[bid]?.title || bid)}
-    </span>
-  `).join('');
-  el('modal-primary').innerHTML = chips(t.blocks);
+  if (isExample) {
+    el('modal-prompt').textContent = '【画像見本のみ】\nこのテンプレートには構成要素（プロンプトの種）が定義されていません。';
+    el('modal-copy').style.display = 'none';
+    el('modal-primary').innerHTML = '<span class="subtle-label">構成要素なし</span>';
+  } else {
+    el('modal-prompt').textContent = t.generated_prompt || (t.blocks && t.blocks.length ? t.blocks : [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
+    el('modal-copy').style.display = 'block';
+    
+    const chips = (ids) => (ids || []).map(bid => `
+      <span class="tag is-clickable" onclick="openModal('${bid}')">
+        ${esc(blocks[bid]?.title || bid)}
+      </span>
+    `).join('');
+    el('modal-primary').innerHTML = chips(t.blocks);
+  }
   
   const targetBids = new Set(t.blocks || []);
   const related = templates
@@ -207,6 +220,8 @@ el('modal-copy').onclick = (e) => {
   setTimeout(() => e.target.textContent = old, 2000);
 };
 
-el('generator-template').innerHTML = templates.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('');
+el('generator-template').innerHTML = templates
+  .filter(t => t.blocks && t.blocks.length > 0)
+  .map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('');
 renderRail();
 renderGen();
