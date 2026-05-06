@@ -1394,8 +1394,8 @@
       "summary": "作品名、公開日、全国公開、記念日表現を大きくまとめた告知バナー。",
       "artifacts": [
         {
-          "path": "artifacts/129_kafka_morning_tweet_stretch.png",
-          "title": "おはツイ ストレッチの実例"
+          "path": "artifacts/005_announcement_thumbnail.png",
+          "title": "映画公開告知バナー"
         }
       ]
     },
@@ -1424,11 +1424,7 @@
       "artifacts": [
         {
           "path": "artifacts/078_boj_press_news_comic.png",
-          "title": "BoJ 漫画ニュースの実例"
-        },
-        {
-          "path": "artifacts/079_boj_press_news_infographic.png",
-          "title": "BoJ 会見資料インフォグラフィックの別実例"
+          "title": "日銀 植田総裁 記者会見漫画"
         }
       ]
     },
@@ -1453,8 +1449,8 @@
       "summary": "ナスダックとS&P500の月間上昇、アルファベットの急騰、インテルの急騰、そして原油高と地政学リスクを6コマで追いやすくまとめる。",
       "artifacts": [
         {
-          "path": "artifacts/130_kafka_morning_tweet_reading.png",
-          "title": "おはツイ ニュースチェックの実例"
+          "path": "artifacts/079_boj_press_news_infographic.png",
+          "title": "4月の米国株ラリー漫画"
         }
       ]
     },
@@ -1825,7 +1821,7 @@
       "artifacts": [
         {
           "path": "artifacts/046_morning_tweet_index.png",
-          "title": "おはツイ一覧の実例"
+          "title": "Kafka おはツイ一覧"
         }
       ]
     },
@@ -1845,8 +1841,8 @@
       "summary": "VRChat events, creator workflow, VRChat worlds, morning routine, real-world travel を、証拠 tweet 付きで並べる一覧シート。",
       "artifacts": [
         {
-          "path": "artifacts/131_kafka_morning_tweet_plants.png",
-          "title": "おはツイ 水やりの実例"
+          "path": "artifacts/104_tweetsdb_logic_map.png",
+          "title": "Kafka ツイート根拠プロンプト一覧"
         }
       ]
     },
@@ -1864,12 +1860,7 @@
       "kind": "sheet",
       "purpose": "可視本文が20文字を超える tweet だけを根拠に、imagegen 方向を整理する",
       "summary": "VRChat avatar mod, AI image generation, creator tools, VRChat events, VRChat worlds を、証拠 tweet 付きで並べる一覧シート。",
-      "artifacts": [
-        {
-          "path": "artifacts/132_kafka_morning_tweet_haircare.png",
-          "title": "おはツイ 髪の手入れの実例"
-        }
-      ]
+      "artifacts": []
     },
     {
       "id": "work_start_post",
@@ -2879,7 +2870,7 @@
       "artifacts": [
         {
           "path": "artifacts/069_loud_sound.png",
-          "title": "音が強い"
+          "title": "Kafka 音が強い"
         }
       ]
     },
@@ -2896,12 +2887,7 @@
       "kind": "sheet",
       "purpose": "2つの案を左右で比べる比較シートにする",
       "summary": "比較や選択を一目で伝える2列カード。",
-      "artifacts": [
-        {
-          "path": "artifacts/133_kafka_morning_tweet_bag.png",
-          "title": "おはツイ 持ち物確認の実例"
-        }
-      ]
+      "artifacts": []
     },
     {
       "id": "timeline_sheet",
@@ -2938,8 +2924,8 @@
       "summary": "Yes/No で進む、分岐型の案内シート。",
       "artifacts": [
         {
-          "path": "artifacts/134_kafka_morning_tweet_curtains.png",
-          "title": "おはツイ カーテンを開ける実例"
+          "path": "artifacts/014_summary_sheet.png",
+          "title": "Kafka 分岐フロー"
         }
       ]
     },
@@ -3140,9 +3126,7 @@
           "title": "Kafka おはツイ カーテンを開ける"
         }
       ]
-    }
-  ],
-  "generated_prompts": [
+    },
     {
       "id": "gen_20260501_092726_250951",
       "created_at": "2026-05-01T09:27:26.250951+00:00",
@@ -3153,7 +3137,9 @@
           "path": "artifacts/007_reply_stamp_sheet.png",
           "title": "KAFKA ごはんスタンプ"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093234_339628",
@@ -3165,7 +3151,9 @@
           "path": "artifacts/062_mogumogu_kafka.png",
           "title": "もぐもぐカフカ"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093426_180104",
@@ -3177,7 +3165,9 @@
           "path": "artifacts/064_comment_reply.png",
           "title": "コメント返し"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093426_682458",
@@ -3189,7 +3179,9 @@
           "path": "artifacts/058_morning_dominion.png",
           "title": "ドミニオン対戦"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093428_144020",
@@ -3201,7 +3193,9 @@
           "path": "artifacts/063_breakfast_time.png",
           "title": "朝ごはんタイム"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093534_246196",
@@ -3213,7 +3207,9 @@
           "path": "artifacts/040_comment_reply_guide_2.png",
           "title": "コメント返し"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093722_155749",
@@ -3225,7 +3221,9 @@
           "path": "artifacts/068_pointing_explanation.png",
           "title": "指差し説明"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093726_505516",
@@ -3237,7 +3235,9 @@
           "path": "artifacts/045_work_start_post.png",
           "title": "作業開始"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093735_282597",
@@ -3249,7 +3249,9 @@
           "path": "artifacts/067_reading_time.png",
           "title": "読書のひととき"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_093750_437816",
@@ -3261,7 +3263,9 @@
           "path": "artifacts/065_victory_moment.png",
           "title": "勝利の一瞬"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_094000_869940",
@@ -3273,7 +3277,9 @@
           "path": "artifacts/066_reply_hug.png",
           "title": "返信ぎゅっ"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_095318_007639",
@@ -3285,7 +3291,9 @@
           "path": "artifacts/076_before_after_sheet.png",
           "title": "比較カード"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_095825_409023",
@@ -3297,7 +3305,9 @@
           "path": "artifacts/076_before_after_sheet.png",
           "title": "見比べカード"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100128_125507",
@@ -3309,7 +3319,9 @@
           "path": "artifacts/046_morning_tweet_index.png",
           "title": "一覧対比カード"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100137_684091",
@@ -3321,7 +3333,9 @@
           "path": "artifacts/074_timeline_sheet.png",
           "title": "崩れの時系列"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100144_822642",
@@ -3333,7 +3347,9 @@
           "path": "artifacts/014_summary_sheet.png",
           "title": "分岐案内"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100157_839919",
@@ -3345,7 +3361,9 @@
           "path": "artifacts/075_moodboard_sheet.png",
           "title": "非スタンプ案"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100447_145315",
@@ -3357,7 +3375,9 @@
           "path": "artifacts/074_timeline_sheet.png",
           "title": "崩れの経緯"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100454_860314",
@@ -3369,7 +3389,9 @@
           "path": "artifacts/075_moodboard_sheet.png",
           "title": "淡色サンプル"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260501_100713_847333",
@@ -3381,7 +3403,9 @@
           "path": "artifacts/081_prompt_vault_update_guide.png",
           "title": "公開前点検"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_ai_imagegen_meeting_20260504",
@@ -3392,7 +3416,9 @@
           "path": "artifacts/099_ai_imagegen_meeting.png",
           "title": "AI Imagegen Meeting"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_vrchat_avatar_mod_workbench_20260504",
@@ -3403,7 +3429,9 @@
           "path": "artifacts/100_vrchat_avatar_mod_workbench.png",
           "title": "VRChat Avatar Mod Workbench"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_vrchat_event_gathering_20260504",
@@ -3414,7 +3442,9 @@
           "path": "artifacts/101_vrchat_event_gathering.png",
           "title": "VRChat Event Gathering"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_vrchat_world_exploration_20260504",
@@ -3425,7 +3455,9 @@
           "path": "artifacts/102_vrchat_world_exploration.png",
           "title": "VRChat World Exploration"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_creator_workflow_desk_20260504",
@@ -3436,7 +3468,9 @@
           "path": "artifacts/103_creator_workflow_desk.png",
           "title": "Creator Workflow Desk"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "tweet_backed_doha_airport_oasis_20260505",
@@ -3447,7 +3481,9 @@
           "path": "artifacts/113_doha_airport_the_orchard_v2.png",
           "title": "Doha Airport The Orchard"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_prompt_vault_update_guide_20260505",
@@ -3458,7 +3494,9 @@
           "path": "artifacts/081_prompt_vault_update_guide.png",
           "title": "Prompt Vault Update Guide"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_tax_truth_sheet_20260505",
@@ -3469,7 +3507,9 @@
           "path": "artifacts/090_tax_truth_sheet.png",
           "title": "Tax Truth Sheet"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_rendering_quality_check_20260505",
@@ -3480,7 +3520,9 @@
           "path": "artifacts/095_rendering_quality_check_reference.png",
           "title": "Rendering Quality Check"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_rendering_quality_check_reference_20260505",
@@ -3491,7 +3533,9 @@
           "path": "artifacts/095_rendering_quality_check_reference.png",
           "title": "Rendering Quality Check Reference"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_tweetsdb_graph_notes_20260505",
@@ -3502,7 +3546,9 @@
           "path": "artifacts/104_tweetsdb_logic_map.png",
           "title": "tweetsdb Graph Notes"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_hermes_agent_reference_20260505",
@@ -3513,7 +3559,9 @@
           "path": "artifacts/108_hermes_agent_overview.png",
           "title": "Hermes Agent Reference"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_rsi_overview_20260505",
@@ -3524,7 +3572,9 @@
           "path": "artifacts/115_rsi_overview.png",
           "title": "RSI Overview"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_life_portfolio_overview_20260505",
@@ -3535,7 +3585,9 @@
           "path": "artifacts/116_life_portfolio_diagnosis.png",
           "title": "Life Portfolio Overview"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_singularity_resilience_overview_20260505",
@@ -3546,7 +3598,9 @@
           "path": "artifacts/118_singularity_resilience_flowchart.png",
           "title": "Singularity Resilience Overview"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_kafka_monogatari_poster_20260505",
@@ -3557,7 +3611,9 @@
           "path": "artifacts/123_kafka_monogatari_poster.png",
           "title": "Kafka Monogatari Poster"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_fischen_bgg_strategy_sheet_20260505",
@@ -3568,7 +3624,9 @@
           "path": "artifacts/125_fischen_bgg_strategy_sheet.png",
           "title": "Fischen BGG Strategy Sheet"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_work_norms_ai_sheet_20260505",
@@ -3579,7 +3637,9 @@
           "path": "artifacts/126_work_norms_ai_sheet.png",
           "title": "Work Norms AI Sheet"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "artifact_kafka_morning_soft_light_20260505",
@@ -3590,7 +3650,9 @@
           "path": "artifacts/127_kafka_morning_soft_light.png",
           "title": "Kafka Morning Soft Light"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "128",
@@ -3601,7 +3663,9 @@
           "path": "artifacts/128_kafka_evening_twilight.png",
           "title": "Kafka Evening Twilight"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "movie_release_onsen_shark2_20260505",
@@ -3613,7 +3677,9 @@
           "path": "artifacts/005_announcement_thumbnail.png",
           "title": "温泉シャーク２ 九州大決戦 公開告知"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_stretch",
@@ -3625,7 +3691,9 @@
           "path": "artifacts/129_kafka_morning_tweet_stretch.png",
           "title": "朝のストレッチ"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_reading",
@@ -3637,7 +3705,9 @@
           "path": "artifacts/130_kafka_morning_tweet_reading.png",
           "title": "朝のニュースチェック"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_plants",
@@ -3649,7 +3719,9 @@
           "path": "artifacts/131_kafka_morning_tweet_plants.png",
           "title": "窓辺の水やり"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_haircare",
@@ -3661,7 +3733,9 @@
           "path": "artifacts/132_kafka_morning_tweet_haircare.png",
           "title": "朝の身支度（髪）"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_bag",
@@ -3673,7 +3747,9 @@
           "path": "artifacts/133_kafka_morning_tweet_bag.png",
           "title": "持ち物確認"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_curtains",
@@ -3685,7 +3761,9 @@
           "path": "artifacts/134_kafka_morning_tweet_curtains.png",
           "title": "カーテンを開ける"
         }
-      ]
+      ],
+      "kind": "generated",
+      "blocks": []
     },
     {
       "id": "gen_20260506_morning_window_tweet",
@@ -3710,7 +3788,8 @@
           "path": "artifacts/110_morning_tweet_window_topdown.png",
           "title": "Kafka 朝のやさしい光（窓際おはツイ）"
         }
-      ]
+      ],
+      "kind": "generated"
     }
   ]
 }
