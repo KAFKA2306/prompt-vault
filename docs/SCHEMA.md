@@ -22,7 +22,18 @@
 - `id`: 文字列。一意の識別子。生成データの場合は `gen_ISO8601` 形式。
 - `title`: 文字列。テンプレートの名称。
 - `blocks`: 文字列のリスト。使用する Block の ID 群。
-- `kind`: 文字列。`standard`（標準）または `generated`（生成済み）。
+- `kind`: 文字列（Literal）。以下のいずれか：
+  - `standard`: 標準テンプレート
+  - `generated`: AI生成済みスナップショット
+  - `comic`: 漫画形式
+  - `stamp`: スタンプ形式
+  - `sheet`: キャラクタシート
+  - `design_sheet`: デザイン設計シート
+  - `reaction`: 反応画像
+  - `social`: SNS投稿
+  - `announcement`: 告知・ニュース
+  - `brand`: ブランド・ロゴ
+  - `system`: システム・基盤
 - `purpose`: 文字列。使用目的。
 - `summary`: 文字列。内容の要約。
 - `artifacts`: オブジェクトのリスト。

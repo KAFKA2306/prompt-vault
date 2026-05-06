@@ -1,5 +1,4 @@
-from typing import Any
-
+from typing import Any, Literal
 from pydantic import BaseModel, Field, model_validator
 
 
@@ -19,6 +18,21 @@ class Template(BaseModel):
     id: str
     title: str
     blocks: list[str] = Field(default_factory=list)
+    kind: Literal[
+        "standard",
+        "generated",
+        "announcement",
+        "brand",
+        "comic",
+        "design_sheet",
+        "news",
+        "reaction",
+        "sheet",
+        "social",
+        "stamp",
+        "system",
+    ] = "standard"
+    purpose: str = ""
     summary: str = ""
     artifacts: list[Artifact] = Field(default_factory=list)
     generated_prompt: str | None = None
@@ -39,25 +53,14 @@ class PromptDB(BaseModel):
         if "generated_prompts" in data:
             generated = data.pop("generated_prompts", [])
             templates = data.get("templates", [])
-            existing_ids = {t.get("id") if isinstance(t, dict) else t.id for t in templates}
+            existing_ids = {
+                t.get("id") if isinstance(t, dict) else (t.id if hasattr(t, "id") else None)
+                for t in templates
+            }
             for g in generated:
                 if g.get("id") not in existing_ids:
+                    g["kind"] = "generated"
                     templates.append(g)
             data["templates"] = templates
 
-        # Consolidate kind/purpose into summary for all templates
-        for t in data.get("templates", []):
-            if not isinstance(t, dict):
-                continue
-            kind = t.pop("kind", None)
-            purpose = t.pop("purpose", None)
-            
-            # Use 'generated' label if generated_prompt exists
-            if t.get("generated_prompt") and not kind:
-                kind = "generated"
-
-            parts = [p for p in [kind, purpose, t.get("summary")] if p and p not in ("standard", "")]
-            if parts:
-                t["summary"] = " / ".join(parts)
-        
         return data

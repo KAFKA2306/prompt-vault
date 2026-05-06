@@ -24,7 +24,7 @@ const renderRail = () => {
   const serverIds = new Set(templates.map(t => t.id));
   const localItems = state.localGenerated
     .filter(g => !serverIds.has(g.id))
-    .map(g => ({ ...g, summary: 'LocalStorage' }));
+    .map(g => ({ ...g, kind: 'generated', purpose: g.purpose || 'LocalStorage' }));
   
   const all = [...templates, ...localItems];
   const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
@@ -34,10 +34,10 @@ const renderRail = () => {
       <div class="template-card__thumb">${t.artifacts?.[0] ? `<img src="${t.artifacts[0].path}" loading="lazy">` : '<div class="template-card__placeholder">画像なし</div>'}</div>
       <div class="template-card__body">
         <div class="template-card__top">
-          <span class="template-card__kind">${esc(t.generated_prompt ? 'generated' : (t.summary || ''))}</span>
+          <span class="template-card__kind">${esc(t.kind)}</span>
         </div>
         <div class="template-card__title">${esc(t.title)}</div>
-        <div class="template-card__summary">${esc(t.summary || '')}</div>
+        <div class="template-card__summary">${esc(t.summary || t.purpose || '')}</div>
       </div>
     </div>
   `).join('');
@@ -50,8 +50,8 @@ const openModal = (id) => {
 
   state.current = t;
   el('modal-title').textContent = t.title;
-  el('modal-kind').textContent = t.generated_prompt ? 'generated' : (t.summary || '');
-  el('modal-summary').textContent = t.summary || '';
+  el('modal-kind').textContent = t.kind;
+  el('modal-summary').textContent = t.summary || t.purpose || '';
   el('modal-img').src = t.artifacts?.[0]?.path || '';
   el('modal-img').hidden = !t.artifacts?.[0];
   el('modal-prompt').textContent = t.generated_prompt || (t.blocks || [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
