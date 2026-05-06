@@ -14,6 +14,7 @@ from build import load_db, render_app_js
 
 ROOT = Path(__file__).resolve().parent
 STATIC_PATH, ARTIFACTS_PATH = ROOT / "static", ROOT / "artifacts"
+DIST_PATH = ROOT / "dist"
 DB_PATH, CONFIG_PATH = ROOT / "db" / "prompts.json", ROOT / "config.yaml"
 CODEX_PATH = ROOT / "prompts" / "frontend_codex.md"
 CONFIG = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
@@ -49,9 +50,8 @@ class Handler(BaseHTTPRequestHandler):
                 ".svg": "image/svg+xml",
                 ".png": "image/png",
                 ".jpg": "image/jpeg",
-                ".ico": "image/x-icon",
-                ".txt": "text/plain",
                 ".json": "application/json",
+                ".webp": "image/webp",
             }.get(ext, "application/octet-stream")
 
             content = render_app_js(load_db()).encode("utf-8") if p == "/app.js" else f.read_bytes()
@@ -59,9 +59,15 @@ class Handler(BaseHTTPRequestHandler):
 
         # Artifacts
         if p.startswith("/artifacts/"):
-            af = ROOT / p.lstrip("/")
+            # Try dist/ first, then root
+            af = DIST_PATH / p.lstrip("/")
+            if not af.exists():
+                af = ROOT / p.lstrip("/")
+            
             if af.exists():
-                return self._send(200, "image/png", af.read_bytes())
+                ext = af.suffix.lower()
+                mime = "image/webp" if ext == ".webp" else "image/png"
+                return self._send(200, mime, af.read_bytes())
 
         self.send_error(404)
         return None
