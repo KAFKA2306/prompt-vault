@@ -21,11 +21,12 @@ const saveLocal = (item) => {
 
 const renderRail = () => {
   const q = state.search.toLowerCase();
-  const all = [...templates, ...state.localGenerated.map(g => ({
-    ...g,
-    kind: 'generated',
-    purpose: g.purpose || 'LocalStorage'
-  }))];
+  const serverIds = new Set(templates.map(t => t.id));
+  const localItems = state.localGenerated
+    .filter(g => !serverIds.has(g.id))
+    .map(g => ({ ...g, kind: 'generated', purpose: g.purpose || 'LocalStorage' }));
+  
+  const all = [...templates, ...localItems];
   const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
   el('template-count').textContent = `${list.length} templates`;
   el('template-rail').innerHTML = list.map(t => `
