@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import Any
-
 from pydantic import BaseModel, Field
 
 
@@ -31,4 +29,3 @@ class Template(BaseModel):
 class PromptDB(BaseModel):
     blocks: list[Block]
     templates: list[Template]
-    generated_prompts: list[dict[str, Any]] = Field(default_factory=list)

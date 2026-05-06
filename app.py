@@ -96,8 +96,15 @@ class Handler(BaseHTTPRequestHandler):
             + ([out["addition"]] if out.get("addition") else [])
         )
         now = datetime.now(UTC).isoformat()
-        res_data = {"id": f"gen_{now}", "created_at": now, "title": out["title"], "generated_prompt": gen}
-        db.generated_prompts.append(res_data)
+        res_data = {
+            "id": f"gen_{now}",
+            "title": out["title"],
+            "kind": "generated",
+            "blocks": bids,
+            "generated_prompt": gen,
+            "purpose": tpl.purpose,
+        }
+        db.templates.append(res_data)
         DB_PATH.write_text(json.dumps(db.model_dump(exclude_none=True), ensure_ascii=False, indent=2), encoding="utf-8")
         return self._json(200, {"request_id": now, "generated_prompt": gen})
 
