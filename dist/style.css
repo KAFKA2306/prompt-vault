@@ -379,13 +379,13 @@ pre {
     position: absolute;
     top: 8px;
     right: 8px;
-    background: var(--bg-surface);
-    color: var(--text-subtle);
+    background: var(--bg-sidebar);
+    color: var(--text-muted);
     font-size: 10px;
     font-weight: 600;
     padding: 2px 6px;
     border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--line);
     backdrop-filter: blur(4px);
     pointer-events: none;
     z-index: 2;
@@ -394,6 +394,6 @@ pre {
 .modal-title-text:empty::after {
     content: "(Example Only)";
     font-size: 0.8em;
-    color: var(--text-subtle);
+    color: var(--text-muted);
     margin-left: 8px;
 }

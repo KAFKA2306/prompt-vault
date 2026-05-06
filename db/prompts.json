@@ -8,6 +8,18 @@
       "deprecated": true
     },
     {
+      "id": "rendering_soft_standard",
+      "title": "描画: 標準ソフト",
+      "content": "soft shadows, clean lineart, minimal clutter, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, soft gradients",
+      "category": "描画"
+    },
+    {
+      "id": "layout_social_square",
+      "title": "形式: 正方形ポスト",
+      "content": "square social post layout, clear margins, readable spacing, balanced composition, tweet-friendly",
+      "category": "形式・レイアウト"
+    },
+    {
       "id": "character_kafka",
       "title": "キャラクター: KAFKA",
       "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth",
@@ -15,11 +27,41 @@
       "deprecated": true
     },
     {
+      "id": "character_kafka_core",
+      "title": "キャラクター: KAFKA（核）",
+      "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, quiet emotional warmth",
+      "category": "キャラクター"
+    },
+    {
+      "id": "hair_kafka_detail",
+      "title": "髪詳細: KAFKA",
+      "content": "long light-blue hair, lavender gradient, semi-transparent bangs, fluffy layered hair, silver triangle hairpin with cat ornament, braided section with black ribbon",
+      "category": "キャラクター"
+    },
+    {
+      "id": "accessory_kafka_hairpin",
+      "title": "装飾: KAFKAヘアピン",
+      "content": "silver triangle hairpin with a cat ornament, thin silver metal, delicate accessory",
+      "category": "装飾"
+    },
+    {
       "id": "outfit_kafka",
       "title": "衣装: KAFKA基本",
       "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
       "category": "キャラ衣装",
       "deprecated": true
+    },
+    {
+      "id": "outfit_kafka_default",
+      "title": "衣装: KAFKA標準",
+      "content": "oversized white futuristic jacket, navy sailor-style inner top, short pleated skirt, white socks, chunky white-and-pastel sneakers, futuristic vtuber aesthetic",
+      "category": "衣装"
+    },
+    {
+      "id": "accessory_kafka_head",
+      "title": "装飾: KAFKAヘッドギア",
+      "content": "white oversized cap with black circular “K” emblem, small decorative flowers and branches, futuristic military-vtuber hybrid style",
+      "category": "装飾"
     },
     {
       "id": "kafka_identity_lock",
@@ -83,10 +125,29 @@
       ]
     },
     {
+      "id": "pose_reaction_focus",
+      "title": "ポーズ: 表情強調",
+      "content": "eyebrows visible, mouth readable, one hand in frame, eyes pointed at the viewer or the object, emotional pose first",
+      "category": "ポーズ"
+    },
+    {
+      "id": "framing_reaction_focus",
+      "title": "形式: 表情強調フレーミング",
+      "content": "close framing on the face and upper body",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "bg_plain",
+      "title": "背景: シンプル",
+      "content": "plain background, no wide environment unless needed",
+      "category": "背景"
+    },
+    {
       "id": "reaction_focus",
       "title": "表情強調",
       "content": "close framing on the face and upper body, eyebrows visible, mouth readable, one hand in frame, eyes pointed at the viewer or the object, emotional pose first, plain background, no wide environment unless needed",
-      "category": "表情"
+      "category": "表情",
+      "deprecated": true
     },
     {
       "id": "text_style_jp",
@@ -133,7 +194,7 @@
     {
       "id": "status_post_layout",
       "title": "日常ステータスレイアウト",
-      "content": "square or 4:5 social post, one clear status message, one supporting object or scene, no date, no timestamp, no clutter, readable at phone size, reusable layout for work, break, progress, and goodnight posts",
+      "content": "square or 4:5 social post, one clear status message, one supporting object or background, no date, no timestamp, no clutter, readable at phone size, reusable layout for work, break, progress, and goodnight posts",
       "category": "形式・レイアウト"
     },
     {
@@ -236,13 +297,146 @@
       "id": "bg_scene_nightoffice",
       "title": "背景: 深夜の事務所",
       "content": "late-night office tabletop, clocks, documents, laptop glow, city-night mood, sneaky cat accents, quiet indoor scene",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_morning_window",
+      "title": "背景: 窓際の朝",
+      "content": "bright window-side morning background, soft curtain light, sky outside, pale highlights, gentle indoor air, open but quiet, clean white space",
       "category": "背景"
+    },
+    {
+      "id": "background_night_office",
+      "title": "背景: 深夜の事務所",
+      "content": "late-night office tabletop, clocks, documents, laptop glow, city-night mood, sneaky cat accents, quiet indoor environment",
+      "category": "背景"
+    },
+    {
+      "id": "background_work_desk",
+      "title": "背景: 作業開始",
+      "content": "desk background, laptop, notebook, coffee or tea, neat workspace, clean window light, calm focus, small pastel accents, no clutter",
+      "category": "背景"
+    },
+    {
+      "id": "background_gaming_room",
+      "title": "背景: ゲーム中",
+      "content": "cozy gaming room, monitor glow, snacks or drink nearby, pastel blue and lavender accents, tidy and playful, no clutter",
+      "category": "背景"
+    },
+    {
+      "id": "pose_gaming_controller",
+      "title": "ポーズ: ゲームコントローラー",
+      "content": "sitting on a sofa or gaming chair, controller in hand, focused expression, relaxed legs",
+      "category": "ポーズ"
+    },
+    {
+      "id": "outfit_homewear",
+      "title": "衣装: 部屋着",
+      "content": "fashionable comfy homewear with a knit hoodie or soft sweater, relaxed silhouette",
+      "category": "衣装"
+    },
+    {
+      "id": "background_cosplay_studio",
+      "title": "背景: コスプレスタジオ",
+      "content": "clean studio background, professional lighting setup, minimal props, high contrast potential",
+      "category": "背景"
+    },
+    {
+      "id": "lighting_softbox",
+      "title": "光: ソフトボックス",
+      "content": "soft diffused studio lighting, balanced shadows, professional photography feel",
+      "category": "照明"
+    },
+    {
+      "id": "lighting_soft_daylight",
+      "title": "光: ソフトデイライト",
+      "content": "soft natural daylight, gentle morning sun, airy highlights, peaceful atmosphere",
+      "category": "照明"
+    },
+    {
+      "id": "lighting_monitor_glow",
+      "title": "光: モニターグロウ",
+      "content": "soft blue glow from a computer screen, localized lighting on the face, atmospheric highlight in low light",
+      "category": "照明"
+    },
+    {
+      "id": "pose_small_wave",
+      "title": "ポーズ: 小さく手を振る",
+      "content": "gentle waving gesture, small hand movement near the face, friendly and shy smile",
+      "category": "ポーズ"
+    },
+    {
+      "id": "pose_controller_play",
+      "title": "ポーズ: コントローラー操作",
+      "content": "holding a game controller with both hands, focused gaze, fingers on buttons, relaxed sitting posture",
+      "category": "ポーズ"
+    },
+    {
+      "id": "pose_photo_centered",
+      "title": "ポーズ: 中央配置フォト",
+      "content": "standing centered, looking directly at the camera, clean silhouette, professional model pose",
+      "category": "ポーズ"
+    },
+    {
+      "id": "layout_photo_centered",
+      "title": "形式: 中央配置フォト",
+      "content": "centered character composition, large portrait framing, clear focus, professional photoshoot layout",
+      "category": "形式・レイアウト"
     },
     {
       "id": "bg_outfit_magic_sci",
       "title": "衣装: 魔法とサイバー",
       "content": "witch-and-cyberpunk hybrid outfit, luminous accents, pointed details, futuristic magic vibe, bright and stylish",
       "category": "衣装"
+    },
+    {
+      "id": "layout_character_sheet",
+      "title": "形式: キャラデザインシート",
+      "content": "professional japanese character design reference sheet layout, multiple organized panels with thin blue borders, clean spacing, high readability, balanced infographic composition",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "layout_turnaround",
+      "title": "形式: 三面図",
+      "content": "three-view character turnaround sheet, FRONT / SIDE / BACK views, full body accurate design consistency",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "layout_expression_grid",
+      "title": "形式: 表情グリッド",
+      "content": "facial expression sheet grid, multiple anime expressions maintain exact same face identity",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "layout_accessory_breakdown",
+      "title": "形式: 装飾分解パネル",
+      "content": "accessory breakdown panel, close-up detailed object references, hat, coat, sailor outfit, shoes, necklace, hair accessories, robot mascot, chains, beads",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "layout_pose_variation",
+      "title": "形式: ポーズ差分パネル",
+      "content": "pose variation panel, multiple chibi/full-body poses, sitting, standing, cute energetic gestures",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "background_moodboard_futuristic",
+      "title": "背景: 未来ムードボード",
+      "content": "moodboard/environment section, soft futuristic cityscape, night city lights, dreamy sky, cozy room, pastel fantasy scenery, clean anime environment thumbnails",
+      "category": "背景"
+    },
+    {
+      "id": "rendering_soft_infographic",
+      "title": "描画: ソフトインフォグラフィック",
+      "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, high-key anime rendering, polished but human-crafted feeling",
+      "category": "描画"
+    },
+    {
+      "id": "text_japanese_labels",
+      "title": "文言: 日本語ラベル",
+      "content": "professional rounded Japanese font, clean rendering, high readability, organized Japanese infographic labeling",
+      "category": "テキスト"
     },
     {
       "id": "bg_scene_magic_sci",
@@ -564,26 +758,26 @@
     },
     {
       "id": "morning_pose_spring_kafka",
-      "title": "春おはツイ姿勢",
-      "content": "gentle spring morning pose, small wave, soft smile, cardigan or light layer, one hand near chest, bright but calm, friendly greeting, not too energetic",
+      "title": "ポーズ: 春の朝",
+      "content": "gentle spring morning pose, small wave, soft smile, one hand near chest, friendly greeting, not too energetic",
       "category": "ポーズ"
     },
     {
       "id": "morning_pose_summer_kafka",
-      "title": "夏おはツイ姿勢",
-      "content": "fresh summer morning pose, open shoulders or airy sleeves, small wave, refreshing smile, light movement, bright and simple, breezy greeting",
+      "title": "ポーズ: 夏の朝",
+      "content": "fresh summer morning pose, small wave, refreshing smile, light movement, breezy greeting",
       "category": "ポーズ"
     },
     {
       "id": "morning_pose_autumn_kafka",
-      "title": "秋おはツイ姿勢",
-      "content": "quiet autumn morning pose, relaxed hand gesture, gentle gaze, soft coat or knit layer, calm and thoughtful, slightly slower mood, cozy greeting",
+      "title": "ポーズ: 秋の朝",
+      "content": "quiet autumn morning pose, relaxed hand gesture, gentle gaze, calm and thoughtful, slightly slower mood, cozy greeting",
       "category": "ポーズ"
     },
     {
       "id": "morning_pose_winter_kafka",
-      "title": "冬おはツイ姿勢",
-      "content": "winter morning pose, scarf or coat, small wave, sleepy but kind smile, warm indoor feeling, compact and gentle, soft greeting",
+      "title": "ポーズ: 冬の朝",
+      "content": "winter morning pose, small wave, sleepy but kind smile, compact and gentle, soft greeting",
       "category": "ポーズ"
     },
     {
@@ -636,7 +830,7 @@
     },
     {
       "id": "morning_pose_window_kafka",
-      "title": "窓際おはツイ姿勢",
+      "title": "ポーズ: 窓際",
       "content": "gentle window-side morning pose, looking toward light, relaxed hand near face, calm smile, quiet breath, open but soft greeting",
       "category": "ポーズ"
     },
@@ -679,50 +873,88 @@
     {
       "id": "work_start_scene_kafka",
       "title": "作業開始背景",
-      "content": "desk scene, laptop, notebook, coffee or tea, neat workspace, clean window light, calm focus, small pastel accents, no clutter, no dark mood",
-      "category": "背景"
+      "content": "desk background, laptop, notebook, coffee or tea, neat workspace, clean window light, calm focus, small pastel accents, no clutter, no dark mood",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "gaming_scene_kafka",
       "title": "ゲーム遊び背景",
       "content": "cozy gaming room, Kafka sitting on a sofa or gaming chair, fashionable comfy homewear with a knit hoodie or soft sweater, controller in hand, monitor glow, snacks or drink nearby, pastel blue and lavender accents, tidy and playful, no clutter",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_splendor_table",
+      "title": "背景: 宝石の煌き対戦",
+      "content": "bright tabletop board game background, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
       "category": "背景"
     },
     {
       "id": "splendor_game_scene_kafka",
-      "title": "宝石の煌き対戦背景",
-      "content": "bright tabletop board game scene, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
-      "category": "背景"
+      "title": "背景: 宝石の煌き対戦 (deprecated)",
+      "content": "bright tabletop board game background, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "morning_scene_window_kafka",
-      "title": "窓際の朝背景",
-      "content": "bright window-side morning scene, soft curtain light, sky outside, pale highlights, gentle indoor air, open but quiet, clean white space",
+      "title": "背景: 窓際の朝 (deprecated)",
+      "content": "bright window-side morning background, soft curtain light, sky outside, pale highlights, gentle indoor air, open but quiet, clean white space",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_morning_coffee",
+      "title": "背景: 朝コーヒー",
+      "content": "cozy breakfast desk background, mug steam, notebook, small snack, window light, wake-up mood, neat and warm, clean composition",
       "category": "背景"
     },
     {
       "id": "morning_scene_coffee_kafka",
-      "title": "朝コーヒー背景",
-      "content": "cozy breakfast desk scene, mug steam, notebook, small snack, window light, wake-up mood, neat and warm, clean composition",
+      "title": "背景: 朝コーヒー (deprecated)",
+      "content": "cozy breakfast desk background, mug steam, notebook, small snack, window light, wake-up mood, neat and warm, clean composition",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_morning_commute",
+      "title": "背景: 出発前の朝",
+      "content": "entryway or front-door morning background, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
       "category": "背景"
     },
     {
       "id": "morning_scene_commute_kafka",
-      "title": "出発前の朝背景",
-      "content": "entryway or front-door morning scene, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
+      "title": "背景: 出発前の朝 (deprecated)",
+      "content": "entryway or front-door morning background, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_morning_rain",
+      "title": "背景: 雨の日の朝",
+      "content": "rainy morning window background, water droplets on glass, umbrella by the door, muted sky, soft indoor warmth, calm and reflective",
       "category": "背景"
     },
     {
       "id": "morning_scene_rain_kafka",
-      "title": "雨の日の朝背景",
-      "content": "rainy morning window scene, water droplets on glass, umbrella by the door, muted sky, soft indoor warmth, calm and reflective",
+      "title": "背景: 雨の日の朝 (deprecated)",
+      "content": "rainy morning window background, water droplets on glass, umbrella by the door, muted sky, soft indoor warmth, calm and reflective",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_morning_sleepy",
+      "title": "背景: 寝起きの朝",
+      "content": "sleepy bedroom morning background, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
       "category": "背景"
     },
     {
       "id": "morning_scene_sleepy_kafka",
-      "title": "寝起きの朝背景",
-      "content": "sleepy bedroom morning scene, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
-      "category": "背景"
+      "title": "背景: 寝起きの朝 (deprecated)",
+      "content": "sleepy bedroom morning background, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "morning_scene_dog_kafka",
@@ -743,10 +975,17 @@
       "category": "セリフ・フレーズ"
     },
     {
-      "id": "goodnight_scene_kafka",
-      "title": "おやすみ背景",
-      "content": "night room scene, desk lamp, closed laptop, soft blanket, small moon accent, quiet warm light, sleepy but calm, no dark horror mood",
+      "id": "background_night_room",
+      "title": "背景: おやすみ",
+      "content": "night room background, desk lamp, closed laptop, soft blanket, small moon accent, quiet warm light, sleepy but calm, no dark horror mood",
       "category": "背景"
+    },
+    {
+      "id": "goodnight_scene_kafka",
+      "title": "背景: おやすみ (deprecated)",
+      "content": "night room background, desk lamp, closed laptop, soft blanket, small moon accent, quiet warm light, sleepy but calm, no dark horror mood",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "poker_dealer_style_kafka",
@@ -755,10 +994,17 @@
       "category": "衣装"
     },
     {
-      "id": "poker_table_scene_kafka",
-      "title": "ポーカーテーブル背景",
+      "id": "background_poker_table",
+      "title": "背景: ポーカーテーブル",
       "content": "green felt poker table, playing cards, chips, warm casino lighting, shallow depth, elegant and cinematic, no clutter, strong tabletop focus",
       "category": "背景"
+    },
+    {
+      "id": "poker_table_scene_kafka",
+      "title": "背景: ポーカーテーブル (deprecated)",
+      "content": "green felt poker table, playing cards, chips, warm casino lighting, shallow depth, elegant and cinematic, no clutter, strong tabletop focus",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "poker_status_text_pack",
@@ -773,10 +1019,17 @@
       "category": "衣装"
     },
     {
-      "id": "fantasy_card_game_scene_kafka",
-      "title": "ファンタジーカード盤面",
+      "id": "background_fantasy_table",
+      "title": "背景: ファンタジーカード盤面",
       "content": "fantasy card game board, glowing mana-like gem, hero portrait frame, lane or arena feeling, warm tavern or magical room, readable UI-like composition, bright magical colors, not exact game copy",
       "category": "背景"
+    },
+    {
+      "id": "fantasy_card_game_scene_kafka",
+      "title": "背景: ファンタジーカード盤面 (deprecated)",
+      "content": "fantasy card game board, glowing mana-like gem, hero portrait frame, lane or arena feeling, warm tavern or magical room, readable UI-like composition, bright magical colors, not exact game copy",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "card_game_status_text_pack",
@@ -809,10 +1062,17 @@
       "category": "形式・レイアウト"
     },
     {
-      "id": "joinwars_scene_kafka",
-      "title": "JoinWars背景",
+      "id": "background_joinwars_table",
+      "title": "背景: JoinWars",
       "content": "VRChat card game world, glowing card frame, deck-building table, turn-based board, join battle mood, bright cyan and violet accents, playful competition, no clutter, no exact logo reproduction",
       "category": "背景"
+    },
+    {
+      "id": "joinwars_scene_kafka",
+      "title": "背景: JoinWars (deprecated)",
+      "content": "VRChat card game world, glowing card frame, deck-building table, turn-based board, join battle mood, bright cyan and violet accents, playful competition, no clutter, no exact logo reproduction",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "joinwars_style_kafka",
@@ -851,22 +1111,43 @@
       "category": "形式・レイアウト"
     },
     {
-      "id": "reading_scene_general_kafka",
+      "id": "background_reading_room",
       "title": "背景: 読書",
-      "content": "quiet reading scene, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
+      "content": "quiet reading background, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
+      "category": "背景"
+    },
+    {
+      "id": "reading_scene_general_kafka",
+      "title": "背景: 読書 (deprecated)",
+      "content": "quiet reading background, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_reading_seaside",
+      "title": "背景: 海辺の読書",
+      "content": "seaside reading background, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
       "category": "背景"
     },
     {
       "id": "reading_scene_seaside_kafka",
-      "title": "背景: 海辺の読書",
-      "content": "seaside reading scene, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
+      "title": "背景: 海辺の読書 (deprecated)",
+      "content": "seaside reading background, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
+      "category": "背景",
+      "deprecated": true
+    },
+    {
+      "id": "background_reading_anne",
+      "title": "背景: 赤毛のアン読書",
+      "content": "storybook reading background, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
       "category": "背景"
     },
     {
       "id": "reading_scene_anne_kafka",
-      "title": "背景: 赤毛のアン読書",
-      "content": "storybook reading scene, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
-      "category": "背景"
+      "title": "背景: 赤毛のアン読書 (deprecated)",
+      "content": "storybook reading background, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "reading_pose_kafka",
@@ -888,9 +1169,10 @@
     },
     {
       "id": "cosplay_scene_kafka",
-      "title": "コスプレ撮影背景",
-      "content": "cosplay photo scene, convention hall or studio backdrop, bright softbox light, simple background, photographer-friendly composition, pose centered, social media ready, no clutter",
-      "category": "背景"
+      "title": "背景: コスプレ撮影 (deprecated)",
+      "content": "cosplay photo background, convention hall or studio backdrop, bright softbox light, simple background, photographer-friendly composition, pose centered, social media ready, no clutter",
+      "category": "背景",
+      "deprecated": true
     },
     {
       "id": "cosplay_status_text_pack",
@@ -995,29 +1277,67 @@
       "category": "背景"
     },
     {
-      "id": "germany_expat_scene",
-      "title": "ドイツの街角",
+      "id": "background_germany_street",
+      "title": "背景: ドイツの街角",
       "content": "German city street, apartment search board, Bürgeramt office, bakery storefront, Sunday closed sign, calm apartment facades, subtle Berlin skyline, bright European atmosphere",
       "category": "背景"
     },
     {
-      "id": "germany_expat_daily_scene",
-      "title": "ドイツの日常",
-      "content": "German everyday life scene, morning kitchen table, tram stop, grocery checkout, recycling bins, weekly rhythm board, bright practical atmosphere, calm city living",
+      "id": "background_germany_daily",
+      "title": "背景: ドイツの日常",
+      "content": "German everyday life background, morning kitchen table, tram stop, grocery checkout, recycling bins, weekly rhythm board, bright practical atmosphere, calm city living",
       "category": "背景"
     },
     {
-      "id": "kansai_hanami_scene",
+      "id": "character_shafuka_core",
+      "title": "キャラクター: しゃふか（核）",
+      "content": "petite jirai-kei gothic girl, short bob haircut with straight blunt bangs, black hair with soft pink inner color and pink streaks, heterochromia with light green and pink-purple eyes",
+      "category": "キャラクター"
+    },
+    {
+      "id": "outfit_shafuka_default",
+      "title": "衣装: しゃふか標準",
+      "content": "light gray oversized cropped jacket with black fluffy fur collar, black inner top with a ribbon, black pleated skirt, simple garter straps, black thigh-high socks, platform shoes, black choker, simple waist chain, small paw-shaped hair clip",
+      "category": "衣装"
+    },
+    {
+      "id": "style_shafuka_flat",
+      "title": "描画: しゃふかフラット",
+      "content": "simple cute drawing style, flat colors, thick clean lineart, intentionally low detail",
+      "category": "描画"
+    },
+
+    {
+      "id": "kansai_hanami",
       "title": "関西のお花見",
       "content": "Kansai cherry blossom sightseeing background, Kyoto temple path with sakura, Osaka Castle with petals, Nara spring scenery, riverside promenade, airy spring travel atmosphere",
       "category": "背景"
     },
     {
-      "id": "kansai_hanami_route_scene",
+      "id": "kansai_hanami_route",
       "title": "関西お花見ルート",
       "content": "Kansai cherry blossom route background, Kyoto Maruyama Park, Osaka Castle Nishinomaru Garden, Kema Sakuranomiya Park riverside, Nara Park spring scenery, route arrows, practical travel atmosphere",
       "category": "背景"
     },
+    {
+      "id": "miyu_identity_lock",
+      "title": "キャラクター: みゆ（核）",
+      "content": "cute anime girl with very light lavender-blue hair, silky semi-transparent texture, fluffy layered bangs, long side ponytail gathered low on the right side, soft curled strands, tiny pale pink ribbon hairpins, glossy dark navy heart-shaped hair clips, large soft face, tiny nose, smooth pale skin, subtle pink blush",
+      "category": "キャラクター"
+    },
+    {
+      "id": "outfit_miyu_summer",
+      "title": "衣装: みゆ夏",
+      "content": "white sleeveless summer dress with thin straps and blue floral pattern, frilled shoulder straps, tiny blue waist ribbon, silver necklace and bracelet",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_miyu_cafe",
+      "title": "背景: みゆカフェ",
+      "content": "bright airy summer cafe terrace, white table, large open windows, blue sky, white and blue flowers",
+      "category": "背景"
+    },
+
     {
       "id": "tax_truth_layout",
       "title": "税の真実レイアウト",
@@ -1093,7 +1413,7 @@
     {
       "id": "character_sheet_miyu",
       "title": "形式: みゆデザインシート",
-      "content": "masterpiece, best quality, ultra detailed, dreamy pastel anime illustration, bright airy summer atmosphere, soft cinematic bloom, delicate lighting, extremely soft shading, white and sky-blue color palette, high-key exposure, glossy highlights, shallow depth of field, bokeh flowers in foreground, elegant cafe terrace scene, emotional healing mood, ultra clean rendering, polished commercial anime art style\n\ncute anime girl, petite build, sitting at a white round cafe table outdoors, upper body slightly leaning forward, relaxed and cheerful pose, eyes closed in a happy smile, small open mouth smile, soft blush on cheeks, right hand gently touching cheek, left arm resting naturally, calm and sweet expression\n\nvery light lavender-blue hair, silky semi-transparent hair texture, fluffy layered bangs covering eyebrows, long side ponytail gathered low on the right side, soft curled strands, translucent pastel highlights, multiple tiny pale pink ribbon hairpins scattered through bangs and side hair, two glossy dark navy heart-shaped hair clips on bangs\n\nlarge soft anime face, tiny nose, smooth pale skin, subtle pink blush gradient, thin eyelashes, glossy lips\n\nwhite sleeveless summer dress with thin straps, blue floral porcelain-style pattern, frilled shoulder straps, fitted bodice, tiny blue ribbon at waist, lightweight cotton fabric, soft folds, elegant feminine summer fashion\n\nsilver necklace, silver bracelet, delicate accessories, subtle sparkle highlights\n\nbright blue cream soda float on table, transparent curved glass, blue gradient liquid, ice cubes visible, scoop of vanilla ice cream on top, red cherry garnish, white straw, realistic glass reflections, coaster under glass\n\nwhite decorative metal cafe chair, white terrace interior, large open windows, vivid blue sky with fluffy white clouds outside, soft white flowers and blue flowers surrounding foreground and background, bright summer sunlight pouring in\n\ncomposition focused on character centered slightly left, drink placed lower right foreground, portrait orientation, chest-to-thigh framing, slight downward camera angle, intimate composition\n\nextremely soft ambient lighting, bloom around edges, atmospheric perspective, pastel haze, glowing rim light on hair and shoulders, gentle highlights on skin, dreamy watercolor-like atmosphere while retaining sharp facial rendering\n\nno text, no watermark, no logo, no extra people, no dark shadows, no harsh contrast, no messy background, no distorted anatomy, no extra fingers, no low detail, no AI artifacts, no bad hands, no duplicate accessories",
+      "content": "masterpiece, best quality, ultra detailed, dreamy pastel anime illustration, bright airy summer atmosphere, soft cinematic bloom, delicate lighting, extremely soft shading, white and sky-blue color palette, high-key exposure, glossy highlights, shallow depth of field, bokeh flowers in foreground, elegant cafe terrace background, emotional healing mood, ultra clean rendering, polished commercial anime art style\n\ncute anime girl, petite build, sitting at a white round cafe table outdoors, upper body slightly leaning forward, relaxed and cheerful pose, eyes closed in a happy smile, small open mouth smile, soft blush on cheeks, right hand gently touching cheek, left arm resting naturally, calm and sweet expression\n\nvery light lavender-blue hair, silky semi-transparent hair texture, fluffy layered bangs covering eyebrows, long side ponytail gathered low on the right side, soft curled strands, translucent pastel highlights, multiple tiny pale pink ribbon hairpins scattered through bangs and side hair, two glossy dark navy heart-shaped hair clips on bangs\n\nlarge soft anime face, tiny nose, smooth pale skin, subtle pink blush gradient, thin eyelashes, glossy lips\n\nwhite sleeveless summer dress with thin straps, blue floral porcelain-style pattern, frilled shoulder straps, fitted bodice, tiny blue ribbon at waist, lightweight cotton fabric, soft folds, elegant feminine summer fashion\n\nsilver necklace, silver bracelet, delicate accessories, subtle sparkle highlights\n\nbright blue cream soda float on table, transparent curved glass, blue gradient liquid, ice cubes visible, scoop of vanilla ice cream on top, red cherry garnish, white straw, realistic glass reflections, coaster under glass\n\nwhite decorative metal cafe chair, white terrace interior, large open windows, vivid blue sky with fluffy white clouds outside, soft white flowers and blue flowers surrounding foreground and background, bright summer sunlight pouring in\n\ncomposition focused on character centered slightly left, drink placed lower right foreground, portrait orientation, chest-to-thigh framing, slight downward camera angle, intimate composition\n\nextremely soft ambient lighting, bloom around edges, atmospheric perspective, pastel haze, glowing rim light on hair and shoulders, gentle highlights on skin, dreamy watercolor-like atmosphere while retaining sharp facial rendering\n\nno text, no watermark, no logo, no extra people, no dark shadows, no harsh contrast, no messy background, no distorted anatomy, no extra fingers, no low detail, no AI artifacts, no bad hands, no duplicate accessories",
       "category": "形式・レイアウト",
       "artifacts": [
         {
@@ -1115,21 +1435,28 @@
       "category": "キャラクター"
     },
     {
+      "id": "vacation_dining_trio_composition",
+      "title": "構図: 3人バカンス食事",
+      "content": "three-person vacation dining composition, Kafka, Shafuka, and Miyu sharing a bright meal together, multiple plates and drinks on the table, generous food-forward composition, clear separation between the three characters, each with a distinct pose",
+      "category": "構図"
+    },
+    {
       "id": "vacation_dining_trio_scene",
-      "title": "3人バカンス食事",
-      "content": "three-person vacation dining scene, Kafka, Shafuka, and Miyu sharing a bright meal together, ecstatic and delighted expressions, lively laughter, relaxed holiday mood, eating a lot, multiple plates and drinks on the table, sunny vacation terrace or cafe, generous food-forward composition, joyful and indulgent atmosphere, clear separation between the three characters, each with a distinct pose, clean readable arrangement, bright summer light, celebratory and satisfying feel",
-      "category": "シーン・構図"
+      "title": "構図: 3人バカンス食事 (deprecated)",
+      "content": "three-person vacation dining background, Kafka, Shafuka, and Miyu sharing a bright meal together, ecstatic and delighted expressions, lively laughter, relaxed holiday mood, eating a lot, multiple plates and drinks on the table, sunny vacation terrace or cafe, generous food-forward composition, joyful and indulgent atmosphere, clear separation between the three characters, each with a distinct pose, clean readable arrangement, bright summer light, celebratory and satisfying feel",
+      "category": "シーン・構図",
+      "deprecated": true
     },
     {
       "id": "morning_pose_stretch_kafka",
-      "title": "朝のストレッチ",
-      "content": "morning yoga pose, gentle stretching, arms raised slightly or hands on hips, relaxed and flexible, airy room, soft morning glow, peaceful expression",
+      "title": "ポーズ: 朝のストレッチ",
+      "content": "morning yoga pose, gentle stretching, arms raised slightly or hands on hips, relaxed and flexible",
       "category": "ポーズ"
     },
     {
       "id": "morning_pose_reading_kafka",
       "title": "朝のニュースチェック",
-      "content": "morning reading scene, holding a futuristic tablet or glowing hologram screen, focused but gentle expression, intellectual morning mood, soft lighting, quiet atmosphere",
+      "content": "morning reading background, holding a futuristic tablet or glowing hologram screen, focused but gentle expression, intellectual morning mood, soft lighting, quiet atmosphere",
       "category": "ポーズ"
     },
     {
@@ -1434,7 +1761,9 @@
         "morning_tweet_layout",
         "morning_tweet_text_pack",
         "morning_pose_window_kafka",
-        "morning_scene_window_kafka",
+        "background_morning_window",
+        "lighting_soft_daylight",
+        "pose_small_wave",
         "morning_home_outfit_kafka",
         "clean_quality_rendering",
         "text_style_jp",
@@ -1628,7 +1957,9 @@
         "character_kafka",
         "outfit_kafka",
         "morning_pose_window_kafka",
-        "morning_scene_window_kafka",
+        "background_morning_window",
+        "lighting_soft_daylight",
+        "pose_small_wave",
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "text_style_jp",
@@ -1753,7 +2084,7 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "work_start_scene_kafka",
+        "background_work_desk",
         "status_post_layout",
         "daily_status_text_pack",
         "text_style_jp",
@@ -2105,7 +2436,7 @@
         "character_kafka",
         "boardgame_social_layout",
         "bg_outfit_nightoffice",
-        "bg_scene_nightoffice",
+        "background_night_office",
         "clean_quality_rendering",
         "negative_common"
       ],
@@ -2121,7 +2452,7 @@
         "character_kafka",
         "boardgame_social_layout",
         "bg_outfit_nightoffice",
-        "bg_scene_nightoffice",
+        "background_night_office",
         "clean_quality_rendering",
         "negative_common"
       ],
@@ -2137,7 +2468,7 @@
         "character_kafka",
         "boardgame_social_layout",
         "bg_outfit_nightoffice",
-        "bg_scene_nightoffice",
+        "background_night_office",
         "clean_quality_rendering",
         "negative_common"
       ],
@@ -2341,7 +2672,7 @@
         "master_style",
         "character_kafka",
         "cardgame_post_layout",
-        "fantasy_card_game_scene_kafka",
+        "background_fantasy_table",
         "fantasy_card_game_style_kafka",
         "card_game_status_text_pack",
         "text_style_jp",
@@ -2365,7 +2696,19 @@
       "id": "character_design_sheet",
       "title": "Kafka キャラデザインシート",
       "blocks": [
-        "character_sheet_kafka",
+        "character_kafka_core",
+        "hair_kafka_detail",
+        "outfit_kafka_default",
+        "accessory_kafka_head",
+        "layout_character_sheet",
+        "layout_turnaround",
+        "layout_expression_grid",
+        "layout_accessory_breakdown",
+        "layout_pose_variation",
+        "background_moodboard_futuristic",
+        "rendering_soft_infographic",
+        "text_japanese_labels",
+        "negative_common",
         "kafka_identity_lock"
       ],
       "kind": "design_sheet",
@@ -2397,7 +2740,10 @@
         "master_style",
         "character_kafka",
         "cosplay_post_layout",
-        "cosplay_scene_kafka",
+        "background_cosplay_studio",
+        "lighting_softbox",
+        "pose_photo_centered",
+        "layout_photo_centered",
         "cosplay_event_outfit_kafka",
         "cosplay_status_text_pack",
         "text_style_jp",
@@ -2438,7 +2784,10 @@
         "master_style",
         "character_kafka",
         "gaming_post_layout",
-        "gaming_scene_kafka",
+        "background_gaming_room",
+        "lighting_monitor_glow",
+        "pose_controller_play",
+        "outfit_homewear",
         "gaming_status_text_pack",
         "text_style_jp",
         "negative_common"
@@ -2460,7 +2809,7 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "germany_expat_scene",
+        "background_germany_street",
         "text_style_jp",
         "negative_common"
       ],
@@ -2480,7 +2829,7 @@
       "blocks": [
         "master_style",
         "character_kafka",
-        "germany_expat_daily_scene",
+        "background_germany_daily",
         "text_style_jp",
         "negative_common"
       ],
@@ -2501,7 +2850,7 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "goodnight_scene_kafka",
+        "background_night_room",
         "status_post_layout",
         "daily_status_text_pack",
         "text_style_jp",
@@ -2542,7 +2891,7 @@
         "master_style",
         "character_kafka",
         "joinwars_layout",
-        "joinwars_scene_kafka",
+        "background_joinwars_table",
         "joinwars_style_kafka",
         "joinwars_status_text_pack",
         "text_style_jp",
@@ -2587,7 +2936,7 @@
         "master_style",
         "character_kafka",
         "spring_fashion_kafka",
-        "kansai_hanami_scene",
+        "kansai_hanami",
         "text_style_jp",
         "negative_common"
       ],
@@ -2608,7 +2957,7 @@
         "master_style",
         "character_kafka",
         "spring_fashion_kafka",
-        "kansai_hanami_route_scene",
+        "kansai_hanami_route",
         "text_style_jp",
         "negative_common"
       ],
@@ -2667,7 +3016,11 @@
       "id": "miyu_character_sheet",
       "title": "形式: みゆデザインシート",
       "blocks": [
-        "character_sheet_miyu"
+        "miyu_identity_lock",
+        "outfit_miyu_summer",
+        "bg_miyu_cafe",
+        "layout_character_sheet",
+        "negative_common"
       ],
       "kind": "design_sheet",
       "purpose": "みゆ の見た目と基準を一枚にまとめる",
@@ -2720,7 +3073,7 @@
         "character_kafka",
         "outfit_kafka",
         "morning_pose_coffee_kafka",
-        "morning_scene_coffee_kafka",
+        "background_morning_coffee",
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "text_style_jp",
@@ -2744,7 +3097,7 @@
         "character_kafka",
         "outfit_kafka",
         "morning_pose_commute_kafka",
-        "morning_scene_commute_kafka",
+        "background_morning_commute",
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "text_style_jp",
@@ -2793,7 +3146,7 @@
         "character_kafka",
         "outfit_kafka",
         "morning_pose_rain_kafka",
-        "morning_scene_rain_kafka",
+        "background_morning_rain",
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "text_style_jp",
@@ -2817,7 +3170,7 @@
         "character_kafka",
         "outfit_kafka",
         "morning_pose_sleepy_kafka",
-        "morning_scene_sleepy_kafka",
+        "background_morning_sleepy",
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "text_style_jp",
@@ -3036,7 +3389,7 @@
         "master_style",
         "character_kafka",
         "poker_post_layout",
-        "poker_table_scene_kafka",
+        "background_poker_table",
         "poker_dealer_style_kafka",
         "poker_status_text_pack",
         "text_style_jp",
@@ -3107,7 +3460,7 @@
         "master_style",
         "character_kafka",
         "reading_post_layout",
-        "reading_scene_anne_kafka",
+        "background_reading_anne",
         "reading_pose_kafka",
         "reading_outfit_kafka",
         "reading_status_text_pack",
@@ -3131,7 +3484,7 @@
         "master_style",
         "character_kafka",
         "reading_post_layout",
-        "reading_scene_general_kafka",
+        "background_reading_room",
         "reading_pose_kafka",
         "reading_outfit_kafka",
         "reading_status_text_pack",
@@ -3155,7 +3508,7 @@
         "master_style",
         "character_kafka",
         "reading_post_layout",
-        "reading_scene_seaside_kafka",
+        "background_reading_seaside",
         "reading_pose_kafka",
         "reading_outfit_kafka",
         "reading_status_text_pack",
@@ -3180,7 +3533,11 @@
       "id": "shafuka_character_sheet",
       "title": "形式: しゃふかデザインシート",
       "blocks": [
-        "character_sheet_shafuka"
+        "character_shafuka_core",
+        "outfit_shafuka_default",
+        "style_shafuka_flat",
+        "layout_character_sheet",
+        "negative_common"
       ],
       "kind": "design_sheet",
       "purpose": "しゃふか の見た目と基準を一枚にまとめる",
@@ -3244,7 +3601,7 @@
         "character_kafka",
         "comic_layout",
         "reaction_focus",
-        "splendor_game_scene_kafka",
+        "background_splendor_table",
         "splendor_game_text_pack",
         "text_style_jp",
         "effects_pack",
@@ -3514,7 +3871,14 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "tweet_backed_creator_workflow_desk_20260504",
@@ -3527,7 +3891,14 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "tweet_backed_doha_airport_oasis_20260505",
@@ -3548,7 +3919,14 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "tweet_backed_vrchat_avatar_mod_workbench_20260504",
@@ -3561,7 +3939,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "tweet_backed_vrchat_event_gathering_20260504",
@@ -3574,7 +3959,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "tweet_backed_vrchat_world_exploration_20260504",
@@ -3587,7 +3979,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "twitter_comic",
@@ -3764,7 +4163,14 @@
         }
       ],
       "kind": "comic",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "artifact_life_portfolio_overview_20260505",
@@ -3777,7 +4183,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "artifact_rendering_quality_check_20260505",
@@ -3790,7 +4203,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "artifact_rsi_overview_20260505",
@@ -3803,7 +4223,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "artifact_singularity_resilience_overview_20260505",
@@ -3832,7 +4259,14 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "deprecated": true
     },
     {
       "id": "artifact_tax_truth_sheet_20260505",
@@ -3845,7 +4279,9 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [],
+      "purpose": "quarantine",
+      "deprecated": true
     },
     {
       "id": "artifact_work_norms_ai_sheet_20260505",
@@ -3858,7 +4294,9 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": []
+      "blocks": [],
+      "purpose": "quarantine",
+      "deprecated": true
     },
     {
       "id": "gen_20260501_085644_421588",
@@ -3867,7 +4305,7 @@
         "master_style",
         "character_kafka",
         "poker_post_layout",
-        "poker_table_scene_kafka",
+        "background_poker_table",
         "poker_dealer_style_kafka",
         "poker_status_text_pack",
         "text_style_jp",
@@ -3890,7 +4328,7 @@
         "master_style",
         "character_kafka",
         "poker_post_layout",
-        "poker_table_scene_kafka",
+        "background_poker_table",
         "poker_dealer_style_kafka",
         "poker_status_text_pack",
         "text_style_jp",
