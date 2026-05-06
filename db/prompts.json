@@ -86,6 +86,13 @@
           "title": "Kafka キャラデザインシート"
         }
       ],
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
       "deprecated": true
     },
     {
@@ -4279,8 +4286,13 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": [],
-      "purpose": "quarantine",
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
       "deprecated": true
     },
     {
@@ -4294,8 +4306,13 @@
         }
       ],
       "kind": "design_sheet",
-      "blocks": [],
-      "purpose": "quarantine",
+      "blocks": [
+        "source_research",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
       "deprecated": true
     },
     {
