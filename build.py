@@ -53,8 +53,18 @@ def write_dist() -> None:
     DIST_PATH.mkdir(exist_ok=True)
     (DIST_PATH / "artifacts").mkdir(exist_ok=True)
 
+    # Inject commit hash for observability
+    try:
+        import subprocess
+        sha = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode().strip()
+    except Exception:
+        sha = "unknown"
+
     for f in ["index.html", "style.css"]:
-        (DIST_PATH / f).write_text((STATIC_PATH / f).read_text(encoding="utf-8"), encoding="utf-8")
+        content = (STATIC_PATH / f).read_text(encoding="utf-8")
+        if f == "index.html":
+            content = content.replace("</body>", f"<!-- Build: {sha} -->\n</body>")
+        (DIST_PATH / f).write_text(content, encoding="utf-8")
 
     (DIST_PATH / "app.js").write_text(render_app_js(db), encoding="utf-8")
 

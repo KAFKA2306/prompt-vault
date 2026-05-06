@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kafka Emblem">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#d8b4fe"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#8b5cf6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="#ffffff"/>
+
+  <g filter="url(#shadow)">
+    <!-- Cat Face Silhouette -->
+    <path d="M16 34 
+             C 16 52, 48 52, 48 34
+             L 54 14
+             L 38 22
+             C 34 20, 30 20, 26 22
+             L 10 14
+             Z" fill="url(#brand)"/>
+    
+    <!-- Triangle Hairpin Overlay -->
+    <!-- Outer downward triangle -->
+    <path d="M32 48 L46 24 L18 24 Z" fill="#ffffff"/>
+    <!-- Inner cutout (shows cat face color again) -->
+    <path d="M32 42 L40 28 L24 28 Z" fill="url(#brand)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "name": "Prompt Vault",
+  "version": "1.0",
+  "homepage": "https://prompt-vault-cg3.pages.dev/",
+  "type": "content-library",
+  "description": "Japanese image-generation prompt vault with gallery-first browsing and full-prompt copy.",
+  "capabilities": [],
+  "services": []
+}
