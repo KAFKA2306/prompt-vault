@@ -57,6 +57,12 @@ window.openModal = (id) => {
   el('modal-purpose').textContent = t.summary || t.purpose || '';
   el('modal-img').src = t.artifacts?.[0]?.path || '';
   el('modal-img').hidden = !t.artifacts?.[0];
+  
+  el('modal-artifacts').innerHTML = (t.artifacts || []).map((a, i) => `
+    <img src="${a.path}" class="modal-artifact-thumb ${i === 0 ? 'is-active' : ''}" onclick="switchModalImg(this, '${a.path}')" alt="${esc(a.title)}">
+  `).join('');
+  el('modal-artifacts').hidden = !t.artifacts || t.artifacts.length < 2;
+
   el('modal-prompt').textContent = t.generated_prompt || (t.blocks || [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
   
   const chips = (ids) => (ids || []).map(bid => `<button class="tag tag-button" onclick="openNode('${bid}', 'block')">${esc(blocks[bid]?.title || bid)}</button>`).join('');
@@ -64,6 +70,12 @@ window.openModal = (id) => {
   el('modal-primary-block').hidden = !t.blocks || t.blocks.length === 0;
   
   el('modal').classList.add('active');
+};
+
+window.switchModalImg = (el, path) => {
+  document.querySelectorAll('.modal-artifact-thumb').forEach(t => t.classList.remove('is-active'));
+  el.classList.add('is-active');
+  document.getElementById('modal-img').src = path;
 };
 
 const renderGen = () => {
@@ -136,6 +148,9 @@ el('generator-clear-nodes').onclick = () => {
 };
 
 el('modal-close').onclick = () => el('modal').classList.remove('active');
+el('modal').onclick = (e) => {
+  if (e.target.id === 'modal') el('modal').classList.remove('active');
+};
 el('modal-copy').onclick = (e) => {
   navigator.clipboard.writeText(el('modal-prompt').textContent);
   const old = e.target.textContent;
