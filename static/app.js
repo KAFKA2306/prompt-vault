@@ -43,22 +43,25 @@ const renderRail = () => {
   `).join('');
 };
 
-const openModal = (id) => {
+window.openModal = (id) => {
   const all = [...templates, ...state.localGenerated];
-  const t = all.find(x => x.id === id);
+  let t = all.find(x => x.id === id);
+  if (!t && blocks[id]) {
+    t = { id, title: blocks[id].title, kind: blocks[id].category || 'block', purpose: '', generated_prompt: blocks[id].content, blocks: [] };
+  }
   if (!t) return;
 
   state.current = t;
   el('modal-title').textContent = t.title;
   el('modal-kind').textContent = t.kind;
-  el('modal-summary').textContent = t.summary || t.purpose || '';
+  el('modal-purpose').textContent = t.summary || t.purpose || '';
   el('modal-img').src = t.artifacts?.[0]?.path || '';
   el('modal-img').hidden = !t.artifacts?.[0];
   el('modal-prompt').textContent = t.generated_prompt || (t.blocks || [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
   
   const chips = (ids) => (ids || []).map(bid => `<button class="tag tag-button" onclick="openNode('${bid}', 'block')">${esc(blocks[bid]?.title || bid)}</button>`).join('');
   el('modal-primary').innerHTML = chips(t.blocks);
-  el('modal-primary-block').hidden = !t.blocks;
+  el('modal-primary-block').hidden = !t.blocks || t.blocks.length === 0;
   
   el('modal').classList.add('active');
 };
@@ -83,7 +86,7 @@ window.toggleGenBlock = (id) => {
   renderGen();
 };
 
-window.openNode = (id) => openModal(id);
+window.openNode = (id) => window.openModal(id);
 
 el('search').oninput = (e) => { state.search = e.target.value; renderRail(); };
 el('generator-template').onchange = (e) => {
