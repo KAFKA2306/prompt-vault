@@ -127,30 +127,6 @@
       "category": "表情"
     },
     {
-      "id": "outfit_011_industrial",
-      "title": "衣装: インダストリアル (011)",
-      "content": "industrial grey utility vest, black harness, techwear jumpsuit, techwear gloves, rugged futuristic style",
-      "category": "キャラ衣装"
-    },
-    {
-      "id": "scene_011_powergrid",
-      "title": "背景: 電力会社 (011)",
-      "content": "board game Power Grid tabletop, map with power lines, wooden house tokens, resource cubes (coal, oil), money, industrial room",
-      "category": "背景"
-    },
-    {
-      "id": "outfit_001_retro_yokohama",
-      "title": "衣装: 大正ロマン (001)",
-      "content": "light blue kimono jacket, white lace collar, futuristic navy ribbons, nostalgic fusion aesthetic",
-      "category": "キャラ衣装"
-    },
-    {
-      "id": "scene_001_yokohama_duel",
-      "title": "背景: 横浜デュエル (001)",
-      "content": "board game YOKOHAMA Duel tabletop, Meiji Yokohama port map, merchant meeples, shop cards, retro wooden furniture",
-      "category": "背景"
-    },
-    {
       "id": "effects_pack",
       "title": "装飾効果",
       "content": "sparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects",
@@ -1181,132 +1157,6 @@
       "title": "カーテンを開ける",
       "content": "opening curtains, hands on white sheer fabric, bright sunlight flooding the room, looking out the window with a hopeful expression, refreshing morning light, airy and bright",
       "category": "ポーズ"
-    },
-    {
-      "id": "boardgame_social_layout",
-      "title": "形式: ボードゲーム投稿",
-      "content": "square or 4:5 social post, one large portrait, board game components clearly visible beside Kafka, no date, no timestamp, readable on phone, balanced tabletop composition, clean margins",
-      "category": "形式・レイアウト"
-    },
-    {
-      "id": "bg_outfit_industrial",
-      "title": "衣装: 工業経済",
-      "content": "industrial grey utility vest, black harness, practical techwear jumpsuit, subtle metallic accents, rugged but tidy silhouette",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_industrial",
-      "title": "背景: 工業経済",
-      "content": "industrial board game tabletop, power lines, resource cubes, money cards, building tiles, clean mechanical network map, readable and tidy table",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_retro",
-      "title": "衣装: 大正ロマン探索",
-      "content": "Taisho romantic explorer outfit, light kimono jacket, white lace collar, antique navy ribbons, refined but practical silhouette",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_retro",
-      "title": "背景: 歴史遺産",
-      "content": "historical tabletop, Meiji port map, relic tiles, market stalls, expedition cards, antique wood table, nostalgic travel mood",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_dungeon",
-      "title": "衣装: ダンジョン冒険者",
-      "content": "dungeon adventurer outfit, cloak or layered coat, utility belt, leather boots, treasure-hunter vibe, bright but adventurous",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_dungeon",
-      "title": "背景: ダンジョン探索",
-      "content": "adventure fantasy tabletop, treasure tokens, cave map, gem counters, code tiles, dragon bag, readable dungeon layout",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_casual",
-      "title": "衣装: キッズカジュアル",
-      "content": "hoodie and playful casual wear, soft colors, comfy silhouette, kid-friendly and approachable",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_casual",
-      "title": "背景: キッズカジュアル",
-      "content": "bright family-friendly tabletop, pizza tokens, toy icons, building tiles, animal cards, cheerful secret-base mood",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_sporty",
-      "title": "衣装: スピードパズル",
-      "content": "sporty activewear, track jacket, clean sneakers, movement-friendly silhouette, quick and energetic",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_sporty",
-      "title": "背景: スピードパズル",
-      "content": "fast puzzle tabletop, polyomino pieces, number cards, slide grids, energetic turn-by-turn motion, clean competition table",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_intellectual",
-      "title": "衣装: 知的執事メイド",
-      "content": "smart butler-or-maid inspired outfit, vest, apron details, neat tie, elegant and intelligent mood",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_wordplay",
-      "title": "背景: 言葉と推理",
-      "content": "word and deduction tabletop, clue cards, answer tiles, whiteboard, neat brainstorm desk, small token layout",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_nightoffice",
-      "title": "衣装: 夜のオフィスパジャマ",
-      "content": "office pajamas or soft nightwear, cardigan, loose shirt, relaxed but still tidy silhouette",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_nightoffice",
-      "title": "背景: 深夜の事務所",
-      "content": "late-night office tabletop, clocks, documents, laptop glow, city-night mood, sneaky cat accents, quiet indoor scene",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_magic_sci",
-      "title": "衣装: 魔法とサイバー",
-      "content": "witch-and-cyberpunk hybrid outfit, luminous accents, pointed details, futuristic magic vibe, bright and stylish",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_magic_sci",
-      "title": "背景: 魔法とSF",
-      "content": "magic-and-sci-fi tabletop, potion cups, electric sparks, robot parts, glowing panels, bright adventurous tech mood",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_marine",
-      "title": "衣装: 白いマリンルック",
-      "content": "white marine look, sailor collar, navy ribbon, polished cruise-liner elegance, neat and resort-friendly silhouette",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_marine",
-      "title": "背景: 豪華客船",
-      "content": "luxury cruise ship tabletop, deck map, passenger meeples, ticket cards, balcony view, bright sea light, orderly shipboard layout",
-      "category": "背景"
-    },
-    {
-      "id": "bg_outfit_varied",
-      "title": "衣装: 調整用",
-      "content": "neutral versatile outfit, simple jacket, flexible silhouette, balanced accent colors, easy to adapt to many board game moods",
-      "category": "衣装"
-    },
-    {
-      "id": "bg_scene_varied",
-      "title": "背景: 調整用",
-      "content": "mixed tabletop game spread, chips, dice, abstract shapes, clue tiles, flexible colorful boardgame mood, clean and adaptable composition",
-      "category": "背景"
     }
   ],
   "templates": [
@@ -1995,6 +1845,22 @@
           "title": "Kafka ツイート根拠プロンプト一覧"
         }
       ]
+    },
+    {
+      "id": "tweet_backed_imagegen_index",
+      "title": "Kafka ツイート根拠イメージ一覧",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "archive_index_vlog",
+        "prompt_archive_sheet_vlog",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "sheet",
+      "purpose": "可視本文が20文字を超える tweet だけを根拠に、imagegen 方向を整理する",
+      "summary": "VRChat avatar mod, AI image generation, creator tools, VRChat events, VRChat worlds を、証拠 tweet 付きで並べる一覧シート。",
+      "artifacts": []
     },
     {
       "id": "work_start_post",
@@ -2849,7 +2715,7 @@
         "text_style_jp",
         "negative_common"
       ],
-      "kind": "generated",
+      "kind": "social",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -2872,7 +2738,7 @@
         "text_style_jp",
         "negative_common"
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -2895,7 +2761,7 @@
         "expressions_pack",
         "negative_common"
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -2921,7 +2787,7 @@
         "effects_pack",
         "negative_common"
       ],
-      "kind": "generated",
+      "kind": "social",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -3007,6 +2873,21 @@
           "title": "Kafka 音が強い"
         }
       ]
+    },
+    {
+      "id": "comparison_sheet",
+      "title": "Kafka 比較カード",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "comparison_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "sheet",
+      "purpose": "2つの案を左右で比べる比較シートにする",
+      "summary": "比較や選択を一目で伝える2列カード。",
+      "artifacts": []
     },
     {
       "id": "timeline_sheet",
@@ -3257,7 +3138,7 @@
           "title": "KAFKA ごはんスタンプ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3271,7 +3152,7 @@
           "title": "もぐもぐカフカ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3285,7 +3166,7 @@
           "title": "コメント返し"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3299,7 +3180,7 @@
           "title": "ドミニオン対戦"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3313,7 +3194,7 @@
           "title": "朝ごはんタイム"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3327,7 +3208,7 @@
           "title": "コメント返し"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3341,7 +3222,7 @@
           "title": "指差し説明"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3355,7 +3236,7 @@
           "title": "作業開始"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3369,7 +3250,7 @@
           "title": "読書のひととき"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3383,7 +3264,7 @@
           "title": "勝利の一瞬"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3397,7 +3278,7 @@
           "title": "返信ぎゅっ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3411,7 +3292,7 @@
           "title": "比較カード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3425,7 +3306,7 @@
           "title": "見比べカード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3439,7 +3320,7 @@
           "title": "一覧対比カード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3453,7 +3334,7 @@
           "title": "崩れの時系列"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3467,7 +3348,7 @@
           "title": "分岐案内"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3481,7 +3362,7 @@
           "title": "非スタンプ案"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3495,7 +3376,7 @@
           "title": "崩れの経緯"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3509,7 +3390,7 @@
           "title": "淡色サンプル"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3523,7 +3404,7 @@
           "title": "公開前点検"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3622,7 +3503,7 @@
           "title": "Prompt Vault Update Guide"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3635,7 +3516,7 @@
           "title": "Tax Truth Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3648,7 +3529,7 @@
           "title": "Rendering Quality Check"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3661,7 +3542,7 @@
           "title": "Rendering Quality Check Reference"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3674,7 +3555,7 @@
           "title": "tweetsdb Graph Notes"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3691,7 +3572,7 @@
           "title": "Hermes Agent Skills"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3704,7 +3585,7 @@
           "title": "RSI Overview"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3717,7 +3598,7 @@
           "title": "Life Portfolio Overview"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3746,7 +3627,7 @@
           "title": "Evidence Review Raw"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3763,7 +3644,7 @@
           "title": "Version 2"
         }
       ],
-      "kind": "generated",
+      "kind": "comic",
       "blocks": []
     },
     {
@@ -3776,7 +3657,7 @@
           "title": "Fischen BGG Strategy Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3789,7 +3670,7 @@
           "title": "Work Norms AI Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3802,7 +3683,7 @@
           "title": "Kafka Morning Soft Light"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3843,7 +3724,7 @@
           "title": "朝のストレッチ"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3857,7 +3738,7 @@
           "title": "朝のニュースチェック"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3871,7 +3752,7 @@
           "title": "窓辺の水やり"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3885,7 +3766,7 @@
           "title": "朝の身支度（髪）"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3899,7 +3780,7 @@
           "title": "持ち物確認"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3913,7 +3794,7 @@
           "title": "カーテンを開ける"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3940,7 +3821,7 @@
           "title": "Kafka 朝のやさしい光（窓際おはツイ）"
         }
       ],
-      "kind": "generated"
+      "kind": "social"
     }
   ]
 }
