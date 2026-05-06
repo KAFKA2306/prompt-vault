@@ -5,3 +5,4 @@ dist/
 .serena/
 artifacts/*.zip
 artifacts/twitter-*/
+scratch/
