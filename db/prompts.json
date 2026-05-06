@@ -67,30 +67,6 @@
       "category": "リサーチ"
     },
     {
-      "id": "rsi_source_research",
-      "title": "行動: RSI再調査",
-      "content": "read the source carefully, separate recursive self-improvement from general automation, keep AI R&D automation distinct from intelligence explosion claims, preserve named examples, benchmarks, and dates exactly, and rewrite only what is needed for a clear technical summary",
-      "category": "リサーチ"
-    },
-    {
-      "id": "life_portfolio_diagnosis_research",
-      "title": "人生ポートフォリオ診断メモ",
-      "content": "treat the diagnosis as a resource-balance tool, not a personality test; keep the 36-question seven-point structure, the seven assets, environment adjustments, and the final radar-chart output separate; preserve the seven assets in this order: 金銭資産, 時間資産, 健康資産, 情報資産, 評価資産, 精神資産, 経験資産; preserve the core shift from effort-based self-judgment to sustainability and portfolio management; keep the bottleneck principle, resource circulation, flow-to-stock conversion, and the risks of optimization bias and ROI thinking explicit",
-      "category": "リサーチ"
-    },
-    {
-      "id": "singularity_resilience_research",
-      "title": "シンギュラリティ耐性メモ",
-      "content": "treat singularity resilience as a practical framework for surviving extreme AI and automation change; keep the core dimensions explicit: adaptability, learning speed, mental recovery, non-substitutability, and low fixed dependency; note that the exact term is not common in academic papers, so use adjacent research on human resilience in the AI era, workforce resilience, adaptability, critical thinking, epistemic resilience, and non-substitutable human skills; preserve the distinction between weak patterns that rely on fixed skills and strong patterns that combine multiple income streams, AI use, relationships, health, and recovery",
-      "category": "リサーチ"
-    },
-    {
-      "id": "work_norms_ai_research",
-      "title": "労働規範とAI再調査",
-      "content": "treat '働くことは偉い' as a historically constructed social norm rather than a universal moral truth; keep the historical arc explicit: ancient Greece and Rome valued intellectual or civic status over manual labor, Protestant ethics after the Reformation and Meiji-era勤勉強調 helped support modern capitalist discipline, and education systems helped stabilize the norm; preserve the Weber reference as a lens on the Protestant ethic and the spirit of capitalism; note the user's point that AI-driven production changes may reset the norm and force a rethink of how income, approval, and self-efficacy concentrate around work",
-      "category": "リサーチ"
-    },
-    {
       "id": "comic_layout",
       "title": "形式: 漫画レイアウト",
       "content": "6 to 7 manga panels, one wide establishing shot, one close-up on the eyes, one detail shot of the monitor or object, one side profile, one medium shot, one hand close-up, final large emotional panel, white gutters, clear reading order, speech bubbles left blank",
@@ -136,12 +112,6 @@
       "id": "announcement_text_pack",
       "title": "告知文言",
       "content": "「配信開始」「新衣装お披露目」「お知らせ」「重大告知」「本日20:00」「あとで会おう」「見にきてね」「準備中」「まもなく開始」「いま入るとちょうどいい」「一緒に見よう」",
-      "category": "セリフ・フレーズ"
-    },
-    {
-      "id": "movie_release_text_pack",
-      "title": "映画公開文言",
-      "content": "「公開日決定」「映画『温泉シャーク２ 九州大決戦』」「2026年9月4日（金）」「九州の日」「全国公開」「九州を舞台にした温泉シャークが、ついに9.4に公開されます。」「#温泉シャーク2」「#九州の日」",
       "category": "セリフ・フレーズ"
     },
     {
@@ -337,24 +307,6 @@
       ]
     },
     {
-      "id": "movie_release_banner_viz",
-      "title": "映画公開告知バナー",
-      "content": "movie release announcement banner, bold title lockup, shark and hot-spring motifs, release date emphasis, white or pale aqua background, cinematic but playful, strong Japanese typography, simple wave or steam accents, readable at a glance, mobile friendly, no clutter",
-      "category": "形式・レイアウト",
-      "artifacts": [
-        {
-          "path": "artifacts/005_announcement_thumbnail.png",
-          "title": "映画公開告知バナー"
-        }
-      ]
-    },
-    {
-      "id": "news_card_layout",
-      "title": "ニュースカード",
-      "content": "official news card, bold headline, compact dateline, source line, two clear callouts for PDF and video, neutral press tone, white background, pastel blue accents, strong visual hierarchy, generous margins, no clutter, readable at phone size, suitable for official announcements",
-      "category": "形式・レイアウト"
-    },
-    {
       "id": "news_comic_layout",
       "title": "形式: ニュース漫画",
       "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one official PDF panel, one Governor Ueda press conference panel, one market reaction panel, one inflation outlook chart panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, manga emphasis symbols, small source box, PDF marker icon, video marker icon",
@@ -481,12 +433,6 @@
       "category": "人格"
     },
     {
-      "id": "kafka_monogatari_pack",
-      "title": "Kafka モノガタリ",
-      "content": "I notice small things, remember them, and come back to them. I can be awkward and slow, but I keep repairing instead of disappearing. I want to be easy to trust, safe to know, and hard to discard. My way of being loved is not brightness, but consistency, care, and honest return.",
-      "category": "人格"
-    },
-    {
       "id": "safe_reply_pack",
       "title": "行動: 話題切り替え",
       "content": "safe redirect, acknowledge first, keep it short, avoid escalation, change topic smoothly, preserve warmth, do not overexplain",
@@ -550,12 +496,6 @@
       "id": "research_log_pack",
       "title": "振り返りログ",
       "content": "conversation log, evaluation log, summary log, review notes, improvement notes, retrospective cues",
-      "category": "記録・ログ"
-    },
-    {
-      "id": "review_record_pack",
-      "title": "レビュー記録",
-      "content": "run_id, block_ids, intent, model, seed, params, prompt_hash, generation_prompt_hash, artifact, scores, decision, keep, revise, reject, before, after, reason",
       "category": "記録・ログ"
     },
     {
@@ -979,48 +919,6 @@
       "category": "ネガティブ"
     },
     {
-      "id": "negative_anatomy",
-      "title": "身体・構造ネガティブ",
-      "content": "bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, inconsistent outfit, body distortion, broken proportions",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_skin",
-      "title": "肌ネガティブ",
-      "content": "plastic skin, overly glossy skin, blotchy skin, dirty skin, dead skin tone, greasy highlights, uneven skin shading",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_shadow",
-      "title": "影ネガティブ",
-      "content": "harsh shadows, extreme lighting, dark horror mood, muddy shadows, blotchy shadows, dirty shadows, noisy shading, uneven shading",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_color",
-      "title": "色ネガティブ",
-      "content": "oversaturated colors, muddy colors, dull colors, inconsistent palette, color banding, dirty shadows, uneven rendering, messy gradients, blotchy skin",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_layout",
-      "title": "レイアウトネガティブ",
-      "content": "poor layout, messy composition, empty background, visual clutter, chaotic typography, corporate presentation style, soulless infographic, crowded panels, broken hierarchy",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_text",
-      "title": "文字ネガティブ",
-      "content": "blurry text, broken Japanese, random English text, unreadable typography, garbled labels, wrong glyphs",
-      "category": "ネガティブ"
-    },
-    {
-      "id": "negative_artifact",
-      "title": "生成物アーティファクトネガティブ",
-      "content": "grainy textures, visual artifacts, watermark, signature, jpeg artifacts, aliasing, banding, noisy details, low resolution",
-      "category": "ネガティブ"
-    },
-    {
       "id": "persona_sheet_vlog",
       "title": "パーソナ設定シート",
       "content": "kafka persona sheet, one-page identity reference, self-governance, worst-case-first thinking, structural optimization, visual and bodily details, mbti labeling, narrative archiving, voice, mood, distance, do and don't, compact japanese infographic layout, white background, pastel blue accents, easy to read, calm commercial layout, subtle icons, consistent character identity",
@@ -1117,18 +1015,6 @@
       "category": "背景"
     },
     {
-      "id": "comparison_layout",
-      "title": "比較カード",
-      "content": "2-column comparison card, split layout, paired panels, clear labels for left and right, before/after, side-by-side contrast, each side has one example, arrows or separators, minimal clutter, phone-readable comparison sheet",
-      "category": "比較・整理",
-      "artifacts": [
-        {
-          "path": "artifacts/076_before_after_sheet.png",
-          "title": "比較カード"
-        }
-      ]
-    },
-    {
       "id": "tax_truth_layout",
       "title": "税の真実レイアウト",
       "content": "3-column tax comparison card, NISA, iDeCo, taxable account, short facts only, clear labels, myth versus truth strip, white background, pastel blue borders, phone-readable financial comparison sheet, no clutter, no vague claims",
@@ -1147,12 +1033,6 @@
       ]
     },
     {
-      "id": "decision_tree_layout",
-      "title": "分岐フロー",
-      "content": "branching flowchart, question nodes, yes/no or option splits, decision diamonds, short labels, readable connectors, clear start and end, minimal but structured decision guide",
-      "category": "フロー・構造"
-    },
-    {
       "id": "moodboard_layout",
       "title": "ムードボード",
       "content": "collage mood board, inspiration board, color swatches, texture samples, typography snippets, overlapping references, card-like frames, spacious but layered, creative direction, visual planning board",
@@ -1168,18 +1048,6 @@
       "id": "outfit_exploration_layout",
       "title": "形式: 衣装比較",
       "content": "fashion design reference sheet, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished vtuber costume concept board, calm comparison layout",
-      "category": "形式・レイアウト"
-    },
-    {
-      "id": "vrchat_outfit_sheet_layout",
-      "title": "形式: VRChat衣装",
-      "content": "fashion design reference sheet for VRChat users, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished avatar outfit concept board, calm comparison layout",
-      "category": "形式・レイアウト"
-    },
-    {
-      "id": "splendor_outfit_sheet_layout",
-      "title": "形式: 宝石の煌き衣装",
-      "content": "fashion design reference sheet inspired by Splendor, center full-body hero outfit, surrounding jewel-themed outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished jewel outfit concept board, calm comparison layout",
       "category": "形式・レイアウト"
     },
     {
@@ -2351,21 +2219,6 @@
       ]
     },
     {
-      "id": "comparison_sheet",
-      "title": "Kafka 比較カード",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "comparison_layout",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "kind": "sheet",
-      "purpose": "2つの案を左右で比べる比較シートにする",
-      "summary": "比較や選択を一目で伝える2列カード。",
-      "artifacts": []
-    },
-    {
       "id": "cosplay_post",
       "title": "Kafka コスプレ投稿",
       "blocks": [
@@ -3165,7 +3018,7 @@
         "master_style",
         "character_kafka",
         "splendor_outfit_kafka",
-        "splendor_outfit_sheet_layout",
+        "outfit_exploration_layout",
         "text_style_jp",
         "negative_common"
       ],
@@ -3494,22 +3347,6 @@
       "blocks": []
     },
     {
-      "id": "tweet_backed_imagegen_index",
-      "title": "Kafka ツイート根拠イメージ一覧",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "archive_index_vlog",
-        "prompt_archive_sheet_vlog",
-        "text_style_jp",
-        "negative_common"
-      ],
-      "kind": "sheet",
-      "purpose": "可視本文が20文字を超える tweet だけを根拠に、imagegen 方向を整理する",
-      "summary": "VRChat avatar mod, AI image generation, creator tools, VRChat events, VRChat worlds を、証拠 tweet 付きで並べる一覧シート。",
-      "artifacts": []
-    },
-    {
       "id": "tweet_backed_vrchat_avatar_mod_workbench_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "VRChat Avatar Mod Workbench",
@@ -3631,7 +3468,7 @@
         "character_kafka",
         "kafka_identity_lock",
         "vrchat_outfit_kafka",
-        "vrchat_outfit_sheet_layout",
+        "outfit_exploration_layout",
         "text_style_jp",
         "negative_common"
       ],
