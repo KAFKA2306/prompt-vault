@@ -83,7 +83,7 @@ window.toggleGenBlock = (id) => {
   renderGen();
 };
 
-window.openNode = openNode;
+window.openNode = (id) => openModal(id);
 
 el('search').oninput = (e) => { state.search = e.target.value; renderRail(); };
 el('generator-template').onchange = (e) => {
