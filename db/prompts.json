@@ -3480,6 +3480,14 @@
         {
           "path": "artifacts/113_doha_airport_the_orchard_v2.png",
           "title": "Doha Airport The Orchard"
+        },
+        {
+          "path": "artifacts/111_doha_airport_indoor_oasis.png",
+          "title": "Indoor Oasis"
+        },
+        {
+          "path": "artifacts/114_doha_airport_the_orchard.png",
+          "title": "The Orchard"
         }
       ],
       "kind": "generated",
@@ -3558,6 +3566,10 @@
         {
           "path": "artifacts/108_hermes_agent_overview.png",
           "title": "Hermes Agent Reference"
+        },
+        {
+          "path": "artifacts/109_hermes_agent_skills.png",
+          "title": "Hermes Agent Skills"
         }
       ],
       "kind": "generated",
@@ -3597,6 +3609,22 @@
         {
           "path": "artifacts/118_singularity_resilience_flowchart.png",
           "title": "Singularity Resilience Overview"
+        },
+        {
+          "path": "artifacts/119_singularity_resilience_review.png",
+          "title": "Review Overview"
+        },
+        {
+          "path": "artifacts/120_singularity_resilience_review_concrete.png",
+          "title": "Concrete Review"
+        },
+        {
+          "path": "artifacts/121_singularity_resilience_evidence_review.png",
+          "title": "Evidence Review"
+        },
+        {
+          "path": "artifacts/122_singularity_resilience_evidence_review_raw.png",
+          "title": "Evidence Review Raw"
         }
       ],
       "kind": "generated",
@@ -3610,6 +3638,10 @@
         {
           "path": "artifacts/123_kafka_monogatari_poster.png",
           "title": "Kafka Monogatari Poster"
+        },
+        {
+          "path": "artifacts/124_kafka_monogatari_poster_v2.png",
+          "title": "Version 2"
         }
       ],
       "kind": "generated",
