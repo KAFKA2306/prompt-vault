@@ -22,7 +22,7 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
    - **人格の同期 (Persona-Driven Sampling)**:
      - `db/tweetsdb.json` を活用し、設計の根拠（Persona Signal）を特定する。
      - **クエリ実行**: `jq` 等を用い、タスクに関連するトピックや特徴タグを持つレコードを抽出する。
-     - **動機（メタファー）の抽出**: レコードの `essence`（本質）を分析し、Kafka特有の比喩（例: 「迷わない工場」等）を読み解く。
+     - **動機（メタファー）の抽出**: レコードの `essence`（本質）を分析し、Kafka特有の比喩や解決アプローチを読み解く。
      - **鮮度とSeedの参照**: `month_bucket` による人格変化の考慮、および `prompt_seed` 等の参照。
    - **既存アセットの参照**:
      - `db/prompts.json` および `artifacts/` で最も近い既存の例を特定し、構造やスタイルの参考にする。
