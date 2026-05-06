@@ -23,7 +23,7 @@ def load_db() -> PromptDB:
         for a in t.artifacts:
             if not (ROOT / a.path).exists():
                 raise ValueError(f"missing artifact: {a.path}")
-        if t.kind == "generated" and not t.artifacts:
+        if t.generated_prompt and not t.artifacts:
             print(f"Warning: generated template '{t.id}' has no artifacts")
 
     return db

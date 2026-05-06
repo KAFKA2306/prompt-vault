@@ -24,29 +24,34 @@ const renderRail = () => {
   const serverIds = new Set(templates.map(t => t.id));
   const localItems = state.localGenerated
     .filter(g => !serverIds.has(g.id))
-    .map(g => ({ ...g, kind: 'generated', purpose: g.purpose || 'LocalStorage' }));
+    .map(g => ({ ...g, summary: 'LocalStorage' }));
   
   const all = [...templates, ...localItems];
   const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
   el('template-count').textContent = `${list.length} templates`;
   el('template-rail').innerHTML = list.map(t => `
-    <button class="template-card" onclick="openNode('${t.id}')">
+    <div class="template-card" onclick="openModal('${t.id}')">
       <div class="template-card__thumb">${t.artifacts?.[0] ? `<img src="${t.artifacts[0].path}" loading="lazy">` : '<div class="template-card__placeholder">画像なし</div>'}</div>
       <div class="template-card__body">
-        <div class="template-card__top"><span class="template-card__kind">${esc(t.kind)}</span></div>
+        <div class="template-card__top">
+          <span class="template-card__kind">${esc(t.generated_prompt ? 'generated' : (t.summary || ''))}</span>
+        </div>
         <div class="template-card__title">${esc(t.title)}</div>
-        <div class="template-card__meta">${esc(t.purpose || t.summary)}</div>
+        <div class="template-card__summary">${esc(t.summary || '')}</div>
       </div>
-    </button>
+    </div>
   `).join('');
 };
 
-const openNode = (id, type = 'template') => {
-  const t = type === 'template' ? (templateMap[id] || state.localGenerated.find(g => g.id === id)) : blocks[id];
+const openModal = (id) => {
+  const all = [...templates, ...state.localGenerated];
+  const t = all.find(x => x.id === id);
   if (!t) return;
+
+  state.current = t;
   el('modal-title').textContent = t.title;
-  el('modal-kind').textContent = t.kind || t.category;
-  el('modal-purpose').textContent = t.purpose || t.summary;
+  el('modal-kind').textContent = t.generated_prompt ? 'generated' : (t.summary || '');
+  el('modal-summary').textContent = t.summary || '';
   el('modal-img').src = t.artifacts?.[0]?.path || '';
   el('modal-img').hidden = !t.artifacts?.[0];
   el('modal-prompt').textContent = t.generated_prompt || (t.blocks || [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
