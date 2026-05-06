@@ -1,7 +1,12 @@
 import json
 import shutil
 from pathlib import Path
-from PIL import Image
+
+try:
+    from PIL import Image
+    HAS_PILLOW = True
+except ImportError:
+    HAS_PILLOW = False
 
 from src.models import PromptDB
 
@@ -27,11 +32,12 @@ def load_db() -> PromptDB:
 
 def render_app_js(db: PromptDB) -> str:
     db_json = db.model_dump(exclude_none=True)
-    # Rewrite artifact paths to .webp for the frontend
-    for t in db_json.get("templates", []):
-        for a in t.get("artifacts", []):
-            if a["path"].endswith(".png"):
-                a["path"] = a["path"].replace(".png", ".webp")
+    # Rewrite artifact paths to .webp ONLY if Pillow is available
+    if HAS_PILLOW:
+        for t in db_json.get("templates", []):
+            for a in t.get("artifacts", []):
+                if a["path"].endswith(".png"):
+                    a["path"] = a["path"].replace(".png", ".webp")
 
     return (
         (STATIC_PATH / "app.js")
@@ -59,15 +65,22 @@ def write_dist() -> None:
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(s, dest)
 
-    # Convert and copy artifacts to WebP
-    print("Converting artifacts to WebP...")
+    # Convert to WebP if Pillow is available, otherwise copy PNG
     active_artifacts = {a.path for t in db.templates for a in t.artifacts}
-    for s in ARTIFACTS_PATH.glob("*.png"):
-        rel_path = f"artifacts/{s.name}"
-        if rel_path in active_artifacts:
-            dest = DIST_PATH / "artifacts" / s.with_suffix(".webp").name
-            with Image.open(s) as img:
-                img.save(dest, "WEBP", quality=80)
+    if HAS_PILLOW:
+        print("Converting artifacts to WebP...")
+        for s in ARTIFACTS_PATH.glob("*.png"):
+            rel_path = f"artifacts/{s.name}"
+            if rel_path in active_artifacts:
+                dest = DIST_PATH / "artifacts" / s.with_suffix(".webp").name
+                with Image.open(s) as img:
+                    img.save(dest, "WEBP", quality=80)
+    else:
+        print("Pillow not found. Falling back to PNG copy...")
+        for s in ARTIFACTS_PATH.glob("*.png"):
+            rel_path = f"artifacts/{s.name}"
+            if rel_path in active_artifacts:
+                shutil.copy2(s, DIST_PATH / "artifacts" / s.name)
 
 
 if __name__ == "__main__":

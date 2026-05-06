@@ -36,25 +36,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
-
-  deploy-cloudflare:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: dist
-      - name: Extract artifact
-        run: |
-          mkdir -p final_dist
-          tar -xf dist/artifact.tar -C final_dist
-          cp -r functions final_dist/ || true
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: prompt-vault-cg3
-          directory: final_dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
