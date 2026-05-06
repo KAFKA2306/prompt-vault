@@ -12,9 +12,10 @@
   --font-head: serif;
 }
 
+html { scrollbar-gutter: stable; }
 * { box-sizing: border-box; }
-body { margin: 0; overflow-x: hidden; color: var(--text); font-family: var(--font); background: linear-gradient(180deg, #f7f4ee, #efebe4); min-height: 100vh; }
-.page { width: min(1280px,100vw); margin: 0 auto; padding: 24px; }
+body { margin: 0; color: var(--text); font-family: var(--font); background: linear-gradient(180deg, #f7f4ee, #efebe4); min-height: 100vh; }
+.page { width: min(1280px,100%); margin: 0 auto; padding: 24px; }
 
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .hero { margin-bottom: 16px; padding: 28px; }
