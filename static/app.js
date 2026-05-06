@@ -85,7 +85,7 @@ window.openModal = (id) => {
   el('modal-related-block').hidden = related.length === 0;
   
   el('modal').classList.add('active');
-  el('modal').scrollTo(0, 0); // Scroll modal to top when opening new template
+  el('modal').scrollTo(0, 0);
 };
 
 window.switchModalImg = (el, path) => {
@@ -173,6 +173,15 @@ el('modal-copy').onclick = (e) => {
   e.target.textContent = 'コピー完了！';
   setTimeout(() => e.target.textContent = old, 2000);
 };
+
+window.openLightbox = (src) => {
+  if (!src) return;
+  el('lightbox-img').src = src;
+  el('lightbox').classList.add('active');
+};
+
+el('lightbox').onclick = () => el('lightbox').classList.remove('active');
+el('lightbox-close').onclick = () => el('lightbox').classList.remove('active');
 
 el('generator-template').innerHTML = templates.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('');
 renderRail();

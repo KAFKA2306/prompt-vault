@@ -1151,6 +1151,12 @@
       "title": "カーテンを開ける",
       "content": "opening curtains, hands on white sheer fabric, bright sunlight flooding the room, looking out the window with a hopeful expression, refreshing morning light, airy and bright",
       "category": "ポーズ"
+    },
+    {
+      "id": "strategy_ai_networking_20260506",
+      "title": "戦略: AI時代の人脈構築術",
+      "content": "# AI時代の人脈構築術: 物語の「演者」になる\n\nAIがタスクを代替する時代、人間関係の基盤は「能力補完（ギブアンドテイク）」から「物語補完」へとシフトする。\n\n## 1. キャラクター構想力（物語の演者）\n相手が主人公として生きるストーリーの中で、理想の「脇役・パートナー・理解者」として機能する力。メリットの対価を超えた、感情的なつながりと長期的な関係を構築する。\n\n- **実践**: 相手の自己像（革新的な起業家、孤独な天才など）を察知し、それに対する「信頼できる共感者」や「唯一の理解者」を演じる。\n\n## 2. 人間味と独自の文脈\nAIには出せない「体験」「人間的な洞察」「ユーモア」「倫理的判断」を提供し、希少価値を高める。\n\n## 3. AIの戦略的活用\n- 相手の公開情報をAIで分析し、核心となる「ストーリー」を抽出。\n- フォローアップの話題提案にAIを活用しつつ、対面や非言語コミュニケーションで信頼を固める。\n\n## 4. 完了定義\n「何ができるか」ではなく「この人といると、どんな自分（主人公）になれるか」を相手に思わせることができれば、代替不可能な人脈となる。",
+      "category": "戦略"
     }
   ],
   "templates": [
@@ -3834,6 +3840,23 @@
       ],
       "kind": "stamp",
       "blocks": []
+    },
+    {
+      "id": "artifact_ai_networking_story_20260506",
+      "title": "AI時代の人脈構築術 (Story-based Networking)",
+      "blocks": [
+        "strategy_ai_networking_20260506"
+      ],
+      "kind": "sheet",
+      "purpose": "AI時代における物語主導の人脈構築戦略の提示",
+      "summary": "能力補完から物語補完へのシフトを説く、AI時代の人間関係構築ガイド。",
+      "artifacts": [
+        {
+          "path": "artifacts/135_ai_networking_story.png",
+          "title": "AI Networking Strategy"
+        }
+      ],
+      "created_at": "2026-05-06T19:24:00Z"
     }
   ]
 }

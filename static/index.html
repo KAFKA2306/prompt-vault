@@ -151,12 +151,11 @@
       </div>
     </section>
   </main>
-
   <div class="modal" id="modal">
     <div class="modal-close" id="modal-close">&times;</div>
     <div class="modal-content">
       <div class="modal-image-view">
-        <img id="modal-img" src="" alt="" />
+        <img id="modal-img" src="" alt="" style="cursor: pointer;" onclick="openLightbox(this.src)" />
         <div class="modal-artifacts" id="modal-artifacts"></div>
       </div>
       <div class="modal-info">
@@ -180,6 +179,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightbox-close">&times;</div>
+    <img id="lightbox-img" src="" alt="" />
   </div>
 
   <script src="app.js" defer></script>

@@ -29,6 +29,7 @@ class Template(BaseModel):
         "social",
         "stamp",
         "system",
+        "generated",
     ] = "social"
     purpose: str = ""
     summary: str = ""
