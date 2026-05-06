@@ -68,8 +68,24 @@ window.openModal = (id) => {
   const chips = (ids) => (ids || []).map(bid => `<button class="tag tag-button" onclick="openNode('${bid}', 'block')">${esc(blocks[bid]?.title || bid)}</button>`).join('');
   el('modal-primary').innerHTML = chips(t.blocks);
   el('modal-primary-block').hidden = !t.blocks || t.blocks.length === 0;
+
+  const targetBids = new Set(t.blocks || []);
+  const related = all
+    .filter(x => x.id !== t.id && (x.blocks || []).some(bid => targetBids.has(bid)))
+    .map(x => ({ ...x, score: (x.blocks || []).filter(bid => targetBids.has(bid)).length }))
+    .sort((a, b) => b.score - a.score || (templates.indexOf(b) - templates.indexOf(a)))
+    .slice(0, 8);
+
+  el('modal-related').innerHTML = related.map(x => `
+    <div class="modal-related-item" onclick="openModal('${x.id}')">
+      <img src="${x.artifacts?.[0]?.path || ''}" loading="lazy">
+      <div class="modal-related-item__title">${esc(x.title)}</div>
+    </div>
+  `).join('');
+  el('modal-related-block').hidden = related.length === 0;
   
   el('modal').classList.add('active');
+  el('modal').scrollTo(0, 0); // Scroll modal to top when opening new template
 };
 
 window.switchModalImg = (el, path) => {

@@ -63,6 +63,11 @@ h1 { margin: 10px 0; font-family: var(--font-head); font-size: clamp(38px,5vw,64
 .modal-artifact-thumb:hover { border-color: var(--accent); }
 .modal-artifact-thumb.is-active { border-color: var(--accent); }
 .modal-info { display: grid; gap: 16px; align-content: start; }
+.modal-related { display: flex; gap: 10px; margin-top: 10px; overflow-x: auto; padding-bottom: 8px; }
+.modal-related-item { width: 100px; flex-shrink: 0; cursor: pointer; display: grid; gap: 4px; }
+.modal-related-item img { width: 100px; aspect-ratio: 4/3; border-radius: 8px; object-fit: cover; border: 1px solid var(--line); transition: transform .2s; }
+.modal-related-item:hover img { transform: scale(1.05); border-color: var(--accent); }
+.modal-related-item__title { font-size: 10px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--muted); }
 .block { padding: 16px; background: #f9fafb; border: 1px solid var(--line); border-radius: 16px; }
 pre { margin: 8px 0 0; padding: 12px; background: #fff; border: 1px solid var(--line); border-radius: 12px; font-family: monospace; white-space: pre-wrap; font-size: 13px; }
 
