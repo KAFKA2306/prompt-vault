@@ -19,8 +19,6 @@ class Template(BaseModel):
     title: str
     blocks: list[str] = Field(default_factory=list)
     kind: Literal[
-        "standard",
-        "generated",
         "announcement",
         "brand",
         "comic",
@@ -31,7 +29,7 @@ class Template(BaseModel):
         "social",
         "stamp",
         "system",
-    ] = "standard"
+    ] = "social"
     purpose: str = ""
     summary: str = ""
     artifacts: list[Artifact] = Field(default_factory=list)

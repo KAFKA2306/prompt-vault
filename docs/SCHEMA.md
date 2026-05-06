@@ -1,49 +1,91 @@
 # Prompt Vault データベース定義 (Schema)
 
-`db/prompts.json` の構造を定義します。この定義は `src/models.py` (Pydantic) を正本としています。
+`db/prompts.json` の構造を定義します。本ドキュメントは `src/models.py` (Pydantic) の定義に基づいた、人間向けの解説書です。
 
-## 基本構造
+## 1. 基本構造
 
-データベースは `blocks` と `templates` の2つの主要なリストで構成されます。
+データベースは、部品（Blocks）と組み合わせ（Templates）の2階層で構成されます。
 
-### 1. Block (構成要素)
+### 1.1 Block (構成要素)
+プロンプトを構成する最小単位（パーツ）です。
 
-プロンプトの部品となる最小単位です。
+| フィールド | 型 | 説明 | 具体例 |
+| :--- | :--- | :--- | :--- |
+| `id` | 文字列 | 一意の識別子 | `"master_style"` |
+| `title` | 文字列 | 部品の名称 | `"基本画風"` |
+| `content` | 文字列 | プロンプト本文 | `"high quality, master piece..."` |
+| `category` | 文字列 | 部品の分類（任意） | `"style"`, `"character"` |
 
-- `id`: 文字列。一意の識別子（例: `master_style`）。
-- `title`: 文字列。部品の名称。
-- `content`: 文字列。実際のプロンプトテキスト。
-- `category`: 文字列。部品の分類（例: `style`, `character`）。
+### 1.2 Template (プロンプトの型 / 成果物)
+複数の Block を組み合わせて、具体的な用途（漫画、スタンプ等）を定義したもの、または生成済みの記録です。
 
-### 2. Template (テンプレート)
+| フィールド | 型 | 説明 |
+| :--- | :--- | :--- |
+| `id` | 文字列 | 一意の識別子。生成データは `gen_YYYYMMDD_HHMMSS` 形式。 |
+| `title` | 文字列 | テンプレートまたは作品の名称。 |
+| `blocks` | 配列 | 使用する `Block` の ID リスト。 |
+| `kind` | Literal | **重要：** コンテンツの性質を定義します（実態に基づく11種類）。 |
+| `purpose` | 文字列 | 使用目的（任意）。 |
+| `summary` | 文字列 | 内容の要約（任意）。 |
+| `artifacts` | 配列 | 画像ファイル (`path`) とそのタイトル (`title`) のリスト。 |
+| `generated_prompt` | 文字列 | 生成済みの完成プロンプト全文（任意）。 |
+| `created_at` | 文字列 | 作成日時の ISO8601 文字列（任意）。 |
 
-複数の Block を組み合わせて一つのプロンプトを構成する定義です。
+---
 
-- `id`: 文字列。一意の識別子。生成データの場合は `gen_ISO8601` 形式。
-- `title`: 文字列。テンプレートの名称。
-- `blocks`: 文字列のリスト。使用する Block の ID 群。
-- `kind`: 文字列（Literal）。以下のいずれか：
-  - `standard`: 標準テンプレート
-  - `generated`: AI生成済みスナップショット
-  - `comic`: 漫画形式
-  - `stamp`: スタンプ形式
-  - `sheet`: キャラクタシート
-  - `design_sheet`: デザイン設計シート
-  - `reaction`: 反応画像
-  - `social`: SNS投稿
-  - `announcement`: 告知・ニュース
-  - `brand`: ブランド・ロゴ
-  - `system`: システム・基盤
-- `purpose`: 文字列。使用目的。
-- `summary`: 文字列。内容の要約。
-- `artifacts`: オブジェクトのリスト。
-  - `path`: 文字列。画像ファイルへの相対パス（例: `artifacts/001_xxx.png`）。
-  - `title`: 文字列。画像のタイトル。
-- `generated_prompt`: 文字列（任意）。生成済みの完成プロンプト全文。
-- `created_at`: 文字列（任意）。作成日時の ISO8601 文字列。
+## 2. `kind` の定義 (実在する10種類)
 
-## バリデーションルール
+`kind` は、そのデータが「どのようなコンテンツか」を指定する属性です。`db/prompts.json` に実際に存在する値のみを定義します。旧来の `generated` 分類は、実態に合わせて以下のいずれかへ再分類されました。
 
-1. **一貫性**: `templates` 内で指定されるすべての `blocks` ID は、`blocks` リスト内に存在しなければならない。
-2. **資産の存在**: `artifacts` で指定されるすべての `path` は、実際のファイルシステム上に存在しなければならない。
-3. **生成データの品質**: `kind: "generated"` のテンプレートには、少なくとも1つの `artifacts` が紐付いていることが推奨される。
+| 値 | 意味 | 実例数 |
+| :--- | :--- | :--- |
+| `social` | SNS投稿 | 59 |
+| `design_sheet` | デザイン設計 | 32 |
+| `sheet` | 設定シート | 10 |
+| `announcement` | 告知バナー | 9 |
+| `stamp` | スタンプ | 6 |
+| `reaction` | 反応画像 | 5 |
+| `brand` | ブランドロゴ | 5 |
+| `comic` | 漫画 | 4 |
+| `system` | システム基盤 | 2 |
+| `news` | ニュース | 2 |
+
+---
+
+## 3. 具体的な記述例
+
+### 標準テンプレート (Standard)
+
+```json
+{
+  "id": "kafka_stamp_01",
+  "title": "Kafkaスタンプ基本",
+  "blocks": ["master_style", "character_kafka", "layout_stamp"],
+  "kind": "stamp",
+  "summary": "LINEスタンプ用。デフォルメされたKafkaの感情表現。"
+}
+```
+
+### 生成済みスナップショット (Generated)
+
+```json
+{
+  "id": "gen_20260506_150000",
+  "title": "Kafka: 朝のコーヒー",
+  "blocks": ["master_style", "character_kafka"],
+  "kind": "generated",
+  "summary": "朝の光の中でコーヒーを飲むKafkaの生成結果。",
+  "generated_prompt": "high quality, coffee, morning sun...",
+  "artifacts": [
+    { "path": "artifacts/123_coffee.png", "title": "Coffee Scene" }
+  ]
+}
+```
+
+---
+
+## 4. バリデーションルール
+
+1. **参照整合性**: `templates.blocks` に記述する ID は、必ず `blocks` リストに存在すること。
+2. **画像の実在**: `artifacts.path` に記述するファイルは、必ず `artifacts/` フォルダ内に存在すること。
+3. **成果物の必須条件**: `kind: "generated"` の場合、必ず `artifacts`（画像）を1つ以上含むこと。

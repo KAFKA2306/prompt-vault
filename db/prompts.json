@@ -3138,7 +3138,7 @@
           "title": "KAFKA ごはんスタンプ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3152,7 +3152,7 @@
           "title": "もぐもぐカフカ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3166,7 +3166,7 @@
           "title": "コメント返し"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3180,7 +3180,7 @@
           "title": "ドミニオン対戦"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3194,7 +3194,7 @@
           "title": "朝ごはんタイム"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3208,7 +3208,7 @@
           "title": "コメント返し"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3222,7 +3222,7 @@
           "title": "指差し説明"
         }
       ],
-      "kind": "generated",
+      "kind": "reaction",
       "blocks": []
     },
     {
@@ -3236,7 +3236,7 @@
           "title": "作業開始"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3250,7 +3250,7 @@
           "title": "読書のひととき"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3264,7 +3264,7 @@
           "title": "勝利の一瞬"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3278,7 +3278,7 @@
           "title": "返信ぎゅっ"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3292,7 +3292,7 @@
           "title": "比較カード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3306,7 +3306,7 @@
           "title": "見比べカード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3320,7 +3320,7 @@
           "title": "一覧対比カード"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3334,7 +3334,7 @@
           "title": "崩れの時系列"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3348,7 +3348,7 @@
           "title": "分岐案内"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3362,7 +3362,7 @@
           "title": "非スタンプ案"
         }
       ],
-      "kind": "generated",
+      "kind": "stamp",
       "blocks": []
     },
     {
@@ -3376,7 +3376,7 @@
           "title": "崩れの経緯"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3390,7 +3390,7 @@
           "title": "淡色サンプル"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3404,7 +3404,7 @@
           "title": "公開前点検"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3417,7 +3417,7 @@
           "title": "AI Imagegen Meeting"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3430,7 +3430,7 @@
           "title": "VRChat Avatar Mod Workbench"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3443,7 +3443,7 @@
           "title": "VRChat Event Gathering"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3456,7 +3456,7 @@
           "title": "VRChat World Exploration"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3469,7 +3469,7 @@
           "title": "Creator Workflow Desk"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3490,7 +3490,7 @@
           "title": "The Orchard"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3503,7 +3503,7 @@
           "title": "Prompt Vault Update Guide"
         }
       ],
-      "kind": "generated",
+      "kind": "announcement",
       "blocks": []
     },
     {
@@ -3516,7 +3516,7 @@
           "title": "Tax Truth Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3529,7 +3529,7 @@
           "title": "Rendering Quality Check"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3542,7 +3542,7 @@
           "title": "Rendering Quality Check Reference"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3555,7 +3555,7 @@
           "title": "tweetsdb Graph Notes"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3572,7 +3572,7 @@
           "title": "Hermes Agent Skills"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3585,7 +3585,7 @@
           "title": "RSI Overview"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3598,7 +3598,7 @@
           "title": "Life Portfolio Overview"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3627,7 +3627,7 @@
           "title": "Evidence Review Raw"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3644,7 +3644,7 @@
           "title": "Version 2"
         }
       ],
-      "kind": "generated",
+      "kind": "comic",
       "blocks": []
     },
     {
@@ -3657,7 +3657,7 @@
           "title": "Fischen BGG Strategy Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3670,7 +3670,7 @@
           "title": "Work Norms AI Sheet"
         }
       ],
-      "kind": "generated",
+      "kind": "design_sheet",
       "blocks": []
     },
     {
@@ -3683,7 +3683,7 @@
           "title": "Kafka Morning Soft Light"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3696,7 +3696,7 @@
           "title": "Kafka Evening Twilight"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3710,7 +3710,7 @@
           "title": "温泉シャーク２ 九州大決戦 公開告知"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3724,7 +3724,7 @@
           "title": "朝のストレッチ"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3738,7 +3738,7 @@
           "title": "朝のニュースチェック"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3752,7 +3752,7 @@
           "title": "窓辺の水やり"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3766,7 +3766,7 @@
           "title": "朝の身支度（髪）"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3780,7 +3780,7 @@
           "title": "持ち物確認"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3794,7 +3794,7 @@
           "title": "カーテンを開ける"
         }
       ],
-      "kind": "generated",
+      "kind": "social",
       "blocks": []
     },
     {
@@ -3821,7 +3821,7 @@
           "title": "Kafka 朝のやさしい光（窓際おはツイ）"
         }
       ],
-      "kind": "generated"
+      "kind": "social"
     }
   ]
 }
