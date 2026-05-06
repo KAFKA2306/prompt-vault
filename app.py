@@ -103,6 +103,7 @@ class Handler(BaseHTTPRequestHandler):
             "blocks": bids,
             "generated_prompt": gen,
             "purpose": tpl.purpose,
+            "created_at": now,
         }
         db.templates.append(res_data)
         DB_PATH.write_text(json.dumps(db.model_dump(exclude_none=True), ensure_ascii=False, indent=2), encoding="utf-8")
