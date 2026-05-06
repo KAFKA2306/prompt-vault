@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -19,7 +19,20 @@ class Template(BaseModel):
     id: str
     title: str
     blocks: list[str] = Field(default_factory=list)
-    kind: str = "standard"
+    kind: Literal[
+        "standard",
+        "generated",
+        "announcement",
+        "brand",
+        "comic",
+        "design_sheet",
+        "news",
+        "reaction",
+        "sheet",
+        "social",
+        "stamp",
+        "system",
+    ] = "standard"
     purpose: str = ""
     summary: str = ""
     artifacts: list[Artifact] = Field(default_factory=list)
