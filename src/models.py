@@ -19,6 +19,8 @@ class Template(BaseModel):
     title: str
     blocks: list[str] = Field(default_factory=list)
     kind: Literal[
+        "standard",
+        "generated",
         "announcement",
         "brand",
         "comic",
