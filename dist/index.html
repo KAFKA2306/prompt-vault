@@ -3,190 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prompt Vault | テンプレート一覧から探して全文コピー</title>
-  <meta name="description" content="Prompt Vault は、テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="author" content="KAFKA2306" />
-  <link rel="canonical" href="https://prompt-vault-cg3.pages.dev/" />
-  <meta property="og:site_name" content="Prompt Vault" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
-  <meta property="og:description" content="テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
-  <meta property="og:url" content="https://prompt-vault-cg3.pages.dev/" />
-  <meta property="og:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Prompt Vault | テンプレート一覧から探して全文コピー" />
-  <meta name="twitter:description" content="テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。" />
-  <meta name="twitter:image" content="https://prompt-vault-cg3.pages.dev/og-image.png" />
-  <meta name="theme-color" content="#0f766e" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+  <title>Prompt Vault | 2026 Edition</title>
+  <meta name="description" content="Prompt Vault は、2026年基準の洗練されたUI/UXを備えたプロンプト保管庫です。" />
   <link rel="stylesheet" href="style.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://prompt-vault-cg3.pages.dev/#website",
-          "url": "https://prompt-vault-cg3.pages.dev/",
-          "name": "Prompt Vault",
-          "description": "テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。必要なら指示を足して生成もできます。",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://prompt-vault-cg3.pages.dev/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
-          "inLanguage": "ja-JP"
-        },
-        {
-          "@type": "CollectionPage",
-          "@id": "https://prompt-vault-cg3.pages.dev/#webpage",
-          "url": "https://prompt-vault-cg3.pages.dev/",
-          "name": "Prompt Vault | テンプレート一覧から探して全文コピー",
-          "description": "テンプレート一覧から探して詳細表示で全文をコピーできるプロンプト保管庫です。",
-          "isPartOf": {
-            "@id": "https://prompt-vault-cg3.pages.dev/#website"
-          },
-          "about": [
-            "画像生成プロンプト",
-            "VTuber",
-            "SNS投稿",
-            "反応画像",
-            "キャラシート"
-          ],
-          "inLanguage": "ja-JP"
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://prompt-vault-cg3.pages.dev/#organization",
-          "name": "KAFKA2306",
-          "url": "https://prompt-vault-cg3.pages.dev/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://prompt-vault-cg3.pages.dev/favicon.svg"
-          },
-          "sameAs": [
-            "https://github.com/KAFKA2306/prompt-vault"
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "contactType": "support",
-              "url": "https://github.com/KAFKA2306/prompt-vault/issues"
-            }
-          ],
-          "inLanguage": "ja-JP"
-        }
-      ]
-    }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <div class="panel hero-copy">
-        <h1>Prompt Vault</h1>
-        <p class="lead">テンプレート一覧から選び、詳細表示で全文をコピーする保管庫です。VTuber、SNS投稿、反応画像、キャラシート、告知バナー向けのテンプレートを置いています。必要なら指示を足して生成もできます。</p>
-        <div class="hero-actions" aria-label="主要操作">
-          <a href="#template-section" class="button button--link">テンプレートへ</a>
-        </div>
-      </div>
+      <div class="subtle-label">Vault & Generator</div>
+      <h1>Prompt Vault</h1>
+      <p class="hero-desc">
+        テンプレート一覧から選び、詳細表示で全文をコピーする保管庫です。<br>
+        必要なら指示を足して生成もできます。
+      </p>
     </header>
 
-    <section class="panel detail" id="template-section">
-      <div class="head head--center">
-        <div>
-          <div class="subtle" id="template-count">0 templates</div>
-          <h2 id="detail-title">テンプレート一覧</h2>
-        </div>
-        <input id="search" class="search search--compact" placeholder="検索: タイトル / 目的 / ブロックID" />
+    <section id="gallery-section">
+      <div class="section-head">
+        <h2>Templates</h2>
+        <div class="subtle-label" id="template-count">0 items</div>
       </div>
-      <div class="template-section__head template-section__head--minimal">
-        <div class="subtle">画像がないものもあります</div>
+      <div class="gallery-search">
+        <input id="search" class="search" placeholder="検索: タイトル / 目的..." autocomplete="off" />
       </div>
-      <div class="template-rail" id="template-rail"></div>
+      <div class="template-rail" id="template-rail">
+        <!-- Templates injected here -->
+      </div>
     </section>
 
-    <section class="panel generator" aria-labelledby="generator-title">
-      <div class="head head--center">
-        <div>
-          <div class="subtle">Prompt Generator</div>
-          <h2 id="generator-title">既存ノードを組み合わせる</h2>
-        </div>
+    <section id="generator-section">
+      <div class="section-head">
+        <h2>Generator</h2>
+        <div class="subtle-label">Build with Nodes</div>
       </div>
-      <div class="generator-form">
-        <label class="generator-field">
-          <span>ベーステンプレート</span>
-          <select id="generator-template"></select>
-        </label>
-        <div class="generator-field generator-field--nodes">
-          <div class="generator-field__head">
-            <span>ノード</span>
-            <span class="subtle" id="generator-node-count">0 selected</span>
+      <div class="generator-view">
+        <div class="generator-form">
+          <div class="field">
+            <label for="generator-template">ベーステンプレート</label>
+            <select id="generator-template"></select>
           </div>
-          <div class="subtle">カードをクリックして複数選択。選択済みは × でオプトアウトできます。</div>
-          <div class="generator-node-picker" id="generator-node-picker"></div>
-          <div class="tagrow" id="generator-selected-nodes"></div>
-          <div class="generator-actions generator-actions--compact">
-            <button class="button button--soft" id="generator-reset-template" type="button">テンプレート既定に戻す</button>
-            <button class="button button--soft" id="generator-clear-nodes" type="button">全解除</button>
+          <div class="field">
+            <label>ノード選択 (<span id="generator-node-count">0</span>件選択中)</label>
+            <div id="generator-node-picker" class="tagrow generator-node-picker"></div>
+            <div id="generator-selected-nodes" class="tagrow"></div>
+          </div>
+          <div class="field">
+            <label for="generator-instruction">追加指示</label>
+            <textarea id="generator-instruction" rows="3" placeholder="例: 朝向けに短く、やわらかくして"></textarea>
+          </div>
+          <div class="generator-actions">
+            <button class="button primary" id="generator-submit">生成する</button>
+            <button class="button" id="generator-copy" disabled>結果をコピー</button>
+            <button class="button" id="generator-reset-template">リセット</button>
+          </div>
+          <div class="generator-result">
+            <div class="field">
+              <label>生成結果</label>
+              <pre id="generator-output">まだ生成されていません。</pre>
+            </div>
+            <div id="generator-status" class="subtle-label"></div>
           </div>
         </div>
-        <label class="generator-field">
-          <span>指示</span>
-          <textarea id="generator-instruction" rows="4" placeholder="例: 朝向けに短く、やわらかくして"></textarea>
-        </label>
-        <div class="generator-actions">
-          <button class="button primary" id="generator-submit" type="button">生成</button>
-          <button class="button" id="generator-copy" type="button" disabled>結果をコピー</button>
-        </div>
-        <div class="block block--flush">
-          <div class="subtle">生成結果</div>
-          <pre id="generator-output">まだ生成されていません。</pre>
-        </div>
-        <div class="generator-status subtle" id="generator-status"></div>
       </div>
     </section>
   </main>
+
   <div class="modal" id="modal">
     <div class="modal-close" id="modal-close">&times;</div>
-    <div class="modal-content">
-      <div class="modal-image-view">
-        <img id="modal-img" src="" alt="" style="cursor: pointer;" onclick="openLightbox(this.src)" />
-        <div class="modal-artifacts" id="modal-artifacts"></div>
+    <div class="modal-back" id="modal-back">&larr; 戻る</div>
+    <div class="modal-content" id="modal-content">
+      <div class="modal-top">
+        <div class="modal-image-view">
+          <img id="modal-img" src="" alt="" class="modal-main-img" />
+          <div id="modal-artifacts" class="tagrow modal-artifacts-row"></div>
+        </div>
+        <div class="modal-info">
+          <header class="modal-header">
+            <div id="modal-kind" class="template-card__kind">Category</div>
+            <h2 id="modal-title" class="modal-title-text">Title</h2>
+            <p id="modal-purpose" class="modal-purpose-text">Purpose</p>
+          </header>
+          <button class="button primary modal-copy-btn" id="modal-copy">プロンプトをコピー</button>
+          <div class="field">
+            <label>構成要素</label>
+            <div id="modal-primary" class="tagrow"></div>
+          </div>
+          <div class="field">
+            <label>全文プロンプト</label>
+            <pre id="modal-prompt"></pre>
+          </div>
+        </div>
       </div>
-      <div class="modal-info">
-        <div>
-          <div class="eyebrow" id="modal-kind">Category</div>
-          <h2 id="modal-title">Title</h2>
-          <p class="subtle modal-purpose" id="modal-purpose">Purpose</p>
-          <button class="button primary button--full" id="modal-copy">全文をコピー</button>
-        </div>
-        <div class="block" id="modal-primary-block">
-          <div class="subtle" id="modal-primary-title">構成要素</div>
-          <div class="tagrow" id="modal-primary"></div>
-        </div>
-        <div class="block block--flush">
-          <div class="subtle" id="modal-prompt-title">全文プロンプト</div>
-          <pre id="modal-prompt"></pre>
-        </div>
-        <div class="block" id="modal-related-block">
-          <div class="subtle">似た構成のプロンプト</div>
-          <div class="modal-related" id="modal-related"></div>
-        </div>
+      <div id="modal-related-block" class="modal-related-section">
+        <div class="subtle-label modal-related-label">似た構成のプロンプト</div>
+        <div id="modal-related" class="modal-related-list"></div>
       </div>
     </div>
   </div>
 
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-close" id="lightbox-close">&times;</div>
-    <img id="lightbox-img" src="" alt="" />
-  </div>
-
   <script src="app.js" defer></script>
-<!-- Build: 1e4a989 -->
+<!-- Build: af8ce86 -->
 </body>
 </html>

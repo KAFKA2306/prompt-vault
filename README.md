@@ -1,78 +1,66 @@
-# Prompt Vault
+# Prompt Vault (2026 Edition)
 
 画像生成プロンプトを、全文のまま積み上げるのではなく、
-あとで使えるかたちにほどいて並べておく保管庫です。
+あとで使えるかたちにほどいて並べておく高品質な保管庫です。
 
-KAFKA の世界観を保ちながら、
-「すぐコピーできる」「組み替えやすい」「再現しやすい」を大事にしています。
+2026年基準の「静かなUI (Quiet UI)」を採用し、
+「すぐコピーできる」「再現しやすい」「触って気持ちいい」を統合しました。
 
 ## なぜつくったのか
 
-- 毎回、長いプロンプトを最初から書きたくないから
+- 毎回、長いプロンプトを最初から書いたくないから
 - 似た出力を、少ない差分で再現したいから
 - 完成イメージを先に見て、迷わず選びたいから
 
-## どんなものができたのか
+## プロジェクトの特徴
 
-- 画像ギャラリーから完成イメージを探せる画面
-- 拡大モーダルから全文プロンプトを1クリックでコピーできる画面
-- ブロック、テンプレート、`artifacts` を JSON で管理するローカルDB
-- GitHub Pages と Cloudflare Pages でそのまま配信できる静的構成
+- **Quiet UI**: 長時間の閲覧でも疲れにくい、紙の質感を活かした洗練されたデザイン。
+- **1-Click Copy**: 拡大表示から即座に全文プロンプトをコピーできる摩擦のない導線。
+- **Navigable History**: モーダル内でノード（タグ）を辿っても、履歴保持により「戻る」ことが可能な高い回遊性。
+- **Prompt Generator**: 既存のパーツ（ノード）を組み合わせて新しいプロンプトを構築可能。
+- **Serverless Architecture**: GitHub Pages や Cloudflare Pages で即座に配信可能な静的構成。
 
-## すぐ開く場所
+## クイックリンク
 
-- [ローカル表示](http://127.0.0.1:8787/)
-- [公開サイト](https://kafka2306.github.io/prompt-vault/)
-- [Cloudflare Pages 公開先](https://prompt-vault-cg3.pages.dev/)
-- [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
+- [ローカルプレビュー](http://127.0.0.1:8787/)
+- [本番サイト (GitHub Pages)](https://kafka2306.github.io/prompt-vault/)
+- [本番サイト (Cloudflare Pages)](https://prompt-vault-cg3.pages.dev/)
 
-- [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
-- [ADR](docs/ADR/README.md)
-- [表示検証スクリプト](scripts/verify_pages.sh)
-- [DESIGN.md](DESIGN.md)
-- [AGENTS.md](AGENTS.md)
-- [データベース定義 (SCHEMA.md)](docs/SCHEMA.md)
+### ドキュメント
 
-## どうやって簡単に再現するのか
+- [デザインガイドライン (DESIGN.md)](DESIGN.md)
+- [開発・運用ルール (AGENTS.md)](AGENTS.md)
+- [データベース定義 (docs/SCHEMA.md)](docs/SCHEMA.md)
+- [設計決定記録 (docs/ADR/)](docs/ADR/README.md)
 
-### 1. ローカルで見る
+## 開発・運用
+
+### ローカル開発サーバー
 
 ```bash
 python3 app.py
 ```
 
-### 2. 静的に書き出す
+### ビルド (静的ファイルの生成)
 
 ```bash
 python3 build.py
 ```
 
-`dist/index.html` と `dist/style.css`、`dist/app.js` が生成されます。
+`dist/` ディレクトリに配信用のファイルが生成されます。
 
-### 3. 公開表示を確認する
+### 公開検証
 
 ```bash
 bash scripts/verify_pages.sh
 ```
 
-Cloudflare Pages を確認したいときは `CF_PAGES_URL` を渡します。
+## データの管理
 
-## データの置き場所
+- **データベース**: `db/prompts.json` に全ての部品とテンプレートが格納されています。
+- **アセット**: `artifacts/` に WebP 最適化された画像が格納されます。
+- **設定**: `config.yaml` でモデル名などを管理します。
 
-- `db/prompts.json` がローカルDBです
-- ブロック、テンプレート、`artifacts` はここで管理します（名称には `カテゴリ: 名称` の規則を適用）
-- 設計の確定事項は `docs/ADR/` に残します
-- `static/index.html` が HTML の元です
-- `static/style.css` と `static/app.js` が画面の本体です
-- `dist/` は `python3 build.py` で作る生成物です
-- `dist/` は直接編集しません
+---
 
-## 配信先
-
-- [GitHub Pages](https://kafka2306.github.io/prompt-vault/)
-- [Cloudflare Pages](https://prompt-vault-cg3.pages.dev/)
-
-## 補足
-
-- 画面の見た目や操作方針は [DESIGN.md](DESIGN.md) を見てください
-- 作業の進め方は [AGENTS.md](AGENTS.md) にまとめています
+*“静かなUIで、創造的な対話をよりスムーズに。”*

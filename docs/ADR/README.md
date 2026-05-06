@@ -12,3 +12,7 @@
 - [0010 Prompt Vault を prompt operating system として整理する](0010-prompt-operating-system.md)
 - [0011 `artifacts` は必ず DB に接続する](0011-artifact-graph-connectivity.md)
 - [0012 ブロックの名称規則による意味的整合性の維持](0012-semantic-block-naming.md)
+- [0013 openNode のリファラ不整合の修正](0013-opennode-referror-fix.md)
+- [0014 WebP 最適化による配信パフォーマンスの向上](0014-webp-optimization.md)
+- [0015 事前ビルド資産の確実なデプロイ](0015-resilient-prebuilt-deployment.md)
+- [0016 Quiet UI (2026年基準の最適化)](0016-quiet-ui-2026-optimization.md)

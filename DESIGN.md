@@ -1,101 +1,70 @@
-# DESIGN.md
+# DESIGN.md (2026 Edition)
 
 ## Visual Theme
-- Warm editorial canvas with a paper-like feel.
-- Quiet, minimal, and copy-first.
-- The page should feel like a tidy knowledge tool, not a marketing site.
-- Use calm contrast, soft surfaces, and restrained color.
+
+- **Quiet UI**: A minimal, sophisticated knowledge tool aesthetic inspired by Linear, Notion, and Apple.
+- **Editorial Paper**: The UI should feel like a tidy canvas with warm, muted tones that reduce eye strain.
+- **Hierarchy-First**: Visual prominence is achieved through spacing and tone differences rather than heavy shadows or motion.
 
 ## Palette
 
-- UI Background: `#f4f1ea` to `#f7f4ee` (Warm editorial canvas / 疲労の少ない紙のような温かみ)
-- UI Surface: `#ffffff` (Clean white negative space)
-- Brand Accents (from DB): Pastel Blue, Lavender, Soft Cyan, Light Navy, with small Pink details.
-- UI Primary: Deep Teal (`#0f766e`) / UI Secondary: Muted Blue (`#2563eb`)
-- Text: Near-black (`#111827`) for readability.
-- Muted text: Slate gray (`#5b6472`).
-- Avoid: Neon, dark cyberpunk, saturated purple dominance, and heavy glassmorphism.
-
+- **Background**: `#f5f4ef` (Global warmth)
+- **Paper Tones**:
+  - Sidebar/Secondary: `#fcfbf8`
+  - Main Area: `#f8fafc`
+  - Code/Pre Blocks: `#f5f7fb`
+- **Surface**: `#ffffff` (Clean white for primary cards)
+- **Accents**: Deep Teal (`#0f766e`) and Soft Teal (`rgba(15,118,110,0.05)`)
+- **Text**: Near-black (`#1a1c20`) for sharp readability.
+- **Muted text**: Slate gray (`#64748b`).
 
 ## Typography
 
-- Use a serif display face for headings.
-- Use a clean sans-serif for body text and controls.
-- Headings should be compact and editorial.
-- Body copy should be readable, modest in size, and relaxed in line height.
-- Avoid technical or futuristic type treatments.
-
+- **Headings**: Use "Outfit" or a similar geometric/editorial sans/serif.
+- **Body**: "Inter" or "Noto Sans JP" for high-legibility.
+- **Sizing**:
+  - Body: 15px - 17px
+  - UI Controls: 14px
+  - Sub-labels: 12px - 13px
+  - *Avoid font sizes below 12px.*
 
 ## Components
 
-- Hero: short statement, one strong heading, one supporting paragraph.
-- Search field: full-width, simple, prominent.
-- Gallery: image-first tile grid, clean and browsable.
-- Gallery tiles: hover effects that subtly lift to indicate clickability.
-- Modal: focused overlay for viewing the full image and copying the prompt instantly.
-- Copy buttons: prominent, placed at the top of the modal for zero-friction copying.
-- Prompt blocks: monospaced, readable, but secondary to the one-click copy action.
-
+- **Gallery Tiles**: Static borders that shift in color on focus/hover. No lift (`translateY`).
+- **Integrated Modal**: Backdrop using `blur(12px)` and `rgba(255,255,255,0.7)` to maintain background context.
+- **Navigable History**: Detail views support "Back" navigation when hopping through nodes (tags). Maintain a breadcrumb or history stack to avoid user disorientation.
+- **Copy Buttons**: Large, obvious, and prioritized at the top of the detail view.
+- **Pre Blocks**: Mono fonts (JetBrains Mono) with relaxed line height (1.8).
 
 ## Layout
 
-- Single centered column with max-width 1280px.
-- Stack to one column on tablet and mobile.
-- Preserve generous outer padding (24px) and medium internal spacing.
-- Keep the page centered with `width: min(1280px, 100%)` + `html { scrollbar-gutter: stable }`.
-- On mobile (≤768px): `.head` switches to `flex-direction: column` so search field doesn't overflow.
+- Single centered column (`width: min(1200px, 95%)`) for the main gallery.
+- Master-Detail flow: Seamless transition from gallery list to focused modal.
+- Generous white space: whitespace is a design element, not "empty space".
 
+## Depth & Motion
 
-## Depth
-
-- Shadow 3 levels (inspired by Notion):
-  - **card**: `rgba(17,24,39,.08) 0 24px 60px` — panel surfaces
-  - **hover**: `rgba(17,24,39,.12) 0 4px 12px` — elevated tile
-  - **modal**: `rgba(15,15,15,.20) 0 24px 48px -8px` — overlay
-- Prefer surface layering over dramatic blur or heavy glow.
-- Hover states may lift slightly (translateY -2px), but should stay subtle.
-- Keep active states clear through border color, not large motion.
-
+- **Shadow**: Lightest possible (`0 8px 24px rgba(0,0,0,0.06)`).
+- **Animations**:
+  - Hover/Active: 120ms
+  - UI transitions: 240ms
+  - Page entries: 320ms
+- **Transitions**: Smooth easing (`cubic-bezier(0.4, 0, 0.2, 1)`).
 
 ## Do's
 
-- Keep the UI simple, image-first, and instantly copyable.
-- Favor whitespace over decoration.
-- Use warm neutrals and one calm accent.
-- Make hierarchy obvious at a glance.
-- Preserve the "Gallery -> Modal -> Copy" flow. User experience must prioritize copying the full prompt without scrolling.
-
+- Prioritize the "Copy Full Prompt" action.
+- Use subtle border color changes to indicate interactivity.
+- Keep the interface "Quiet" and professional.
 
 ## Don'ts
 
-- Do not introduce a complex dashboard aesthetic.
-- Do not add decorative noise, chrome, or dense gradients.
-- Do not use strong neon, cyberpunk, or overly glossy surfaces.
-- Do not expand the layout into multiple extra panels.
-- Do not make actions visually louder than the content.
-
-
-## Responsive
-
-- On small screens, collapse to one column.
-- Keep buttons full width where needed.
-- Prevent content blocks from feeling cramped.
-- Maintain readable text sizes and enough vertical spacing.
-
+- Do not use dramatic shadows or neon glows.
+- Do not use `transform` for hover states unless essential.
+- Do not make the UI louder than the content (images/prompts).
 
 ## Agent Prompt Guide
 
-- If generating or editing UI for this project, preserve the image-first gallery and modal copy flow.
-- Match the warm editorial style, serif headings, and restrained teal accent.
-- Users do not read complex documentation or perform granular copy-pasting. Always provide a single, obvious "Copy Full Prompt" button at the top of the modal.
-- Optimize for clarity and speed, not visual novelty.
-- Treat this project as a small static utility, not a full product suite.
-- Put fixed design decisions in `docs/ADR/` so future changes stay simple and explicit.
-
-
-## Gotchas
-
-- `100vw` includes scrollbar width → use `width: 100%` with `html { scrollbar-gutter: stable }` instead.
-- `window.openNode = openNode` — always verify the RHS function is defined before re-exporting (ADR 0013).
-- Never open `dist/index.html` via `file://`; use `task run` on port 8787 for local dev.
-- `dist/` is generated by `build.py` — never edit directly.
+- Maintain the "Quiet UI" aesthetic: thin borders, paper tones, soft shadows.
+- Ensure all copy-paste actions are single-click and prominent.
+- Optimize for high-legibility typography and generous spacing.

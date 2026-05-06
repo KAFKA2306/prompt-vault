@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -101,7 +101,7 @@ class Handler(BaseHTTPRequestHandler):
             [out.get("block_updates", {}).get(id, blocks[id].content) for id in bids if id in blocks]
             + ([out["addition"]] if out.get("addition") else [])
         )
-        now = datetime.now(UTC).isoformat()
+        now = datetime.now(timezone.utc).isoformat()
         res_data = {
             "id": f"gen_{now}",
             "title": out["title"],
