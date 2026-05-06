@@ -15,35 +15,31 @@
 
 ## 目的
 
-`prompt-vault` を Cloudflare Pages に公開する。
+`prompt-vault` を Cloudflare Pages に公開する。ビルド工程をローカルで行うため、Cloudflare 側での環境構築やシークレット設定は不要。
 
 ## 前提
 
 - GitHub リポジトリ `KAFKA2306/prompt-vault` が存在する
-- `main` ブランチに `build.py` と `db/prompts.json` が入っている
+- `dist/` ディレクトリ（ビルド済み成果物）がリポジトリに含まれている
 
 ## 手順
 
 1. Cloudflare にログインする
-2. `Workers & Pages` を開く
-3. `Pages` タブを選ぶ
-4. `Connect to Git` を選ぶ
-5. GitHub を接続する
-6. リポジトリ `KAFKA2306/prompt-vault` を選ぶ
-7. 設定を次の通りにする
-   - `Production branch`: `main`
-   - `Build command`: なし
+2. `Workers & Pages -> Pages -> Connect to Git` を選ぶ
+3. リポジトリ `KAFKA2306/prompt-vault` を選ぶ
+4. 設定を次の通りにする
+   - `Build command`: **なし (空欄)**
    - `Build output directory`: `dist`
-8. `Save and Deploy` を押す
+5. `Save and Deploy` を押す
+
+## なぜこの設定なのか
+
+ビルド済みの `dist/` フォルダを直接リポジトリに含めることで、Cloudflare 側でのビルド失敗（Pillow 等の不足）を物理的に防ぎ、100% 確実に配信するため。
 
 ## 成功確認
 
-- デプロイ完了後に公開 URL を開く
-- `dist/index.html` の内容が表示されれば成功
-- さらに `scripts/verify_pages.sh` を実行して GitHub Pages と Cloudflare Pages の両方を確認する
-- 成功 URL は `*.pages.dev`
-- `*.workers.dev` が出たら失敗
-- 画面に `Automatic deployment on upload` や `Workers ログ` が出ているなら、Pages ではなく Workers を作っている
+- `curl -s https://your-site.pages.dev/ | grep "Build:"` を実行し、最新のコミットハッシュが表示されれば成功。
+- `scripts/verify_pages.sh` を実行して表示を確認。
 
 ## 失敗したら見る点
 
