@@ -15,17 +15,20 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
    - Link, tweet, PDF, video, article, or post: source ingestion.
    - `artifacts*`, `rename`, `view artifact`, or `replace image`: artifact maintenance.
 
-2. Gather context (Persona-Driven Context).
-   - `db/tweetsdb.json` を活用した多次元人格サンプリングを行い、設計の根拠（Kafka Persona Signal）を特定する：
-     - **クエリ実行**: `jq` 等を用い、タスクに関連するトピック (`topic_primary`) や特徴タグ (`trait_tags`) を持つレコードを抽出する。
-     - **重要度フィルタリング**: `importance > 0.6` 且つ `owner_signal: "自分発信"` のレコードを優先し、Kafkaの核心的な価値観や「内面的な声」を特定する。
-     - **動機（メタファー）の抽出**: 抽出したレコードの `essence`（本質）を分析し、Kafkaがその課題をどのような比喩（例: 「迷わない工場」「不完全な同期を補うプラグイン」等）で捉えているかを読み解く。
-     - **鮮度の考慮**: `month_bucket` を確認し、人格の経時変化を考慮して直近の傾向を反映させる。
-     - **Seedの参照**: `prompt_seed` や `imagegen_seed` が存在する場合は、それを構図やレンダリングの初期案の根拠とする。
-   - 既存の `db/prompts.json` および `artifacts/` で最も近い例を特定し、構造の参考にする。
-   - Treat existing Prompt Vault prompts as the default style and structure reference unless the user explicitly asks for a new direction.
-   - Use layered prompt structure when possible: `base`, `character`, `costume`, `layout`, `composition`, `rendering`, `typography`, `text`, `negative`, `review`, `model`, `params`.
-   - Prefer the narrowest matching negative taxonomy block instead of always reusing `negative_common`.
+2. コンテキストの収集 (Multi-Layer Context).
+   - **外部情報の収集 (Source Ingestion)**:
+     - 一次ソース（リンク、ツイート、記事等）を精読し、事実関係を把握する。
+     - 事実や日付が不明瞭な場合は、1〜2個の公式ソースや関連情報をWeb検索し、正確な情報を補完する。
+   - **人格の同期 (Persona-Driven Sampling)**:
+     - `db/tweetsdb.json` を活用し、設計の根拠（Persona Signal）を特定する。
+     - **クエリ実行**: `jq` 等を用い、タスクに関連するトピックや特徴タグを持つレコードを抽出する。
+     - **動機（メタファー）の抽出**: レコードの `essence`（本質）を分析し、Kafka特有の比喩（例: 「迷わない工場」等）を読み解く。
+     - **鮮度とSeedの参照**: `month_bucket` による人格変化の考慮、および `prompt_seed` 等の参照。
+   - **既存アセットの参照**:
+     - `db/prompts.json` および `artifacts/` で最も近い既存の例を特定し、構造やスタイルの参考にする。
+   - 特別に指示がない限り、既存の Prompt Vault のプロンプトをデフォルトのスタイルおよび構造の基準とする。
+   - 可能な限り階層型プロンプト構造を使用する: `base`, `character`, `costume`, `layout`, `composition`, `rendering`, `typography`, `text`, `negative`, `review`, `model`, `params`。
+   - 常に `negative_common` を再利用するのではなく、最も狭い範囲で一致するネガティブ分類ブロックを優先する。
 
 3. Choose the format.
    - Pick one existing template when it already fits the job.
