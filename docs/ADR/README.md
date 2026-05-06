@@ -11,3 +11,4 @@
 - [0009 tweetsdb を人格再利用 DB として扱う](0009-tweetsdb-persona-db.md)
 - [0010 Prompt Vault を prompt operating system として整理する](0010-prompt-operating-system.md)
 - [0011 `artifacts` は必ず DB に接続する](0011-artifact-graph-connectivity.md)
+- [0012 ブロックの名称規則による意味的整合性の維持](0012-semantic-block-naming.md)

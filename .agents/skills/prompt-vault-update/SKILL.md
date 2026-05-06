@@ -59,6 +59,8 @@ Use this skill to turn one user input into one concrete Prompt Vault update. Tre
 
 ## Rules
 
+- 新規ブロックを作成する際は、[ADR 0012](docs/ADR/0012-semantic-block-naming.md) に基づき、`カテゴリ: 名称` の形式で `title` を設定すること。
+  - カテゴリ例: `キャラクター:`, `衣装:`, `形式:`, `行動:`, `文言:`, `背景:`, `描画:`
 - Do not force everything into one old pattern.
 - Create a new format when it improves clarity or avoids repetition.
 - Start from the closest existing `db/prompts.json` examples before inventing a new prompt shape.

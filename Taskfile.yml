@@ -30,3 +30,10 @@ tasks:
     desc: Verify the pages
     cmds:
       - bash scripts/verify_pages.sh
+  test:
+    desc: Run all tests and validation
+    cmds:
+      - task: lint
+      - task: format
+      - task: validate
+      - task: build

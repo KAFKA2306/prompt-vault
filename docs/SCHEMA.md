@@ -12,7 +12,7 @@
 | フィールド | 型 | 説明 | 具体例 |
 | :--- | :--- | :--- | :--- |
 | `id` | 文字列 | 一意の識別子 | `"master_style"` |
-| `title` | 文字列 | 部品の名称 | `"基本画風"` |
+| `title` | 文字列 | 部品の名称。[ADR 0012](ADR/0012-semantic-block-naming.md) に従い、`カテゴリ: 名称` の形式で定義してください。 | `"キャラクター: KAFKA"` |
 | `content` | 文字列 | プロンプト本文 | `"high quality, master piece..."` |
 | `category` | 文字列 | 部品の分類（任意） | `"style"`, `"character"` |
 

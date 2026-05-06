@@ -8,13 +8,13 @@
     },
     {
       "id": "character_kafka",
-      "title": "KAFKA",
+      "title": "キャラクター: KAFKA",
       "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth",
       "category": "キャラクター"
     },
     {
       "id": "outfit_kafka",
-      "title": "衣装",
+      "title": "衣装: KAFKA基本",
       "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
       "category": "キャラ衣装"
     },
@@ -32,7 +32,7 @@
     },
     {
       "id": "character_sheet_kafka",
-      "title": "Kafka キャラデザインシート",
+      "title": "形式: Kafkaデザインシート",
       "content": "masterpiece, best quality, ultra detailed, japanese anime vtuber character design system sheet, professional visual identity guide, highly cohesive character bible layout, clean white background, pastel futuristic aesthetic, soft emotional atmosphere, modern anime infographic design, ultra high resolution, razor sharp lineart, thin elegant outlines, soft gradients, subtle watercolor rendering, polished but human-crafted feeling, carefully designed visual system sheet\n\nMAIN CHARACTER:\ncute anime girl named Kafka, long pastel blue hair with lavender gradients, fluffy layered hair, semi-transparent bangs, sparkling blue-purple eyes, pale glowing skin, soft blush, expressive anime face, small smile, youthful vtuber aesthetic, soft emotional presence\n\nHAIR DETAILS:\nvery long wavy twin-layer hair,\nsoft transparent hair strands,\nlavender-blue gradients,\nsmall silver geometric hair clips,\ntiny futuristic ornaments,\ndelicate bead chains,\nsoft reflective highlights,\ncat-like gentle atmosphere\n\nOUTFIT DESIGN:\noversized white futuristic coat,\nsoft sailor-style inner outfit,\nlight blue and navy ribbon,\nshort pleated skirt,\nwhite oversized sleeves,\npastel techwear aesthetic,\nmany tiny accessories,\nhanging beads and chains,\nsoft holographic details,\ncute utility straps,\nwhite socks,\nlarge chunky futuristic sneakers,\nwhite and pastel blue color coordination\n\nHEAD ACCESSORY:\nwhite oversized cap with black circular “K” emblem,\nsmall decorative flowers and branches attached to cap,\nsoft futuristic military-vtuber hybrid aesthetic\n\nMAIN LAYOUT:\nlarge central full-body seated illustration on left side,\ncharacter reaching hand toward viewer,\nfriendly welcoming pose,\nlarge flowing hair across composition,\nhigh emotional readability\n\nDESIGN SHEET STRUCTURE:\nprofessional japanese character design reference sheet layout,\nmultiple organized panels with thin blue borders,\nclean spacing,\nhigh readability,\nbalanced infographic composition\n\nTOP LEFT:\nlarge “Kafka” logo in soft rounded typography,\ngradient blue-purple logo,\nsmall japanese subtitle “かふか | KAFKA”\n\nUPPER CENTER:\nthree-view character turnaround sheet,\nFRONT / SIDE / BACK views,\nfull body accurate design consistency\n\nUPPER RIGHT:\nfacial expression sheet grid,\nmultiple anime expressions,\nneutral face,\nhappy smile,\nwink,\nsurprised,\nembarrassed,\nthinking,\nsleepy,\nrelaxed,\nlaughing,\nall expressions maintain exact same face identity\n\nCENTER LEFT:\nconcept keyword infographic section,\nsmall pastel icon symbols,\nsoft blue minimal icons,\nclean japanese UI layout\n\nLOWER LEFT:\ncolor palette circles,\npastel blues,\nlavender,\nsoft cyan,\nwhite,\nnavy,\nsmall decorative icon motifs,\nlogo variations,\ntiny emblem designs\n\nCENTER:\naccessory breakdown panel,\nhat,\ncoat,\nsailor outfit,\nshoes,\nnecklace,\nhair accessories,\nrobot mascot,\nchains,\nbeads,\nclose-up detailed object references\n\nLOWER RIGHT:\npose variation panel,\nmultiple chibi/full-body poses,\npeace sign,\narms open,\nsitting pose,\nstanding pose,\ncute energetic gesture language\n\nBOTTOM:\nmoodboard/environment section,\nsoft futuristic cityscape,\nnight city lights,\ndreamy sky,\ncozy room,\npastel fantasy scenery,\nclean anime environment thumbnails\n\nVISUAL STYLE:\nhuman-made anime illustration feeling,\nnot generic AI anime,\nvery cohesive identity design,\nsoft emotional warmth,\ngentle futuristic atmosphere,\nclean commercial vtuber branding quality,\nprofessional Japanese artbook layout,\nhigh consistency across all panels,\ncarefully controlled anatomy,\nbeautiful typography spacing,\nsoft holographic glow,\ntiny sparkles,\nminimal floating particles,\nclean white negative space\n\nTYPOGRAPHY:\nlarge japanese typography only,\nprofessional rounded Japanese font,\nclean rendering,\nhigh readability,\nno broken Japanese,\nno English UI clutter except intentional logo/title elements,\norganized Japanese infographic labeling\n\nCOLOR PALETTE:\npastel blue,\nsoft cyan,\nlavender,\nwhite,\nlight navy,\nsmall pink accents,\nsoft transparent gradients,\nlow saturation,\ngentle atmospheric lighting\n\nNEGATIVE PROMPT:\nlow quality, low resolution, blurry image, bad anatomy, deformed hands, extra fingers, duplicate limbs, malformed face, crossed eyes, inconsistent hairstyle, inconsistent outfit, messy layout, chaotic composition, harsh shadows, strong contrast, dark cyberpunk, heavy neon, generic AI anime, overly glossy skin, plastic rendering, 3D render look, noisy details, cluttered infographic, broken Japanese text, random English text, watermark, signature, cropped panels, empty areas, flat expressions, emotionless face, corporate presentation style, hypersexualized design, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "形式・レイアウト",
       "artifacts": [
@@ -56,7 +56,7 @@
     },
     {
       "id": "source_research",
-      "title": "再調査メモ",
+      "title": "行動: 再調査メモ",
       "content": "read the original tweet or thread carefully, extract the factual points, keep the emotional tone, identify the key visual beat, preserve names and dates exactly, rewrite only what is needed for a clean manga summary",
       "category": "リサーチ"
     },
@@ -68,7 +68,7 @@
     },
     {
       "id": "rsi_source_research",
-      "title": "RSI 再調査メモ",
+      "title": "行動: RSI再調査",
       "content": "read the source carefully, separate recursive self-improvement from general automation, keep AI R&D automation distinct from intelligence explosion claims, preserve named examples, benchmarks, and dates exactly, and rewrite only what is needed for a clear technical summary",
       "category": "リサーチ"
     },
@@ -92,13 +92,13 @@
     },
     {
       "id": "comic_layout",
-      "title": "漫画レイアウト",
+      "title": "形式: 漫画レイアウト",
       "content": "6 to 7 manga panels, one wide establishing shot, one close-up on the eyes, one detail shot of the monitor or object, one side profile, one medium shot, one hand close-up, final large emotional panel, white gutters, clear reading order, speech bubbles left blank",
       "category": "形式・レイアウト",
       "artifacts": [
         {
           "path": "artifacts/002_twitter_comic.png",
-          "title": "漫画レイアウト"
+          "title": "形式: 漫画レイアウト"
         }
       ]
     },
@@ -230,7 +230,7 @@
     },
     {
       "id": "news_comic_layout",
-      "title": "ニュース漫画レイアウト",
+      "title": "形式: ニュース漫画",
       "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one official PDF panel, one Governor Ueda press conference panel, one market reaction panel, one inflation outlook chart panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, manga emphasis symbols, small source box, PDF marker icon, video marker icon",
       "category": "形式・レイアウト"
     },
@@ -266,25 +266,25 @@
     },
     {
       "id": "rendering",
-      "title": "レンダリング",
+      "title": "描画: 高精細 (Infographic)",
       "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, clear contrast between light and dark areas, dark areas stay dark, bright areas stay bright, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish, ultra clean anime rendering, soft commercial VTuber promotional style, infographic readability prioritized, balanced whitespace, consistent character proportions",
       "category": "描画",
       "artifacts": [
         {
           "path": "artifacts/096_rendering_quality_check.png",
-          "title": "レンダリング"
+          "title": "描画: 高精細 (Infographic)"
         }
       ]
     },
     {
       "id": "clean_quality_rendering",
-      "title": "クリーン品質レンダリング",
+      "title": "描画: クリーン (Soft)",
       "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish",
       "category": "描画",
       "artifacts": [
         {
           "path": "artifacts/097_rendering_quality_check_contrast.png",
-          "title": "クリーン品質レンダリング"
+          "title": "描画: クリーン (Soft)"
         }
       ]
     },
@@ -302,13 +302,13 @@
     },
     {
       "id": "topic_redirect_banner_viz",
-      "title": "話題切り替え用バナー",
+      "title": "形式: 話題切り替えバナー",
       "content": "kafka topic redirect banner, gentle safe redirect, calm boundary, short text, soft visual cues, subtle arrows or signpost motifs, white background, pastel blue accents, no harsh warning style, preserve warmth, easy to understand instantly",
       "category": "形式・レイアウト",
       "artifacts": [
         {
           "path": "artifacts/009_topic_redirect_banner.png",
-          "title": "話題切り替え用バナー"
+          "title": "形式: 話題切り替えバナー"
         }
       ]
     },
@@ -362,7 +362,7 @@
     },
     {
       "id": "safe_reply_pack",
-      "title": "話題切り替え",
+      "title": "行動: 話題切り替え",
       "content": "safe redirect, acknowledge first, keep it short, avoid escalation, change topic smoothly, preserve warmth, do not overexplain",
       "category": "リプライ・対話"
     },
@@ -434,25 +434,25 @@
     },
     {
       "id": "logo_only_kafka",
-      "title": "ロゴ単独",
+      "title": "形式: ロゴ単独",
       "content": "single logo only, no character, no slogan, centered or slightly offset, pastel blue to lavender gradient, thick readable outline, clean white background, enough negative space, one icon mark and one wordmark, no extra panels, no clutter",
       "category": "ブランド",
       "artifacts": [
         {
           "path": "artifacts/015_logo_only_sheet.png",
-          "title": "ロゴ単独"
+          "title": "形式: ロゴ単独"
         }
       ]
     },
     {
       "id": "wordmark_only_kafka",
-      "title": "文字ロゴ単独",
+      "title": "形式: 文字ロゴ単独",
       "content": "wordmark only, Kafka and かふか as title text, rounded Japanese typography, strong legibility, no illustration, no character, no decorative grid, wide safe margins, pastel blue or lavender fill, simple outline, stable letter spacing",
       "category": "ブランド",
       "artifacts": [
         {
           "path": "artifacts/016_wordmark_sheet.png",
-          "title": "文字ロゴ単独"
+          "title": "形式: 文字ロゴ単独"
         }
       ]
     },
@@ -482,13 +482,13 @@
     },
     {
       "id": "logo_orbit_kafka",
-      "title": "宇宙ロゴ単独",
+      "title": "形式: 宇宙ロゴ単独",
       "content": "single logo only, Japanese hiragana typography saying 「かふか」 only, centered composition, rounded soft typography, thick rounded strokes, high readability, soft pastel blue and lavender gradient fill, subtle white inner glow, thick white outline, secondary thin pastel outline, smooth stable letter spacing, cute but structured typography, calm emotional atmosphere, commercial vtuber branding aesthetic\n\nsurrounding orbital system inspired by planetary orbits and atomic electron shells, multiple thin elliptical orbit lines around the text, overlapping orbital paths, transparent orbit trails, tiny pastel planets and electrons, soft glowing particles following the orbital curves, small astronomy symbols, subtle stars and sparkles, scientific but gentle mood, minimal quantum diagram aesthetic, gravitational center composition, balanced symmetry, floating orbital motion feeling\n\npastel blue, lavender, pale purple, soft cyan, extremely light gray shadows, clean vector-like lineart, soft anti-aliased edges, elegant negative space, minimal clutter, no character illustration, no panels, no infographic blocks, no neon cyberpunk, no dark background, no 3d render look, no metallic texture, no glossy plastic texture, no harsh contrast, no visual noise, human-designed logo feeling, soft atmospheric haze around the center\n\nhigh resolution, ultra crisp typography, soft layered glow, subtle depth, orbit lines partially behind and partially in front of the text, gentle celestial atmosphere, modern japanese kawaii science branding, emotionally warm but technically structured visual identity",
       "category": "ブランド",
       "artifacts": [
         {
           "path": "artifacts/020_orbit_logo_sheet.png",
-          "title": "宇宙ロゴ単独"
+          "title": "形式: 宇宙ロゴ単独"
         }
       ]
     },
@@ -518,25 +518,25 @@
     },
     {
       "id": "seasonal_outfit_spring_kafka",
-      "title": "春衣装",
+      "title": "衣装: 春",
       "content": "light spring outfit, pale cardigan, soft ribbon, thin layered fabric, tiny flower accent, gentle breeze feeling, pastel blue and lavender, morning tweet friendly, bright but calm",
       "category": "衣装"
     },
     {
       "id": "seasonal_outfit_summer_kafka",
-      "title": "夏衣装",
+      "title": "衣装: 夏",
       "content": "light summer outfit, sleeveless or short-sleeve variation, airy fabric, cool blue highlights, small water or sparkle accents, refreshing morning feeling, pastel cyan and white, easygoing and bright",
       "category": "衣装"
     },
     {
       "id": "seasonal_outfit_autumn_kafka",
-      "title": "秋衣装",
+      "title": "衣装: 秋",
       "content": "autumn outfit, knit or coat layer, warm ribbon, deeper lavender and navy, soft leaf accent, calm and thoughtful morning feeling, cozy but clean, quiet seasonal mood",
       "category": "衣装"
     },
     {
       "id": "seasonal_outfit_winter_kafka",
-      "title": "冬衣装",
+      "title": "衣装: 冬",
       "content": "winter outfit, coat, scarf, fluffy trim, cool pale blue, soft snow accent, warm indoor light, gentle sleepy morning feeling, crisp and quiet, pastel but not heavy",
       "category": "衣装"
     },
@@ -680,7 +680,7 @@
     },
     {
       "id": "poker_dealer_style_kafka",
-      "title": "ポーカーディーラー衣装",
+      "title": "衣装: ポーカー",
       "content": "black vest, white shirt, slim red tie, gold trim, cufflinks, elegant gloves, casino dealer vibe, polished and cool, neat hair, confident gaze, warm low light",
       "category": "衣装"
     },
@@ -698,7 +698,7 @@
     },
     {
       "id": "fantasy_card_game_style_kafka",
-      "title": "ファンタジーカードゲーム衣装",
+      "title": "衣装: ファンタジー",
       "content": "fantasy robe or layered coat, gem brooch, blue purple glow accents, card-game mage vibe, elegant but playful, bright magical lighting, hero-like pose, board-game inspired, not dark, not gothic",
       "category": "衣装"
     },
@@ -710,19 +710,19 @@
     },
     {
       "id": "card_game_status_text_pack",
-      "title": "カードゲーム文言",
+      "title": "文言: カードゲーム",
       "content": "「ターン中」「盤面を見る」「一手考える」「ここが勝負」「手札が強い」「読み合いだね」「次を待つ」「いい盤面」「まだいける」「ここで決めたい」",
       "category": "セリフ・フレーズ"
     },
     {
       "id": "gaming_status_text_pack",
-      "title": "ゲーム文言",
+      "title": "文言: ゲーム",
       "content": "「ゲーム中」「もう一戦」「集中」「いくよ」「いい感じ」「勝ちたい」「ここから」「楽しい」「あと少し」「やる気出る」",
       "category": "セリフ・フレーズ"
     },
     {
       "id": "splendor_game_text_pack",
-      "title": "宝石の煌きゲーム文言",
+      "title": "文言: 宝石の煌き",
       "content": "「宝石を集めるよ」「ゴールドは万能」「買えるカードを増やす」「あと少しで勝てる」「貴族が来た」「この一手が大事」「得点が見えてきた」「うれしい」「逆転の流れ」「今日はこれで決める」",
       "category": "セリフ・フレーズ"
     },
@@ -746,19 +746,19 @@
     },
     {
       "id": "joinwars_style_kafka",
-      "title": "JoinWars衣装",
+      "title": "衣装: JoinWars",
       "content": "competitive card game outfit, sleek jacket or vest, clean collar, smart but playful, blue violet accent, dealer or strategist mood, confident gaze, easy to read silhouette",
       "category": "衣装"
     },
     {
       "id": "vrchat_outfit_kafka",
-      "title": "VRChat衣装",
+      "title": "衣装: VRChat",
       "content": "VRChat-ready fashionable clothing, comfortable avatar-friendly silhouette, lightweight jacket, layered top, short skirt or wide-leg pants option, ribbon accents, small bag or accessories, white and pastel-blue palette with a little navy, practical for avatar use, easy to recognize silhouette",
       "category": "衣装"
     },
     {
       "id": "splendor_outfit_kafka",
-      "title": "宝石の煌き衣装",
+      "title": "衣装: 宝石の煌き",
       "content": "elegant jewel-themed fantasy outfit, fitted coat or capelet, jewel-toned inner dress, subtle gold trim, gem brooch, delicate gloves or cuffs, pendant jewelry, refined silhouette, white and pastel-blue base with ruby, sapphire, emerald, and amethyst accents, luminous and expensive but airy and clean",
       "category": "衣装"
     },
@@ -782,19 +782,19 @@
     },
     {
       "id": "reading_scene_general_kafka",
-      "title": "読書背景",
+      "title": "背景: 読書",
       "content": "quiet reading scene, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
       "category": "背景"
     },
     {
       "id": "reading_scene_seaside_kafka",
-      "title": "海辺の読書背景",
+      "title": "背景: 海辺の読書",
       "content": "seaside reading scene, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
       "category": "背景"
     },
     {
       "id": "reading_scene_anne_kafka",
-      "title": "赤毛のアン読書背景",
+      "title": "背景: 赤毛のアン読書",
       "content": "storybook reading scene, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
       "category": "背景"
     },
@@ -806,13 +806,13 @@
     },
     {
       "id": "reading_outfit_kafka",
-      "title": "読書衣装",
+      "title": "衣装: 読書",
       "content": "cozy reading outfit, cardigan, soft dress, calm ribbon, gentle layered fabric, comfortable and neat, quiet indoor mood, soft pastel colors",
       "category": "衣装"
     },
     {
       "id": "cosplay_event_outfit_kafka",
-      "title": "コスプレ衣装",
+      "title": "衣装: コスプレ",
       "content": "event-ready cosplay outfit, polished costume, clean seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance",
       "category": "衣装"
     },
@@ -1040,19 +1040,19 @@
     },
     {
       "id": "outfit_exploration_layout",
-      "title": "衣装比較シート",
+      "title": "形式: 衣装比較",
       "content": "fashion design reference sheet, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished vtuber costume concept board, calm comparison layout",
       "category": "形式・レイアウト"
     },
     {
       "id": "vrchat_outfit_sheet_layout",
-      "title": "VRChat衣装シート",
+      "title": "形式: VRChat衣装",
       "content": "fashion design reference sheet for VRChat users, center full-body hero outfit, surrounding outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished avatar outfit concept board, calm comparison layout",
       "category": "形式・レイアウト"
     },
     {
       "id": "splendor_outfit_sheet_layout",
-      "title": "宝石の煌き衣装シート",
+      "title": "形式: 宝石の煌き衣装",
       "content": "fashion design reference sheet inspired by Splendor, center full-body hero outfit, surrounding jewel-themed outfit variants, material swatches, tiny callouts, clean labels, white background, pastel blue borders, readable at phone size, polished jewel outfit concept board, calm comparison layout",
       "category": "形式・レイアウト"
     },
@@ -1082,37 +1082,37 @@
     },
     {
       "id": "character_sheet_shafuka",
-      "title": "しゃふか キャラデザインシート",
+      "title": "形式: しゃふかデザインシート",
       "content": "Ultra high resolution character design sheet, clean white background, Japanese anime style, simple and cute illustration, low detail, flat coloring, minimal shading, clean lineart, 4k\n\nA cute jirai-kei gothic girl character design system sheet\n\nCharacter:\npetite teenage girl, soft and slightly chibi proportions, simple and approachable design\n\nHair:\nshort bob haircut with straight blunt bangs\nblack hair with soft pink inner color and a few pink streaks\nslightly rounded silhouette, simplified strands\n\nEyes:\nheterochromia, one eye light green, the other pinkish purple\nlarge simple anime eyes, minimal highlights\nsoft blush, small cute mouth\n\nHeadwear:\nblack baseball cap with a small ribbon on the front\nvery simple design, minimal detail\n\nOutfit:\nlight gray oversized cropped jacket\nblack fluffy fur collar\nvery simplified folds\nsleeves have simple lace-up ribbon design\n\nTop:\nblack inner top with a simple ribbon on chest\n\nSkirt:\nblack pleated skirt, simplified shape\nminimal lace detail\n\nGarter:\nsimple garter straps attached to skirt\n\nLegwear:\nblack thigh-high socks, flat color\n\nShoes:\nplatform shoes, rounded shape\nsimple ribbon decoration\nminimal detail\n\nAccessories:\nblack choker with a ring\nsimple waist chain\nsmall paw-shaped hair clip\n\nStyle:\nvery simple, slightly rough and cute drawing style\nintentionally low detail\nflat colors with almost no gradient\nthick and clean lineart\npop and friendly visual tone\n\nComposition:\ninclude front view, side view, back view\ninclude 2–3 simple facial expressions\ninclude small chibi version\n\nColor palette:\nblack, gray, soft pink, muted green\n\nno text, no watermark",
       "category": "形式・レイアウト",
       "artifacts": [
         {
           "path": "artifacts/071_shafuka_character_sheet.png",
-          "title": "しゃふか キャラデザインシート"
+          "title": "形式: しゃふかデザインシート"
         }
       ]
     },
     {
       "id": "character_sheet_miyu",
-      "title": "みゆ キャラデザインシート",
+      "title": "形式: みゆデザインシート",
       "content": "masterpiece, best quality, ultra detailed, dreamy pastel anime illustration, bright airy summer atmosphere, soft cinematic bloom, delicate lighting, extremely soft shading, white and sky-blue color palette, high-key exposure, glossy highlights, shallow depth of field, bokeh flowers in foreground, elegant cafe terrace scene, emotional healing mood, ultra clean rendering, polished commercial anime art style\n\ncute anime girl, petite build, sitting at a white round cafe table outdoors, upper body slightly leaning forward, relaxed and cheerful pose, eyes closed in a happy smile, small open mouth smile, soft blush on cheeks, right hand gently touching cheek, left arm resting naturally, calm and sweet expression\n\nvery light lavender-blue hair, silky semi-transparent hair texture, fluffy layered bangs covering eyebrows, long side ponytail gathered low on the right side, soft curled strands, translucent pastel highlights, multiple tiny pale pink ribbon hairpins scattered through bangs and side hair, two glossy dark navy heart-shaped hair clips on bangs\n\nlarge soft anime face, tiny nose, smooth pale skin, subtle pink blush gradient, thin eyelashes, glossy lips\n\nwhite sleeveless summer dress with thin straps, blue floral porcelain-style pattern, frilled shoulder straps, fitted bodice, tiny blue ribbon at waist, lightweight cotton fabric, soft folds, elegant feminine summer fashion\n\nsilver necklace, silver bracelet, delicate accessories, subtle sparkle highlights\n\nbright blue cream soda float on table, transparent curved glass, blue gradient liquid, ice cubes visible, scoop of vanilla ice cream on top, red cherry garnish, white straw, realistic glass reflections, coaster under glass\n\nwhite decorative metal cafe chair, white terrace interior, large open windows, vivid blue sky with fluffy white clouds outside, soft white flowers and blue flowers surrounding foreground and background, bright summer sunlight pouring in\n\ncomposition focused on character centered slightly left, drink placed lower right foreground, portrait orientation, chest-to-thigh framing, slight downward camera angle, intimate composition\n\nextremely soft ambient lighting, bloom around edges, atmospheric perspective, pastel haze, glowing rim light on hair and shoulders, gentle highlights on skin, dreamy watercolor-like atmosphere while retaining sharp facial rendering\n\nno text, no watermark, no logo, no extra people, no dark shadows, no harsh contrast, no messy background, no distorted anatomy, no extra fingers, no low detail, no AI artifacts, no bad hands, no duplicate accessories",
       "category": "形式・レイアウト",
       "artifacts": [
         {
           "path": "artifacts/072_miyu_character_sheet.png",
-          "title": "みゆ キャラデザインシート"
+          "title": "形式: みゆデザインシート"
         }
       ]
     },
     {
       "id": "character_shafuka",
-      "title": "しゃふか",
+      "title": "キャラクター: しゃふか",
       "content": "petite jirai-kei gothic girl, short bob haircut with straight blunt bangs, black hair with soft pink inner color and pink streaks, heterochromia with light green and pink-purple eyes, black baseball cap with a ribbon, light gray oversized cropped jacket with black fluffy fur collar, black inner top with a ribbon, black pleated skirt, simple garter straps, black thigh-high socks, platform shoes, black choker, simple waist chain, small paw-shaped hair clip, simple cute drawing style, flat colors, thick clean lineart, intentionally low detail",
       "category": "キャラクター"
     },
     {
       "id": "character_miyu",
-      "title": "みゆ",
+      "title": "キャラクター: みゆ",
       "content": "cute anime girl with very light lavender-blue hair, silky semi-transparent texture, fluffy layered bangs, long side ponytail gathered low on the right side, soft curled strands, tiny pale pink ribbon hairpins, glossy dark navy heart-shaped hair clips, large soft face, tiny nose, smooth pale skin, subtle pink blush, white sleeveless summer dress with thin straps and blue floral pattern, frilled shoulder straps, tiny blue waist ribbon, silver necklace and bracelet, bright airy summer cafe mood",
       "category": "キャラクター"
     },
@@ -2799,7 +2799,7 @@
     },
     {
       "id": "shafuka_character_sheet",
-      "title": "しゃふか キャラデザインシート",
+      "title": "形式: しゃふかデザインシート",
       "blocks": [
         "character_sheet_shafuka"
       ],
@@ -2809,13 +2809,13 @@
       "artifacts": [
         {
           "path": "artifacts/071_shafuka_character_sheet.png",
-          "title": "しゃふか キャラデザインシート"
+          "title": "形式: しゃふかデザインシート"
         }
       ]
     },
     {
       "id": "miyu_character_sheet",
-      "title": "みゆ キャラデザインシート",
+      "title": "形式: みゆデザインシート",
       "blocks": [
         "character_sheet_miyu"
       ],
@@ -2825,7 +2825,7 @@
       "artifacts": [
         {
           "path": "artifacts/072_miyu_character_sheet.png",
-          "title": "みゆ キャラデザインシート"
+          "title": "形式: みゆデザインシート"
         }
       ]
     },

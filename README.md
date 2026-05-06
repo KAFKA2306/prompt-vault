@@ -19,18 +19,19 @@ KAFKA の世界観を保ちながら、
 - ブロック、テンプレート、`artifacts` を JSON で管理するローカルDB
 - GitHub Pages と Cloudflare Pages でそのまま配信できる静的構成
 
-
 ## すぐ開く場所
 
 - [ローカル表示](http://127.0.0.1:8787/)
 - [公開サイト](https://kafka2306.github.io/prompt-vault/)
 - [Cloudflare Pages 公開先](https://prompt-vault-cg3.pages.dev/)
 - [GitHub リポジトリ](https://github.com/KAFKA2306/prompt-vault)
+
 - [Cloudflare Pages 手順](docs/manual/001_cloudflare_pages.md)
 - [ADR](docs/ADR/README.md)
 - [表示検証スクリプト](scripts/verify_pages.sh)
 - [DESIGN.md](DESIGN.md)
 - [AGENTS.md](AGENTS.md)
+- [データベース定義 (SCHEMA.md)](docs/SCHEMA.md)
 
 ## どうやって簡単に再現するのか
 
@@ -59,7 +60,7 @@ Cloudflare Pages を確認したいときは `CF_PAGES_URL` を渡します。
 ## データの置き場所
 
 - `db/prompts.json` がローカルDBです
-- ブロック、テンプレート、`artifacts` はここで管理します
+- ブロック、テンプレート、`artifacts` はここで管理します（名称には `カテゴリ: 名称` の規則を適用）
 - 設計の確定事項は `docs/ADR/` に残します
 - `static/index.html` が HTML の元です
 - `static/style.css` と `static/app.js` が画面の本体です
