@@ -22,6 +22,7 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
+      - run: uv run scripts/validate_db.py
       - run: uv run build.py
       - uses: actions/upload-pages-artifact@v3
         with:
