@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class Artifact(BaseModel):
@@ -20,7 +18,7 @@ class Block(BaseModel):
 class Template(BaseModel):
     id: str
     title: str
-    blocks: list[str]
+    blocks: list[str] = Field(default_factory=list)
     kind: str = "standard"
     purpose: str = ""
     summary: str = ""
@@ -32,4 +30,17 @@ class Template(BaseModel):
 class PromptDB(BaseModel):
     blocks: list[Block]
     templates: list[Template]
-    generated_prompts: list[dict[str, Any]] = Field(default_factory=list)
+
+    @model_validator(mode="before")
+    @classmethod
+    def migrate_generated(cls, data: Any) -> Any:
+        if isinstance(data, dict) and "generated_prompts" in data:
+            generated = data.pop("generated_prompts", [])
+            templates = data.get("templates", [])
+            existing_ids = {t.get("id") if isinstance(t, dict) else t.id for t in templates}
+            for g in generated:
+                if g.get("id") not in existing_ids:
+                    g["kind"] = "generated"
+                    templates.append(g)
+            data["templates"] = templates
+        return data

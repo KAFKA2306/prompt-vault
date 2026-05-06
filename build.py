@@ -24,24 +24,6 @@ def load_db() -> PromptDB:
             if not (ROOT / a.path).exists():
                 raise ValueError(f"missing artifact: {a.path}")
 
-    # Compatibility layer: migrate old generated_prompts to templates
-    if db.generated_prompts:
-        template_ids = {t.id for t in db.templates}
-        for r in db.generated_prompts:
-            if r.get("id") in template_ids:
-                continue
-            db.templates.append(
-                Template(
-                    id=r.get("id", ""),
-                    title=r.get("title", "Generated"),
-                    kind="generated",
-                    blocks=r.get("block_ids") or r.get("blocks") or [],
-                    generated_prompt=r.get("generated_prompt", ""),
-                    artifacts=r.get("artifacts") or [],
-                    created_at=r.get("created_at"),
-                )
-            )
-        db.generated_prompts = []
     return db
 
 
