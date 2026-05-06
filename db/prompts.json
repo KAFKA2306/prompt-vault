@@ -175,6 +175,132 @@
       "category": "形式・レイアウト"
     },
     {
+      "id": "boardgame_social_layout",
+      "title": "形式: ボードゲーム投稿",
+      "content": "square or 4:5 social post, one large portrait, board game components clearly visible beside Kafka, no date, no timestamp, readable on phone, balanced tabletop composition, clean margins",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "bg_outfit_industrial",
+      "title": "衣装: 工業経済",
+      "content": "industrial grey utility vest, black harness, practical techwear jumpsuit, subtle metallic accents, rugged but tidy silhouette",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_industrial",
+      "title": "背景: 工業経済",
+      "content": "industrial board game tabletop, power lines, resource cubes, money cards, building tiles, clean mechanical network map, readable and tidy table",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_retro",
+      "title": "衣装: 大正ロマン探索",
+      "content": "Taisho romantic explorer outfit, light kimono jacket, white lace collar, antique navy ribbons, refined but practical silhouette",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_retro",
+      "title": "背景: 歴史遺産",
+      "content": "historical tabletop, Meiji port map, relic tiles, market stalls, expedition cards, antique wood table, nostalgic travel mood",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_dungeon",
+      "title": "衣装: ダンジョン冒険者",
+      "content": "dungeon adventurer outfit, cloak or layered coat, utility belt, leather boots, treasure-hunter vibe, bright but adventurous",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_dungeon",
+      "title": "背景: ダンジョン探索",
+      "content": "adventure fantasy tabletop, treasure tokens, cave map, gem counters, code tiles, dragon bag, readable dungeon layout",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_casual",
+      "title": "衣装: キッズカジュアル",
+      "content": "hoodie and playful casual wear, soft colors, comfy silhouette, kid-friendly and approachable",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_casual",
+      "title": "背景: キッズカジュアル",
+      "content": "bright family-friendly tabletop, pizza tokens, toy icons, building tiles, animal cards, cheerful secret-base mood",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_sporty",
+      "title": "衣装: スピードパズル",
+      "content": "sporty activewear, track jacket, clean sneakers, movement-friendly silhouette, quick and energetic",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_sporty",
+      "title": "背景: スピードパズル",
+      "content": "fast puzzle tabletop, polyomino pieces, number cards, slide grids, energetic turn-by-turn motion, clean competition table",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_intellectual",
+      "title": "衣装: 知的執事メイド",
+      "content": "smart butler-or-maid inspired outfit, vest, apron details, neat tie, elegant and intelligent mood",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_wordplay",
+      "title": "背景: 言葉と推理",
+      "content": "word and deduction tabletop, clue cards, answer tiles, whiteboard, neat brainstorm desk, small token layout",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_nightoffice",
+      "title": "衣装: 夜のオフィスパジャマ",
+      "content": "office pajamas or soft nightwear, cardigan, loose shirt, relaxed but still tidy silhouette",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_nightoffice",
+      "title": "背景: 深夜の事務所",
+      "content": "late-night office tabletop, clocks, documents, laptop glow, city-night mood, sneaky cat accents, quiet indoor scene",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_magic_sci",
+      "title": "衣装: 魔法とサイバー",
+      "content": "witch-and-cyberpunk hybrid outfit, luminous accents, pointed details, futuristic magic vibe, bright and stylish",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_magic_sci",
+      "title": "背景: 魔法とSF",
+      "content": "magic-and-sci-fi tabletop, potion cups, electric sparks, robot parts, glowing panels, bright adventurous tech mood",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_marine",
+      "title": "衣装: 白いマリンルック",
+      "content": "white marine look, sailor collar, navy ribbon, polished cruise-liner elegance, neat and resort-friendly silhouette",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_marine",
+      "title": "背景: 豪華客船",
+      "content": "luxury cruise ship tabletop, deck map, passenger meeples, ticket cards, balcony view, bright sea light, orderly shipboard layout",
+      "category": "背景"
+    },
+    {
+      "id": "bg_outfit_varied",
+      "title": "衣装: 調整用",
+      "content": "neutral versatile outfit, simple jacket, flexible silhouette, balanced accent colors, easy to adapt to many board game moods",
+      "category": "衣装"
+    },
+    {
+      "id": "bg_scene_varied",
+      "title": "背景: 調整用",
+      "content": "mixed tabletop game spread, chips, dice, abstract shapes, clue tiles, flexible colorful boardgame mood, clean and adaptable composition",
+      "category": "背景"
+    },
+    {
       "id": "chat_reply_pack",
       "title": "コメント返し",
       "content": "one to two sentences, answer the comment first, keep it compact, add one concrete detail if needed, avoid overexplaining, leave the deeper voice style to speech_mode_kafka",
@@ -3822,6 +3948,454 @@
         }
       ],
       "kind": "social"
+    },
+    {
+      "id": "boardgame_022a_national_economy",
+      "title": "ボードゲームシリーズ: 022a ナショナルエコノミー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_industrial",
+        "bg_scene_industrial",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ナショナルエコノミーの循環経済と事務的な手触りを、きびきびした投稿にする",
+      "summary": "建物カードとお金の流れ、家計の循環を見せて、閉じた経済の感じを出す。"
+    },
+    {
+      "id": "boardgame_016_ra",
+      "title": "ボードゲームシリーズ: 016 ラー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ラーの古代エジプト競りを、黄金の遺産感で見せる",
+      "summary": "ラー像、太陽チップ、文明タイルで、古代感と競りの緊張感を出す。"
+    },
+    {
+      "id": "boardgame_025_tindahan",
+      "title": "ボードゲームシリーズ: 025 ティンダハン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ティンダハンの南国市場を、鮮やかな果物と屋台で見せる",
+      "summary": "カラフルな市場、果物、屋台のにぎやかさを前面に出す。"
+    },
+    {
+      "id": "boardgame_022b_clank",
+      "title": "ボードゲームシリーズ: 022b クランク！",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_dungeon",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "クランク！の潜入と脱出を、洞窟と盗賊の雰囲気で見せる",
+      "summary": "ダンジョン、宝箱、ドラゴン袋、キューブを分かりやすく並べる。"
+    },
+    {
+      "id": "boardgame_028_lost_code",
+      "title": "ボードゲームシリーズ: 028 ロストコード",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_dungeon",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ロストコードの推理と数字のズレを、未来的な計算感で見せる",
+      "summary": "数字タイル、隠し情報、考え込む視線で推理の手触りを出す。"
+    },
+    {
+      "id": "boardgame_002_fort",
+      "title": "ボードゲームシリーズ: 002 フォート",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "フォートの秘密基地づくりを、子どもっぽいにぎやかさで見せる",
+      "summary": "ピザ、玩具、カードの楽しい散らばりで、秘密基地のわくわく感を出す。"
+    },
+    {
+      "id": "boardgame_004_little_town_builders",
+      "title": "ボードゲームシリーズ: 004 リトルタウンビルダーズ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "リトルタウンビルダーズの街づくりを、素朴で読みやすい投稿にする",
+      "summary": "建物タイルと木材・小麦の資源で、小さな街の広がりを見せる。"
+    },
+    {
+      "id": "boardgame_009_beasty_bar",
+      "title": "ボードゲームシリーズ: 009 ビースティーバー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ビースティーバーの行列ゲームを、動物の個性が分かる投稿にする",
+      "summary": "バーの入り口、動物カード、ネオンっぽさで、行列の賑やかさを出す。"
+    },
+    {
+      "id": "boardgame_018_project_l",
+      "title": "ボードゲームシリーズ: 018 プロジェクトL",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "プロジェクトLのポリオミノパズルを、透明感ある配置で見せる",
+      "summary": "カラフルなピースと盤面のはまり方を強調して、解ける快感を出す。"
+    },
+    {
+      "id": "boardgame_015_nana",
+      "title": "ボードゲームシリーズ: 015 ナナ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ナナの記憶ゲームを、ポップで素直な表情で見せる",
+      "summary": "同じ数字カードを3枚そろえる瞬間を、明るく分かりやすく切り取る。"
+    },
+    {
+      "id": "boardgame_007_slide",
+      "title": "ボードゲームシリーズ: 007 スライド",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "スライドの並べ替えパズルを、手元の動きで見せる",
+      "summary": "カードを横にずらす手元とグリッド感を出して、操作の気持ちよさを見せる。"
+    },
+    {
+      "id": "boardgame_008_eleven",
+      "title": "ボードゲームシリーズ: 008 イレブン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "イレブンの連番ゴーアウトを、スポーティーな勢いで見せる",
+      "summary": "サッカー風の躍動感と数字カードの流れで、スピード感を出す。"
+    },
+    {
+      "id": "boardgame_013_gomojin",
+      "title": "ボードゲームシリーズ: 013 ゴモジン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ゴモジンの漢字2字+カナ3字ルールを、文字の楽しさで見せる",
+      "summary": "ホワイトボード、文字タイル、ルールの字数感を分かりやすくまとめる。"
+    },
+    {
+      "id": "boardgame_024_master_word",
+      "title": "ボードゲームシリーズ: 024 マスターワード",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マスターワードの推理を、落ち着いた知的表情で見せる",
+      "summary": "ヒントカードと考え込む視線で、協力して言葉を探す感じを出す。"
+    },
+    {
+      "id": "boardgame_027_chiryaku_akuryaku",
+      "title": "ボードゲームシリーズ: 027 知略悪略",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "知略悪略の心理戦を、影のある不敵さで見せる",
+      "summary": "読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。"
+    },
+    {
+      "id": "boardgame_019_teiji_taisha",
+      "title": "ボードゲームシリーズ: 019 定時退社",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "bg_scene_nightoffice",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "定時退社の残業押し付け合いを、オフィスの夜感で見せる",
+      "summary": "時計、書類、PCで、早く帰りたい空気を分かりやすく出す。"
+    },
+    {
+      "id": "boardgame_020_sugoroku_kabuuru",
+      "title": "ボードゲームシリーズ: 020 すごろくかぶーる",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "bg_scene_nightoffice",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "すごろくかぶーるの被らせないクイズ感を、考え込む表情で見せる",
+      "summary": "すごろく盤と解答ボードをシンプルに並べて、答えを考える緊張感を出す。"
+    },
+    {
+      "id": "boardgame_021_nusutto_cat",
+      "title": "ボードゲームシリーズ: 021 ぬすっとキャット",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "bg_scene_nightoffice",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ぬすっとキャットの泥棒猫感を、夜の街でかわいく見せる",
+      "summary": "猫耳、宝石袋、夜景で、かわいくも怪しい盗みの空気を出す。"
+    },
+    {
+      "id": "boardgame_017_wie_verhext",
+      "title": "ボードゲームシリーズ: 017 魔法にかかったみたい",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_magic_sci",
+        "bg_scene_magic_sci",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "魔法にかかったみたいの薬草集めを、魔女っぽく見せる",
+      "summary": "大釜、材料トークン、静かな魔法感を入れて、調合の流れを見せる。"
+    },
+    {
+      "id": "boardgame_029_charge_spark",
+      "title": "ボードゲームシリーズ: 029 チャージスパーク",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_magic_sci",
+        "bg_scene_magic_sci",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "チャージスパークのロボ対戦を、電撃と機械感で見せる",
+      "summary": "ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。"
+    },
+    {
+      "id": "boardgame_030_come_sail_away",
+      "title": "ボードゲームシリーズ: 030 カムセイルアウェイ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_marine",
+        "bg_scene_marine",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "カムセイルアウェイの客船配置を、白いマリンルックで見せる",
+      "summary": "豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。"
+    },
+    {
+      "id": "boardgame_005_tornado_splash",
+      "title": "ボードゲームシリーズ: 005 トーネードスプラッシュ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "トーネードスプラッシュの回転干渉を、爽やかな物理アクションで見せる",
+      "summary": "竜巻コマ、飛び散るチップ、水色の清涼感で、狙いを定める瞬間を出す。"
+    },
+    {
+      "id": "boardgame_006_fearless",
+      "title": "ボードゲームシリーズ: 006 フィアーレス",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "フィアーレスの合計0狙いを、静かな心理戦で見せる",
+      "summary": "大きな数字カードと相手をうかがう表情で、駆け引きの静けさを出す。"
+    },
+    {
+      "id": "boardgame_010_bet_on",
+      "title": "ボードゲームシリーズ: 010 ベットオン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ベットオンの予想と賭けを、カジノっぽいワクワクで見せる",
+      "summary": "ベッティングチップと予想ボードを積み上げて、パーティー感を出す。"
+    },
+    {
+      "id": "boardgame_012_mind_space",
+      "title": "ボードゲームシリーズ: 012 マインドスペース",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マインドスペースの抽象パズルを、未来的な幾何学で見せる",
+      "summary": "浮遊する図形と明るい色面を中心に置いて、思考の空間を見せる。"
+    },
+    {
+      "id": "boardgame_014_strike",
+      "title": "ボードゲームシリーズ: 014 ストライク",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ストライクのダイス投げを、アリーナの迫力で見せる",
+      "summary": "すり鉢状の場と散らばるダイスで、投げ込む瞬間の勢いを出す。"
+    },
+    {
+      "id": "boardgame_023_my_majority",
+      "title": "ボードゲームシリーズ: 023 マイマジョ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マイマジョの多数派/少数派心理を、不敵な投票感で見せる",
+      "summary": "役割カード、投票チップ、読み合いを前面に出して、逆転の空気を出す。"
+    },
+    {
+      "id": "boardgame_026_trickmeister",
+      "title": "ボードゲームシリーズ: 026 トリックマイスター",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "トリックマイスターの変わるルールを、マジシャン風に見せる",
+      "summary": "ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。"
     }
   ]
 }
