@@ -49,6 +49,7 @@ jobs:
         run: |
           mkdir -p final_dist
           tar -xf dist/artifact.tar -C final_dist
+          cp -r functions final_dist/ || true
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
