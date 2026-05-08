@@ -258,6 +258,6 @@
 ## ワークフロー (各シリーズ共通)
 
 1. **DB定義**: `db/prompts.json` に通し番号付きの衣装・背景ブロックを追加。
-2. **画像生成**: `imagegen` を実行。ファイル名は `NNN_slug.png` とする。
-3. **資産同期**: `artifacts/` への移動とDBの `templates` への追記。
-4. **ビルド**: `python3 build.py` によるギャラリー更新。
+2. **画像生成**: built-in `image_gen` で画像を作る。CLI fallback は使わない。
+3. **資産登録**: `scripts/register_generated_artifact.py` で `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。
+4. **ビルドと検証**: 登録スクリプト経由で `python3 build.py` と `python3 scripts/validate_db.py` を通す。

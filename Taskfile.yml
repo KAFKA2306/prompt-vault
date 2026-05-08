@@ -16,6 +16,11 @@ tasks:
     cmds:
       - python3 scripts/validate_db.py
 
+  artifacts-audit:
+    desc: Audit artifact connectivity
+    cmds:
+      - python3 scripts/audit_artifacts.py
+
   lint:
     desc: Lint the project
     cmds:
@@ -36,4 +41,5 @@ tasks:
       - task: lint
       - task: format
       - task: validate
+      - task: artifacts-audit
       - task: build

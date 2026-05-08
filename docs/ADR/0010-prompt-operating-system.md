@@ -118,7 +118,8 @@
 `prompt-vault-update` は、
 - 既存の Prompt Vault prompt を基準にする
 - `kafka_visual_standard` と `097_rendering_quality_check_contrast.png` を Kafka の標準参照にする
-- 画像を作ったら必ず `artifacts/` と `dist/artifacts/` を揃える
+- 画像を正式な資産にする場合は、`scripts/register_generated_artifact.py` で `artifacts/` と DB を同時に揃える
+- その後に `build.py` で `dist/artifacts/` が一致していることを確認する
 - review 可能な記録を残す
 
 という運用にする。

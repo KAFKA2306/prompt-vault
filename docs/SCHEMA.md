@@ -33,6 +33,11 @@
 | `generated_prompt` | 文字列 | 生成済みの完成プロンプト全文（任意）。 |
 | `created_at` | 文字列 | 作成日時の ISO8601 文字列（任意）。 |
 
+生成画像を正式な資産として残す場合は、`artifacts/NNN_slug.png` へ登録し、`db/prompts.json` の `artifacts` に必ず接続します。  
+このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/register_generated_artifact.py` を単一入口として扱います。  
+既存の未接続PNGを再採番して戻す場合は `scripts/reconnect_unconnected_pngs.py` を使います。  
+未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
+
 ---
 
 ## 2. `kind` の定義

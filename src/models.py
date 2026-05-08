@@ -1,4 +1,5 @@
 from typing import Any, Literal
+
 from pydantic import BaseModel, Field, model_validator
 
 
@@ -53,8 +54,7 @@ class PromptDB(BaseModel):
             generated = data.pop("generated_prompts", [])
             templates = data.get("templates", [])
             existing_ids = {
-                t.get("id") if isinstance(t, dict) else (t.id if hasattr(t, "id") else None)
-                for t in templates
+                t.get("id") if isinstance(t, dict) else (t.id if hasattr(t, "id") else None) for t in templates
             }
             for g in generated:
                 if g.get("id") not in existing_ids:

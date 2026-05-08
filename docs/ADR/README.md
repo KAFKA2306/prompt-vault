@@ -17,3 +17,4 @@
 - [0015 事前ビルド資産の確実なデプロイ](0015-resilient-prebuilt-deployment.md)
 - [0016 Quiet UI (2026年基準の最適化)](0016-quiet-ui-2026-optimization.md)
 - [0017 「レシピと素材」の責務分離とデータベース・ガードレールの導入](0017-recipe-ingredient-separation-and-integrity-guardrails.md)
+- [0018 未接続PNGの再採番・再接続ワークフロー](0018-unconnected-png-reconnect-workflow.md)

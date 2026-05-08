@@ -11,7 +11,7 @@ from build import load_db  # noqa: E402
 
 def main() -> int:
     db = load_db()
-    
+
     # Check for duplicate artifact paths
     artifact_paths = defaultdict(list)
     linked_paths = set()

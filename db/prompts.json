@@ -4,8 +4,7 @@
       "id": "master_style",
       "title": "マスタースタイル",
       "content": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors",
-      "category": "基準",
-      "deprecated": true
+      "category": "基準"
     },
     {
       "id": "rendering_soft_standard",
@@ -23,8 +22,7 @@
       "id": "character_kafka",
       "title": "キャラクター: KAFKA",
       "content": "female anime character, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth",
-      "category": "キャラクター",
-      "deprecated": true
+      "category": "キャラクター"
     },
     {
       "id": "character_kafka_core",
@@ -48,8 +46,7 @@
       "id": "outfit_kafka",
       "title": "衣装: KAFKA基本",
       "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
-      "category": "キャラ衣装",
-      "deprecated": true
+      "category": "キャラ衣装"
     },
     {
       "id": "outfit_kafka_default",
@@ -74,26 +71,6 @@
       "title": "春のお出かけ服",
       "content": "fashionable spring outfit, light beige or pale blue coat, airy dress or skirt, ribbon accents, small crossbody bag, elegant shoes, polished seasonal styling, coordinated and photo-ready",
       "category": "キャラ衣装"
-    },
-    {
-      "id": "character_sheet_kafka",
-      "title": "形式: Kafkaデザインシート",
-      "content": "masterpiece, best quality, ultra detailed, japanese anime vtuber character design system sheet, professional visual identity guide, highly cohesive character bible layout, clean white background, pastel futuristic aesthetic, soft emotional atmosphere, modern anime infographic design, ultra high resolution, razor sharp lineart, thin elegant outlines, soft gradients, subtle watercolor rendering, polished but human-crafted feeling, carefully designed visual system sheet\n\nMAIN CHARACTER:\ncute anime girl named Kafka, long pastel blue hair with lavender gradients, fluffy layered hair, semi-transparent bangs, sparkling blue-purple eyes, pale glowing skin, soft blush, expressive anime face, small smile, youthful vtuber aesthetic, soft emotional presence\n\nHAIR DETAILS:\nvery long wavy twin-layer hair,\nsoft transparent hair strands,\nlavender-blue gradients,\nsmall silver geometric hair clips,\ntiny futuristic ornaments,\ndelicate bead chains,\nsoft reflective highlights,\ncat-like gentle atmosphere\n\nOUTFIT DESIGN:\noversized white futuristic coat,\nsoft sailor-style inner outfit,\nlight blue and navy ribbon,\nshort pleated skirt,\nwhite oversized sleeves,\npastel techwear aesthetic,\nmany tiny accessories,\nhanging beads and chains,\nsoft holographic details,\ncute utility straps,\nwhite socks,\nlarge chunky futuristic sneakers,\nwhite and pastel blue color coordination\n\nHEAD ACCESSORY:\nwhite oversized cap with black circular “K” emblem,\nsmall decorative flowers and branches attached to cap,\nsoft futuristic military-vtuber hybrid aesthetic\n\nMAIN LAYOUT:\nlarge central full-body seated illustration on left side,\ncharacter reaching hand toward viewer,\nfriendly welcoming pose,\nlarge flowing hair across composition,\nhigh emotional readability\n\nDESIGN SHEET STRUCTURE:\nprofessional japanese character design reference sheet layout,\nmultiple organized panels with thin blue borders,\nclean spacing,\nhigh readability,\nbalanced infographic composition\n\nTOP LEFT:\nlarge “Kafka” logo in soft rounded typography,\ngradient blue-purple logo,\nsmall japanese subtitle “かふか | KAFKA”\n\nUPPER CENTER:\nthree-view character turnaround sheet,\nFRONT / SIDE / BACK views,\nfull body accurate design consistency\n\nUPPER RIGHT:\nfacial expression sheet grid,\nmultiple anime expressions,\nneutral face,\nhappy smile,\nwink,\nsurprised,\nembarrassed,\nthinking,\nsleepy,\nrelaxed,\nlaughing,\nall expressions maintain exact same face identity\n\nCENTER LEFT:\nconcept keyword infographic section,\nsmall pastel icon symbols,\nsoft blue minimal icons,\nclean japanese UI layout\n\nLOWER LEFT:\ncolor palette circles,\npastel blues,\nlavender,\nsoft cyan,\nwhite,\nnavy,\nsmall decorative icon motifs,\nlogo variations,\ntiny emblem designs\n\nCENTER:\naccessory breakdown panel,\nhat,\ncoat,\nsailor outfit,\nshoes,\nnecklace,\nhair accessories,\nrobot mascot,\nchains,\nbeads,\nclose-up detailed object references\n\nLOWER RIGHT:\npose variation panel,\nmultiple chibi/full-body poses,\npeace sign,\narms open,\nsitting pose,\nstanding pose,\ncute energetic gesture language\n\nBOTTOM:\nmoodboard/environment section,\nsoft futuristic cityscape,\nnight city lights,\ndreamy sky,\ncozy room,\npastel fantasy scenery,\nclean anime environment thumbnails\n\nVISUAL STYLE:\nhuman-made anime illustration feeling,\nnot generic AI anime,\nvery cohesive identity design,\nsoft emotional warmth,\ngentle futuristic atmosphere,\nclean commercial vtuber branding quality,\nprofessional Japanese artbook layout,\nhigh consistency across all panels,\ncarefully controlled anatomy,\nbeautiful typography spacing,\nsoft holographic glow,\ntiny sparkles,\nminimal floating particles,\nclean white negative space\n\nTYPOGRAPHY:\nlarge japanese typography only,\nprofessional rounded Japanese font,\nclean rendering,\nhigh readability,\nno broken Japanese,\nno English UI clutter except intentional logo/title elements,\norganized Japanese infographic labeling\n\nCOLOR PALETTE:\npastel blue,\nsoft cyan,\nlavender,\nwhite,\nlight navy,\nsmall pink accents,\nsoft transparent gradients,\nlow saturation,\ngentle atmospheric lighting\n\nNEGATIVE PROMPT:\nlow quality, low resolution, blurry image, bad anatomy, deformed hands, extra fingers, duplicate limbs, malformed face, crossed eyes, inconsistent hairstyle, inconsistent outfit, messy layout, chaotic composition, harsh shadows, strong contrast, dark cyberpunk, heavy neon, generic AI anime, overly glossy skin, plastic rendering, 3D render look, noisy details, cluttered infographic, broken Japanese text, random English text, watermark, signature, cropped panels, empty areas, flat expressions, emotionless face, corporate presentation style, hypersexualized design, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "category": "形式・レイアウト",
-      "artifacts": [
-        {
-          "path": "artifacts/004_character_design_sheet.png",
-          "title": "Kafka キャラデザインシート"
-        }
-      ],
-      "blocks": [
-        "source_research",
-        "kafka_identity_lock",
-        "layout_social_square",
-        "rendering_soft_standard",
-        "negative_common"
-      ],
-      "deprecated": true
     },
     {
       "id": "sticker_sheet_layout",
@@ -148,13 +125,6 @@
       "title": "背景: シンプル",
       "content": "plain background, no wide environment unless needed",
       "category": "背景"
-    },
-    {
-      "id": "reaction_focus",
-      "title": "表情強調",
-      "content": "close framing on the face and upper body, eyebrows visible, mouth readable, one hand in frame, eyes pointed at the viewer or the object, emotional pose first, plain background, no wide environment unless needed",
-      "category": "表情",
-      "deprecated": true
     },
     {
       "id": "text_style_jp",
@@ -221,6 +191,12 @@
       "title": "形式: ボードゲーム投稿",
       "content": "square or 4:5 social post, one large portrait, board game components clearly visible beside Kafka, no date, no timestamp, readable on phone, balanced tabletop composition, clean margins",
       "category": "形式・レイアウト"
+    },
+    {
+      "id": "boardgame_fidelity_check",
+      "title": "検証: ボードゲーム整合",
+      "content": "check the original board game rules, core mechanisms, component types, and well-known visual cues before drawing; keep the post faithful to the actual game identity, avoid generic props that contradict the rules, preserve recognizable cover mood and table logic, and do not downgrade the game into a vague generic board game illustration",
+      "category": "リサーチ"
     },
     {
       "id": "bg_outfit_industrial",
@@ -299,13 +275,6 @@
       "title": "衣装: 夜のオフィスパジャマ",
       "content": "office pajamas or soft nightwear, cardigan, loose shirt, relaxed but still tidy silhouette",
       "category": "衣装"
-    },
-    {
-      "id": "bg_scene_nightoffice",
-      "title": "背景: 深夜の事務所",
-      "content": "late-night office tabletop, clocks, documents, laptop glow, city-night mood, sneaky cat accents, quiet indoor scene",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "background_morning_window",
@@ -438,6 +407,36 @@
       "title": "描画: ソフトインフォグラフィック",
       "content": "clean uniform coloring, smooth even gradients, soft diffused lighting, high-key anime rendering, polished but human-crafted feeling",
       "category": "描画"
+    },
+    {
+      "id": "layout_aeonglass_boss_reveal",
+      "title": "形式: Aeonglassボスレイアウト",
+      "content": "centered landscape boss reveal poster, single imposing subject, readable silhouette, no UI, no caption, no crowded side elements",
+      "category": "形式"
+    },
+    {
+      "id": "character_aeonglass",
+      "title": "キャラクター: Aeonglass",
+      "content": "crystalline time-worn ominous boss entity, sharp reflective glass facets, fractured transparent armor, subtle temporal distortion rings, readable imposing silhouette",
+      "category": "キャラクター"
+    },
+    {
+      "id": "background_glory_aeonglass",
+      "title": "背景: Gloryアリーナ",
+      "content": "dark ruined arena, shattered stone, floating glass shards, crimson and teal magical glow, eerie depth, boss reveal atmosphere",
+      "category": "背景"
+    },
+    {
+      "id": "rendering_aeonglass_boss_reveal",
+      "title": "描画: Aeonglassボスキーアート",
+      "content": "dramatic high contrast fantasy key art, painterly 2D concept art, centered imposing boss reveal, polished AAA boss illustration, sharp silhouette, ominous mystery",
+      "category": "描画"
+    },
+    {
+      "id": "negative_aeonglass_boss_reveal",
+      "title": "ネガティブ: Aeonglassボス",
+      "content": "no text, no UI, no watermark, no extra characters, no collage look, no cartoon style, no photorealism",
+      "category": "ネガティブ"
     },
     {
       "id": "text_japanese_labels",
@@ -772,7 +771,7 @@
     {
       "id": "morning_pose_summer_kafka",
       "title": "ポーズ: 夏の朝",
-      "content": "fresh summer morning pose, small wave, refreshing smile, light movement, breezy greeting",
+      "content": "small wave, relaxed upright posture, light greeting motion",
       "category": "ポーズ"
     },
     {
@@ -838,7 +837,7 @@
     {
       "id": "morning_pose_window_kafka",
       "title": "ポーズ: 窓際",
-      "content": "gentle window-side morning pose, looking toward light, relaxed hand near face, calm smile, quiet breath, open but soft greeting",
+      "content": "looking toward the light, relaxed hand near the face, upright calm stance",
       "category": "ポーズ"
     },
     {
@@ -878,38 +877,10 @@
       "category": "ポーズ"
     },
     {
-      "id": "work_start_scene_kafka",
-      "title": "作業開始背景",
-      "content": "desk background, laptop, notebook, coffee or tea, neat workspace, clean window light, calm focus, small pastel accents, no clutter, no dark mood",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
-      "id": "gaming_scene_kafka",
-      "title": "ゲーム遊び背景",
-      "content": "cozy gaming room, Kafka sitting on a sofa or gaming chair, fashionable comfy homewear with a knit hoodie or soft sweater, controller in hand, monitor glow, snacks or drink nearby, pastel blue and lavender accents, tidy and playful, no clutter",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "background_splendor_table",
       "title": "背景: 宝石の煌き対戦",
       "content": "bright tabletop board game background, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
       "category": "背景"
-    },
-    {
-      "id": "splendor_game_scene_kafka",
-      "title": "背景: 宝石の煌き対戦 (deprecated)",
-      "content": "bright tabletop board game background, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
-      "id": "morning_scene_window_kafka",
-      "title": "背景: 窓際の朝 (deprecated)",
-      "content": "bright window-side morning background, soft curtain light, sky outside, pale highlights, gentle indoor air, open but quiet, clean white space",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "background_morning_coffee",
@@ -918,24 +889,10 @@
       "category": "背景"
     },
     {
-      "id": "morning_scene_coffee_kafka",
-      "title": "背景: 朝コーヒー (deprecated)",
-      "content": "cozy breakfast desk background, mug steam, notebook, small snack, window light, wake-up mood, neat and warm, clean composition",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "background_morning_commute",
       "title": "背景: 出発前の朝",
       "content": "entryway or front-door morning background, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
       "category": "背景"
-    },
-    {
-      "id": "morning_scene_commute_kafka",
-      "title": "背景: 出発前の朝 (deprecated)",
-      "content": "entryway or front-door morning background, coat rack, bag, shoes, outside light, departure mood, practical and clean, no clutter",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "background_morning_rain",
@@ -944,24 +901,10 @@
       "category": "背景"
     },
     {
-      "id": "morning_scene_rain_kafka",
-      "title": "背景: 雨の日の朝 (deprecated)",
-      "content": "rainy morning window background, water droplets on glass, umbrella by the door, muted sky, soft indoor warmth, calm and reflective",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "background_morning_sleepy",
       "title": "背景: 寝起きの朝",
       "content": "sleepy bedroom morning background, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
       "category": "背景"
-    },
-    {
-      "id": "morning_scene_sleepy_kafka",
-      "title": "背景: 寝起きの朝 (deprecated)",
-      "content": "sleepy bedroom morning background, bed, blanket, soft lamp or curtain light, cozy rest feeling, very light clutter, gentle wake-up atmosphere",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "morning_scene_dog_kafka",
@@ -988,13 +931,6 @@
       "category": "背景"
     },
     {
-      "id": "goodnight_scene_kafka",
-      "title": "背景: おやすみ (deprecated)",
-      "content": "night room background, desk lamp, closed laptop, soft blanket, small moon accent, quiet warm light, sleepy but calm, no dark horror mood",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "poker_dealer_style_kafka",
       "title": "衣装: ポーカー",
       "content": "black vest, white shirt, slim red tie, gold trim, cufflinks, elegant gloves, casino dealer vibe, polished and cool, neat hair, confident gaze, warm low light",
@@ -1005,13 +941,6 @@
       "title": "背景: ポーカーテーブル",
       "content": "green felt poker table, playing cards, chips, warm casino lighting, shallow depth, elegant and cinematic, no clutter, strong tabletop focus",
       "category": "背景"
-    },
-    {
-      "id": "poker_table_scene_kafka",
-      "title": "背景: ポーカーテーブル (deprecated)",
-      "content": "green felt poker table, playing cards, chips, warm casino lighting, shallow depth, elegant and cinematic, no clutter, strong tabletop focus",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "poker_status_text_pack",
@@ -1030,13 +959,6 @@
       "title": "背景: ファンタジーカード盤面",
       "content": "fantasy card game board, glowing mana-like gem, hero portrait frame, lane or arena feeling, warm tavern or magical room, readable UI-like composition, bright magical colors, not exact game copy",
       "category": "背景"
-    },
-    {
-      "id": "fantasy_card_game_scene_kafka",
-      "title": "背景: ファンタジーカード盤面 (deprecated)",
-      "content": "fantasy card game board, glowing mana-like gem, hero portrait frame, lane or arena feeling, warm tavern or magical room, readable UI-like composition, bright magical colors, not exact game copy",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "card_game_status_text_pack",
@@ -1073,13 +995,6 @@
       "title": "背景: JoinWars",
       "content": "VRChat card game world, glowing card frame, deck-building table, turn-based board, join battle mood, bright cyan and violet accents, playful competition, no clutter, no exact logo reproduction",
       "category": "背景"
-    },
-    {
-      "id": "joinwars_scene_kafka",
-      "title": "背景: JoinWars (deprecated)",
-      "content": "VRChat card game world, glowing card frame, deck-building table, turn-based board, join battle mood, bright cyan and violet accents, playful competition, no clutter, no exact logo reproduction",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "joinwars_style_kafka",
@@ -1124,37 +1039,16 @@
       "category": "背景"
     },
     {
-      "id": "reading_scene_general_kafka",
-      "title": "背景: 読書 (deprecated)",
-      "content": "quiet reading background, book, tea or coffee, window light, soft blanket, gentle chair, calm room, clean pastel atmosphere, no clutter, soft focus",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "background_reading_seaside",
       "title": "背景: 海辺の読書",
       "content": "seaside reading background, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
       "category": "背景"
     },
     {
-      "id": "reading_scene_seaside_kafka",
-      "title": "背景: 海辺の読書 (deprecated)",
-      "content": "seaside reading background, ocean horizon, soft wind, bright sky, light sand or balcony, novel in hand, calm summer-like breeze, gentle blue and white palette, quiet and reflective",
-      "category": "背景",
-      "deprecated": true
-    },
-    {
       "id": "background_reading_anne",
       "title": "背景: 赤毛のアン読書",
       "content": "storybook reading background, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
       "category": "背景"
-    },
-    {
-      "id": "reading_scene_anne_kafka",
-      "title": "背景: 赤毛のアン読書 (deprecated)",
-      "content": "storybook reading background, countryside light, flowers, teacup, cozy room, gentle green and cream palette, homey and warm, classic novel mood, soft afternoon atmosphere",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "reading_pose_kafka",
@@ -1173,13 +1067,6 @@
       "title": "衣装: コスプレ",
       "content": "event-ready cosplay outfit, polished costume, clean seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance",
       "category": "衣装"
-    },
-    {
-      "id": "cosplay_scene_kafka",
-      "title": "背景: コスプレ撮影 (deprecated)",
-      "content": "cosplay photo background, convention hall or studio backdrop, bright softbox light, simple background, photographer-friendly composition, pose centered, social media ready, no clutter",
-      "category": "背景",
-      "deprecated": true
     },
     {
       "id": "cosplay_status_text_pack",
@@ -1208,7 +1095,7 @@
     {
       "id": "negative_common",
       "title": "共通ネガティブ",
-      "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, different outfit, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "ネガティブ"
     },
     {
@@ -1313,7 +1200,6 @@
       "content": "simple cute drawing style, flat colors, thick clean lineart, intentionally low detail",
       "category": "描画"
     },
-
     {
       "id": "kansai_hanami",
       "title": "関西のお花見",
@@ -1344,7 +1230,6 @@
       "content": "bright airy summer cafe terrace, white table, large open windows, blue sky, white and blue flowers",
       "category": "背景"
     },
-
     {
       "id": "tax_truth_layout",
       "title": "税の真実レイアウト",
@@ -1406,53 +1291,10 @@
       ]
     },
     {
-      "id": "character_sheet_shafuka",
-      "title": "形式: しゃふかデザインシート",
-      "content": "Ultra high resolution character design sheet, clean white background, Japanese anime style, simple and cute illustration, low detail, flat coloring, minimal shading, clean lineart, 4k\n\nA cute jirai-kei gothic girl character design system sheet\n\nCharacter:\npetite teenage girl, soft and slightly chibi proportions, simple and approachable design\n\nHair:\nshort bob haircut with straight blunt bangs\nblack hair with soft pink inner color and a few pink streaks\nslightly rounded silhouette, simplified strands\n\nEyes:\nheterochromia, one eye light green, the other pinkish purple\nlarge simple anime eyes, minimal highlights\nsoft blush, small cute mouth\n\nHeadwear:\nblack baseball cap with a small ribbon on the front\nvery simple design, minimal detail\n\nOutfit:\nlight gray oversized cropped jacket\nblack fluffy fur collar\nvery simplified folds\nsleeves have simple lace-up ribbon design\n\nTop:\nblack inner top with a simple ribbon on chest\n\nSkirt:\nblack pleated skirt, simplified shape\nminimal lace detail\n\nGarter:\nsimple garter straps attached to skirt\n\nLegwear:\nblack thigh-high socks, flat color\n\nShoes:\nplatform shoes, rounded shape\nsimple ribbon decoration\nminimal detail\n\nAccessories:\nblack choker with a ring\nsimple waist chain\nsmall paw-shaped hair clip\n\nStyle:\nvery simple, slightly rough and cute drawing style\nintentionally low detail\nflat colors with almost no gradient\nthick and clean lineart\npop and friendly visual tone\n\nComposition:\ninclude front view, side view, back view\ninclude 2–3 simple facial expressions\ninclude small chibi version\n\nColor palette:\nblack, gray, soft pink, muted green\n\nno text, no watermark",
-      "category": "形式・レイアウト",
-      "artifacts": [
-        {
-          "path": "artifacts/071_shafuka_character_sheet.png",
-          "title": "形式: しゃふかデザインシート"
-        }
-      ]
-    },
-    {
-      "id": "character_sheet_miyu",
-      "title": "形式: みゆデザインシート",
-      "content": "masterpiece, best quality, ultra detailed, dreamy pastel anime illustration, bright airy summer atmosphere, soft cinematic bloom, delicate lighting, extremely soft shading, white and sky-blue color palette, high-key exposure, glossy highlights, shallow depth of field, bokeh flowers in foreground, elegant cafe terrace background, emotional healing mood, ultra clean rendering, polished commercial anime art style\n\ncute anime girl, petite build, sitting at a white round cafe table outdoors, upper body slightly leaning forward, relaxed and cheerful pose, eyes closed in a happy smile, small open mouth smile, soft blush on cheeks, right hand gently touching cheek, left arm resting naturally, calm and sweet expression\n\nvery light lavender-blue hair, silky semi-transparent hair texture, fluffy layered bangs covering eyebrows, long side ponytail gathered low on the right side, soft curled strands, translucent pastel highlights, multiple tiny pale pink ribbon hairpins scattered through bangs and side hair, two glossy dark navy heart-shaped hair clips on bangs\n\nlarge soft anime face, tiny nose, smooth pale skin, subtle pink blush gradient, thin eyelashes, glossy lips\n\nwhite sleeveless summer dress with thin straps, blue floral porcelain-style pattern, frilled shoulder straps, fitted bodice, tiny blue ribbon at waist, lightweight cotton fabric, soft folds, elegant feminine summer fashion\n\nsilver necklace, silver bracelet, delicate accessories, subtle sparkle highlights\n\nbright blue cream soda float on table, transparent curved glass, blue gradient liquid, ice cubes visible, scoop of vanilla ice cream on top, red cherry garnish, white straw, realistic glass reflections, coaster under glass\n\nwhite decorative metal cafe chair, white terrace interior, large open windows, vivid blue sky with fluffy white clouds outside, soft white flowers and blue flowers surrounding foreground and background, bright summer sunlight pouring in\n\ncomposition focused on character centered slightly left, drink placed lower right foreground, portrait orientation, chest-to-thigh framing, slight downward camera angle, intimate composition\n\nextremely soft ambient lighting, bloom around edges, atmospheric perspective, pastel haze, glowing rim light on hair and shoulders, gentle highlights on skin, dreamy watercolor-like atmosphere while retaining sharp facial rendering\n\nno text, no watermark, no logo, no extra people, no dark shadows, no harsh contrast, no messy background, no distorted anatomy, no extra fingers, no low detail, no AI artifacts, no bad hands, no duplicate accessories",
-      "category": "形式・レイアウト",
-      "artifacts": [
-        {
-          "path": "artifacts/072_miyu_character_sheet.png",
-          "title": "形式: みゆデザインシート"
-        }
-      ]
-    },
-    {
-      "id": "character_shafuka",
-      "title": "キャラクター: しゃふか",
-      "content": "petite jirai-kei gothic girl, short bob haircut with straight blunt bangs, black hair with soft pink inner color and pink streaks, heterochromia with light green and pink-purple eyes, black baseball cap with a ribbon, light gray oversized cropped jacket with black fluffy fur collar, black inner top with a ribbon, black pleated skirt, simple garter straps, black thigh-high socks, platform shoes, black choker, simple waist chain, small paw-shaped hair clip, simple cute drawing style, flat colors, thick clean lineart, intentionally low detail",
-      "category": "キャラクター"
-    },
-    {
-      "id": "character_miyu",
-      "title": "キャラクター: みゆ",
-      "content": "cute anime girl with very light lavender-blue hair, silky semi-transparent texture, fluffy layered bangs, long side ponytail gathered low on the right side, soft curled strands, tiny pale pink ribbon hairpins, glossy dark navy heart-shaped hair clips, large soft face, tiny nose, smooth pale skin, subtle pink blush, white sleeveless summer dress with thin straps and blue floral pattern, frilled shoulder straps, tiny blue waist ribbon, silver necklace and bracelet, bright airy summer cafe mood",
-      "category": "キャラクター"
-    },
-    {
       "id": "vacation_dining_trio_composition",
       "title": "構図: 3人バカンス食事",
       "content": "three-person vacation dining composition, Kafka, Shafuka, and Miyu sharing a bright meal together, multiple plates and drinks on the table, generous food-forward composition, clear separation between the three characters, each with a distinct pose",
       "category": "構図"
-    },
-    {
-      "id": "vacation_dining_trio_scene",
-      "title": "構図: 3人バカンス食事 (deprecated)",
-      "content": "three-person vacation dining background, Kafka, Shafuka, and Miyu sharing a bright meal together, ecstatic and delighted expressions, lively laughter, relaxed holiday mood, eating a lot, multiple plates and drinks on the table, sunny vacation terrace or cafe, generous food-forward composition, joyful and indulgent atmosphere, clear separation between the three characters, each with a distinct pose, clean readable arrangement, bright summer light, celebratory and satisfying feel",
-      "category": "シーン・構図",
-      "deprecated": true
     },
     {
       "id": "morning_pose_stretch_kafka",
@@ -1487,7 +1329,7 @@
     {
       "id": "morning_pose_curtains_kafka",
       "title": "カーテンを開ける",
-      "content": "opening curtains, hands on white sheer fabric, bright sunlight flooding the room, looking out the window with a hopeful expression, refreshing morning light, airy and bright",
+      "content": "hands on the curtains, upright posture, opening motion",
       "category": "ポーズ"
     },
     {
@@ -1529,19 +1371,19 @@
     {
       "id": "master_style_expression",
       "title": "マスタースタイル (expression)",
-      "content": "clean surfaces",
+      "content": "surface clarity",
       "category": "expression"
     },
     {
       "id": "character_kafka_style",
       "title": "キャラクター: KAFKA (style)",
-      "content": "female anime character",
+      "content": "vtuber character presentation language",
       "category": "style"
     },
     {
       "id": "character_kafka_lighting",
       "title": "キャラクター: KAFKA (lighting)",
-      "content": "long light-blue hair with lavender gradient",
+      "content": "soft rim light, lavender edge glow, gentle contrast",
       "category": "lighting"
     },
     {
@@ -1553,7 +1395,7 @@
     {
       "id": "character_kafka_mood",
       "title": "キャラクター: KAFKA (mood)",
-      "content": "quiet emotional warmth",
+      "content": "calm approachable presence",
       "category": "mood"
     },
     {
@@ -1565,20 +1407,14 @@
     {
       "id": "outfit_kafka_style",
       "title": "衣装: KAFKA基本 (style)",
-      "content": "navy sailor-style inner top",
+      "content": "sleek sailor-like silhouette, futuristic and tidy",
       "category": "style"
     },
     {
       "id": "outfit_kafka_lighting",
       "title": "衣装: KAFKA基本 (lighting)",
-      "content": "light blue and navy ribbon",
+      "content": "accent ribbon catches soft light",
       "category": "lighting"
-    },
-    {
-      "id": "character_sheet_kafka_quality",
-      "title": "形式: Kafkaデザインシート (quality)",
-      "content": "masterpiece, best quality, ultra detailed, ultra high resolution, low quality",
-      "category": "quality"
     },
     {
       "id": "character_sheet_kafka_style",
@@ -1593,46 +1429,52 @@
       "category": "composition"
     },
     {
-      "id": "character_sheet_kafka_background",
-      "title": "形式: Kafkaデザインシート (background)",
-      "content": "clean white background, soft futuristic cityscape, night city lights, dreamy sky, cozy room, pastel fantasy scenery",
-      "category": "background"
+      "id": "bake_off_japan_news_layout",
+      "title": "形式: ベイクオフ・ジャパン案内",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one format overview panel, one season details panel, one judges panel, one authentic style panel, one final takeaway panel with where to watch and note on Japanese week, white gutters, rounded panel borders, clear mobile-readable layout, soft baking motifs, calm newsroom rhythm",
+      "category": "形式・レイアウト"
     },
     {
-      "id": "character_sheet_kafka_mood",
-      "title": "形式: Kafkaデザインシート (mood)",
-      "content": "soft emotional atmosphere, soft emotional presence, cat-like gentle atmosphere, high emotional readability, moodboard/environment section, soft emotional warmth, gentle futuristic atmosphere",
-      "category": "mood"
+      "id": "bake_off_japan_news_panels",
+      "title": "文言: ベイクオフ・ジャパン紹介",
+      "content": "panel 1: Kafka smiling and wearing an apron, speech bubble saying 「アマプラ限定！ベイクオフ・ジャパン知ってる？」, headline typography saying 「Bake Off Japan 徹底紹介」\npanel 2: format panel with icons of cakes and bread, text blocks showing 「10名のアマチュアが競う」 「Signature (自慢の) / Technical (課題の) / Showstopper (渾身の) の3つの挑戦」\npanel 3: season 1 details panel, text showing 「全8エピソード」 「2022年4月 Amazon Prime Video 独占配信」\npanel 4: judges panel with a professional chef motif, text showing 「鎧塚俊彦氏らプロのパティシエが審査」 「温かい雰囲気で家庭的なお菓子作りを応援」\npanel 5: authentic style panel with seasonal ingredient motifs, text showing 「四季折々の素材と美しいプレゼンテーション」 「日本独自の製法とこだわりが凝縮」\npanel 6: closing panel with Kafka making a gentle nod, text blocks showing 「Amazon Prime Video で配信中！」 「本場英国版の『日本ウィーク』とは一味違う本物」",
+      "category": "ニュース・セリフ"
     },
     {
-      "id": "character_sheet_kafka_lighting",
-      "title": "形式: Kafkaデザインシート (lighting)",
-      "content": "pale glowing skin, soft reflective highlights, light blue and navy ribbon, soft holographic glow, light navy, gentle atmospheric lighting, harsh shadows, dirty shadows",
-      "category": "lighting"
+      "id": "midnight_rose_news_layout",
+      "title": "形式: ミッドナイト・ローズ案内",
+      "content": "multi-panel romance documentary infographic, elegant dark theme with rose motifs, Kafka narrating the concept of observing hearts, episode list, program features, participants overview, high-quality anime style, professional news layout",
+      "category": "形式・レイアウト"
     },
     {
-      "id": "character_sheet_kafka_expression",
-      "title": "形式: Kafkaデザインシート (expression)",
-      "content": "expressive anime face, small smile, facial expression sheet grid, multiple anime expressions, neutral face, happy smile, wink, surprised, embarrassed, thinking, sleepy, laughing, all expressions maintain exact same face identity, malformed face, flat expressions, emotionless face",
-      "category": "expression"
+      "id": "midnight_rose_news_panels",
+      "title": "文言: ミッドナイト・ローズ紹介",
+      "content": "panel 1: title 「ミッドナイト・ローズ・セレクション 〜恋と心の観測ドキュメント〜」, subtitle 「心が動く瞬間を、見届ける。」\npanel 2: features 「本音が交差する、真剣な感情の記録」「選ばれるのは、条件ではなく未来を共にしたい人」\npanel 3: format 「女性たちが集う」「心が動く時間」「最後の選択」\npanel 4: episode list EP1 to EP10, from Encounter to Final Decision\npanel 5: participants 「参加する女性たち、それぞれの想いを胸に、旅が始まる――」",
+      "category": "ニュース・セリフ"
     },
     {
-      "id": "character_sheet_kafka_outfit",
-      "title": "形式: Kafkaデザインシート (outfit)",
-      "content": "OUTFIT DESIGN:, oversized white futuristic coat, soft sailor-style inner outfit, short pleated skirt, pastel techwear aesthetic, white socks, large chunky futuristic sneakers, coat, sailor outfit, inconsistent outfit",
-      "category": "outfit"
+      "id": "midnight_rose_lounge_layout",
+      "title": "形式: ミッドナイト・ローズ・ラウンジ案内",
+      "content": "VRChat world introduction layout, interior shots of the lounge, night view, relax space features, access info (PC/Quest), social media links, warm emotional atmosphere",
+      "category": "形式・レイアウト"
     },
     {
-      "id": "character_sheet_kafka_season",
-      "title": "形式: Kafkaデザインシート (season)",
-      "content": "small decorative flowers and branches attached to cap",
-      "category": "season"
+      "id": "midnight_rose_lounge_panels",
+      "title": "文言: ミッドナイト・ローズ・ラウンジ紹介",
+      "content": "title 「Midnight Rose Lounge in VRChat」, concept 「心を観測する、静かな深夜のラウンジ」, spots 「バルコニー」「暖炉ラウンジ」「ルーフトップバー」「書斎コーナー」, features 「静かに過ごせる大人の雰囲気」「夜景・雨音・間接照明のラックス空間」",
+      "category": "ニュース・セリフ"
     },
     {
-      "id": "character_sheet_kafka_pose",
-      "title": "形式: Kafkaデザインシート (pose)",
-      "content": "character reaching hand toward viewer, friendly welcoming pose, pose variation panel, multiple chibi/full-body poses, sitting pose, standing pose, cute energetic gesture language",
-      "category": "pose"
+      "id": "bachelor_japan_news_layout",
+      "title": "形式: バチェラー・ジャパン案内",
+      "content": "The Bachelor Japan style news layout, gold and rose theme, 1 Bachelor and 25 women, rose ceremony explanation, date types, episode flow, streaming availability on Amazon Prime Video",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "bachelor_japan_news_panels",
+      "title": "文言: バチェラー・ジャパン紹介",
+      "content": "title 「The Bachelor Japan」, intro 「1人の独身男性“バチェラー”を巡り、25名の女性たちが真実の愛を本気で探す。」, features 「本気の恋愛を求める女性たちが集結」「最後に選ばれるのは、たった一人の運命の人」, flow 「カクテルパーティー」「デート」「ローズセレモニー」",
+      "category": "ニュース・セリフ"
     }
   ],
   "templates": [
@@ -1643,7 +1485,8 @@
         "master_style",
         "character_kafka",
         "kafka_identity_lock",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "announcement_text_pack",
         "text_style_jp",
         "effects_pack",
@@ -2081,6 +1924,22 @@
         {
           "path": "artifacts/104_tweetsdb_logic_map.png",
           "title": "Kafka ツイート根拠プロンプト一覧"
+        },
+        {
+          "path": "artifacts/169_096_art_direction_desk_review.png",
+          "title": "Kafka ツイート根拠プロンプト一覧"
+        },
+        {
+          "path": "artifacts/172_105_tweetsdb_idea_map.png",
+          "title": "Kafka ツイート根拠プロンプト一覧"
+        },
+        {
+          "path": "artifacts/173_106_tweetsdb_generate_map.png",
+          "title": "Kafka ツイート根拠プロンプト一覧"
+        },
+        {
+          "path": "artifacts/174_107_tweetsdb_idea_concrete_map.png",
+          "title": "Kafka ツイート根拠プロンプト一覧"
         }
       ]
     },
@@ -2196,454 +2055,6 @@
       ]
     },
     {
-      "id": "boardgame_002_fort",
-      "title": "ボードゲームシリーズ: 002 フォート",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_casual",
-        "bg_scene_casual",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "フォートの秘密基地づくりを、子どもっぽいにぎやかさで見せる",
-      "summary": "ピザ、玩具、カードの楽しい散らばりで、秘密基地のわくわく感を出す。"
-    },
-    {
-      "id": "boardgame_004_little_town_builders",
-      "title": "ボードゲームシリーズ: 004 リトルタウンビルダーズ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_casual",
-        "bg_scene_casual",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "リトルタウンビルダーズの街づくりを、素朴で読みやすい投稿にする",
-      "summary": "建物タイルと木材・小麦の資源で、小さな街の広がりを見せる。"
-    },
-    {
-      "id": "boardgame_005_tornado_splash",
-      "title": "ボードゲームシリーズ: 005 トーネードスプラッシュ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "トーネードスプラッシュの回転干渉を、爽やかな物理アクションで見せる",
-      "summary": "竜巻コマ、飛び散るチップ、水色の清涼感で、狙いを定める瞬間を出す。"
-    },
-    {
-      "id": "boardgame_006_fearless",
-      "title": "ボードゲームシリーズ: 006 フィアーレス",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "フィアーレスの合計0狙いを、静かな心理戦で見せる",
-      "summary": "大きな数字カードと相手をうかがう表情で、駆け引きの静けさを出す。"
-    },
-    {
-      "id": "boardgame_007_slide",
-      "title": "ボードゲームシリーズ: 007 スライド",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_sporty",
-        "bg_scene_sporty",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "スライドの並べ替えパズルを、手元の動きで見せる",
-      "summary": "カードを横にずらす手元とグリッド感を出して、操作の気持ちよさを見せる。"
-    },
-    {
-      "id": "boardgame_008_eleven",
-      "title": "ボードゲームシリーズ: 008 イレブン",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_sporty",
-        "bg_scene_sporty",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "イレブンの連番ゴーアウトを、スポーティーな勢いで見せる",
-      "summary": "サッカー風の躍動感と数字カードの流れで、スピード感を出す。"
-    },
-    {
-      "id": "boardgame_009_beasty_bar",
-      "title": "ボードゲームシリーズ: 009 ビースティーバー",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_casual",
-        "bg_scene_casual",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ビースティーバーの行列ゲームを、動物の個性が分かる投稿にする",
-      "summary": "バーの入り口、動物カード、ネオンっぽさで、行列の賑やかさを出す。"
-    },
-    {
-      "id": "boardgame_010_bet_on",
-      "title": "ボードゲームシリーズ: 010 ベットオン",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ベットオンの予想と賭けを、カジノっぽいワクワクで見せる",
-      "summary": "ベッティングチップと予想ボードを積み上げて、パーティー感を出す。"
-    },
-    {
-      "id": "boardgame_012_mind_space",
-      "title": "ボードゲームシリーズ: 012 マインドスペース",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "マインドスペースの抽象パズルを、未来的な幾何学で見せる",
-      "summary": "浮遊する図形と明るい色面を中心に置いて、思考の空間を見せる。"
-    },
-    {
-      "id": "boardgame_013_gomojin",
-      "title": "ボードゲームシリーズ: 013 ゴモジン",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_intellectual",
-        "bg_scene_wordplay",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ゴモジンの漢字2字+カナ3字ルールを、文字の楽しさで見せる",
-      "summary": "ホワイトボード、文字タイル、ルールの字数感を分かりやすくまとめる。"
-    },
-    {
-      "id": "boardgame_014_strike",
-      "title": "ボードゲームシリーズ: 014 ストライク",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ストライクのダイス投げを、アリーナの迫力で見せる",
-      "summary": "すり鉢状の場と散らばるダイスで、投げ込む瞬間の勢いを出す。"
-    },
-    {
-      "id": "boardgame_015_nana",
-      "title": "ボードゲームシリーズ: 015 ナナ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_sporty",
-        "bg_scene_sporty",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ナナの記憶ゲームを、ポップで素直な表情で見せる",
-      "summary": "同じ数字カードを3枚そろえる瞬間を、明るく分かりやすく切り取る。"
-    },
-    {
-      "id": "boardgame_016_ra",
-      "title": "ボードゲームシリーズ: 016 ラー",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_retro",
-        "bg_scene_retro",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ラーの古代エジプト競りを、黄金の遺産感で見せる",
-      "summary": "ラー像、太陽チップ、文明タイルで、古代感と競りの緊張感を出す。"
-    },
-    {
-      "id": "boardgame_017_wie_verhext",
-      "title": "ボードゲームシリーズ: 017 魔法にかかったみたい",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_magic_sci",
-        "bg_scene_magic_sci",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "魔法にかかったみたいの薬草集めを、魔女っぽく見せる",
-      "summary": "大釜、材料トークン、静かな魔法感を入れて、調合の流れを見せる。"
-    },
-    {
-      "id": "boardgame_018_project_l",
-      "title": "ボードゲームシリーズ: 018 プロジェクトL",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_sporty",
-        "bg_scene_sporty",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "プロジェクトLのポリオミノパズルを、透明感ある配置で見せる",
-      "summary": "カラフルなピースと盤面のはまり方を強調して、解ける快感を出す。"
-    },
-    {
-      "id": "boardgame_019_teiji_taisha",
-      "title": "ボードゲームシリーズ: 019 定時退社",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_nightoffice",
-        "background_night_office",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "定時退社の残業押し付け合いを、オフィスの夜感で見せる",
-      "summary": "時計、書類、PCで、早く帰りたい空気を分かりやすく出す。"
-    },
-    {
-      "id": "boardgame_020_sugoroku_kabuuru",
-      "title": "ボードゲームシリーズ: 020 すごろくかぶーる",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_nightoffice",
-        "background_night_office",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "すごろくかぶーるの被らせないクイズ感を、考え込む表情で見せる",
-      "summary": "すごろく盤と解答ボードをシンプルに並べて、答えを考える緊張感を出す。"
-    },
-    {
-      "id": "boardgame_021_nusutto_cat",
-      "title": "ボードゲームシリーズ: 021 ぬすっとキャット",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_nightoffice",
-        "background_night_office",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ぬすっとキャットの泥棒猫感を、夜の街でかわいく見せる",
-      "summary": "猫耳、宝石袋、夜景で、かわいくも怪しい盗みの空気を出す。"
-    },
-    {
-      "id": "boardgame_022a_national_economy",
-      "title": "ボードゲームシリーズ: 022a ナショナルエコノミー",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_industrial",
-        "bg_scene_industrial",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ナショナルエコノミーの循環経済と事務的な手触りを、きびきびした投稿にする",
-      "summary": "建物カードとお金の流れ、家計の循環を見せて、閉じた経済の感じを出す。"
-    },
-    {
-      "id": "boardgame_022b_clank",
-      "title": "ボードゲームシリーズ: 022b クランク！",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_dungeon",
-        "bg_scene_dungeon",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "クランク！の潜入と脱出を、洞窟と盗賊の雰囲気で見せる",
-      "summary": "ダンジョン、宝箱、ドラゴン袋、キューブを分かりやすく並べる。"
-    },
-    {
-      "id": "boardgame_023_my_majority",
-      "title": "ボードゲームシリーズ: 023 マイマジョ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "マイマジョの多数派/少数派心理を、不敵な投票感で見せる",
-      "summary": "役割カード、投票チップ、読み合いを前面に出して、逆転の空気を出す。"
-    },
-    {
-      "id": "boardgame_024_master_word",
-      "title": "ボードゲームシリーズ: 024 マスターワード",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_intellectual",
-        "bg_scene_wordplay",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "マスターワードの推理を、落ち着いた知的表情で見せる",
-      "summary": "ヒントカードと考え込む視線で、協力して言葉を探す感じを出す。"
-    },
-    {
-      "id": "boardgame_025_tindahan",
-      "title": "ボードゲームシリーズ: 025 ティンダハン",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_retro",
-        "bg_scene_retro",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ティンダハンの南国市場を、鮮やかな果物と屋台で見せる",
-      "summary": "カラフルな市場、果物、屋台のにぎやかさを前面に出す。"
-    },
-    {
-      "id": "boardgame_026_trickmeister",
-      "title": "ボードゲームシリーズ: 026 トリックマイスター",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_varied",
-        "bg_scene_varied",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "トリックマイスターの変わるルールを、マジシャン風に見せる",
-      "summary": "ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。"
-    },
-    {
-      "id": "boardgame_027_chiryaku_akuryaku",
-      "title": "ボードゲームシリーズ: 027 知略悪略",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_intellectual",
-        "bg_scene_wordplay",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "知略悪略の心理戦を、影のある不敵さで見せる",
-      "summary": "読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。"
-    },
-    {
-      "id": "boardgame_028_lost_code",
-      "title": "ボードゲームシリーズ: 028 ロストコード",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_dungeon",
-        "bg_scene_dungeon",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "ロストコードの推理と数字のズレを、未来的な計算感で見せる",
-      "summary": "数字タイル、隠し情報、考え込む視線で推理の手触りを出す。"
-    },
-    {
-      "id": "boardgame_029_charge_spark",
-      "title": "ボードゲームシリーズ: 029 チャージスパーク",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_magic_sci",
-        "bg_scene_magic_sci",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "チャージスパークのロボ対戦を、電撃と機械感で見せる",
-      "summary": "ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。"
-    },
-    {
-      "id": "boardgame_030_come_sail_away",
-      "title": "ボードゲームシリーズ: 030 カムセイルアウェイ",
-      "blocks": [
-        "master_style",
-        "character_kafka",
-        "boardgame_social_layout",
-        "bg_outfit_marine",
-        "bg_scene_marine",
-        "clean_quality_rendering",
-        "negative_common"
-      ],
-      "kind": "social",
-      "purpose": "カムセイルアウェイの客船配置を、白いマリンルックで見せる",
-      "summary": "豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。"
-    },
-    {
       "id": "boj_press_news_card",
       "title": "日銀 植田総裁 記者会見漫画",
       "blocks": [
@@ -2655,7 +2066,8 @@
         "news_comic_layout",
         "comic_panels",
         "comic_layout",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "expressions_pack",
         "text_style_jp",
         "effects_pack",
@@ -2696,6 +2108,10 @@
         {
           "path": "artifacts/034_cardgame_post_alt.png",
           "title": "カードゲーム投稿の別実例"
+        },
+        {
+          "path": "artifacts/166_093_cardgame_token_layout.png",
+          "title": "カードゲーム投稿"
         }
       ]
     },
@@ -2737,6 +2153,90 @@
         {
           "path": "artifacts/112_kafka_visual_identity.png",
           "title": "Kafka visual identity の実例"
+        },
+        {
+          "path": "artifacts/176_12f03b7d_2287_4bf9_abb4_58783d7eee14.png",
+          "title": "キャラデザインシートの実例"
+        },
+        {
+          "path": "artifacts/178_35252367_49d9_4f4c_bf9f_42aaf06fd69e.png",
+          "title": "キャラデザインシートの別実例"
+        },
+        {
+          "path": "artifacts/179_3f6378f3_d746_4062_8639_9ede58bcc12f.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/180_42378e8d_91e6_49b2_8b29_180151dfdcf5.png",
+          "title": "キャラデザインシートの実例"
+        },
+        {
+          "path": "artifacts/181_6e70ebcd_0be8_460d_92ae_d7cc9aff789e.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/182_8bcd5bf8_1197_4e4e_ad6f_85acc4520429.png",
+          "title": "キャラデザインシートの別実例"
+        },
+        {
+          "path": "artifacts/183_chatgpt_image_2026_5_7_09_08_30.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/184_chatgpt_image_2026_5_7_09_28_48.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/185_chatgpt_image_2026_5_7_09_36_51.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/186_chatgpt_image_2026_5_7_12_01_20.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/187_chatgpt_image_2026_5_7_12_09_35.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/188_chatgpt_image_2026_5_7_12_12_49.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/189_chatgpt_image_2026_5_7_12_29_07.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/190_chatgpt_image_2026_5_7_18_17_10.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/191_chatgpt_image_2026_5_7_18_19_17.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/192_chatgpt_image_2026_5_7_18_34_25.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/193_chatgpt_image_2026_5_7_18_38_38.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/194_chatgpt_image_2026_5_7_18_41_06.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/195_chatgpt_image_2026_5_7_18_43_05.png",
+          "title": "キャラデザインシートの追加実例"
+        },
+        {
+          "path": "artifacts/196_a16dc618_c503_4c73_b8aa_ca4d5ac5a011.png",
+          "title": "キャラデザインシートの実例"
+        },
+        {
+          "path": "artifacts/199_e726d207_4ccd_437b_8a95_afa8e87fc22b.png",
+          "title": "キャラデザインシートの別実例"
         }
       ]
     },
@@ -3203,7 +2703,8 @@
         "morning_tweet_layout",
         "morning_situation_text_pack",
         "morning_tweet_text_pack",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "text_style_jp",
         "effects_pack",
         "negative_common"
@@ -3444,7 +2945,8 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "text_style_jp",
         "text_content_pack",
         "effects_pack",
@@ -3563,7 +3065,8 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "text_style_jp",
         "text_content_pack",
         "effects_pack",
@@ -3607,7 +3110,8 @@
         "master_style",
         "character_kafka",
         "comic_layout",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "background_splendor_table",
         "splendor_game_text_pack",
         "text_style_jp",
@@ -3658,7 +3162,8 @@
       "blocks": [
         "master_style",
         "character_kafka",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "stream_start_banner_viz",
         "announcement_text_pack",
         "text_style_jp",
@@ -3829,9 +3334,12 @@
       "blocks": [
         "master_style",
         "character_kafka",
-        "character_shafuka",
-        "character_miyu",
-        "vacation_dining_trio_scene",
+        "character_shafuka_core",
+        "outfit_shafuka_default",
+        "style_shafuka_flat",
+        "miyu_identity_lock",
+        "outfit_miyu_summer",
+        "vacation_dining_trio_composition",
         "effects_pack",
         "negative_common"
       ],
@@ -4003,7 +3511,8 @@
         "master_style",
         "character_kafka",
         "comic_layout",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "text_style_jp",
         "text_content_pack",
         "effects_pack",
@@ -4029,7 +3538,8 @@
         "outfit_kafka",
         "market_rally_layout",
         "market_rally_panels",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "expressions_pack",
         "text_style_jp",
         "effects_pack",
@@ -4054,7 +3564,8 @@
         "character_kafka",
         "us_concerns_layout",
         "us_concerns_panels",
-        "reaction_focus",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
         "text_style_jp",
         "rendering",
         "effects_pack",
@@ -4187,6 +3698,10 @@
         {
           "path": "artifacts/116_life_portfolio_diagnosis.png",
           "title": "Life Portfolio Overview"
+        },
+        {
+          "path": "artifacts/175_117_life_portfolio_flowchart.png",
+          "title": "Life Portfolio Overview"
         }
       ],
       "kind": "design_sheet",
@@ -4206,6 +3721,14 @@
       "artifacts": [
         {
           "path": "artifacts/095_rendering_quality_check_reference.png",
+          "title": "Rendering Quality Check"
+        },
+        {
+          "path": "artifacts/170_096_rendering_quality_check.png",
+          "title": "Rendering Quality Check"
+        },
+        {
+          "path": "artifacts/171_097_rendering_quality_check_contrast.png",
           "title": "Rendering Quality Check"
         }
       ],
@@ -4422,7 +3945,17 @@
         }
       ],
       "kind": "stamp",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_093426_180104",
@@ -4436,7 +3969,17 @@
         }
       ],
       "kind": "reaction",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_093428_144020",
@@ -4450,7 +3993,17 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_093722_155749",
@@ -4464,7 +4017,17 @@
         }
       ],
       "kind": "reaction",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_093735_282597",
@@ -4478,7 +4041,17 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_093750_437816",
@@ -4492,7 +4065,17 @@
         }
       ],
       "kind": "social",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "gen_20260501_094000_869940",
@@ -4506,7 +4089,17 @@
         }
       ],
       "kind": "stamp",
-      "blocks": []
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "outfit_kafka",
+        "sticker_sheet_layout",
+        "expressions_pack",
+        "text_style_jp",
+        "text_content_pack",
+        "effects_pack",
+        "negative_common"
+      ]
     },
     {
       "id": "artifact_ai_networking_story_20260506",
@@ -4524,6 +4117,1184 @@
         }
       ],
       "created_at": "2026-05-06T19:24:00Z"
+    },
+    {
+      "id": "bake_off_japan_news",
+      "created_at": "2026-05-07T11:48:00+09:00",
+      "title": "ベイクオフ・ジャパン紹介ニュース",
+      "blocks": [
+        "source_research",
+        "master_style",
+        "character_kafka",
+        "bake_off_japan_news_layout",
+        "bake_off_japan_news_panels",
+        "framing_reaction_focus",
+        "pose_reaction_focus",
+        "text_style_jp",
+        "rendering",
+        "effects_pack",
+        "negative_common"
+      ],
+      "kind": "news",
+      "purpose": "ベイクオフ・ジャパン（アマプラ独占）の魅力を Kafka が 6コマ漫画で分かりやすく紹介する",
+      "summary": "番組の基本形式、ジャッジ、日本ならではの魅力、そして視聴方法をまとめたニュースグラフィック。",
+      "artifacts": [
+        {
+          "path": "artifacts/136_bake_off_japan_news.png",
+          "title": "ベイクオフ・ジャパン紹介ニュース"
+        },
+        {
+          "path": "artifacts/198_def62011_c07c_4f5e_8e96_4a050a056a98.png",
+          "title": "ベイクオフ・ジャパン紹介ニュースの実例"
+        }
+      ]
+    },
+    {
+      "id": "midnight_rose_news",
+      "created_at": "2026-05-07T12:30:00+09:00",
+      "title": "ミッドナイト・ローズ紹介ニュース",
+      "blocks": [
+        "midnight_rose_news_layout",
+        "midnight_rose_news_panels",
+        "master_style",
+        "character_kafka",
+        "negative_common"
+      ],
+      "kind": "news",
+      "purpose": "恋愛リアリティ番組「ミッドナイト・ローズ」のコンセプトと詳細を紹介する",
+      "summary": "番組の形式、エピソードの流れ、参加者の雰囲気をまとめたエレガントなインフォグラフィック。",
+      "artifacts": [
+        {
+          "path": "artifacts/137_midnight_rose_selection.png",
+          "title": "ミッドナイト・ローズ紹介 (メイン)"
+        },
+        {
+          "path": "artifacts/138_midnight_rose_selection_v2.png",
+          "title": "ミッドナイト・ローズ紹介 (詳細)"
+        }
+      ]
+    },
+    {
+      "id": "midnight_rose_lounge_info",
+      "created_at": "2026-05-07T12:30:00+09:00",
+      "title": "ミッドナイト・ローズ・ラウンジ紹介",
+      "blocks": [
+        "midnight_rose_lounge_layout",
+        "midnight_rose_lounge_panels",
+        "master_style",
+        "character_kafka",
+        "negative_common"
+      ],
+      "kind": "news",
+      "purpose": "VRChatワールド「Midnight Rose Lounge」の魅力を紹介する",
+      "summary": "ワールド内のスポット、雰囲気、利用方法をまとめたガイド。深夜の落ち着いた空気感を強調。",
+      "artifacts": [
+        {
+          "path": "artifacts/139_midnight_rose_lounge.png",
+          "title": "ミッドナイト・ローズ・ラウンジ紹介"
+        }
+      ]
+    },
+    {
+      "id": "bachelor_japan_news",
+      "created_at": "2026-05-07T12:30:00+09:00",
+      "title": "バチェラー・ジャパン紹介ニュース",
+      "blocks": [
+        "bachelor_japan_news_layout",
+        "bachelor_japan_news_panels",
+        "master_style",
+        "character_kafka",
+        "negative_common"
+      ],
+      "kind": "news",
+      "purpose": "「バチェラー・ジャパン」の基本ルールと魅力を紹介する",
+      "summary": "リアリティ番組の金字塔であるバチェラーの構成、セレモニー、配信情報をまとめたニュースグラフィック。",
+      "artifacts": [
+        {
+          "path": "artifacts/140_the_bachelor_japan.png",
+          "title": "バチェラー・ジャパン紹介"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_002_fort",
+      "title": "ボードゲームシリーズ: 002 フォート",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "フォートの秘密基地づくりを、子どもっぽいにぎやかさで見せる",
+      "summary": "ピザ、玩具、カードの楽しい散らばりで、秘密基地のわくわく感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 002 フォートのボードゲーム紹介ビジュアル。フォートの秘密基地づくりを、子どもっぽいにぎやかさで見せる ピザ、玩具、カードの楽しい散らばりで、秘密基地のわくわく感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/145_002_fort.png",
+          "title": "ボードゲームシリーズ: 002 フォート"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_004_little_town_builders",
+      "title": "ボードゲームシリーズ: 004 リトルタウンビルダーズ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "リトルタウンビルダーズの街づくりを、素朴で読みやすい投稿にする",
+      "summary": "建物タイルと木材・小麦の資源で、小さな街の広がりを見せる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 004 リトルタウンビルダーズのボードゲーム紹介ビジュアル。リトルタウンビルダーズの街づくりを、素朴で読みやすい投稿にする 建物タイルと木材・小麦の資源で、小さな街の広がりを見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/147_004_little_town_builders.png",
+          "title": "ボードゲームシリーズ: 004 リトルタウンビルダーズ"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_005_tornado_splash",
+      "title": "ボードゲームシリーズ: 005 トーネードスプラッシュ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "トーネードスプラッシュの回転干渉を、爽やかな物理アクションで見せる",
+      "summary": "竜巻コマ、飛び散るチップ、水色の清涼感で、狙いを定める瞬間を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 005 トーネードスプラッシュのボードゲーム紹介ビジュアル。トーネードスプラッシュの回転干渉を、爽やかな物理アクションで見せる 竜巻コマ、飛び散るチップ、水色の清涼感で、狙いを定める瞬間を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/148_005_tornado_splash.png",
+          "title": "ボードゲームシリーズ: 005 トーネードスプラッシュ"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_006_fearless",
+      "title": "ボードゲームシリーズ: 006 フィアーレス",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "フィアーレスの合計0狙いを、静かな心理戦で見せる",
+      "summary": "大きな数字カードと相手をうかがう表情で、駆け引きの静けさを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 006 フィアーレスのボードゲーム紹介ビジュアル。フィアーレスの合計0狙いを、静かな心理戦で見せる 大きな数字カードと相手をうかがう表情で、駆け引きの静けさを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/149_006_fearless.png",
+          "title": "ボードゲームシリーズ: 006 フィアーレス"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_007_slide",
+      "title": "ボードゲームシリーズ: 007 スライド",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "スライドの並べ替えパズルを、手元の動きで見せる",
+      "summary": "カードを横にずらす手元とグリッド感を出して、操作の気持ちよさを見せる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 007 スライドのボードゲーム紹介ビジュアル。スライドの並べ替えパズルを、手元の動きで見せる カードを横にずらす手元とグリッド感を出して、操作の気持ちよさを見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/150_007_slide.png",
+          "title": "ボードゲームシリーズ: 007 スライド"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_008_eleven",
+      "title": "ボードゲームシリーズ: 008 イレブン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "イレブンの連番ゴーアウトを、スポーティーな勢いで見せる",
+      "summary": "サッカー風の躍動感と数字カードの流れで、スピード感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 008 イレブンのボードゲーム紹介ビジュアル。イレブンの連番ゴーアウトを、スポーティーな勢いで見せる サッカー風の躍動感と数字カードの流れで、スピード感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/151_008_eleven.png",
+          "title": "ボードゲームシリーズ: 008 イレブン"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_009_beasty_bar",
+      "title": "ボードゲームシリーズ: 009 ビースティーバー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_casual",
+        "bg_scene_casual",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ビースティーバーの行列ゲームを、動物の個性が分かる投稿にする",
+      "summary": "バーの入り口、動物カード、ネオンっぽさで、行列の賑やかさを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 009 ビースティーバーのボードゲーム紹介ビジュアル。ビースティーバーの行列ゲームを、動物の個性が分かる投稿にする バーの入り口、動物カード、ネオンっぽさで、行列の賑やかさを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/152_009_beasty_bar.png",
+          "title": "ボードゲームシリーズ: 009 ビースティーバー"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_010_bet_on",
+      "title": "ボードゲームシリーズ: 010 ベットオン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ベットオンの予想と賭けを、カジノっぽいワクワクで見せる",
+      "summary": "ベッティングチップと予想ボードを積み上げて、パーティー感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 010 ベットオンのボードゲーム紹介ビジュアル。ベットオンの予想と賭けを、カジノっぽいワクワクで見せる ベッティングチップと予想ボードを積み上げて、パーティー感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/153_010_bet_on.png",
+          "title": "ボードゲームシリーズ: 010 ベットオン"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_012_mind_space",
+      "title": "ボードゲームシリーズ: 012 マインドスペース",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マインドスペースの抽象パズルを、未来的な幾何学で見せる",
+      "summary": "浮遊する図形と明るい色面を中心に置いて、思考の空間を見せる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 012 マインドスペースのボードゲーム紹介ビジュアル。マインドスペースの抽象パズルを、未来的な幾何学で見せる 浮遊する図形と明るい色面を中心に置いて、思考の空間を見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/155_012_mind_space.png",
+          "title": "ボードゲームシリーズ: 012 マインドスペース"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_013_gomojin",
+      "title": "ボードゲームシリーズ: 013 ゴモジン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ゴモジンの漢字2字+カナ3字ルールを、文字の楽しさで見せる",
+      "summary": "ホワイトボード、文字タイル、ルールの字数感を分かりやすくまとめる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 013 ゴモジンのボードゲーム紹介ビジュアル。ゴモジンの漢字2字+カナ3字ルールを、文字の楽しさで見せる ホワイトボード、文字タイル、ルールの字数感を分かりやすくまとめる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/156_013_gomojin.png",
+          "title": "ボードゲームシリーズ: 013 ゴモジン"
+        },
+        {
+          "path": "artifacts/013_gomojin.png",
+          "title": "ボードゲームシリーズ: 013 ゴモジン"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_014_strike",
+      "title": "ボードゲームシリーズ: 014 ストライク",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ストライクのダイス投げを、アリーナの迫力で見せる",
+      "summary": "すり鉢状の場と散らばるダイスで、投げ込む瞬間の勢いを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 014 ストライクのボードゲーム紹介ビジュアル。ストライクのダイス投げを、アリーナの迫力で見せる すり鉢状の場と散らばるダイスで、投げ込む瞬間の勢いを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/157_014_strike.png",
+          "title": "ボードゲームシリーズ: 014 ストライク"
+        },
+        {
+          "path": "artifacts/014_strike.png",
+          "title": "ボードゲームシリーズ: 014 ストライク"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_015_nana",
+      "title": "ボードゲームシリーズ: 015 ナナ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ナナの記憶ゲームを、ポップで素直な表情で見せる",
+      "summary": "同じ数字カードを3枚そろえる瞬間を、明るく分かりやすく切り取る。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 015 ナナのボードゲーム紹介ビジュアル。ナナの記憶ゲームを、ポップで素直な表情で見せる 同じ数字カードを3枚そろえる瞬間を、明るく分かりやすく切り取る。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/158_015_nana.png",
+          "title": "ボードゲームシリーズ: 015 ナナ"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_016_ra",
+      "title": "ボードゲームシリーズ: 016 ラー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ラーの古代エジプト競りを、黄金の遺産感で見せる",
+      "summary": "ラー像、太陽チップ、文明タイルで、古代感と競りの緊張感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 016 ラーのボードゲーム紹介ビジュアル。ラーの古代エジプト競りを、黄金の遺産感で見せる ラー像、太陽チップ、文明タイルで、古代感と競りの緊張感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/159_016_ra.png",
+          "title": "ボードゲームシリーズ: 016 ラー"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_017_wie_verhext",
+      "title": "ボードゲームシリーズ: 017 魔法にかかったみたい",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_magic_sci",
+        "bg_scene_magic_sci",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "魔法にかかったみたいの薬草集めを、魔女っぽく見せる",
+      "summary": "大釜、材料トークン、静かな魔法感を入れて、調合の流れを見せる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 017 魔法にかかったみたいのボードゲーム紹介ビジュアル。魔法にかかったみたいの薬草集めを、魔女っぽく見せる 大釜、材料トークン、静かな魔法感を入れて、調合の流れを見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/160_017_wie_verhext.png",
+          "title": "ボードゲームシリーズ: 017 魔法にかかったみたい"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_018_project_l",
+      "title": "ボードゲームシリーズ: 018 プロジェクトL",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_sporty",
+        "bg_scene_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "プロジェクトLのポリオミノパズルを、透明感ある配置で見せる",
+      "summary": "カラフルなピースと盤面のはまり方を強調して、解ける快感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 018 プロジェクトLのボードゲーム紹介ビジュアル。プロジェクトLのポリオミノパズルを、透明感ある配置で見せる カラフルなピースと盤面のはまり方を強調して、解ける快感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/161_018_project_l.png",
+          "title": "ボードゲームシリーズ: 018 プロジェクトL"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_019_teiji_taisha",
+      "title": "ボードゲームシリーズ: 019 定時退社",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "background_night_office",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "定時退社の残業押し付け合いを、オフィスの夜感で見せる",
+      "summary": "時計、書類、PCで、早く帰りたい空気を分かりやすく出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 019 定時退社のボードゲーム紹介ビジュアル。定時退社の残業押し付け合いを、オフィスの夜感で見せる 時計、書類、PCで、早く帰りたい空気を分かりやすく出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/162_019_teiji_taisha.png",
+          "title": "ボードゲームシリーズ: 019 定時退社"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_020_sugoroku_kabuuru",
+      "title": "ボードゲームシリーズ: 020 すごろくかぶーる",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "background_night_office",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "すごろくかぶーるの被らせないクイズ感を、考え込む表情で見せる",
+      "summary": "すごろく盤と解答ボードをシンプルに並べて、答えを考える緊張感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 020 すごろくかぶーるのボードゲーム紹介ビジュアル。すごろくかぶーるの被らせないクイズ感を、考え込む表情で見せる すごろく盤と解答ボードをシンプルに並べて、答えを考える緊張感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/163_020_sugoroku_kabuuru.png",
+          "title": "ボードゲームシリーズ: 020 すごろくかぶーる"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_021_nusutto_cat",
+      "title": "ボードゲームシリーズ: 021 ぬすっとキャット",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_nightoffice",
+        "background_night_office",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ぬすっとキャットの泥棒猫感を、夜の街でかわいく見せる",
+      "summary": "猫耳、宝石袋、夜景で、かわいくも怪しい盗みの空気を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 021 ぬすっとキャットのボードゲーム紹介ビジュアル。ぬすっとキャットの泥棒猫感を、夜の街でかわいく見せる 猫耳、宝石袋、夜景で、かわいくも怪しい盗みの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/021_nusutto_cat.png",
+          "title": "ボードゲームシリーズ: 021 ぬすっとキャット"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_022a_national_economy",
+      "title": "ボードゲームシリーズ: 022a ナショナルエコノミー",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_outfit_industrial",
+        "bg_scene_industrial",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ナショナルエコノミーの循環経済と事務的な手触りを、きびきびした投稿にする",
+      "summary": "建物カードとお金の流れ、家計の循環を見せて、閉じた経済の感じを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 022a ナショナルエコノミーのボードゲーム紹介ビジュアル。ナショナルエコノミーの循環経済と事務的な手触りを、きびきびした投稿にする。建物カードとお金の流れ、家計の循環を見せて、閉じた経済の感じを出す。ルールやコンポーネントの見え方が元ゲームと食い違わないようにする。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/022a_national_economy.png",
+          "title": "ボードゲームシリーズ: 022a ナショナルエコノミー"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_022b_clank",
+      "title": "ボードゲームシリーズ: 022b クランク！",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_dungeon",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "クランク！の潜入と脱出を、洞窟と盗賊の雰囲気で見せる",
+      "summary": "ダンジョン、宝箱、ドラゴン袋、キューブを分かりやすく並べる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 022b クランク！のボードゲーム紹介ビジュアル。クランク！の潜入と脱出を、洞窟と盗賊の雰囲気で見せる ダンジョン、宝箱、ドラゴン袋、キューブを分かりやすく並べる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/022b_clank.png",
+          "title": "ボードゲームシリーズ: 022b クランク！"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_023_my_majority",
+      "title": "ボードゲームシリーズ: 023 マイマジョ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マイマジョの多数派/少数派心理を、不敵な投票感で見せる",
+      "summary": "役割カード、投票チップ、読み合いを前面に出して、逆転の空気を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 023 マイマジョのボードゲーム紹介ビジュアル。マイマジョの多数派/少数派心理を、不敵な投票感で見せる 役割カード、投票チップ、読み合いを前面に出して、逆転の空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/023_my_majority.png",
+          "title": "ボードゲームシリーズ: 023 マイマジョ"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_024_master_word",
+      "title": "ボードゲームシリーズ: 024 マスターワード",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "マスターワードの推理を、落ち着いた知的表情で見せる",
+      "summary": "ヒントカードと考え込む視線で、協力して言葉を探す感じを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 024 マスターワードのボードゲーム紹介ビジュアル。マスターワードの推理を、落ち着いた知的表情で見せる ヒントカードと考え込む視線で、協力して言葉を探す感じを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/024_master_word.png",
+          "title": "ボードゲームシリーズ: 024 マスターワード"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_025_tindahan",
+      "title": "ボードゲームシリーズ: 025 ティンダハン",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ティンダハンの南国市場を、鮮やかな果物と屋台で見せる",
+      "summary": "カラフルな市場、果物、屋台のにぎやかさを前面に出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 025 ティンダハンのボードゲーム紹介ビジュアル。ティンダハンの南国市場を、鮮やかな果物と屋台で見せる。カラフルな市場、果物、屋台のにぎやかさを前面に出す。ルールやコンポーネントの見え方が元ゲームと食い違わないようにする。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/025_tindahan.png",
+          "title": "ボードゲームシリーズ: 025 ティンダハン"
+        }
+      ]
+    },
+    {
+      "id": "boardgame_026_trickmeister",
+      "title": "ボードゲームシリーズ: 026 トリックマイスター",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "トリックマイスターの変わるルールを、マジシャン風に見せる",
+      "summary": "ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 026 トリックマイスターのボードゲーム紹介ビジュアル。トリックマイスターの変わるルールを、マジシャン風に見せる ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+    },
+    {
+      "id": "boardgame_027_chiryaku_akuryaku",
+      "title": "ボードゲームシリーズ: 027 知略悪略",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_intellectual",
+        "bg_scene_wordplay",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "知略悪略の心理戦を、影のある不敵さで見せる",
+      "summary": "読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 027 知略悪略のボードゲーム紹介ビジュアル。知略悪略の心理戦を、影のある不敵さで見せる 読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+    },
+    {
+      "id": "boardgame_028_lost_code",
+      "title": "ボードゲームシリーズ: 028 ロストコード",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_dungeon",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ロストコードの推理と数字のズレを、未来的な計算感で見せる",
+      "summary": "数字タイル、隠し情報、考え込む視線で推理の手触りを出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 028 ロストコードのボードゲーム紹介ビジュアル。ロストコードの推理と数字のズレを、未来的な計算感で見せる 数字タイル、隠し情報、考え込む視線で推理の手触りを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+    },
+    {
+      "id": "boardgame_029_charge_spark",
+      "title": "ボードゲームシリーズ: 029 チャージスパーク",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_magic_sci",
+        "bg_scene_magic_sci",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "チャージスパークのロボ対戦を、電撃と機械感で見せる",
+      "summary": "ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 029 チャージスパークのボードゲーム紹介ビジュアル。チャージスパークのロボ対戦を、電撃と機械感で見せる ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+    },
+    {
+      "id": "boardgame_030_come_sail_away",
+      "title": "ボードゲームシリーズ: 030 カムセイルアウェイ",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_marine",
+        "bg_scene_marine",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "カムセイルアウェイの客船配置を、白いマリンルックで見せる",
+      "summary": "豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。",
+      "created_at": "2026-05-08T00:00:00+09:00",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 030 カムセイルアウェイのボードゲーム紹介ビジュアル。カムセイルアウェイの客船配置を、白いマリンルックで見せる 豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+    },
+    {
+      "id": "sts2_aeonglass_boss_reveal",
+      "title": "Slay the Spire 2: Aeonglass boss reveal",
+      "blocks": [
+        "layout_aeonglass_boss_reveal",
+        "character_aeonglass",
+        "background_glory_aeonglass",
+        "rendering_aeonglass_boss_reveal",
+        "negative_aeonglass_boss_reveal"
+      ],
+      "kind": "social",
+      "purpose": "Aeonglass のボスアートを記録する",
+      "summary": "ガラス質の時間歪曲ボスを、Act 3 の最終盤面っぽい構図で見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/135_aeonglass_boss_reveal.png",
+          "title": "Aeonglass boss reveal"
+        }
+      ],
+      "generated_prompt": "Create a dramatic fantasy game boss illustration of a new late-game boss called Aeonglass for a roguelike card game. The boss should feel like a crystalline, time-worn, ominous entity with sharp reflective glass facets, fractured transparent armor, and subtle aeon-like rings or temporal distortions around it. Make it look like a memorable Act 3 boss reveal: imposing silhouette, high contrast lighting, dark ruined arena, floating shards, crimson and teal magical glow, shattered stone, and an atmosphere of dread and mystery. Emphasize a readable boss shape, elegant menace, and polished AAA game key art quality. No text, no UI, no watermark, no extra characters, no collage look, no cartoon style.",
+      "created_at": "2026-05-08T00:00:00+09:00"
+    },
+    {
+      "id": "gen_20260508_152741",
+      "title": "SILENT SUMMER",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "seasonal_outfit_summer_kafka",
+        "background_reading_seaside",
+        "layout_photo_centered",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "Japanese summer lifestyle magazine cover",
+      "summary": "Seaside cafe cover with a calm summer travel mood, blue-and-white editorial typography, and a soft lifestyle magazine feel.",
+      "artifacts": [
+        {
+          "path": "artifacts/141_silent_summer.png",
+          "title": "SILENT SUMMER"
+        }
+      ],
+      "generated_prompt": "Japanese lifestyle magazine cover, premium editorial illustration, calm summer travel aesthetic, blue and white palette, seaside terrace cafe, original illustrated woman with long icy light-blue twin-tail hair fading to lavender, modest white linen shirt and light blue summer cardigan, masthead SILENT SUMMER, Japanese cover lines about seaside cafe special issue and summer travel guide",
+      "created_at": "2026-05-08T15:27:41+09:00"
+    },
+    {
+      "id": "gen_20260508_153706",
+      "title": "kafka_summer_reading_post_v2",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "reading_post_layout",
+        "background_reading_room",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "041_reading_post_generalの夏装い版",
+      "summary": "読書中の雰囲気はそのままに、衣装を涼しげな夏向けに寄せた派生版。",
+      "artifacts": [
+        {
+          "path": "artifacts/142_kafka_summer_reading_post_v2.png",
+          "title": "Kafka 読書 夏装い"
+        }
+      ],
+      "generated_prompt": "Edit 041_reading_post_general into a summer version with the same pose, composition, face, and reading mood, but with a much lighter airy outfit: thin linen blouse or summer dress, pale blue and white tones, breathable fabric, relaxed elegant loungewear, cool afternoon feeling.",
+      "created_at": "2026-05-08T15:37:06+09:00"
+    },
+    {
+      "id": "gen_20260508_155028",
+      "title": "kafka_summer_reading_post_v3",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "reading_post_layout",
+        "background_reading_room",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "041_reading_post_generalの夏装い版",
+      "summary": "読書中の雰囲気はそのままに、さらに薄手の夏服へ寄せた派生版。",
+      "artifacts": [
+        {
+          "path": "artifacts/143_kafka_summer_reading_post_v3.png",
+          "title": "Kafka 読書 夏装い v3"
+        }
+      ],
+      "generated_prompt": "Edit 041_reading_post_general into a summer version with the same pose, composition, face, and reading mood, but with a lighter airy outfit: thin linen blouse or summer dress, pale blue and white tones, breathable fabric, relaxed elegant loungewear, cool afternoon feeling.",
+      "created_at": "2026-05-08T15:50:28+09:00"
+    },
+    {
+      "id": "boardgame_001_yokohama_duel",
+      "title": "ボードゲームシリーズ: 001 ヨコハマデュエル",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "ヨコハマデュエルの港町の駆け引きを、レトロな交易感で見せる",
+      "summary": "港町の商人、資源、古い地図で、静かな競り合いの空気を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/144_001_yokohama_duel.png",
+          "title": "ボードゲームシリーズ: 001 ヨコハマデュエル"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームシリーズ: 001 ヨコハマデュエル. ヨコハマデュエルの港町の駆け引きを、レトロな交易感で見せる 港町の商人、資源、古い地図で、静かな競り合いの空気を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "boardgame_003_splendor_marvel",
+      "title": "ボードゲームシリーズ: 003 スプレンダー マーベル",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "background_splendor_table",
+        "splendor_game_text_pack",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "スプレンダー マーベルのきらめく競り感を、ヒーロー感のある卓上で見せる",
+      "summary": "宝石とヒーローカードを並べて、きらめく競りの空気を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/146_003_splendor_marvel.png",
+          "title": "ボードゲームシリーズ: 003 スプレンダー マーベル"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームシリーズ: 003 スプレンダー マーベル. スプレンダー マーベルのきらめく競り感を、ヒーロー感のある卓上で見せる 宝石とヒーローカードを並べて、きらめく競りの空気を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "boardgame_011_power_grid",
+      "title": "ボードゲームシリーズ: 011 パワーグリッド",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_outfit_industrial",
+        "bg_scene_industrial",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "パワーグリッドの送電網づくりを、工業的な卓上感で見せる",
+      "summary": "送電線、資源、都市のつながりで、運営の緊張感を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/154_011_power_grid.png",
+          "title": "ボードゲームシリーズ: 011 パワーグリッド"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームシリーズ: 011 パワーグリッド. パワーグリッドの送電網づくりを、工業的な卓上感で見せる 送電線、資源、都市のつながりで、運営の緊張感を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "indoor_plant_watering",
+      "title": "室内の植物に水やり",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "layout_social_square",
+        "morning_pose_plants_kafka",
+        "morning_home_outfit_kafka",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "室内の観葉植物に水やりする静かな朝の習慣を、やわらかな生活感で見せる",
+      "summary": "窓辺の光、水差し、葉のつやで、落ち着いた部屋の空気を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/164_091_indoor_plant_watering.png",
+          "title": "室内の植物に水やり"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: 室内の植物に水やり. 室内の観葉植物に水やりする静かな朝の習慣を、やわらかな生活感で見せる 窓辺の光、水差し、葉のつやで、落ち着いた部屋の空気を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "boardgame_party_table",
+      "title": "ボードゲームパーティー卓",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "bg_scene_casual",
+        "bg_outfit_sporty",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "みんなで囲むボードゲーム卓のにぎやかさを、家の遊び場の空気で見せる",
+      "summary": "ピザ、玩具、カード、タイルで、遊び場の楽しい散らかり感を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/165_092_boardgame_party_table.png",
+          "title": "ボードゲームパーティー卓"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームパーティー卓. みんなで囲むボードゲーム卓のにぎやかさを、家の遊び場の空気で見せる ピザ、玩具、カード、タイルで、遊び場の楽しい散らかり感を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "airport_orchard_travel_scene",
+      "title": "空港の森の旅景",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "空港の森の中を歩く旅の場面を、静かな休息感で見せる",
+      "summary": "ガラス屋根、樹木、水辺、旅人で、移動中の休息感を出す。",
+      "artifacts": [
+        {
+          "path": "artifacts/167_094_airport_orchard_travel_scene.png",
+          "title": "空港の森の旅景"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: 空港の森の旅景. 空港の森の中を歩く旅の場面を、静かな休息感で見せる ガラス屋根、樹木、水辺、旅人で、移動中の休息感を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "airport_orchard_infographic",
+      "title": "空港の森インフォグラフィック",
+      "blocks": [
+        "source_research",
+        "layout_social_square",
+        "rendering",
+        "text_japanese_labels",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "空港の森の規模と特徴を、見やすい図解で整理する",
+      "summary": "樹木数、植栽面積、自然光の構造を、見やすい図版にまとめる。",
+      "artifacts": [
+        {
+          "path": "artifacts/168_095_airport_orchard_infographic.png",
+          "title": "空港の森インフォグラフィック"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: design sheet\nPrimary request: 空港の森インフォグラフィック. 空港の森の規模と特徴を、見やすい図解で整理する 樹木数、植栽面積、自然光の構造を、見やすい図版にまとめる。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "unity_material_sheet",
+      "title": "Kafka Unity材質シート",
+      "blocks": [
+        "character_kafka",
+        "layout_character_sheet",
+        "rendering_soft_infographic",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Kafka の Unity 3D モデル用テクスチャとマテリアルを見やすく整理する",
+      "summary": "ベースカラー、法線、ORM、顔、髪、衣装を分かりやすく並べる。",
+      "artifacts": [
+        {
+          "path": "artifacts/177_1cb88245_4419_467c_bee2_a2518705e6b5.png",
+          "title": "Kafka Unity材質シート"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: design sheet\nPrimary request: Kafka Unity材質シート. Kafka の Unity 3D モデル用テクスチャとマテリアルを見やすく整理する ベースカラー、法線、ORM、顔、髪、衣装を分かりやすく並べる。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "udonsharp_agent_skill_sheet",
+      "title": "UdonSharp エージェントスキル実例集",
+      "blocks": [
+        "layout_social_square",
+        "rendering_soft_infographic",
+        "text_japanese_labels",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "UdonSharp の実例と避けるべき構文を、VRChat 実装向けに整理する",
+      "summary": "同期、イベント、同期付きカウンターなどの基本例と禁止事項をまとめる。",
+      "artifacts": [
+        {
+          "path": "artifacts/197_d3e3c484_48c9_4648_ab85_e7eeb6d95d14.png",
+          "title": "UdonSharp エージェントスキル実例集"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: design sheet\nPrimary request: UdonSharp エージェントスキル実例集. UdonSharp の実例と避けるべき構文を、VRChat 実装向けに整理する 同期、イベント、同期付きカウンターなどの基本例と禁止事項をまとめる。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T16:24:15+09:00"
+    },
+    {
+      "id": "gen_20260508_184345",
+      "title": "NASDAQ100 直近6か月",
+      "blocks": [
+        "finance_source_research",
+        "layout_social_square",
+        "rendering",
+        "text_japanese_labels",
+        "negative_common"
+      ],
+      "kind": "news",
+      "purpose": "",
+      "summary": "NASDAQ100の直近6か月を単純明快に要約した画像。約+13.7%で、3月末に底打ちして5月上旬に高値更新。",
+      "artifacts": [
+        {
+          "path": "artifacts/200_nasdaq100_6.png",
+          "title": "NASDAQ100 直近6か月"
+        }
+      ],
+      "generated_prompt": "Create a clean, single-panel infographic in a crisp kafka-like style: modern, slightly edgy, minimal, bold typography, dark charcoal background with electric cyan and warm orange accents, subtle grain, sharp grid lines. Subject: NASDAQ-100 performance over the last 6 months. Show a simple upward line chart from left to right with one clear dip in late March and a strong rebound into early May. Add three concise Japanese labels only: title NASDAQ100 直近6か月, a small callout 約+13.7% near the upper right, and two tiny markers 安値 3月末 and 高値 5月上旬. Make it easy to understand at a glance, no clutter, no extra text, no logos, no stock photos. Composition should feel like a poster: chart centered, strong negative space, high contrast, polished editorial design.",
+      "created_at": "2026-05-08T18:43:45+09:00"
+    },
+    {
+      "id": "gen_20260508_200640",
+      "title": "boardgame_022a_national_economy_morning_tweet",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "seasonal_outfit_summer_kafka",
+        "morning_pose_summer_kafka",
+        "morning_background_summer_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "022a ナショナルエコノミーを、おはツイの朝版として涼しげに見せる",
+      "summary": "夏の朝の空気と水色の目で、022a の紹介をおはツイ向けにまとめたテンプレート。",
+      "artifacts": [
+        {
+          "path": "artifacts/201_boardgame_022a_national_economy_morning_tweet.png",
+          "title": "ボードゲームシリーズ: 022a ナショナルエコノミー おはツイ"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: morning tweet illustration\nPrimary request: 022a ナショナルエコノミーのおはツイ版。Kafka の目は水色。夏らしく涼しげな服装で、朝の空気をやわらかく見せる。ボードゲームの紹介としても読める、明るい朝のソーシャル投稿にする。\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T20:06:40+09:00"
+    },
+    {
+      "id": "gen_20260508_200646",
+      "title": "boardgame_025_tindahan_morning_tweet",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "seasonal_outfit_summer_kafka",
+        "morning_pose_summer_kafka",
+        "morning_background_summer_kafka",
+        "morning_tweet_layout",
+        "morning_tweet_text_pack",
+        "text_style_jp",
+        "effects_pack",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "025 ティンダハンを、おはツイの朝版として涼しげに見せる",
+      "summary": "夏の朝の空気と水色の目で、025 の紹介をおはツイ向けにまとめたテンプレート。",
+      "artifacts": [
+        {
+          "path": "artifacts/202_boardgame_025_tindahan_morning_tweet.png",
+          "title": "ボードゲームシリーズ: 025 ティンダハン おはツイ"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: morning tweet illustration\nPrimary request: 025 ティンダハンのおはツイ版。Kafka の目は水色。夏らしく涼しげな服装で、朝の空気をやわらかく見せる。南国市場のにぎやかさを、朝のソーシャル投稿として明るく見せる。\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "created_at": "2026-05-08T20:06:46+09:00"
+    },
+    {
+      "id": "gen_20260508_212506",
+      "title": "boardgame_022a_national_economy_fidelity",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_outfit_industrial",
+        "bg_scene_industrial",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "022a ナショナルエコノミーの元画像の雰囲気とルールに忠実な版を作る",
+      "summary": "卓上構図、資源、建物カード、箱絵、都市経済の硬さを保った fidelity 版。",
+      "artifacts": [
+        {
+          "path": "artifacts/203_boardgame_022a_national_economy_fidelity.png",
+          "title": "ボードゲームシリーズ: 022a ナショナルエコノミー 忠実版"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 022a ナショナルエコノミーの紹介ビジュアル。元画像の空気を厳密に保つ。明るい室内の卓上、資源と建物カード、ノート、コーヒー、盤面、箱絵の都市景観を、そのままの重さで見せる。朝の生活広告や、おはツイ風の白背景ポスターにはしない。ゲームの核である「資源を集める、産業を育てる、市場の動きを読む、経済の循環を感じる」が、画面を見た瞬間に伝わるようにする。元画像と違う雰囲気、違う構図、違う小物配置にしない。\n\nMust keep:\n- 明るい室内の卓上構図\n- 資源、建物カード、お金、盤面、ノート、箱絵\n- 都市経済っぽい硬さと整理された情報量\n- 生活感はあるが、あくまでボードゲーム紹介の画面\n\nMust avoid:\n- 白背景の朝ポスター化\n- 余計な告知文や大きな見出し\n- カフェ広告っぽい雰囲気\n- 盤面や資源より人物が主役になること\n- 絵が簡素化されてゲームらしさが消えること\n\nComposition: square or 4:5 social post, board game components and box art clearly visible, readable tabletop composition, balanced but dense, no empty generic space\nRendering: polished anime illustration, soft natural daylight, crisp linework, clean surfaces, high fidelity to the original visual mood\nNegative: blurry text, broken hands, extra fingers, warped cards, generic morning poster, lifestyle magazine layout, empty background, clutter, watermark, low resolution, oversaturated colors, plastic skin, 3D render look, wrong game identity, missing box art, missing table components, generic cafe scene, fashion advertisement feel, too much whitespace, poster-like infographic framing, tropical fruit market, night scene, dark fantasy mood, heavy neon, corrupted Japanese text, random English text, signature",
+      "created_at": "2026-05-08T21:25:06+09:00"
+    },
+    {
+      "id": "gen_20260508_212506_2",
+      "title": "boardgame_025_tindahan_fidelity",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_outfit_retro",
+        "bg_scene_retro",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "025 ティンダハンの元画像の雰囲気とルールに忠実な版を作る",
+      "summary": "南国市場の密度、果物、屋台、盤面の溶け込みを保った fidelity 版。",
+      "artifacts": [
+        {
+          "path": "artifacts/204_boardgame_025_tindahan_fidelity.png",
+          "title": "ボードゲームシリーズ: 025 ティンダハン 忠実版"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 025 ティンダハンの紹介ビジュアル。元画像の空気を厳密に保つ。南国市場のにぎやかさ、果物の山、屋台、布、かご、商品、鮮やかな昼光、そして盤面が市場の一部として溶け込んでいる感じをそのまま残す。朝のライフスタイル広告や、余白の多い爽やかポスターにはしない。ゲームの核である「市場で売る、並べる、集める、交換する、商品密度で見せる」が、画面を見た瞬間に伝わるようにする。元画像と違う雰囲気、違う構図、違う市場の密度にしない。\n\nMust keep:\n- 果物と屋台が詰まった南国市場の密度\n- 明るい昼光、カラフルな商品、かご、布、吊り飾り\n- 盤面が市場の中に自然にある構図\n- にぎやかで熱気のある売り場の空気\n\nMust avoid:\n- 白背景の朝ポスター化\n- 文字中心の説明ページ\n- 余白が多すぎる整理済みレイアウト\n- 市場の熱気が消えたライフスタイル広告\n- ゲーム固有の手触りが薄い一般的な果物売り場\n\nComposition: square or 4:5 social post, market stalls and fruit baskets densely arranged, board game board integrated into the market scene, bright but not washed out, mobile readable, no generic poster spacing, no huge empty margins\nRendering: polished anime illustration, saturated tropical daylight, crisp linework, rich market texture, high fidelity to the original visual mood, human-made finish\nNegative: blurry text, broken hands, extra fingers, generic morning poster, lifestyle magazine layout, sparse background, low-density market, watermark, low resolution, oversaturated neon, plastic skin, 3D render look, wrong game identity, missing market props, missing board game board, cafe scene, white background, empty margins, nighttime, dark fantasy mood, random English text, signature",
+      "created_at": "2026-05-08T21:25:06+09:00"
     }
   ]
 }

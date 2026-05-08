@@ -49,16 +49,46 @@ python3 build.py
 
 `dist/` ディレクトリに配信用のファイルが生成されます。
 
+### 画像の登録
+
+生成した画像を本番資産として採用する場合は、手動で `artifacts/` に移動しないでください。次の単一コマンドで採番・コピー・DB追記・ビルド・検証まで行います。
+この登録方針は [ADR 0018](docs/ADR/0018-unconnected-png-reconnect-workflow.md) にまとめています。
+
+```bash
+python3 scripts/register_generated_artifact.py \
+  --source /path/to/generated.png \
+  --title "Some Artifact Title" \
+  --purpose "optional purpose" \
+  --summary "optional summary"
+```
+
+必要なら `--generated-prompt` と `--blocks` も追加できます。
+
+既存の未接続PNGを再採番して `db/prompts.json` に戻す場合は次を使います。
+
+```bash
+python3 scripts/reconnect_unconnected_pngs.py
+```
+
+事前確認だけしたい場合は `--dry-run` を付けます。
+
 ### 公開検証
 
 ```bash
 bash scripts/verify_pages.sh
 ```
 
+### アセット監査
+
+```bash
+python3 scripts/audit_artifacts.py
+```
+
 ## データの管理
 
 - **データベース**: `db/prompts.json` に全ての部品とテンプレートが格納されています。
 - **アセット**: `artifacts/` に WebP 最適化された画像が格納されます。
+- **退避先**: 未接続の古い PNG は `artifacts/_orphaned/` に移して保管します。再採番して戻すときは `scripts/reconnect_unconnected_pngs.py` を使います。
 - **設定**: `config.yaml` でモデル名などを管理します。
 
 ---

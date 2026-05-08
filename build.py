@@ -4,6 +4,7 @@ from pathlib import Path
 
 try:
     from PIL import Image
+
     HAS_PILLOW = True
 except ImportError:
     HAS_PILLOW = False
@@ -56,6 +57,7 @@ def write_dist() -> None:
     # Inject commit hash for observability
     try:
         import subprocess
+
         sha = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode().strip()
     except Exception:
         sha = "unknown"

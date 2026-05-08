@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -63,7 +63,7 @@ class Handler(BaseHTTPRequestHandler):
             af = DIST_PATH / p.lstrip("/")
             if not af.exists():
                 af = ROOT / p.lstrip("/")
-            
+
             if af.exists():
                 ext = af.suffix.lower()
                 mime = "image/webp" if ext == ".webp" else "image/png"
@@ -101,7 +101,7 @@ class Handler(BaseHTTPRequestHandler):
             [out.get("block_updates", {}).get(id, blocks[id].content) for id in bids if id in blocks]
             + ([out["addition"]] if out.get("addition") else [])
         )
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         res_data = {
             "id": f"gen_{now}",
             "title": out["title"],
