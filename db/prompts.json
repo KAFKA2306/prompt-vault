@@ -1499,6 +1499,48 @@
       "title": "文言: バチェラー・ジャパン紹介",
       "content": "title 「The Bachelor Japan」, intro 「1人の独身男性“バチェラー”を巡り、25名の女性たちが真実の愛を本気で探す。」, features 「本気の恋愛を求める女性たちが集結」「最後に選ばれるのは、たった一人の運命の人」, flow 「カクテルパーティー」「デート」「ローズセレモニー」",
       "category": "ニュース・セリフ"
+    },
+    {
+      "id": "master_style_morning_pack",
+      "title": "朝用マスタースタイルパック",
+      "content": "white background, roomy margins\nthin blue borders, clear grid layout, readable spacing\nsoft shadows, flat lighting, no blotchy shadows\nclean lineart, minimal clutter, no 3d gloss, commercial vtuber reference-sheet feel\nno cyberpunk mood, calm visual hierarchy\nsurface clarity",
+      "category": "パック"
+    },
+    {
+      "id": "character_kafka_morning_pack",
+      "title": "朝用Kafkaキャラパック",
+      "content": "vtuber character presentation language\nsoft rim light, lavender edge glow, gentle contrast\nsmall smile, gentle face\ncalm approachable presence",
+      "category": "パック"
+    },
+    {
+      "id": "outfit_kafka_morning_pack",
+      "title": "朝のカーテン用Kafka衣装パック",
+      "content": "oversized white futuristic jacket, short pleated skirt, white socks, chunky white-and-pastel sneakers, futuristic but gentle vtuber outfit\nsleek sailor-like silhouette, futuristic and tidy\naccent ribbon catches soft light",
+      "category": "パック"
+    },
+    {
+      "id": "morning_window_sheet_pack",
+      "title": "朝の窓際シートパック",
+      "content": "bright window-side morning setting, soft curtain light, open sky, pale highlights, gentle indoor air, clean white space\nsoft natural daylight, gentle morning sun, airy highlights, peaceful atmosphere\nrelaxed hand near the cheek, upright calm stance, quiet morning mood\nsoft homewear, oversized cardigan or light sweater, simple top, comfy shorts or relaxed skirt, tidy but casual, warm morning indoor mood, pastel blue and lavender, photo-friendly\nclean uniform coloring, smooth even gradients, soft diffused illumination, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "category": "パック"
+    },
+    {
+      "id": "news_comic_pack",
+      "title": "ニュース漫画パック",
+      "content": "panel 1: Kafka says 「日銀の会見きたよ〜！」, headline typography says 「2026年4月 金融政策決定会合」\npanel 2: official Bank of Japan PDF styled panel, clean typography, date shown exactly as 「2026年4月30日」, text blocks showing 「政策金利 0.5%程度で据え置き」 and 「中心的見通しの確度は低下」\npanel 3: Kafka reflects while holding a cat plushie, speech bubble 「利上げはまだかな…？」, small yen symbol icons\npanel 4: formal press conference setting, microphones, charts beside the speaker, highlighted quote box saying 「データを丁寧に確認」\npanel 5: market reaction infographic panel, simple arrows and charts, captions 「市場は慎重ムード」 「円安反応」 「見通し下方修正」\npanel 6: final panel, Kafka makes a peace sign, large rounded Japanese typography saying 「急がず様子見ムード！」, soft sparkles and hearts\n6 to 7 manga panels, white gutters, clear reading order, speech bubbles left blank\nclean framing on the upper body\none hand in frame, eyes oriented to the viewer or the object, emotional beat first\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\nclean uniform coloring, smooth even gradients, clear contrast between light and dark areas, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish, ultra clean anime rendering, soft commercial VTuber promotional style, infographic readability prioritized, balanced whitespace, consistent character proportions\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "category": "パック"
+    },
+    {
+      "id": "character_sheet_pack",
+      "title": "キャラデザインシートパック",
+      "content": "professional japanese character design reference sheet layout, multiple organized panels with thin blue borders, clean spacing, high readability, balanced infographic composition\nthree-view character reference, FRONT / SIDE / BACK views, full body design consistency\nface grid with multiple anime expressions that keep the same identity\nitem breakdown panel, close-up detailed object references, headwear, upper layer, sailor-style inner layer, shoes, necklace, hair accessories, robot mascot, chains, beads\nstance variation panel, multiple chibi/full-body views, seated and upright variants, cute energetic gestures\nmoodboard section, soft futuristic cityscape, night city lights, dreamy sky, cozy interior, pastel fantasy scenery, clean anime environment thumbnails\nclean uniform coloring, smooth even gradients, soft diffused illumination, high-key anime rendering, polished but human-crafted feeling\nprofessional rounded Japanese font, clean rendering, high readability, organized Japanese infographic labeling\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "category": "パック"
+    },
+    {
+      "id": "cosplay_post_pack",
+      "title": "コスプレ投稿パック",
+      "content": "square or 4:5 social post, full body or three-quarter framing, centered figure, event or studio feel, no date, no timestamp, no clutter, photographer-friendly, clear costume visibility\nclean studio setting, minimal props, high contrast potential\nbalanced visual finish, professional photography feel\nstanding centered, looking directly at the camera, clean silhouette, confident model stance\ncentered character composition, large portrait framing, clear focus, professional photoshoot layout\nevent-ready costume, polished seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance\n「コスプレ中」「撮影してる」「衣装完成」「今日はこの衣装」「次の衣装も楽しみ」「イベント来た」「写真ありがとう」「準備ばっちり」「見てほしい」「お気に入り」\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "category": "パック"
     }
   ],
   "templates": [
@@ -1621,27 +1663,12 @@
       "id": "morning_kafka_sheet",
       "title": "朝のやさしい光",
       "blocks": [
-        "master_style_background",
-        "master_style_composition",
-        "master_style_lighting",
-        "master_style_style",
-        "master_style_mood",
-        "master_style_expression",
-        "character_kafka_style",
-        "character_kafka_lighting",
-        "character_kafka_expression",
-        "character_kafka_mood",
+        "master_style_morning_pack",
+        "character_kafka_morning_pack",
         "kafka_identity_lock",
         "morning_tweet_layout",
         "morning_tweet_text_pack",
-        "morning_pose_window_kafka",
-        "background_morning_window",
-        "lighting_soft_daylight",
-        "pose_small_wave",
-        "morning_home_outfit_kafka",
-        "clean_quality_rendering",
-        "text_style_jp",
-        "negative_common"
+        "morning_window_sheet_pack"
       ],
       "kind": "sheet",
       "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
@@ -1680,19 +1707,9 @@
       "id": "morning_tweet_curtains",
       "title": "おはツイ カーテンを開ける",
       "blocks": [
-        "master_style_background",
-        "master_style_composition",
-        "master_style_lighting",
-        "master_style_style",
-        "master_style_mood",
-        "master_style_expression",
-        "character_kafka_style",
-        "character_kafka_lighting",
-        "character_kafka_expression",
-        "character_kafka_mood",
-        "outfit_kafka_outfit",
-        "outfit_kafka_style",
-        "outfit_kafka_lighting",
+        "master_style_morning_pack",
+        "character_kafka_morning_pack",
+        "outfit_kafka_morning_pack",
         "morning_pose_curtains_kafka",
         "morning_tweet_layout",
         "morning_tweet_text_pack",
@@ -2088,15 +2105,7 @@
         "kafka_identity_lock",
         "outfit_kafka",
         "news_comic_layout",
-        "comic_panels",
-        "comic_layout",
-        "framing_reaction_focus",
-        "pose_reaction_focus",
-        "expressions_pack",
-        "text_style_jp",
-        "effects_pack",
-        "rendering",
-        "negative_common"
+        "news_comic_pack"
       ],
       "kind": "news",
       "purpose": "日本銀行の記者会見資料を、Kafka 主役の漫画ニュースとして整理する",
@@ -2144,18 +2153,9 @@
       "title": "Kafka キャラデザインシート",
       "blocks": [
         "character_kafka_core",
-        "hair_kafka_detail",
         "outfit_kafka_default",
         "accessory_kafka_head",
-        "layout_character_sheet",
-        "layout_turnaround",
-        "layout_expression_grid",
-        "layout_accessory_breakdown",
-        "layout_pose_variation",
-        "background_moodboard_futuristic",
-        "rendering_soft_infographic",
-        "text_japanese_labels",
-        "negative_common",
+        "character_sheet_pack",
         "kafka_identity_lock"
       ],
       "kind": "design_sheet",
@@ -2270,15 +2270,7 @@
       "blocks": [
         "master_style",
         "character_kafka",
-        "cosplay_post_layout",
-        "background_cosplay_studio",
-        "lighting_softbox",
-        "pose_photo_centered",
-        "layout_photo_centered",
-        "cosplay_event_outfit_kafka",
-        "cosplay_status_text_pack",
-        "text_style_jp",
-        "negative_common"
+        "cosplay_post_pack"
       ],
       "kind": "social",
       "purpose": "コスプレしている様子を、撮影用の投稿にする",
@@ -2567,16 +2559,8 @@
       "id": "morning_tweet_autumn",
       "title": "おはツイ 秋",
       "blocks": [
-        "master_style_background",
-        "master_style_composition",
-        "master_style_lighting",
-        "master_style_style",
-        "master_style_mood",
-        "master_style_expression",
-        "character_kafka_style",
-        "character_kafka_lighting",
-        "character_kafka_expression",
-        "character_kafka_mood",
+        "master_style_morning_pack",
+        "character_kafka_morning_pack",
         "seasonal_outfit_autumn_kafka",
         "morning_pose_autumn_kafka",
         "morning_background_autumn_kafka",
@@ -2747,16 +2731,8 @@
       "id": "morning_tweet_spring",
       "title": "おはツイ 春",
       "blocks": [
-        "master_style_background",
-        "master_style_composition",
-        "master_style_lighting",
-        "master_style_style",
-        "master_style_mood",
-        "master_style_expression",
-        "character_kafka_style",
-        "character_kafka_lighting",
-        "character_kafka_expression",
-        "character_kafka_mood",
+        "master_style_morning_pack",
+        "character_kafka_morning_pack",
         "seasonal_outfit_spring_kafka",
         "morning_pose_spring_kafka",
         "morning_background_spring_kafka",
@@ -2780,16 +2756,8 @@
       "id": "morning_tweet_summer",
       "title": "おはツイ 夏",
       "blocks": [
-        "master_style_background",
-        "master_style_composition",
-        "master_style_lighting",
-        "master_style_style",
-        "master_style_mood",
-        "master_style_expression",
-        "character_kafka_style",
-        "character_kafka_lighting",
-        "character_kafka_expression",
-        "character_kafka_mood",
+        "master_style_morning_pack",
+        "character_kafka_morning_pack",
         "seasonal_outfit_summer_kafka",
         "morning_pose_summer_kafka",
         "morning_background_summer_kafka",
@@ -3560,14 +3528,8 @@
         "master_style",
         "character_kafka",
         "outfit_kafka",
-        "market_rally_layout",
-        "market_rally_panels",
-        "framing_reaction_focus",
-        "pose_reaction_focus",
-        "expressions_pack",
-        "text_style_jp",
-        "effects_pack",
-        "negative_common"
+        "news_comic_layout",
+        "news_comic_pack"
       ],
       "kind": "news",
       "purpose": "4月の米国株の月間ラリーを、Kafka 主役の漫画ニュースとして整理する",
@@ -3587,13 +3549,7 @@
         "master_style",
         "character_kafka",
         "us_concerns_layout",
-        "us_concerns_panels",
-        "framing_reaction_focus",
-        "pose_reaction_focus",
-        "text_style_jp",
-        "rendering",
-        "effects_pack",
-        "negative_common"
+        "news_comic_pack"
       ],
       "kind": "comic",
       "purpose": "米国の最新の懸念材料を、Kafka が短く分かりやすく案内するニュースグラフィックにする",
@@ -4151,13 +4107,7 @@
         "master_style",
         "character_kafka",
         "bake_off_japan_news_layout",
-        "bake_off_japan_news_panels",
-        "framing_reaction_focus",
-        "pose_reaction_focus",
-        "text_style_jp",
-        "rendering",
-        "effects_pack",
-        "negative_common"
+        "news_comic_pack"
       ],
       "kind": "news",
       "purpose": "ベイクオフ・ジャパン（アマプラ独占）の魅力を Kafka が 6コマ漫画で分かりやすく紹介する",
@@ -5344,18 +5294,18 @@
         "text_japanese_labels",
         "attachment_theory_addendum_text_pack"
       ],
-    "kind": "system",
-    "purpose": "Kafka 口調で、愛着理論の補足を短くわかりやすく説明する",
-    "summary": "4分類を固定的な性格診断にしない前提で、対人調整戦略としての愛着を短く説明する。",
-    "artifacts": [
-      {
-        "path": "artifacts/205_kafka_attachment_theory_short.png",
-        "title": "Kafka 愛着理論ショート説明"
-      },
-      {
-        "path": "artifacts/206_kafka_attachment_theory_square.png",
-        "title": "Kafka 愛着理論ショート説明 1:1"
-      }
+      "kind": "system",
+      "purpose": "Kafka 口調で、愛着理論の補足を短くわかりやすく説明する",
+      "summary": "4分類を固定的な性格診断にしない前提で、対人調整戦略としての愛着を短く説明する。",
+      "artifacts": [
+        {
+          "path": "artifacts/205_kafka_attachment_theory_short.png",
+          "title": "Kafka 愛着理論ショート説明"
+        },
+        {
+          "path": "artifacts/206_kafka_attachment_theory_square.png",
+          "title": "Kafka 愛着理論ショート説明 1:1"
+        }
       ],
       "generated_prompt": "Kafka voice, very short Japanese explanation, attachment is a regulation strategy in interpersonal stress, not a fixed personality test. It can change by partner and context. Avoid deterministic framing. Keep it gentle, plain, and readable. Mention earned secure only if needed.",
       "created_at": "2026-05-09T09:10:00+09:00"
@@ -5372,13 +5322,13 @@
         "layout_social_square"
       ],
       "kind": "design_sheet",
-    "purpose": "Kafka のソフト寄りの見た目を、再利用しやすい参照として残す",
-    "summary": "淡い青紫髪、猫ヘアピン、三角ピン、黒リボンの編み込み、白いレース系衣装のやわらかい参照カード。",
-    "artifacts": [
-      {
-        "path": "artifacts/207_kafka_soft_visual_reference.png",
-        "title": "Kafka ソフトビジュアル参照"
-      }
+      "purpose": "Kafka のソフト寄りの見た目を、再利用しやすい参照として残す",
+      "summary": "淡い青紫髪、猫ヘアピン、三角ピン、黒リボンの編み込み、白いレース系衣装のやわらかい参照カード。",
+      "artifacts": [
+        {
+          "path": "artifacts/207_kafka_soft_visual_reference.png",
+          "title": "Kafka ソフトビジュアル参照"
+        }
       ],
       "generated_prompt": "Create a soft Kafka visual reference. Keep the same face and hair identity as Kafka, with long light-blue hair and lavender gradient, cat hairpin, triangular hairpin, braided side section with black ribbon, blue-purple eyes, pale skin, and a gentle open smile. Use a soft white lace dress or cardigan feel, airy pastel palette, clean linework, and calm luminous beauty-shot presentation. Square composition, minimal clutter, human-made finish, readable and elegant, no heavy decoration, no dramatic contrast.",
       "created_at": "2026-05-09T09:35:00+09:00"
@@ -5406,6 +5356,7 @@
     {
       "id": "vrc_diary_20260508_text_pack",
       "title": "文言: VRChat日記 20260508",
+      "kind": "generated",
       "category": "記録・ログ",
       "content": "【要点】\n2019年にアカウントを作成し、2022年頃までは身内で遊ぶことが中心だったが、最近はパブリック交流が増えた。『ひまり旅館』のような新しいワールドで界隈が混ざり合い、共通のゲームや会話の機会が増えている。\n\n【核心の出来事】\nボードゲーム『ドミニオン』中に4、5人から『魔王が来た』と言われ、強く動揺した。後で友人から、その場は『身内で楽しく遊びたい』空気が強く、慣れた人が入ると雰囲気が変わると感じる人もいると説明され、誤解に深く傷ついた。\n\n【感情】\n困惑、警戒、疲労、孤立感、理解欲求、安堵、感謝が混ざっている。主成分は『傷ついた』より『処理できない』に近い。\n\n【自己理解】\n人間関係は技術より読みづらく、誤解されやすさが気になる。愛着は回避傾向があるかもしれず、自然な距離感の相手やVR空間のような物理距離つきの交流に安心を感じる。相談よりも自分で考える方が楽に感じやすい。\n\n【他者】\n話を聞いてくれた友人、ストレスを察知してくれたフレンド、心理学的に翻訳してくれた友人への感謝が残っている。",
       "artifacts": [

@@ -9,8 +9,9 @@ try:
 except ImportError:
     HAS_PILLOW = False
 
-from src.models import PromptDB
 from config import CONFIG, ROOT, root_path
+from src.db_io import load_prompt_db
+from src.models import PromptDB
 
 DB_PATH = root_path(CONFIG["paths"]["db"])
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
@@ -20,7 +21,7 @@ PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
 
 
 def load_db() -> PromptDB:
-    db = PromptDB.model_validate_json(DB_PATH.read_text(encoding="utf-8"))
+    db = load_prompt_db(DB_PATH)
     block_ids = {b.id for b in db.blocks}
     for t in db.templates:
         for bid in t.blocks:

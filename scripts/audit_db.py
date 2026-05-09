@@ -1,24 +1,20 @@
 import argparse
-import json
 import re
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+from _bootstrap import ROOT
 
-from config import CONFIG, root_path
+from config import CONFIG
+from src.db_io import load_json_db
 
 
 def audit_db(strict=False):
-    db_path = root_path(CONFIG["paths"]["db"])
+    db_path = ROOT / CONFIG["paths"]["db"]
     if not db_path.exists():
         print("Error: db/prompts.json not found")
         sys.exit(1)
 
-    with open(db_path, encoding="utf-8") as f:
-        db = json.load(f)
+    db = load_json_db(db_path)
 
     templates = db.get("templates", [])
     blocks = db.get("blocks", [])
@@ -31,8 +27,9 @@ def audit_db(strict=False):
     for t in templates:
         tid = t.get("id")
         t_blocks = t.get("blocks", [])
+        kind = t.get("kind")
 
-        if not t_blocks:
+        if not t_blocks and kind != "generated":
             warnings.append(f"Template '{tid}' has empty blocks list")
 
         for bid in t_blocks:

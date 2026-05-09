@@ -1,21 +1,17 @@
 import sys
 from collections import defaultdict
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+from _bootstrap import ROOT
 
-from config import CONFIG, root_path
-
-from build import load_db  # noqa: E402
+from config import CONFIG
+from src.db_io import load_prompt_db
 
 
 def main() -> int:
-    db = load_db()
+    db = load_prompt_db(ROOT / CONFIG["paths"]["db"])
 
-    root_artifacts = root_path(CONFIG["paths"]["artifacts"])
-    orphaned_artifacts = root_path(CONFIG["paths"]["orphaned_artifacts"])
+    root_artifacts = ROOT / CONFIG["paths"]["artifacts"]
+    orphaned_artifacts = ROOT / CONFIG["paths"]["orphaned_artifacts"]
 
     linked_paths = defaultdict(list)
     for template in db.templates:

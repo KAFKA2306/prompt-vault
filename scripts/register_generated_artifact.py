@@ -1,20 +1,18 @@
 import argparse
-import json
 import shutil
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+from _bootstrap import ROOT
 
-from config import CONFIG, root_path
+from config import CONFIG
+from src.db_io import load_json_db, save_json_db
 from src.artifact_ops import next_artifact_number, slugify
 
-DB_PATH = root_path(CONFIG["paths"]["db"])
-ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
+DB_PATH = ROOT / CONFIG["paths"]["db"]
+ARTIFACTS_PATH = ROOT / CONFIG["paths"]["artifacts"]
 
 
 def next_template_id(existing_ids: set[str]) -> str:
@@ -63,8 +61,7 @@ def main() -> int:
 
     shutil.copy2(source, destination)
 
-    with DB_PATH.open("r", encoding="utf-8") as f:
-        db = json.load(f)
+    db = load_json_db(DB_PATH)
 
     templates = db.setdefault("templates", [])
     existing_ids = {t.get("id") for t in templates if isinstance(t, dict) and t.get("id")}
@@ -90,9 +87,7 @@ def main() -> int:
         }
     )
 
-    with DB_PATH.open("w", encoding="utf-8") as f:
-        json.dump(db, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+    save_json_db(DB_PATH, db)
 
     if not args.skip_build:
         subprocess.run([sys.executable, "build.py"], cwd=ROOT, check=True)
