@@ -37,6 +37,8 @@
 このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/register_generated_artifact.py` を単一入口として扱います。  
 既存の未接続PNGを再採番して戻す場合は `scripts/reconnect_unconnected_pngs.py` を使います。  
 未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
+- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
+- Kafka の見た目は `character_kafka` と `kafka_identity_lock` です。
 
 ---
 

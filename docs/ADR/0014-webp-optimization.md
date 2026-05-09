@@ -10,6 +10,9 @@ Prompt Vault は画像中心のギャラリーサイトであり、100枚を超�
    - Pillow がインストールされている環境（GitHub Actions 等）では WebP 変換を行い、パスを `.webp` に書き換える。
    - Pillow がない環境（標準の Cloudflare 等）では、自動的に PNG コピーと `.png` パス維持にフォールバックする。
 3. **パスの自動書き換え**: ビルド時に `app.js` 内の画像パスを、生成されたファイル形式（.webp または .png）に合わせて動的に置換する。
+- 元画像は `/home/kafka/projects/prompt-vault/artifacts/NNN_slug.png`。
+- ビルド出力は `/home/kafka/projects/prompt-vault/dist/artifacts/NNN_slug.webp`。
+- DB 参照は `db/prompts.json` の `artifacts[].path`。
 
 ## 理由
 - **ユーザー体験の向上**: 最大 90% の軽量化により、モバイル環境での閲覧を劇的に高速化する。

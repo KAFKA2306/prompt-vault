@@ -6,6 +6,9 @@
 
 `artifacts/` に画像ファイルだけが残ると、DB から見えない未接続PNGになる。
 このリポジトリでは、画像は見た目の素材ではなく、`db/prompts.json` に結びついた記録として扱う。
+- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/`。
+- 正式な画像資産は `artifacts/NNN_slug.png`。
+- Kafka の見た目参照は `character_kafka`、`character_kafka_soft_reference`、`kafka_identity_lock`。
 
 ## 決定事項
 

@@ -21,6 +21,11 @@ tasks:
     cmds:
       - python3 scripts/audit_artifacts.py
 
+  literals-audit:
+    desc: Audit required literal paths and references
+    cmds:
+      - python3 scripts/audit_literals.py
+
   lint:
     desc: Lint the project
     cmds:
@@ -40,6 +45,12 @@ tasks:
     cmds:
       - task: lint
       - task: format
+      - task: deliver
+
+  deliver:
+    desc: Run the Prompt Vault delivery workflow
+    cmds:
+      - task: literals-audit
       - task: validate
       - task: artifacts-audit
       - task: build

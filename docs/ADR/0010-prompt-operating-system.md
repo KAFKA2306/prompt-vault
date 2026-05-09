@@ -115,7 +115,7 @@
 
 ### 7. skills は「現在の標準」を参照する
 
-`prompt-vault-update` は、
+`prompt-vault-workflow` は、
 - 既存の Prompt Vault prompt を基準にする
 - `kafka_visual_standard` と `097_rendering_quality_check_contrast.png` を Kafka の標準参照にする
 - 画像を正式な資産にする場合は、`scripts/register_generated_artifact.py` で `artifacts/` と DB を同時に揃える
@@ -139,7 +139,7 @@
 3. artifact には model / seed / params / score を残す。
 4. negative は taxonomy に分ける。
 5. 新しい命名は、接尾辞だけで用途が分かるようにする。
-6. `prompt-vault-update` は標準参照を優先し、必要なら新しい型を作る。
+6. `prompt-vault-workflow` は標準参照を優先し、必要なら新しい型を作る。
 
 ## 結論
 

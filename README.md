@@ -53,6 +53,8 @@ python3 build.py
 
 生成した画像を本番資産として採用する場合は、手動で `artifacts/` に移動しないでください。次の単一コマンドで採番・コピー・DB追記・ビルド・検証まで行います。
 この登録方針は [ADR 0018](docs/ADR/0018-unconnected-png-reconnect-workflow.md) にまとめています。
+- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
+- Kafka の見た目は `character_kafka` と `kafka_identity_lock` です。
 
 ```bash
 python3 scripts/register_generated_artifact.py \

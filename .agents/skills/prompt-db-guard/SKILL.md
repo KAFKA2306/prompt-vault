@@ -31,6 +31,13 @@ description: prompts.json の整合性と品質を監査し、破壊的変更や
 6. **ゴミ箱化**: `scene`, `layout`, `style` ブロックが曖昧な多目的要素を含んでいる。
 7. **肥大化**: 200文字を超えるブロック、または 10件を超えるテンプレートブロック。
 
+## 固定参照
+
+- 生成画像の一次出力先: `/home/kafka/.codex/generated_images/`
+- 正式な画像資産: `artifacts/NNN_slug.png`
+- 退避先: `artifacts/_orphaned/`
+- Kafka の見た目参照: `character_kafka`, `character_kafka_soft_reference`, `kafka_identity_lock`
+
 ## 使用方法
 
 `scripts/guard.py` を実行して JSON 出力を得る。

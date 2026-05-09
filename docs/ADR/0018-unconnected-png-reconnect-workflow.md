@@ -8,6 +8,9 @@
 
 Prompt Vault では、画像を `db/prompts.json` に接続した状態で管理する必要がある。
 新規の生成画像は `scripts/register_generated_artifact.py` で `artifacts/NNN_slug.png` に登録できるが、既存の未接続PNGをまとめて整理する作業には別の手順が必要だった。
+- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/`。
+- 退避先は `artifacts/_orphaned/`。
+- Kafka の見た目参照は `character_kafka`、`character_kafka_soft_reference`、`kafka_identity_lock`。
 
 手動での移動、手動の採番、手動の参照追記は、再発しやすく、抜けや重複を招きやすい。
 そこで、既存の未接続PNGを再採番して DB に戻す標準手順を明文化する。

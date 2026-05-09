@@ -23,6 +23,8 @@
 - **[db/prompts.json](db/prompts.json)**: 全ての「源泉」。テンプレート、ブロック、`artifacts` の接続。
 - **[artifacts/](artifacts/)**: 実体の「アセット」。ファイル名は `NNN_slug.png`。
 - **[artifacts/_orphaned/](artifacts/_orphaned/)**: 退避した古い PNG の保管先。root の `artifacts/` に未接続 PNG を残さない。
+- 生成画像の一次出力先: `/home/kafka/.codex/generated_images/`
+- Kafka の見た目: `character_kafka`、`character_kafka_soft_reference`、`kafka_identity_lock`
 
 ### 4. 生成物の登録
 
@@ -45,9 +47,9 @@
 ## 変更手順のメタ思考
 
 1. **データ整合性**: `src/models.py` の Pydantic モデルを確認し、`db/prompts.json` を編集。
-2. **生成物登録**: 画像を採用する場合は、`scripts/register_generated_artifact.py` を使って `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。既存の未接続PNGを整理する場合は ADR 0018 に従って `scripts/reconnect_unconnected_pngs.py` を使う。手動の移動、手動の採番、`dist/` への直接編集はしない。
+2. **生成物登録**: 画像を採用する場合は、`scripts/register_generated_artifact.py` を使って `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。生成画像の一次出力先は `/home/kafka/.codex/generated_images/`。既存の未接続PNGを整理する場合は ADR 0018 に従って `scripts/reconnect_unconnected_pngs.py` を使う。手動の移動、手動の採番、`dist/` への直接編集はしない。
 3. **静的生成**: 登録スクリプトが `python3 build.py` と `python3 scripts/validate_db.py` を通す。`dist/` はこのコマンドでのみ更新される「生成物」であり、直接編集は厳禁。
-4. **内容照合**: ボードゲーム系の画像を作る前に、元ルールと元画像の見た目を確認する。見た目だけ似せて中身が違う、またはルールに合わない表現は避ける。
+4. **内容照合**: `character_kafka` と `kafka_identity_lock` を確認してから画像を作る。
 5. **ローカル検証**: 必要な場合のみ `python3 app.py` で表示を確認する。画像が表示されない、あるいは `画像なし` のラベルが出る場合は、`artifacts/` と JSON の接続ミスを疑う。
 6. **アセット監査**: `python3 scripts/audit_artifacts.py` で root `artifacts/` と `db/prompts.json` の接続状態を確認する。
 7. **公開検証**: `scripts/verify_pages.sh` でデプロイ後の状態をシミュレート。
