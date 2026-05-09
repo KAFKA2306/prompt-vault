@@ -1,6 +1,5 @@
 import argparse
 import json
-import re
 import shutil
 import subprocess
 import sys
@@ -8,23 +7,15 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DB_PATH = ROOT / "db" / "prompts.json"
-ARTIFACTS_PATH = ROOT / "artifacts"
-ORPHANED_PATH = ARTIFACTS_PATH / "_orphaned"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
+from config import CONFIG, root_path
+from src.artifact_ops import next_artifact_number, slugify
 
-def slugify(value: str) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
-    return slug or "artifact"
-
-
-def next_artifact_number() -> int:
-    numbers: list[int] = []
-    for path in ARTIFACTS_PATH.glob("*.png"):
-        match = re.match(r"^(\d{3})_", path.name)
-        if match:
-            numbers.append(int(match.group(1)))
-    return max(numbers, default=0) + 1
+DB_PATH = root_path(CONFIG["paths"]["db"])
+ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
+ORPHANED_PATH = root_path(CONFIG["paths"]["orphaned_artifacts"])
 
 
 def make_generated_prompt(title: str, purpose: str, summary: str, kind: str) -> str:

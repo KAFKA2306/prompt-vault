@@ -6,6 +6,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from config import CONFIG, root_path
+
 from build import load_db  # noqa: E402
 
 
@@ -29,7 +31,7 @@ def main() -> int:
         return 1
 
     # Check for orphaned artifacts
-    actual_files = {f"artifacts/{f.name}" for f in (ROOT / "artifacts").glob("*.png")}
+    actual_files = {f"artifacts/{f.name}" for f in root_path(CONFIG["paths"]["artifacts"]).glob("*.png")}
     orphans = actual_files - linked_paths
     if orphans:
         for o in sorted(orphans):

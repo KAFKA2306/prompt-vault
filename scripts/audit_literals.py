@@ -1,68 +1,13 @@
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-CHECKS = {
-    "AGENTS.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/NNN_slug.png",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    "README.md": [
-        "/home/kafka/.codex/generated_images/",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    "docs/SCHEMA.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/NNN_slug.png",
-        "artifacts/_orphaned/",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    "docs/ADR/0011-artifact-graph-connectivity.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/NNN_slug.png",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    "docs/ADR/0014-webp-optimization.md": [
-        "/home/kafka/projects/prompt-vault/artifacts/NNN_slug.png",
-        "/home/kafka/projects/prompt-vault/dist/artifacts/NNN_slug.webp",
-        "db/prompts.json",
-    ],
-    "docs/ADR/0018-unconnected-png-reconnect-workflow.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/_orphaned/",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    ".agents/skills/prompt-vault-workflow/SKILL.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/NNN_slug.png",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    ".agents/skills/prompt-db-guard/SKILL.md": [
-        "/home/kafka/.codex/generated_images/",
-        "artifacts/NNN_slug.png",
-        "artifacts/_orphaned/",
-        "character_kafka",
-        "kafka_identity_lock",
-    ],
-    "/home/kafka/projects/.agent/skills/.system/imagegen/SKILL.md": [
-        "/home/kafka/.codex/generated_images/",
-        "/home/kafka/projects/prompt-vault/artifacts/NNN_slug.png",
-        "/home/kafka/projects/prompt-vault/db/prompts.json",
-        "/home/kafka/projects/prompt-vault/artifacts/_orphaned/",
-        "character_kafka",
-        "character_kafka_soft_reference",
-        "kafka_identity_lock",
-    ],
-}
+from config import CONFIG
+
+CHECKS = CONFIG["audit_literals"]
 
 
 def main() -> int:

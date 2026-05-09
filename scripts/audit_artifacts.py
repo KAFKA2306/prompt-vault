@@ -6,14 +6,16 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from config import CONFIG, root_path
+
 from build import load_db  # noqa: E402
 
 
 def main() -> int:
     db = load_db()
 
-    root_artifacts = ROOT / "artifacts"
-    orphaned_artifacts = root_artifacts / "_orphaned"
+    root_artifacts = root_path(CONFIG["paths"]["artifacts"])
+    orphaned_artifacts = root_path(CONFIG["paths"]["orphaned_artifacts"])
 
     linked_paths = defaultdict(list)
     for template in db.templates:

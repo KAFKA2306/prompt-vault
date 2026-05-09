@@ -1,7 +1,6 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
   const apiKey = env.GEMINI_API_KEY;
-  const model = env.MODEL_NAME || "gemini-2.0-flash";
 
   if (!apiKey) {
     return new Response(JSON.stringify({ error: "GEMINI_API_KEY is not set" }), {
@@ -21,6 +20,8 @@ export async function onRequestPost(context) {
   const url = new URL(request.url);
   const dbRes = await env.ASSETS.fetch(new URL("/api/db", url.origin));
   const db = await dbRes.json();
+  const configRes = await env.ASSETS.fetch(new URL("/config.json", url.origin));
+  const config = configRes.ok ? await configRes.json() : {};
   const codexRes = await env.ASSETS.fetch(new URL("/prompts/frontend_codex.md", url.origin));
   if (!codexRes.ok) {
     return new Response(JSON.stringify({ error: "frontend_codex.md is not available" }), {
@@ -38,6 +39,7 @@ export async function onRequestPost(context) {
     .replace("{{template_title}}", tpl?.title || "Unknown")
     .replace("{{instruction}}", instruction)
     .replace("{{source_blocks}}", src);
+  const model = env.MODEL_NAME || config.model || "gemini-2.5-flash-lite";
 
   const apiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
     method: "POST",

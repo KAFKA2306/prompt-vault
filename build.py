@@ -10,13 +10,13 @@ except ImportError:
     HAS_PILLOW = False
 
 from src.models import PromptDB
+from config import CONFIG, ROOT, root_path
 
-ROOT = Path(__file__).resolve().parent
-DB_PATH = ROOT / "db" / "prompts.json"
-STATIC_PATH = ROOT / "static"
-DIST_PATH = ROOT / "dist"
-ARTIFACTS_PATH = ROOT / "artifacts"
-PROMPTS_PATH = ROOT / "prompts"
+DB_PATH = root_path(CONFIG["paths"]["db"])
+STATIC_PATH = root_path(CONFIG["paths"]["static"])
+DIST_PATH = root_path(CONFIG["paths"]["dist"])
+ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
+PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
 
 
 def load_db() -> PromptDB:
@@ -70,6 +70,10 @@ def write_dist() -> None:
         (DIST_PATH / f).write_text(content, encoding="utf-8")
 
     (DIST_PATH / "app.js").write_text(render_app_js(db), encoding="utf-8")
+    (DIST_PATH / "config.json").write_text(
+        json.dumps({"model": CONFIG["ai"]["model"]}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     # Copy other static assets
     for s in STATIC_PATH.rglob("*"):

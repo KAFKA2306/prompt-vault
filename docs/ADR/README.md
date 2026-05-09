@@ -18,3 +18,4 @@
 - [0016 Quiet UI (2026年基準の最適化)](0016-quiet-ui-2026-optimization.md)
 - [0017 「レシピと素材」の責務分離とデータベース・ガードレールの導入](0017-recipe-ingredient-separation-and-integrity-guardrails.md)
 - [0018 未接続PNGの再採番・再接続ワークフロー](0018-unconnected-png-reconnect-workflow.md)
+- [0019 設定と共通 artifact 操作を単一正本に寄せる](0019-config-and-shared-artifact-ops.md)

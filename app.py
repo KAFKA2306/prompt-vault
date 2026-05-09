@@ -5,19 +5,17 @@ import json
 import os
 from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from pathlib import Path
 from typing import Any
 from urllib.request import Request, urlopen
 
-import yaml
 from build import load_db, render_app_js
+from config import CONFIG, root_path
 
-ROOT = Path(__file__).resolve().parent
-STATIC_PATH, ARTIFACTS_PATH = ROOT / "static", ROOT / "artifacts"
-DIST_PATH = ROOT / "dist"
-DB_PATH, CONFIG_PATH = ROOT / "db" / "prompts.json", ROOT / "config.yaml"
-CODEX_PATH = ROOT / "prompts" / "frontend_codex.md"
-CONFIG = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
+STATIC_PATH = root_path(CONFIG["paths"]["static"])
+ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
+DIST_PATH = root_path(CONFIG["paths"]["dist"])
+DB_PATH = root_path(CONFIG["paths"]["db"])
+CODEX_PATH = root_path(CONFIG["paths"]["prompts"])
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -118,6 +116,6 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--port", default=8787, type=int)
+    parser.add_argument("--port", default=CONFIG["app"]["port"], type=int)
     args = parser.parse_args()
-    ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
+    ThreadingHTTPServer((CONFIG["app"]["host"], args.port), Handler).serve_forever()
