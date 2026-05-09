@@ -573,14 +573,14 @@
     {
       "id": "news_comic_layout",
       "title": "形式: ニュース漫画",
-      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one official PDF panel, one Governor Ueda press conference panel, one market reaction panel, one inflation outlook chart panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, manga emphasis symbols, small source box, PDF marker icon, video marker icon",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one official PDF panel, one central bank press conference panel, one market reaction panel, one inflation outlook chart panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, manga emphasis symbols, small source box, PDF marker icon, video marker icon",
       "category": "形式・レイアウト",
       "role": "situation"
     },
     {
       "id": "us_concerns_layout",
       "title": "米国最新懸念レイアウト",
-      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one inflation and gasoline panel, one Fed policy panel, one housing panel, one labor panel, one growth panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, simple chart markers, small source box, calm newsroom rhythm, no clutter",
+      "content": "6 manga-style infographic panels, Kafka appears as the narrator in the first panel and reaction guide in later panels, headline strip at top, one inflation and gasoline panel, one US central bank policy panel, one housing panel, one labor panel, one growth panel, one final takeaway panel, white gutters, rounded panel borders, clear mobile-readable layout, simple chart markers, small source box, calm newsroom rhythm, no clutter",
       "category": "形式・レイアウト",
       "role": "situation"
     },
@@ -758,7 +758,7 @@
     {
       "id": "logo_orbit_kafka",
       "title": "形式: 宇宙ロゴ単独",
-      "content": "single logo only, Japanese hiragana typography saying 「かふか」 only, centered composition, rounded soft typography, thick rounded strokes, high readability, soft pastel blue and lavender gradient fill, subtle white inner glow, thick white outline, secondary thin pastel outline, smooth stable letter spacing, cute but structured typography, calm emotional atmosphere, commercial vtuber branding aesthetic\n\nsurrounding orbital system inspired by planetary orbits and atomic electron shells, multiple thin elliptical orbit lines around the text, overlapping orbital paths, transparent orbit trails, tiny pastel planets and electrons, soft glowing particles following the orbital curves, small astronomy symbols, subtle stars and sparkles, scientific but gentle mood, minimal quantum diagram aesthetic, gravitational center composition, balanced symmetry, floating orbital motion feeling\n\npastel blue, lavender, pale purple, soft cyan, extremely light gray shadows, clean vector-like lineart, soft anti-aliased edges, elegant negative space, minimal clutter, no character illustration, no panels, no infographic blocks, no neon cyberpunk, no dark background, no 3d render look, no metallic texture, no glossy plastic texture, no harsh contrast, no visual noise, human-designed logo feeling, soft atmospheric haze around the center\n\nhigh resolution, ultra crisp typography, soft layered glow, subtle depth, orbit lines partially behind and partially in front of the text, gentle celestial atmosphere, modern japanese kawaii science branding, emotionally warm but technically structured visual identity",
+      "content": "single logo only, Japanese hiragana typography saying 「かふか」 only, centered composition, rounded soft typography, thick rounded strokes, high readability, soft pastel blue and lavender gradient fill, subtle white inner glow, thick white outline, secondary thin pastel outline, smooth stable letter spacing, cute but structured typography, calm emotional atmosphere, commercial vtuber branding aesthetic\n\nsurrounding orbital motif built from planetary orbits and atomic electron shells, multiple thin elliptical orbit lines around the text, overlapping orbital paths, transparent orbit trails, tiny pastel planets and electrons, soft glowing particles following the orbital curves, small astronomy symbols, subtle stars and sparkles, scientific but gentle mood, minimal quantum diagram aesthetic, gravitational center composition, balanced symmetry, floating orbital motion feeling\n\npastel blue, lavender, pale purple, soft cyan, extremely light gray shadows, clean vector-like lineart, soft anti-aliased edges, elegant negative space, minimal clutter, no character illustration, no panels, no infographic blocks, no neon cyberpunk, no dark background, no 3d render look, no metallic texture, no glossy plastic texture, no harsh contrast, no visual noise, human-designed logo feeling, soft atmospheric haze around the center\n\nhigh resolution, ultra crisp typography, soft layered glow, subtle depth, orbit lines partially behind and partially in front of the text, gentle celestial atmosphere, modern japanese kawaii science branding, emotionally warm but technically structured visual identity",
       "category": "ブランド",
       "artifacts": [
         {
@@ -1457,37 +1457,37 @@
       "role": "situation"
     },
     {
-      "id": "midnight_rose_news_layout",
-      "title": "形式: ミッドナイト・ローズ案内",
+      "id": "nocturne_news_layout",
+      "title": "形式: ノクターン案内",
       "content": "multi-panel romance documentary infographic, elegant dark theme with rose motifs, Kafka narrating the concept of observing hearts, episode list, program features, participants overview, high-quality anime style, professional news layout",
       "category": "形式・レイアウト",
       "role": "situation"
     },
     {
-      "id": "midnight_rose_news_panels",
-      "title": "文言: ミッドナイト・ローズ紹介",
-      "content": "panel 1: title 「ミッドナイト・ローズ・セレクション 〜恋と心の観測ドキュメント〜」, subtitle 「心が動く瞬間を、見届ける。」\npanel 2: features 「本音が交差する、真剣な感情の記録」「選ばれるのは、条件ではなく未来を共にしたい人」\npanel 3: format 「女性たちが集う」「心が動く時間」「最後の選択」\npanel 4: episode list EP1 to EP10, from Encounter to Final Decision\npanel 5: participants 「参加する女性たち、それぞれの想いを胸に、旅が始まる――」",
+      "id": "nocturne_news_panels",
+      "title": "文言: ノクターン紹介",
+      "content": "panel 1: title 「ノクターン・セレクション 〜恋と心の観測ドキュメント〜」, subtitle 「心が動く瞬間を、見届ける。」\npanel 2: features 「本音が交差する、真剣な感情の記録」「選ばれるのは、条件ではなく未来を共にしたい人」\npanel 3: format 「女性たちが集う」「心が動く時間」「最後の選択」\npanel 4: episode list EP1 to EP10, from Encounter to Final Decision\npanel 5: participants 「参加する女性たち、それぞれの想いを胸に、旅が始まる――」",
       "category": "ニュース・セリフ",
       "role": "situation"
     },
     {
-      "id": "midnight_rose_lounge_layout",
-      "title": "形式: ミッドナイト・ローズ・ラウンジ案内",
+      "id": "nocturne_lounge_layout",
+      "title": "形式: ノクターン・ラウンジ案内",
       "content": "VRChat world introduction layout, interior shots of the lounge, night view, relax space features, access info (PC/Quest), social media links, warm emotional atmosphere",
       "category": "形式・レイアウト",
       "role": "situation"
     },
     {
-      "id": "midnight_rose_lounge_panels",
-      "title": "文言: ミッドナイト・ローズ・ラウンジ紹介",
-      "content": "title 「Midnight Rose Lounge in VRChat」, concept 「心を観測する、静かな深夜のラウンジ」, spots 「バルコニー」「暖炉ラウンジ」「ルーフトップバー」「書斎コーナー」, features 「静かに過ごせる大人の雰囲気」「夜景・雨音・間接照明のラックス空間」",
+      "id": "nocturne_lounge_panels",
+      "title": "文言: ノクターン・ラウンジ紹介",
+      "content": "title 「ノクターン・ラウンジ in VRChat」, concept 「心を観測する、静かな深夜のラウンジ」, spots 「バルコニー」「暖炉ラウンジ」「ルーフトップバー」「書斎コーナー」, features 「静かに過ごせる大人の雰囲気」「夜景・雨音・間接照明のラックス空間」",
       "category": "ニュース・セリフ",
       "role": "situation"
     },
     {
       "id": "rose_selection_news_layout",
       "title": "形式: ローズ・セレクション案内",
-      "content": "ローズ・セレクション style news layout, gold and rose theme, 1人の男性と25人の参加者, rose ceremony explanation, date types, episode flow, streaming availability on Amazon Prime Video",
+      "content": "ローズ・セレクション style news layout, gold and rose theme, 1人の男性と25人の参加者, rose ceremony explanation, date types, episode flow, streaming availability on a subscription service",
       "category": "形式・レイアウト",
       "role": "situation"
     },
@@ -1529,7 +1529,7 @@
     {
       "id": "news_comic_pack",
       "title": "ニュース漫画パック",
-      "content": "panel 1: Kafka says 「日銀の会見きたよ〜！」, headline typography says 「2026年4月 金融政策決定会合」\npanel 2: official Bank of Japan PDF styled panel, clean typography, date shown exactly as 「2026年4月30日」, text blocks showing 「政策金利 0.5%程度で据え置き」 and 「中心的見通しの確度は低下」\npanel 3: Kafka reflects while holding a cat plushie, speech bubble 「利上げはまだかな…？」, small yen symbol icons\npanel 4: formal press conference setting, microphones, charts beside the speaker, highlighted quote box saying 「データを丁寧に確認」\npanel 5: market reaction infographic panel, simple arrows and charts, captions 「市場は慎重ムード」 「円安反応」 「見通し下方修正」\npanel 6: final panel, Kafka makes a peace sign, large rounded Japanese typography saying 「急がず様子見ムード！」, soft sparkles and hearts\n6 to 7 manga panels, white gutters, clear reading order, speech bubbles left blank\nclean framing on the upper body\none hand in frame, eyes oriented to the viewer or the object, emotional beat first\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\nclean uniform coloring, smooth even gradients, clear contrast between light and dark areas, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish, ultra clean anime rendering, soft commercial VTuber promotional style, infographic readability prioritized, balanced whitespace, consistent character proportions\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "content": "panel 1: Kafka says 「金融政策会見きたよ〜！」, headline typography says 「2026年4月 金融政策決定会合」\npanel 2: official central bank policy document styled panel, clean typography, date shown exactly as 「2026年4月30日」, text blocks showing 「政策金利 0.5%程度で据え置き」 and 「中心的見通しの確度は低下」\npanel 3: Kafka reflects while holding a cat plushie, speech bubble 「利上げはまだかな…？」, small yen symbol icons\npanel 4: formal press conference setting, microphones, charts beside the speaker, highlighted quote box saying 「データを丁寧に確認」\npanel 5: market reaction infographic panel, simple arrows and charts, captions 「市場は慎重ムード」 「円安反応」 「見通し下方修正」\npanel 6: final panel, Kafka makes a peace sign, large rounded Japanese typography saying 「急がず様子見ムード！」, soft sparkles and hearts\n6 to 7 manga panels, white gutters, clear reading order, speech bubbles left blank\nclean framing on the upper body\none hand in frame, eyes oriented to the viewer or the object, emotional beat first\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\nclean uniform coloring, smooth even gradients, clear contrast between light and dark areas, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish, ultra clean anime rendering, soft commercial VTuber promotional style, infographic readability prioritized, balanced whitespace, consistent character proportions\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "パック",
       "role": "situation"
     },
@@ -2050,8 +2050,8 @@
       ]
     },
     {
-      "id": "boj_press_news_card",
-      "title": "日銀 植田総裁 記者会見漫画",
+      "id": "central_bank_press_news_card",
+      "title": "金融政策記者会見漫画",
       "blocks": [
         "source_research",
         "master_style",
@@ -2062,12 +2062,12 @@
         "news_comic_pack"
       ],
       "kind": "news",
-      "purpose": "日本銀行の記者会見資料を、Kafka 主役の漫画ニュースとして整理する",
+      "purpose": "中央銀行の記者会見資料を、Kafka 主役の漫画ニュースとして整理する",
       "summary": "政策金利据え置き、1.0％への引き上げ提案の否決、中東情勢と原油高のリスク、物価見通しを6コマで追いやすくまとめる。",
       "artifacts": [
         {
-          "path": "artifacts/078_boj_press_news_comic.png",
-          "title": "日銀 植田総裁 記者会見漫画"
+          "path": "artifacts/078_central_bank_press_news_comic.png",
+          "title": "金融政策記者会見漫画"
         }
       ]
     },
@@ -3408,7 +3408,7 @@
       ],
       "kind": "comic",
       "purpose": "米国の最新の懸念材料を、Kafka が短く分かりやすく案内するニュースグラフィックにする",
-      "summary": "インフレ、ガソリン、Fed、住宅、雇用、GDPをまとめて、いまの米国の気分を1枚で見せる。",
+      "summary": "インフレ、ガソリン、US central bank、住宅、雇用、GDPをまとめて、いまの米国の気分を1枚で見せる。",
       "artifacts": [
         {
           "path": "artifacts/098_us_latest_concerns_news.png",
@@ -3952,48 +3952,48 @@
       ]
     },
     {
-      "id": "midnight_rose_news",
+      "id": "nocturne_news",
       "created_at": "2026-05-07T12:30:00+09:00",
-      "title": "ミッドナイト・ローズ紹介ニュース",
+      "title": "ノクターン紹介ニュース",
       "blocks": [
-        "midnight_rose_news_layout",
-        "midnight_rose_news_panels",
+        "nocturne_news_layout",
+        "nocturne_news_panels",
         "master_style",
         "character_kafka",
         "negative_common"
       ],
       "kind": "news",
-      "purpose": "恋愛リアリティ番組「ミッドナイト・ローズ」のコンセプトと詳細を紹介する",
+      "purpose": "オリジナル番組のコンセプトと詳細を紹介する",
       "summary": "番組の形式、エピソードの流れ、参加者の雰囲気をまとめたエレガントなインフォグラフィック。",
       "artifacts": [
         {
-          "path": "artifacts/137_midnight_rose_selection.png",
-          "title": "ミッドナイト・ローズ紹介 (メイン)"
+          "path": "artifacts/137_nocturne_news.png",
+          "title": "ノクターン紹介 (メイン)"
         },
         {
-          "path": "artifacts/138_midnight_rose_selection_v2.png",
-          "title": "ミッドナイト・ローズ紹介 (詳細)"
+          "path": "artifacts/138_nocturne_news_v2.png",
+          "title": "ノクターン紹介 (詳細)"
         }
       ]
     },
     {
-      "id": "midnight_rose_lounge_info",
+      "id": "nocturne_lounge_info",
       "created_at": "2026-05-07T12:30:00+09:00",
-      "title": "ミッドナイト・ローズ・ラウンジ紹介",
+      "title": "ノクターン・ラウンジ紹介",
       "blocks": [
-        "midnight_rose_lounge_layout",
-        "midnight_rose_lounge_panels",
+        "nocturne_lounge_layout",
+        "nocturne_lounge_panels",
         "master_style",
         "character_kafka",
         "negative_common"
       ],
       "kind": "news",
-      "purpose": "VRChatワールド「Midnight Rose Lounge」の魅力を紹介する",
+      "purpose": "VRChatワールドの魅力を紹介する",
       "summary": "ワールド内のスポット、雰囲気、利用方法をまとめたガイド。深夜の落ち着いた空気感を強調。",
       "artifacts": [
         {
-          "path": "artifacts/139_midnight_rose_lounge.png",
-          "title": "ミッドナイト・ローズ・ラウンジ紹介"
+          "path": "artifacts/139_nocturne_lounge.png",
+          "title": "ノクターン・ラウンジ紹介"
         }
       ]
     },
@@ -4582,7 +4582,7 @@
     },
     {
       "id": "boardgame_026_trickmeister",
-      "title": "ボードゲームシリーズ: 026 トリックマイスター",
+      "title": "ボードゲームシリーズ: 026 変則トリックテイキング",
       "blocks": [
         "master_style",
         "character_kafka",
@@ -4593,20 +4593,20 @@
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "トリックマイスターの変わるルールを、マジシャン風に見せる",
+      "purpose": "ルールが変わるカードゲームを、マジシャン風に見せる",
       "summary": "ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 026 トリックマイスターのボードゲーム紹介ビジュアル。トリックマイスターの変わるルールを、マジシャン風に見せる ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 026 変則トリックテイキングのボードゲーム紹介ビジュアル。ルールが変わるカードゲームを、マジシャン風に見せる ルールカードとトランプ風の演出で、変則トリックテイキング感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
-          "path": "artifacts/213_trick_meister.png",
-          "title": "ボードゲームシリーズ: 026 トリックマイスター"
+          "path": "artifacts/213_trick_taking_shift.png",
+          "title": "ボードゲームシリーズ: 026 変則トリックテイキング"
         }
       ]
     },
     {
       "id": "boardgame_027_chiryaku_akuryaku",
-      "title": "ボードゲームシリーズ: 027 知略悪略",
+      "title": "ボードゲームシリーズ: 027 読み合いの心理戦",
       "blocks": [
         "master_style",
         "character_kafka",
@@ -4617,20 +4617,20 @@
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "知略悪略の心理戦を、影のある不敵さで見せる",
+      "purpose": "読み合いの心理戦を、影のある不敵さで見せる",
       "summary": "読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 027 知略悪略のボードゲーム紹介ビジュアル。知略悪略の心理戦を、影のある不敵さで見せる 読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 027 読み合いの心理戦のボードゲーム紹介ビジュアル。読み合いの心理戦を、影のある不敵さで見せる 読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
-          "path": "artifacts/214_chiryaku_akuryaku.png",
-          "title": "ボードゲームシリーズ: 027 知略悪略"
+          "path": "artifacts/214_reading_duel.png",
+          "title": "ボードゲームシリーズ: 027 読み合いの心理戦"
         }
       ]
     },
     {
       "id": "boardgame_028_lost_code",
-      "title": "ボードゲームシリーズ: 028 ロストコード",
+      "title": "ボードゲームシリーズ: 028 数字推理",
       "blocks": [
         "master_style",
         "character_kafka",
@@ -4641,20 +4641,20 @@
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "ロストコードの推理と数字のズレを、未来的な計算感で見せる",
+      "purpose": "数字推理の手触りを、未来的な計算感で見せる",
       "summary": "数字タイル、隠し情報、考え込む視線で推理の手触りを出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 028 ロストコードのボードゲーム紹介ビジュアル。ロストコードの推理と数字のズレを、未来的な計算感で見せる 数字タイル、隠し情報、考え込む視線で推理の手触りを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 028 数字推理のボードゲーム紹介ビジュアル。数字推理の手触りを、未来的な計算感で見せる 数字タイル、隠し情報、考え込む視線で推理の手触りを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
-          "path": "artifacts/215_lost_code.png",
-          "title": "ボードゲームシリーズ: 028 ロストコード"
+          "path": "artifacts/215_jungle_deduction.png",
+          "title": "ボードゲームシリーズ: 028 数字推理"
         }
       ]
     },
     {
       "id": "boardgame_029_charge_spark",
-      "title": "ボードゲームシリーズ: 029 チャージスパーク",
+      "title": "ボードゲームシリーズ: 029 ロボ対戦",
       "blocks": [
         "master_style",
         "character_kafka",
@@ -4665,20 +4665,20 @@
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "チャージスパークのロボ対戦を、電撃と機械感で見せる",
+      "purpose": "ロボ対戦を、電撃と機械感で見せる",
       "summary": "ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 029 チャージスパークのボードゲーム紹介ビジュアル。チャージスパークのロボ対戦を、電撃と機械感で見せる ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 029 ロボ対戦のボードゲーム紹介ビジュアル。ロボ対戦を、電撃と機械感で見せる ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
-          "path": "artifacts/216_charge_spark.png",
-          "title": "ボードゲームシリーズ: 029 チャージスパーク"
+          "path": "artifacts/216_robot_duel.png",
+          "title": "ボードゲームシリーズ: 029 ロボ対戦"
         }
       ]
     },
     {
       "id": "boardgame_030_come_sail_away",
-      "title": "ボードゲームシリーズ: 030 カムセイルアウェイ",
+      "title": "ボードゲームシリーズ: 030 船上配置",
       "blocks": [
         "master_style",
         "character_kafka",
@@ -4689,20 +4689,20 @@
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "カムセイルアウェイの客船配置を、白いマリンルックで見せる",
+      "purpose": "客船配置を、白いマリンルックで見せる",
       "summary": "豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 030 カムセイルアウェイのボードゲーム紹介ビジュアル。カムセイルアウェイの客船配置を、白いマリンルックで見せる 豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 030 船上配置のボードゲーム紹介ビジュアル。客船配置を、白いマリンルックで見せる 豪華客船のデッキ、乗客コマ、チケットの整理感を出して、船上の雰囲気を見せる。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
-          "path": "artifacts/212_come_sail_away.png",
-          "title": "ボードゲームシリーズ: 030 カムセイルアウェイ"
+          "path": "artifacts/212_cruise_boarding.png",
+          "title": "ボードゲームシリーズ: 030 船上配置"
         }
       ]
     },
     {
-      "id": "sts2_aeonglass_boss_reveal",
-      "title": "Slay the Spire 2: Aeonglass boss reveal",
+      "id": "aeonglass_boss_reveal",
+      "title": "Aeonglass boss reveal",
       "blocks": [
         "layout_aeonglass_boss_reveal",
         "character_aeonglass",
@@ -5282,7 +5282,7 @@
       "title": "魅力的な商品制作",
       "blocks": [],
       "kind": "generated",
-      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, VRChat, and BOOTH.",
+      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, virtual social platform, and marketplace.",
       "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
       "artifacts": [
         {
@@ -5290,7 +5290,7 @@
           "title": "魅力的な商品制作"
         }
       ],
-      "generated_prompt": "Create a single-page editorial design sheet / poster in Japanese, intended as a Prompt Vault asset. Theme: attractive product creation for Unity, VRChat, and BOOTH. Must feel like a polished but human-made Japanese creative guide, not corporate, not flashy, not generic infographic.\n\nCharacter: Kafka must be present and recognizable with fixed identity cues: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet expression. Keep her consistent and elegant.\n\nVisual style: clean editorial poster, soft pastel blue and lavender with muted charcoal accents, minimal but premium, airy layout, subtle grain, soft shadows, readable Japanese typography, strong hierarchy, generous negative space, calm visual rhythm, modern but warm. Use a design-sheet composition with section blocks and simple icons, like a product guide that could be sold on BOOTH.\n\nLayout: A4-like vertical poster. Large title at top: \"魅力的な商品制作\". Small subtitle: \"Unity / VRChat / BOOTH\". Place Kafka on the right half as a guide character, either standing or half-body, with a calm presenter pose, pointing gently toward the guide sections. Left half contains concise Japanese sections in clean blocks.\n\nRequired content sections, in Japanese, concise and readable:\n1. \"1秒で伝わる\" - what it is, who it is for, why it matters.\n2. \"軽い・壊れない\" - performance, stability, no wasted complexity.\n3. \"触った瞬間に気持ちいい\" - motion quality, materials, spacing, comfort.\n4. \"買ったあとに迷わない\" - setup, instructions, trust, clarity.\n5. \"売れる見せ方\" - thumbnail, first impression, hierarchy, proof.\n\nAdd small supporting phrases throughout:\n- \"見た瞬間に用途が分かる\"\n- \"導入が楽\"\n- \"破綻しない\"\n- \"使うほど好きになる\"\n- \"購入不安を減らす\"\n\nDesign cues: not crowded, not too much text, but enough to feel like a real guide page. Use neat Japanese sans-serif text. Include small dividers, subtle bullet marks, and tiny accent labels. Add a few light diagram-like arrows or callout tags. Keep the whole piece visually balanced and calm.\n\nMood: sensorial, practical, trustworthy, tasteful, quietly persuasive. It should feel like a design guide made by someone who understands product quality, user comfort, and sales pages. No neon, no luxury fashion gloss, no chaotic typography, no sci-fi, no overdecorated idol aesthetic.\n\nNegative prompt: oversaturated colors, neon lighting, glossy skin, doll-like face, huge anime eyes, perfect symmetry, over-polished AI beauty filter, plastic hair, cinematic bloom, chaotic typography, clutter, empty corporate layout, low readability, excessive text, broken Japanese, random English, dark horror mood, hypersexualized styling, 3D render look, watermark, signature, low detail, blurry text.",
+      "generated_prompt": "Create a single-page editorial design sheet / poster in Japanese, intended as a Prompt Vault asset. Theme: attractive product creation for Unity, virtual social platform, and marketplace. Must feel like a polished but human-made Japanese creative guide, not corporate, not flashy, not generic infographic.\n\nCharacter: Kafka must be present and recognizable with fixed identity cues: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet expression. Keep her consistent and elegant.\n\nVisual style: clean editorial poster, soft pastel blue and lavender with muted charcoal accents, minimal but premium, airy layout, subtle grain, soft shadows, readable Japanese typography, strong hierarchy, generous negative space, calm visual rhythm, modern but warm. Use a design-sheet composition with section blocks and simple icons, like a product guide that could be sold on marketplace.\n\nLayout: A4-like vertical poster. Large title at top: \"魅力的な商品制作\". Small subtitle: \"Unity / virtual social platform / marketplace\". Place Kafka on the right half as a guide character, either standing or half-body, with a calm presenter pose, pointing gently toward the guide sections. Left half contains concise Japanese sections in clean blocks.\n\nRequired content sections, in Japanese, concise and readable:\n1. \"1秒で伝わる\" - what it is, who it is for, why it matters.\n2. \"軽い・壊れない\" - performance, stability, no wasted complexity.\n3. \"触った瞬間に気持ちいい\" - motion quality, materials, spacing, comfort.\n4. \"買ったあとに迷わない\" - setup, instructions, trust, clarity.\n5. \"売れる見せ方\" - thumbnail, first impression, hierarchy, proof.\n\nAdd small supporting phrases throughout:\n- \"見た瞬間に用途が分かる\"\n- \"導入が楽\"\n- \"破綻しない\"\n- \"使うほど好きになる\"\n- \"購入不安を減らす\"\n\nDesign cues: not crowded, not too much text, but enough to feel like a real guide page. Use neat Japanese sans-serif text. Include small dividers, subtle bullet marks, and tiny accent labels. Add a few light diagram-like arrows or callout tags. Keep the whole piece visually balanced and calm.\n\nMood: sensorial, practical, trustworthy, tasteful, quietly persuasive. It should feel like a design guide made by someone who understands product quality, user comfort, and sales pages. No neon, no luxury fashion gloss, no chaotic typography, no sci-fi, no overdecorated idol aesthetic.\n\nNegative prompt: oversaturated colors, neon lighting, glossy skin, doll-like face, huge anime eyes, perfect symmetry, over-polished AI beauty filter, plastic hair, cinematic bloom, chaotic typography, clutter, empty corporate layout, low readability, excessive text, broken Japanese, random English, dark horror mood, hypersexualized styling, 3D render look, watermark, signature, low detail, blurry text.",
       "created_at": "2026-05-09T13:07:21+09:00"
     },
     {
@@ -5298,7 +5298,7 @@
       "title": "魅力的な商品制作",
       "blocks": [],
       "kind": "generated",
-      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, VRChat, and BOOTH.",
+      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, virtual social platform, and marketplace.",
       "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
       "artifacts": [
         {
