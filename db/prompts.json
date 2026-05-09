@@ -902,8 +902,8 @@
       "role": "situation"
     },
     {
-      "id": "background_splendor_table",
-      "title": "背景: 宝石の煌き対戦",
+      "id": "background_gem_table",
+      "title": "背景: きらめき競り対戦",
       "content": "bright tabletop board game background, gem tokens in ruby sapphire emerald diamond and onyx, development cards laid out in rows, noble tiles, gold joker tokens, soft daylight, clean tabletop, cozy but strategic, elegant and readable, no clutter",
       "category": "背景",
       "role": "background"
@@ -1007,8 +1007,8 @@
       "role": "text"
     },
     {
-      "id": "splendor_game_text_pack",
-      "title": "文言: 宝石の煌き",
+      "id": "gem_game_text_pack",
+      "title": "文言: きらめき競り",
       "content": "「宝石を集めるよ」「ゴールドは万能」「買えるカードを増やす」「あと少しで勝てる」「貴族が来た」「この一手が大事」「得点が見えてきた」「うれしい」「逆転の流れ」「今日はこれで決める」",
       "category": "セリフ・フレーズ",
       "role": "text"
@@ -1049,8 +1049,8 @@
       "role": "outfit"
     },
     {
-      "id": "splendor_outfit_kafka",
-      "title": "衣装: 宝石の煌き",
+      "id": "gem_outfit_kafka",
+      "title": "衣装: きらめき競り",
       "content": "elegant jewel-themed fantasy outfit, fitted coat or capelet, jewel-toned inner dress, subtle gold trim, gem brooch, delicate gloves or cuffs, pendant jewelry, refined silhouette, white and pastel-blue base with ruby, sapphire, emerald, and amethyst accents, luminous and expensive but airy and clean",
       "category": "衣装",
       "role": "situation"
@@ -1485,16 +1485,16 @@
       "role": "situation"
     },
     {
-      "id": "bachelor_japan_news_layout",
-      "title": "形式: バチェラー・ジャパン案内",
-      "content": "The Bachelor Japan style news layout, gold and rose theme, 1 Bachelor and 25 women, rose ceremony explanation, date types, episode flow, streaming availability on Amazon Prime Video",
+      "id": "rose_selection_news_layout",
+      "title": "形式: ローズ・セレクション案内",
+      "content": "ローズ・セレクション style news layout, gold and rose theme, 1人の男性と25人の参加者, rose ceremony explanation, date types, episode flow, streaming availability on Amazon Prime Video",
       "category": "形式・レイアウト",
       "role": "situation"
     },
     {
-      "id": "bachelor_japan_news_panels",
-      "title": "文言: バチェラー・ジャパン紹介",
-      "content": "title 「The Bachelor Japan」, intro 「1人の独身男性“バチェラー”を巡り、25名の女性たちが真実の愛を本気で探す。」, features 「本気の恋愛を求める女性たちが集結」「最後に選ばれるのは、たった一人の運命の人」, flow 「カクテルパーティー」「デート」「ローズセレモニー」",
+      "id": "rose_selection_news_panels",
+      "title": "文言: ローズ・セレクション紹介",
+      "content": "title 「ローズ・セレクション」, intro 「1人の独身男性“ローズ・セレクション”を巡り、25名の女性たちが真実の愛を本気で探す。」, features 「本気の恋愛を求める女性たちが集結」「最後に選ばれるのは、たった一人の運命の人」, flow 「カクテルパーティー」「デート」「ローズセレモニー」",
       "category": "ニュース・セリフ",
       "role": "situation"
     },
@@ -2958,44 +2958,44 @@
       ]
     },
     {
-      "id": "splendor_outfit_sheet",
-      "title": "Kafka 宝石の煌き衣装シート",
+      "id": "gem_outfit_sheet",
+      "title": "Kafka きらめき競り衣装シート",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
-        "splendor_outfit_kafka",
+        "gem_outfit_kafka",
         "outfit_exploration_layout"
       ],
       "kind": "design_sheet",
-      "purpose": "宝石の煌きの雰囲気に合う上品な衣装案を比較しながら固める",
+      "purpose": "きらめき競りの雰囲気に合う上品な衣装案を比較しながら固める",
       "summary": "宝石色やルネサンス感を意識した、きらびやかで上品な衣装制作シート。",
       "artifacts": [
         {
-          "path": "artifacts/089_splendor_outfit_sheet.png",
-          "title": "宝石の煌き衣装シートの実例"
+          "path": "artifacts/089_gem_outfit_sheet.png",
+          "title": "きらめき競り衣装シートの実例"
         }
       ]
     },
     {
-      "id": "splendor_play_comic",
-      "title": "Kafka 宝石の煌き漫画",
+      "id": "gem_game_comic",
+      "title": "Kafka きらめき競り漫画",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
         "comic_layout",
         "framing_reaction_focus",
         "pose_reaction_focus",
-        "background_splendor_table",
-        "splendor_game_text_pack",
+        "background_gem_table",
+        "gem_game_text_pack",
         "effects_pack"
       ],
       "kind": "comic",
-      "purpose": "Splendor / 宝石の煌きで遊んでいる様子を、4コマ漫画として見せる",
+      "purpose": "きらめき競りで遊んでいる様子を、4コマ漫画として見せる",
       "summary": "宝石トークンを集めてカードを買い、貴族の得点が見えてくる流れを、かわいく分かりやすく見せる。",
       "artifacts": [
         {
-          "path": "artifacts/094_splendor_game_comic.png",
-          "title": "宝石の煌き漫画の実例"
+          "path": "artifacts/094_gem_game_comic.png",
+          "title": "きらめき競り漫画の実例"
         }
       ]
     },
@@ -3998,23 +3998,23 @@
       ]
     },
     {
-      "id": "bachelor_japan_news",
+      "id": "rose_selection_news",
       "created_at": "2026-05-07T12:30:00+09:00",
-      "title": "バチェラー・ジャパン紹介ニュース",
+      "title": "ローズ・セレクション紹介ニュース",
       "blocks": [
-        "bachelor_japan_news_layout",
-        "bachelor_japan_news_panels",
+        "rose_selection_news_layout",
+        "rose_selection_news_panels",
         "master_style",
         "character_kafka",
         "negative_common"
       ],
       "kind": "news",
-      "purpose": "「バチェラー・ジャパン」の基本ルールと魅力を紹介する",
-      "summary": "リアリティ番組の金字塔であるバチェラーの構成、セレモニー、配信情報をまとめたニュースグラフィック。",
+      "purpose": "「ローズ・セレクション」の基本ルールと魅力を紹介する",
+      "summary": "リアリティ番組の金字塔であるローズ・セレクションの構成、セレモニー、配信情報をまとめたニュースグラフィック。",
       "artifacts": [
         {
-          "path": "artifacts/140_the_bachelor_japan.png",
-          "title": "バチェラー・ジャパン紹介"
+          "path": "artifacts/140_rose_selection_news.png",
+          "title": "ローズ・セレクション紹介"
         }
       ]
     },
@@ -4620,8 +4620,7 @@
       "purpose": "知略悪略の心理戦を、影のある不敵さで見せる",
       "summary": "読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 027 知略悪略のボードゲーム紹介ビジュアル。知略悪略の心理戦を、影のある不敵さで見せる 読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
-      ,
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 027 知略悪略のボードゲーム紹介ビジュアル。知略悪略の心理戦を、影のある不敵さで見せる 読み合いの緊張感と渋い色味で、仕掛け合いの空気を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
       "artifacts": [
         {
           "path": "artifacts/214_chiryaku_akuryaku.png",
@@ -4645,7 +4644,13 @@
       "purpose": "ロストコードの推理と数字のズレを、未来的な計算感で見せる",
       "summary": "数字タイル、隠し情報、考え込む視線で推理の手触りを出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 028 ロストコードのボードゲーム紹介ビジュアル。ロストコードの推理と数字のズレを、未来的な計算感で見せる 数字タイル、隠し情報、考え込む視線で推理の手触りを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 028 ロストコードのボードゲーム紹介ビジュアル。ロストコードの推理と数字のズレを、未来的な計算感で見せる 数字タイル、隠し情報、考え込む視線で推理の手触りを出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/215_lost_code.png",
+          "title": "ボードゲームシリーズ: 028 ロストコード"
+        }
+      ]
     },
     {
       "id": "boardgame_029_charge_spark",
@@ -4663,7 +4668,13 @@
       "purpose": "チャージスパークのロボ対戦を、電撃と機械感で見せる",
       "summary": "ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。",
       "created_at": "2026-05-08T00:00:00+09:00",
-      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 029 チャージスパークのボードゲーム紹介ビジュアル。チャージスパークのロボ対戦を、電撃と機械感で見せる ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution"
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: 029 チャージスパークのボードゲーム紹介ビジュアル。チャージスパークのロボ対戦を、電撃と機械感で見せる ロボット、エネルギー、電撃エフェクトを強く出して対戦感を出す。\nScene/backdrop: clean tabletop scene with readable board game components\nSubject: Kafka presenting the game with cards, tokens, tiles, and a clear tabletop composition\nComposition: square or 4:5 social post, one large portrait, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped cards, clutter, watermark, low resolution",
+      "artifacts": [
+        {
+          "path": "artifacts/216_charge_spark.png",
+          "title": "ボードゲームシリーズ: 029 チャージスパーク"
+        }
+      ]
     },
     {
       "id": "boardgame_030_come_sail_away",
@@ -4804,27 +4815,27 @@
       "created_at": "2026-05-08T16:24:15+09:00"
     },
     {
-      "id": "boardgame_003_splendor_marvel",
-      "title": "ボードゲームシリーズ: 003 スプレンダー マーベル",
+      "id": "boardgame_003_hero_gem",
+      "title": "ボードゲームシリーズ: 003 ヒーロー ジェム",
       "blocks": [
         "master_style",
         "character_kafka",
         "boardgame_social_layout",
-        "background_splendor_table",
-        "splendor_game_text_pack",
+        "background_gem_table",
+        "gem_game_text_pack",
         "clean_quality_rendering",
         "negative_common"
       ],
       "kind": "social",
-      "purpose": "スプレンダー マーベルのきらめく競り感を、ヒーロー感のある卓上で見せる",
+      "purpose": "ヒーロー ジェムのきらめく競り感を、ヒーロー感のある卓上で見せる",
       "summary": "宝石とヒーローカードを並べて、きらめく競りの空気を出す。",
       "artifacts": [
         {
-          "path": "artifacts/146_003_splendor_marvel.png",
-          "title": "ボードゲームシリーズ: 003 スプレンダー マーベル"
+          "path": "artifacts/146_003_hero_gem.png",
+          "title": "ボードゲームシリーズ: 003 ヒーロー ジェム"
         }
       ],
-      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームシリーズ: 003 スプレンダー マーベル. スプレンダー マーベルのきらめく競り感を、ヒーロー感のある卓上で見せる 宝石とヒーローカードを並べて、きらめく競りの空気を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: ボードゲームシリーズ: 003 ヒーロー ジェム. ヒーロー ジェムのきらめく競り感を、ヒーロー感のある卓上で見せる 宝石とヒーローカードを並べて、きらめく競りの空気を出す。\nComposition: clean layout, mobile readable, tidy margins\nRendering: polished anime illustration, soft pastel lighting, crisp linework, no clutter\nNegative: blurry text, broken hands, extra fingers, warped composition, watermark, low resolution",
       "created_at": "2026-05-08T16:24:15+09:00"
     },
     {
@@ -5263,8 +5274,40 @@
           "title": "lazydays magazine cover"
         }
       ],
-      "generated_prompt": null,
+      "generated_prompt": "masterpiece, best quality, ultra detailed Japanese underground fashion magazine cover, authentic 2026 indie jirai-kei fashion zine aesthetic, emotionally subdued summer bedroom atmosphere, intimate internet subculture realism, understated Japanese alt-girl culture, casual smartphone selfie feeling, muted black and dusty mauve palette, low contrast indoor lighting, slight gray undertones, realistic skin texture, subtle analog film grain, believable human imperfections, soft emotional loneliness, non-glamorous realism, slightly warm summer night atmosphere\n\npetite Japanese jirai-kei girl,\nshort black bob haircut,\nperfectly straight blunt bangs,\ndusty muted pink inner hair color,\nthin faded pink face-framing streaks,\nslightly messy natural hair strands,\nsoft heterochromia,\nleft eye muted gray-green,\nright eye dusty pink-gray,\nsleepy tired eyes,\ncalm distant expression,\nsoft under-eye shadows,\ntiny beauty marks under eyes,\nsmall natural lips,\nnarrow shoulders,\nslightly slouched posture,\nnatural proportions,\nquiet emotional presence,\nrealistic asymmetry\n\nwearing oversized washed black gothic t-shirt,\noff-shoulder loose neckline,\nthin visible black camisole strap,\nfaded pink-purple angel gothic graphic print,\nslightly worn cotton texture,\nminimal black choker,\nsmall silver cross pendant,\nminimal accessories,\ncasual layering,\nnot cosplay,\nnot excessive styling\n\nordinary dim Japanese bedroom,\ngray walls,\nsoft plush toys on bed,\nsmall monochrome anime posters taped casually on wall,\nslightly cluttered apartment realism,\nplastic water bottles and small cosmetics in background,\ndark bedding,\nsoft ambient room lighting,\ncomfortable lived-in atmosphere,\nbackground softly blurred,\nsubtle depth of field\n\nmagazine cover layout,\nlarge pale dusty pink lowercase logo at top reading \"lazydays\",\nminimal modern typography,\nclean sans-serif editorial text,\nsoft pale pink text blocks,\nbalanced negative space,\nsmall Japanese feature headlines,\ncomfortable editorial spacing,\nindie Japanese fashion zine feeling,\neditorial but intimate,\nnot luxury fashion magazine,\nissue number and date in top right corner,\nsmall subtitle text under logo\n\nmain Japanese headlines:\n「小さな部屋と、小さなこだわり。」\n「今日の気分で選ぶ黒とピンクの服」\n「無理しないメイクのはなし。」\n「静かなわたしのつくりかた。」\n\nside feature text:\n「よく聴く夏のプレイリスト。」\n「お気に入りのリップの話。」\n「憂鬱な日のすごしかた。」\n\nquote text:\n「最近アイスいっぱい食べてるけど\n夏バテなのかな…たぶん気のせい。」\n\ncamera:\nclose-up selfie framing,\nslightly high-angle smartphone front camera perspective,\narm partially visible in foreground,\ntight crop,\nnatural lens distortion,\neye-level intimacy,\nsoft depth of field,\nsharp face focus,\nbackground softly blurred\n\nstyle:\nInstagram + underground fashion magazine hybrid aesthetic,\nslightly stylized everyday realism,\nsoft muted realism,\nnon-glossy rendering,\nnot polished AI beauty style,\nnot doll-like,\nnot cinematic,\nnot fantasy,\nnot gravure,\nnot oversexualized,\nquiet human realism,\nsoft analog photography mood\n\nnegative prompt:\noversaturated pink,\nneon lighting,\nglossy skin,\nporcelain doll face,\nhuge anime eyes,\nheavy gothic accessories,\nvisual kei overload,\ncinematic bloom,\nperfect symmetry,\nAI beauty filter,\nhyper-polished retouching,\nplastic hair,\nover-sharpening,\nluxury studio,\nempty background,\ndramatic makeup,\nidol gravure aesthetic,\n3D render look,\nlatex clothing,\ncyberpunk elements,\nextreme emo styling,\nchaotic typography,\nhigh saturation,\nfashion runway lighting",
       "created_at": "2026-05-09T12:22:33+09:00"
+    },
+    {
+      "id": "gen_20260509_130721",
+      "title": "魅力的な商品制作",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, VRChat, and BOOTH.",
+      "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
+      "artifacts": [
+        {
+          "path": "artifacts/217_artifact.png",
+          "title": "魅力的な商品制作"
+        }
+      ],
+      "generated_prompt": "Create a single-page editorial design sheet / poster in Japanese, intended as a Prompt Vault asset. Theme: attractive product creation for Unity, VRChat, and BOOTH. Must feel like a polished but human-made Japanese creative guide, not corporate, not flashy, not generic infographic.\n\nCharacter: Kafka must be present and recognizable with fixed identity cues: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet expression. Keep her consistent and elegant.\n\nVisual style: clean editorial poster, soft pastel blue and lavender with muted charcoal accents, minimal but premium, airy layout, subtle grain, soft shadows, readable Japanese typography, strong hierarchy, generous negative space, calm visual rhythm, modern but warm. Use a design-sheet composition with section blocks and simple icons, like a product guide that could be sold on BOOTH.\n\nLayout: A4-like vertical poster. Large title at top: \"魅力的な商品制作\". Small subtitle: \"Unity / VRChat / BOOTH\". Place Kafka on the right half as a guide character, either standing or half-body, with a calm presenter pose, pointing gently toward the guide sections. Left half contains concise Japanese sections in clean blocks.\n\nRequired content sections, in Japanese, concise and readable:\n1. \"1秒で伝わる\" - what it is, who it is for, why it matters.\n2. \"軽い・壊れない\" - performance, stability, no wasted complexity.\n3. \"触った瞬間に気持ちいい\" - motion quality, materials, spacing, comfort.\n4. \"買ったあとに迷わない\" - setup, instructions, trust, clarity.\n5. \"売れる見せ方\" - thumbnail, first impression, hierarchy, proof.\n\nAdd small supporting phrases throughout:\n- \"見た瞬間に用途が分かる\"\n- \"導入が楽\"\n- \"破綻しない\"\n- \"使うほど好きになる\"\n- \"購入不安を減らす\"\n\nDesign cues: not crowded, not too much text, but enough to feel like a real guide page. Use neat Japanese sans-serif text. Include small dividers, subtle bullet marks, and tiny accent labels. Add a few light diagram-like arrows or callout tags. Keep the whole piece visually balanced and calm.\n\nMood: sensorial, practical, trustworthy, tasteful, quietly persuasive. It should feel like a design guide made by someone who understands product quality, user comfort, and sales pages. No neon, no luxury fashion gloss, no chaotic typography, no sci-fi, no overdecorated idol aesthetic.\n\nNegative prompt: oversaturated colors, neon lighting, glossy skin, doll-like face, huge anime eyes, perfect symmetry, over-polished AI beauty filter, plastic hair, cinematic bloom, chaotic typography, clutter, empty corporate layout, low readability, excessive text, broken Japanese, random English, dark horror mood, hypersexualized styling, 3D render look, watermark, signature, low detail, blurry text.",
+      "created_at": "2026-05-09T13:07:21+09:00"
+    },
+    {
+      "id": "gen_20260509_131152",
+      "title": "魅力的な商品制作",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "Prompt Vault design sheet for attractive product creation across Unity, VRChat, and BOOTH.",
+      "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
+      "artifacts": [
+        {
+          "path": "artifacts/218_jp_1918f714.png",
+          "title": "魅力的な商品制作"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T13:11:52+09:00"
     }
   ]
 }

@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import re
+import hashlib
 from pathlib import Path
 
 
 def slugify(value: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
-    return slug or "artifact"
+    if slug:
+        return slug
+
+    digest = hashlib.sha1(value.encode("utf-8")).hexdigest()[:8]
+    return f"jp_{digest}"
 
 
 def next_artifact_number(artifacts_path: Path) -> int:

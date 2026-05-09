@@ -20,3 +20,4 @@
 - [0018 未接続PNGの再採番・再接続ワークフロー](0018-unconnected-png-reconnect-workflow.md)
 - [0019 設定と共通 artifact 操作を単一正本に寄せる](0019-config-and-shared-artifact-ops.md)
 - [0020 構造境界と pack / template の上限を固定する](0020-structure-boundaries-and-pack-limits.md)
+- [0021 外部参照の衛生基準を「借りる / 変える / 一目で修正」に分ける](0021-external-reference-hygiene.md)
