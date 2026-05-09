@@ -53,7 +53,7 @@ def main() -> int:
         return 1
 
     ARTIFACTS_PATH.mkdir(exist_ok=True)
-    artifact_name = f"{next_artifact_number():03d}_{slugify(args.title)}.png"
+    artifact_name = f"{next_artifact_number(ARTIFACTS_PATH):03d}_{slugify(args.title)}.png"
     destination = ARTIFACTS_PATH / artifact_name
     if destination.exists():
         sys.stderr.write(f"ERROR: destination already exists: {destination}\n")

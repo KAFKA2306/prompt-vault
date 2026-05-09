@@ -15,6 +15,7 @@
 | `id` | 文字列 | 一意の識別子 | `"master_style"` |
 | `title` | 文字列 | 部品の名称。[ADR 0012](ADR/0012-semantic-block-naming.md) の形式。 | `"キャラクター: KAFKA"` |
 | `content` | 文字列 | プロンプト本文 | `"high quality, master piece..."` |
+| `role` | 文字列 | 主役割。`identity` / `style` / `layout` / `outfit` / `pose` / `background` / `lighting` / `text` / `situation` / `pack`。 | `"identity"` |
 | `category` | 文字列 | 部品の分類（任意） | `"style"`, `"character"` |
 
 ### 1.2 Template (プロンプトの型 / 成果物)
@@ -39,6 +40,20 @@
 未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
 - 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
 - Kafka の見た目は `character_kafka` と `kafka_identity_lock` です。
+
+### 1.3 構造ルール
+
+`db/prompts.json` の編集では、次の境界を守ります。
+
+- `character_kafka`、`character_kafka_core`、`hair_kafka_detail`、`accessory_kafka_hairpin`、`kafka_identity_lock`、`speech_mode_kafka` は identity block として扱う。
+- `master_style`、`rendering_soft_standard`、`rendering_soft_infographic`、`rendering`、`clean_quality_rendering` は style block として扱う。
+- `morning_*`、`gaming_*`、`reading_*`、`news_*`、`poker_*`、`joinwars_*`、`cosplay_*` は situation block として扱う。
+- `pack` は最大 5 blocks 相当までに抑える。
+- `template.blocks` は最大 8 blocks に抑える。
+- 1 block は 1 主役割に抑える。
+- 新規 block 作成前に既存 block を検索する。
+- style と identity を混ぜない。
+- template は用途だけを書く。
 
 ---
 

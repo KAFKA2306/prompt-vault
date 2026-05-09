@@ -12,6 +12,7 @@ class Block(BaseModel):
     id: str
     title: str
     content: str
+    role: str
     category: str = ""
 
 

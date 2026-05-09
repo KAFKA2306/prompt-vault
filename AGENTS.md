@@ -40,6 +40,8 @@
 - **Zero-Fat**: 「単機能・最小構成」を維持せよ。重複したロジックや、使われていないフィールドは削除の対象。
 - **Gallery-First**: このプロジェクトは「ギャラリー」である。全ての変更は「画像が見やすく、プロンプトがコピーしやすいか」という基準で評価せよ。
 - **Naming as Logic**: 名称（title）は単なるラベルではなく、システム内の役割（[ADR 0012](docs/ADR/0012-semantic-block-naming.md)）を示す。類似したブロックは「包含関係」がないか常に疑え。
+- **Structure Boundaries**: `character_kafka`、`kafka_identity_lock`、`speech_mode_kafka` は identity block として固定する。`morning_*`、`gaming_*`、`news_*`、`cosplay_*` は situation block として一時注入だけにする。`pack` は最大 5 blocks 相当、`template.blocks` は最大 8 blocks を目安にする。
+- **Role First**: `db/prompts.json` の `Block` には `role` を付ける。`identity`、`style`、`layout`、`outfit`、`pose`、`background`、`lighting`、`text`、`situation`、`pack` を基準に見る。
 - **Source Fidelity**: ボードゲーム系の画像は、元のルール、コンポーネント、既存の見た目を確認してから作る。知っている人が見て違和感を覚える抽象化や、雑な一般化は避ける。
 
 ---
