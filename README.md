@@ -92,6 +92,7 @@ python3 scripts/audit_artifacts.py
 - **アセット**: `artifacts/` に WebP 最適化された画像が格納されます。
 - **退避先**: 未接続の古い PNG は `artifacts/_orphaned/` に移して保管します。再採番して戻すときは `scripts/reconnect_unconnected_pngs.py` を使います。
 - **設定**: `config.yaml` でモデル名などを管理します。
+- **Functions**: `functions/api/prompt-generate.js` は Cloudflare Pages Function です。生成本文は `prompts/frontend_codex.md` を読みます。
 
 ---
 

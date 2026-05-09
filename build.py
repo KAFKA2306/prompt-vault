@@ -16,6 +16,7 @@ DB_PATH = ROOT / "db" / "prompts.json"
 STATIC_PATH = ROOT / "static"
 DIST_PATH = ROOT / "dist"
 ARTIFACTS_PATH = ROOT / "artifacts"
+PROMPTS_PATH = ROOT / "prompts"
 
 
 def load_db() -> PromptDB:
@@ -74,6 +75,13 @@ def write_dist() -> None:
     for s in STATIC_PATH.rglob("*"):
         if s.is_file() and s.name not in ["index.html", "style.css", "app.js"]:
             dest = DIST_PATH / s.relative_to(STATIC_PATH)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(s, dest)
+
+    # Copy prompt templates for Pages Functions
+    for s in PROMPTS_PATH.rglob("*"):
+        if s.is_file():
+            dest = DIST_PATH / s.relative_to(ROOT)
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(s, dest)
 

@@ -21,42 +21,23 @@ export async function onRequestPost(context) {
   const url = new URL(request.url);
   const dbRes = await env.ASSETS.fetch(new URL("/api/db", url.origin));
   const db = await dbRes.json();
+  const codexRes = await env.ASSETS.fetch(new URL("/prompts/frontend_codex.md", url.origin));
+  if (!codexRes.ok) {
+    return new Response(JSON.stringify({ error: "frontend_codex.md is not available" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+  const codexTemplate = await codexRes.text();
 
   const tpl = db.templates.find(t => t.id === template_id);
   const blocksMap = Object.fromEntries(db.blocks.map(b => [b.id, b]));
   const bids = block_ids || tpl.blocks;
   const src = bids.map(id => blocksMap[id] ? `- ${blocksMap[id].title} (${id}): ${blocksMap[id].content}` : "").filter(Boolean).join("\n");
-
-  const codex = `# Prompt Vault Frontend Codex
-
-あなたは既存ブロックの構造を保ち、必要最小限の差分で更新する編集者です。
-
-## 出力形式 (JSONのみ)
-
-\`\`\`json
-{
-  "title": "シチュエーションに合わせた短いタイトル",
-  "block_updates": { "block_id": "updated content" },
-  "addition": "既存ブロックに入らない新しい補足（1フレーズ以内、原則空文字）"
-}
-\`\`\`
-
-## 編集ルール
-
-1. **既存優先**: 可能な限り既存ブロックを流用する。
-2. **最小更新**: ユーザー指示に合わないブロックだけを更新する。
-3. **役割維持**: \`master_style\`, \`character\`, \`negative\` などの役割を壊さない。
-4. **命名規則**: 「生成版」「テンプレート」等の汎用語や \`/\` を使わず、具体的に短く命名する。
-
-## コンテキスト
-
-テンプレート名: ${tpl?.title || "Unknown"}
-指示文: ${instruction}
-
-## 既存ブロック (ID: content)
-
-${src}
-`;
+  const codex = codexTemplate
+    .replace("{{template_title}}", tpl?.title || "Unknown")
+    .replace("{{instruction}}", instruction)
+    .replace("{{source_blocks}}", src);
 
   const apiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
     method: "POST",
