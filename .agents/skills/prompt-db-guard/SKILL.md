@@ -40,10 +40,10 @@ description: prompts.json の整合性と品質を監査し、破壊的変更や
 
 ## 使用方法
 
-`scripts/guard.py` を実行して JSON 出力を得る。
+`scripts/audit_db.py` を実行して監査結果を得る。
 
 ```bash
-python3 scripts/guard.py
+python3 scripts/audit_db.py
 ```
 
 ## 出力形式
