@@ -10,6 +10,8 @@
 - **[AGENTS.md](AGENTS.md)**: このファイル。開発の「作法」と「優先順位」。
 - **[ADR/](docs/ADR/)**: 過去の「決定事項」とその理由。特に [ADR 0012](docs/ADR/0012-semantic-block-naming.md) の命名規則。
 - **[src/models.py](src/models.py)**: 実装上の「真実」。Pydantic モデルがデータの整合性を担保する。
+- **[docs/ADR/0022-docs-and-skills-no-inference-policy.md](docs/ADR/0022-docs-and-skills-no-inference-policy.md)**: docs と skills に書いてよい範囲の決定事項。
+- **[docs/ADR/0023-unity-command-queue-bridge.md](docs/ADR/0023-unity-command-queue-bridge.md)**: Unity 操作を command queue と result file に寄せる決定事項。
 
 ### 2. 視覚的・体験的な修正（表示崩れ、UI改善）
 
@@ -44,6 +46,7 @@
 - **Structure Boundaries**: `character_kafka`、`kafka_identity_lock`、`speech_mode_kafka` は identity block として固定する。`morning_*`、`gaming_*`、`news_*`、`cosplay_*` は situation block として一時注入だけにする。`pack` は最大 5 blocks 相当、`template.blocks` は最大 8 blocks を目安にする。
 - **Role First**: `db/prompts.json` の `Block` には `role` を付ける。`identity`、`style`、`layout`、`outfit`、`pose`、`background`、`lighting`、`text`、`situation`、`pack` を基準に見る。
 - **Source Fidelity**: ボードゲーム系の画像は、元のルール、コンポーネント、既存の見た目を確認してから作る。知っている人が見て違和感を覚える抽象化や、雑な一般化は避ける。
+- **No Inference in Docs / Skills**: `docs/*` と `.agents/skills/*` には、ファイルから直接確認できる事実、明示された決定、実行手順だけを書く。推論、要約の飛躍、未確認の仕様や機能は書かない。
 
 ---
 

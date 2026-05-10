@@ -41,6 +41,7 @@
 - `paths.artifacts`
 - `paths.orphaned_artifacts`
 - `paths.prompts`
+- `paths.skills_index`
 - `paths.generated_images`
 - `audit_literals`
 

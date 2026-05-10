@@ -21,3 +21,6 @@
 - [0019 設定と共通 artifact 操作を単一正本に寄せる](0019-config-and-shared-artifact-ops.md)
 - [0020 構造境界と pack / template の上限を固定する](0020-structure-boundaries-and-pack-limits.md)
 - [0021 外部参照の衛生基準を「借りる / 変える / 一目で修正」に分ける](0021-external-reference-hygiene.md)
+- [0022 docs と skills は推論を書かず、確認できる事実だけを書く](0022-docs-and-skills-no-inference-policy.md)
+- [0023 Unity 操作は command queue と result file で行う](0023-unity-command-queue-bridge.md)
+- [0024 wav artifact を画像 artifact と同じ登録経路で扱う](0024-wav-artifact-support.md)

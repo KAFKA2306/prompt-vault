@@ -93,6 +93,7 @@ python3 scripts/audit_artifacts.py
 - **退避先**: 未接続の古い PNG は `artifacts/_orphaned/` に移して保管します。再採番して戻すときは `scripts/reconnect_unconnected_pngs.py` を使います。
 - **設定**: `config.yaml` でモデル名などを管理します。
 - **設定集約**: [ADR 0019](docs/ADR/0019-config-and-shared-artifact-ops.md) に `config.yaml` と共通 artifact 操作の集約方針を書いています。
+- **Skills**: [docs/SKILLS.md](docs/SKILLS.md) に repo-local の skill index があります。ローカルでは `http://127.0.0.1:8787/docs/SKILLS.md` と `http://127.0.0.1:8787/api/skills` でも見られます。
 - **Functions**: `functions/api/prompt-generate.js` は Cloudflare Pages Function です。生成本文は `prompts/frontend_codex.md` を読みます。
 
 ---

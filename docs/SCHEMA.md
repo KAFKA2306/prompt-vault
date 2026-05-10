@@ -30,15 +30,16 @@
 | `kind` | 文字列 | **重要：** コンテンツの性質を定義します（実態に基づく11種類）。 |
 | `purpose` | 文字列 | 使用目的（任意）。 |
 | `summary` | 文字列 | 内容の要約（任意）。 |
-| `artifacts` | 配列 | 画像ファイル (`path`) とそのタイトル (`title`) のリスト。 |
+| `artifacts` | 配列 | 画像ファイルや音声ファイル (`path`) とそのタイトル (`title`) のリスト。 |
 | `generated_prompt` | 文字列 | 生成済みの完成プロンプト全文（任意）。 |
 | `created_at` | 文字列 | 作成日時の ISO8601 文字列（任意）。 |
 
-生成画像を正式な資産として残す場合は、`artifacts/NNN_slug.png` へ登録し、`db/prompts.json` の `artifacts` に必ず接続します。  
+生成画像や生成音声を正式な資産として残す場合は、`artifacts/NNN_slug.png` または `artifacts/NNN_slug.wav` へ登録し、`db/prompts.json` の `artifacts` に必ず接続します。  
 このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/register_generated_artifact.py` を単一入口として扱います。  
 既存の未接続PNGを再採番して戻す場合は `scripts/reconnect_unconnected_pngs.py` を使います。  
 未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
 - 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
+- 生成音声の一次出力先は、各ワークフローが指定する出力先です。
 - Kafka の見た目は `character_kafka` と `kafka_identity_lock` です。
 
 ### 1.3 構造ルール
@@ -112,4 +113,4 @@
 
 1. **参照整合性**: `templates.blocks` に記述する ID は、必ず `blocks` リストに存在すること。
 2. **画像の実在**: `artifacts.path` に記述するファイルは、必ず `artifacts/` フォルダ内に存在すること。
-3. **WebP 最適化**: [ADR 0014](ADR/0014-webp-optimization.md) に従い、画像は原則として `.webp` 形式で管理すること。
+3. **WebP 最適化**: [ADR 0014](ADR/0014-webp-optimization.md) に従い、画像は原則として `.webp` 形式で管理すること。音声は `.wav` のまま扱うこと。

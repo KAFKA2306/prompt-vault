@@ -27,7 +27,11 @@ def main() -> int:
         return 1
 
     # Check for orphaned artifacts
-    actual_files = {f"artifacts/{f.name}" for f in (ROOT / CONFIG["paths"]["artifacts"]).glob("*.png")}
+    actual_files = {
+        f"artifacts/{f.name}"
+        for f in (ROOT / CONFIG["paths"]["artifacts"]).iterdir()
+        if f.is_file()
+    }
     orphans = actual_files - linked_paths
     if orphans:
         for o in sorted(orphans):

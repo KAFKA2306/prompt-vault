@@ -18,23 +18,25 @@ def main() -> int:
         for artifact in template.artifacts:
             linked_paths[artifact.path].append(template.id)
 
-    root_pngs = {f"artifacts/{path.name}" for path in root_artifacts.glob("*.png")}
-    orphaned_pngs = {f"artifacts/_orphaned/{path.name}" for path in orphaned_artifacts.glob("*.png")}
+    root_files = {f"artifacts/{path.name}" for path in root_artifacts.iterdir() if path.is_file()}
+    orphaned_files = {
+        f"artifacts/_orphaned/{path.name}" for path in orphaned_artifacts.iterdir() if path.is_file()
+    }
 
-    root_unlinked = sorted(root_pngs - set(linked_paths))
-    missing_linked = sorted(set(linked_paths) - root_pngs)
+    root_unlinked = sorted(root_files - set(linked_paths))
+    missing_linked = sorted(set(linked_paths) - root_files)
     orphaned_still_linked = sorted(path for path in linked_paths if path.startswith("artifacts/_orphaned/"))
 
     duplicate_links = {path: owners for path, owners in linked_paths.items() if len(owners) > 1}
 
     print("--- Artifact Audit Report ---")
-    print(f"Root PNGs: {len(root_pngs)}")
+    print(f"Root files: {len(root_files)}")
     print(f"Linked PNGs: {len(linked_paths)}")
-    print(f"Orphaned PNGs: {len(orphaned_pngs)}")
+    print(f"Orphaned files: {len(orphaned_files)}")
     print()
 
     if root_unlinked:
-        print("--- 未接続PNG (root artifacts/) ---")
+        print("--- 未接続ファイル (root artifacts/) ---")
         for path in root_unlinked:
             print(path)
         print()

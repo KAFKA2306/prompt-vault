@@ -32,8 +32,8 @@ def parse_blocks(value: str | None) -> list[str]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Register a generated image into artifacts/ and db/prompts.json.")
-    parser.add_argument("--source", required=True, help="Source PNG to register")
+    parser = argparse.ArgumentParser(description="Register a generated artifact into artifacts/ and db/prompts.json.")
+    parser.add_argument("--source", required=True, help="Source PNG or WAV to register")
     parser.add_argument("--title", required=True, help="Template title and default artifact title")
     parser.add_argument("--artifact-title", default=None, help="Artifact display title")
     parser.add_argument("--purpose", default="", help="Template purpose")
@@ -48,12 +48,12 @@ def main() -> int:
     if not source.exists():
         sys.stderr.write(f"ERROR: source not found: {source}\n")
         return 1
-    if source.suffix.lower() != ".png":
-        sys.stderr.write("ERROR: source must be a .png file\n")
+    if source.suffix.lower() not in {".png", ".wav"}:
+        sys.stderr.write("ERROR: source must be a .png or .wav file\n")
         return 1
 
     ARTIFACTS_PATH.mkdir(exist_ok=True)
-    artifact_name = f"{next_artifact_number(ARTIFACTS_PATH):03d}_{slugify(args.title)}.png"
+    artifact_name = f"{next_artifact_number(ARTIFACTS_PATH):03d}_{slugify(args.title)}{source.suffix.lower()}"
     destination = ARTIFACTS_PATH / artifact_name
     if destination.exists():
         sys.stderr.write(f"ERROR: destination already exists: {destination}\n")

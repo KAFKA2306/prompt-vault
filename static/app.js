@@ -1,10 +1,45 @@
 const db = __DB_JSON__;
+const skillsIndex = __SKILLS_JSON__;
 const blocks = Object.fromEntries(db.blocks.map(b => [b.id, b]));
 const templates = db.templates;
 const templateMap = Object.fromEntries(templates.map(t => [t.id, t]));
 
 const el = (id) => document.getElementById(id);
 const esc = (v) => v ? v.toString().replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])) : '';
+const artifactType = (path = '') => {
+  const ext = path.toString().toLowerCase().split('.').pop();
+  if (ext === 'wav') return 'audio';
+  if (['png', 'webp', 'jpg', 'jpeg'].includes(ext)) return 'image';
+  return 'other';
+};
+
+const renderArtifactThumb = (artifact) => {
+  if (!artifact) {
+    return '<div class="placeholder-box">No Image</div>';
+  }
+  if (artifactType(artifact.path) === 'audio') {
+    return `
+      <div class="template-card__thumb template-card__thumb--audio">
+        <div class="template-card__thumb-label">AUDIO</div>
+        <div class="template-card__thumb-wave" aria-hidden="true"></div>
+      </div>
+    `;
+  }
+  return `<img src="${artifact.path}" loading="lazy" alt="${esc(artifact.title)}">`;
+};
+
+const renderArtifactThumbRow = (artifact, index) => {
+  if (artifactType(artifact.path) === 'audio') {
+    return `
+      <button type="button" class="modal-artifact-thumb modal-artifact-thumb--audio ${index === 0 ? 'is-active' : ''}" onclick="switchModalArtifact(this, '${artifact.path}')">
+        WAV
+      </button>
+    `;
+  }
+  return `
+    <img src="${artifact.path}" class="modal-artifact-thumb ${index === 0 ? 'is-active' : ''}" onclick="switchModalArtifact(this, '${artifact.path}')" alt="${esc(artifact.title)}">
+  `;
+};
 
 const state = {
   search: '',
@@ -36,9 +71,7 @@ const renderRail = () => {
     return `
       <div class="card template-card ${isExample ? 'is-example' : ''}" onclick="openModal('${t.id}')">
         <div class="template-card__thumb">
-          ${t.artifacts?.[0] 
-            ? `<img src="${t.artifacts[0].path}" loading="lazy" alt="${esc(t.title)}">` 
-            : '<div class="placeholder-box">No Image</div>'}
+          ${renderArtifactThumb(t.artifacts?.[0])}
           ${isExample ? '<div class="example-badge">Example Only</div>' : ''}
         </div>
         <div class="template-card__body">
@@ -53,6 +86,29 @@ const renderRail = () => {
   if (el('template-count')) {
     el('template-count').textContent = `${list.length} items`;
   }
+};
+
+const renderSkills = () => {
+  const sections = Array.isArray(skillsIndex) ? skillsIndex : [];
+  const items = sections.flatMap(section => (section.items || []).map(item => ({ ...item, section: section.title })));
+  const rail = el('skills-rail');
+  const section = el('skills-section');
+  if (!rail || !section) return;
+
+  if (!items.length) {
+    section.hidden = true;
+    return;
+  }
+
+  section.hidden = false;
+  rail.innerHTML = items.map(item => `
+    <div class="card skill-card">
+      <span class="template-card__kind">${esc(item.section || 'skill')}</span>
+      <div class="template-card__title">${esc(item.id)}</div>
+      <div class="template-card__summary">${esc(item.purpose || '')}</div>
+      <div class="skill-card__path">${esc(item.path || '')}</div>
+    </div>
+  `).join('');
 };
 
 window.openModal = (id, saveToHistory = true) => {
@@ -83,13 +139,22 @@ window.openModal = (id, saveToHistory = true) => {
   el('modal-title').textContent = t.title + (isExample ? ' (Example Only)' : '');
   el('modal-kind').textContent = t.kind;
   el('modal-purpose').textContent = t.summary || t.purpose || '';
-  el('modal-img').src = t.artifacts?.[0]?.path || '';
+  const firstArtifact = t.artifacts?.[0];
+  const firstType = artifactType(firstArtifact?.path || '');
+  el('modal-img').src = '';
   el('modal-img').alt = esc(t.title);
-  el('modal-img').style.display = t.artifacts?.[0] ? 'block' : 'none';
+  el('modal-audio').src = '';
+  el('modal-img').style.display = firstType === 'image' ? 'block' : 'none';
+  el('modal-audio').style.display = firstType === 'audio' ? 'block' : 'none';
+  if (firstArtifact) {
+    if (firstType === 'audio') {
+      el('modal-audio').src = firstArtifact.path;
+    } else {
+      el('modal-img').src = firstArtifact.path;
+    }
+  }
   
-  el('modal-artifacts').innerHTML = (t.artifacts || []).map((a, i) => `
-    <img src="${a.path}" class="modal-artifact-thumb ${i === 0 ? 'is-active' : ''}" onclick="switchModalImg(this, '${a.path}')" alt="${esc(a.title)}">
-  `).join('');
+  el('modal-artifacts').innerHTML = (t.artifacts || []).map((a, i) => renderArtifactThumbRow(a, i)).join('');
 
   if (isExample) {
     el('modal-prompt').textContent = '【画像見本のみ】\nこのテンプレートには構成要素（プロンプトの種）が定義されていません。';
@@ -114,7 +179,7 @@ window.openModal = (id, saveToHistory = true) => {
 
   el('modal-related').innerHTML = related.map(x => `
     <div class="modal-related-item" onclick="openModal('${x.id}')">
-      <img src="${x.artifacts?.[0]?.path || ''}" class="modal-related-thumb" alt="${esc(x.title)}">
+      ${renderArtifactThumb(x.artifacts?.[0])}
       <div class="subtle-label modal-related-title">${esc(x.title)}</div>
     </div>
   `).join('');
@@ -131,10 +196,18 @@ window.modalBack = () => {
   }
 };
 
-window.switchModalImg = (target, path) => {
+window.switchModalArtifact = (target, path) => {
+  const type = artifactType(path);
   document.querySelectorAll('.modal-artifact-thumb').forEach(img => img.classList.remove('is-active'));
   target.classList.add('is-active');
-  el('modal-img').src = path;
+  el('modal-img').style.display = type === 'image' ? 'block' : 'none';
+  el('modal-audio').style.display = type === 'audio' ? 'block' : 'none';
+  if (type === 'audio') {
+    el('modal-audio').src = path;
+    el('modal-audio').play?.();
+  } else {
+    el('modal-img').src = path;
+  }
 };
 
 const renderGen = () => {
@@ -224,4 +297,5 @@ el('generator-template').innerHTML = templates
   .filter(t => t.blocks && t.blocks.length > 0)
   .map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('');
 renderRail();
+renderSkills();
 renderGen();

@@ -1,31 +1,33 @@
 ---
 name: prompt-vault-workflow
-description: Run Prompt Vault source ingestion and artifact maintenance end to end, including image generation, artifact path updates, DB updates, and local verification.
+description: Prompt Vault の素材取り込みとアセット管理を最後まで通す。画像生成、アセットパス更新、DB 更新、ローカル確認をまとめて行うときに使う。
 ---
 
 # Prompt Vault Workflow
 
+この skill は、1 回の Prompt Vault 更新を最初から最後まで通すための手順書。
+
 ## Scope
 
-Use this skill for one Prompt Vault update end to end.
+1 回の Prompt Vault 更新を end to end で進めるときに使う。
 
 ## Required end state
 
-- Selected image copied into `artifacts/NNN_slug.png`
-- `db/prompts.json` updated
-- `python3 build.py` run
-- `http://127.0.0.1:8787/` checked
+- 選んだ画像が `artifacts/NNN_slug.png` にコピーされている
+- `db/prompts.json` が更新されている
+- `python3 build.py` を実行している
+- `http://127.0.0.1:8787/` を確認している
 
 ## Fixed references
 
-- Generated images start in `/home/kafka/.codex/generated_images/`
-- Formal image assets live at `artifacts/NNN_slug.png`
-- Artifact cleanup uses `artifacts/_orphaned/`
-- Kafka visuals use `character_kafka`, `character_kafka_soft_reference`, and `kafka_identity_lock`
+- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/`
+- 正式な画像資産は `artifacts/NNN_slug.png`
+- アセット整理の退避先は `artifacts/_orphaned/`
+- Kafka の見た目参照は `character_kafka`、`character_kafka_soft_reference`、`kafka_identity_lock`
 
 ## Rules
 
-- Read `references/workflow.md` for the step order.
-- Edit `db/prompts.json` before `dist/`.
-- Do not hand-edit `dist/`.
-- Verify the generated image before keeping it.
+- 手順の順番は `references/workflow.md` を読む。
+- `dist/` より先に `db/prompts.json` を編集する。
+- `dist/` は手で編集しない。
+- 生成画像は残す前に確認する。

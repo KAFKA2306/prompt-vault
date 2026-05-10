@@ -16,7 +16,9 @@ def slugify(value: str) -> str:
 
 def next_artifact_number(artifacts_path: Path) -> int:
     numbers: list[int] = []
-    for path in artifacts_path.glob("*.png"):
+    for path in artifacts_path.iterdir():
+        if not path.is_file():
+            continue
         match = re.match(r"^(\d{3})_", path.name)
         if match:
             numbers.append(int(match.group(1)))

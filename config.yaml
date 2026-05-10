@@ -12,6 +12,7 @@ paths:
   artifacts: artifacts
   orphaned_artifacts: artifacts/_orphaned
   prompts: prompts/frontend_codex.md
+  skills_index: docs/SKILLS.md
   generated_images: /home/kafka/.codex/generated_images/
 
 audit_literals:

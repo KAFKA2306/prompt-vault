@@ -9,13 +9,15 @@ from typing import Any
 from urllib.request import Request, urlopen
 
 from build import load_db, render_app_js
-from config import CONFIG, root_path
+from config import CONFIG, ROOT, root_path
+from src.skills_index import load_skills_index
 
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
 DIST_PATH = root_path(CONFIG["paths"]["dist"])
 DB_PATH = root_path(CONFIG["paths"]["db"])
 CODEX_PATH = root_path(CONFIG["paths"]["prompts"])
+SKILLS_INDEX_PATH = root_path(CONFIG["paths"]["skills_index"])
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -32,6 +34,12 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         if self.path == "/api/db":
             return self._json(200, load_db().model_dump(exclude_none=True))
+
+        if self.path == "/api/skills":
+            return self._json(200, {"sections": load_skills_index(SKILLS_INDEX_PATH)})
+
+        if self.path == "/docs/SKILLS.md":
+            return self._send(200, "text/markdown; charset=utf-8", SKILLS_INDEX_PATH.read_bytes())
 
         # Static files
         p = self.path.split("?")[0]
@@ -50,9 +58,10 @@ class Handler(BaseHTTPRequestHandler):
                 ".jpg": "image/jpeg",
                 ".json": "application/json",
                 ".webp": "image/webp",
+                ".wav": "audio/wav",
             }.get(ext, "application/octet-stream")
 
-            content = render_app_js(load_db()).encode("utf-8") if p == "/app.js" else f.read_bytes()
+            content = render_app_js(load_db(), load_skills_index(SKILLS_INDEX_PATH)).encode("utf-8") if p == "/app.js" else f.read_bytes()
             return self._send(200, mime, content)
 
         # Artifacts
@@ -64,7 +73,11 @@ class Handler(BaseHTTPRequestHandler):
 
             if af.exists():
                 ext = af.suffix.lower()
-                mime = "image/webp" if ext == ".webp" else "image/png"
+                mime = {
+                    ".webp": "image/webp",
+                    ".png": "image/png",
+                    ".wav": "audio/wav",
+                }.get(ext, "application/octet-stream")
                 return self._send(200, mime, af.read_bytes())
 
         self.send_error(404)

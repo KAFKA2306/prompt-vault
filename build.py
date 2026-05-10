@@ -12,12 +12,14 @@ except ImportError:
 from config import CONFIG, ROOT, root_path
 from src.db_io import load_prompt_db
 from src.models import PromptDB
+from src.skills_index import load_skills_index
 
 DB_PATH = root_path(CONFIG["paths"]["db"])
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
 DIST_PATH = root_path(CONFIG["paths"]["dist"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
 PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
+SKILLS_INDEX_PATH = root_path(CONFIG["paths"]["skills_index"])
 
 
 def load_db() -> PromptDB:
@@ -33,7 +35,11 @@ def load_db() -> PromptDB:
     return db
 
 
-def render_app_js(db: PromptDB) -> str:
+def is_png(path: Path) -> bool:
+    return path.suffix.lower() == ".png"
+
+
+def render_app_js(db: PromptDB, skills_index: list[dict[str, object]]) -> str:
     db_json = db.model_dump(exclude_none=True)
     # Rewrite artifact paths to .webp ONLY if Pillow is available
     if HAS_PILLOW:
@@ -46,11 +52,13 @@ def render_app_js(db: PromptDB) -> str:
         (STATIC_PATH / "app.js")
         .read_text(encoding="utf-8")
         .replace("__DB_JSON__", json.dumps(db_json, ensure_ascii=False))
+        .replace("__SKILLS_JSON__", json.dumps(skills_index, ensure_ascii=False))
     )
 
 
 def write_dist() -> None:
     db = load_db()
+    skills_index = load_skills_index(SKILLS_INDEX_PATH)
     if DIST_PATH.exists():
         shutil.rmtree(DIST_PATH)
     DIST_PATH.mkdir(exist_ok=True)
@@ -70,7 +78,7 @@ def write_dist() -> None:
             content = content.replace("</body>", f"<!-- Build: {sha} -->\n</body>")
         (DIST_PATH / f).write_text(content, encoding="utf-8")
 
-    (DIST_PATH / "app.js").write_text(render_app_js(db), encoding="utf-8")
+    (DIST_PATH / "app.js").write_text(render_app_js(db, skills_index), encoding="utf-8")
     (DIST_PATH / "config.json").write_text(
         json.dumps({"model": CONFIG["ai"]["model"]}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -90,19 +98,30 @@ def write_dist() -> None:
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(s, dest)
 
-    # Convert to WebP if Pillow is available, otherwise copy PNG
+    skills_dest = DIST_PATH / "docs" / "SKILLS.md"
+    skills_dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(SKILLS_INDEX_PATH, skills_dest)
+
+    # Convert PNGs to WebP if Pillow is available, otherwise copy PNG/WAV as-is.
     active_artifacts = {a.path for t in db.templates for a in t.artifacts}
     if HAS_PILLOW:
         print("Converting artifacts to WebP...")
-        for s in ARTIFACTS_PATH.glob("*.png"):
+        for s in ARTIFACTS_PATH.iterdir():
+            if not s.is_file():
+                continue
             rel_path = f"artifacts/{s.name}"
             if rel_path in active_artifacts:
-                dest = DIST_PATH / "artifacts" / s.with_suffix(".webp").name
-                with Image.open(s) as img:
-                    img.save(dest, "WEBP", quality=80)
+                if is_png(s):
+                    dest = DIST_PATH / "artifacts" / s.with_suffix(".webp").name
+                    with Image.open(s) as img:
+                        img.save(dest, "WEBP", quality=80)
+                else:
+                    shutil.copy2(s, DIST_PATH / "artifacts" / s.name)
     else:
         print("Pillow not found. Falling back to PNG copy...")
-        for s in ARTIFACTS_PATH.glob("*.png"):
+        for s in ARTIFACTS_PATH.iterdir():
+            if not s.is_file():
+                continue
             rel_path = f"artifacts/{s.name}"
             if rel_path in active_artifacts:
                 shutil.copy2(s, DIST_PATH / "artifacts" / s.name)
