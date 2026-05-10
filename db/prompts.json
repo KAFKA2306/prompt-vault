@@ -147,6 +147,111 @@
       "role": "text"
     },
     {
+      "id": "irodori_tts_text_pack",
+      "title": "文言: Irodori-TTS",
+      "content": "Irodori-TTS は、日本語に強いローカル音声合成モデル。\n\n主な特徴：\n\n* 短い参照音声から声質を再現するゼロショット音声クローニング\n* 説明文から理想の声を作る VoiceDesign\n* 絵文字で感情や話し方のニュアンスを調整\n* Flow Matching による自然な日本語イントネーション\n* Python / Git / uv と Gradio UI で導入しやすい\n\n注意点：\n\n* 声の利用は権利と同意を確認して扱う。",
+      "category": "テキスト",
+      "role": "text"
+    },
+    {
+      "id": "voice_input_pack",
+      "title": "音声入力パック",
+      "content": "input text, optional caption, optional reference audio\nuse VoiceDesign when shaping from description\nuse zero-shot cloning when matching an existing voice",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_control_pack",
+      "title": "音声制御パック",
+      "content": "emoji-driven style control\npunctuation and wording steer pacing and emotion\nkeep Japanese phrasing natural and readable",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_output_pack",
+      "title": "音声出力パック",
+      "content": "output wav\nshow preview alongside the generated asset\nkeep the local file easy to register and reuse",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_ethics_text",
+      "title": "文言: 音声倫理",
+      "content": "声の利用は権利と同意を確認して扱う。\n他人の声を無断で再現しない。",
+      "category": "音声",
+      "role": "text"
+    },
+    {
+      "id": "voice_emoji_reference_pack",
+      "title": "音声絵文字リファレンス",
+      "content": "emoji is an acting cue, not the base voice\nplace the emoji right before the target phrase; stack the same emoji to intensify the effect\nuse 😊 😆 🫶 😌 for positive tone, and 😠 😭 😰 😖 😟 😱 😒 🙄 🙏 🤐 for conflict or tension\nuse 👂 😮💨 🥵 🌬 😮 👅 💋 🥤 🤧 🥱 🥴 for breath, body, or physical state\nuse ⏩ 🐢 ⏸ 📞 📢 😪 for pacing or environment; keep Japanese natural and readable; use hiragana or katakana when kanji may be misread",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_base_pack",
+      "title": "音声キャプション基本",
+      "content": "caption defines the base voice\nwrite the caption in Japanese\nfocus on age, gender, timbre, distance, and speaking style\nkeep it short and concrete\nseparate stable voice traits from momentary emotions; avoid vague adjectives that do not change generation",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_generation_tips_pack",
+      "title": "音声生成のコツ",
+      "content": "keep the generated line natural and short\nuse punctuation to steer pacing\ninsert emotion emoji before the phrase you want to change\nrecord the seed when a take matters; split long lines if the audio becomes unstable\nuse reference audio only when matching an existing voice; check consent and rights before reuse",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_longform_rules_pack",
+      "title": "音声キャプション長文ルール",
+      "content": "caption defines the base voice\nwrite the caption in Japanese and keep stable traits first\ninclude age, gender, timbre, distance, speaking style, and atmosphere\nkeep emotion light; move momentary feeling to emoji or text field",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_longform_examples_pack",
+      "title": "音声キャプション長文例 1",
+      "content": "Kafka寄り: 20代後半の女性の静かで透明感のある柔らかい声。深夜のベッドルームのようなとても近い距離感で、淡々とやわらかく、ゆったりしたテンポで話す。\n明るい友達風: 20代前半の明るく親しみやすい女性の声。自然な会話距離感で、軽やかにハキハキと話す。聞き取りやすく、感情が少しだけ弾むようなやさしいトーン。\n囁き・内緒話風: 20代女性の囁くような静かな声。耳元で話すほど非常に近い距離感で、息をたくさん混ぜながらゆっくりと話す。\n感情豊か・メリハリ強め: 20代女性の感情表現が豊かで生き生きとした声。近くて自然な距離感で、少し速めのテンポで話す。",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_longform_examples_alt_pack",
+      "title": "音声キャプション長文例 2",
+      "content": "ツンデレ風: 少し高めの20代女性の声。普段は素っ気なくツンとした態度だが、本当は優しい性格が隠れているようなトーン。\nドジっ子・可愛い系: 10代後半〜20代前半の可愛らしくて少し抜けている女性の声。高めで透明感のある声質で、自然な距離感。\n落ち着いた大人の女性: 30代前半の落ち着いた大人の女性の声。低めで安定感のある柔らかいトーン。少し遠めの自然な距離感で、ゆったりと丁寧に話す。\n挑発的・余裕あるお姉さん系: 20代後半のセクシーで余裕のある女性の声。低めの少しハスキー気味な声質で、かなり近い距離感。",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_asmr_rules_pack",
+      "title": "音声キャプションASMRルール",
+      "content": "caption = stable base state\nfocus on recording physics: distance, breath, volume, mouth opening, consonants, tempo, and mic proximity\nscript = time structure; emoji = local acting cue; keep them separate\nuse short Japanese and prefer concrete acoustic terms for bedtime and ear-near scenes",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_caption_asmr_examples_pack",
+      "title": "音声キャプションASMR例",
+      "content": "Sleeping Base v2: 深夜の静かな寝室で、枕元から小さな声でゆっくり話す20代後半の女性。超至近距離。息を多めに含み、口を大きく開かず柔らかく発声する。語尾は弱く自然に消える。\nSleeping Base v3: 深夜2時頃の静かな部屋。眠そうな20代女性が、すぐ隣から小さな声で囁く。声量はかなり小さい。息を多く混ぜ、子音は柔らかく、全体的に力を抜いて話す。\nMimikaki Base v2: 耳元すぐ近くで囁く20代前半の女性。超至近距離。息を多く混ぜ、唇が近い距離感で小さく話す。耳かき動作に合わせてテンポをゆっくり変化させる。\nMimikaki Base v3: 左右の耳元をゆっくり移動しながら囁く若い女性。唇が触れそうな超近距離。息を非常に多く混ぜ、細く甘い声でゆっくり話す。語尾は短く弱く落とす。",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_asmr_sleeping_ready_pack",
+      "title": "音声ASMR実行例: Sleeping",
+      "content": "caption: 深夜の静かな寝室で、枕元から小さな声でゆっくり話す20代後半の女性。超至近距離。息を多めに含み、口を大きく開かず柔らかく発声する。語尾は弱く自然に消える。\nemoji: 👂 😮💨 😌 ⏸\nscript: ……ねえ、まだ起きてる？ 👂 / 😮💨 / 今日はいっぱい頑張ったね…… / ⏸ / えらいよ……😌",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
+      "id": "voice_asmr_mimikaki_ready_pack",
+      "title": "音声ASMR実行例: Mimikaki",
+      "content": "caption: 耳元すぐ近くで囁く20代前半の女性。超至近距離。息を多く混ぜ、唇が近い距離感で小さく話す。耳かき動作に合わせてテンポをゆっくり変化させる。\nemoji: 👂 😮💨 🫶 ⏸\nscript: こっち、もう少しだけ力を抜いてね……👂 / 😮💨 / ゆっくりで大丈夫。 / ⏸ / 気持ちいい？ ……よかった。🫶",
+      "category": "音声",
+      "role": "pack"
+    },
+    {
       "id": "comic_layout",
       "title": "形式: 漫画レイアウト",
       "content": "6 to 7 manga panels, one wide establishing shot, one close-up on the eyes, one detail shot of the monitor or object, one side profile, one medium shot, one hand close-up, final large emotional panel, white gutters, clear reading order, speech bubbles left blank",
@@ -249,6 +354,34 @@
       "content": "check the original board game rules, core mechanisms, component types, and well-known visual cues before drawing; keep the post faithful to the actual game identity, avoid generic props that contradict the rules, preserve recognizable cover mood and table logic, and do not downgrade the game into a vague generic board game illustration",
       "category": "リサーチ",
       "role": "memory"
+    },
+    {
+      "id": "rules_explainer_series_layout",
+      "title": "形式: ルール解説シリーズ",
+      "content": "5 to 6 compact panels, one topic per panel, headline at top, step arrows, white gutters, mobile readable, Japanese text only, no clutter, each panel focuses on one rule topic",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "rules_explainer_series_pack",
+      "title": "ルール解説パック",
+      "content": "what the game is, components, setup, turn flow, actions, end conditions, scoring, one example, quick FAQ",
+      "category": "ボードゲーム",
+      "role": "pack"
+    },
+    {
+      "id": "rules_explainer_series_tone",
+      "title": "文言: ルール解説トーン",
+      "content": "plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining",
+      "category": "テキスト",
+      "role": "text"
+    },
+    {
+      "id": "dominion_rules_series_pack",
+      "title": "ドミニオン ルール解説パック",
+      "content": "deck-building core, start with 7 copper and 3 estates, 10 kingdom piles, turn flow action -> treasure -> buy -> cleanup, action cards build the engine, treasure adds coin, buy spends coin, cleanup discards hand and draws 5, game ends when Province pile is empty or 3 supply piles run out, scoring from victory cards and curses, one short example turn, optional attack and reaction note",
+      "category": "ボードゲーム",
+      "role": "pack"
     },
     {
       "id": "bg_outfit_industrial",
@@ -3734,6 +3867,42 @@
       "generated_prompt": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors, infographic-style board game guide sheet, crisp visual labels, simple arrows, compact panels, high readability, one-page reference poster, accurate instructional design, graphical but not noisy, female anime character Kafka, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle face, quiet emotional warmth, calm guide character, holding a Dominion card fan and pointing to the rule panels with the other hand, friendly presenter pose, clear silhouette, visible hands and gestures, expression suitable for teaching, polished but soft anime rendering, character occupies left side of the poster, standing beside the rule panels, layout: one-page quick reference poster, Kafka character on the left side pointing to rules, top title banner reading ドミニオン ルール早わかり in large Japanese text, middle three-column rule panels, bottom step-by-step turn flow strip, small callout boxes for key numbers, arrows connecting the phases, card icons with simple color coding, minimal but complete beginner guide, content areas in Japanese: ターン手順 アクション→財宝→購入→クリーンアップ, ゲーム終了条件 属州が尽きる or 3山札が尽きる, セットアップ 7銅貨と3屋敷で開始, 勝利点 最も多い人が勝ち, color: pastel blue, lavender, soft white, gentle gray, no oversaturated reds or dark tones, high contrast for text and labels, clear separation between informational zones, low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, hypersexualized design, visual clutter, chaotic typography, blotchy skin, uneven rendering, dirty shadows, muddy colors, card game rules that are incomplete or contradictory, wrong turn order, no character, character absent"
     },
     {
+      "id": "boardgame_rules_explainer_series",
+      "title": "ボードゲーム ルール解説シリーズ",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "rules_explainer_series_layout",
+        "boardgame_fidelity_check",
+        "rules_explainer_series_pack",
+        "rules_explainer_series_tone",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "sheet",
+      "purpose": "ボードゲームのルールを、初心者向けの短いシリーズとして整理する",
+      "summary": "セットアップ、ターン進行、得点条件、例外を、順番に説明するシリーズ。",
+      "generated_prompt": "Create a clean board game rules explanation series in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what the game is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to the chosen game. Before drawing, verify the actual rules, components, and core mechanism, and do not replace them with generic board game props.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match the real game, overly complex layout, dark horror mood, excessive neon, 3D render look."
+    },
+    {
+      "id": "dominion_rules_explainer_series",
+      "title": "ドミニオン ルール解説シリーズ",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "rules_explainer_series_layout",
+        "boardgame_fidelity_check",
+        "dominion_rules_series_pack",
+        "rules_explainer_series_tone",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "sheet",
+      "purpose": "ドミニオンのルールを、初心者向けの短いシリーズとして整理する",
+      "summary": "セットアップ、ターン進行、得点条件、代表的な注意点を、順番に説明するシリーズ。",
+      "generated_prompt": "Create a clean board game rules explanation series for Dominion in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what Dominion is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to Dominion. Use the real deck-building core, the starting deck of 7 copper and 3 estates, the 10 kingdom piles, the action -> treasure -> buy -> cleanup turn structure, the Province or 3-pile end condition, and the normal score counting from victory cards and curses.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match Dominion, overly complex layout, dark horror mood, excessive neon, 3D render look."
+    },
+    {
       "id": "gen_20260501_090454_827936",
       "title": "Kafka おはツイ 春 / ドミニオン日和",
       "blocks": [
@@ -5262,6 +5431,63 @@
       "created_at": "2026-05-09T10:25:00+09:00"
     },
     {
+      "id": "irodori_tts_edu_card",
+      "title": "Kafka Irodori-TTSメモ",
+      "kind": "design_sheet",
+      "purpose": "Irodori-TTS の主要機能とローカル導入の要点を 1 枚で整理する",
+      "summary": "ゼロショット音声クローニング、VoiceDesign、絵文字制御、ローカル導入をまとめる。",
+      "blocks": [
+        "character_kafka_soft_reference",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "text_style_jp",
+        "irodori_tts_text_pack",
+        "negative_common"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/217_kafka_irodori_tts_memo.png",
+          "title": "Kafka Irodori-TTSメモ"
+        }
+      ],
+      "generated_prompt": "Create a 1:1 square educational infographic card about Irodori-TTS, a local Japanese text-to-speech model. Use a calm white background with soft pastel blue and lavender accents, thin borders, subtle dots, small leaf-like decorations, soft shadows, and a polished human-made finish. Include Kafka as the guide character on the right side, recognizable and consistent: long light-blue hair with a lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet expression.\n\nComposition: left side contains five compact Japanese callout boxes with simple icons. Keep the layout clean, readable, and square-friendly. Avoid clutter.\n\nTitle text in Japanese: Irodori-TTSって何？\nSubtitle: ローカルで使える日本語音声合成\n\nThe five callout boxes should communicate these ideas in short Japanese phrases:\n1. ゼロショットで声をまねる\n2. 説明文で声を作る VoiceDesign\n3. 絵文字で感情を調整\n4. Flow Matching で自然なイントネーション\n5. Python / Git / uv で導入しやすい\n\nAdd a small footer note about responsible use: 声の利用は権利と同意を確認して使う\n\nStyle: calm educational card, readable Japanese, subtle infographic structure, soft shadows, clean lineart, flat lighting, gentle pastel palette, no neon, no dramatic contrast, no clutter, no photorealism, no 3D render look, no watermark, no random English text, no broken Japanese.",
+      "created_at": "2026-05-09T22:21:19+09:00"
+    },
+    {
+      "id": "irodori_tts_voice_guide_sheet",
+      "title": "Irodori-TTS 音声ガイド",
+      "kind": "sheet",
+      "purpose": "Irodori-TTS のキャプション、絵文字、生成運用を整理する",
+      "summary": "Voice Design のベース声質、長文キャプション例、絵文字の演技指示、生成時の注意をまとめる。",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_caption_base_pack",
+        "voice_caption_longform_rules_pack",
+        "voice_caption_longform_examples_pack",
+        "voice_caption_longform_examples_alt_pack",
+        "voice_emoji_reference_pack",
+        "voice_generation_tips_pack",
+        "voice_ethics_text"
+      ]
+    },
+    {
+      "id": "irodori_tts_voice_asmr_sheet",
+      "title": "Irodori-TTS ASMR 音声ガイド",
+      "kind": "sheet",
+      "purpose": "ASMR 風や寝室距離の長文キャプションを整理する",
+      "summary": "耳元、吐息、寝室感、静かな親密さ、録音物理を扱う長文キャプション例をまとめる。",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_caption_asmr_rules_pack",
+        "voice_caption_asmr_examples_pack",
+        "voice_asmr_sleeping_ready_pack",
+        "voice_asmr_mimikaki_ready_pack",
+        "voice_emoji_reference_pack",
+        "voice_ethics_text"
+      ]
+    },
+    {
       "id": "gen_20260509_122233",
       "title": "lazydays magazine cover",
       "blocks": [],
@@ -5308,6 +5534,584 @@
       ],
       "generated_prompt": null,
       "created_at": "2026-05-09T13:11:52+09:00"
+    },
+    {
+      "id": "gen_20260509_225512",
+      "title": "Irodori-TTS VoiceDesign 音声テスト",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "Irodori-TTS VoiceDesign で生成した wav 音声を登録する",
+      "summary": "VoiceDesign による日本語音声合成のテスト出力。",
+      "artifacts": [
+        {
+          "path": "artifacts/219_irodori_tts_voicedesign.wav",
+          "title": "Irodori-TTS VoiceDesign 音声テスト"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T22:55:12+09:00"
+    },
+    {
+      "id": "gen_20260509_230445",
+      "title": "lazydays magazine cover voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover を読み上げる wav 音声を登録する",
+      "summary": "インディー系ジライケイ雑誌表紙の雰囲気を短く説明する音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/220_lazydays_magazine_cover_voice.wav",
+          "title": "lazydays magazine cover voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:04:45+09:00"
+    },
+    {
+      "id": "gen_20260509_230446",
+      "title": "魅力的な商品制作 voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "魅力的な商品制作 の wav 音声を登録する",
+      "summary": "商品づくりガイドシートの内容をやさしく説明する音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/221_voice.wav",
+          "title": "魅力的な商品制作 voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:04:46+09:00"
+    },
+    {
+      "id": "gen_20260509_230446_2",
+      "title": "魅力的な商品制作 voice alt",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "魅力的な商品制作 の別バージョン wav 音声を登録する",
+      "summary": "商品の魅力を伝える別テイクの説明音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/222_voice_alt.wav",
+          "title": "魅力的な商品制作 voice alt"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:04:46+09:00"
+    },
+    {
+      "id": "gen_20260509_230643",
+      "title": "Kafka おはツイ 窓際 voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "おはツイ窓際の画像に合わせた読み上げ音声を登録する",
+      "summary": "窓際の朝の静かな空気を短く読む音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/223_kafka_voice.wav",
+          "title": "Kafka おはツイ 窓際 voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:06:43+09:00"
+    },
+    {
+      "id": "gen_20260509_230643_2",
+      "title": "Kafka おはツイ コーヒー voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "おはツイコーヒーの画像に合わせた読み上げ音声を登録する",
+      "summary": "コーヒーで起動する朝の雰囲気を短く読む音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/224_kafka_voice.wav",
+          "title": "Kafka おはツイ コーヒー voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:06:43+09:00"
+    },
+    {
+      "id": "gen_20260509_230643_3",
+      "title": "Kafka おはツイ 寝起き voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "おはツイ寝起きの画像に合わせた読み上げ音声を登録する",
+      "summary": "寝起きのゆるい朝の空気を短く読む音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/225_kafka_voice.wav",
+          "title": "Kafka おはツイ 寝起き voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:06:43+09:00"
+    },
+    {
+      "id": "gen_20260509_231053",
+      "title": "lazydays voice soft intimate",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover の声候補を登録する",
+      "summary": "やわらかく親密なトーンの候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/226_lazydays_voice_soft_intimate.wav",
+          "title": "lazydays voice soft intimate"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:10:53+09:00"
+    },
+    {
+      "id": "gen_20260509_231053_2",
+      "title": "lazydays voice bright friendly",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover の声候補を登録する",
+      "summary": "明るく親しみやすいトーンの候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/227_lazydays_voice_bright_friendly.wav",
+          "title": "lazydays voice bright friendly"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:10:53+09:00"
+    },
+    {
+      "id": "gen_20260509_231053_3",
+      "title": "lazydays voice narration",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover の声候補を登録する",
+      "summary": "落ち着いたナレーション寄りの候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/228_lazydays_voice_narration.wav",
+          "title": "lazydays voice narration"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:10:53+09:00"
+    },
+    {
+      "id": "gen_20260509_231053_4",
+      "title": "lazydays voice sleepy close",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover の声候補を登録する",
+      "summary": "眠気のある近い距離感の候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/229_lazydays_voice_sleepy_close.wav",
+          "title": "lazydays voice sleepy close"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:10:53+09:00"
+    },
+    {
+      "id": "gen_20260509_231053_5",
+      "title": "lazydays voice confident soft",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays magazine cover の声候補を登録する",
+      "summary": "少し自信のあるやわらかい候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/230_lazydays_voice_confident_soft.wav",
+          "title": "lazydays voice confident soft"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-09T23:10:53+09:00"
+    },
+    {
+      "id": "gen_20260510_012148",
+      "title": "lazydays voice bright polite",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays の明るい候補を比較する",
+      "summary": "明るく親しみやすいが少し上品な候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/231_lazydays_voice_bright_polite.wav",
+          "title": "lazydays voice bright polite"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:21:48+09:00"
+    },
+    {
+      "id": "gen_20260510_012148_2",
+      "title": "lazydays voice bright bouncy",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays の明るい候補を比較する",
+      "summary": "軽やかで少し元気な候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/232_lazydays_voice_bright_bouncy.wav",
+          "title": "lazydays voice bright bouncy"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:21:48+09:00"
+    },
+    {
+      "id": "gen_20260510_012148_3",
+      "title": "lazydays voice bright close",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays の明るい候補を比較する",
+      "summary": "親しみやすく近い距離感の候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/233_lazydays_voice_bright_close.wav",
+          "title": "lazydays voice bright close"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:21:48+09:00"
+    },
+    {
+      "id": "gen_20260510_012148_4",
+      "title": "lazydays voice bright clear",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays の明るい候補を比較する",
+      "summary": "聞き取りやすく少し大人っぽい候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/234_lazydays_voice_bright_clear.wav",
+          "title": "lazydays voice bright clear"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:21:48+09:00"
+    },
+    {
+      "id": "gen_20260510_012149",
+      "title": "lazydays voice bright sweet",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "lazydays の明るい候補を比較する",
+      "summary": "少し甘めで自然な候補。",
+      "artifacts": [
+        {
+          "path": "artifacts/235_lazydays_voice_bright_sweet.wav",
+          "title": "lazydays voice bright sweet"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:21:49+09:00"
+    },
+    {
+      "id": "gen_20260510_012550",
+      "title": "friend alt voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "friend 系の別テイクを比較する",
+      "summary": "支え方を少し増やした friend テイク。",
+      "artifacts": [
+        {
+          "path": "artifacts/236_friend_alt_voice.wav",
+          "title": "friend alt voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:25:50+09:00"
+    },
+    {
+      "id": "gen_20260510_012551",
+      "title": "tsundere alt voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "tsundere 系の別テイクを比較する",
+      "summary": "少し軽いツンのある tsundere テイク。",
+      "artifacts": [
+        {
+          "path": "artifacts/237_tsundere_alt_voice.wav",
+          "title": "tsundere alt voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:25:51+09:00"
+    },
+    {
+      "id": "gen_20260510_012551_2",
+      "title": "whisper alt voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "whisper 系の別テイクを比較する",
+      "summary": "内緒話感を強めた whisper テイク。",
+      "artifacts": [
+        {
+          "path": "artifacts/238_whisper_alt_voice.wav",
+          "title": "whisper alt voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:25:51+09:00"
+    },
+    {
+      "id": "gen_20260510_013622",
+      "title": "ドミニオン ルール解説シリーズ",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "rules_explainer_series_layout",
+        "boardgame_fidelity_check",
+        "dominion_rules_series_pack",
+        "rules_explainer_series_tone",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "sheet",
+      "purpose": "ドミニオンの基本ルールを5ステップで説明する",
+      "summary": "デッキ構築の基本、準備、手番、終了条件を5枚で整理する解説シート。",
+      "artifacts": [
+        {
+          "path": "artifacts/239_jp_60b1d98d.png",
+          "title": "ドミニオン ルール解説シリーズ"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:36:22+09:00"
+    },
+    {
+      "id": "gen_20260510_013628",
+      "title": "ドミニオン ルール解説 voice",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "ドミニオンのルール解説シートに合わせた読み上げ音声を登録する",
+      "summary": "デッキ構築ゲームの基本を静かに説明する音声。",
+      "artifacts": [
+        {
+          "path": "artifacts/240_voice.wav",
+          "title": "ドミニオン ルール解説 voice"
+        }
+      ],
+      "generated_prompt": null,
+      "created_at": "2026-05-10T01:36:28+09:00"
+    },
+    {
+      "id": "gen_20260510_092957",
+      "title": "Irodori-TTS voice clone sample",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_input_pack",
+        "voice_control_pack",
+        "voice_output_pack",
+        "voice_ethics_text"
+      ],
+      "kind": "generated",
+      "purpose": "reference WAV を使った声質確認",
+      "summary": "XTTS の参照音声ベースの日本語音声サンプル。",
+      "artifacts": [
+        {
+          "path": "artifacts/241_irodori_tts_voice_clone_sample.wav",
+          "title": "Irodori-TTS voice clone sample"
+        }
+      ],
+      "generated_prompt": "今日は、無理しないでいこう。あせらなくて大丈夫。",
+      "created_at": "2026-05-10T09:29:57+09:00"
+    },
+    {
+      "id": "gen_20260510_211412",
+      "title": "Kafka 深夜研究ログ",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "memory_note_board_viz",
+        "research_log_pack",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "研究棟深夜の観測メモを、雨窓・机・コーヒー・ヘッドホンで一枚にまとめる",
+      "summary": "低刺激環境に最適化された観測者として、深夜の机仕事と雨窓の空気を印刷劣化つきで見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/242_kafka.png",
+          "title": "Kafka 深夜研究ログ"
+        }
+      ],
+      "generated_prompt": "Create a square illustration with a quiet, low-stimulation mood. Kafka in a deep-night research building log scene, with rain on the window, a small desk, cold coffee, headphones, visible work traces, and one hand touching her hair while she watches carefully. Keep Kafka identity exactly, and make the whole image feel like a faded Showa research memo and old magazine print.",
+      "created_at": "2026-05-10T21:14:12+09:00"
+    },
+    {
+      "id": "gen_20260510_211632",
+      "title": "Kafka 人格観測カード",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "persona_poster_viz",
+        "research_log_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "低刺激環境に最適化された人格を、分析ログと立ち姿で見せる",
+      "summary": "拒絶と拘束を避けつつ観測する人格の観測カード。",
+      "artifacts": [
+        {
+          "path": "artifacts/243_kafka_persona_observation_card.png",
+          "title": "Kafka 人格観測カード"
+        }
+      ],
+      "generated_prompt": "Create a square persona observation card with a calm, old research-file feel. Kafka appears on the right side, with a left-side analysis log. Use faded print texture, typewriter-like title treatment, Showa research-material notes, and old magazine paper wear. Preserve Kafka identity exactly and keep the card quiet, editorial, and low-stimulation.",
+      "created_at": "2026-05-10T21:16:32+09:00"
+    },
+    {
+      "id": "gen_20260510_211914",
+      "title": "Kafka 感情分解カード",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "emotion_mixture_text_pack",
+        "text_japanese_labels",
+        "research_log_pack",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "拒絶恐怖、拘束恐怖、観測疲労、信頼時の温度上昇を分解して見せる",
+      "summary": "感情を4項目で整理し、信頼時だけ温度が上がる構造を見える化する。",
+      "artifacts": [
+        {
+          "path": "artifacts/244_kafka_emotion_decomposition_card.png",
+          "title": "Kafka 感情分解カード"
+        }
+      ],
+      "generated_prompt": "Create a square emotional decomposition card with a Showa research-material and old magazine print look. Kafka stands quietly on the right side, with four emotional categories on the left: rejection fear, confinement fear, observation fatigue, and temperature rise when trust is present. Keep Kafka identity exactly and make the layout elegant, legible, and low-stimulation.",
+      "created_at": "2026-05-10T21:19:14+09:00"
     }
   ]
 }
