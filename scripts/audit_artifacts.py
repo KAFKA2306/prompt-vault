@@ -1,8 +1,6 @@
-import sys
 from collections import defaultdict
 
 from _bootstrap import ROOT
-
 from config import CONFIG
 from src.db_io import load_prompt_db
 
@@ -19,9 +17,7 @@ def main() -> int:
             linked_paths[artifact.path].append(template.id)
 
     root_files = {f"artifacts/{path.name}" for path in root_artifacts.iterdir() if path.is_file()}
-    orphaned_files = {
-        f"artifacts/_orphaned/{path.name}" for path in orphaned_artifacts.iterdir() if path.is_file()
-    }
+    orphaned_files = {f"artifacts/_orphaned/{path.name}" for path in orphaned_artifacts.iterdir() if path.is_file()}
 
     root_unlinked = sorted(root_files - set(linked_paths))
     missing_linked = sorted(set(linked_paths) - root_files)

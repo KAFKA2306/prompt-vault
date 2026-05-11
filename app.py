@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 from urllib.request import Request, urlopen
@@ -61,7 +61,11 @@ class Handler(BaseHTTPRequestHandler):
                 ".wav": "audio/wav",
             }.get(ext, "application/octet-stream")
 
-            content = render_app_js(load_db(), load_skills_index(SKILLS_INDEX_PATH)).encode("utf-8") if p == "/app.js" else f.read_bytes()
+            content = (
+                render_app_js(load_db(), load_skills_index(SKILLS_INDEX_PATH)).encode("utf-8")
+                if p == "/app.js"
+                else f.read_bytes()
+            )
             return self._send(200, mime, content)
 
         # Artifacts
@@ -112,7 +116,7 @@ class Handler(BaseHTTPRequestHandler):
             [out.get("block_updates", {}).get(id, blocks[id].content) for id in bids if id in blocks]
             + ([out["addition"]] if out.get("addition") else [])
         )
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         res_data = {
             "id": f"gen_{now}",
             "title": out["title"],

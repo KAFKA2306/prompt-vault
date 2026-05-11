@@ -3,7 +3,6 @@ import re
 import sys
 
 from _bootstrap import ROOT
-
 from config import CONFIG
 from src.db_io import load_json_db
 

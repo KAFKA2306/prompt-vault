@@ -2,7 +2,6 @@ import sys
 from collections import defaultdict
 
 from _bootstrap import ROOT
-
 from config import CONFIG
 from src.db_io import load_prompt_db
 
@@ -27,11 +26,7 @@ def main() -> int:
         return 1
 
     # Check for orphaned artifacts
-    actual_files = {
-        f"artifacts/{f.name}"
-        for f in (ROOT / CONFIG["paths"]["artifacts"]).iterdir()
-        if f.is_file()
-    }
+    actual_files = {f"artifacts/{f.name}" for f in (ROOT / CONFIG["paths"]["artifacts"]).iterdir() if f.is_file()}
     orphans = actual_files - linked_paths
     if orphans:
         for o in sorted(orphans):

@@ -1,9 +1,7 @@
 import sys
-
 from pathlib import Path
 
 from _bootstrap import ROOT
-
 from config import CONFIG
 
 CHECKS = CONFIG["audit_literals"]

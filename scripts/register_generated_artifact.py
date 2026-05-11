@@ -6,10 +6,9 @@ from datetime import datetime
 from pathlib import Path
 
 from _bootstrap import ROOT
-
 from config import CONFIG
-from src.db_io import load_json_db, save_json_db
 from src.artifact_ops import next_artifact_number, slugify
+from src.db_io import load_json_db, save_json_db
 
 DB_PATH = ROOT / CONFIG["paths"]["db"]
 ARTIFACTS_PATH = ROOT / CONFIG["paths"]["artifacts"]

@@ -6442,6 +6442,60 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-11T18:52:46+09:00"
+    },
+    {
+      "id": "gen_20260511_200253",
+      "title": "Kafka Sylfanel Lounge Event",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka と Sylfanel のラウンジ会話イベントを登録する",
+      "summary": "高級ラウンジで、Kafka と Sylfanel が静かに向き合う夜の会話イベント。",
+      "artifacts": [
+        {
+          "path": "artifacts/258_kafka_sylfanel_lounge_event.png",
+          "title": "Kafka & Sylfanel Lounge Event"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime lounge ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nMedium close-up two-shot in a luxury fantasy cocktail bar at night. Kafka is positioned slightly closer to camera on the left side, Sylfanel slightly farther away on the right side. Slightly asymmetric cinematic framing, partial shoulder cropping, foreground cocktail glass bokeh, foreground candle blur framing, subtle perspective depth, emotionally charged negative space in the center, soft focus background.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue color balance, blue-purple eyes, slightly tired gentle eyes, calm emotionally attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural facial asymmetry, emotionally restrained expression, fragile but calm emotional presence, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves, refined fantasy-modern outfit styling.\n\nSylfanel: beautiful anime woman, very long pale lavender-white hair with soft lilac gradients, airy layered hair strands, feather-light silky texture, warm lilac-white color balance, sleepy lavender-gray eyes, faint blush across cheeks, pale matte skin, soft delicate expression, translucent floral hair ornament on the left side, crystal flower accessories with dangling chains, elegant exposed-back chiffon and silk fantasy dress, subtle jewelry reflections, graceful posture, emotionally gentle presence.\n\nInteraction: gentle eye contact, soft affectionate expressions, emotionally warm intimate conversation, subtle romantic tension, quiet chemistry between two people, restrained emotional vulnerability, delicate conversational pause, soft breathing atmosphere, emotionally intimate silence, calm relationship-event mood, subtle human warmth.\n\nScene: elegant dark wooden counter and tables, premium bottle shelves with warm reflections, softly blurred metropolitan fantasy skyline through large windows, purple-blue city lights, warm candle lighting on table, violet cocktails inside elegant martini glasses, subtle guest silhouettes in background, premium hospitality atmosphere, intimate late-night emotional ambience, soft environmental haze, cinematic background blur.\n\nLighting: warm amber face lighting, soft indirect candle illumination, cinematic window backlighting, gentle rim lighting along hair silhouettes, restrained bloom, elegant localized reflections on cocktail glasses and fabrics, low-contrast shadows, warm cinematic glow mixed with subtle violet-blue environmental lighting, soft light diffusion, delicate chiffon translucency, believable material reflections.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable cocktail glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality, realistic imperfections, soft atmospheric depth, natural material response.\n\nUI: premium Japanese console JRPG dialogue interface, bottom semi-transparent dark navy dialogue box with thin cyan glowing border, readable white Japanese gothic font, elegant character name plate, multi-choice dialogue selection on the right side, relationship affinity gauge at bottom-left, minimal luxurious interface aesthetic, polished console RPG menu design, subtle cyan interface glow.\n\nConstraints: no photorealism, no western cartoon, no low-quality rendering, no cheap mobile game UI, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no distorted anatomy, no bad hands, no flat lighting, no excessive bloom, no greasy skin, no plastic skin, no cluttered composition, no perfect symmetry, no inconsistent character design, no chibi, no exaggerated expressions, no hyper-clean rendering, no idol aesthetic, no vtuber aesthetic, no neon cyberpunk overload, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:02:53+09:00"
+    },
+    {
+      "id": "gen_20260511_201614",
+      "title": "Kafka Sylfanel Terrace Afterglow",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka と Sylfanel の場面転換後のテラス会話イベントを登録する",
+      "summary": "ラウンジを出た直後の夜のテラスで、Kafka と Sylfanel が静かに余韻を共有するシーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/259_kafka_sylfanel_terrace_afterglow.png",
+          "title": "Kafka & Sylfanel Terrace Afterglow"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime mood, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nScene transition: just after leaving the luxury lounge, the two characters are now in a quiet covered terrace overlooking the city at night. The bar conversation has ended, and the mood has shifted into a softer afterglow. There is a sense of walking out from warmth into the cool night air.\n\nComposition: medium close-up two-shot, slightly off-center cinematic framing, Kafka on the left nearer to camera, Sylfanel on the right a little farther back, subtle perspective depth, negative space filled with city lights and terrace railing, foreground blur from a half-open glass door or curtain edge, soft focus skyline in the distance.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue color balance, blue-purple eyes, slightly tired gentle eyes, calm emotionally attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural facial asymmetry, emotionally restrained expression, fragile but calm emotional presence, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves, refined fantasy-modern outfit styling.\n\nSylfanel: beautiful anime woman, very long pale lavender-white hair with soft lilac gradients, airy layered hair strands, feather-light silky texture, warm lilac-white color balance, sleepy lavender-gray eyes, faint blush across cheeks, pale matte skin, soft delicate expression, translucent floral hair ornament on the left side, crystal flower accessories with dangling chains, elegant exposed-back chiffon and silk fantasy dress, subtle jewelry reflections, graceful posture, emotionally gentle presence.\n\nInteraction: after-conversation silence, one character glancing toward the city while the other looks back with a soft smile, gentle eye contact, subtle romantic tension, quiet chemistry, restrained vulnerability, the feeling of a small confession just passed, comfortable shared silence.\n\nEnvironment: elegant terrace with dark stone floor, thin metal railing, a few warm lanterns, remnants of the lounge glow behind them, soft breeze moving hair and chiffon, distant purple-blue city lights, scattered reflections on glass, premium hospitality atmosphere, intimate night air, soft environmental haze.\n\nLighting: cool city backlight mixed with warm spill from the lounge behind, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, soft moonlit ambience, believable material reflections, subtle violet-blue environmental lighting.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: minimal JRPG relationship-event interface only, a small elegant dialogue box at the bottom with thin cyan glow, readable white Japanese gothic font, one character name plate, a faint choice prompt, compact luxurious UI, no bulky overlays.\n\nConstraints: no photorealism, no western cartoon, no cheap mobile game UI, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no distorted anatomy, no bad hands, no flat lighting, no excessive bloom, no greasy skin, no plastic skin, no cluttered composition, no perfect symmetry, no inconsistent character design, no chibi, no exaggerated expressions, no hyper-clean rendering, no idol aesthetic, no vtuber aesthetic, no neon cyberpunk overload, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:16:14+09:00"
     }
   ]
 }
