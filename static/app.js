@@ -12,6 +12,12 @@ const artifactType = (path = '') => {
   if (['png', 'webp', 'jpg', 'jpeg'].includes(ext)) return 'image';
   return 'other';
 };
+const updatePromptLabel = (type) => {
+  const label = el('modal-prompt-label');
+  if (label) {
+    label.textContent = type === 'audio' ? 'キャプション / 台本' : '全文プロンプト';
+  }
+};
 
 const renderArtifactThumb = (artifact) => {
   if (!artifact) {
@@ -153,6 +159,7 @@ window.openModal = (id, saveToHistory = true) => {
       el('modal-img').src = firstArtifact.path;
     }
   }
+  updatePromptLabel(firstType);
   
   el('modal-artifacts').innerHTML = (t.artifacts || []).map((a, i) => renderArtifactThumbRow(a, i)).join('');
 
@@ -208,6 +215,7 @@ window.switchModalArtifact = (target, path) => {
   } else {
     el('modal-img').src = path;
   }
+  updatePromptLabel(type);
 };
 
 const renderGen = () => {

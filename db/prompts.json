@@ -108,7 +108,7 @@
     {
       "id": "spring_fashion_kafka",
       "title": "春のお出かけ服",
-      "content": "fashionable spring outfit, light beige or pale blue coat, airy dress or skirt, ribbon accents, small crossbody bag, elegant shoes, polished seasonal styling, coordinated and photo-ready",
+      "content": "fashionable spring outfit, light beige or pale blue coat, airy dress or skirt, ribbon accents, small crossbody bag, elegant shoes, polished seasonal styling, coordinated and photo-ready, light layered fabric, bright but not warm-looking, fresh spring air feeling",
       "category": "キャラ衣装",
       "role": "outfit"
     },
@@ -501,6 +501,41 @@
       "content": "cozy gaming room, monitor glow, snacks or drink nearby, pastel blue and lavender accents, tidy and playful, no clutter",
       "category": "背景",
       "role": "background"
+    },
+    {
+      "id": "gaming_min_hud_pack",
+      "title": "UI: ゲーム最小HUD",
+      "content": "minimal in-game HUD, small top-right money and affection display, tiny skip/log/menu icons, subtle Japanese labels, compact and readable, no dialogue box, no heavy overlays",
+      "category": "UI",
+      "role": "pack"
+    },
+    {
+      "id": "rpg_lounge_scene",
+      "title": "背景: 高級ラウンジ",
+      "content": "luxury lounge interior, warm bar lighting, plush sofa seating, polished tables, upscale adult atmosphere, several cast members naturally placed in the background",
+      "category": "背景",
+      "role": "background"
+    },
+    {
+      "id": "rpg_cel_shaded_3d_style",
+      "title": "描画: 3Dアニメ会話イベント",
+      "content": "premium cel-shaded 3D event scene, round faces, simple skin shading, soft hair clumps, slightly plastic but clean premium material feel, polished real-time game render, cinematic engine lighting",
+      "category": "描画",
+      "role": "style"
+    },
+    {
+      "id": "rpg_event_screenshot_layout",
+      "title": "形式: RPG会話イベントスクショ",
+      "content": "wide 16:9 gameplay screenshot, dialogue window at bottom, character name plate, choice options, top-right HUD, subtle skip/log/menu indicators, readable in-engine interface, cinematic framing",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "rpg_event_ui_pack",
+      "title": "UI: 会話イベント",
+      "content": "Japanese dialogue box, character name plate, believable choice list, money and affection status, skip/log/menu indicators, compact and readable HUD, calm premium game UI",
+      "category": "パック",
+      "role": "pack"
     },
     {
       "id": "outfit_homewear",
@@ -932,14 +967,14 @@
     {
       "id": "seasonal_outfit_spring_kafka",
       "title": "衣装: 春",
-      "content": "light spring outfit, pale cardigan, soft ribbon, thin layered fabric, tiny flower accent, gentle breeze feeling, pastel blue and lavender, morning tweet friendly, bright but calm",
+      "content": "light spring outfit, pale cardigan, soft ribbon, thin layered fabric, tiny flower accent, gentle breeze feeling, pastel blue and lavender, morning tweet friendly, bright but calm, breathable but modest, clean layered silhouette, not heavy or hot-looking",
       "category": "衣装",
       "role": "outfit"
     },
     {
       "id": "seasonal_outfit_summer_kafka",
       "title": "衣装: 夏",
-      "content": "light summer outfit, sleeveless or short-sleeve variation, airy fabric, cool blue highlights, small water or sparkle accents, refreshing morning feeling, pastel cyan and white, easygoing and bright",
+      "content": "light summer outfit, short-sleeve or airy long-sleeve variation, breathable fabric, cool blue highlights, small water or sparkle accents, refreshing morning feeling, pastel cyan and white, easygoing and bright, looks cool and comfortable rather than hot, modest summer styling, light coverage with ventilation",
       "category": "衣装",
       "role": "outfit"
     },
@@ -967,7 +1002,7 @@
     {
       "id": "morning_background_summer_kafka",
       "title": "夏朝背景",
-      "content": "fresh summer morning background, bright sky, cool light, small water accent, clean air, white space, simple and refreshing, no heat haze overload",
+      "content": "fresh summer morning background, bright sky, cool light, small water accent, clean air, white space, simple and refreshing, no heat haze overload, cool indoor or shaded feeling acceptable, light and comfortable atmosphere",
       "category": "背景",
       "role": "situation"
     },
@@ -6112,6 +6147,270 @@
       ],
       "generated_prompt": "Create a square emotional decomposition card with a Showa research-material and old magazine print look. Kafka stands quietly on the right side, with four emotional categories on the left: rejection fear, confinement fear, observation fatigue, and temperature rise when trust is present. Keep Kafka identity exactly and make the layout elegant, legible, and low-stimulation.",
       "created_at": "2026-05-10T21:19:14+09:00"
+    },
+    {
+      "id": "gen_20260511_140632",
+      "title": "Kafka Love Manual - Editorial Cover",
+      "blocks": [
+        "character_kafka_soft_reference",
+        "kafka_identity_lock",
+        "layout_character_sheet",
+        "rendering_soft_infographic",
+        "text_japanese_labels"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Kafka love manual / relationship profile infographic poster",
+      "summary": "Vertical A4 editorial poster with Kafka identity, love manual layout, and Japanese typography.",
+      "artifacts": [
+        {
+          "path": "artifacts/245_kafka_love_manual_poster.png",
+          "title": "Kafka Love Manual - Editorial Cover"
+        }
+      ],
+      "generated_prompt": "Create a vertical A4 Japanese love manual infographic poster using Kafka identity exactly. Left side: soft melancholic window-side Kafka portrait with lavender-blue hair, silver triangle hairpin, black ribbon braid, translucent cardigan, black lace camisole, wine glass, butterflies, and handwritten notes. Center: vertical Japanese slogan 「自由があるから、ちゃんと愛せる。」 Right side: LOVE MANUAL / 恋愛取扱説明書 panels with relationship profile, radar chart, keywords, memo cards, feather pen, and butterfly decorations. Soft purple-gray palette, matte paper texture, premium editorial layout, soft bloom, clean white background, minimal clutter, readable Japanese, human-made finish, not glossy.",
+      "created_at": "2026-05-11T14:06:32+09:00"
+    },
+    {
+      "id": "gen_20260511_140722",
+      "title": "Kafka Love Manual",
+      "blocks": [
+        "character_kafka_soft_reference",
+        "kafka_identity_lock",
+        "layout_character_sheet",
+        "rendering_soft_infographic",
+        "text_japanese_labels",
+        "text_style_jp"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Kafka love manual / relationship profile infographic poster",
+      "summary": "Primary vertical A4 editorial poster with Kafka identity, love manual layout, and Japanese typography.",
+      "artifacts": [
+        {
+          "path": "artifacts/246_kafka_love_manual.png",
+          "title": "Kafka Love Manual"
+        }
+      ],
+      "generated_prompt": "Create a vertical A4 Japanese love manual infographic poster using Kafka identity exactly. Left side: calm window-side Kafka portrait with lavender-blue hair, silver triangle hairpin, black ribbon braid, translucent cardigan, black lace camisole, wine glass, butterflies, and handwritten notes. Center: vertical Japanese slogan 「自由があるから、ちゃんと愛せる。」 Right side: LOVE MANUAL / 恋愛取扱説明書 panels with relationship profile, radar chart, keywords, memo cards, feather pen, and butterfly decorations. Soft purple-gray palette, matte paper texture, premium editorial layout, soft bloom, clean white background, minimal clutter, readable Japanese, human-made finish, not glossy.",
+      "created_at": "2026-05-11T14:07:22+09:00"
+    },
+    {
+      "id": "gen_20260511_141141",
+      "title": "Slay the Spire Downfall",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "kafka_identity_lock",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "Slay the Spire: The Board Game - Downfall の紹介用ビジュアルを登録する",
+      "summary": "Kafka の髪色と目を明確にした、Downfall 拡張のボードゲーム紹介ビジュアル。",
+      "artifacts": [
+        {
+          "path": "artifacts/247_slay_the_spire_downfall.png",
+          "title": "ボードゲームシリーズ: 031 ダウンフォール"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: board game themed social post illustration\nPrimary request: Slay the Spire: The Board Game - Downfall expansion social post image with Kafka clearly matching her canonical appearance.\nScene/backdrop: clean tabletop scene with the board game spread out, boss-side character boards and cards, a vertical spire map motif, relics, tokens, and dungeon components arranged neatly on a table\nSubject: Kafka presenting the expansion beside the board, clearly female, long light-blue hair with a lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, no glasses, calm confident expression, holding a few cards while the board game components remain the focus\nStyle/medium: polished anime illustration, crisp linework, soft but dramatic shading, high detail, readable tabletop composition\nComposition/framing: square or 4:5 social post, one large portrait, board game components clearly visible, balanced tabletop composition, mobile readable, tidy margins\nLighting/mood: moody but not dark, strategic and adventurous, subtle glow from dungeon elements, not horror-heavy\nColor palette: muted crimson, slate blue, warm gold, charcoal, ivory highlights, with enough contrast to keep the board readable\nMaterials/textures: cardboard board game components, printed cards, tokens, miniatures, matte table surface, clean edges\nConstraints: keep the image faithful to a real board game presentation, avoid generic fantasy clutter, keep the board game identity clear, no text-heavy poster layout, no logos, no watermarks, no timestamps\nAvoid: blurry text, broken hands, extra fingers, warped cards, generic dungeon props, empty table, clutter, low resolution, overly neon colors, plastic skin, 3D render look, dark horror mood, random English text, signature",
+      "created_at": "2026-05-11T14:11:41+09:00"
+    },
+    {
+      "id": "gen_20260511_155939",
+      "title": "Kafka Urban RPG Event Scene",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "rpg_event_screenshot_layout",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Kafka を主人公にした都市型3DアニメRPGの会話イベントスクショを登録する",
+      "summary": "高級ラウンジの接客会話イベントを、今風の3Dアニメ調ゲーム画面として見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/248_kafka_urban_rpg_event_scene.png",
+          "title": "Kafka 都市RPG 会話イベント"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: fictional in-game screenshot from a modern urban 3D anime RPG\nPrimary request: Create a believable gameplay screenshot from a non-existent contemporary urban open-world RPG. Kafka is the main heroine in a high-end lounge social venue, serving as a conversation-event character.\nScene/backdrop: luxury lounge interior, warm lighting, elegant bar counter, plush sofa seating, polished tables, softly glowing fixtures, upscale adult atmosphere, a few other cast members naturally placed in the background, lively but not crowded\nSubject: Kafka in a cute service outfit, performing a natural conversational service pose, calm and inviting expression, clearly the main heroine, not a painted illustration, not a poster\nStyle/medium: recent premium beautiful-girl 3D game event scene, cel-shaded 3D character models, round face, simple skin shading, soft hair clumps, clean slightly plastic premium material feel, polished and modern, cinematic in-engine rendering\nComposition/framing: wide 16:9 gameplay screenshot, clear dialogue window at bottom, character name plate, multiple choice options, status HUD in the top-right showing money and affection level, subtle skip/log/menu elements along the edges, readable in-game interface, no poster margins\nLighting/mood: warm lounge lighting, refined and glamorous, calm and cozy, slightly romantic and playful, mature but gentle, no horror tone\nColor palette: warm amber, soft gold, deep brown, muted rose, teal accents, clean UI white and gold, premium modern game palette\nMaterials/textures: polished wood, fabric sofas, glass bottles, glossy UI panels, cel-shaded 3D character materials, soft hair strands, clean skin shaders\nText (verbatim): Japanese-only dialogue UI, character name should read 「カフカ」, status UI labels should be in Japanese, choices should look like believable in-game options, a little cute and awkwardly charming\nConstraints: make it feel like an actual live gameplay screenshot, not promotional key art, not a concept poster, not an illustration, keep the dialogue window and UI legible, keep Kafka’s face and hairstyle consistent across the scene, preserve the in-game HUD feel\nAvoid: photorealism, 2D illustration look, empty room, low-poly look, overly glossy skin, extreme neon, dark horror mood, watermark, logo, English text, unreadable UI, subtitle gibberish, broken anatomy, distorted hands, fetish framing, explicit sexual content",
+      "created_at": "2026-05-11T15:59:39+09:00"
+    },
+    {
+      "id": "gen_20260511_160734",
+      "title": "Kafka Dungeon Deckbuilder Showcase",
+      "blocks": [
+        "character_kafka_soft_reference",
+        "kafka_identity_lock",
+        "boardgame_social_layout",
+        "bg_scene_dungeon",
+        "clean_quality_rendering",
+        "negative_common"
+      ],
+      "kind": "social",
+      "purpose": "Original dungeon deckbuilder showcase with Kafka presenter",
+      "summary": "Generic board game showcase poster without any franchise or IP names.",
+      "artifacts": [
+        {
+          "path": "artifacts/249_kafka_dungeon_deckbuilder_showcase.png",
+          "title": "Kafka Dungeon Deckbuilder Showcase"
+        }
+      ],
+      "generated_prompt": "Create a square or 4:5 anime illustration of an original dungeon deck-building board game showcase post. Do not include any real game title, franchise name, logo, or recognizable IP text. Kafka is the presenter character and matches her canonical identity: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, calm confident expression, no glasses. Scene: a clean tabletop presentation of an original dark fantasy deck-building game, with a tall tower or path board, cards, tokens, relic-like objects, boss boards, and organized components. Kafka stands beside the table holding a few cards while the board remains the focus. Polished anime illustration, crisp linework, soft but dramatic shading, high detail, muted crimson, slate blue, warm gold, charcoal, ivory highlights, matte textures, clean edges, subtle glow from dungeon elements, adventurous but not horror-heavy, no 3D render look, no plastic skin, no neon overload, no clutter. No brand marks, no watermark, no random English text.",
+      "created_at": "2026-05-11T16:07:34+09:00"
+    },
+    {
+      "id": "gen_20260511_182050",
+      "title": "Kafka Morning Desk Scene",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "background_work_desk",
+        "status_post_layout",
+        "daily_status_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の朝の作業デスクを静かな日常シーンとして登録する",
+      "summary": "朝の光の中で、ノートとコーヒーと laptop に向かう Kafka の静かな作業シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/251_kafka_morning_desk_scene.png",
+          "title": "Kafka 朝の作業机"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\\nAsset type: social post illustration\\nPrimary request: Kafka in a calm morning work-desk scene, completely different from the lounge RPG screenshot. She is at a neat desk with a laptop, notebook, coffee, and a window of soft daylight. The mood should be productive, quiet, and a little intimate.\\nScene/backdrop: tidy desk corner, laptop glow off to one side, notebook and pen, mug of coffee, soft curtains, pale morning sky outside\\nSubject: Kafka, clearly matching her canonical appearance, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, gentle focused expression, sitting or leaning at the desk with one hand near the notebook\\nStyle/medium: polished anime illustration, clean lineart, soft rendering, modern but warm, commercial vtuber-like finish\\nComposition/framing: square or 4:5 social post, one large portrait, readable desk objects, balanced negative space, no clutter\\nLighting/mood: soft natural daylight, peaceful, focused, calm start of the day\\nColor palette: white, pastel blue, lavender, warm beige, soft wood tones\\nMaterials/textures: paper notebook, ceramic mug, soft fabric clothing, smooth desk surface\\nConstraints: no IP names, no logos, no watermarks, no poster layout, no timestamp, no gaming UI, no dialogue UI\\nAvoid: photorealism, dark mood, extra characters, clutter, messy anatomy, broken hands, random English text, low resolution",
+      "created_at": "2026-05-11T18:20:50+09:00"
+    },
+    {
+      "id": "gen_20260511_182233",
+      "title": "Kafka Night Game Room",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "gaming_post_layout",
+        "background_gaming_room",
+        "lighting_monitor_glow",
+        "pose_controller_play",
+        "outfit_homewear",
+        "gaming_status_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の夜のゲームルームを静かな遊びのシーンとして登録する",
+      "summary": "モニターの光とコントローラで、夜の集中感と楽しさを出したゲームシーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/252_kafka_night_game_room.png",
+          "title": "Kafka 夜のゲームルーム"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: Kafka in a cozy late-night gaming room, clearly different from the morning desk scene. She is sitting with a game controller, monitor glow on her face, snacks nearby, and a playful focused mood.\nScene/backdrop: tidy gaming room, monitor glow, headset on a shelf, controller in hand, small drink, soft blanket on the sofa, subtle LED accents, no clutter\nSubject: Kafka, clearly matching her canonical appearance, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, relaxed seated pose, focused gaze at the screen\nStyle/medium: polished anime illustration, clean lineart, soft rendering, modern vtuber-like finish, gently luminous\nComposition/framing: square or 4:5 social post, one large portrait, controller visible, screen glow visible, balanced tabletop or sofa composition\nLighting/mood: monitor glow, evening cozy atmosphere, slightly playful and concentrated\nColor palette: deep navy, soft cyan, lavender, muted charcoal, warm snack colors\nMaterials/textures: plastic controller, soft fabric sofa, glossy screen light, glass cup, snack bowl\nConstraints: no IP names, no logos, no watermarks, no poster layout, no timestamp, no dialogue UI, no UI overlays\nAvoid: photorealism, horror mood, extra characters crowding the frame, clutter, broken anatomy, low resolution, random English text",
+      "created_at": "2026-05-11T18:22:33+09:00"
+    },
+    {
+      "id": "gen_20260511_182309",
+      "title": "Kafka Tokyo Night Walk",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "travel_bg_tokyo"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の東京夜景を歩く旅行シーンとして登録する",
+      "summary": "ネオンの街を歩く、少し驚いた表情の Kafka の都市旅行シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/253_kafka_tokyo_night_walk.png",
+          "title": "Kafka 東京の夜歩き"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: Kafka on a Tokyo night travel scene, completely different from the desk and gaming room. She is standing on a city street with neon signs, crossing lights, and a lively urban atmosphere, looking slightly surprised and intrigued.\nScene/backdrop: modern Tokyo street at night, neon signage, reflections on the pavement, passing pedestrians blurred in the distance, urban energy, but still readable and elegant\nSubject: Kafka, clearly matching her canonical appearance, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, stylish travel outfit, relaxed standing pose, one hand holding a small bag or phone\nStyle/medium: polished anime illustration, clean lineart, soft rendering, modern city-adventure feel, commercial vtuber-like finish\nComposition/framing: square or 4:5 social post, one large portrait, city depth behind her, no cluttered foreground\nLighting/mood: neon city glow, night reflections, energetic but calm, a little glamorous\nColor palette: midnight blue, neon magenta, cyan, warm amber, soft white highlights\nMaterials/textures: wet pavement reflections, jacket fabric, city glass and metal, glowing signs\nConstraints: no IP names, no logos, no watermarks, no poster layout, no timestamp, no dialogue UI, no UI overlays\nAvoid: photorealism, horror mood, heavy cyberpunk overload, extra characters dominating the frame, clutter, broken anatomy, low resolution, random English text",
+      "created_at": "2026-05-11T18:23:09+09:00"
+    },
+    {
+      "id": "gen_20260511_183132",
+      "title": "Kafka Night Game Room UI",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "gaming_post_layout",
+        "background_gaming_room",
+        "lighting_monitor_glow",
+        "pose_controller_play",
+        "outfit_homewear",
+        "gaming_min_hud_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の夜のゲームルームを、最小 HUD 付きのゲーム画面として登録する",
+      "summary": "モニターの光とコントローラ、そして最小限のゲーム UI を見せる夜のゲームシーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/254_kafka_night_game_room_ui.png",
+          "title": "Kafka 夜のゲームルーム UI"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: Kafka in a cozy late-night gaming room with the smallest possible in-game HUD visible. Keep it clearly different from the morning desk scene and the Tokyo travel scene. She is sitting with a game controller, monitor glow on her face, snacks nearby, and a playful focused mood.\nScene/backdrop: tidy gaming room, monitor glow, headset on a shelf, controller in hand, small drink, soft blanket on the sofa, subtle LED accents, no clutter\nSubject: Kafka, clearly matching her canonical appearance, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, relaxed seated pose, focused gaze at the screen\nStyle/medium: polished anime illustration, clean lineart, soft rendering, modern vtuber-like finish, gently luminous\nComposition/framing: square or 4:5 social post, one large portrait, controller visible, screen glow visible, balanced tabletop or sofa composition\nLighting/mood: monitor glow, evening cozy atmosphere, slightly playful and concentrated\nColor palette: deep navy, soft cyan, lavender, muted charcoal, warm snack colors\nMaterials/textures: plastic controller, soft fabric sofa, glossy screen light, glass cup, snack bowl\nUI: minimal in-game HUD only, small top-right money and affection display, tiny skip/log/menu icons in a corner, subtle Japanese labels, compact and readable, no dialogue box, no large overlays\nConstraints: no IP names, no logos, no watermarks, no poster layout, no timestamp, no dialogue UI, no bulky UI overlays\nAvoid: photorealism, horror mood, extra characters crowding the frame, clutter, broken anatomy, low resolution, random English text, unreadable UI",
+      "created_at": "2026-05-11T18:31:32+09:00"
+    },
+    {
+      "id": "gen_20260511_183606",
+      "title": "Kafka Seaside Reading Scene",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "reading_post_layout",
+        "background_reading_seaside",
+        "reading_pose_kafka",
+        "reading_outfit_kafka",
+        "reading_status_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の海辺の読書シーンを登録する",
+      "summary": "海の見えるバルコニーで、本を読みながら過ごす静かな別パターン。",
+      "artifacts": [
+        {
+          "path": "artifacts/255_kafka_seaside_reading_scene.png",
+          "title": "Kafka 海辺の読書"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\nAsset type: social post illustration\nPrimary request: Kafka in a seaside reading scene, completely different from the desk, gaming room, and Tokyo night scenes. She is seated with an open book, tea nearby, and a calm ocean horizon in the background.\nScene/backdrop: seaside balcony or quiet shore, ocean horizon, light sand or terrace rail, gentle breeze, bright sky, a small tea cup on the side\nSubject: Kafka, clearly matching her canonical appearance, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, small smile, calm focused gaze, seated reading pose with book held open\nStyle/medium: polished anime illustration, clean lineart, soft rendering, modern vtuber-like finish, peaceful and elegant\nComposition/framing: square or 4:5 social post, one large portrait, book readable, ocean visible, balanced and uncluttered\nLighting/mood: bright natural daylight, soft wind, reflective, quiet, relaxing, slightly wistful\nColor palette: ocean blue, white, pale sand, lavender, soft beige, light aqua\nMaterials/textures: paper book pages, ceramic teacup, light fabric outfit, gentle sea breeze, soft highlights on hair\nConstraints: no IP names, no logos, no watermarks, no poster layout, no timestamp, no gaming UI, no dialogue UI\nAvoid: photorealism, heavy neon, dark mood, extra characters, clutter, messy anatomy, broken hands, random English text, low resolution",
+      "created_at": "2026-05-11T18:36:06+09:00"
+    },
+    {
+      "id": "gen_20260511_184123",
+      "title": "Irodori-TTS 声固定ガイド",
+      "blocks": [
+        "irodori_tts_text_pack",
+        "voice_caption_base_pack",
+        "voice_generation_tips_pack",
+        "voice_caption_longform_rules_pack",
+        "voice_control_pack",
+        "voice_ethics_text",
+        "layout_social_square",
+        "rendering_soft_infographic",
+        "text_style_jp"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Voice consistency guide for Irodori-TTS",
+      "summary": "Japanese editorial infographic summarizing voice consistency best practices.",
+      "artifacts": [
+        {
+          "path": "artifacts/256_irodori_tts.png",
+          "title": "Irodori-TTS 声固定ガイド"
+        }
+      ],
+      "generated_prompt": "Create a square Japanese editorial infographic poster about Irodori-TTS voice consistency best practices. Use a white background with soft pastel blue and lavender accents, thin borders, compact section blocks, readable Japanese typography, and a polished human-made finish. The layout should feel like a technical memo / product guide, not a flashy promotional poster. Title: Irodori-TTSの声固定・安定化ガイド. Subtitle: 公式機能から見る、声質を安定させる実践手順. Main structure: 1. Reference Audioで固定する 2. VoiceDesignで方向性を詰める 3. LoRAで声を焼き付ける 4. 推論時の安定化 5. よくある課題と対策. Visual style: calm technical infographic, soft gradients, clean spacing, minimal clutter, Japanese editorial design, thin iconography, check marks, small callout boxes, subtle waveform, audio clip, seed, slider, and model icons, premium documentation aesthetic. Required content, in concise Japanese: Reference Audio: base model with reference audio gives the most stable voice cloning. VoiceDesign: caption-conditioned, reference audio not required, but output can vary with caption complexity. LoRA: fine-tuning is supported for stronger voice stability. Inference tips: normalize reference audio, use max reference length, fix seed when comparing outputs, split long text for consistency. Tradeoff note: stability, flexibility, and learning cost are different. Important design constraints: do not use real product screenshots, do not use random English clutter, do not make it look like a marketing landing page, no neon, no cyberpunk, no glossy 3D look, keep text short and legible, make the page look like a trustworthy engineering note. Mood: calm, practical, precise, reproducible, technical, trustworthy. Negative prompt: blurry text, broken Japanese, random English text, clutter, watermark, low resolution, deformed hands, extra fingers, overloaded decoration, overpolished AI gloss, neon colors, cyberpunk mood, 3D render look, dark horror mood, photorealistic people, corporate presentation style, unreadable layout.",
+      "created_at": "2026-05-11T18:41:23+09:00"
     }
   ]
 }
