@@ -37,6 +37,8 @@ class Template(BaseModel):
     summary: str = ""
     artifacts: list[Artifact] = Field(default_factory=list)
     generated_prompt: str | None = None
+    voice_caption: str | None = None
+    voice_script: str | None = None
     created_at: str | None = None
 
 

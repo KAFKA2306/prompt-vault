@@ -354,7 +354,9 @@ pre {
 .modal-related-label { margin-bottom: 24px; }
 .modal-related-list { display: flex; gap: var(--gap-md); overflow-x: auto; padding-bottom: 20px; }
 .modal-related-item { flex-shrink: 0; cursor: pointer; width: 140px; }
-.modal-related-thumb { width: 140px; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); }
+.modal-related-thumb { width: 140px; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); overflow: hidden; }
+.modal-related-thumb.template-card__thumb--audio .template-card__thumb-wave { width: 80%; height: 32px; }
+.modal-related-thumb.template-card__thumb--audio .template-card__thumb-label { font-size: 9px; }
 .modal-related-title { margin-top: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .modal-back {

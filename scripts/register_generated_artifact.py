@@ -41,6 +41,8 @@ def main() -> int:
     parser.add_argument("--generated-prompt", default=None, help="Generated prompt text")
     parser.add_argument("--kind", default="generated", help="Template kind")
     parser.add_argument("--blocks", default="", help="Comma-separated block IDs")
+    parser.add_argument("--voice-caption", default=None, help="Voice caption/description")
+    parser.add_argument("--voice-script", default=None, help="Voice script/text")
     parser.add_argument("--skip-build", action="store_true", help="Skip build and validation")
     args = parser.parse_args()
 
@@ -83,6 +85,8 @@ def main() -> int:
                 }
             ],
             "generated_prompt": args.generated_prompt,
+            "voice_caption": args.voice_caption,
+            "voice_script": args.voice_script,
             "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         }
     )

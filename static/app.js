@@ -12,26 +12,40 @@ const artifactType = (path = '') => {
   if (['png', 'webp', 'jpg', 'jpeg'].includes(ext)) return 'image';
   return 'other';
 };
-const updatePromptLabel = (type) => {
+const updateModalPrompt = (t, type) => {
   const label = el('modal-prompt-label');
-  if (label) {
-    label.textContent = type === 'audio' ? 'キャプション / 台本' : '全文プロンプト';
+  const prompt = el('modal-prompt');
+  if (!label || !prompt) return;
+
+  if (type === 'audio') {
+    label.textContent = 'キャプション / 台本';
+    if (t.voice_caption || t.voice_script) {
+      let content = '';
+      if (t.voice_caption) content += `【キャプション】\n${t.voice_caption}\n\n`;
+      if (t.voice_script) content += `【台本】\n${t.voice_script}`;
+      prompt.textContent = content.trim();
+    } else {
+      prompt.textContent = t.generated_prompt || (t.blocks || []).map(bid => blocks[bid]?.content || bid).join('\n\n');
+    }
+  } else {
+    label.textContent = '全文プロンプト';
+    prompt.textContent = t.generated_prompt || (t.blocks || []).map(bid => blocks[bid]?.content || bid).join('\n\n');
   }
 };
 
-const renderArtifactThumb = (artifact) => {
+const renderArtifactThumb = (artifact, className = '') => {
   if (!artifact) {
-    return '<div class="placeholder-box">No Image</div>';
+    return `<div class="placeholder-box ${className}">No Image</div>`;
   }
   if (artifactType(artifact.path) === 'audio') {
     return `
-      <div class="template-card__thumb template-card__thumb--audio">
+      <div class="template-card__thumb--audio ${className}">
         <div class="template-card__thumb-label">AUDIO</div>
         <div class="template-card__thumb-wave" aria-hidden="true"></div>
       </div>
     `;
   }
-  return `<img src="${artifact.path}" loading="lazy" alt="${esc(artifact.title)}">`;
+  return `<img src="${artifact.path}" class="${className}" loading="lazy" alt="${esc(artifact.title)}">`;
 };
 
 const renderArtifactThumbRow = (artifact, index) => {
@@ -159,16 +173,16 @@ window.openModal = (id, saveToHistory = true) => {
       el('modal-img').src = firstArtifact.path;
     }
   }
-  updatePromptLabel(firstType);
   
   el('modal-artifacts').innerHTML = (t.artifacts || []).map((a, i) => renderArtifactThumbRow(a, i)).join('');
 
   if (isExample) {
+    el('modal-prompt-label').textContent = '全文プロンプト';
     el('modal-prompt').textContent = '【画像見本のみ】\nこのテンプレートには構成要素（プロンプトの種）が定義されていません。';
     el('modal-copy').style.display = 'none';
     el('modal-primary').innerHTML = '<span class="subtle-label">構成要素なし</span>';
   } else {
-    el('modal-prompt').textContent = t.generated_prompt || (t.blocks && t.blocks.length ? t.blocks : [id]).map(bid => blocks[bid]?.content || bid).join('\n\n');
+    updateModalPrompt(t, firstType);
     el('modal-copy').style.display = 'block';
     
     const chips = (ids) => (ids || []).map(bid => `
@@ -186,7 +200,7 @@ window.openModal = (id, saveToHistory = true) => {
 
   el('modal-related').innerHTML = related.map(x => `
     <div class="modal-related-item" onclick="openModal('${x.id}')">
-      ${renderArtifactThumb(x.artifacts?.[0])}
+      ${renderArtifactThumb(x.artifacts?.[0], 'modal-related-thumb')}
       <div class="subtle-label modal-related-title">${esc(x.title)}</div>
     </div>
   `).join('');
@@ -215,7 +229,11 @@ window.switchModalArtifact = (target, path) => {
   } else {
     el('modal-img').src = path;
   }
-  updatePromptLabel(type);
+  
+  const t = templateMap[state.currentModalId] || blocks[state.currentModalId];
+  if (t) {
+    updateModalPrompt(t, type);
+  }
 };
 
 const renderGen = () => {

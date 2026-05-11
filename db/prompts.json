@@ -78,6 +78,13 @@
       "role": "identity"
     },
     {
+      "id": "character_sylfanel",
+      "title": "キャラクター: SYLFANEL",
+      "content": "beautiful anime woman, very long pale lavender-white hair, soft lilac gradients, airy layered strands, sleepy lavender-gray eyes, pale matte skin, faint blush, soft delicate expression, floral hair ornament, crystal chain accessories, elegant chiffon-silk fantasy dress, graceful gentle presence",
+      "category": "キャラクター",
+      "role": "identity"
+    },
+    {
       "id": "outfit_kafka",
       "title": "衣装: KAFKA基本",
       "content": "oversized white futuristic jacket, navy sailor-style inner top, soft oversized sleeves, short pleated skirt, white socks, chunky white-and-pastel sneakers, light blue and navy ribbon, small bead chains, tiny utility straps, futuristic but gentle vtuber outfit",
@@ -6411,6 +6418,30 @@
       ],
       "generated_prompt": "Create a square Japanese editorial infographic poster about Irodori-TTS voice consistency best practices. Use a white background with soft pastel blue and lavender accents, thin borders, compact section blocks, readable Japanese typography, and a polished human-made finish. The layout should feel like a technical memo / product guide, not a flashy promotional poster. Title: Irodori-TTSの声固定・安定化ガイド. Subtitle: 公式機能から見る、声質を安定させる実践手順. Main structure: 1. Reference Audioで固定する 2. VoiceDesignで方向性を詰める 3. LoRAで声を焼き付ける 4. 推論時の安定化 5. よくある課題と対策. Visual style: calm technical infographic, soft gradients, clean spacing, minimal clutter, Japanese editorial design, thin iconography, check marks, small callout boxes, subtle waveform, audio clip, seed, slider, and model icons, premium documentation aesthetic. Required content, in concise Japanese: Reference Audio: base model with reference audio gives the most stable voice cloning. VoiceDesign: caption-conditioned, reference audio not required, but output can vary with caption complexity. LoRA: fine-tuning is supported for stronger voice stability. Inference tips: normalize reference audio, use max reference length, fix seed when comparing outputs, split long text for consistency. Tradeoff note: stability, flexibility, and learning cost are different. Important design constraints: do not use real product screenshots, do not use random English clutter, do not make it look like a marketing landing page, no neon, no cyberpunk, no glossy 3D look, keep text short and legible, make the page look like a trustworthy engineering note. Mood: calm, practical, precise, reproducible, technical, trustworthy. Negative prompt: blurry text, broken Japanese, random English text, clutter, watermark, low resolution, deformed hands, extra fingers, overloaded decoration, overpolished AI gloss, neon colors, cyberpunk mood, 3D render look, dark horror mood, photorealistic people, corporate presentation style, unreadable layout.",
       "created_at": "2026-05-11T18:41:23+09:00"
+    },
+    {
+      "id": "gen_20260511_185246",
+      "title": "Kafka Lounge After Hours",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "gaming_min_hud_pack"
+      ],
+      "kind": "design_sheet",
+      "purpose": "同じ高級ラウンジ舞台の別カットを登録する",
+      "summary": "閉店間際の静かなラウンジで、バー越しにひと息つく Kafka の別シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/257_kafka_lounge_after_hours.png",
+          "title": "Kafka ラウンジ アフターアワーズ"
+        }
+      ],
+      "generated_prompt": "Use the attached image as the base venue and composition reference, but generate a completely different scene in the same luxury lounge setting. Keep the high-end bar, warm lighting, plush seating, polished interior, and premium adult atmosphere as the base stage. Change the moment, pose, and camera feel so it reads as a different scene, not a variant of the same screenshot.\n\nScene: after-hours lounge check-in scene, with the lounge calmer and less crowded, a few glasses on the counter, one or two cast members only in the far background, and Kafka standing near the bar as the focus. She should look like she is having a quiet one-on-one conversation after a long day, with a softer, more intimate mood than the original.\n\nKafka: keep her canonical appearance and hairstyle, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with cat ornament on the left side, braided section on the right side with a black ribbon. Give her a different pose and expression from the reference image: relaxed standing posture, one hand lightly resting on the bar or holding a glass, gentle slightly thoughtful smile.\n\nStyle: premium cel-shaded 3D anime game event scene, realistic in-engine screenshot feel, clean skin shading, soft hair clumps, polished materials, slightly plastic but premium character model look. Keep it as a game screenshot, not an illustration or poster.\n\nComposition: wide 16:9 gameplay screenshot, but change the framing substantially from the reference: use more negative space on one side, less front-facing portrait emphasis, and a calmer conversational angle. Include only minimal UI in the corner if needed: small money/affection HUD and tiny skip/log/menu icons, no big dialogue box.\n\nMood: quiet, late-night, elegant, a little wistful, intimate, sophisticated. The space should feel like the lounge is closing or winding down.\n\nColor palette: warm amber, soft gold, deep brown, muted rose, teal accents, clean UI white and gold.\n\nAvoid: copying the exact same pose, exact same camera angle, exact same dialogue box layout, crowded background cast, heavy neon, horror mood, photorealism, 2D illustration look, watermark, logo, English text, unreadable UI, broken anatomy, distorted hands, explicit sexual content, IP names or franchise logos.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T18:52:46+09:00"
     }
   ]
 }

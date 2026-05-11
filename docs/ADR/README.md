@@ -24,3 +24,4 @@
 - [0022 docs と skills は推論を書かず、確認できる事実だけを書く](0022-docs-and-skills-no-inference-policy.md)
 - [0023 Unity 操作は command queue と result file で行う](0023-unity-command-queue-bridge.md)
 - [0024 wav artifact を画像 artifact と同じ登録経路で扱う](0024-wav-artifact-support.md)
+- [0025 コンテキストに応じたサムネイル表示の最適化](0025-context-aware-thumbnail-scaling.md)
