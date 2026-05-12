@@ -45,8 +45,78 @@
     {
       "id": "master_style",
       "title": "マスタースタイル",
-      "content": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors",
+      "content": "masterpiece, best quality, ultra detailed, emotionally grounded anime illustration, commercial-level editorial design, emotional attraction analysis sheet, visual breakdown of elegance, official artbook special feature aesthetic, refined Japanese magazine layout, fan-made admiration board energy, asymmetrical editorial composition, intentional whitespace, overlapping translucent panels, clean visual hierarchy, subtle handwritten annotations, delicate arrows and circles, soft paper texture, pale lavender and silver palette, soft pastel glow, emotionally immersive atmosphere, dreamy fantasy realism, soft cinematic anime realism, natural imperfections, delicate film grain, non-glossy rendering, human-made feeling",
       "category": "基準",
+      "role": "style"
+    },
+    {
+      "id": "kafka_core",
+      "title": "キャラクター核: KAFKA",
+      "content": "young petite Japanese woman, long light-blue hair, soft lavender gradient at hair ends, fluffy layered hair, semi-transparent bangs, slightly uneven natural hair strands, airy side strands, silver triangle cat hairpin on the left side, small braided hair section tied with black ribbon, blue-purple eyes, slightly tired gentle eyes, faint under-eye shadows, small natural lips, soft pale skin, narrow shoulders, fragile but calm emotional presence, subtle human asymmetry, quiet restrained expression, feels like a real person rather than a designed character",
+      "category": "キャラクター核",
+      "role": "identity"
+    },
+    {
+      "id": "sylfanel_core",
+      "title": "キャラクター核: SYLFANEL",
+      "content": "young fantasy anime woman, very long silver-lilac hair, soft lavender gradient at hair ends, straighter silky hair texture, smooth vertical hair flow, gently grouped silky strands, lightly curved hair ends, semi-transparent bangs, pale violet eyes, translucent fair skin, elegant and ethereal appearance, graceful feminine silhouette, naturally fuller bust, elegant curvy body line, gentle but dignified expression, delicate facial structure, emotionally sensitive aura, quiet nobility, feels graceful and emotionally real rather than artificially idealized",
+      "category": "キャラクター核",
+      "role": "identity"
+    },
+    {
+      "id": "emotional_direction",
+      "title": "感情演出",
+      "content": "gentle emotional warmth, quiet elegance, emotionally composed expression, dreamy but believable atmosphere, soft emotional distance, graceful vulnerability, calm fantasy intimacy, emotionally soothing presence, soft loneliness, quiet kindness, emotionally observant gaze, subtle emotional depth, serene feminine aura, feels admired rather than displayed",
+      "category": "感情演出",
+      "role": "style"
+    },
+    {
+      "id": "best_angle",
+      "title": "構図",
+      "content": "slightly turning away from the viewer, soft side glance, gentle half-smile, head slightly tilted, one hand softly touching hair or sleeve, elegant relaxed posture, graceful shoulder line, flowing hair captured mid-movement, naturally curved silhouette, cinematic portrait framing, emotionally intimate angle, non-symmetrical composition, soft fantasy heroine atmosphere, not front-facing, not model-sheet posing",
+      "category": "構図",
+      "role": "pose"
+    },
+    {
+      "id": "visual_hierarchy",
+      "title": "視線誘導",
+      "content": "eyes as primary emotional anchor, flowing silver-lilac hair as secondary attraction point, silhouette and graceful chest line as emotional softness element, hands and sleeves as tertiary details, natural viewer gaze flow across the composition, emotional readability prioritized over technical detail density",
+      "category": "視線誘導",
+      "role": "layout"
+    },
+    {
+      "id": "analysis_panels",
+      "title": "分解パネル",
+      "content": "multiple emotional close-up panels surrounding the main character, affectionate editorial presentation, “favorite elegance detail” showcase design, orbit-like floating panel arrangement, transparent soft frames, close-up of pale violet eyes, silky hair flow analysis, subtle expression changes, graceful hand gesture detail, lace sleeve detail, floral ornament close-up, ribbon and back silhouette detail, elegant side profile, favorite viewing angle, soft dress folds, hair silhouette breakdown, gentle fantasy aura visualization",
+      "category": "分解パネル",
+      "role": "layout"
+    },
+    {
+      "id": "label_design",
+      "title": "注釈",
+      "content": "minimal annotation labels used only as graphic accents, tiny elegant editorial typography, subtle handwritten symbols, examples: “eyes”, “silky hair”, “favorite detail”, “quiet nobility”, “soft elegance”, “graceful gesture”, “dreamy aura”, “favorite angle”, “gentle warmth”, “side profile”",
+      "category": "注釈",
+      "role": "text"
+    },
+    {
+      "id": "lighting",
+      "title": "光",
+      "content": "soft cinematic lighting, gentle lavender ambient glow, pale silver reflected light, subtle fantasy bloom, soft rim light, delicate indoor diffusion, dreamy atmospheric shadows, emotionally immersive lighting, calm evening fantasy atmosphere, realistic light falloff, translucent fabric lighting",
+      "category": "光",
+      "role": "lighting"
+    },
+    {
+      "id": "background",
+      "title": "背景",
+      "content": "minimal elegant background, pastel lavender-silver gradient, subtle paper texture, thin editorial guide lines, floating translucent decorative shapes, refined fantasy framing, clean negative space, magazine-like composition rhythm, emotionally quiet fantasy visual environment, soft floral motif accents",
+      "category": "背景",
+      "role": "background"
+    },
+    {
+      "id": "avoid",
+      "title": "禁止",
+      "content": "technical model sheet, mechanical reference layout, giant text blocks, uniform grid composition, stiff posing, front-facing symmetry, generic AI anime face, vtuber reference-sheet aesthetic, idol aesthetic, hyper glossy skin, plastic rendering, excessive saturation, neon fantasy overload, cluttered decorative background, oversexualized posing, emotionless expression, perfectly clean symmetry",
+      "category": "禁止",
       "role": "style"
     },
     {
@@ -80,7 +150,7 @@
     {
       "id": "character_sylfanel",
       "title": "キャラクター: SYLFANEL",
-      "content": "beautiful anime woman, very long pale lavender-white hair, soft lilac gradients, airy layered strands, sleepy lavender-gray eyes, pale matte skin, faint blush, soft delicate expression, floral hair ornament, crystal chain accessories, elegant chiffon-silk fantasy dress, graceful gentle presence",
+      "content": "female anime character, very long silver-lilac hair with soft lavender gradient, straighter silky hair, smooth vertical hair flow, controlled soft volume, gently grouped silky strands, soft flowing hair with minimal sharp strands, lightly curved hair ends, less fluffy spread, semi-transparent bangs, pale violet eyes, translucent fair skin, elegant and ethereal appearance, gentle but dignified expression, naturally fuller bust, soft feminine body line, elegant curvy silhouette, graceful chest volume, white and lavender fantasy one-piece dress with delicate lace details, translucent soft sleeves, floral hair ornament with ribbons, large ribbon on the back, graceful silhouette, dreamy fantasy atmosphere, refined elegance, emotionally sensitive aura, quiet nobility, soft cinematic lighting, pastel color palette, soft-focus illustration style, delicate fantasy anime art",
       "category": "キャラクター",
       "role": "identity"
     },
@@ -2408,6 +2478,29 @@
           "title": "コスプレ投稿の実例"
         }
       ]
+    },
+    {
+      "id": "character_design_sheet_sylfanel",
+      "title": "SYLFANEL キャラデザインシート",
+      "blocks": [
+        "master_style",
+        "character_sylfanel",
+        "layout_character_sheet",
+        "rendering_soft_infographic",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "SYLFANEL の見た目基準を1枚にまとめる",
+      "summary": "銀紫ロングヘア、淡い紫眼、幻想的なドレス、柔らかな曲線シルエットを整理したデザインシート。",
+      "artifacts": [
+        {
+          "path": "artifacts/268_sylfanel_character_design_sheet.png",
+          "title": "SYLFANEL キャラデザインシート"
+        }
+      ],
+      "generated_prompt": "Create a polished Japanese character design reference sheet for SYLFANEL. Use a white background with pastel blue and lavender accents, thin blue borders, roomy margins, soft shadows, and a clean human-made finish. Make the layout feel like a premium anime reference page, not a flashy poster.\n\nSYLFANEL: female anime character, very long silver-lilac hair with soft lavender gradient, straighter silky hair, smooth vertical hair flow, controlled soft volume, gently grouped silky strands, soft flowing hair with minimal sharp strands, lightly curved hair ends, less fluffy spread, semi-transparent bangs, pale violet eyes, translucent fair skin, elegant and ethereal appearance, gentle but dignified expression, naturally fuller bust, soft feminine body line, elegant curvy silhouette, graceful chest volume, white and lavender fantasy one-piece dress with delicate lace details, translucent soft sleeves, floral hair ornament with ribbons, large ribbon on the back, graceful silhouette, dreamy fantasy atmosphere, refined elegance, emotionally sensitive aura, quiet nobility, soft cinematic lighting, pastel color palette, soft-focus illustration style, delicate fantasy anime art.\n\nLayout: top title banner, front view, side view, back view, face close-up, hair notes, dress notes, accessory callouts, and a small expression row. Keep the spacing consistent and the labels easy to read at a glance. Use Japanese text only. Keep the silhouette elegant, the hair smooth and coherent, and the dress details delicate and clearly separated.\n\nTone: calm, refined, dreamy, delicate, premium, easy to reuse as a visual identity sheet.",
+      "created_at": "2026-05-12T00:00:00+09:00"
     },
     {
       "id": "frame_sheet",
@@ -6496,6 +6589,217 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-11T20:16:14+09:00"
+    },
+    {
+      "id": "gen_20260511_202112",
+      "title": "Kafka Sylfanel Private Lounge Room",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka と Sylfanel の窓辺ソファ会話イベントを登録する",
+      "summary": "雨の夜景が見える私室ラウンジで、Kafka と Sylfanel が距離を縮めて会話するシーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/260_kafka_sylfanel_private_lounge_room.png",
+          "title": "Kafka & Sylfanel Private Lounge Room"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime indoor ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nScene: a quiet private lounge room adjacent to the bar, with a large rain-speckled window and a soft sofa. The night has grown later, and the mood is more intimate and reflective than before. Kafka and Sylfanel are seated close to each other on the sofa, with a half-finished cocktail table between them, as if the conversation has moved from formal small talk into a more personal pause.\n\nComposition: medium shot with a gentle over-the-shoulder angle, Kafka on the left slightly nearer to camera, Sylfanel on the right slightly turned toward Kafka, soft negative space around the window and lamp, foreground blur from a glass and a candle, subtle depth and cinematic asymmetry.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue color balance, blue-purple eyes, slightly tired gentle eyes, calm emotionally attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural facial asymmetry, emotionally restrained expression, fragile but calm emotional presence, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves, refined fantasy-modern outfit styling.\n\nSylfanel: beautiful anime woman, very long pale lavender-white hair with soft lilac gradients, airy layered hair strands, feather-light silky texture, warm lilac-white color balance, sleepy lavender-gray eyes, faint blush across cheeks, pale matte skin, soft delicate expression, translucent floral hair ornament on the left side, crystal flower accessories with dangling chains, elegant exposed-back chiffon and silk fantasy dress, subtle jewelry reflections, graceful posture, emotionally gentle presence.\n\nInteraction: quiet after-hours conversation, one character holding a glass while the other folds her hands gently in her lap, soft eye contact, subtle romantic tension, comfortable closeness, restrained vulnerability, the feeling of a calm confession waiting to happen, warm human silence.\n\nEnvironment: private lounge room with a low sofa, dark wood side table, soft floor lamp, rain-streaked window with purple-blue city reflections, a folded blanket, one small tray of desserts, premium hospitality atmosphere, intimate night air, soft environmental haze, elegant room stillness.\n\nLighting: warm lamp light mixed with cool city reflection through the window, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, soft moonlit ambience, believable material reflections, subtle violet-blue environmental lighting.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: minimal JRPG relationship-event interface only, a small elegant dialogue box at the bottom with thin cyan glow, readable white Japanese gothic font, one character name plate, a faint choice prompt, compact luxurious UI, no bulky overlays.\n\nConstraints: no photorealism, no western cartoon, no cheap mobile game UI, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no distorted anatomy, no bad hands, no flat lighting, no excessive bloom, no greasy skin, no plastic skin, no cluttered composition, no perfect symmetry, no inconsistent character design, no chibi, no exaggerated expressions, no hyper-clean rendering, no idol aesthetic, no vtuber aesthetic, no neon cyberpunk overload, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:21:12+09:00"
+    },
+    {
+      "id": "gen_20260511_202321",
+      "title": "Kafka Sylfanel Bar Shift",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Sylfanel のバーウェイトレス制服版として別日のラウンジ会話イベントを登録する",
+      "summary": "高級ホテルバーで、Sylfanel が接客制服で働く別日版の会話シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/261_kafka_sylfanel_bar_shift.png",
+          "title": "Kafka & Sylfanel Bar Shift"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime lounge ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nAnother day version in the same luxury lounge. The mood is calmer and more professional than the previous private sofa scene. Sylfanel is now working as a classic bar waitress at a high-end hotel lounge, while Kafka is seated nearby as a guest. The atmosphere should feel like a refined service interaction that slowly turns into a warm personal moment.\n\nComposition: medium close-up two-shot with elegant asymmetry, Kafka on the left slightly nearer to camera, Sylfanel on the right slightly farther back behind the bar edge, subtle perspective depth, negative space filled by polished counter surfaces and soft window reflections, foreground blur from a cocktail glass and a candle, cinematic background softness.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue color balance, blue-purple eyes, slightly tired gentle eyes, calm emotionally attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural facial asymmetry, emotionally restrained expression, fragile but calm emotional presence, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves, refined fantasy-modern outfit styling.\n\nSylfanel: beautiful anime woman, very long pale lavender-white hair with soft lilac gradients, airy layered hair strands, feather-light silky texture, warm lilac-white color balance, sleepy lavender-gray eyes, faint blush across cheeks, pale matte skin, soft delicate expression, translucent floral hair ornament on the left side, crystal flower accessories with dangling chains, classic bar waitress outfit, white shirt, black vest, narrow black tie, subtle name plate on the chest, sleeves lightly rolled or loosened at the arms, elegant high-end hotel bar uniform styling, formal yet gentle, mono-tone refined staff attire, calm adult presence.\n\nInteraction: gentle eye contact, soft service smile from Sylfanel while serving a drink, Kafka looking up with a quiet appreciative expression, subtle romantic tension, restrained vulnerability, comfortable closeness, the feeling of a small private conversation hidden inside a professional shift, warm human silence.\n\nEnvironment: luxury hotel bar interior at night, dark wooden counter, polished glassware, softly glowing bottle shelves, premium chairs and tables, a few elegant blurred patrons in the background, city night reflections in the windows, intimate hospitality atmosphere, soft environmental haze, refined room stillness.\n\nLighting: warm amber service light on the counter mixed with cool city reflection through the window, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, soft moonlit ambience, believable material reflections, subtle violet-blue environmental lighting.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: minimal JRPG relationship-event interface only, a small elegant dialogue box at the bottom with thin cyan glow, readable white Japanese gothic font, one character name plate, a faint choice prompt, compact luxurious UI, no bulky overlays.\n\nConstraints: no photorealism, no western cartoon, no cheap mobile game UI, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no distorted anatomy, no bad hands, no flat lighting, no excessive bloom, no greasy skin, no plastic skin, no cluttered composition, no perfect symmetry, no inconsistent character design, no chibi, no exaggerated expressions, no hyper-clean rendering, no idol aesthetic, no vtuber aesthetic, no neon cyberpunk overload, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:23:21+09:00"
+    },
+    {
+      "id": "gen_20260511_203011",
+      "title": "Kafka Sylfanel Gothic Himecut",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Sylfanel のハーフアップ姫カット版としてラウンジ会話イベントを登録する",
+      "summary": "高級ラウンジで、Sylfanel の姫カットと赤黒インナーカラーが見える別バージョン。",
+      "artifacts": [
+        {
+          "path": "artifacts/262_kafka_sylfanel_gothic_himecut.png",
+          "title": "Kafka & Sylfanel Gothic Himecut"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime lounge ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nScene: a quiet high-end hotel lounge at night, after the conversation has softened into a private pause. Sylfanel is the focus, standing near a polished bar counter with a softly glowing cocktail in hand, while Kafka sits nearby as a calm witness to the moment. The mood should feel intimate, refined, and a little gothic-romantic, as if a new side of Sylfanel is being revealed.\n\nComposition: medium close-up two-shot with Sylfanel slightly closer to camera on the right side, Kafka farther back on the left side, slightly asymmetric cinematic framing, subtle negative space, foreground bokeh from glass and candlelight, soft depth of field, elegant observational angle.\n\nSylfanel: beautiful anime woman with a very specific hairstyle. Base hairstyle is hime cut: long straight hair with clean face-framing side pieces, long straight lengths, and a structured silhouette. Front bangs are see-through bangs, slightly blunt and airy rather than heavy. Upper section is half-up, with a neat tied-up top section that keeps the hairstyle elegant and controlled. The sides are long side layers. Inside hair color is a black to deep red gradient, visible mainly when the hair shifts or opens up, with the outer layer staying white-silver to ash gray. The hair should clearly show a two-layer structure: outer layer in pale silver, ash gray, and white tones; inner layer in black fading into deep crimson. The inner red-black color should be visible as a hidden accent, especially near the back, underneath, and around the lifted half-up sections. Overall hair length is long and straight, with a slightly gothic, modern VTuber / VRChat avatar / Japanese modern fashion vibe, elegant but cool. Delicate face, sleepy lavender-gray eyes, pale matte skin, faint blush, soft expression, translucent floral ornament, crystal accessories, graceful posture, emotionally gentle presence.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue color balance, blue-purple eyes, slightly tired gentle eyes, calm emotionally attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural facial asymmetry, emotionally restrained expression, fragile but calm emotional presence, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves, refined fantasy-modern outfit styling.\n\nInteraction: Sylfanel gently turns as if revealing the hairstyle from a different angle, soft eye contact, subtle romantic tension, quiet chemistry, restrained vulnerability, the feeling of a secret aesthetic being shared, warm human silence.\n\nEnvironment: dark wooden bar counter, softly glowing bottle shelves, polished glassware, lounge chairs and tables, a few blurred patrons in the background, purple-blue city lights through large windows, intimate hospitality atmosphere, soft environmental haze, elegant room stillness.\n\nLighting: warm amber service light mixed with cool violet-blue city reflections, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, soft moonlit ambience, believable material reflections, subtle violet-blue environmental lighting.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: minimal JRPG relationship-event interface only, a small elegant dialogue box at the bottom with thin cyan glow, readable white Japanese gothic font, one character name plate, a faint choice prompt, compact luxurious UI, no bulky overlays.\n\nConstraints: no photorealism, no western cartoon, no cheap mobile game UI, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no distorted anatomy, no bad hands, no flat lighting, no excessive bloom, no greasy skin, no plastic skin, no cluttered composition, no perfect symmetry, no inconsistent character design, no chibi, no exaggerated expressions, no hyper-clean rendering, no idol aesthetic, no vtuber aesthetic, no neon cyberpunk overload, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:30:11+09:00"
+    },
+    {
+      "id": "gen_20260511_203826",
+      "title": "Kafka Sylfanel Lounge Fixed Composition",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "位置関係を修正した Kafka と Sylfanel のラウンジ会話イベントを登録する",
+      "summary": "同じ高級ラウンジで、二人の座標と視線関係を修正した会話シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/263_kafka_sylfanel_lounge_fixed_composition.png",
+          "title": "Kafka & Sylfanel Lounge Fixed Composition"
+        }
+      ],
+      "generated_prompt": "Use the attached image as a reference for characters, setting, mood, and UI style, but redraw the composition so the spatial relationship is correct and emotionally readable.\n\nGoal: fix the broken pose/position relationship. Make the two characters clearly sit at the same bar table with believable depth, proper eye-line matching, and no overlapping anatomy confusion. Kafka and Sylfanel should feel like they are in the same physical space, with their shoulders, arms, table edge, and cocktail glasses all aligned naturally.\n\nScene: luxury fantasy cocktail bar at night, same premium lounge ambience, same elegant bar counter, polished shelves, city lights through the window, candle glow, refined relationship-event mood.\n\nComposition: stable medium two-shot, camera slightly pulled back compared to the reference, Kafka on the left and slightly farther back, Sylfanel on the right and slightly closer to the camera but not dominating the frame. Keep both seated at the same table angle, with visible separation between them. Use a clear triangular composition between the two faces and the cocktail glasses. The table edge must be consistent across the whole image. The foreground glass and candle should frame the lower right and lower left corners without obscuring either character’s torso or hands.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue balance, blue-purple eyes, slightly tired gentle eyes, calm attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural asymmetry, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves.\n\nSylfanel: beautiful anime woman, very long pale lavender-white hair with soft lilac gradients, airy layered hair strands, feather-light silky texture, warm lilac-white balance, sleepy lavender-gray eyes, faint blush, pale matte skin, soft delicate expression, translucent floral hair ornament on the left side, crystal flower accessories with dangling chains, elegant exposed-back chiffon and silk fantasy dress, subtle jewelry reflections, graceful posture.\n\nImportant hairstyle correction for Sylfanel: keep the hair structured and readable. Use a half-up hime cut silhouette with straight side pieces, soft see-through bangs, long straight lengths, and a visible dual-tone hair structure: outer layer pale silver/ash-gray, inner layer black fading into deep crimson. Make the red-black inner color visible at the back and under the lifted half-up section, but do not let it swallow the whole hair mass. The hairstyle must read cleanly from a distance.\n\nInteraction: gentle eye contact, soft affectionate expressions, emotionally warm intimate conversation, subtle romantic tension, quiet chemistry, restrained vulnerability. Their hands should be positioned naturally: one cocktail glass near Sylfanel, Kafka’s hand resting closer to her own side of the table. No crossed arms blocking the body.\n\nLighting: warm amber face lighting, soft indirect candle illumination, cinematic window backlighting, gentle rim lighting along hair silhouettes, restrained bloom, elegant localized reflections on cocktail glasses and fabrics, low-contrast shadows, warm cinematic glow mixed with subtle violet-blue environmental lighting.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable cocktail glass reflections, refined cloth shading, soft translucent chiffon, delicate jewelry highlights, premium visual novel texture quality.\n\nUI: premium Japanese console JRPG dialogue interface, bottom semi-transparent dark navy dialogue box with thin cyan glowing border, readable white Japanese gothic font, elegant character name plate, multi-choice dialogue selection on the right side, relationship affinity gauge at bottom-left, minimal luxurious interface aesthetic.\n\nConstraints: no broken anatomy, no impossible overlap, no duplicated limbs, no floating hands, no incorrect perspective, no character blocking the other’s torso, no extreme close-up, no perfect symmetry, no photorealism, no western cartoon, no low-quality rendering, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no cheap mobile game UI, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:38:26+09:00"
+    },
+    {
+      "id": "gen_20260511_205719",
+      "title": "Kafka Sylfanel Lounge Hair Fix v2",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Sylfanel の内側カラーが自然につながるよう修正したラウンジ会話イベントを登録する",
+      "summary": "高級ラウンジで、姫カットと赤黒内側カラーの連続性を直した修正版。",
+      "artifacts": [
+        {
+          "path": "artifacts/264_kafka_sylfanel_lounge_hair_fix_v2.png",
+          "title": "Kafka & Sylfanel Lounge Hair Fix v2"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime lounge ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nScene: same luxury hotel lounge at night, focused on a corrected hairstyle version of Sylfanel in a classic bar waitress outfit, with Kafka seated nearby as a guest. Calm after-hours service conversation, refined and slightly intimate.\n\nComposition: stable medium two-shot, clear separation between characters, Sylfanel on the right standing a little closer to the bar edge, Kafka on the left seated farther back. Keep the bar counter line consistent. Use a clean triangular composition between faces and cocktail glass. No overlap confusion.\n\nSylfanel hairstyle correction: the inner color must NOT look like a separate floating strip. The hairstyle should read as one coherent mass of hair with visible layering. Use a half-up hime cut silhouette: long straight outer lengths, structured face-framing side pieces, long side layers, and airy see-through bangs. The outer hair layer is pale silver to ash gray. The inner color is black fading into deep crimson, but it should appear only where the hair naturally parts, curves, tucks behind the shoulder, or shows volume from the side and back. Make the inner color blend into the overall hair flow, as if it is underneath the outer layer, not pasted on top. Show the red-black accents mainly near the back of the half-up section, under the long side layers, and where a few strands separate at the shoulder. The red should be a deep wine crimson, subtle and elegant, not neon. The hair should feel believable, dense, and layered, with clear roots and shadow volume.\n\nSylfanel outfit: classic bar waitress uniform, high-end hotel bar style. White shirt, black vest, narrow black tie, subtle name plate, sleeves lightly rolled or loosened at the arms, formal but gently relaxed service look, monochrome, refined, mature, and calm.\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, slightly uneven natural hair strands, cool cyan-blue balance, blue-purple eyes, slightly tired gentle eyes, calm attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon, delicate facial features, natural asymmetry, black lace innerwear, elegant off-shoulder translucent white chiffon sleeves.\n\nInteraction: Sylfanel softly presenting a drink while making gentle eye contact. Kafka responds with a quiet appreciative expression. Subtle romantic tension, restrained vulnerability, warm human silence.\n\nEnvironment: dark wooden bar counter, softly glowing bottle shelves, polished glassware, lounge chairs and tables, a few blurred patrons in the background, city night lights through large windows, intimate hospitality atmosphere, soft environmental haze, elegant room stillness.\n\nLighting: warm amber service light on Sylfanel's face and uniform, soft candle illumination on the table, cool violet-blue city reflections in the background, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, believable material reflections.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable cocktail glass reflections, refined cloth shading, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: premium Japanese console JRPG dialogue interface, bottom semi-transparent dark navy dialogue box with thin cyan glowing border, readable white Japanese gothic font, elegant character name plate, multi-choice dialogue selection on the right side, relationship affinity gauge at bottom-left, minimal luxurious interface aesthetic.\n\nConstraints: no broken anatomy, no impossible overlap, no floating hair strips, no disconnected inner color, no duplicated limbs, no floating hands, no incorrect perspective, no character blocking the other’s torso, no extreme close-up, no perfect symmetry, no photorealism, no western cartoon, no low-quality rendering, no muddy colors, no noisy textures, no oversaturated colors, no giant anime eyes, no cheap mobile game UI, no generic AI anime face, no AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T20:57:19+09:00"
+    },
+    {
+      "id": "gen_20260511_210136",
+      "title": "Kafka Sylfanel Hair Physics Fix",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "Sylfanel の髪の質量構造を修正したラウンジ会話イベントを登録する",
+      "summary": "高級ラウンジで、髪の根元から毛束の流れまで整えた修正版。",
+      "artifacts": [
+        {
+          "path": "artifacts/265_kafka_sylfanel_hair_physics_fix.png",
+          "title": "Kafka & Sylfanel Hair Physics Fix"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG presentation, cinematic anime illustration, stylized anime realism, polished commercial game rendering, refined cel shading, emotionally immersive scene design, sophisticated composition, elegant visual hierarchy, restrained cinematic atmosphere, believable character presence, subtle cinematic depth, polished modern console RPG aesthetic, emotionally intimate visual novel atmosphere, luxury nighttime lounge ambience, premium relationship-event direction, refined anime cinematography, soft cinematic anime realism, quiet emotional futurism, subtle observational loneliness, understated realism, muted blue-gray and lavender undertones, low-contrast cinematic lighting, psychologically grounded atmosphere, authentic emotional warmth, slight film grain, non-glossy rendering, emotionally believable atmosphere.\n\nFocus: improve the hair physics and structural continuity of both characters, especially the right character. Hair must be drawn as a believable mass with root-to-tip continuity, not as a floating silhouette.\n\nScene: luxury hotel lounge at night, same premium bar atmosphere, polished bottle shelves, candlelight, city reflections through large windows, refined relationship-event mood. Two characters seated at the same table with clear spatial relationship and natural eye contact.\n\nComposition: stable medium two-shot, Kafka on the left slightly farther back, Sylfanel on the right slightly closer to camera but still clearly seated at the same table angle. The bar counter line is coherent, the shoulders and arms do not overlap confusingly, and the cocktail glasses align naturally with each character. Use a clear triangular composition between the two faces and the drink glasses. Keep enough negative space for the lounge depth, but do not crop the hair mass awkwardly.\n\nSylfanel hair: the key correction. Long hair must show physically layered long hair structure, visible hair volume compression near the tied section, natural gravity-separated hair groups, uneven overlapping hair strands, mid-layer strand density, realistic root-to-tip hair flow, subtle strand breakups around shoulders and waist, natural hair weight distribution, soft random flyaway hairs, imperfect layered strand hierarchy, grounded hair physics, believable hair mass, tactile hair texture, physically plausible strand behavior, consistent strand rendering quality across bangs, side hair, and back hair. Use a half-up hime cut silhouette with see-through bangs, structured face-framing side pieces, and long straight lengths, but avoid a flat silhouette. The outer hair layer is pale silver to ash gray, and the inner hair is black fading into deep crimson. The inner color must be integrated into the hair mass: visible as layered depth near the shoulder, under the half-up section, around the back of the head, and where strands separate naturally. It should feel like a real hidden layer, not a floating stripe. Add tension around the tied hair section, compressed hair volume near the hair tie, pulled scalp directionality, realistic ponytail root tension, dense mid-length strand structure, visible intermediate hair clustering between bangs and hair tips. The hair should have a coherent silhouette but clear internal structure, with subtle asymmetry and believable strand variation. No wig appearance.\n\nSylfanel outfit: classic bar waitress uniform, high-end hotel bar style. White shirt, black vest, narrow black tie, subtle name plate, sleeves lightly rolled or loosened at the arms, formal but gently relaxed service look, monochrome, refined, mature, and calm.\n\nKafka hair: restrained hair detail density, minimal but believable strand rendering, slightly uneven strand thickness, subtle messy micro-strands, naturally broken hair silhouette, soft asymmetric strand placement, long light-blue hair with soft lavender gradients near the ends, layered semi-transparent bangs, fluffy layered hair, cool cyan-blue balance, blue-purple eyes, slightly tired gentle eyes, calm attentive gaze, pale matte skin, faint blush, small restrained smile, faint under-eye shadows, narrow shoulders, slightly slouched elegant posture, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section on the right side tied with black ribbon.\n\nInteraction: Sylfanel softly presenting a drink while making gentle eye contact. Kafka responds with a quiet appreciative expression. Subtle romantic tension, restrained vulnerability, warm human silence.\n\nEnvironment: dark wooden bar counter, softly glowing bottle shelves, polished glassware, lounge chairs and tables, a few blurred patrons in the background, city night lights through large windows, intimate hospitality atmosphere, soft environmental haze, elegant room stillness.\n\nLighting: warm amber service light on Sylfanel's face and uniform, soft candle illumination on the table, cool violet-blue city reflections in the background, gentle rim lighting on hair silhouettes, restrained bloom, delicate reflections on glass and jewelry, low-contrast shadows, believable material reflections.\n\nMaterials: soft layered anime hair rendering, matte skin texture, elegant fabric folds, subtle accessory reflections, believable cocktail glass reflections, refined cloth shading, premium visual novel texture quality, realistic imperfections, soft atmospheric depth.\n\nUI: premium Japanese console JRPG dialogue interface, bottom semi-transparent dark navy dialogue box with thin cyan glowing border, readable white Japanese gothic font, elegant character name plate, multi-choice dialogue selection on the right side, relationship affinity gauge at bottom-left, minimal luxurious interface aesthetic.\n\nNegative prompt: plastic hair, helmet hair, perfectly symmetric hair, overly smooth strand flow, liquid hair, ribbon-like hair strands, synthetic wig appearance, uniform strand thickness, overly glossy anime hair, ultra clean anime hair, hair as an effect, floating inner color, disconnected color strip, disconnected ponytail, floating hair, broken anatomy, impossible overlap, duplicated limbs, floating hands, incorrect perspective, character blocking torso, extreme close-up, photorealism, western cartoon, low-quality rendering, muddy colors, noisy textures, oversaturated colors, giant anime eyes, cheap mobile game UI, generic AI anime face, AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T21:01:36+09:00"
+    },
+    {
+      "id": "gen_20260511_211022",
+      "title": "描画基準: キラキラ抑制 (Anti-Glitter)",
+      "blocks": [
+        "rendering_soft_standard",
+        "character_kafka",
+        "layout_social_square"
+      ],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "AI特有の過度な光沢や装飾（ギラギラ感）を抑え、Quiet UIに適合させたマットな質感の描画基準。フラットな照明と均一な彩色を重視し、清潔感のある仕上がりを実現する。",
+      "artifacts": [
+        {
+          "path": "artifacts/266_anti_glitter.png",
+          "title": "Anti-Glitter Rendering Reference"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, flat lighting, clean uniform coloring, soft diffused illumination, matte paper texture, human-made anime illustration, female anime character Kafka, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament, braided section with a black ribbon, gentle face, open smile, ivory white background, no 3d gloss, no neon, no plastic skin, no cyberpunk, no visual noise, minimal clutter, professional character design sheet quality",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T21:10:22+09:00"
+    },
+    {
+      "id": "gen_20260511_211457",
+      "title": "Kafka Sylfanel Rooftop Bar Dialogue",
+      "blocks": [
+        "master_style",
+        "character_kafka",
+        "character_sylfanel",
+        "kafka_identity_lock",
+        "rpg_lounge_scene",
+        "rpg_cel_shaded_3d_style",
+        "rpg_event_screenshot_layout",
+        "rpg_event_ui_pack"
+      ],
+      "kind": "generated",
+      "purpose": "屋上バーの会話シーンを、髪と UI を重視して登録する",
+      "summary": "夜景の屋上バーで、Kafka と Sylfanel が静かに向き合う会話シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/267_kafka_sylfanel_rooftop_bar_dialogue.png",
+          "title": "Kafka & Sylfanel Rooftop Bar Dialogue"
+        }
+      ],
+      "generated_prompt": "High-end console JRPG event CG, premium Japanese RPG dialogue scene, cinematic anime illustration, refined cel shading, emotionally immersive visual novel atmosphere, elegant commercial game rendering, believable anime realism, restrained cinematic lighting, grounded emotional intimacy, sophisticated nighttime cocktail bar ambience, luxury rooftop lounge atmosphere, subtle depth of field, polished UI-integrated composition, realistic material rendering, soft cinematic bloom, mature visual hierarchy, atmospheric city lights, quiet romantic tension, premium relationship-event presentation.\n\nBalanced rendering density, facial expressions prioritized over hair detail, hair integrated naturally into scene lighting, restrained visual effects, grounded hair physics, believable character presence, consistent rendering quality across face, hair, clothing, hands, and background.\n\nScene: luxury rooftop cocktail bar at night, dark polished wood interior, warm candlelight, soft chandelier lighting, realistic liquor bottles, elegant city skyline through tall windows, subtle reflections on table surfaces, intimate late-night atmosphere, cinematic composition focused on eye contact and emotional interaction.\n\nKafka: female anime character, long light-blue hair with soft lavender gradients near the tips, fluffy layered hair, semi-transparent bangs, blue-purple eyes, calm emotionally attentive gaze, pale matte skin, subtle blush, small gentle smile, silver triangle hairpin with tiny cat ornament on the left side, loosely braided hair section tied with black ribbon, elegant feminine posture, quiet emotional warmth. Soft naturally layered hair, visible mid-layer strand structure, slightly uneven strand thickness, subtle messy micro-strands, wispy uneven bangs, naturally broken hair silhouette, restrained hair detail density, believable root-to-tip hair flow, low-saturation color blending, soft flyaway hairs, realistic hair weight distribution, subtle asymmetry in fringe shape. Black lace innerwear, elegant translucent chiffon sleeves, refined fantasy-modern styling, delicate accessories, understated mature attractiveness. Kafka is seated on the left side of the table, resting her cheek on her hand while gazing softly at Sylfanel.\n\nSylfanel: female anime bartender, very long silver-white hair with subtle dark crimson inner gradients, high ponytail hairstyle, pale lavender-gray eyes, calm composed expression, elegant mature beauty, refined bartender uniform, white dress shirt with rolled sleeves, black vest, black necktie, subtle silver hair ornaments. Physically believable ponytail structure, visible tension around tied hair section, compressed hair volume near ponytail base, realistic scalp directionality, gravity-dominant long hair flow, layered strand hierarchy, natural overlapping hair groups, restrained strand brightness, subtle edge lighting, naturally broken outer silhouette, believable hair mass, consistent strand detail from roots to tips, hair resting naturally against clothing and body, soft random flyaway hairs, low-saturation gradient transitions. Sylfanel is standing on the right side while serving a violet cocktail.\n\nInteraction: gentle emotional tension between both characters, natural conversational posture, realistic hand placement, believable body balance, subtle romantic mood, soft eye contact.\n\nLighting: warm candlelight, soft chandelier glow, city skyline reflections, restrained bloom, elegant rim lighting on hair silhouettes, low-contrast shadows, believable reflections on glass and polished wood.\n\nUI: premium JRPG dialogue interface, elegant blue-black translucent message box, refined glowing borders, modern fantasy UI design, clean typography, believable commercial game interface, subtle luminous accents, relationship affinity hearts in lower corner, multiple dialogue choice buttons on the right side, polished console RPG presentation.\n\nNegative prompt: plastic hair, liquid hair, ribbon-like hair strands, helmet hair, overly smooth strand flow, synthetic wig appearance, perfectly symmetric hair, excessive hair glow, overly glossy anime hair, inconsistent rendering density, floating hair masses, disconnected strand structure, exaggerated gradient lighting, over-detailed hair compared to face, chaotic strand noise, muddy colors, overexposed bloom, distorted anatomy, cluttered composition, broken hands, duplicated limbs, floating hands, unreadable UI, photorealism, western cartoon, cheap mobile game UI, generic AI anime face, AI artifacts.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-11T21:14:57+09:00"
     }
   ]
 }
