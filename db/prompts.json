@@ -45,7 +45,7 @@
     {
       "id": "master_style",
       "title": "マスタースタイル",
-      "content": "masterpiece, best quality, ultra detailed, emotionally grounded anime illustration, commercial-level editorial design, emotional attraction analysis sheet, visual breakdown of elegance, official artbook special feature aesthetic, refined Japanese magazine layout, fan-made admiration board energy, asymmetrical editorial composition, intentional whitespace, overlapping translucent panels, clean visual hierarchy, subtle handwritten annotations, delicate arrows and circles, soft paper texture, pale lavender and silver palette, soft pastel glow, emotionally immersive atmosphere, dreamy fantasy realism, soft cinematic anime realism, natural imperfections, delicate film grain, non-glossy rendering, human-made feeling",
+      "content": "masterpiece, best quality, ultra detailed, premium Japanese lifestyle magazine cover, authentic editorial design, sophisticated Japanese magazine typography, believable commercial print layout, refined white negative space, elegant visual hierarchy, realistic magazine composition, minimal but information-rich design, premium lifestyle publication aesthetic, clean blue-and-white palette, airy transparent summer atmosphere, subtle futuristic lifestyle mood, realistic printed paper feeling",
       "category": "基準",
       "role": "style"
     },
@@ -101,7 +101,7 @@
     {
       "id": "lighting",
       "title": "光",
-      "content": "soft cinematic lighting, gentle lavender ambient glow, pale silver reflected light, subtle fantasy bloom, soft rim light, delicate indoor diffusion, dreamy atmospheric shadows, emotionally immersive lighting, calm evening fantasy atmosphere, realistic light falloff, translucent fabric lighting",
+      "content": "cinematic anime realism, soft cel shading, matte rendering, natural skin texture, gentle depth of field, slight film grain, high-end editorial photography feeling, quiet emotional summer atmosphere, beautiful transparent lighting",
       "category": "光",
       "role": "lighting"
     },
@@ -115,7 +115,7 @@
     {
       "id": "avoid",
       "title": "禁止",
-      "content": "technical model sheet, mechanical reference layout, giant text blocks, uniform grid composition, stiff posing, front-facing symmetry, generic AI anime face, vtuber reference-sheet aesthetic, idol aesthetic, hyper glossy skin, plastic rendering, excessive saturation, neon fantasy overload, cluttered decorative background, oversexualized posing, emotionless expression, perfectly clean symmetry",
+      "content": "vtuber aesthetic, idol aesthetic, cyberpunk, neon colors, glossy plastic skin, giant anime eyes, oversaturated colors, dark moody lighting, busy layout, cheap game advertisement feeling, overdesigned sci-fi UI",
       "category": "禁止",
       "role": "style"
     },
@@ -1791,6 +1791,48 @@
       "content": "square or 4:5 social post, full body or three-quarter framing, centered figure, event or studio feel, no date, no timestamp, no clutter, photographer-friendly, clear costume visibility\nclean studio setting, minimal props, high contrast potential\nbalanced visual finish, professional photography feel\nstanding centered, looking directly at the camera, clean silhouette, confident model stance\ncentered character composition, large portrait framing, clear focus, professional photoshoot layout\nevent-ready costume, polished seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance\n「コスプレ中」「撮影してる」「衣装完成」「今日はこの衣装」「次の衣装も楽しみ」「イベント来た」「写真ありがとう」「準備ばっちり」「見てほしい」「お気に入り」\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "パック",
       "role": "situation"
+    },
+    {
+      "id": "background_summer_terrace",
+      "title": "背景: 夏のテラスカフェ",
+      "content": "beautiful bright summer seaside VRChat world, white wooden ocean terrace cafe, clear turquoise sea, transparent blue sky, large fluffy summer clouds, bright summer sunlight, light scattering through clean air, white modern architecture, glass reflections, soft ocean breeze, slightly futuristic but believable resort atmosphere, peaceful social environment, clean elegant Japanese summer aesthetic, beautiful translucent blue ambience",
+      "category": "背景",
+      "role": "background"
+    },
+    {
+      "id": "character_kafka_magazine",
+      "title": "キャラクター: KAFKA（雑誌用）",
+      "content": "Kafka naturally spending time at an outdoor terrace table, young petite Japanese woman, long flowing light-blue hair, soft lavender gradient at hair ends, fluffy layered hair, slightly uneven natural strands, semi-transparent bangs, silver triangle cat hairpin, small braid tied with black ribbon, blue-purple eyes, slightly tired gentle eyes, quiet observational expression, soft pale skin, natural realistic proportions, delicate narrow shoulders, fragile but warm emotional presence, subtle human realism, emotionally restrained atmosphere, non-idol aesthetic",
+      "category": "キャラクター",
+      "role": "identity"
+    },
+    {
+      "id": "situation_summer_magazine",
+      "title": "形式: 夏の雑誌シーン",
+      "content": "casual summer moment with friends in background, small group softly talking, natural candid interaction, comfortable shared silence, not posing for the camera, holding a transparent blue summer drink, small summer dessert on table, open notebook nearby, gentle social atmosphere, subtle VR social feeling",
+      "category": "形式・レイアウト",
+      "role": "situation"
+    },
+    {
+      "id": "outfit_summer_white_dress",
+      "title": "衣装: 白い夏ワンピ",
+      "content": "light translucent white summer dress, soft fabric transparency, natural fabric folds, thin airy sleeves, soft blue ribbons, elegant casual summer coordination, clean summer silhouette",
+      "category": "衣装",
+      "role": "outfit"
+    },
+    {
+      "id": "layout_magazine_cover",
+      "title": "形式: 雑誌表紙（境界生活）",
+      "content": "magazine cover layout, large Japanese title: 「境界生活」, subtitle: 「VR空間と現実を往き来する人の生活誌」, 2025 summer issue, right-side feature columns, small article preview images, world guide, avatar & style, photo log, room, talk & meeting, minimal elegant Japanese typography, thin divider lines, soft blue editorial accents, excellent readability, balanced composition, premium Japanese lifestyle magazine feeling",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "personality_analysis_kafka",
+      "title": "文言: かふかさんの性格タイプ（ビッグファイブ）",
+      "content": "かふかさんの性格タイプ（ビッグファイブ分析）\n\n1. 新しいことを考える力がかなり強い: AI、研究開発、技術設計など、将来を予測し構造を考えるのが得意。\n2. 「管理」より「設計」が得意: 自分が意味を感じることに集中し、最適化を考える型。コツコツ型より「どう作れば良くなるか」を重視。\n3. 少人数で深い話をする方が好き: 雑談より技術議論を好み、理解の速い相手との環境で活性化する。\n4. 合理性をかなり重視する: 空気より意味や理由を重視。学ぶ気がない態度にストレスを感じやすい。\n5. 消耗の原因: 非効率な環境（結論のない会議、遅い判断）で消耗しやすい。\n\n全体像: 「探索型・設計型」の人格。未来の構造を先に考え、そこから今を見るタイプ。AI 時代と極めて相性が良い。",
+      "category": "性格・トーン",
+      "role": "text"
     }
   ],
   "templates": [
