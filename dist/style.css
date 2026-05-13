@@ -124,6 +124,63 @@ section {
   gap: var(--gap-md);
 }
 
+.prompts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--gap-md);
+}
+
+.prompt-item {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--dur-fast) var(--ease);
+}
+.prompt-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.prompt-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.prompt-item__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.prompt-item__title:hover {
+  color: var(--accent);
+}
+.prompt-item__content {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+.prompt-item__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.prompt-item__copy {
+  flex: 1;
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
 /* Secondary: White Cards */
 .card {
   background: var(--bg-card);

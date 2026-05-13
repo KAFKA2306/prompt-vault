@@ -86,7 +86,12 @@ const renderRail = () => {
   const all = [...templates, ...localItems];
   const list = all.filter(t => !q || JSON.stringify(t).toLowerCase().includes(q));
   
-  el('template-rail').innerHTML = list.map(t => {
+  // アセットの有無で分離
+  const withAssets = list.filter(t => t.artifacts && t.artifacts.length > 0);
+  const noAssets = list.filter(t => !t.artifacts || t.artifacts.length === 0);
+
+  // ギャラリー表示 (アセットあり)
+  el('template-rail').innerHTML = withAssets.map(t => {
     const isExample = t.blocks && t.blocks.length === 0;
     return `
       <div class="card template-card ${isExample ? 'is-example' : ''}" onclick="openModal('${t.id}')">
@@ -102,10 +107,38 @@ const renderRail = () => {
       </div>
     `;
   }).join('');
+
+  // プロンプト表示 (アセットなし)
+  el('prompts-list').innerHTML = noAssets.map(t => {
+    const promptPreview = t.generated_prompt || (t.blocks || []).map(bid => blocks[bid]?.content || bid).join('\n\n');
+    return `
+      <div class="prompt-item">
+        <div class="prompt-item__head">
+          <div class="prompt-item__title" onclick="openModal('${t.id}')">${esc(t.title)}</div>
+          <span class="template-card__kind">${esc(t.kind)}</span>
+        </div>
+        <div class="prompt-item__content">${esc(promptPreview)}</div>
+        <div class="prompt-item__actions">
+          <button class="button prompt-item__copy" onclick="copyTemplatePrompt('${t.id}', this)">プロンプトをコピー</button>
+          <button class="button" style="padding: 8px 16px; font-size: 12px;" onclick="openModal('${t.id}')">詳細</button>
+        </div>
+      </div>
+    `;
+  }).join('');
   
-  if (el('template-count')) {
-    el('template-count').textContent = `${list.length} items`;
-  }
+  if (el('template-count')) el('template-count').textContent = `${withAssets.length} items`;
+  if (el('prompt-count')) el('prompt-count').textContent = `${noAssets.length} items`;
+};
+
+window.copyTemplatePrompt = (id, btn) => {
+  const all = [...templates, ...state.localGenerated];
+  const t = all.find(x => x.id === id) || blocks[id];
+  if (!t) return;
+  const p = t.generated_prompt || (t.blocks || []).map(bid => blocks[bid]?.content || bid).join('\n\n');
+  navigator.clipboard.writeText(p);
+  const old = btn.textContent;
+  btn.textContent = 'コピー完了';
+  setTimeout(() => btn.textContent = old, 2000);
 };
 
 const renderSkills = () => {
