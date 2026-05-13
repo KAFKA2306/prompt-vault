@@ -45,7 +45,7 @@
     {
       "id": "master_style",
       "title": "マスタースタイル",
-      "content": "masterpiece, best quality, ultra detailed, premium Japanese lifestyle magazine cover, authentic editorial design, sophisticated Japanese magazine typography, believable commercial print layout, refined white negative space, elegant visual hierarchy, realistic magazine composition, minimal but information-rich design, premium lifestyle publication aesthetic, clean blue-and-white palette, airy transparent summer atmosphere, subtle futuristic lifestyle mood, realistic printed paper feeling",
+      "content": "masterpiece, best quality, ultra detailed, premium Japanese lifestyle magazine cover, authentic editorial design, sophisticated Japanese magazine typography, believable commercial print layout, refined white negative space, elegant visual hierarchy, realistic magazine composition, minimal but information-rich design, premium lifestyle publication aesthetic, realistic printed paper feeling",
       "category": "基準",
       "role": "style"
     },
@@ -1833,9 +1833,35 @@
       "content": "かふかさんの性格タイプ（ビッグファイブ分析）\n\n1. 新しいことを考える力がかなり強い: AI、研究開発、技術設計など、将来を予測し構造を考えるのが得意。\n2. 「管理」より「設計」が得意: 自分が意味を感じることに集中し、最適化を考える型。コツコツ型より「どう作れば良くなるか」を重視。\n3. 少人数で深い話をする方が好き: 雑談より技術議論を好み、理解の速い相手との環境で活性化する。\n4. 合理性をかなり重視する: 空気より意味や理由を重視。学ぶ気がない態度にストレスを感じやすい。\n5. 消耗の原因: 非効率な環境（結論のない会議、遅い判断）で消耗しやすい。\n\n全体像: 「探索型・設計型」の人格。未来の構造を先に考え、そこから今を見るタイプ。AI 時代と極めて相性が良い。",
       "category": "性格・トーン",
       "role": "text"
+    },
+    {
+      "id": "visual_summer_magazine",
+      "title": "ビジュアル: 夏の透明感（青と白）",
+      "content": "clean blue-and-white palette, airy transparent summer atmosphere, subtle futuristic lifestyle mood, beautiful transparent lighting, light scattering through clean air",
+      "category": "基準",
+      "role": "style"
     }
   ],
   "templates": [
+    {
+      "id": "summer_magazine_cover",
+      "title": "夏の生活誌『境界生活』表紙",
+      "blocks": [
+        "master_style",
+        "visual_summer_magazine",
+        "character_kafka_magazine",
+        "background_summer_terrace",
+        "situation_summer_magazine",
+        "outfit_summer_white_dress",
+        "layout_magazine_cover",
+        "lighting",
+        "avoid"
+      ],
+      "kind": "sheet",
+      "purpose": "透明感のある夏のライフスタイル雑誌の表紙を生成する",
+      "summary": "青と白を基調とした、海辺のカフェでの日常を切り取ったエディトリアルデザイン。",
+      "artifacts": []
+    },
     {
       "id": "announcement_thumbnail",
       "title": "Kafka 配信告知サムネイル",
