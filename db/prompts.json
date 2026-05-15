@@ -7112,6 +7112,28 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-15T20:05:27+09:00"
+    },
+    {
+      "id": "gen_20260515_201350",
+      "title": "Kafka & Sylfanel Summer Meal",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka と Sylfanel が夏の食事を楽しむ二人構図を登録する",
+      "summary": "海辺のテラスで、Kafka と Sylfanel がそれぞれ美味しそうに食べている夏の二人食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/288_kafka_sylfanel_summer_meal.png",
+          "title": "Kafka & Sylfanel Summer Meal"
+        }
+      ],
+      "generated_prompt": "Use case: stylized-concept\\nAsset type: prompt-vault gallery image\\nPrimary request: Kafka and Sylfanel enjoying a delicious summer meal together, both actively eating and looking satisfied.\\nScene/backdrop: bright seaside cafe terrace in summer, white table, ocean horizon, airy blue sky, minimal clutter, food-first composition\\nSubject: Kafka and Sylfanel seated side by side at a table with refreshing summer food; Kafka is lifting chilled noodles with chopsticks and smiling softly, Sylfanel is tasting a delicate fruit dessert or chilled pasta and showing a calm pleased expression\\nStyle/medium: polished anime illustration with editorial food-scene quality, soft cel shading, clean linework, elegant human-made rendering, not photorealistic\\nComposition/framing: medium two-shot with the dishes prominent in the foreground, both faces clearly visible, balanced asymmetrical composition, clear hand and utensil visibility, strong appetizing focus\\nLighting/mood: bright summer daylight, gentle seaside reflections, refreshing and cheerful, warm but not harsh, cozy vacation mood\\nColor palette: clean ocean blues and whites with vivid food colors, Kafka's light blue and lavender hair, Sylfanel's silver-lilac hair and white-lavender dress, fresh greens and reds from the food\\nMaterials/textures: glossy chilled noodles, crisp vegetables, soft dessert cream, ceramic plates, translucent drinks, light fabric clothing, subtle hair shine\\nConstraints: preserve Kafka's canonical feminine face and hair identity from the database, preserve Sylfanel's elegant silver-lilac identity, show both characters clearly eating or tasting, make the food look delicious and fresh, no extra people, no text, no logos, no clutter, no awkward hands, no male-looking Kafka, no overexposed skin\\nAvoid: generic faces, stiff posing, dark mood, greasy food, over-saturated colors, heavy neon, crowd scenes, watermark, signature, blurry faces, broken chopsticks, messy table, fetish framing, idol posing\\nKafka details: petite young Japanese woman, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet emotional warmth\\nSylfanel details: young fantasy anime woman, very long silver-lilac hair, soft lavender gradient, straighter silky hair, pale violet eyes, translucent fair skin, elegant and ethereal appearance, graceful feminine silhouette, quiet nobility, refined elegant expression, white and lavender fantasy dress with delicate lace",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T20:13:50+09:00"
     }
   ]
 }
