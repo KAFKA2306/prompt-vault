@@ -6,3 +6,4 @@ artifacts/*.zip
 artifacts/twitter-*/
 artifacts/_orphaned/
 scratch/
+.tmp/

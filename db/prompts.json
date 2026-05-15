@@ -1840,6 +1840,20 @@
       "content": "clean blue-and-white palette, airy transparent summer atmosphere, subtle futuristic lifestyle mood, beautiful transparent lighting, light scattering through clean air",
       "category": "基準",
       "role": "style"
+    },
+    {
+      "id": "layout_seaside_selfie",
+      "title": "構図: 海辺の自撮り（飯テロ）",
+      "content": "realistic smartphone selfie photo aesthetic, beautiful Japanese seaside resort cafe, natural candid couple photo, smartphone visible in foreground, natural arm positioning, realistic selfie framing, slightly imperfect casual composition, casual food photo vibe, glossy katsuo donburi focus",
+      "category": "構図",
+      "role": "layout"
+    },
+    {
+      "id": "hidden_horror_reflection",
+      "title": "演出: 潜む影（ガラスの反射）",
+      "content": "hidden subtle urban-legend horror element, a faint unknown woman visible only in glass reflection behind them, unnaturally still figure inside the reflection, separated from the real scene, delayed recognition horror, quiet Japanese urban legend feeling, no obvious horror lighting",
+      "category": "特殊演出",
+      "role": "style"
     }
   ],
   "templates": [
@@ -1860,7 +1874,12 @@
       "kind": "sheet",
       "purpose": "透明感のある夏のライフスタイル雑誌の表紙を生成する",
       "summary": "青と白を基調とした、海辺のカフェでの日常を切り取ったエディトリアルデザイン。",
-      "artifacts": []
+      "artifacts": [
+        {
+          "path": "artifacts/269_summer_magazine_cover.png",
+          "title": "夏の生活誌『境界生活』表紙"
+        }
+      ]
     },
     {
       "id": "announcement_thumbnail",
@@ -4085,7 +4104,13 @@
       "kind": "sheet",
       "purpose": "ボードゲームのルールを、初心者向けの短いシリーズとして整理する",
       "summary": "セットアップ、ターン進行、得点条件、例外を、順番に説明するシリーズ。",
-      "generated_prompt": "Create a clean board game rules explanation series in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what the game is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to the chosen game. Before drawing, verify the actual rules, components, and core mechanism, and do not replace them with generic board game props.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match the real game, overly complex layout, dark horror mood, excessive neon, 3D render look."
+      "generated_prompt": "Create a clean board game rules explanation series in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what the game is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to the chosen game. Before drawing, verify the actual rules, components, and core mechanism, and do not replace them with generic board game props.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match the real game, overly complex layout, dark horror mood, excessive neon, 3D render look.",
+      "artifacts": [
+        {
+          "path": "artifacts/270_boardgame_rules_explainer_series.png",
+          "title": "ボードゲーム ルール解説シリーズ"
+        }
+      ]
     },
     {
       "id": "dominion_rules_explainer_series",
@@ -4103,7 +4128,13 @@
       "kind": "sheet",
       "purpose": "ドミニオンのルールを、初心者向けの短いシリーズとして整理する",
       "summary": "セットアップ、ターン進行、得点条件、代表的な注意点を、順番に説明するシリーズ。",
-      "generated_prompt": "Create a clean board game rules explanation series for Dominion in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what Dominion is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to Dominion. Use the real deck-building core, the starting deck of 7 copper and 3 estates, the 10 kingdom piles, the action -> treasure -> buy -> cleanup turn structure, the Province or 3-pile end condition, and the normal score counting from victory cards and curses.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match Dominion, overly complex layout, dark horror mood, excessive neon, 3D render look."
+      "generated_prompt": "Create a clean board game rules explanation series for Dominion in Japanese. Use Kafka as the calm guide character. Make it beginner-friendly, compact, and easy to scan on mobile. Each panel should cover one topic only: what Dominion is, what components are used, how to set up, how a turn works, how scoring or victory works, and a short FAQ or caution note.\n\nVisual direction: white background, soft pastel blue and lavender accents, thin borders, clear arrows, minimal clutter, crisp linework, readable typography, calm teaching mood, human-made finish, no neon, no overloaded decoration.\n\nMust keep the rules faithful to Dominion. Use the real deck-building core, the starting deck of 7 copper and 3 estates, the 10 kingdom piles, the action -> treasure -> buy -> cleanup turn structure, the Province or 3-pile end condition, and the normal score counting from victory cards and curses.\n\nLayout: 5 to 6 compact panels, one topic per panel, top title banner, small numbered labels, step arrows, one small example strip if helpful, large enough Japanese text to read on a phone.\n\nTone: plain Japanese, short sentences, friendly teacher tone, no jargon, explain from beginner view, keep one idea per line, avoid overexplaining.\n\nNegative prompt: blurry text, broken Japanese, random English, clutter, watermark, low resolution, deformed hands, extra fingers, wrong turn order, generic board game props that do not match Dominion, overly complex layout, dark horror mood, excessive neon, 3D render look.",
+      "artifacts": [
+        {
+          "path": "artifacts/271_dominion_rules_explainer_series.png",
+          "title": "ドミニオン ルール解説シリーズ"
+        }
+      ]
     },
     {
       "id": "gen_20260501_090454_827936",
@@ -5499,7 +5530,12 @@
       "kind": "system",
       "purpose": "愛着理論の補足説明を、読みやすい日本語メモとして残す",
       "summary": "4分類を固定的な性格診断として扱わない立場、発達と環境の影響、Earned Secure の要点を整理する。",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "path": "artifacts/272_attachment_theory_addendum.png",
+          "title": "愛着理論の補足"
+        }
+      ],
       "generated_prompt": "attachment theory addendum, japanese explanatory memo, clear bullet points, calm readable layout, formal but approachable tone, structured notes about attachment as a regulation strategy, developmental variability, earned secure, avoid deterministic framing",
       "created_at": "2026-05-09T00:00:00+09:00"
     },
@@ -5672,6 +5708,12 @@
         "voice_emoji_reference_pack",
         "voice_generation_tips_pack",
         "voice_ethics_text"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/273_irodori_tts_voice_guide_sheet.png",
+          "title": "Irodori-TTS 音声ガイド"
+        }
       ]
     },
     {
@@ -5688,6 +5730,12 @@
         "voice_asmr_mimikaki_ready_pack",
         "voice_emoji_reference_pack",
         "voice_ethics_text"
+      ],
+      "artifacts": [
+        {
+          "path": "artifacts/274_irodori_tts_voice_asmr_sheet.png",
+          "title": "Irodori-TTS ASMR 音声ガイド"
+        }
       ]
     },
     {
@@ -6868,6 +6916,24 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-11T21:14:57+09:00"
+    },
+    {
+      "id": "kafka_sylfanel_seaside_selfie_horror",
+      "title": "Kafka & Sylfanel 海辺の自撮り（隠しホラー）",
+      "blocks": [
+        "master_style",
+        "kafka_core",
+        "sylfanel_core",
+        "visual_summer_magazine",
+        "background_summer_terrace",
+        "layout_seaside_selfie",
+        "hidden_horror_reflection",
+        "emotional_direction"
+      ],
+      "kind": "social",
+      "purpose": "夏の海辺での楽しい食事風景に、微かな違和感を潜ませる",
+      "summary": "カツオ丼を食べる二人の自撮り。背景のガラスにだけ、見知らぬ誰かが写っている。",
+      "generated_prompt": "masterpiece, best quality, ultra detailed anime illustration, realistic smartphone selfie photo aesthetic, beautiful Japanese seaside resort cafe, bright summer ocean, clean blue sky, romantic vacation atmosphere, natural candid couple photo, soft cinematic lighting, emotionally warm atmosphere, believable social-media style composition\n\nKafka and Sylfanel close together happily taking a selfie, affectionate relaxed expressions, subtle romantic chemistry, elegant summer fashion, glossy katsuo donburi on the table, casual foodie vacation atmosphere\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradient ends, silver triangle cat hairpin, blue-purple gentle eyes, sleepy happy smile\n\nSylfanel: very long silver-lilac hair, pale violet eyes, graceful elegant appearance, soft loving expression\n\nsmartphone visible in foreground, natural arm positioning, believable anatomy, realistic selfie framing, slightly imperfect casual composition\n\nIMPORTANT: the image should appear completely normal at first glance, NO obvious horror elements, NO dark atmosphere, NO blood, NO creepy facial expressions, NO monster design, NO direct ghost visibility\n\nhidden subtle urban-legend horror element: inside a glass reflection behind them, a faint unknown woman is clearly visible only after careful observation, she stands unnaturally still inside the reflection, slightly separated from the real scene composition, subtle but undeniably present once noticed, the reflection should create delayed recognition horror, quiet Japanese internet urban legend feeling\n\nclean bright summer lighting maintained throughout the entire image\n\navoid: obvious horror, jumpscare composition, exaggerated ghost effects, floating body, distorted anatomy, horror movie lighting, gore, heavy shadows, vtuber aesthetic, idol aesthetic"
     }
   ]
 }
