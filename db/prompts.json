@@ -7140,6 +7140,24 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-15T19:10:10+09:00"
+    },
+    {
+      "id": "gen_20260515_191358",
+      "title": "Kafka わらじとんかつ定食",
+      "blocks": [],
+      "kind": "social",
+      "purpose": "わらじとんかつ定食を食べる静かなひとり食事シーン",
+      "summary": "居酒屋ではなく、落ち着いた和食店のカウンターで、わらじとんかつ定食を食べるKafka。",
+      "artifacts": [
+        {
+          "path": "artifacts/284_kafka.png",
+          "title": "Kafka わらじとんかつ定食"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, emotionally grounded anime illustration, soft cinematic anime style, warm gentle color palette, soft low-contrast lighting, delicate anime shading, clean natural linework, subtle atmospheric depth, matte non-glossy rendering, quiet emotional futurism, subtle observational loneliness, understated human warmth, calm intimate atmosphere\n\nyoung petite Japanese woman,\nlong light-blue hair with a soft lavender gradient at the tips,\nslightly messy natural hair strands with delicate flyaways,\nsemi-transparent bangs,\nsilver triangle cat hairpin,\nsmall braid tied with a black ribbon,\ngentle blue-purple eyes with slight tiredness,\nfaint under-eye shadows,\nsoft pale skin,\nsmall natural lips,\nnarrow shoulders,\nnatural petite proportions,\nslightly slouched relaxed posture,\nquiet relieved expression,\nfragile but calm emotional presence,\nnatural facial asymmetry,\nfeels like a real person rather than an idealized anime character\n\ncasual oversized white summer shirt,\nlightweight airy fabric,\nsoft natural wrinkles,\nsimple clean summer outfit\n\nlarge comforting waraji tonkatsu set meal on a wooden table,\ntwo thick crispy pork cutlets covered in rich dark red Nagoya-style miso sauce,\nwarm glossy sauce soaking gently into the crispy coating,\nlarge portion of shredded cabbage,\nlarge bowl of steaming white rice,\nhot tonjiru soup with soft steam rising,\nwarm iron plate presentation,\nhearty realistic portion size,\nextremely appetizing anime food illustration,\nwarm comforting meal atmosphere\n\nsitting alone inside a cozy traditional Japanese tonkatsu restaurant,\nwarm wooden interior,\nsoft lantern lighting,\ngentle evening ambience,\nslightly crowded but quiet atmosphere,\nsubtle background blur,\ncomfortable summer warmth,\ncalm emotionally restorative mood,\na subtle sense of being revived after a good meal\n\ncinematic composition,\nnatural scene readability,\nsoft depth of field,\nconsistent anime rendering,\nfood naturally integrated into the emotional atmosphere\n\navoid:\nphotorealism,\nrestaurant logos,\nreal store names,\ntext artifacts,\nvtuber aesthetic,\nidol aesthetic,\nplastic skin,\nhyper glossy rendering,\nexcessive saturation,\ngiant eyes,\nperfect symmetry,\ngeneric AI anime face,\nneon cyberpunk elements,\noverdesigned clothing,\nfood photography style,\n3D render look,\nAI shimmer artifacts",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:13:58+09:00"
     }
   ]
 }
