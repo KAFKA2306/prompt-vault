@@ -169,6 +169,13 @@
       "role": "outfit"
     },
     {
+      "id": "outfit_kafka_fantasy_military_academy",
+      "title": "衣装: KAFKA幻想軍学院",
+      "content": "fantasy military academy white uniform dress, structured gold buttons, decorated epaulettes, red jabot, white tiered skirt with red edge trim, white mini beret, white sheer thigh-highs, polished platform loafers, small decorative brooch, elegant but cute and wholesome, ceremonial feel, inspired by military fashion but with no real insignia and no national symbols",
+      "category": "衣装",
+      "role": "outfit"
+    },
+    {
       "id": "accessory_kafka_head",
       "title": "装飾: KAFKAヘッドギア",
       "content": "white oversized cap with black circular “K” emblem, small decorative flowers and branches, futuristic military-vtuber hybrid style",
@@ -194,12 +201,6 @@
       "title": "4x4 ステッカーシート",
       "content": "4x4 sticker grid, white background, each sticker isolated with empty gutters, large face and hand shapes, one expression per cell, cutout-friendly silhouette, short Japanese caption only if needed, no background clutter, strong readability at small size",
       "category": "形式・レイアウト",
-      "artifacts": [
-        {
-          "path": "artifacts/001_sticker_sheet.png",
-          "title": "4x4 ステッカーシート"
-        }
-      ],
       "role": "layout"
     },
     {
@@ -5148,6 +5149,27 @@
       "created_at": "2026-05-08T15:27:41+09:00"
     },
     {
+      "id": "gen_20260515_120325_kafka_summer_cover",
+      "title": "Kafka 夏の海辺ポートレート",
+      "blocks": [
+        "character_kafka_magazine",
+        "visual_summer_magazine",
+        "background_summer_terrace",
+        "outfit_summer_white_dress"
+      ],
+      "kind": "social",
+      "purpose": "Kafka の見た目定義を反映した、海辺の夏ポートレートを登録する",
+      "summary": "青い海と白いワンピース、やわらかな夏空の中に立つKafka。",
+      "artifacts": [
+        {
+          "path": "artifacts/ChatGPT Image 2026年5月15日 12_03_25.png",
+          "title": "Kafka 夏の海辺ポートレート"
+        }
+      ],
+      "generated_prompt": "premium summer seaside portrait, clean editorial anime illustration, bright blue sky, turquoise ocean, white resort architecture, soft sunlight, light breeze, elegant and airy composition, Kafka with long light-blue hair and soft lavender gradient ends, semi-transparent bangs, fluffy layered hair, blue-purple eyes, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, soft pale skin, delicate narrow shoulders, quiet gentle smile, translucent white summer dress, refined human-made finish, calm Japanese lifestyle magazine feel, no text, no UI, no watermark",
+      "created_at": "2026-05-15T12:03:25+09:00"
+    },
+    {
       "id": "gen_20260508_153706",
       "title": "kafka_summer_reading_post_v2",
       "blocks": [
@@ -6933,7 +6955,191 @@
       "kind": "social",
       "purpose": "夏の海辺での楽しい食事風景に、微かな違和感を潜ませる",
       "summary": "カツオ丼を食べる二人の自撮り。背景のガラスにだけ、見知らぬ誰かが写っている。",
+      "artifacts": [
+        {
+          "path": "artifacts/275_kafka_sylfanel_seaside_selfie_horror.png",
+          "title": "Kafka & Sylfanel 海辺の自撮り（隠しホラー）"
+        }
+      ],
       "generated_prompt": "masterpiece, best quality, ultra detailed anime illustration, realistic smartphone selfie photo aesthetic, beautiful Japanese seaside resort cafe, bright summer ocean, clean blue sky, romantic vacation atmosphere, natural candid couple photo, soft cinematic lighting, emotionally warm atmosphere, believable social-media style composition\n\nKafka and Sylfanel close together happily taking a selfie, affectionate relaxed expressions, subtle romantic chemistry, elegant summer fashion, glossy katsuo donburi on the table, casual foodie vacation atmosphere\n\nKafka: young petite Japanese woman, long light-blue hair with soft lavender gradient ends, silver triangle cat hairpin, blue-purple gentle eyes, sleepy happy smile\n\nSylfanel: very long silver-lilac hair, pale violet eyes, graceful elegant appearance, soft loving expression\n\nsmartphone visible in foreground, natural arm positioning, believable anatomy, realistic selfie framing, slightly imperfect casual composition\n\nIMPORTANT: the image should appear completely normal at first glance, NO obvious horror elements, NO dark atmosphere, NO blood, NO creepy facial expressions, NO monster design, NO direct ghost visibility\n\nhidden subtle urban-legend horror element: inside a glass reflection behind them, a faint unknown woman is clearly visible only after careful observation, she stands unnaturally still inside the reflection, slightly separated from the real scene composition, subtle but undeniably present once noticed, the reflection should create delayed recognition horror, quiet Japanese internet urban legend feeling\n\nclean bright summer lighting maintained throughout the entire image\n\navoid: obvious horror, jumpscare composition, exaggerated ghost effects, floating body, distorted anatomy, horror movie lighting, gore, heavy shadows, vtuber aesthetic, idol aesthetic"
+    },
+    {
+      "id": "gen_20260515_183205",
+      "title": "Kafka かつおラーメン",
+      "blocks": [],
+      "kind": "social",
+      "purpose": "かつおだしのラーメンを食べる静かなひとり食事シーン",
+      "summary": "ラーメン店のカウンター席で、かつおベースのラーメンを食べるKafka。",
+      "artifacts": [
+        {
+          "path": "artifacts/276_kafka.png",
+          "title": "Kafka かつおラーメン"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, ultra detailed, soft anime realism, clean modern anime illustration, emotionally grounded anime girl, quiet observational loneliness, soft summer atmosphere, subtle cinematic feeling, Japanese TV food show style, gourmet program filming, natural documentary-like framing, believable anime lighting, restrained detail density, soft cel shading, matte rendering, low gloss skin, clean line clarity, gentle gradients, slightly muted colors, calm warm palette, soft depth of field, light film grain, realistic but anime-styled rendering, non-photorealistic\n\nyoung petite Japanese anime girl,\nlong flowing light-blue hair,\nsoft lavender gradient at hair ends,\nslightly messy natural hair strands,\nsemi-transparent bangs,\nsilver triangle cat hairpin,\nsmall braid tied with black ribbon,\nblue-purple tired gentle eyes,\nsoft pale skin,\nsmall natural lips,\nslightly sleepy relieved expression,\ngentle “revived after eating” feeling,\nquiet emotional presence,\nnatural proportions,\nsoft relaxed posture,\nslight off-camera gaze as if being filmed during a food segment\n\ncasual white summer outfit,\nlight semi-transparent white shirt,\nwhite inner camisole,\nnatural summer fabric,\nsoft wrinkles,\nlight airy feeling\n\nsitting alone at a clean Japanese ramen shop counter,\nwooden counter seat,\nwarm white ramen shop lighting,\nJapanese menu boards on the wall,\ncozy atmosphere,\nsummer afternoon light entering from the window,\ngourmet show location shoot mood,\nslightly wide broadcast-style composition,\nroom for on-screen lower-third text,\ngentle steam rising from ramen\n\nlarge seafood ramen bowl in the foreground,\nkatsuo-based broth,\nthick chashu slices,\nnormal amount of negi,\nholding noodles with chopsticks,\ncomforting and realistic ramen presentation,\nwarm soup reflections,\nslight steam blur,\nfood is presented as the visual anchor of the shot\n\ncinematic broadcast framing,\nsoft natural shadows,\ncalm human warmth,\nquiet happiness,\nslight sense of being observed,\nnatural smartphone photo composition,\nInstagram food photo aesthetic,\nsubtle TV program still image feel\n\navoid:\nphotorealistic skin,\nidol aesthetic,\nvtuber aesthetic,\nhyper glossy rendering,\nplastic texture,\nextreme saturation,\nexcessive bloom,\nAI shimmer,\noverdetailed pores,\nfashion model makeup,\ncyberpunk neon,\nperfect symmetry,\n3D doll face,\nwet skin,\nheavy realism,\noverly comedic expression,\nharsh variety-show styling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T18:32:05+09:00"
+    },
+    {
+      "id": "gen_20260515_184827",
+      "title": "Kafka かつおラーメン TV",
+      "blocks": [],
+      "kind": "social",
+      "purpose": "かつおだしのラーメンを食べるTV収録風のひとり食事シーン",
+      "summary": "ラーメン店のカウンター席で、TV番組の収録風にかつおベースのラーメンを食べるKafka。",
+      "artifacts": [
+        {
+          "path": "artifacts/277_kafka_tv.png",
+          "title": "Kafka かつおラーメン TV"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, ultra detailed, soft anime realism, clean modern anime illustration, emotionally grounded anime girl, quiet observational loneliness, soft summer atmosphere, subtle cinematic feeling, Japanese TV food show style, gourmet program filming, natural documentary-like framing, believable anime lighting, restrained detail density, soft cel shading, matte rendering, low gloss skin, clean line clarity, gentle gradients, slightly muted colors, calm warm palette, soft depth of field, light film grain, realistic but anime-styled rendering, non-photorealistic\\n\\nyoung petite Japanese anime girl,\\nlong flowing light-blue hair,\\nsoft lavender gradient at hair ends,\\nslightly messy natural hair strands,\\nsemi-transparent bangs,\\nsilver triangle cat hairpin,\\nsmall braid tied with black ribbon,\\nblue-purple tired gentle eyes,\\nsoft pale skin,\\nsmall natural lips,\\nslightly sleepy relieved expression,\\ngentle \"revived after eating\" feeling,\\nquiet emotional presence,\\nnatural proportions,\\nsoft relaxed posture,\\nslight off-camera gaze as if being filmed during a food segment\\n\\ncasual white summer outfit,\\nlight semi-transparent white shirt,\\nwhite inner camisole,\\nnatural summer fabric,\\nsoft wrinkles,\\nlight airy feeling\\n\\nsitting alone at a clean Japanese ramen shop counter,\\nwooden counter seat,\\nwarm white ramen shop lighting,\\nJapanese menu boards on the wall,\\ncozy atmosphere,\\nsummer afternoon light entering from the window,\\ngourmet show location shoot mood,\\nslightly wide broadcast-style composition,\\nroom for on-screen lower-third text,\\ngentle steam rising from ramen\\n\\nlarge seafood ramen bowl in the foreground,\\nkatsuo-based broth,\\nthick chashu slices,\\nnormal amount of negi,\\nholding noodles with chopsticks,\\ncomforting and realistic ramen presentation,\\nwarm soup reflections,\\nslight steam blur,\\nfood is presented as the visual anchor of the shot\\n\\ncinematic broadcast framing,\\nsoft natural shadows,\\ncalm human warmth,\\nquiet happiness,\\nslight sense of being observed,\\nnatural smartphone photo composition,\\nInstagram food photo aesthetic,\\nsubtle TV program still image feel\\n\\navoid:\\nphotorealistic skin,\\nidol aesthetic,\\nvtuber aesthetic,\\nhyper glossy rendering,\\nplastic texture,\\nextreme saturation,\\nexcessive bloom,\\nAI shimmer,\\noverdetailed pores,\\nfashion model makeup,\\ncyberpunk neon,\\nperfect symmetry,\\n3D doll face,\\nwet skin,\\nheavy realism,\\noverly comedic expression,\\nharsh variety-show styling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T18:48:27+09:00"
+    },
+    {
+      "id": "gen_20260515_185057",
+      "title": "Kafka 海辺の夏",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "background_summer_terrace",
+        "outfit_summer_white_dress"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka の海辺の夏のソロポートレートを登録する",
+      "summary": "リゾートの海辺で振り返る Kafka の夏ビジュアル。",
+      "artifacts": [
+        {
+          "path": "artifacts/278_kafka.png",
+          "title": "Kafka 海辺の夏"
+        }
+      ],
+      "generated_prompt": "Regenerate the attached seaside image with these corrections, keeping the same general subject and composition. Priority 1: Kafka must look like Kafka. Keep her canonical face identity, soft pale skin, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, silver triangle hairpin with cat ornament on the left side, and the braided section with a black ribbon on the right side. Do not make the face generic, over-shiny, or overly doll-like. Priority 2: reduce sparkle and bloom. Make the image less glittery, less overexposed, less lens-flared, and less radiant. Use soft natural sunlight, but keep highlights controlled. Water should look bright and clear, not sparkling with excessive twinkles. Hair should have gentle sheen, not white-hot glow. Priority 3: make the outfit more covered and opaque. Use a modest white summer dress with layered fabric, subtle lace, and clear coverage. The dress should not be see-through, not revealing, and not expose underwear or the body through transparency. Keep it elegant, airy, and beach-appropriate, but visually grounded. Scene: a bright tropical beach resort with a white villa, parasols, palm trees, turquoise water, and soft waves. Kafka is standing in shallow water, turning back over her shoulder with a gentle, calm expression. Her hair moves naturally in the breeze, but do not exaggerate individual strands or glitter effects. Overall look: polished anime illustration, calm summer resort mood, clean anatomy, restrained pastel colors, matte skin, natural reflections, elegant but not flashy, not over-processed, not overly ethereal, not hyper-sparkly, not excessively transparent.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T18:50:57+09:00"
+    },
+    {
+      "id": "gen_20260515_191500",
+      "title": "Kafka fantasy military academy uniform",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka_fantasy_military_academy",
+        "rendering_soft_infographic"
+      ],
+      "kind": "generated",
+      "purpose": "KAFKA を幻想的な軍学院風の白い制服ドレスで描く",
+      "summary": "金ボタンと赤い jabot を持つ、無国籍の軍装風学園制服を着た Kafka のソロビジュアル。",
+      "generated_prompt": "masterpiece, best quality, clean anime illustration, soft shading, smooth gradients, polished human-made finish, pastel color palette, youthful wholesome fantasy mood, female anime character Kafka, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle small smile, quiet emotional warmth.\n\nFantasy military academy white uniform dress inspired by ceremonial military fashion, but with no real insignia and no national symbols, structured gold buttons, decorated epaulettes, red jabot, white tiered skirt with red edge trim, white mini beret, white sheer thigh-highs, polished platform loafers, small decorative brooch, elegant but cute and wholesome, crisp tailoring, youthful academy aesthetic.\n\nSoft pastel lighting, clean composition, stylish and airy atmosphere, delicate highlights, smooth material rendering, balanced silhouette, no clutter, no photorealism, no heavy shadows, no neon, no plastic skin, no generic military marks, no flags, no emblems, no medals from real nations, no text, no watermark.",
+      "created_at": "2026-05-15T19:15:00+09:00"
+    },
+    {
+      "id": "gen_20260515_185400",
+      "title": "Kafka かつおラーメン TV テロップ版",
+      "blocks": [],
+      "kind": "social",
+      "purpose": "かつおだしのラーメンを食べるTV収録風のひとり食事シーン",
+      "summary": "ラーメン店のカウンター席で、TV番組の収録風にかつおベースのラーメンを食べるKafka。下部テロップ入り。",
+      "artifacts": [
+        {
+          "path": "artifacts/279_kafka_tv.png",
+          "title": "Kafka かつおラーメン TV テロップ版"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, ultra detailed, soft anime realism, clean modern anime illustration, emotionally grounded anime girl, quiet observational loneliness, soft summer atmosphere, subtle cinematic feeling, Japanese TV food show style, gourmet program filming, natural documentary-like framing, believable anime lighting, restrained detail density, soft cel shading, matte rendering, low gloss skin, clean line clarity, gentle gradients, slightly muted colors, calm warm palette, soft depth of field, light film grain, realistic but anime-styled rendering, non-photorealistic\\n\\nyoung petite Japanese anime girl,\\nlong flowing light-blue hair,\\nsoft lavender gradient at hair ends,\\nslightly messy natural hair strands,\\nsemi-transparent bangs,\\nsilver triangle cat hairpin,\\nsmall braid tied with black ribbon,\\nblue-purple tired gentle eyes,\\nsoft pale skin,\\nsmall natural lips,\\nslightly sleepy relieved expression,\\ngentle \"revived after eating\" feeling,\\nquiet emotional presence,\\nnatural proportions,\\nsoft relaxed posture,\\nslight off-camera gaze as if being filmed during a food segment\\n\\ncasual white summer outfit,\\nlight semi-transparent white shirt,\\nwhite inner camisole,\\nnatural summer fabric,\\nsoft wrinkles,\\nlight airy feeling\\n\\nsitting alone at a clean Japanese ramen shop counter,\\nwooden counter seat,\\nwarm white ramen shop lighting,\\nJapanese menu boards on the wall,\\ncozy atmosphere,\\nsummer afternoon light entering from the window,\\ngourmet show location shoot mood,\\nslightly wide broadcast-style composition,\\nroom for on-screen lower-third text,\\ngentle steam rising from ramen\\n\\nlarge seafood ramen bowl in the foreground,\\nkatsuo-based broth,\\nthick chashu slices,\\nnormal amount of negi,\\nholding noodles with chopsticks,\\ncomforting and realistic ramen presentation,\\nwarm soup reflections,\\nslight steam blur,\\nfood is presented as the visual anchor of the shot\\n\\ncinematic broadcast framing,\\nsoft natural shadows,\\ncalm human warmth,\\nquiet happiness,\\nslight sense of being observed,\\nnatural smartphone photo composition,\\nInstagram food photo aesthetic,\\nsubtle TV program still image feel\\n\\nIMPORTANT TEXT IN LOWER THIRD:\\nput this exact Japanese text inside the bottom white caption bar, large and fully readable:\\n「静岡・焼津で味わう かつお香る特製らーめん」\\nThe lower-third must not be blank.\\nThe text should be centered in the bottom caption area and clearly visible.\\n\\navoid:\\nphotorealistic skin,\\nidol aesthetic,\\nvtuber aesthetic,\\nhyper glossy rendering,\\nplastic texture,\\nextreme saturation,\\nexcessive bloom,\\nAI shimmer,\\noverdetailed pores,\\nfashion model makeup,\\ncyberpunk neon,\\nperfect symmetry,\\n3D doll face,\\nwet skin,\\nheavy realism,\\noverly comedic expression,\\nharsh variety-show styling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T18:54:00+09:00"
+    },
+    {
+      "id": "gen_20260515_185622",
+      "title": "Kafka Cinderella Ball Gown",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock"
+      ],
+      "kind": "generated",
+      "purpose": "Kafkaのシンデレラ風ボールガウン衣装を登録する",
+      "summary": "ice-blue silk and satin, iridescent ball gown, off-the-shoulder puff sleeves, crystal bodice, stardust embroidery, glass slippers",
+      "artifacts": [
+        {
+          "path": "artifacts/280_kafka_cinderella_ball_gown.png",
+          "title": "Kafka Cinderella Ball Gown"
+        }
+      ],
+      "generated_prompt": "Female anime character, Kafka, consistent identity: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet emotional warmth. Wearing a magnificent Cinderella-inspired ball gown: shimmering ice-blue silk and satin, iridescent fabric, off-the-shoulder puff sleeves, voluminous layered skirt, bodice adorned with thousands of tiny crystal-like facets, glowing stardust embroidery, magical sparkling aura, elegant atmosphere, cinematic lighting, glass slippers peeking out. Full-body portrait, refined fantasy illustration, high detail, graceful pose, clean composition, luxurious but wholesome, pastel blue and silver palette, soft luminous background.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T18:56:22+09:00"
+    },
+    {
+      "id": "gen_20260515_190344",
+      "title": "Kafka Cinderella Ball Gown Humanized",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock"
+      ],
+      "kind": "generated",
+      "purpose": "Kafkaのシンデレラ風ボールガウン衣装を、より自然な質感で登録する",
+      "summary": "ice-blue silk and satin, subtle iridescence, off-the-shoulder puff sleeves, layered skirt, crystal embroidery, glass slippers",
+      "artifacts": [
+        {
+          "path": "artifacts/281_kafka_cinderella_ball_gown_humanized.png",
+          "title": "Kafka Cinderella Ball Gown Humanized"
+        }
+      ],
+      "generated_prompt": "Female anime character, Kafka, consistent identity: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet emotional warmth. Wearing a magnificent Cinderella-inspired ball gown: shimmering ice-blue silk and satin, realistic fabric behavior, subtle iridescent accents, off-the-shoulder puff sleeves, voluminous layered skirt, bodice adorned with tiny crystal embroidery concentrated in selected areas, glowing stardust embroidery used sparingly, elegant atmosphere, cinematic but controlled lighting, glass slippers peeking out. Full-body portrait, refined fantasy illustration, high detail, graceful pose, clean composition, luxurious but wholesome, pastel blue and silver palette, soft luminous ballroom background with stronger depth cues, natural asymmetry, subtle flyaway hair strands, less bloom, less overexposure, more human-made finish, more physically believable texture and skin, not overly perfect.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:03:44+09:00"
+    },
+    {
+      "id": "gen_20260515_190816",
+      "title": "Sylfanel Moonlit Romantic Gown",
+      "blocks": [
+        "character_sylfanel"
+      ],
+      "kind": "generated",
+      "purpose": "Sylfanelのロマンティックな月光ドレスを登録する",
+      "summary": "white and lavender moonlit gown, translucent sleeves, crystal accents, romantic conservatory mood",
+      "artifacts": [
+        {
+          "path": "artifacts/282_sylfanel_moonlit_romantic_gown.png",
+          "title": "Sylfanel Moonlit Romantic Gown"
+        }
+      ],
+      "generated_prompt": "Female anime character, Sylfanel, consistent identity: very long silver-lilac hair with soft lavender gradient, straighter silky hair, smooth vertical hair flow, controlled soft volume, gently grouped silky strands, semi-transparent bangs, pale violet eyes, translucent fair skin, elegant and ethereal appearance, gentle but dignified expression, emotionally sensitive aura, quiet nobility. Wearing a romantic moonlit fantasy gown in white, lavender, and pale silver: flowing layered chiffon, subtle lace, long translucent sleeves, delicate crystal accents, soft silver embroidery, graceful silhouette, refined and intimate rather than flashy. Standing close to a balcony window in a glass conservatory at night, one hand lightly touching her chest or hair, soft affectionate gaze toward the viewer, pale blue flowers and hanging prisms around her, moonlight spilling across her face and dress, calm romantic magical atmosphere, cinematic lighting, elegant full-body portrait, luxurious but restrained, high detail, human-made finish, believable fabric folds, natural hair motion, soft luminous background, no overglow, no plastic shine, no exaggerated sparkle.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:08:16+09:00"
+    },
+    {
+      "id": "gen_20260515_191010",
+      "title": "Sola",
+      "blocks": [
+        "character_kafka_magazine",
+        "visual_summer_magazine",
+        "background_summer_terrace",
+        "outfit_summer_white_dress",
+        "layout_magazine_cover"
+      ],
+      "kind": "social",
+      "purpose": "Kafka を夏の雑誌表紙として見せる",
+      "summary": "海辺の夏空と白いワンピースの編集表紙。",
+      "artifacts": [
+        {
+          "path": "artifacts/283_sola.png",
+          "title": "Sola"
+        }
+      ],
+      "generated_prompt": "Premium Japanese summer lifestyle magazine cover, editorial photography-inspired anime illustration. Use Kafka's canonical appearance from the JSON: young petite Japanese woman, long light-blue hair with a soft lavender gradient at the ends, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side tied with a black ribbon, gentle quiet emotional warmth. She is seated at a seaside cafe overlooking a bright turquoise ocean on a clear summer day, wearing a modest white summer dress with thin straps and soft flowing fabric. Clean blue-and-white editorial typography, elegant large masthead reading 'Sola', calm airy layout, premium magazine cover composition, high readability, refined negative space, soft sunlight, light sea breeze, polished human-made finish, no watermark, no extra text clutter, no collage, no harsh shadows.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:10:10+09:00"
     }
   ]
 }
