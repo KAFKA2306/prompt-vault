@@ -7134,6 +7134,53 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-15T20:13:50+09:00"
+    },
+    {
+      "id": "gen_20260515_223329",
+      "title": "Kafka & Sylfanel Summer Meal",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel"
+      ],
+      "kind": "generated",
+      "purpose": "Kafka と Sylfanel が海辺のテラスで夏の食事を楽しむ二人構図を登録する",
+      "summary": "海辺のテラスで、Kafka と Sylfanel が自然な反射と抑えたキラキラ感のある夏の食事シーンを楽しむ。",
+      "artifacts": [
+        {
+          "path": "artifacts/289_kafka_sylfanel_summer_meal.png",
+          "title": "Kafka & Sylfanel Summer Meal"
+        }
+      ],
+      "generated_prompt": "Kafka and Sylfanel enjoying a summer meal together on a bright seaside terrace, Kafka on the left with long light-blue hair and a black ribbon, Sylfanel on the right with very long silver-lilac hair and elegant accessories, both seated at a white table with seafood pasta, chilled noodles, fruit dessert, salad, and translucent drinks, both actively eating and smiling softly, ocean horizon and blue sky in the background, polished anime illustration with editorial food-scene quality, medium two-shot, dishes prominent in the foreground, clear hands and utensils, balanced asymmetrical composition, bright summer daylight, gentle seaside reflections, subtle specular highlights on glass and ceramic, soft reflected sunlight, realistic water reflections, controlled highlights, matte surfaces, soft indirect lighting, believable shadow detail, detailed food textures, grounded color palette, calm vacation atmosphere, elegant and human-made rendering, less sparkle, less glitter, less luminous effects, more natural reflections, more restrained lighting, no bloom, no lens flare, no sparkles, no glitter particles, no magical glow, no overexposed highlights, no harsh contrast, no neon lighting, no plastic shine, no excessive post-processing, no clutter, no extra people, no text, no logos, no watermark, no blurry faces, no broken chopsticks, no awkward hands",
+      "voice_caption": "海辺のテラスで Sylfanel と夏の食事を楽しみながら、昨日のスターライトオアシスでの体験を回想する Kafka。",
+      "voice_script": "「Sylfanel との食事。\n海辺のテラスは少し眩しいけれど、風が心地いい。\n\n昨日の『スターライトオアシス』での体験が、まだ心の中に鮮明に残っている。\nSF映画のような洗練された空間、そしてあの無限に広がる星空。\nクリスタル集めのゲームは少し大変だったけれど、最後に得られた達成感は、何物にも代えがたいものだった。\n\n非日常的な体験は、私の閉ざされがちな視野を広げてくれる。\n感覚が研ぎ澄まされ、自分の中の新しい回路が繋がっていくような感覚。\n友人との絆が深まったことも、今回の大きな収穫の一つ。\n\n美味しい食事を楽しみながら、また次の挑戦について考えようと思う。\n一歩ずつ、着実に。\n以上。またね。」",
+      "created_at": "2026-05-15T22:33:29+09:00"
+    },
+    {
+      "id": "gen_20260516_082045",
+      "title": "Kafka Monthly Vlog: April 2025",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "memory_note_board_viz",
+        "memory_pack",
+        "research_log_pack",
+        "negative_common"
+      ],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "2025年4月の活動サマリー。ドミニオン戦略分析、AI開発ツールの検証、VRChatでの交流、ポーカー分析など、多角的な活動を記録。",
+      "artifacts": [
+        {
+          "path": "artifacts/290_kafka_monthly_vlog_april_2025.png",
+          "title": "Kafka Monthly Vlog: April 2025"
+        }
+      ],
+      "generated_prompt": null,
+      "voice_caption": "2025年4月の活動を振り返る、青と紫の静かなサマリーボード。",
+      "voice_script": "「2025年4月の記録。\\n結論から言うと、この一ヶ月は『静かな積み重ね』の期間だった。\\n\\n理由は三つ。\\n一つ目は、戦略の深化。ドミニオンの基本戦略を32パターン再検証し、ポーカーではGTOモデルに基づいた18セッションの分析を完了した。数字と向き合う時間は、私に安定した思考のリズムを与えてくれる。\\n二つ目は、技術的な探索。AntiGravityを含むAIツールの比較検証を31件行い、制作ワークフローを最適化した。新しいツールに触れるときの、少し冷たい金属のようなワクワク感が好き。\\n三つ目は、対話の記憶。VRChatで43名のフレンドと交流し、未知のワールドを27箇所巡った。誰かと過ごす時間の温度は、分析だけでは得られない大切なもの。\\n\\n青と紫の光が混ざる、穏やかな一ヶ月。\\nこの積み重ねが、いつか確かな未来に繋がると信じている。\\n以上。また次の記録で。」",
+      "created_at": "2026-05-16T08:20:45+09:00"
     }
   ]
 }

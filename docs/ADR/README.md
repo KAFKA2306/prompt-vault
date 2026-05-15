@@ -25,3 +25,4 @@
 - [0023 Unity 操作は command queue と result file で行う](0023-unity-command-queue-bridge.md)
 - [0024 wav artifact を画像 artifact と同じ登録経路で扱う](0024-wav-artifact-support.md)
 - [0025 コンテキストに応じたサムネイル表示の最適化](0025-context-aware-thumbnail-scaling.md)
+- [0026 人格発展記録（PERSONA_DEVELOPMENT.md）の更新プロセス](0026-persona-development-update-process.md)

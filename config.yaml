@@ -45,17 +45,7 @@ audit_literals:
     - artifacts/_orphaned/
     - character_kafka
     - kafka_identity_lock
-  .agents/skills/prompt-vault-workflow/SKILL.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/NNN_slug.png
-    - character_kafka
-    - kafka_identity_lock
-  .agents/skills/prompt-db-guard/SKILL.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/NNN_slug.png
-    - artifacts/_orphaned/
-    - character_kafka
-    - kafka_identity_lock
+
   /home/kafka/projects/.agent/skills/.system/imagegen/SKILL.md:
     - /home/kafka/.codex/generated_images/
     - /home/kafka/projects/prompt-vault/artifacts/NNN_slug.png
