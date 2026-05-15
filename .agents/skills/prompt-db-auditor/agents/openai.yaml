@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prompt DB Ideal-State Auditor"
+  short_description: "MUST stop prompts.json canonical drift"
+  default_prompt: "Use $prompt-db-ideal-state-auditor whenever `db/prompts.json` or canonical prompt structure is involved, even if the user does not say so explicitly. Audit it as structured data, reject vibe-based judgments, compare it against the canonical target, verify schema, references, artifacts, and diff review, then apply minimal safe edits when needed and report PASS/FAIL/UNVERIFIED plus boundary violations and candidate lists."
+policy:
+  allow_implicit_invocation: true

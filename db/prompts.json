@@ -597,7 +597,7 @@
     {
       "id": "rpg_cel_shaded_3d_style",
       "title": "描画: 3Dアニメ会話イベント",
-      "content": "premium cel-shaded 3D event scene, round faces, simple skin shading, soft hair clumps, slightly plastic but clean premium material feel, polished real-time game render, cinematic engine lighting",
+      "content": "premium cel-shaded 3D event visual, round faces, simple skin shading, soft hair clumps, slightly plastic but clean premium material feel, polished real-time game render, cinematic engine lighting",
       "category": "描画",
       "role": "style"
     },
@@ -1753,8 +1753,8 @@
     },
     {
       "id": "character_kafka_morning_pack",
-      "title": "朝用Kafkaキャラパック",
-      "content": "vtuber character presentation language\nsoft rim light, lavender edge glow, gentle contrast\nsmall smile, gentle face\ncalm approachable presence",
+      "title": "Kafka 朝の空気感パック",
+      "content": "vtuber character presentation language\nsoft rim light, lavender edge glow, gentle contrast\ncalm approachable presence",
       "category": "パック",
       "role": "situation"
     },
@@ -1852,9 +1852,16 @@
     {
       "id": "hidden_horror_reflection",
       "title": "演出: 潜む影（ガラスの反射）",
-      "content": "hidden subtle urban-legend horror element, a faint unknown woman visible only in glass reflection behind them, unnaturally still figure inside the reflection, separated from the real scene, delayed recognition horror, quiet Japanese urban legend feeling, no obvious horror lighting",
+      "content": "hidden subtle urban-legend horror element, a faint unknown woman visible only in glass reflection behind them, unnaturally still figure inside the reflection, separated from the real visual, delayed recognition horror, quiet Japanese urban legend feeling, no obvious horror lighting",
       "category": "特殊演出",
       "role": "style"
+    },
+    {
+      "id": "morning_tweet_layout_pack",
+      "title": "朝ツイ基本レイアウトパック",
+      "content": "square or 4:5 social post, one large portrait, one short morning line, no date, no timestamp, no event label, lots of white space, readable at phone size, clean tweet-friendly composition\nbase_rendering_clean\nsoft shadows, clear grid layout, minimal clutter",
+      "role": "pack",
+      "category": "パック"
     }
   ],
   "templates": [
@@ -3584,12 +3591,7 @@
       "id": "tweet_backed_ai_imagegen_meeting_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "AI Imagegen Meeting",
-      "artifacts": [
-        {
-          "path": "artifacts/099_ai_imagegen_meeting.png",
-          "title": "AI Imagegen Meeting"
-        }
-      ],
+      "artifacts": [],
       "kind": "social",
       "blocks": [
         "source_research",
@@ -3604,12 +3606,7 @@
       "id": "tweet_backed_creator_workflow_desk_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "Creator Workflow Desk",
-      "artifacts": [
-        {
-          "path": "artifacts/103_creator_workflow_desk.png",
-          "title": "Creator Workflow Desk"
-        }
-      ],
+      "artifacts": [],
       "kind": "social",
       "blocks": [
         "source_research",
@@ -3624,20 +3621,7 @@
       "id": "tweet_backed_doha_airport_oasis_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Doha Airport The Orchard",
-      "artifacts": [
-        {
-          "path": "artifacts/113_doha_airport_the_orchard_v2.png",
-          "title": "Doha Airport The Orchard"
-        },
-        {
-          "path": "artifacts/111_doha_airport_indoor_oasis.png",
-          "title": "Indoor Oasis"
-        },
-        {
-          "path": "artifacts/114_doha_airport_the_orchard.png",
-          "title": "The Orchard"
-        }
-      ],
+      "artifacts": [],
       "kind": "social",
       "blocks": [
         "source_research",
@@ -3652,12 +3636,7 @@
       "id": "tweet_backed_vrchat_avatar_mod_workbench_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "VRChat Avatar Mod Workbench",
-      "artifacts": [
-        {
-          "path": "artifacts/100_vrchat_avatar_mod_workbench.png",
-          "title": "VRChat Avatar Mod Workbench"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -3672,12 +3651,7 @@
       "id": "tweet_backed_vrchat_event_gathering_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "VRChat Event Gathering",
-      "artifacts": [
-        {
-          "path": "artifacts/101_vrchat_event_gathering.png",
-          "title": "VRChat Event Gathering"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -3692,12 +3666,7 @@
       "id": "tweet_backed_vrchat_world_exploration_20260504",
       "created_at": "2026-05-04T00:00:00+00:00",
       "title": "VRChat World Exploration",
-      "artifacts": [
-        {
-          "path": "artifacts/102_vrchat_world_exploration.png",
-          "title": "VRChat World Exploration"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -3857,16 +3826,7 @@
       "id": "artifact_kafka_monogatari_poster_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Kafka Monogatari Poster",
-      "artifacts": [
-        {
-          "path": "artifacts/123_kafka_monogatari_poster.png",
-          "title": "Kafka Monogatari Poster"
-        },
-        {
-          "path": "artifacts/124_kafka_monogatari_poster_v2.png",
-          "title": "Version 2"
-        }
-      ],
+      "artifacts": [],
       "kind": "comic",
       "blocks": [
         "source_research",
@@ -3882,10 +3842,6 @@
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Life Portfolio Overview",
       "artifacts": [
-        {
-          "path": "artifacts/116_life_portfolio_diagnosis.png",
-          "title": "Life Portfolio Overview"
-        },
         {
           "path": "artifacts/175_117_life_portfolio_flowchart.png",
           "title": "Life Portfolio Overview"
@@ -3906,10 +3862,6 @@
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Rendering Quality Check",
       "artifacts": [
-        {
-          "path": "artifacts/095_rendering_quality_check_reference.png",
-          "title": "Rendering Quality Check"
-        },
         {
           "path": "artifacts/170_096_rendering_quality_check.png",
           "title": "Rendering Quality Check"
@@ -3933,12 +3885,7 @@
       "id": "artifact_rsi_overview_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "RSI Overview",
-      "artifacts": [
-        {
-          "path": "artifacts/115_rsi_overview.png",
-          "title": "RSI Overview"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -3953,28 +3900,7 @@
       "id": "artifact_singularity_resilience_overview_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Singularity Resilience Overview",
-      "artifacts": [
-        {
-          "path": "artifacts/118_singularity_resilience_flowchart.png",
-          "title": "Singularity Resilience Overview"
-        },
-        {
-          "path": "artifacts/119_singularity_resilience_review.png",
-          "title": "Review Overview"
-        },
-        {
-          "path": "artifacts/120_singularity_resilience_review_concrete.png",
-          "title": "Concrete Review"
-        },
-        {
-          "path": "artifacts/121_singularity_resilience_evidence_review.png",
-          "title": "Evidence Review"
-        },
-        {
-          "path": "artifacts/122_singularity_resilience_evidence_review_raw.png",
-          "title": "Evidence Review Raw"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -3989,12 +3915,7 @@
       "id": "artifact_tax_truth_sheet_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Tax Truth Sheet",
-      "artifacts": [
-        {
-          "path": "artifacts/090_tax_truth_sheet.png",
-          "title": "Tax Truth Sheet"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -4009,12 +3930,7 @@
       "id": "artifact_work_norms_ai_sheet_20260505",
       "created_at": "2026-05-05T00:00:00+00:00",
       "title": "Work Norms AI Sheet",
-      "artifacts": [
-        {
-          "path": "artifacts/126_work_norms_ai_sheet.png",
-          "title": "Work Norms AI Sheet"
-        }
-      ],
+      "artifacts": [],
       "kind": "design_sheet",
       "blocks": [
         "source_research",
@@ -4036,7 +3952,7 @@
         "poker_dealer_style_kafka",
         "poker_status_text_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -4057,7 +3973,7 @@
         "poker_dealer_style_kafka",
         "poker_status_text_pack"
       ],
-      "kind": "announcement",
+      "kind": "generated",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -4078,7 +3994,7 @@
         "safe_reply_pack",
         "expressions_pack"
       ],
-      "kind": "announcement",
+      "kind": "generated",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -4149,7 +4065,7 @@
         "morning_tweet_core_pack",
         "effects_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "",
       "summary": "",
       "artifacts": [
@@ -4170,7 +4086,7 @@
           "title": "もぐもぐカフカ"
         }
       ],
-      "kind": "stamp",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4192,7 +4108,7 @@
           "title": "コメント返し"
         }
       ],
-      "kind": "reaction",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4214,7 +4130,7 @@
           "title": "朝ごはんタイム"
         }
       ],
-      "kind": "social",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4236,7 +4152,7 @@
           "title": "指差し説明"
         }
       ],
-      "kind": "reaction",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4258,7 +4174,7 @@
           "title": "読書のひととき"
         }
       ],
-      "kind": "social",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4280,7 +4196,7 @@
           "title": "勝利の一瞬"
         }
       ],
-      "kind": "social",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -4302,7 +4218,7 @@
           "title": "返信ぎゅっ"
         }
       ],
-      "kind": "stamp",
+      "kind": "generated",
       "blocks": [
         "presentation_base_pack",
         "character_kafka",
@@ -5136,7 +5052,7 @@
         "background_reading_seaside",
         "layout_photo_centered"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Japanese summer lifestyle magazine cover",
       "summary": "Seaside cafe cover with a calm summer travel mood, blue-and-white editorial typography, and a soft lifestyle magazine feel.",
       "artifacts": [
@@ -5157,7 +5073,7 @@
         "background_summer_terrace",
         "outfit_summer_white_dress"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の見た目定義を反映した、海辺の夏ポートレートを登録する",
       "summary": "青い海と白いワンピース、やわらかな夏空の中に立つKafka。",
       "artifacts": [
@@ -5180,7 +5096,7 @@
         "reading_pose_kafka",
         "reading_outfit_kafka"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "041_reading_post_generalの夏装い版",
       "summary": "読書中の雰囲気はそのままに、衣装を涼しげな夏向けに寄せた派生版。",
       "artifacts": [
@@ -5203,7 +5119,7 @@
         "reading_pose_kafka",
         "reading_outfit_kafka"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "041_reading_post_generalの夏装い版",
       "summary": "読書中の雰囲気はそのままに、さらに薄手の夏服へ寄せた派生版。",
       "artifacts": [
@@ -5431,7 +5347,7 @@
         "text_japanese_labels",
         "negative_common"
       ],
-      "kind": "news",
+      "kind": "generated",
       "purpose": "",
       "summary": "NASDAQ100の直近6か月を単純明快に要約した画像。約+13.7%で、3月末に底打ちして5月上旬に高値更新。",
       "artifacts": [
@@ -5455,7 +5371,7 @@
         "morning_tweet_core_pack",
         "effects_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "022a ナショナルエコノミーを、おはツイの朝版として涼しげに見せる",
       "summary": "夏の朝の空気と水色の目で、022a の紹介をおはツイ向けにまとめたテンプレート。",
       "artifacts": [
@@ -5479,7 +5395,7 @@
         "morning_tweet_core_pack",
         "effects_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "025 ティンダハンを、おはツイの朝版として涼しげに見せる",
       "summary": "夏の朝の空気と水色の目で、025 の紹介をおはツイ向けにまとめたテンプレート。",
       "artifacts": [
@@ -5504,7 +5420,7 @@
         "clean_quality_rendering",
         "negative_common"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "022a ナショナルエコノミーの元画像の雰囲気とルールに忠実な版を作る",
       "summary": "卓上構図、資源、建物カード、箱絵、都市経済の硬さを保った fidelity 版。",
       "artifacts": [
@@ -5529,7 +5445,7 @@
         "clean_quality_rendering",
         "negative_common"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "025 ティンダハンの元画像の雰囲気とルールに忠実な版を作る",
       "summary": "南国市場の密度、果物、屋台、盤面の溶け込みを保った fidelity 版。",
       "artifacts": [
@@ -5635,12 +5551,7 @@
       "kind": "generated",
       "category": "記録・ログ",
       "content": "【要点】\n2019年にアカウントを作成し、2022年頃までは身内で遊ぶことが中心だったが、最近はパブリック交流が増えた。『ひまり旅館』のような新しいワールドで界隈が混ざり合い、共通のゲームや会話の機会が増えている。\n\n【核心の出来事】\nボードゲーム『ドミニオン』中に4、5人から『魔王が来た』と言われ、強く動揺した。後で友人から、その場は『身内で楽しく遊びたい』空気が強く、慣れた人が入ると雰囲気が変わると感じる人もいると説明され、誤解に深く傷ついた。\n\n【感情】\n困惑、警戒、疲労、孤立感、理解欲求、安堵、感謝が混ざっている。主成分は『傷ついた』より『処理できない』に近い。\n\n【自己理解】\n人間関係は技術より読みづらく、誤解されやすさが気になる。愛着は回避傾向があるかもしれず、自然な距離感の相手やVR空間のような物理距離つきの交流に安心を感じる。相談よりも自分で考える方が楽に感じやすい。\n\n【他者】\n話を聞いてくれた友人、ストレスを察知してくれたフレンド、心理学的に翻訳してくれた友人への感謝が残っている。",
-      "artifacts": [
-        {
-          "path": "artifacts/209_vrc_diary_20260508_summary.png",
-          "title": "VRChat日記 20260508"
-        }
-      ],
+      "artifacts": [],
       "generated_prompt": "VRChat diary reflection prompt. Summarize the entry into a compact log with five sections: events, emotions, self-understanding, other people's perspective, and environment review. Preserve the named items exactly: 2019, 2022年頃, ひまり旅館, ドミニオン, 魔王が来た. Keep the emotional core as mixed feelings, misreading, human ambiguity, reassurance from friends, and comfort in distance-based connection. Do not reproduce the diary verbatim; extract the structure and key beats instead.",
       "created_at": "2026-05-09T10:00:00+09:00",
       "blocks": []
@@ -5767,12 +5678,7 @@
       "kind": "generated",
       "purpose": "Formal gallery asset from a generated indie jirai-kei magazine cover.",
       "summary": "Muted summer bedroom cover in an underground fashion zine style.",
-      "artifacts": [
-        {
-          "path": "artifacts/214_lazydays_magazine_cover.png",
-          "title": "lazydays magazine cover"
-        }
-      ],
+      "artifacts": [],
       "generated_prompt": "masterpiece, best quality, ultra detailed Japanese underground fashion magazine cover, authentic 2026 indie jirai-kei fashion zine aesthetic, emotionally subdued summer bedroom atmosphere, intimate internet subculture realism, understated Japanese alt-girl culture, casual smartphone selfie feeling, muted black and dusty mauve palette, low contrast indoor lighting, slight gray undertones, realistic skin texture, subtle analog film grain, believable human imperfections, soft emotional loneliness, non-glamorous realism, slightly warm summer night atmosphere\n\npetite Japanese jirai-kei girl,\nshort black bob haircut,\nperfectly straight blunt bangs,\ndusty muted pink inner hair color,\nthin faded pink face-framing streaks,\nslightly messy natural hair strands,\nsoft heterochromia,\nleft eye muted gray-green,\nright eye dusty pink-gray,\nsleepy tired eyes,\ncalm distant expression,\nsoft under-eye shadows,\ntiny beauty marks under eyes,\nsmall natural lips,\nnarrow shoulders,\nslightly slouched posture,\nnatural proportions,\nquiet emotional presence,\nrealistic asymmetry\n\nwearing oversized washed black gothic t-shirt,\noff-shoulder loose neckline,\nthin visible black camisole strap,\nfaded pink-purple angel gothic graphic print,\nslightly worn cotton texture,\nminimal black choker,\nsmall silver cross pendant,\nminimal accessories,\ncasual layering,\nnot cosplay,\nnot excessive styling\n\nordinary dim Japanese bedroom,\ngray walls,\nsoft plush toys on bed,\nsmall monochrome anime posters taped casually on wall,\nslightly cluttered apartment realism,\nplastic water bottles and small cosmetics in background,\ndark bedding,\nsoft ambient room lighting,\ncomfortable lived-in atmosphere,\nbackground softly blurred,\nsubtle depth of field\n\nmagazine cover layout,\nlarge pale dusty pink lowercase logo at top reading \"lazydays\",\nminimal modern typography,\nclean sans-serif editorial text,\nsoft pale pink text blocks,\nbalanced negative space,\nsmall Japanese feature headlines,\ncomfortable editorial spacing,\nindie Japanese fashion zine feeling,\neditorial but intimate,\nnot luxury fashion magazine,\nissue number and date in top right corner,\nsmall subtitle text under logo\n\nmain Japanese headlines:\n「小さな部屋と、小さなこだわり。」\n「今日の気分で選ぶ黒とピンクの服」\n「無理しないメイクのはなし。」\n「静かなわたしのつくりかた。」\n\nside feature text:\n「よく聴く夏のプレイリスト。」\n「お気に入りのリップの話。」\n「憂鬱な日のすごしかた。」\n\nquote text:\n「最近アイスいっぱい食べてるけど\n夏バテなのかな…たぶん気のせい。」\n\ncamera:\nclose-up selfie framing,\nslightly high-angle smartphone front camera perspective,\narm partially visible in foreground,\ntight crop,\nnatural lens distortion,\neye-level intimacy,\nsoft depth of field,\nsharp face focus,\nbackground softly blurred\n\nstyle:\nInstagram + underground fashion magazine hybrid aesthetic,\nslightly stylized everyday realism,\nsoft muted realism,\nnon-glossy rendering,\nnot polished AI beauty style,\nnot doll-like,\nnot cinematic,\nnot fantasy,\nnot gravure,\nnot oversexualized,\nquiet human realism,\nsoft analog photography mood\n\nnegative prompt:\noversaturated pink,\nneon lighting,\nglossy skin,\nporcelain doll face,\nhuge anime eyes,\nheavy gothic accessories,\nvisual kei overload,\ncinematic bloom,\nperfect symmetry,\nAI beauty filter,\nhyper-polished retouching,\nplastic hair,\nover-sharpening,\nluxury studio,\nempty background,\ndramatic makeup,\nidol gravure aesthetic,\n3D render look,\nlatex clothing,\ncyberpunk elements,\nextreme emo styling,\nchaotic typography,\nhigh saturation,\nfashion runway lighting",
       "created_at": "2026-05-09T12:22:33+09:00"
     },
@@ -5783,12 +5689,7 @@
       "kind": "generated",
       "purpose": "Prompt Vault design sheet for attractive product creation across Unity, virtual social platform, and marketplace.",
       "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
-      "artifacts": [
-        {
-          "path": "artifacts/217_artifact.png",
-          "title": "魅力的な商品制作"
-        }
-      ],
+      "artifacts": [],
       "generated_prompt": "Create a single-page editorial design sheet / poster in Japanese, intended as a Prompt Vault asset. Theme: attractive product creation for Unity, virtual social platform, and marketplace. Must feel like a polished but human-made Japanese creative guide, not corporate, not flashy, not generic infographic.\n\nCharacter: Kafka must be present and recognizable with fixed identity cues: long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle quiet expression. Keep her consistent and elegant.\n\nVisual style: clean editorial poster, soft pastel blue and lavender with muted charcoal accents, minimal but premium, airy layout, subtle grain, soft shadows, readable Japanese typography, strong hierarchy, generous negative space, calm visual rhythm, modern but warm. Use a design-sheet composition with section blocks and simple icons, like a product guide that could be sold on marketplace.\n\nLayout: A4-like vertical poster. Large title at top: \"魅力的な商品制作\". Small subtitle: \"Unity / virtual social platform / marketplace\". Place Kafka on the right half as a guide character, either standing or half-body, with a calm presenter pose, pointing gently toward the guide sections. Left half contains concise Japanese sections in clean blocks.\n\nRequired content sections, in Japanese, concise and readable:\n1. \"1秒で伝わる\" - what it is, who it is for, why it matters.\n2. \"軽い・壊れない\" - performance, stability, no wasted complexity.\n3. \"触った瞬間に気持ちいい\" - motion quality, materials, spacing, comfort.\n4. \"買ったあとに迷わない\" - setup, instructions, trust, clarity.\n5. \"売れる見せ方\" - thumbnail, first impression, hierarchy, proof.\n\nAdd small supporting phrases throughout:\n- \"見た瞬間に用途が分かる\"\n- \"導入が楽\"\n- \"破綻しない\"\n- \"使うほど好きになる\"\n- \"購入不安を減らす\"\n\nDesign cues: not crowded, not too much text, but enough to feel like a real guide page. Use neat Japanese sans-serif text. Include small dividers, subtle bullet marks, and tiny accent labels. Add a few light diagram-like arrows or callout tags. Keep the whole piece visually balanced and calm.\n\nMood: sensorial, practical, trustworthy, tasteful, quietly persuasive. It should feel like a design guide made by someone who understands product quality, user comfort, and sales pages. No neon, no luxury fashion gloss, no chaotic typography, no sci-fi, no overdecorated idol aesthetic.\n\nNegative prompt: oversaturated colors, neon lighting, glossy skin, doll-like face, huge anime eyes, perfect symmetry, over-polished AI beauty filter, plastic hair, cinematic bloom, chaotic typography, clutter, empty corporate layout, low readability, excessive text, broken Japanese, random English, dark horror mood, hypersexualized styling, 3D render look, watermark, signature, low detail, blurry text.",
       "created_at": "2026-05-09T13:07:21+09:00"
     },
@@ -5799,12 +5700,7 @@
       "kind": "generated",
       "purpose": "Prompt Vault design sheet for attractive product creation across Unity, virtual social platform, and marketplace.",
       "summary": "A calm editorial guide sheet for making products feel clear, light, trustworthy, and pleasant to use.",
-      "artifacts": [
-        {
-          "path": "artifacts/218_jp_1918f714.png",
-          "title": "魅力的な商品制作"
-        }
-      ],
+      "artifacts": [],
       "generated_prompt": null,
       "created_at": "2026-05-09T13:11:52+09:00"
     },
@@ -6261,7 +6157,7 @@
         "text_style_jp",
         "negative_common"
       ],
-      "kind": "sheet",
+      "kind": "generated",
       "purpose": "ドミニオンの基本ルールを5ステップで説明する",
       "summary": "デッキ構築の基本、準備、手番、終了条件を5枚で整理する解説シート。",
       "artifacts": [
@@ -6327,7 +6223,7 @@
         "research_log_pack",
         "negative_common"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "研究棟深夜の観測メモを、雨窓・机・コーヒー・ヘッドホンで一枚にまとめる",
       "summary": "低刺激環境に最適化された観測者として、深夜の机仕事と雨窓の空気を印刷劣化つきで見せる。",
       "artifacts": [
@@ -6350,7 +6246,7 @@
         "text_style_jp",
         "negative_common"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "低刺激環境に最適化された人格を、分析ログと立ち姿で見せる",
       "summary": "拒絶と拘束を避けつつ観測する人格の観測カード。",
       "artifacts": [
@@ -6374,7 +6270,7 @@
         "research_log_pack",
         "negative_common"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "拒絶恐怖、拘束恐怖、観測疲労、信頼時の温度上昇を分解して見せる",
       "summary": "感情を4項目で整理し、信頼時だけ温度が上がる構造を見える化する。",
       "artifacts": [
@@ -6396,7 +6292,7 @@
         "rendering_soft_infographic",
         "text_japanese_labels"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "Kafka love manual / relationship profile infographic poster",
       "summary": "Vertical A4 editorial poster with Kafka identity, love manual layout, and Japanese typography.",
       "artifacts": [
@@ -6419,7 +6315,7 @@
         "text_japanese_labels",
         "text_style_jp"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "Kafka love manual / relationship profile infographic poster",
       "summary": "Primary vertical A4 editorial poster with Kafka identity, love manual layout, and Japanese typography.",
       "artifacts": [
@@ -6444,7 +6340,7 @@
         "clean_quality_rendering",
         "negative_common"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Slay the Spire: The Board Game - Downfall の紹介用ビジュアルを登録する",
       "summary": "Kafka の髪色と目を明確にした、Downfall 拡張のボードゲーム紹介ビジュアル。",
       "artifacts": [
@@ -6467,7 +6363,7 @@
         "rpg_cel_shaded_3d_style",
         "rpg_event_ui_pack"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "Kafka を主人公にした都市型3DアニメRPGの会話イベントスクショを登録する",
       "summary": "高級ラウンジの接客会話イベントを、今風の3Dアニメ調ゲーム画面として見せる。",
       "artifacts": [
@@ -6490,7 +6386,7 @@
         "clean_quality_rendering",
         "negative_common"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Original dungeon deckbuilder showcase with Kafka presenter",
       "summary": "Generic board game showcase poster without any franchise or IP names.",
       "artifacts": [
@@ -6513,7 +6409,7 @@
         "status_post_layout",
         "daily_status_text_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の朝の作業デスクを静かな日常シーンとして登録する",
       "summary": "朝の光の中で、ノートとコーヒーと laptop に向かう Kafka の静かな作業シーン。",
       "artifacts": [
@@ -6539,7 +6435,7 @@
         "outfit_homewear",
         "gaming_status_text_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の夜のゲームルームを静かな遊びのシーンとして登録する",
       "summary": "モニターの光とコントローラで、夜の集中感と楽しさを出したゲームシーン。",
       "artifacts": [
@@ -6561,7 +6457,7 @@
         "outfit_kafka",
         "travel_bg_tokyo"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の東京夜景を歩く旅行シーンとして登録する",
       "summary": "ネオンの街を歩く、少し驚いた表情の Kafka の都市旅行シーン。",
       "artifacts": [
@@ -6587,7 +6483,7 @@
         "outfit_homewear",
         "gaming_min_hud_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の夜のゲームルームを、最小 HUD 付きのゲーム画面として登録する",
       "summary": "モニターの光とコントローラ、そして最小限のゲーム UI を見せる夜のゲームシーン。",
       "artifacts": [
@@ -6612,7 +6508,7 @@
         "reading_outfit_kafka",
         "reading_status_text_pack"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka の海辺の読書シーンを登録する",
       "summary": "海の見えるバルコニーで、本を読みながら過ごす静かな別パターン。",
       "artifacts": [
@@ -6638,7 +6534,7 @@
         "rendering_soft_infographic",
         "text_style_jp"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "Voice consistency guide for Irodori-TTS",
       "summary": "Japanese editorial infographic summarizing voice consistency best practices.",
       "artifacts": [
@@ -6660,7 +6556,7 @@
         "rpg_cel_shaded_3d_style",
         "gaming_min_hud_pack"
       ],
-      "kind": "design_sheet",
+      "kind": "generated",
       "purpose": "同じ高級ラウンジ舞台の別カットを登録する",
       "summary": "閉店間際の静かなラウンジで、バー越しにひと息つく Kafka の別シーン。",
       "artifacts": [
@@ -6967,7 +6863,7 @@
       "id": "gen_20260515_183205",
       "title": "Kafka かつおラーメン",
       "blocks": [],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "かつおだしのラーメンを食べる静かなひとり食事シーン",
       "summary": "ラーメン店のカウンター席で、かつおベースのラーメンを食べるKafka。",
       "artifacts": [
@@ -6985,7 +6881,7 @@
       "id": "gen_20260515_184827",
       "title": "Kafka かつおラーメン TV",
       "blocks": [],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "かつおだしのラーメンを食べるTV収録風のひとり食事シーン",
       "summary": "ラーメン店のカウンター席で、TV番組の収録風にかつおベースのラーメンを食べるKafka。",
       "artifacts": [
@@ -7035,13 +6931,14 @@
       "purpose": "KAFKA を幻想的な軍学院風の白い制服ドレスで描く",
       "summary": "金ボタンと赤い jabot を持つ、無国籍の軍装風学園制服を着た Kafka のソロビジュアル。",
       "generated_prompt": "masterpiece, best quality, clean anime illustration, soft shading, smooth gradients, polished human-made finish, pastel color palette, youthful wholesome fantasy mood, female anime character Kafka, long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, gentle small smile, quiet emotional warmth.\n\nFantasy military academy white uniform dress inspired by ceremonial military fashion, but with no real insignia and no national symbols, structured gold buttons, decorated epaulettes, red jabot, white tiered skirt with red edge trim, white mini beret, white sheer thigh-highs, polished platform loafers, small decorative brooch, elegant but cute and wholesome, crisp tailoring, youthful academy aesthetic.\n\nSoft pastel lighting, clean composition, stylish and airy atmosphere, delicate highlights, smooth material rendering, balanced silhouette, no clutter, no photorealism, no heavy shadows, no neon, no plastic skin, no generic military marks, no flags, no emblems, no medals from real nations, no text, no watermark.",
-      "created_at": "2026-05-15T19:15:00+09:00"
+      "created_at": "2026-05-15T19:15:00+09:00",
+      "artifacts": []
     },
     {
       "id": "gen_20260515_185400",
       "title": "Kafka かつおラーメン TV テロップ版",
       "blocks": [],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "かつおだしのラーメンを食べるTV収録風のひとり食事シーン",
       "summary": "ラーメン店のカウンター席で、TV番組の収録風にかつおベースのラーメンを食べるKafka。下部テロップ入り。",
       "artifacts": [
@@ -7127,7 +7024,7 @@
         "outfit_summer_white_dress",
         "layout_magazine_cover"
       ],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "Kafka を夏の雑誌表紙として見せる",
       "summary": "海辺の夏空と白いワンピースの編集表紙。",
       "artifacts": [
@@ -7145,7 +7042,7 @@
       "id": "gen_20260515_191358",
       "title": "Kafka わらじとんかつ定食",
       "blocks": [],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "わらじとんかつ定食を食べる静かなひとり食事シーン",
       "summary": "居酒屋ではなく、落ち着いた和食店のカウンターで、わらじとんかつ定食を食べるKafka。",
       "artifacts": [
@@ -7163,7 +7060,7 @@
       "id": "gen_20260515_191840",
       "title": "Kafka かつおラーメン 再生成",
       "blocks": [],
-      "kind": "social",
+      "kind": "generated",
       "purpose": "かつおだしのラーメンを食べる静かなひとり食事シーンの再生成",
       "summary": "ラーメン店のカウンター席で、光の入り方とKafkaの顔を調整した再生成版。",
       "artifacts": [
@@ -7176,6 +7073,27 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-15T19:18:40+09:00"
+    },
+    {
+      "id": "gen_20260515_195831",
+      "title": "Kafka かつおラーメン 静岡・焼津調査",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock"
+      ],
+      "kind": "generated",
+      "purpose": "焼津でのかつおラーメン食レポシーンを登録する",
+      "summary": "静岡県焼津市のラーメン店で、かつおだしの効いた特製ラーメンを食べる Kafka。TV番組のロケ風のテロップ入り。",
+      "artifacts": [
+        {
+          "path": "artifacts/286_kafka.png",
+          "title": "Kafka かつおラーメン 静岡・焼津調査"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, ultra detailed, soft anime realism, clean modern anime illustration, emotionally grounded anime girl, quiet observational loneliness, soft summer atmosphere, subtle cinematic feeling, Japanese TV food show style, gourmet program filming, natural documentary-like framing, believable anime lighting, restrained detail density, soft cel shading, matte rendering, low gloss skin, clean line clarity, gentle gradients, slightly muted colors, calm warm palette, soft depth of field, light film grain, realistic but anime-styled rendering, non-photorealistic\\n\\nyoung petite Japanese anime girl,\\nlong flowing light-blue hair,\\nsoft lavender gradient at hair ends,\\nslightly messy natural hair strands,\\nsemi-transparent bangs,\\nsilver triangle cat hairpin,\\nsmall braid tied with black ribbon,\\nblue-purple tired gentle eyes,\\nsoft pale skin,\\nsmall natural lips,\\nslightly sleepy relieved expression,\\ngentle \"revived after eating\" feeling,\\nquiet emotional presence,\\nnatural proportions,\\nsoft relaxed posture,\\nslight off-camera gaze as if being filmed during a food segment\\n\\ncasual white summer outfit,\\nlight semi-transparent white shirt,\\nwhite inner camisole,\\nnatural summer fabric,\\nsoft wrinkles,\\nlight airy feeling\\n\\nsitting alone at a clean Japanese ramen shop counter,\\nwooden counter seat,\\nwarm white ramen shop lighting,\\nJapanese menu boards on the wall,\\ncozy atmosphere,\\nsummer afternoon light entering from the window,\\ngourmet show location shoot mood,\\nslightly wide broadcast-style composition,\\nroom for on-screen lower-third text,\\ngentle steam rising from ramen\\n\\nlarge seafood ramen bowl in the foreground,\\nkatsuo-based broth,\\nthick chashu slices,\\nnormal amount of negi,\\nholding noodles with chopsticks,\\ncomforting and realistic ramen presentation,\\nwarm soup reflections,\\nslight steam blur,\\nfood is presented as the visual anchor of the shot\\n\\ncinematic broadcast framing,\\nsoft natural shadows,\\ncalm human warmth,\\nquiet happiness,\\nslight sense of being observed,\\nnatural smartphone photo composition,\\nInstagram food photo aesthetic,\\nsubtle TV program still image feel\\n\\nIMPORTANT TEXT IN LOWER THIRD:\\nput this exact Japanese text inside the bottom white caption bar, large and fully readable:\\n「静岡・焼津で味わう かつお香る特製らーめん」\\nThe lower-third must not be blank.\\nThe text should be centered in the bottom caption area and clearly visible.\\n\\navoid:\\nphotorealistic skin,\\nidol aesthetic,\\nvtuber aesthetic,\\nhyper glossy rendering,\\nplastic texture,\\nextreme saturation,\\nexcessive bloom,\\nAI shimmer,\\noverdetailed pores,\\nfashion model makeup,\\ncyberpunk neon,\\nperfect symmetry,\\n3D doll face,\\nwet skin,\\nheavy realism,\\noverly comedic expression,\\nharsh variety-show styling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:58:31+09:00"
     }
   ]
 }

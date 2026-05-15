@@ -2,6 +2,13 @@
 
 Repository-local index of available prompt vault skills.
 
+## Prompt Vault
+
+| Skill | Purpose | Path |
+|---|---|---|
+| `prompt-db-ideal-state-guard` | Audit `db/prompts.json` against the canonical target. | `.agents/skills/prompt-db-guard/SKILL.md` |
+| `prompt-vault-workflow` | Route source inputs into DB and artifact updates. | `.agents/skills/workflow/SKILL.md` |
+
 ## Voice
 
 | Skill | Purpose | Path |

@@ -159,6 +159,30 @@ NEW_TEMPLATE_SPECS = {
             "negative_common",
         ],
     },
+    "artifact_rendering_quality_check_20260505": {
+        "title": "Rendering Quality Check",
+        "kind": "design_sheet",
+        "purpose": "レンダリング品質の比較と検証",
+        "summary": "異なる設定でのレンダリング結果を比較する。",
+        "blocks": [
+            "master_style",
+            "character_kafka",
+            "rendering_soft_infographic",
+            "negative_common",
+        ],
+    },
+    "artifact_life_portfolio_overview_20260505": {
+        "title": "Life Portfolio Overview",
+        "kind": "design_sheet",
+        "purpose": "ライフポートフォリオの構成案",
+        "summary": "ポートフォリオのセクションとフローを可視化する。",
+        "blocks": [
+            "source_research",
+            "layout_character_sheet",
+            "rendering_soft_infographic",
+            "negative_common",
+        ],
+    },
 }
 
 
@@ -264,7 +288,7 @@ def main() -> int:
         )
         template_by_id[template_id] = templates[-1]
 
-    next_number = next_artifact_number()
+    next_number = next_artifact_number(ARTIFACTS_PATH)
     moved = []
     planned_moves = []
 
