@@ -23,4 +23,5 @@ description: Prompt Vault の素材取り込みとアセット管理を扱う sk
 
 ## 3. 参照
 
-分岐と実行コマンドの詳細は `references/workflow.md` にまとめる。
+- 入力の判断は `references/input-routing.md` を読む。
+- コマンドと検証の詳細は `references/workflow.md` を読む。
