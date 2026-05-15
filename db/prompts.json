@@ -7158,6 +7158,24 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-15T19:13:58+09:00"
+    },
+    {
+      "id": "gen_20260515_191840",
+      "title": "Kafka かつおラーメン 再生成",
+      "blocks": [],
+      "kind": "social",
+      "purpose": "かつおだしのラーメンを食べる静かなひとり食事シーンの再生成",
+      "summary": "ラーメン店のカウンター席で、光の入り方とKafkaの顔を調整した再生成版。",
+      "artifacts": [
+        {
+          "path": "artifacts/285_kafka.png",
+          "title": "Kafka かつおラーメン 再生成"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, ultra detailed, soft anime realism, clean modern anime illustration, emotionally grounded anime girl, quiet observational loneliness, soft summer atmosphere, subtle cinematic feeling, Japanese TV food show style, gourmet program filming, natural documentary-like framing, believable anime lighting, restrained detail density, soft cel shading, matte rendering, low gloss skin, clean line clarity, gentle gradients, slightly muted colors, calm warm palette, soft depth of field, light film grain, realistic but anime-styled rendering, non-photorealistic\\n\\nyoung petite Japanese anime girl,\\nlong flowing light-blue hair,\\nsoft lavender gradient at hair ends,\\nslightly messy natural hair strands,\\nsemi-transparent bangs,\\nsilver triangle cat hairpin,\\nsmall braid tied with black ribbon,\\nblue-purple tired gentle eyes,\\nsoft pale skin,\\nsmall natural lips,\\nslightly sleepy relieved expression,\\ngentle \"revived after eating\" feeling,\\nquiet emotional presence,\\nnatural proportions,\\nsoft relaxed posture,\\nslight off-camera gaze as if being filmed during a food segment\\n\\ncasual white summer outfit,\\nlight semi-transparent white shirt,\\nwhite inner camisole,\\nnatural summer fabric,\\nsoft wrinkles,\\nlight airy feeling\\n\\nsitting alone at a clean Japanese ramen shop counter,\\nwooden counter seat,\\nwarm white ramen shop lighting,\\nJapanese menu boards on the wall,\\ncozy atmosphere,\\nsummer afternoon light entering from the window,\\ngourmet show location shoot mood,\\nslightly wide broadcast-style composition,\\nroom for on-screen lower-third text,\\ngentle steam rising from ramen\\n\\nlarge seafood ramen bowl in the foreground,\\nkatsuo-based broth,\\nthick chashu slices,\\nnormal amount of negi,\\nholding noodles with chopsticks,\\ncomforting and realistic ramen presentation,\\nwarm soup reflections,\\nslight steam blur,\\nfood is presented as the visual anchor of the shot\\n\\ncinematic broadcast framing,\\nsoft natural shadows,\\ncalm human warmth,\\nquiet happiness,\\nslight sense of being observed,\\nnatural smartphone photo composition,\\nInstagram food photo aesthetic,\\nsubtle TV program still image feel\\n\\navoid:\\nphotorealistic skin,\\nidol aesthetic,\\nvtuber aesthetic,\\nhyper glossy rendering,\\nplastic texture,\\nextreme saturation,\\nexcessive bloom,\\nAI shimmer,\\noverdetailed pores,\\nfashion model makeup,\\ncyberpunk neon,\\nperfect symmetry,\\n3D doll face,\\nwet skin,\\nheavy realism,\\noverly comedic expression,\\nharsh variety-show styling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-15T19:18:40+09:00"
     }
   ]
 }
