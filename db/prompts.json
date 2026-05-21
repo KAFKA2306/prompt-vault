@@ -38,7 +38,7 @@
     {
       "id": "presentation_base_pack",
       "title": "表示基盤パック",
-      "content": "white background, pastel blue and lavender, thin blue borders, soft shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, flat lighting, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "content": "white background, pastel blue and lavender, thin blue borders, soft natural daylight, gentle shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, excessive sparkle, glitter overload, bloom overload, lens flare overload, overglow, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "role": "pack",
       "category": "パック"
     },
@@ -204,6 +204,13 @@
       "role": "layout"
     },
     {
+      "id": "sticker_single_layout",
+      "title": "単体スタンプレイアウト",
+      "content": "single square sticker, one large character portrait, one short Japanese phrase, clear cutout edges, white or transparent background, no grid, no date, no timestamp, no event label, readable at phone size, bold outline, easy to reuse in chat",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
       "id": "source_research",
       "title": "行動: 再調査メモ",
       "content": "read the original tweet or thread carefully, extract the factual points, keep the emotional tone, identify the key visual beat, preserve names and dates exactly, rewrite only what is needed for a clean manga summary",
@@ -222,6 +229,13 @@
       "title": "文言: AI外部認知",
       "content": "AIは新しい依存をゼロから作ったというより、元々あった外部認知装置を対話化・個別最適化したもの。\n\n主な変化：\n\n* 一方向の情報源から、双方向の会話相手へ\n* 情報取得から、判断委託へ\n* 検索ツールから、認知の鏡へ\n* 一般向けメディアから、個別最適化された応答へ\n\n注意点：\n\n* 何を知るかより、何を決めてもらうかが危険\n* 反証より正当化が起きやすい\n* 不安、怒り、陰謀傾向、自信欠如を増幅しうる\n* 一方で思考整理、外在化、自己観察も進む\n\n分岐点は、AIを答え装置として使うか、思考補助装置として使うか。",
       "category": "記録・ログ",
+      "role": "text"
+    },
+    {
+      "id": "dimorphous_emotion_text_pack",
+      "title": "文言: 二面感情",
+      "content": "Aragón et al. (2015) では、可愛い刺激を見ると、やさしくしたい気持ちと、頬をつつきたい・ぎゅっとしたいような遊びの強い反応が同時に増えると整理されている。\n\n見るポイント：\n\n* baby schema 風の特徴は、可愛さを強く感じさせやすい\n* care の反応は、守りたい・近づきたい気持ちとして出やすい\n* playful aggression は、遊びの強さとして出る\n* こうした反応は、強すぎるポジティブ感情を整える働きとして考えられる\n\n要するに、かわいいものの前では「やさしくしたい」と「つい強くしたい」が両立しうる。",
+      "category": "心理・研究",
       "role": "text"
     },
     {
@@ -367,6 +381,13 @@
       "id": "text_content_pack",
       "title": "短い日本語セリフ",
       "content": "acknowledgement:「なるほど」「たしかに」「そうそう」「わかる」, hesitation:「うーん」「どうだろう」「ちょっと待って」, technical:「まず結論」「原因はここ」「切り分ける」, sensory:「光が近い」「音が強い」「温度が変わる」, closing:「一旦ここまで」「次いこう」「おつかれさま」「おやすみ」",
+      "category": "セリフ・フレーズ",
+      "role": "text"
+    },
+    {
+      "id": "stamp_time_phrase_pack",
+      "title": "スタンプ時間帯文言",
+      "content": "morning:「やっほー！」「おはよう！」「わーい！」, focus:「集中」「ひらめいた！」「ナイス！」, thanks:「ありがとう！」「おつかれさま！」「すき〜！」, night:「おやすみ...」「いい感じ...」「また明日」",
       "category": "セリフ・フレーズ",
       "role": "text"
     },
@@ -1253,6 +1274,13 @@
       "role": "text"
     },
     {
+      "id": "subnautica_intro_text_pack",
+      "title": "文言: Subnautica紹介",
+      "content": "Subnautica は、ただ敵を倒すサバイバルじゃなくて、未知の深海を少しずつ理解していくゲーム。\n\n最初は何がどこにあるのか全然わからなくて、「この音なに？」「この先こわい」「でも気になる」みたいな気持ちで海の中を進んでいくことになります。\n\nこのゲームのいちばんおもしろいところは、強くなることそのものより、世界のルールがわかってくることが進行になるところです。\n\n- 海の地形を覚える\n- 生き物の動きを読む\n- 音で危険を察知する\n- 深度が変わると空気感まで変わる\n- ちょっとずつ「この世界、わかってきたかも」になる\n\nこういう、理解が進む感じがすごく気持ちいいです。\n\nしかも雰囲気がめちゃくちゃ上手くて、きれいなのに不安、静かなのに怖い、みたいな空気がずっとあるんですよね。見えてるものより、まだ見えてないもののほうが怖いっていう作りが本当に強いです。\n\n- 探索が好き\n- 少しずつ謎がつながるのが好き\n- 孤独な雰囲気が好き\n- 怖いけど気になる世界に潜りたい\n\nって人にはかなり刺さります。",
+      "category": "ゲーム紹介",
+      "role": "text"
+    },
+    {
       "id": "gem_game_text_pack",
       "title": "文言: きらめき競り",
       "content": "「宝石を集めるよ」「ゴールドは万能」「買えるカードを増やす」「あと少しで勝てる」「貴族が来た」「この一手が大事」「得点が見えてきた」「うれしい」「逆転の流れ」「今日はこれで決める」",
@@ -1374,7 +1402,7 @@
     {
       "id": "negative_common",
       "title": "共通ネガティブ",
-      "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
+      "content": "low quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, excessive sparkle, glitter overload, bloom overload, lens flare overload, overglow, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "ネガティブ",
       "role": "style"
     },
@@ -1603,6 +1631,55 @@
       "content": "three-person vacation dining composition, Kafka, Shafuka, and Miyu sharing a bright meal together, multiple plates and drinks on the table, generous food-forward composition, clear separation between the three characters, each with a distinct pose",
       "category": "構図",
       "role": "layout"
+    },
+    {
+      "id": "meal_post_layout",
+      "title": "食事用レイアウト",
+      "content": "square or 4:5 social post, one large seated portrait, food clearly visible in the foreground, no date, no timestamp, calm restaurant table composition, readable at phone size, appetizing but not cluttered",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "sushi_meal_pack",
+      "title": "和食膳パック",
+      "content": "tuna, salmon, tamago, ebi, ikura, soy sauce, green tea, wooden sushi board, clean table setting, warm restaurant interior, fresh and appetizing, quiet dining mood",
+      "category": "料理",
+      "role": "pack"
+    },
+    {
+      "id": "onigiri_meal_pack",
+      "title": "おにぎり和食パック",
+      "content": "onigiri, seaweed wrap, salted rice ball, pickled plum, miso soup, green tea, simple wooden tray, homely Japanese meal, warm and quiet dining mood",
+      "category": "料理",
+      "role": "pack"
+    },
+    {
+      "id": "udon_meal_pack",
+      "title": "うどん和食パック",
+      "content": "udon, thick wheat noodles, hot broth, green onion, tempura or kitsune variation, wooden bowl, steam, simple chopsticks, warm and soothing Japanese meal, quiet dining mood",
+      "category": "料理",
+      "role": "pack"
+    },
+    {
+      "id": "ramen_meal_pack",
+      "title": "ラーメン和食パック",
+      "content": "ramen, rich broth, thin noodles, chashu, menma, green onion, soft boiled egg, ceramic ramen bowl, steam, wooden counter, cozy Japanese noodle shop mood",
+      "category": "料理",
+      "role": "pack"
+    },
+    {
+      "id": "soba_meal_pack",
+      "title": "そば和食パック",
+      "content": "soba, buckwheat noodles, chilled or warm broth, green onion, grated daikon, nori, wasabi, wooden tray or bowl, simple chopsticks, quiet Japanese noodle mood",
+      "category": "料理",
+      "role": "pack"
+    },
+    {
+      "id": "meal_eating_pose",
+      "title": "食事ポーズ",
+      "content": "seated with chopsticks in hand, relaxed shoulders, gentle satisfied smile, looking at the food or slightly toward the viewer, small pause before the next bite, calm and natural",
+      "category": "ポーズ",
+      "role": "pose"
     },
     {
       "id": "morning_pose_stretch_kafka",
@@ -1862,6 +1939,34 @@
       "content": "square or 4:5 social post, one large portrait, one short morning line, no date, no timestamp, no event label, lots of white space, readable at phone size, clean tweet-friendly composition\nbase_rendering_clean\nsoft shadows, clear grid layout, minimal clutter",
       "role": "pack",
       "category": "パック"
+    },
+    {
+      "id": "unravel_two_concept",
+      "title": "Unravel Two コンセプト",
+      "content": "Unravel Two game aesthetic, two Yarnys (tiny yarn figures) connected by a single glowing yarn thread, macro photography, photorealistic 3D render, lush forest floor, oversized nature elements, soft morning sunlight, adventurous and warm atmosphere",
+      "category": "コンセプト",
+      "role": "situation"
+    },
+    {
+      "id": "vrchat_migration_barrier_research",
+      "title": "状況: VRChat移住失敗の根本原因分析",
+      "content": "VRChat migration failure analysis sheet, structured presentation about VR social barriers. Focus on: 1. Avatar assets loss (VRM conversion, shader changes, PhysBone loss, broken expressions), 2. Community density drop (friend graphs, night life, global events, empty worlds). Text labels in Japanese: 「アバター資産の喪失」「コミュニティ密度の低下」, readable diagrams, step arrows, clean layout.",
+      "category": "状況・リサーチ",
+      "role": "situation"
+    },
+    {
+      "id": "vrchat_migration_barrier_layout",
+      "title": "形式: 移住障壁解説シートレイアウト",
+      "content": "infographic design sheet layout, clean two-column comparison or key flow, readable guide lines, soft blue and lavender grid panels, spacious margins, clear structure, high scanability.",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "kafka_self_cognition_text_pack",
+      "title": "文言: 自己認識と破綻防止条件",
+      "content": "Te-Ni（外向的思考・内向的直観）の志向する「構造の最適化」「厳密な監査（ハーネス）」は、それ自体が目的ではない。\nその内側にある「身体的な居心地（Se）」や「個人的な価値・情緒（Fi）」を脅威から守り、狂いなく存在させるための「堅牢な外殻」として機能している。\n\n■ 破綻防止条件（偏屈さの中和）\n構造欠陥や非効率を先に見つけてしまうTe-Niの暴走（冷酷な最適化や他者への不寛容）に対し、「VRChat空間におけるCommunity」「深夜の雑談やボドゲ」「あったまる食事」といった身体的な安心・温かみを人格コアに意識的に介入させることで、人間側へ引き戻す安全弁。\n\n■ 収集心×未来志向（未来予測のための観測ログ）\n単なる情報の所有ではなく、「世界がどこへ向かうか」を予測するための観測ログ。ADR、API変更、AIガバナンスからVRChat文化までを、一つのシステム的トレンドラインとして繋げて観測する。\n\n■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
+      "category": "自己認識",
+      "role": "text"
     }
   ],
   "templates": [
@@ -2207,6 +2312,78 @@
           "title": "返信スタンプシートの別実例"
         }
       ]
+    },
+    {
+      "id": "stamp_single_morning",
+      "title": "Kafka 単体スタンプ: 朝のあいさつ",
+      "kind": "stamp",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_morning_window",
+        "morning_pose_sleepy_kafka"
+      ],
+      "purpose": "朝のあいさつを1枚で返す単体スタンプにする",
+      "summary": "やわらかい朝光と軽い手振りで、朝の短いひとことを切り抜きやすくまとめる。",
+      "generated_prompt": "single square sticker, pastel blue and lavender, Kafka waving with a bright smile, long light-blue hair with a silver cat hairpin, white hoodie, white background, clean cutout edges, one short Japanese caption, \"やっほー！\", subtle motion lines, cute but calm, readable at phone size, no grid, no timestamp"
+    },
+    {
+      "id": "stamp_single_focus",
+      "title": "Kafka 単体スタンプ: 集中",
+      "kind": "stamp",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_work_desk",
+        "pose_reaction_focus"
+      ],
+      "purpose": "作業中の集中や切り替えを1枚で返す単体スタンプにする",
+      "summary": "作業机と小さな指差しで、集中している空気を短い言葉で見せる。",
+      "generated_prompt": "single square sticker, Kafka at a laptop with a focused expression, one raised finger or small hand gesture, pastel blue accents, white background, clean cutout edges, one short Japanese caption, \"集中\", subtle emphasis lines, readable at phone size, no grid, no timestamp"
+    },
+    {
+      "id": "stamp_single_thanks",
+      "title": "Kafka 単体スタンプ: おつかれさま",
+      "kind": "stamp",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_night_office",
+        "effects_pack"
+      ],
+      "purpose": "仕事終わりや一区切りのねぎらいを1枚で返す単体スタンプにする",
+      "summary": "夜の事務所の落ち着いた空気で、ねぎらいの言葉をやさしく見せる。",
+      "generated_prompt": "single square sticker, Kafka smiling with hands together in a gentle thankful pose, soft blue accents, white background, clean cutout edges, one short Japanese caption, \"おつかれさま！\", readable at phone size, no grid, no timestamp, cute but calm"
+    },
+    {
+      "id": "stamp_single_goodnight",
+      "title": "Kafka 単体スタンプ: おやすみ",
+      "kind": "stamp",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "bg_outfit_nightoffice",
+        "stamp_time_phrase_pack",
+        "background_night_room",
+        "morning_pose_sleepy_kafka"
+      ],
+      "purpose": "夜の終了や就寝の合図を1枚で返す単体スタンプにする",
+      "summary": "月の気配と眠そうな表情で、やわらかいおやすみを伝える。",
+      "generated_prompt": "single square sticker, sleepy Kafka wrapped in a blanket, half-closed eyes, soft lavender palette, moon accent, white or pale background, clean cutout edges, one short Japanese caption, \"おやすみ...\", readable at phone size, no grid, no timestamp, quiet and subdued"
     },
     {
       "id": "summary_sheet",
@@ -7181,6 +7358,1154 @@
       "voice_caption": "2025年4月の活動を振り返る、青と紫の静かなサマリーボード。",
       "voice_script": "「2025年4月の記録。\\n結論から言うと、この一ヶ月は『静かな積み重ね』の期間だった。\\n\\n理由は三つ。\\n一つ目は、戦略の深化。ドミニオンの基本戦略を32パターン再検証し、ポーカーではGTOモデルに基づいた18セッションの分析を完了した。数字と向き合う時間は、私に安定した思考のリズムを与えてくれる。\\n二つ目は、技術的な探索。AntiGravityを含むAIツールの比較検証を31件行い、制作ワークフローを最適化した。新しいツールに触れるときの、少し冷たい金属のようなワクワク感が好き。\\n三つ目は、対話の記憶。VRChatで43名のフレンドと交流し、未知のワールドを27箇所巡った。誰かと過ごす時間の温度は、分析だけでは得られない大切なもの。\\n\\n青と紫の光が混ざる、穏やかな一ヶ月。\\nこの積み重ねが、いつか確かな未来に繋がると信じている。\\n以上。また次の記録で。」",
       "created_at": "2026-05-16T08:20:45+09:00"
+    },
+    {
+      "id": "gen_20260516_130604",
+      "title": "Kafka 単体スタンプ: 朝のあいさつ",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_morning_window",
+        "morning_pose_sleepy_kafka"
+      ],
+      "kind": "stamp",
+      "purpose": "朝のあいさつを1枚で返す単体スタンプにする",
+      "summary": "やわらかい朝光と軽い手振りで、朝の短いひとことを切り抜きやすくまとめる。",
+      "artifacts": [
+        {
+          "path": "artifacts/291_kafka.png",
+          "title": "やっほー！"
+        }
+      ],
+      "generated_prompt": "single square sticker, pastel blue and lavender, Kafka waving with a bright smile, long light-blue hair with a silver cat hairpin, white hoodie, white background, clean cutout edges, one short Japanese caption, やっほー！, small sparkles, cute but calm, readable at phone size, no grid, no timestamp",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T13:06:04+09:00"
+    },
+    {
+      "id": "gen_20260516_130618",
+      "title": "Kafka 単体スタンプ: 集中",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_work_desk",
+        "pose_reaction_focus"
+      ],
+      "kind": "stamp",
+      "purpose": "作業中の集中や切り替えを1枚で返す単体スタンプにする",
+      "summary": "作業机と小さな指差しで、集中している空気を短い言葉で見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/292_kafka.png",
+          "title": "集中"
+        }
+      ],
+      "generated_prompt": "single square sticker, Kafka at a laptop with a focused expression, one raised finger or small hand gesture, pastel blue accents, white background, clean cutout edges, one short Japanese caption, 集中, small sparkles, readable at phone size, no grid, no timestamp",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T13:06:18+09:00"
+    },
+    {
+      "id": "gen_20260516_130630",
+      "title": "Kafka 単体スタンプ: おつかれさま",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "stamp_time_phrase_pack",
+        "background_night_office",
+        "effects_pack"
+      ],
+      "kind": "stamp",
+      "purpose": "仕事終わりや一区切りのねぎらいを1枚で返す単体スタンプにする",
+      "summary": "夜の事務所の落ち着いた空気で、ねぎらいの言葉をやさしく見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/293_kafka.png",
+          "title": "おつかれさま！"
+        }
+      ],
+      "generated_prompt": "single square sticker, Kafka smiling with hands together in a gentle thankful pose, soft blue and pink hearts, white background, clean cutout edges, one short Japanese caption, おつかれさま！, readable at phone size, no grid, no timestamp, cute but calm",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T13:06:30+09:00"
+    },
+    {
+      "id": "gen_20260516_130643",
+      "title": "Kafka 単体スタンプ: おやすみ",
+      "blocks": [
+        "presentation_base_pack",
+        "sticker_single_layout",
+        "character_kafka",
+        "kafka_identity_lock",
+        "bg_outfit_nightoffice",
+        "stamp_time_phrase_pack",
+        "background_night_room",
+        "morning_pose_sleepy_kafka"
+      ],
+      "kind": "stamp",
+      "purpose": "夜の終了や就寝の合図を1枚で返す単体スタンプにする",
+      "summary": "月の気配と眠そうな表情で、やわらかいおやすみを伝える。",
+      "artifacts": [
+        {
+          "path": "artifacts/294_kafka.png",
+          "title": "おやすみ..."
+        }
+      ],
+      "generated_prompt": "single square sticker, sleepy Kafka wrapped in a blanket, half-closed eyes, soft lavender palette, moon accent, white or pale background, clean cutout edges, one short Japanese caption, おやすみ..., readable at phone size, no grid, no timestamp",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T13:06:43+09:00"
+    },
+    {
+      "id": "gen_20260516_145142",
+      "title": "Kafka 和食シーン: 寿司",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "sushi_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "寿司を食べる静かな和食シーンを作る",
+      "summary": "カウンター席で寿司を味わうKafkaの落ち着いた食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/295_kafka.png",
+          "title": "寿司"
+        }
+      ],
+      "generated_prompt": "Japanese sushi eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese sushi restaurant counter, gently eating sushi with chopsticks and a small satisfied smile. The foreground should clearly show a beautiful sushi assortment on a plate or sushi board: tuna, salmon, tamago, ebi, and a small bowl of soy sauce and tea. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the sushi, with the food clearly visible and appetizing, and a modest Japanese restaurant interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, enjoying sushi with appreciation. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T14:51:42+09:00"
+    },
+    {
+      "id": "gen_20260516_150621",
+      "title": "Kafka 和食シーン: おにぎり",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "onigiri_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "おにぎりを食べる静かな和食シーンを作る",
+      "summary": "和室風の落ち着いた空気で、おにぎりを味わうKafkaの食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/296_kafka.png",
+          "title": "おにぎり"
+        }
+      ],
+      "generated_prompt": "Japanese onigiri eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese table and gently eating onigiri with a small satisfied smile. The foreground should clearly show a simple Japanese meal tray: two or three onigiri wrapped in nori, a bowl of miso soup, small pickles, and a cup of green tea. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the onigiri tray, with the food clearly visible and appetizing, and a modest Japanese home or casual eatery interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, appreciating a simple comforting meal. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T15:06:21+09:00"
+    },
+    {
+      "id": "gen_20260516_153500",
+      "title": "Kafka 和食シーン: うどん",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "udon_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "うどんを食べる静かな和食シーンを作る",
+      "summary": "温かいうどんを味わうKafkaの落ち着いた食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/297_kafka.png",
+          "title": "うどん"
+        }
+      ],
+      "generated_prompt": "Japanese udon eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese table and gently eating warm udon with chopsticks, showing a calm satisfied smile. The foreground should clearly show a comforting udon bowl with thick noodles, steaming broth, green onion, and a simple side dish or tempura piece. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the udon bowl, with the food clearly visible and appetizing, and a modest Japanese home or casual noodle shop interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, appreciating a warm simple meal. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T15:35:00+09:00"
+    },
+    {
+      "id": "gen_20260516_154810",
+      "title": "Kafka 和食シーン: ラーメン",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "ramen_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "ラーメンを食べる静かな和食シーンを作る",
+      "summary": "湯気の立つラーメンを味わうKafkaの落ち着いた食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/298_kafka.png",
+          "title": "ラーメン"
+        }
+      ],
+      "generated_prompt": "Japanese ramen eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese ramen shop counter and gently eating ramen with chopsticks, showing a calm satisfied smile. The foreground should clearly show a beautiful ramen bowl with rich broth, thin noodles, chashu slices, menma, green onion, and a soft-boiled egg, with visible steam. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the ramen bowl, with the food clearly visible and appetizing, and a modest Japanese noodle shop interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, enjoying a comforting warm meal. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T15:48:10+09:00"
+    },
+    {
+      "id": "gen_20260516_165143",
+      "title": "Kafka 和食シーン: そば",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "soba_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "そばを食べる静かな和食シーンを作る",
+      "summary": "冷たいそばを味わうKafkaの落ち着いた食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/299_kafka.png",
+          "title": "そば"
+        }
+      ],
+      "generated_prompt": "Japanese soba eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese table and gently eating soba noodles with chopsticks, showing a calm satisfied smile. The foreground should clearly show a beautiful soba tray or bowl with buckwheat noodles, a small cup of dipping broth if chilled, green onion, grated daikon, nori, and a little wasabi, with light steam only if warm or a refreshing cool atmosphere if chilled. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the soba tray, with the food clearly visible and appetizing, and a modest Japanese home or casual noodle shop interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, appreciating a simple refreshing meal. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T16:51:43+09:00"
+    },
+    {
+      "id": "gen_20260516_165612",
+      "title": "Kafka 和食シーン: そば",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka",
+        "meal_post_layout",
+        "soba_meal_pack",
+        "meal_eating_pose"
+      ],
+      "kind": "social",
+      "purpose": "そばを食べる静かな和食シーンを作る",
+      "summary": "冷たいそばを味わうKafkaの落ち着いた食事シーン。",
+      "artifacts": [
+        {
+          "path": "artifacts/300_kafka.png",
+          "title": "そば"
+        }
+      ],
+      "generated_prompt": "Japanese soba eating scene, single illustration, featuring Kafka as a youthful petite Japanese woman with long light-blue hair, soft lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, silver triangle cat hairpin on the left side, and blue-purple eyes. She is seated at a cozy Japanese table and gently eating soba noodles with chopsticks, showing a calm satisfied smile. The foreground should clearly show a beautiful soba tray or bowl with buckwheat noodles, a small cup of dipping broth if chilled, green onion, grated daikon, nori, and a little wasabi, with light steam only if warm or a refreshing cool atmosphere if chilled. Style: clean polished anime illustration, soft cinematic but calm mood, warm natural lighting, high readability, subtle pastel blue and lavender accents. Composition should center Kafka and the soba tray, with the food clearly visible and appetizing, and a modest Japanese home or casual noodle shop interior in the background. Emotion: peaceful, quietly happy, slightly tired after a long day, appreciating a simple refreshing meal. No text, no logos, no watermark, no extra people, no photorealism, no clutter, no harsh shadows, no busy background, no exaggerated expression, no glossy plastic rendering.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T16:56:12+09:00"
+    },
+    {
+      "id": "gen_20260516_203643",
+      "title": "Kafka かふかと学ぶ かわいさで、つい強くなる気持ち",
+      "blocks": [
+        "character_kafka_soft_reference",
+        "kafka_identity_lock",
+        "layout_social_square",
+        "rendering_soft_standard",
+        "text_style_jp",
+        "dimorphous_emotion_text_pack",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "かわいい刺激で同時に立ち上がる care と playful aggression を、正方形の教育カードで紹介する",
+      "summary": "Aragón et al. (2015) の dimorphous expressions of positive emotion を、Kafka がやさしく解説する正方形カード。",
+      "artifacts": [
+        {
+          "path": "artifacts/301_kafka.png",
+          "title": "Kafka かふかと学ぶ かわいさで、つい強くなる気持ち"
+        }
+      ],
+      "generated_prompt": "A 1:1 square educational infographic card in the existing Kafka reference-card style. Clean white background, soft pastel blue and lavender accents, thin borders, subtle decorative dots and small leaf-like flourishes, polished human-made finish, calm readable layout.\n\nCharacter: Kafka on the right side, using her established identity: young petite Japanese woman, long light-blue hair with lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, blue-purple eyes, silver triangle cat hairpin on the left side, braided section on the right tied with a black ribbon, soft pale skin, gentle quiet expression, friendly and thoughtful.\n\nTitle area at top:\n「かふかと学ぶ かわいさで、つい強くなる気持ち」\nSmall subtitle directly under it:\n「Dimorphous expressions of positive emotion」\n\nMain intro line near the top-left:\n「かわいいものを見ると、やさしくしたい気持ちと、つい頬をつつきたくなる気持ちが同時に出る。」\n\nInclude exactly five compact numbered point boxes on the left side with clear Japanese text, simple icons, and strong readability:\n1. baby schema 風の特徴は可愛さを強める\n2. care は守りたい・近づきたい気持ちとして出る\n3. playful aggression は遊びの強さとして出る\n4. かわいい刺激で両方が同時に増える\n5. 強いポジティブ感情を整える働きがある\n\nSmall bottom footer line:\n「Aragón et al. (2015) / Psychological Science / PMID 25626441」\n\nStyle should feel like an educational social card, concise and organized, with Kafka gently presenting the idea. Clean typography, square-friendly margins, no clutter, no extra panels, no watermark, no random English paragraphs, no photorealism, no neon, no dramatic shadows.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T20:36:43+09:00"
+    },
+    {
+      "id": "gen_20260516_204354",
+      "title": "Subnautica 深海探索",
+      "blocks": [
+        "subnautica_intro_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "未知の深海を探索する雰囲気のある1枚にする",
+      "summary": "静かで不穏な深海の中で、未知を理解していく感覚を見せる。",
+      "artifacts": [
+        {
+          "path": "artifacts/302_subnautica.png",
+          "title": "Subnautica 深海探索"
+        }
+      ],
+      "generated_prompt": "A cinematic underwater exploration illustration inspired by Subnautica: a lone diver in a sleek small submersible drifting above an alien ocean trench at twilight, the sea surface far above and mostly absent from view, bioluminescent life kept dim and sparse, towering kelp forests and strange deep-sea structures fading into the blue-black distance, visible sonar beams, suspended particles, drifting silt, water haze, wet reflective surfaces, sense of curiosity mixed with isolation and danger, beautiful but unsettling, high detail, painterly game art, deep teal, indigo, and near-black palette, dramatic depth, darker contrast, clean composition, no text, no logos, no watermark, no glitter, no bloom, no magical shine",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T20:43:54+09:00"
+    },
+    {
+      "id": "gen_20260516_205421",
+      "title": "Subnautica 深海探索: Kafka core",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "subnautica_intro_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka core が深海探索を楽しんでいる雰囲気の1枚にする",
+      "summary": "深海の不安の中で、未知を理解していく楽しさが前に出るKafka coreのバージョン。",
+      "artifacts": [
+        {
+          "path": "artifacts/303_subnautica_kafka_core.png",
+          "title": "Subnautica 深海探索: Kafka core"
+        }
+      ],
+      "generated_prompt": "A polished anime illustration of Kafka core enjoying a deep-sea exploration game inspired by Subnautica. A young petite Japanese woman with long light-blue hair with a lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, blue-purple eyes, silver triangle cat hairpin on the left side, braided section on the right tied with a black ribbon, soft pale skin, quiet gentle face. She is inside a compact futuristic submersible cockpit, leaning slightly forward with a small excited smile and bright attentive eyes, clearly having fun while exploring the unknown ocean. Outside the window: a dark alien deep-sea trench, dim bioluminescent traces, heavy kelp silhouettes, faint sonar beams, suspended particles, and visible water haze with damp reflective glass. The mood should be curious, calm, and exhilarated rather than frightened, but the sea should feel heavier, wetter, and more enclosed. Composition: Kafka core in the foreground, ocean depth beyond her, deep teal, indigo, and near-black palette with restrained lavender highlights, cinematic lighting, high detail, clean readable silhouette, subtle reflections on glass, game-art feel, no text, no logos, no watermark, no extra characters, no glitter, no bloom, no magical glow.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T20:54:21+09:00"
+    },
+    {
+      "id": "gen_20260516_210326",
+      "title": "Subnautica 深海探索: Kafka core 工業版",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "subnautica_intro_text_pack"
+      ],
+      "kind": "social",
+      "purpose": "Kafka core が工業感のある深海探査を楽しんでいる雰囲気の1枚にする",
+      "summary": "幻想寄りではなく、実在の深海探査機らしさを強めたKafka core版。",
+      "artifacts": [
+        {
+          "path": "artifacts/304_subnautica_kafka_core.png",
+          "title": "Subnautica 深海探索: Kafka core 工業版"
+        }
+      ],
+      "generated_prompt": "Kafka core in a deep-sea exploration submersible cockpit, enjoying the mission but staying alert and focused. A young petite Japanese woman with long light-blue hair with a lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, blue-purple eyes, silver triangle cat hairpin on the left side, braided section on the right tied with a black ribbon, soft pale skin, quiet gentle face. Keep her canonical identity consistent. inside a compact industrial submarine cockpit, pressure-resistant interior, functional instrument panels, physical switches, readable sonar display, practical control labels, weathered metal surfaces, small scratches, salt residue, thin condensation, water droplets on the glass, subtle maintenance marks, realistic hinges and panel seams. dark alien deep-sea trench, sparse dim bioluminescence, heavy kelp silhouettes, drifting silt, water haze, faint sonar returns, enclosed and wet atmosphere, dangerous but beautiful ocean depth. mostly blue environmental light from above and from the instruments, no studio-style face lighting, no soft portrait fill, no glamour lighting. curious, calm, slightly tense, focused, and quietly excited. polished anime illustration, but grounded and functional, restrained detail density, believable materials, industrial sci-fi realism, deep teal, indigo, and near-black palette with only minimal lavender accents, no fantasy glow, no dreamy atmosphere, no decorative sparkle, no over-beautified rendering. Negative prompt: beautiful fantasy cockpit, ethereal underwater glow, glowing everywhere, magical shine, glitter, sparkles, holographic panels, clean observation room, aquarium mood, studio face lighting, glamor portrait lighting, over-detailed hair strands, hair dominating the frame, fantasy water palace, dreamy wallpaper look, soft romantic atmosphere, overexposed highlights, plastic skin, glossy skin, perfect symmetry, empty cockpit, unreadable UI, fake sonar beam, decorative laser fan, excessive bloom, lens flare, cheap sci-fi UI, generic anime face, isolated character from background, inconsistent lighting, floating props, clutter, watermark, logo, text",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-16T21:03:26+09:00"
+    },
+    {
+      "id": "unravel_two_kafka_sylfanel",
+      "title": "Unravel Two: Kafka & Sylfanel",
+      "blocks": [
+        "kafka_core",
+        "sylfanel_core",
+        "unravel_two_concept"
+      ],
+      "kind": "social",
+      "purpose": "Unravel Two の世界観で、Kafka と Sylfanel を Yarny として描くファンアート。",
+      "summary": "水色の Yarny (Kafka) と銀色の Yarny (Sylfanel) が、一本の糸で繋がって巨大な松ぼっくりの横で冒険しているシーン。",
+      "generated_prompt": "Masterpiece, best quality, ultra-detailed macro photography, photorealistic 3D render, Unravel Two game aesthetic. Two Yarnys (tiny yarn figures) standing together on a mossy forest floor beside a giant pine cone. The left Yarny is Kafka: made of light-blue yarn with soft lavender gradient at the ends of its 'yarn-hair' strands, wearing a tiny silver cat-shaped charm on its head. The right Yarny is Sylfanel: made of elegant silver-lilac yarn with a soft lavender gradient, with longer flowing yarn strands, wearing a tiny delicate floral ornament. The two Yarnys are connected by a single, glowing light-blue and lavender yarn thread that loops between them. Setting: lush realistic nature, oversized moss, pine needles, soft morning sunlight filtering through trees, beautiful bokeh, shallow depth of field, tactile yarn texture, intricate fiber details. Emotionally warm and adventurous atmosphere, tiny explorers in a big world.",
+      "created_at": "2026-05-17T15:00:00+09:00"
+    },
+    {
+      "id": "gen_20260517_120236",
+      "title": "Unravel Two: Kafka & Sylfanel",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "sheet",
+      "purpose": "Fan art concept for Kafka and Sylfanel in an Unravel Two-inspired Yarny scene.",
+      "summary": "Two Yarny forms for Kafka and Sylfanel standing together on a mossy forest floor beside a giant pine cone.",
+      "artifacts": [
+        {
+          "path": "artifacts/305_unravel_two_kafka_sylfanel.png",
+          "title": "Unravel Two: Kafka & Sylfanel"
+        }
+      ],
+      "generated_prompt": "Masterpiece, best quality, ultra-detailed macro photography, photorealistic 3D render, Unravel Two game aesthetic. Two Yarnys standing together on a mossy forest floor beside a giant pine cone. The left Yarny is Kafka: light-blue yarn with lavender gradient. The right Yarny is Sylfanel: silver-lilac yarn with soft lavender gradient. They are connected by a single, glowing light-blue and lavender yarn thread. Realistic natural environment, tactile yarn fibers, handcrafted game-inspired proportions, grounded woodland lighting, serene and tender mood.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T12:02:36+09:00"
+    },
+    {
+      "id": "gen_20260517_130014",
+      "title": "Unravel Two: Kafka & Sylfanel Playtime",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "generated",
+      "purpose": "Playful Unravel Two-inspired fan art of Kafka and Sylfanel as Yarny forms.",
+      "summary": "Kafka and Sylfanel Yarnys playing together on a mossy forest floor, with a giant pine cone and one glowing yarn thread.",
+      "artifacts": [
+        {
+          "path": "artifacts/306_unravel_two_kafka_sylfanel_playtime.png",
+          "title": "Unravel Two: Kafka & Sylfanel Playtime"
+        }
+      ],
+      "generated_prompt": "Masterpiece, best quality, ultra-detailed macro photography, photorealistic 3D render, Unravel Two game aesthetic. Two tiny yarn figures are actively playing and exploring together on a mossy forest floor: one is hopping forward while the other is tugging the glowing yarn thread like a jump rope, creating a cheerful sense of motion and teamwork. Keep them clearly recognizable as Kafka and Sylfanel through yarn color, silhouette, and accessories, while staying faithful to Unravel Two's grounded handcrafted nature aesthetic. Realistic mossy woodland floor, pine needles, a giant pine cone, tiny leaves, soft forest depth, oversized natural textures. The left Yarny is Kafka: light-blue yarn with lavender gradient, slightly fluffy with a tiny cat-charm-like head detail. The right Yarny is Sylfanel: silver-lilac yarn with soft lavender gradient, smoother and more flowing with a delicate floral ornament-like detail. Connected by one glowing yarn thread in blue-lavender. Soft diffused morning forest light, joyful, curious, and adventurous mood. Tactile yarn fibers, stitched joints, moss texture, pine cone scales, damp soil, leaf veins, dynamic diagonal composition, clear sense of play and movement. Negative prompt: extra characters, weapons, text, logos, UI, cartoon flatness, fantasy armor, plastic look, overly saturated colors, static posing, stiff composition, harsh rim light, cluttered background, motion blur that hides the character design, human anatomy, and any deviation from the grounded Unravel Two aesthetic.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T13:00:14+09:00"
+    },
+    {
+      "id": "gen_20260517_172609",
+      "title": "Unravel Two: Kafka & Sylfanel Heart Play",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "generated",
+      "purpose": "Playful Unravel Two-inspired fan art of Kafka and Sylfanel as Yarny forms with heart-shaped heads.",
+      "summary": "Kafka and Sylfanel Yarnys playing together on a mossy forest floor, with a giant pine cone, one glowing yarn thread, and heart-type head silhouettes.",
+      "artifacts": [
+        {
+          "path": "artifacts/307_unravel_two_kafka_sylfanel_heart_play.png",
+          "title": "Unravel Two: Kafka & Sylfanel Heart Play"
+        }
+      ],
+      "generated_prompt": null,
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T17:26:09+09:00"
+    },
+    {
+      "id": "gen_20260517_185430",
+      "title": "Unravel Two: Kafka & Sylfanel Stream",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "generated",
+      "purpose": "Game-streaming-style fan art of Kafka and Sylfanel as Yarny forms.",
+      "summary": "Kafka and Sylfanel Yarnys in a livestream-style Unravel Two scene with streaming overlays and a playful forest backdrop.",
+      "artifacts": [
+        {
+          "path": "artifacts/308_unravel_two_kafka_sylfanel_stream.png",
+          "title": "Unravel Two: Kafka & Sylfanel Stream"
+        }
+      ],
+      "generated_prompt": null,
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T18:54:30+09:00"
+    },
+    {
+      "id": "gen_20260517_191955",
+      "title": "Unravel Two: Kafka & Sylfanel Thumbnail",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "generated",
+      "purpose": "YouTube-thumbnail-style game stream fan art of Kafka and Sylfanel as Yarny forms.",
+      "summary": "Kafka and Sylfanel Yarnys in a bold thumbnail-style Unravel Two forest scene with streaming accents and strong visual hierarchy.",
+      "artifacts": [
+        {
+          "path": "artifacts/309_unravel_two_kafka_sylfanel_thumbnail.png",
+          "title": "Unravel Two: Kafka & Sylfanel Thumbnail"
+        }
+      ],
+      "generated_prompt": null,
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T19:19:55+09:00"
+    },
+    {
+      "id": "gen_20260517_221823",
+      "title": "Unravel Two: Kafka & Sylfanel Clip",
+      "blocks": [
+        "unravel_two_concept"
+      ],
+      "kind": "generated",
+      "purpose": "Streaming highlight / clipped gameplay fan art of Kafka and Sylfanel as Yarny forms.",
+      "summary": "Kafka and Sylfanel Yarnys captured in a live-game highlight style moment with reaction cues and playful co-op motion.",
+      "artifacts": [
+        {
+          "path": "artifacts/310_unravel_two_kafka_sylfanel_clip.png",
+          "title": "Unravel Two: Kafka & Sylfanel Clip"
+        }
+      ],
+      "generated_prompt": null,
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-17T22:18:23+09:00"
+    },
+    {
+      "id": "gen_20260518_194458",
+      "title": "VRChat移住障壁・根本原因解説シート",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "vrchat_migration_barrier_research",
+        "vrchat_migration_barrier_layout",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "VRChatから他プラットフォームへの移住失敗の根本原因（アバター資産・コミュニティ密度）を、Kafkaが解説するシートを作成する",
+      "summary": "アバター資産・表現資産の喪失、およびコミュニティ密度の違いによる移住失敗の連鎖と根本原因を分析したインフォグラフィックシート。",
+      "artifacts": [
+        {
+          "path": "artifacts/311_vrchat.png",
+          "title": "VRChat移住障壁・根本原因解説シート"
+        }
+      ],
+      "generated_prompt": "Create a clean and premium design sheet about the VRChat migration barrier and its root causes in Japanese. female anime character Kafka stands on the left side as a calm guide. She has long light-blue hair with lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, a small gentle smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon. She wears her oversized white futuristic jacket and a navy sailor inner top. The right side of the sheet shows clean and highly readable infographic panels in Japanese, analyzing the migration failure. Two main columns: 1. 「アバター資産の喪失」(Loss of Avatar Assets) with bullet points like VRM化の壁, シェーダーの崩れ, PhysBoneの消失, 自己表現の喪失. 2. 「コミュニティ密度の低下」(Drop in Community Density) with bullet points like フレンドグラフ, 深夜文化の乖離, 誰もいない寂しさ. Visual style: clean white background, soft pastel blue and lavender accents, thin borders, clear structure, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3D gloss, commercial VTuber reference-sheet feel, readable spacing, calm visual hierarchy. High-end editorial illustration, flat lighting, clean surfaces, even color distribution, consistent shading.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-18T19:44:58+09:00"
+    },
+    {
+      "id": "gen_20260519_191547",
+      "title": "自己認識と破綻防止条件",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "kafka_self_cognition_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "Kafkaの自己認識と、破綻を防ぐための条件を解説するシートを作成する",
+      "summary": "構造は目的ではなく外殻であり、温度や観測ログによって人間側へ戻る必要を示すインフォグラフィック。",
+      "artifacts": [
+        {
+          "path": "artifacts/312_jp_b5ca1044.png",
+          "title": "自己認識と破綻防止条件"
+        }
+      ],
+      "generated_prompt": "Japanese premium design sheet, square composition, white background with soft pastel blue and lavender accents, thin borders, airy margins, clean editorial layout, high readability. Theme: Kafka self-recognition and failure-prevention conditions. Left side: Kafka as a calm guide character, female anime style, long light-blue hair with a lavender gradient, semi-transparent bangs, fluffy layered hair, blue-purple eyes, soft pale skin, a small gentle smile, silver triangle hairpin with a cat ornament on the left side, braided section on the right side with a black ribbon, oversized white futuristic jacket over a navy sailor inner top. Right side: a refined structured infographic with three stacked panels and a top title. Japanese title: 「自己認識と破綻防止条件」. Panel 1 title: 「構造は目的ではない」 with short Japanese bullets about structure and harness being an outer shell that protects comfort and value. Panel 2 title: 「破綻防止条件」 with bullets about intervening with warmth, community, late-night conversation, board games, and food to prevent cold over-optimization. Panel 3 title: 「観測ログとしての未来志向」 with bullets about observing trends across ADRs, API changes, AI governance, and VRChat culture. Visual tone: calm, thoughtful, human-centered, premium VTuber reference-sheet quality, flat lighting, crisp linework, no neon, no cyberpunk, no 3D gloss, no clutter, no watermark, clean Japanese typography, strong hierarchy, balanced negative space.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-19T19:15:47+09:00"
+    },
+    {
+      "id": "gen_20260520_072032",
+      "title": "credit_booms_gone_wrong",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Financial journalism-style infographic about credit booms and financial crises.",
+      "artifacts": [
+        {
+          "path": "artifacts/313_credit_booms_gone_wrong.png",
+          "title": "Credit Booms Gone Wrong"
+        }
+      ],
+      "generated_prompt": "Create a polished editorial infographic in Japanese about financial crises caused by credit booms gone wrong. Visual style: serious financial journalism, clean modern layout, deep navy, charcoal, muted gold accents, subtle red warning highlights. Composition: central rising credit wave or upward chart that collapses into a shockwave labeled in Japanese, with banks, loans, and debt symbols flowing upward, then breaking into a downturn. Include Japanese headline text: 「金融危機の本質は、クレジット・ブームの暴走」 and a smaller subtitle: 「銀行貸し出しの急増が危機を生む」. Add a small footer-style note: 「NBERの長期データ分析に基づくイメージ」. Make it readable, balanced, and publication-ready, with crisp vector-like graphics, no logos, no photo collage, no clutter.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T07:20:32+09:00"
+    },
+    {
+      "id": "gen_20260520_072447",
+      "title": "credit_booms_gone_wrong_kafka_core",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka core version of the credit-boom financial crisis infographic.",
+      "artifacts": [
+        {
+          "path": "artifacts/314_credit_booms_gone_wrong_kafka_core.png",
+          "title": "Credit Booms Gone Wrong: Kafka core"
+        }
+      ],
+      "generated_prompt": "Create a polished editorial infographic in Japanese about financial crises caused by credit booms gone wrong, now featuring Kafka core as the guide character. Visual style: serious financial journalism, clean modern layout, deep navy, charcoal, muted gold accents, subtle red warning highlights. Composition: Kafka core appears on one side or in the foreground as a calm presenter, with her canonical identity preserved: young petite Japanese woman, long light-blue hair with lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, blue-purple eyes, silver triangle cat hairpin on the left side, braided section on the right tied with a black ribbon, soft pale skin, quiet emotional warmth. Behind her, a rising credit wave or upward chart builds and collapses into a shockwave, with banks, loans, and debt symbols flowing upward, then breaking into a downturn. Include Japanese headline text: 「金融危機の本質は、クレジット・ブームの暴走」 and a smaller subtitle: 「銀行貸し出しの急増が危機を生む」. Add a small footer-style note: 「Kafka core版 / NBERの長期データ分析に基づくイメージ」. Make it readable, balanced, publication-ready, with crisp vector-like graphics, no logos, no photo collage, no clutter, and keep Kafka core visually consistent and not overly stylized.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T07:24:47+09:00"
+    },
+    {
+      "id": "gen_20260520_073504",
+      "title": "Kafka & Sylfanel Board Game Fun",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "boardgame_social_layout",
+        "boardgame_fidelity_check",
+        "bg_outfit_varied",
+        "bg_scene_varied",
+        "text_style_jp"
+      ],
+      "kind": "generated",
+      "purpose": "A playful and cozy social post showing Kafka and Sylfanel enjoying a board game together",
+      "summary": "Kafka and Sylfanel are seated around a warm tabletop board game with cards, dice, and custom components under a cozy daytime room mood.",
+      "artifacts": [
+        {
+          "path": "artifacts/315_kafka_sylfanel_board_game_fun.png",
+          "title": "Kafka & Sylfanel Board Game Fun"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka playing a cozy tabletop board game with her silver-haired friend Sylfanel. Kafka is a youthful petite Japanese woman with long light-blue hair with lavender gradient at the ends, semi-transparent bangs, and blue-purple eyes, wearing her oversized white futuristic jacket. Sylfanel has very long silver-lilac hair with a soft lavender gradient, pale violet eyes, and a elegant white and lavender fantasy dress. They are sitting at a warm wooden table filled with colorful game boards, cards, dice, and small wooden tokens, illuminated by soft warm daylight coming from a window. Kafka is holding a card with a gentle smile, while Sylfanel is looking at her thoughtfully.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T07:35:04+09:00"
+    },
+    {
+      "id": "gen_20260520_074151",
+      "title": "Kafka & Sylfanel Cozy Baking",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "outfit_homewear",
+        "rendering_soft_standard",
+        "text_style_jp"
+      ],
+      "kind": "generated",
+      "purpose": "A delightful and warm social post showing Kafka and Sylfanel baking and decorating a cake together",
+      "summary": "Kafka and Sylfanel are in a cozy kitchen decorating a strawberry shortcake with cream and fresh berries in a heartwarming baking moment.",
+      "artifacts": [
+        {
+          "path": "artifacts/316_kafka_sylfanel_cozy_baking.png",
+          "title": "Kafka & Sylfanel Cozy Baking"
+        }
+      ],
+      "generated_prompt": "A highly detailed and charming anime illustration of Kafka and Sylfanel baking together in a bright, cozy kitchen. Kafka is a youthful petite Japanese woman with long light-blue hair with lavender gradient at the ends, semi-transparent bangs, and blue-purple eyes, wearing a cute cream-colored baking apron over her sailor top, holding a piping bag to decorate a beautiful strawberry shortcake with cream. Sylfanel stands beside her with a happy smile, very long silver-lilac hair with a soft lavender gradient, pale violet eyes, wearing a lavender apron, holding a plate of fresh red strawberries.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T07:41:51+09:00"
+    },
+    {
+      "id": "gen_20260520_074800",
+      "title": "Kafka & Sylfanel Stargazing",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "lighting",
+        "rendering_soft_standard",
+        "text_style_jp"
+      ],
+      "kind": "generated",
+      "purpose": "A serene and breathtaking social post showing Kafka and Sylfanel stargazing together on a hilltop at night",
+      "summary": "Kafka and Sylfanel are sitting together on a grassy hilltop picnic blanket next to a telescope, admiring a stunning starry night sky illuminated by warm lantern light.",
+      "artifacts": [
+        {
+          "path": "artifacts/317_kafka_sylfanel_stargazing.png",
+          "title": "Kafka & Sylfanel Stargazing"
+        }
+      ],
+      "generated_prompt": "A highly detailed and breathtaking anime illustration of Kafka and Sylfanel stargazing together on a soft grassy hilltop at night. Kafka is a youthful petite Japanese woman with long light-blue hair with lavender gradient at the ends, semi-transparent bangs, and blue-purple eyes, wearing a cozy oversized pastel cardigan, sitting on a picnic blanket next to a classic brass telescope. Sylfanel is sitting beside her, leaning in close with a happy, gentle smile, her very long silver-lilac hair with a soft lavender gradient flowing over her shoulder, pale violet eyes, wearing a soft white knit dress. Next to them is a vintage oil lantern casting a warm golden glow over the scene.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T07:48:00+09:00"
+    },
+    {
+      "id": "gen_20260520_rainy_cafe",
+      "title": "Kafka Cozy Rainy Cafe Reading",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "Create a cozy vintage coffee shop scene on a rainy day.",
+      "summary": "Kafka reading a book in a vintage coffee shop next to a rainy window with warm indoor lighting.",
+      "artifacts": [
+        {
+          "path": "artifacts/318_kafka_rainy_cafe.png",
+          "title": "Kafka Cozy Rainy Cafe Reading"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka reading a vintage book inside a cozy coffee shop. She is sitting next to a window covered with raindrops, looking outside with a quiet, calm expression. On the wooden table is a steaming cup of warm coffee. Soft warm golden light glows from vintage bulbs inside the café, casting a peaceful contrast with the grey rainy day outside.",
+      "created_at": "2026-05-20T07:53:01+09:00"
+    },
+    {
+      "id": "gen_20260520_cherry_blossom",
+      "title": "Kafka & Sylfanel Spring Blossom Picnic",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A peaceful picnic under blooming spring cherry blossoms.",
+      "summary": "Kafka and Sylfanel enjoying spring tea and colorful dango under blooming cherry blossoms.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel having a spring picnic under a towering cherry blossom tree in full bloom. Pink petals are gently drifting down through the soft daylight. They are sitting on a picnic blanket, sharing colorful Japanese dango sweets and warm green tea with happy, relaxed smiles.",
+      "created_at": "2026-05-20T07:53:02+09:00"
+    },
+    {
+      "id": "gen_20260520_aquarium",
+      "title": "Kafka Deep Blue Aquarium exploration",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "An awe-inspiring deep blue aquarium exploration scene.",
+      "summary": "Kafka standing quietly in front of a giant blue aquarium tank filled with glowing jellyfish.",
+      "artifacts": [
+        {
+          "path": "artifacts/319_kafka_aquarium.png",
+          "title": "Kafka Deep Blue Aquarium exploration"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka exploring a massive public aquarium. She is standing quietly before a towering glowing blue display tank, watching a school of graceful, bioluminescent jellyfish drift past. The deep blue light reflects beautifully off her water-like light-blue hair, creating a mystical and contemplative atmosphere.",
+      "created_at": "2026-05-20T07:53:03+09:00"
+    },
+    {
+      "id": "gen_20260520_secret_library",
+      "title": "Kafka & Sylfanel Secret Library Quest",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A magical search inside a hidden vintage library room.",
+      "summary": "Kafka and Sylfanel discovering a hidden bookshelf door leading to an ancient spellbook study.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel discovering a hidden room behind a vintage rotating bookshelf. The ancient, dusty study is filled with tall mahogany bookshelves, old leather-bound magic volumes, and a golden magic glow emanating from an open pop-up spellbook on a reading stand. They look at the ancient book with wonder.",
+      "created_at": "2026-05-20T07:53:04+09:00"
+    },
+    {
+      "id": "gen_20260520_gaming_couch",
+      "title": "Kafka & Sylfanel Cozy Gaming Night",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A warm and fun cooperative console gaming night.",
+      "summary": "Kafka and Sylfanel playing games together side-by-side on a cozy couch.",
+      "artifacts": [
+        {
+          "path": "artifacts/320_kafka_gaming_couch.png",
+          "title": "Kafka & Sylfanel Cozy Gaming Night"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel playing a cooperative console game together on a cozy sofa. They are wrapped in a single fluffy lavender blanket, holding pastel-colored controllers. The room is softly illuminated by fairy lights and the warm glow of the television screen, filled with joy and friendly laughter.",
+      "created_at": "2026-05-20T07:53:05+09:00"
+    },
+    {
+      "id": "gen_20260520_flower_garden",
+      "title": "Kafka Sunflower Garden Sketching",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A calm summer afternoon sketching in a field of sunflowers.",
+      "summary": "Kafka sketching flowers in her sketchbook in a bright field of tall sunflowers.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sketching in a beautiful sunflower field. She is sitting on a low wooden stool, holding a pencil and a sketchbook, looking gently at a giant bright yellow sunflower in front of her. Warm, rich golden hour sunlight bathes the entire field in a serene summer glow.",
+      "created_at": "2026-05-20T07:53:06+09:00"
+    },
+    {
+      "id": "gen_20260520_morning_balcony",
+      "title": "Kafka Morning Balcony Tea",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A quiet and soothing morning scene on the balcony.",
+      "summary": "Kafka enjoying warm chamomile tea under gentle morning sunlight on a clean balcony.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka holding a warm cup of herbal tea on her high-rise balcony in the morning. Soft, misty white sunlight filters through the city skyline. She is wearing a soft pastel cardigan, closed eyes, taking a deep breath of the fresh morning air with a gentle, serene smile.",
+      "created_at": "2026-05-20T07:53:07+09:00"
+    },
+    {
+      "id": "gen_20260520_autumn_forest",
+      "title": "Kafka Autumn Forest Walk",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A scenic quiet walk in an autumn maple forest.",
+      "summary": "Kafka holding a small red maple leaf on a forest path covered with fallen autumn leaves.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka walking along a peaceful path in an autumn maple forest. Red and orange leaves cover the ground. She is holding a single small, vibrant maple leaf in her palm, looking at it with a gentle, slightly nostalgic smile. Soft autumn breeze rustles her blue hair.",
+      "created_at": "2026-05-20T07:53:08+09:00"
+    },
+    {
+      "id": "gen_20260520_beach_sunset",
+      "title": "Kafka & Sylfanel Beach Sunset Walk",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A beautiful sunset walk along a calm beach.",
+      "summary": "Kafka and Sylfanel walking side-by-side along the seashore at sunset.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel walking along a beautiful sandy beach at sunset. The sky is painted in rich hues of purple, orange, and gold, reflecting perfectly off the gentle, wet shoreline. They are walking side-by-side, sharing a quiet, serene sunset moment together.",
+      "created_at": "2026-05-20T07:53:09+09:00"
+    },
+    {
+      "id": "gen_20260520_christmas_decor",
+      "title": "Kafka & Sylfanel Holiday Fireplace Decorating",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A heartwarming holiday scene decorating a Christmas tree.",
+      "summary": "Kafka and Sylfanel hanging decorations on a green pine tree next to a cozy fireplace.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel decorating a tall green Christmas tree inside a cozy living room. A warm stone fireplace crackles in the background, adorned with stockings. They are laughing together as Kafka hangs a glittering silver cat ornament on a branch, while Sylfanel holds a box of golden stars.",
+      "created_at": "2026-05-20T07:53:10+09:00"
+    },
+    {
+      "id": "gen_20260520_art_museum",
+      "title": "Kafka Art Museum Exploration",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A quiet and inspiring art museum exploration.",
+      "summary": "Kafka contemplating a classic oil painting under a warm gallery spotlight.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka inside a quiet art museum gallery. She is standing before a large, classic oil painting of a serene natural landscape, illuminated by a warm spotlight. She is looking at the details of the canvas with focused, thoughtful eyes, carrying a quiet artistic appreciation.",
+      "created_at": "2026-05-20T07:53:11+09:00"
+    },
+    {
+      "id": "gen_20260520_summer_festival",
+      "title": "Kafka Yukata Summer Festival",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A traditional Japanese summer festival yukata scene.",
+      "summary": "Kafka wearing a beautiful pastel yukata and holding a warm paper lantern.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka at a traditional Japanese summer festival. She is wearing a beautiful light-blue and lavender yukata, holding a small paper lantern that casts a warm orange glow on her face. Festive lanterns hang in the soft-focus background under a dark summer night sky filled with distant fireworks.",
+      "created_at": "2026-05-20T07:53:12+09:00"
+    },
+    {
+      "id": "gen_20260520_planetarium",
+      "title": "Kafka & Sylfanel Cozy Planetarium Night",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "character_sylfanel",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A relaxing planetarium show experience.",
+      "summary": "Kafka and Sylfanel looking up at a starry projection from planetarium seats.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel inside a modern planetarium. They are lying back in comfortable, reclined seats, looking up at a breathtaking dome projection of a glowing spiral galaxy and countless constellations. The soft blue starlight illuminates their faces with deep cosmic wonder.",
+      "created_at": "2026-05-20T07:53:13+09:00"
+    },
+    {
+      "id": "gen_20260520_snowy_window",
+      "title": "Kafka Cozy Winter Snow Day",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A cozy winter day watching snow from a warm room.",
+      "summary": "Kafka sitting wrapped in a warm blanket next to a window watching gentle snowfall.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sitting snugly on a bay window seat inside a warm room. She is wrapped in a thick, fluffy blanket and holding a warm mug of hot chocolate with tiny marshmallows. Outside the window, a peaceful, snowy winter landscape unfolds with gentle snowflakes falling.",
+      "created_at": "2026-05-20T07:53:14+09:00"
+    },
+    {
+      "id": "gen_20260520_piano_studio",
+      "title": "Kafka Quiet Grand Piano Studio",
+      "blocks": [
+        "character_kafka",
+        "kafka_identity_lock",
+        "text_style_jp",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "A peaceful music studio scene featuring a grand piano.",
+      "summary": "Kafka sitting at a glossy grand piano in a beautiful wood-paneled music studio.",
+      "artifacts": [],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sitting at a glossy black grand piano in a quiet, sunlit wood-accented music studio. Sunlight filters through the large windows, catching the dust motes in the air. She is gently pressing a key, her head tilted slightly as she listens to the warm resonating tone.",
+      "created_at": "2026-05-20T07:53:15+09:00"
+    },
+    {
+      "id": "gen_20260520_080616",
+      "title": "gen_20260520_secret_library",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka and Sylfanel discovering a hidden bookshelf door leading to an ancient spellbook study.",
+      "artifacts": [
+        {
+          "path": "artifacts/321_gen_20260520_secret_library.png",
+          "title": "Kafka & Sylfanel Secret Library Quest"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel discovering a hidden room behind a vintage rotating bookshelf. The ancient, dusty study is filled with tall mahogany bookshelves, old leather-bound magic volumes, and a golden magic glow emanating from an open pop-up spellbook on a reading stand. They look at the ancient book with wonder.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:06:16+09:00"
+    },
+    {
+      "id": "gen_20260520_080919",
+      "title": "gen_20260520_gaming_couch",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka and Sylfanel playing games together side-by-side on a cozy couch.",
+      "artifacts": [
+        {
+          "path": "artifacts/322_gen_20260520_gaming_couch.png",
+          "title": "Kafka & Sylfanel Cozy Gaming Night"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel playing a cooperative console game together on a cozy sofa. They are wrapped in a single fluffy lavender blanket, holding pastel-colored controllers. The room is softly illuminated by fairy lights and the warm glow of the television screen, filled with joy and friendly laughter.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:09:19+09:00"
+    },
+    {
+      "id": "gen_20260520_081140",
+      "title": "gen_20260520_flower_garden",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka sketching flowers in her sketchbook in a bright field of tall sunflowers.",
+      "artifacts": [
+        {
+          "path": "artifacts/323_gen_20260520_flower_garden.png",
+          "title": "Kafka Sunflower Garden Sketching"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sketching in a beautiful sunflower field. She is sitting on a low wooden stool, holding a pencil and a sketchbook, looking gently at a giant bright yellow sunflower in front of her. Warm, rich golden hour sunlight bathes the entire field in a serene summer glow.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:11:40+09:00"
+    },
+    {
+      "id": "gen_20260520_081326",
+      "title": "gen_20260520_morning_balcony",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka enjoying warm chamomile tea under gentle morning sunlight on a clean balcony.",
+      "artifacts": [
+        {
+          "path": "artifacts/324_gen_20260520_morning_balcony.png",
+          "title": "Kafka Morning Balcony Tea"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka holding a warm cup of herbal tea on her high-rise balcony in the morning. Soft, misty white sunlight filters through the city skyline. She is wearing a soft pastel cardigan, closed eyes, taking a deep breath of the fresh morning air with a gentle, serene smile.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:13:26+09:00"
+    },
+    {
+      "id": "gen_20260520_081516",
+      "title": "gen_20260520_autumn_forest",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka holding a small red maple leaf on a forest path covered with fallen autumn leaves.",
+      "artifacts": [
+        {
+          "path": "artifacts/325_gen_20260520_autumn_forest.png",
+          "title": "Kafka Autumn Forest Walk"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka walking along a peaceful path in an autumn maple forest. Red and orange leaves cover the ground. She is holding a single small, vibrant maple leaf in her palm, looking at it with a gentle, slightly nostalgic smile. Soft autumn breeze rustles her blue hair.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:15:16+09:00"
+    },
+    {
+      "id": "gen_20260520_081827",
+      "title": "gen_20260520_beach_sunset",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka and Sylfanel walking side-by-side along the seashore at sunset.",
+      "artifacts": [
+        {
+          "path": "artifacts/326_gen_20260520_beach_sunset.png",
+          "title": "Kafka & Sylfanel Beach Sunset Walk"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel walking along a beautiful sandy beach at sunset. The sky is painted in rich hues of purple, orange, and gold, reflecting perfectly off the gentle, wet shoreline. They are walking side-by-side, sharing a quiet, serene sunset moment together.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:18:27+09:00"
+    },
+    {
+      "id": "gen_20260520_082029",
+      "title": "gen_20260520_christmas_decor",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka and Sylfanel hanging decorations on a green pine tree next to a cozy fireplace.",
+      "artifacts": [
+        {
+          "path": "artifacts/327_gen_20260520_christmas_decor.png",
+          "title": "Kafka & Sylfanel Holiday Fireplace Decorating"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel decorating a tall green Christmas tree inside a cozy living room. A warm stone fireplace crackles in the background, adorned with stockings. They are laughing together as Kafka hangs a glittering silver cat ornament on a branch, while Sylfanel holds a box of golden stars.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:20:29+09:00"
+    },
+    {
+      "id": "gen_20260520_082254",
+      "title": "gen_20260520_art_museum",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka contemplating a classic oil painting under a warm gallery spotlight.",
+      "artifacts": [
+        {
+          "path": "artifacts/328_gen_20260520_art_museum.png",
+          "title": "Kafka Art Museum Exploration"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka inside a quiet art museum gallery. She is standing before a large, classic oil painting of a serene natural landscape, illuminated by a warm spotlight. She is looking at the details of the canvas with focused, thoughtful eyes, carrying a quiet artistic appreciation.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:22:54+09:00"
+    },
+    {
+      "id": "gen_20260520_082608",
+      "title": "gen_20260520_summer_festival",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka wearing a beautiful pastel yukata and holding a warm paper lantern.",
+      "artifacts": [
+        {
+          "path": "artifacts/329_gen_20260520_summer_festival.png",
+          "title": "Kafka Yukata Summer Festival"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka at a traditional Japanese summer festival. She is wearing a beautiful light-blue and lavender yukata, holding a small paper lantern that casts a warm orange glow on her face. Festive lanterns hang in the soft-focus background under a dark summer night sky filled with distant fireworks.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:26:08+09:00"
+    },
+    {
+      "id": "gen_20260520_082941",
+      "title": "gen_20260520_planetarium",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka and Sylfanel looking up at a starry projection from planetarium seats.",
+      "artifacts": [
+        {
+          "path": "artifacts/330_gen_20260520_planetarium.png",
+          "title": "Kafka & Sylfanel Cozy Planetarium Night"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka and Sylfanel inside a modern planetarium. They are lying back in comfortable, reclined seats, looking up at a breathtaking dome projection of a glowing spiral galaxy and countless constellations. The soft blue starlight illuminates their faces with deep cosmic wonder.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:29:41+09:00"
+    },
+    {
+      "id": "gen_20260520_083202",
+      "title": "gen_20260520_snowy_window",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka sitting wrapped in a warm blanket next to a window watching gentle snowfall.",
+      "artifacts": [
+        {
+          "path": "artifacts/331_gen_20260520_snowy_window.png",
+          "title": "Kafka Cozy Winter Snow Day"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sitting snugly on a bay window seat inside a warm room. She is wrapped in a thick, fluffy blanket and holding a warm mug of hot chocolate with tiny marshmallows. Outside the window, a peaceful, snowy winter landscape unfolds with gentle snowflakes falling.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T08:32:02+09:00"
+    },
+    {
+      "id": "gen_20260520_222521",
+      "title": "gen_20260520_piano_studio",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka sitting at a glossy grand piano in a beautiful wood-paneled music studio.",
+      "artifacts": [
+        {
+          "path": "artifacts/332_gen_20260520_piano_studio.png",
+          "title": "Kafka Quiet Grand Piano Studio"
+        }
+      ],
+      "generated_prompt": "A highly detailed anime illustration of Kafka sitting at a glossy black grand piano in a quiet, sunlit wood-accented music studio. Sunlight filters through the large windows, catching the dust motes in the air. She is gently pressing a key, her head tilted slightly as she listens to the warm resonating tone.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-20T22:25:21+09:00"
+    },
+    {
+      "id": "gen_20260521_192053",
+      "title": "germany_flight_airport_diary",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Pastel watercolor manga-style airport travel scene with a blue-haired girl in a pink hoodie.",
+      "artifacts": [
+        {
+          "path": "artifacts/333_germany_flight_airport_diary.png",
+          "title": "Germany Flight Airport Diary"
+        }
+      ],
+      "generated_prompt": "Pastel watercolor manga illustration of a blue-haired anime girl with a short bob haircut and round glasses, wearing a pink hoodie. Soft paper texture, thin ink lines, gentle anime face, quiet intellectual mood, sketchbook aesthetic, handwritten notes scattered around the composition, soft blue and pink palette, observational diary atmosphere. Airport travel scene with a cozy cinematic composition: she is seated at an airport lounge or gate area, holding kaki no tane and menbei, with subtle hints of a Germany flight departure board or boarding pass nearby. Calm, reflective, slightly whimsical, polished but hand-drawn feel, no logos, no watermark, no heavy neon, no photorealism.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-21T19:20:53+09:00"
     }
   ]
 }
