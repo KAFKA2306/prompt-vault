@@ -1,0 +1,38 @@
+project_name: prompt-vault
+
+canonical_files:
+  - path: db/prompts.json
+    required: true
+    generated: false
+  - path: config.yaml
+    required: true
+    generated: false
+  - path: Taskfile.yml
+    required: true
+    generated: false
+
+required_paths:
+  - db/
+  - scripts/
+  - artifacts/
+  - docs/
+
+generated_paths:
+  - dist/
+  - tmp/
+
+forbidden_patterns:
+  - "**/.env"
+  - "**/node_modules/**"
+  - "**/__pycache__/**"
+  - "**/.DS_Store"
+  - "artifacts/**/*.pdf"
+  - "artifacts/**/*.md"
+  - "artifacts/**/*:Zone.Identifier"
+
+budgets:
+  max_runtime_seconds: 300
+  max_files_scanned: 5000
+  max_file_size_mb: 50
+  max_tool_calls: 100
+  max_output_bytes: 200000
