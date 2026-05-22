@@ -8791,6 +8791,132 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-22T20:22:05+09:00"
+    },
+    {
+      "id": "gen_20260522_202349",
+      "title": "Travel Museum Back",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/347_travel_museum_back.png",
+          "title": "Travel Museum Back"
+        }
+      ],
+      "generated_prompt": "A minimalist travel snapshot in a quiet art museum in New York on a rainy day. A traveler viewed from behind, wearing a simple dark trench coat, quietly standing in front of a large abstract canvas painting. Soft diffused museum lighting, clean spacious lines.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:23:49+09:00"
+    },
+    {
+      "id": "gen_20260522_202349_2",
+      "title": "Travel Santorini Glass",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/348_travel_santorini_glass.png",
+          "title": "Travel Santorini Glass"
+        }
+      ],
+      "generated_prompt": "A beautiful and minimalist travel snapshot on a pristine white terrace in Santorini, Greece. A single glass of water resting on a wooden table, capturing the soft golden orange warm light of the setting sun. Clean long shadows, elegant ocean horizon softly blurred in the background.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:23:49+09:00"
+    },
+    {
+      "id": "gen_20260522_202349_3",
+      "title": "Travel Jaipur Palace",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/349_travel_jaipur_palace.png",
+          "title": "Travel Jaipur Palace"
+        }
+      ],
+      "generated_prompt": "A sophisticated travel snapshot. In a grand pink sandstone corridor of an ancient palace in Jaipur, India. A local traveler in an elegant pastel traditional outfit quietly standing next to an arched window, watching the geometric light patterns on the floor.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:23:49+09:00"
+    },
+    {
+      "id": "gen_20260522_202349_4",
+      "title": "Travel Canada Woods",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/350_travel_canada_woods.png",
+          "title": "Travel Canada Woods"
+        }
+      ],
+      "generated_prompt": "A serene travel snapshot in a dense pine forest in Canada. A hiker in a simple green jacket walking towards a cozy wooden A-frame cabin, carrying a small bundle of firewood. Soft foggy atmospheric lighting, realistic natural textures, calm mood.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:23:49+09:00"
+    },
+    {
+      "id": "gen_20260522_202349_5",
+      "title": "Travel Jiufen Tea",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/351_travel_jiufen_tea.png",
+          "title": "Travel Jiufen Tea"
+        }
+      ],
+      "generated_prompt": "An elegant travel snapshot in a quiet, narrow back alley of Jiufen, Taiwan. A young traveler quietly sitting on a wooden bench, watching steam rising from a hot ceramic cup of tea. Soft red glow of lanterns in the background, gentle rainy atmosphere.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:23:49+09:00"
+    },
+    {
+      "id": "gen_20260522_202444",
+      "title": "Travel Machu Picchu",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/352_travel_machu_picchu.png",
+          "title": "Travel Machu Picchu"
+        }
+      ],
+      "generated_prompt": "A serene and minimalist travel snapshot in the misty mountains of Machu Picchu, Peru. A traveler standing quietly under the soft gray fog, looking at a calm alpaca nearby. Ancient soft gray stone structures faintly visible in the background, elegant composition.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:24:44+09:00"
+    },
+    {
+      "id": "gen_20260522_202444_2",
+      "title": "Travel Tasmania Coast",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/353_travel_tasmania_coast.png",
+          "title": "Travel Tasmania Coast"
+        }
+      ],
+      "generated_prompt": "A beautiful travel snapshot on a rugged cliff overlooking the wild ocean in Tasmania. A traveler with hair blowing in the wind, viewed from behind, quietly looking towards the endless misty horizon. Cold blue ocean, muted natural tones, highly refined.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:24:44+09:00"
     }
   ]
 }
