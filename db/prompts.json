@@ -8557,6 +8557,60 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-21T19:20:53+09:00"
+    },
+    {
+      "id": "gen_20260522_195140",
+      "title": "warush_new_regime_infographic",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Premium editorial infographic on AI-led productivity, regime change, and long-term investment strategy.",
+      "artifacts": [
+        {
+          "path": "artifacts/334_warush_new_regime_infographic.png",
+          "title": "ウォーシュ新体制が切り拓く新時代"
+        }
+      ],
+      "generated_prompt": "Masterpiece, premium editorial infographic, ultra clean Japanese financial presentation slide, elegant macroeconomics visual design, minimal Swiss-style layout, abundant white space, calm luxury atmosphere, soft ivory background, pale blue and warm gray palette, subtle gold accent lines, extremely refined typography, Japanese corporate keynote aesthetic, sophisticated institutional design, airy composition, restrained visual hierarchy.\n\nLarge title on upper left:\n「ウォーシュ新体制が切り拓く新時代」\nSmall subtitle:\n「AI主導の生産性革命と投資戦略への長期的影響」\n\nRight side features a softly faded Federal Reserve building photo blending into white mist, cinematic soft light, low contrast, elegant depth.\n\nFive evenly spaced vertical concept columns with lots of breathing room:\n01 レジームチェンジ\n02 AIがもたらす供給サイドの拡大\n03 バランスシート・ホークと金利ハト派\n04 透明性の変革と価格発見\n05 投資戦略への示唆\n\nEach column contains:\nMinimal icon in a soft blue circle,\n2-3 short Japanese bullet points,\nThin divider lines,\nLight typography,\nClean alignment.\n\nBottom center contains a simple conceptual equation block:\n「AIによる生産性向上 × 財政規律の市場回帰 = 持続的な成長と価格の安定」\n\nVery subtle decorative botanical gold line art in the lower corner.\n\nStyle references:\nApple Keynote meets Financial Times editorial infographic meets Japanese institutional annual report.\n\nNO clutter\nNO dense paragraphs\nNO heavy gradients\nNO flashy crypto aesthetics\nNO dark background\nNO crowded charts\nNO excessive icons\nNO meme aesthetics\nNO strong shadows\nNO glossy ui\nNO cyberpunk\n\nSoft atmospheric rendering, highly readable, calm intellectual mood, elegant information architecture, minimalist premium consulting slide, muted colors, balanced spacing, modern Japanese typography.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:11:29+09:00"
+    },
+    {
+      "id": "gen_20260522_195721",
+      "title": "warush_new_regime_infographic_kafka",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Kafka as the visual anchor in a premium editorial infographic about AI-led productivity and long-term investment strategy.",
+      "artifacts": [
+        {
+          "path": "artifacts/335_warush_new_regime_infographic_kafka.png",
+          "title": "ウォーシュ新体制が切り拓く新時代: Kafka版"
+        }
+      ],
+      "generated_prompt": "Masterpiece, premium editorial infographic, ultra clean Japanese financial presentation slide, elegant macroeconomics visual design, minimal Swiss-style layout, abundant white space, calm luxury atmosphere, soft ivory background, pale blue and warm gray palette, subtle gold accent lines, extremely refined typography, Japanese corporate keynote aesthetic, sophisticated institutional design, airy composition, restrained visual hierarchy.\n\nMake Kafka the clear visual anchor of the slide: a youthful petite Japanese woman with long light-blue hair with lavender gradient at the ends, fluffy layered hair, semi-transparent bangs, blue-purple eyes, silver triangle cat hairpin on the left side, braided section on the right tied with a black ribbon, soft pale skin, quiet emotional warmth, calm and intellectually focused expression. She should appear as the presenter on the left or lower-left side, integrated naturally into the layout, not oversized.\n\nLarge title on upper left:\n「ウォーシュ新体制が切り拓く新時代」\nSmall subtitle:\n「AI主導の生産性革命と投資戦略への長期的影響」\n\nRight side features a softly faded Federal Reserve building photo blending into white mist, cinematic soft light, low contrast, elegant depth.\n\nFive evenly spaced vertical concept columns with lots of breathing room:\n01 レジームチェンジ\n02 AIがもたらす供給サイドの拡大\n03 バランスシート・ホークと金利ハト派\n04 透明性の変革と価格発見\n05 投資戦略への示唆\n\nEach column contains:\nMinimal icon in a soft blue circle,\n2-3 short Japanese bullet points,\nThin divider lines,\nLight typography,\nClean alignment.\n\nBottom center contains a simple conceptual equation block:\n「AIによる生産性向上 × 財政規律の市場回帰 = 持続的な成長と価格の安定」\n\nVery subtle decorative botanical gold line art in the lower corner.\n\nStyle references:\nApple Keynote meets Financial Times editorial infographic meets Japanese institutional annual report.\n\nNO clutter\nNO dense paragraphs\nNO heavy gradients\nNO flashy crypto aesthetics\nNO dark background\nNO crowded charts\nNO excessive icons\nNO meme aesthetics\nNO strong shadows\nNO glossy UI\nNO cyberpunk\n\nSoft atmospheric rendering, highly readable, calm intellectual mood, elegant information architecture, minimalist premium consulting slide, muted colors, balanced spacing, modern Japanese typography.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:11:29+09:00"
+    },
+    {
+      "id": "gen_20260522_200214",
+      "title": "ai_mutual_amplification_habits",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "Japanese editorial infographic about clarifying purpose, mutual amplification, and using AI as an adversarial thought partner.",
+      "artifacts": [
+        {
+          "path": "artifacts/336_ai_mutual_amplification_habits.png",
+          "title": "AIと賢く付き合う3つの習慣"
+        }
+      ],
+      "generated_prompt": "Create a clean Japanese editorial infographic / presentation poster about working with AI. Visual direction: calm, intellectual, premium consulting slide, soft ivory background, pale blue and warm gray palette, subtle gold accents, abundant white space, modern Japanese typography, airy composition, highly readable, minimal Swiss-style layout, no clutter, no dark background, no cyberpunk, no meme aesthetics.\n\nMain headline near the top:\n「AIと賢く付き合う3つの習慣」\nSmall subtitle:\n「目的を言葉にする / 相互増幅をつくる / あえて敵役にする」\n\nDesign the poster as three elegant vertical panels or stacked sections with clear spacing. Each section should feel like a concise keynote slide and contain a simple icon in a soft blue circle, a short title, and 2-3 short Japanese bullet points.\n\nSection 1 title:\n「目的を言葉にする」\nBullets:\n・AIに何をやらせるかより、何を実現したいかを明確にする\n・ビジョンを先に言語化する\n・目的がぶれないようにする\n\nSection 2 title:\n「相互増幅を回す」\nBullets:\n・日々の気付きをAIにフィードバックする\n・AIを賢くしながら自分も賢くなる\n・学びのループを続ける\n\nSection 3 title:\n「あえて敵役にする」\nBullets:\n・優しくしないで、と明示して厳しく突っ込ませる\n・案の弱点をあえて出させる\n・人間らしい決断力を磨く\n\nAdd a subtle bottom note in small Japanese text:\n「AIは道具ではなく、思考を鍛える相棒にもなる」\n\nVisual cues: thin divider lines, soft shadows only if needed, crisp alignment, elegant iconography, slightly scholarly atmosphere. Include a very faint abstract background motif like soft wave lines or paper texture. Keep it clean, balanced, and publication-ready.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:11:29+09:00"
     }
   ]
 }
