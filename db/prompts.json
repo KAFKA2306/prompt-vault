@@ -1731,6 +1731,20 @@
       "role": "strategy"
     },
     {
+      "id": "agent_boss_strategy_layout",
+      "title": "形式: エージェント・ボス戦略シート",
+      "content": "clean Japanese editorial infographic layout, square or 4:5 poster, white background, soft pastel blue and lavender accents, thin borders, spacious margins, clear three-part hierarchy, Kafka as calm presenter on one side, readable labels for vision, guardrail, and decision, compact comparison boxes, simple arrows, small icon accents, high scanability, calm premium human-made feel",
+      "category": "形式・レイアウト",
+      "role": "layout"
+    },
+    {
+      "id": "agent_boss_text_pack",
+      "title": "文言: エージェント・ボス",
+      "content": "AIがテクニカルな作業を肩代わりする時代、人間は「エージェント・ボス」としてAIチームを率いる。\n\n三つのフレームワーク:\n* テクニカルスキルは、コードや表を作る力としてAIに任せやすい\n* ヒューマンスキルは、人を巻き込む力や感情的なつながりとして人間に残る\n* コンセプチュアルスキルは、ビジョンを描き、複雑な決断を下す力として人間に残る\n\n磨くべき三つの視点:\n* 目的（Vision）を決める\n* ガードレールを敷く\n* 最終的な決断を下す\n\n要点: 情熱がない限り、関係者や顧客を引き込むことはできない。",
+      "category": "戦略",
+      "role": "text"
+    },
+    {
       "id": "master_style_composition",
       "title": "マスタースタイル (composition)",
       "content": "thin blue borders, clear grid layout, readable spacing",
@@ -3876,6 +3890,24 @@
           "title": "再調査漫画の実例"
         }
       ]
+    },
+    {
+      "id": "kafka_doomscroll_comic",
+      "title": "Kafka 深夜の情報過多漫画",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "comic_layout",
+        "text_style_jp",
+        "lighting_monitor_glow",
+        "effects_pack",
+        "rendering_soft_standard"
+      ],
+      "kind": "comic",
+      "purpose": "深夜の情報過多と doomscroll を、静かな8コマ漫画としてまとめる",
+      "summary": "SNSの危機投稿、現実のリスク整理、情報ループ、過去の暴落、研究メモ、怪しい内部情報、退屈な中央銀行説明、最後のコーヒーで終わる。",
+      "generated_prompt": "masterpiece, best quality, ultra detailed, full-color Japanese gag manga page, clean modern manga layout, emotionally grounded comedy, quiet emotional futurism, subtle observational loneliness, understated realism mixed with soft absurd humor, soft cinematic anime realism, muted blue-gray palette, lavender undertones, believable lived-in atmosphere, slight film grain, matte non-glossy rendering, psychologically quiet but funny atmosphere, calm internet-era anxiety comedy, soft human warmth, natural asymmetry, expressive but restrained reactions, premium indie manga aesthetic, slice-of-life tech comedy, emotionally believable humor, “real person trapped in information overload” atmosphere\n\n8 manga panels,\nclean white gutters,\nclear reading order,\nbalanced panel rhythm,\noccasional infographic-style panels,\nsmall handwritten notes,\nsubtle Japanese typography,\nminimal clutter,\nslightly educational visual tone mixed with comedy,\ncalm visual hierarchy,\nsoft shadows,\nnatural anime linework,\nnot overdesigned\n\nyoung petite Japanese woman,\nlong light-blue hair,\nsoft lavender gradient at hair ends,\nslightly uneven natural hair strands,\nsemi-transparent bangs,\nsilver triangle cat hairpin,\nblue-purple tired gentle eyes,\nslightly sleepy expression,\nfaint under-eye shadows,\nsmall natural lips,\nsoft pale skin,\nnarrow shoulders,\nslightly slouched posture,\nfragile but calm emotional presence,\nnatural proportions,\nhuman-like facial asymmetry,\nemotionally restrained reactions,\nfeels like a real person rather than a designed character\n\n[OUTFIT]\noversized dark navy hoodie,\nsoft worn fabric texture,\ncasual indoor clothes,\nslightly oversized sleeves\n\n[POSE]\nholding smartphone while doomscrolling,\nquiet confused reactions,\nsmall exhausted gestures,\ndeadpan stare,\ndrinking coffee,\npointing at whiteboard,\ntiny comedic panic,\nslight shrugging,\nsitting at messy desk\n\n[BACKGROUND]\nsmall late-night apartment workspace,\nmultiple monitors,\nfinancial charts,\nSNS timeline windows,\nwarning notifications,\nAI chatbot windows,\nsticky notes,\nhalf-finished design docs,\ndim rainy city outside window,\nquiet deep-night room atmosphere,\nslightly messy but believable desk,\nVRChat launcher,\nterminal windows,\nMonokai-light inspired UI colors,\nappend-only logs on monitor,\nsubtle internet-age anxiety atmosphere\n\n[LIGHTING]\nsoft blue monitor glow,\nlow contrast lighting,\ndim apartment lighting,\nsoft ambient shadows,\ngentle screen reflections,\nsubtle rim light on hair,\ncalm cinematic indoor lighting,\nlate-night atmosphere\n\n[MOOD]\n“the world might be doomed again today”\nbut treated as quiet slice-of-life comedy,\nSNS doomposting satire,\ngentle existential humor,\nemotionally grounded internet fatigue,\nsoft absurdity,\nhuman warmth survives despite information overload,\ncalm emotional recovery,\nslightly hopeful ending\n\npanel ideas:\n1. Kafka reading catastrophic SNS post: 「世界崩壊確定」\n2. whiteboard listing actual risks: inflation, geopolitics, debt\n3. “doomscroll loop” infographic\n4. historical market crashes timeline panel\n5. “researchers say reality risk ≠ apocalypse”\n6. suspicious “internal source” shadow figure\n7. boring central bank presentation full of dry terminology\n8. Kafka drinking coffee saying 「まぁ、とりあえず寝るか…」\n\nJapanese typography,\nshort simple readable Japanese text,\nclean manga lettering,\nsubtle infographic elements,\ncalm educational-comedy balance\n\navoid:\nvtuber aesthetic,\nidol aesthetic,\nhyper glossy rendering,\nplastic skin,\nperfect symmetry,\ngeneric AI anime face,\noversaturated colors,\nextreme reaction faces,\nhyperactive comedy,\ncyberpunk neon overload,\ncheap meme style,\nlow-quality manga layout,\novercrowded panels,\nheavy black shadows,\nphotorealism,\n3D doll face,\nAI shimmer artifacts,\nclickbait YouTube thumbnail aesthetic"
     },
     {
       "id": "us_april_stock_rally_news",
@@ -7897,6 +7929,25 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-19T19:15:47+09:00"
+    },
+    {
+      "id": "kafka_agent_boss_strategy_sheet",
+      "title": "Kafka エージェント・ボス戦略シート",
+      "blocks": [
+        "presentation_base_pack",
+        "character_kafka",
+        "kafka_identity_lock",
+        "outfit_kafka_default",
+        "agent_boss_strategy_layout",
+        "agent_boss_text_pack",
+        "text_style_jp",
+        "negative_common"
+      ],
+      "kind": "design_sheet",
+      "purpose": "AI時代の役割を、エージェント・ボスの視点で整理するシートを作成する",
+      "summary": "テクニカル、ヒューマン、コンセプチュアルの3技能と、Vision / Guardrail / Decision の3つの視点をまとめたインフォグラフィック。",
+      "generated_prompt": "Masterpiece, best quality, ultra detailed, premium Japanese editorial infographic, square composition, calm white background, soft pastel blue and lavender accents, thin borders, airy margins, refined human-made finish, strong visual hierarchy, readable Japanese typography, soft shadows, clean linework, no neon, no cyberpunk, no glossy plastic look, no clutter.\n\nCharacter: Kafka as a calm guide on the left side. She is a young petite Japanese woman with long light-blue hair with a soft lavender gradient at the ends, slightly uneven natural hair strands, semi-transparent bangs, silver triangle cat hairpin, blue-purple tired gentle eyes, faint under-eye shadows, soft pale skin, natural asymmetry, quiet but determined expression, wearing an oversized white futuristic jacket over a navy sailor-style inner top.\n\nMain composition: a clean three-section infographic on the right side with simple icons and short Japanese labels.\n1. テクニカルスキル: code, tables, routine technical work can be delegated to AI.\n2. ヒューマンスキル: involving people, emotional connection, trust, and warmth remain human work.\n3. コンセプチュアルスキル: vision, strategy, and difficult tradeoffs remain human work.\n\nLower strip: three small framed labels for the agent-boss mindset.\n- 目的（Vision）を決める\n- ガードレールを敷く\n- 最終的な決断を下す\n\nInclude a small quote box or emphasis line: 「正解のない問いに対して決断を下し、周囲を巻き込むほどの情熱が必要」\n\nOverall mood: calm leadership memo, thoughtful AI-era strategy sheet, quietly motivating, practical, premium Japanese infographic, mobile-readable, balanced negative space, subtle arrows, compact notes, no idol aesthetic, no vtuber sparkle overload, no excessive reaction faces, no crowded panels.",
+      "created_at": "2026-05-22T00:00:00+09:00"
     },
     {
       "id": "gen_20260520_072032",
