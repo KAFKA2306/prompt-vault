@@ -7,3 +7,8 @@ artifacts/twitter-*/
 artifacts/_orphaned/
 scratch/
 .tmp/
+tmp/
+runs/
+reconnect_dry_run.txt
+data/
+
