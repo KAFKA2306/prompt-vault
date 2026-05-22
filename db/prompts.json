@@ -8611,6 +8611,186 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-22T20:11:29+09:00"
+    },
+    {
+      "id": "gen_20260522_202032",
+      "title": "Travel Nordic Lake",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/337_travel_nordic_lake.png",
+          "title": "Travel Nordic Lake"
+        }
+      ],
+      "generated_prompt": "A minimalistic, elegant travel snapshot of a quiet lake in Northern Europe. A person's hands gently holding a warm mug of soup. Soft natural light, subtle shadows, clean and sophisticated aesthetic. No glitter, no excessive lines or wrinkles, gentle lighting, realistic textures.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:20:32+09:00"
+    },
+    {
+      "id": "gen_20260522_202033",
+      "title": "Travel Kyoto Temple",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/338_travel_kyoto_temple.png",
+          "title": "Travel Kyoto Temple"
+        }
+      ],
+      "generated_prompt": "A beautiful and minimalist travel snapshot. In a quiet, old Kyoto temple wooden corridor, a woman viewed from the side, looking at the moss garden in gentle rain. Elegant, serene, muted colors, soft natural shadows, highly refined, cinematic realism.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:20:33+09:00"
+    },
+    {
+      "id": "gen_20260522_202033_2",
+      "title": "Travel Morocco Alley",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/339_travel_morocco_alley.png",
+          "title": "Travel Morocco Alley"
+        }
+      ],
+      "generated_prompt": "A sophisticated travel snapshot. In a quiet blue alley of Chefchaouen, Morocco, a traveler in simple white linen clothes looking at a small cat on the cobbled street. Soft direct morning sun, clean minimalist framing, elegant shadows.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:20:33+09:00"
+    },
+    {
+      "id": "gen_20260522_202033_3",
+      "title": "Travel Iceland Beach",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/340_travel_iceland_beach.png",
+          "title": "Travel Iceland Beach"
+        }
+      ],
+      "generated_prompt": "A serene travel snapshot on a black sand beach in Iceland. A lonely traveler from behind, looking at the cold quiet ocean waves. Muted dark tones, elegant misty atmosphere, soft natural lighting, minimalistic and cinematic.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:20:33+09:00"
+    },
+    {
+      "id": "gen_20260522_202033_4",
+      "title": "Travel Provence Lavender",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/341_travel_provence_lavender.png",
+          "title": "Travel Provence Lavender"
+        }
+      ],
+      "generated_prompt": "A beautiful, elegant travel snapshot in the countryside of Provence, France. A vintage bicycle parked next to a lavender field. A travel hat resting on the bicycle. Late afternoon golden soft light, clean and clean shadow details, highly refined aesthetic.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:20:33+09:00"
+    },
+    {
+      "id": "gen_20260522_202205",
+      "title": "Travel Lisbon Tram",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/342_travel_lisbon_tram.png",
+          "title": "Travel Lisbon Tram"
+        }
+      ],
+      "generated_prompt": "A vintage yellow tram in Lisbon, Portugal, going up a steep cobbled hill. A traveler's hand gently resting on the open window frame. In the soft distant background, the blue sea is visible. Soft pastel color palette, minimalist framing, elegant lighting.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:22:05+09:00"
+    },
+    {
+      "id": "gen_20260522_202205_2",
+      "title": "Travel Swiss Alps",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/343_travel_swiss_alps.png",
+          "title": "Travel Swiss Alps"
+        }
+      ],
+      "generated_prompt": "A beautiful travel snapshot on a cozy wooden balcony of a mountain cabin in Swiss Alps. Hands pouring hot coffee from a vintage metal pot into a ceramic mug. Majestic snowy mountains softly blurred in the background. Calm, serene, natural morning light.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:22:05+09:00"
+    },
+    {
+      "id": "gen_20260522_202205_3",
+      "title": "Travel Tuscany Sketch",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/344_travel_tuscany_sketch.png",
+          "title": "Travel Tuscany Sketch"
+        }
+      ],
+      "generated_prompt": "A serene travel snapshot under a large olive tree on a gentle hill in Tuscany, Italy. A woman in a simple linen dress sketching on a paper notebook. Muted earthy colors, soft afternoon sun casting beautiful olive leaf shadows, minimalistic composition.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:22:05+09:00"
+    },
+    {
+      "id": "gen_20260522_202205_4",
+      "title": "Travel Mongolia Steppe",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/345_travel_mongolia_steppe.png",
+          "title": "Travel Mongolia Steppe"
+        }
+      ],
+      "generated_prompt": "An elegant travel snapshot on the vast steppe of Mongolia. A lone traveler standing next to a wooden fence, looking at horses grazing in the far distance under a grand open sky. Muted green and blue tones, gentle natural lighting, very peaceful.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:22:05+09:00"
+    },
+    {
+      "id": "gen_20260522_202205_5",
+      "title": "Travel Venice Cafe",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/346_travel_venice_cafe.png",
+          "title": "Travel Venice Cafe"
+        }
+      ],
+      "generated_prompt": "A refined travel snapshot at a small wooden table of a quiet canal-side cafe in Venice, Italy. An elderly gentleman in an elegant gray linen jacket quietly reading a vintage book. Soft water reflections on the stone wall behind, gentle shadows.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T20:22:05+09:00"
     }
   ]
 }
