@@ -8917,6 +8917,312 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-22T20:24:44+09:00"
+    },
+    {
+      "id": "gen_20260522_223745",
+      "title": "Kafka Travel Nordic Lake",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/354_kafka_travel_nordic_lake.png",
+          "title": "Kafka Travel Nordic Lake"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl by a misty Nordic lake, diary aesthetic, cold-weather travel outfit.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:45+09:00"
+    },
+    {
+      "id": "gen_20260522_223745_2",
+      "title": "Kafka Travel Kyoto Temple",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/355_kafka_travel_kyoto_temple.png",
+          "title": "Kafka Travel Kyoto Temple"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl at a quiet Kyoto temple corridor in rain, respectful travel outfit.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:45+09:00"
+    },
+    {
+      "id": "gen_20260522_223745_3",
+      "title": "Kafka Travel Morocco Alley",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/356_kafka_travel_morocco_alley.png",
+          "title": "Kafka Travel Morocco Alley"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in Chefchaouen blue alley, warm-weather linen outfit, travel diary.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:45+09:00"
+    },
+    {
+      "id": "gen_20260522_223745_4",
+      "title": "Kafka Travel Iceland Beach",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/357_kafka_travel_iceland_beach.png",
+          "title": "Kafka Travel Iceland Beach"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl on a cold Iceland black sand beach, windproof coat and scarf.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:45+09:00"
+    },
+    {
+      "id": "gen_20260522_223745_5",
+      "title": "Kafka Travel Provence Lavender",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/358_kafka_travel_provence_lavender.png",
+          "title": "Kafka Travel Provence Lavender"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in Provence lavender fields, light linen dress and cardigan.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:45+09:00"
+    },
+    {
+      "id": "gen_20260522_223746",
+      "title": "Kafka Travel Lisbon Tram",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/359_kafka_travel_lisbon_tram.png",
+          "title": "Kafka Travel Lisbon Tram"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl by a Lisbon tram on a hill, city-walk outfit.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223746_2",
+      "title": "Kafka Travel Swiss Alps",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/360_kafka_travel_swiss_alps.png",
+          "title": "Kafka Travel Swiss Alps"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl on a Swiss Alps balcony with coffee, insulated jacket and scarf.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223746_3",
+      "title": "Kafka Travel Tuscany Sketch",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/361_kafka_travel_tuscany_sketch.png",
+          "title": "Kafka Travel Tuscany Sketch"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl sketching under an olive tree in Tuscany, light linen dress.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223746_4",
+      "title": "Kafka Travel Mongolia Steppe",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/362_kafka_travel_mongolia_steppe.png",
+          "title": "Kafka Travel Mongolia Steppe"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl on the Mongolia steppe, practical coat and wind protection.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223746_5",
+      "title": "Kafka Travel Venice Cafe",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/363_kafka_travel_venice_cafe.png",
+          "title": "Kafka Travel Venice Cafe"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl at a quiet Venice canal cafe, elegant city outfit.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223746_6",
+      "title": "Kafka Travel Museum Back",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/364_kafka_travel_museum_back.png",
+          "title": "Kafka Travel Museum Back"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl inside a quiet art museum, dark trench coat, back view.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:46+09:00"
+    },
+    {
+      "id": "gen_20260522_223747",
+      "title": "Kafka Travel Santorini Glass",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/365_kafka_travel_santorini_glass.png",
+          "title": "Kafka Travel Santorini Glass"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl on a white Santorini terrace with a glass of water at sunset.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260522_223747_2",
+      "title": "Kafka Travel Jaipur Palace",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/366_kafka_travel_jaipur_palace.png",
+          "title": "Kafka Travel Jaipur Palace"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in a Jaipur palace corridor, pastel traditional-inspired travel outfit.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260522_223747_3",
+      "title": "Kafka Travel Canada Woods",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/367_kafka_travel_canada_woods.png",
+          "title": "Kafka Travel Canada Woods"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in a Canadian pine forest with an A-frame cabin, warm jacket.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260522_223747_4",
+      "title": "Kafka Travel Jiufen Tea",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/368_kafka_travel_jiufen_tea.png",
+          "title": "Kafka Travel Jiufen Tea"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in Jiufen rain with a hot tea cup and lantern glow.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260522_223747_5",
+      "title": "Kafka Travel Machu Picchu",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/369_kafka_travel_machu_picchu.png",
+          "title": "Kafka Travel Machu Picchu"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl in misty Machu Picchu with alpaca, high-altitude warm layers.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260522_223747_6",
+      "title": "Kafka Travel Tasmania Coast",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/370_kafka_travel_tasmania_coast.png",
+          "title": "Kafka Travel Tasmania Coast"
+        }
+      ],
+      "generated_prompt": "Kafka blue-haired girl on Tasmania coast with windproof layers and misty ocean.",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-22T22:37:47+09:00"
     }
   ]
 }
