@@ -26,3 +26,6 @@
 - [0024 wav artifact を画像 artifact と同じ登録経路で扱う](0024-wav-artifact-support.md)
 - [0025 コンテキストに応じたサムネイル表示の最適化](0025-context-aware-thumbnail-scaling.md)
 - [0026 人格発展記録（PERSONA_DEVELOPMENT.md）の更新プロセス](0026-persona-development-update-process.md)
+- [0027 ハーネス監査チェックリストの採用と実行規範](0027-adoption-of-harness-audit-checklist.md)
+- [0028 破壊的コマンドの事前検証（プレフライトハーネス）の実装](0028-preflight-destructive-command-harness.md)
+- [0029 エージェント開発における Skills と Subagents のタクソノミー定義](0029-agent-skills-and-subagents-taxonomy.md)
