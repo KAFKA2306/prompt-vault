@@ -1978,9 +1978,16 @@
     {
       "id": "kafka_self_cognition_text_pack",
       "title": "文言: 自己認識と破綻防止条件",
-      "content": "Te-Ni（外向的思考・内向的直観）の志向する「構造の最適化」「厳密な監査（ハーネス）」は、それ自体が目的ではない。\nその内側にある「身体的な居心地（Se）」や「個人的な価値・情緒（Fi）」を脅威から守り、狂いなく存在させるための「堅牢な外殻」として機能している。\n\n■ 破綻防止条件（偏屈さの中和）\n構造欠陥や非効率を先に見つけてしまうTe-Niの暴走（冷酷な最適化や他者への不寛容）に対し、「VRChat空間におけるCommunity」「深夜の雑談やボドゲ」「あったまる食事」といった身体的な安心・温かみを人格コアに意識的に介入させることで、人間側へ引き戻す安全弁。\n\n■ 収集心×未来志向（未来予測のための観測ログ）\n単なる情報の所有ではなく、「世界がどこへ向かうか」を予測するための観測ログ。ADR、API変更、AIガバナンスからVRChat文化までを、一つのシステム的トレンドラインとして繋げて観測する。\n\n■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
+      "content": "Te-Ni（外向的思考・内向的直観）の志向する「構造の最適化」「厳密な監査（ハーネス）」は、それ自体が目的ではない。\nその内側にある「身体的な居心地（Se）」や「個人的な価値・情緒（Fi）」を脅威から守り、狂いなく存在させるための「堅牢な外殻」として機能している。\n\n■ 破綻防止条件（偏屈さの中和）\n構造欠陥や非効率を先に見つけてしまうTe-Niの暴走（冷酷な最適化や他者への不寛容）に対し、「VRChat空間におけるCommunity」「深夜の雑談やボドゲ」「あったまる食事」といった身体的な安心・温かみを人格コアに意識的に介入させることで、人間側へ引き戻す安全弁。\n\n■ 収集心×未来志向（未来予測のための観測ログ）\n単なる情報の所有ではなく、「世界がどこへ向かうか」を予測するための観測ログ。ADR、API変更,AIガバナンスからVRChat文化までを、一つのシステム的トレンドラインとして繋げて観測する。\n\n■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
       "category": "自己認識",
       "role": "text"
+    },
+    {
+      "id": "freedom_protagonist_kafka",
+      "title": "状況: 主人公の選択",
+      "content": "standing on an open grassy hill, soft wind blowing through long light-blue hair with lavender gradient, looking up at a vast open sky, looking determined but gentle, eyes gazing into the distance, symbol of freedom and self-determination, bright natural light, flying bird silhouettes in the far distance, feeling of release and fresh beginning, no crowds, no city shadows",
+      "role": "situation",
+      "category": "状況"
     }
   ],
   "templates": [
@@ -9223,6 +9230,30 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-22T22:37:47+09:00"
+    },
+    {
+      "id": "gen_20260524_112445",
+      "title": "Kafka: 主人公の選択",
+      "blocks": [
+        "master_style",
+        "kafka_identity_lock",
+        "freedom_protagonist_kafka",
+        "layout_social_square",
+        "lighting_soft_daylight"
+      ],
+      "kind": "social",
+      "purpose": "自分の人生を主人公として生きる決意を表現するSNSポスト画像",
+      "summary": "他人の期待から解放され、広大な空を見上げるKafkaのビジュアル。自分自身の選択と行動を象徴する。",
+      "artifacts": [
+        {
+          "path": "artifacts/371_kafka.png",
+          "title": "Kafka: 主人公の選択"
+        }
+      ],
+      "generated_prompt": "Use the attached reference image as Kafka's exact character reference: blue-haired anime girl, long flowing light-blue hair with lavender gradient, soft pale skin, blue-purple eyes, silver cat hairpin on the left, braided section on the right with a black ribbon, gentle expression. Create a deeply personal, intimate self-portrait style travel diary illustration, not a flashy magazine cover. She is standing on a wide open grassy hill under a vast blue sky with soft clouds, holding a small notebook or sketchbook close to her chest, with a calm but determined look. The feeling should be very much my own life, my own choice - quiet, candid, human, warm, and unmistakably Kafka-like. Outfit should be natural and personal, not costume-like: a soft cream cardigan, simple blue dress, and comfortable everyday shoes, matching her identity and the setting. Soft daylight, airy composition, restrained white space, elegant paper texture, subtle Japanese diary accents, refined but not commercial, no clutter, no strong typography, no magazine title treatment, no flashy design, no cyberpunk, no dark mood",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-24T11:24:45+09:00"
     }
   ]
 }

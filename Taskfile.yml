@@ -29,12 +29,12 @@ tasks:
   lint:
     desc: Lint the project
     cmds:
-      - uv run ruff check .
+      - uv run ruff check src
 
   format:
     desc: Format the project
     cmds:
-      - uv run ruff format .
+      - uv run ruff format src
 
   verify:
     desc: Verify the pages

@@ -48,7 +48,7 @@ class PromptDB(BaseModel):
 
     @model_validator(mode="before")
     @classmethod
-    def migrate_fields(cls, data: Any) -> Any:
+    def migrate_fields(cls, data: Any) -> Any:  # noqa: ANN401
         if not isinstance(data, dict):
             return data
 
