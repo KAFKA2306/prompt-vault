@@ -9319,6 +9319,26 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-25T18:58:17+09:00"
+    },
+    {
+      "id": "gen_20260525_190319",
+      "title": "AIリスク実例メモ",
+      "blocks": [
+        "agi_xrisk_costs_text_pack"
+      ],
+      "kind": "system",
+      "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を整理する",
+      "summary": "キャリア変更、活動集中、寄付、恋愛回避、prepper 化、長期設計変更などの実コストをまとめる。",
+      "artifacts": [
+        {
+          "path": "artifacts/374_ai.png",
+          "title": "AIリスク実例メモ"
+        }
+      ],
+      "generated_prompt": "AIリスク実例メモ。各項目は証拠タイプを併記し、事実・発言・報道・伝聞を混ぜずに分ける。共通して頻出する実コストは、高収入キャリア放棄、AI safety 専念、離職、長期人生計画変更、人間関係縮小、高額寄付、prepper 化、reputational risk を伴う過激主張の継続。",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-25T19:03:19+09:00"
     }
   ]
 }
