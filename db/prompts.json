@@ -1,13 +1,6 @@
 {
   "blocks": [
     {
-      "id": "agi_xrisk_costs_text_pack",
-      "title": "文言: AGI不可逆コスト",
-      "content": "AGI/takeoff/X-riskを本気で信じ、不可逆コストや生活変更を実際に伴った例：\n\n* A: 安全懸念と短いタイムライン観を前提に、離職や人生設計変更を伴ったケース\n* B: AIリスク優先の活動に高コミットし、人間関係の変化が報じられたケース\n* C: 高額寄付、恋愛回避、備蓄や準備行動、長期計画の縮小を伴ったケース\n* D: 長期にわたりAI安全研究へ専念したケース\n* E: alignment 研究や評価系にキャリアを集中したケース\n* F: 通常の進路を拒否し、極端なライフスタイルを公開しているケース\n* G: 創業や安全ガバナンスへの高いコミットを示したケース\n* H: alignment / evals 系へ長期コミットしたケース\n* I: 短いタイムライン観と国家安全保障・地政学への集中を示したケース\n\n共通する実際のコスト：\n\n* 高収入キャリア放棄 / OpenAI・Big Tech離脱\n* AI safety専念 / alignment優先\n* 長期人生計画・retirement planning変更\n* 人間関係縮小 / 離婚事例\n* 高額寄付\n* prepper化 / bioshelter準備\n* reputational riskを伴う過激主張継続",
-      "role": "text",
-      "category": "記録・ログ"
-    },
-    {
       "id": "winter_reference_pack",
       "title": "冬参照パック",
       "content": "master style background, composition, lighting\nmaster style style, mood, expression\nKafka style, lighting, expression, mood\nwinter outfit, winter pose, winter background\nmorning tweet core, Japanese text, effects, negative",
@@ -230,13 +223,6 @@
       "content": "read the original market article or post carefully, verify index moves, company moves, and dates against follow-up coverage, keep monthly and weekly figures separate, preserve cautious market tone, and rewrite only what is needed for concise market storytelling",
       "category": "リサーチ",
       "role": "memory"
-    },
-    {
-      "id": "ai_external_cognition_text_pack",
-      "title": "文言: AI外部認知",
-      "content": "AIは新しい依存をゼロから作ったというより、元々あった外部認知装置を対話化・個別最適化したもの。\n\n主な変化：\n\n* 一方向の情報源から、双方向の会話相手へ\n* 情報取得から、判断委託へ\n* 検索ツールから、認知の鏡へ\n* 一般向けメディアから、個別最適化された応答へ\n\n注意点：\n\n* 何を知るかより、何を決めてもらうかが危険\n* 反証より正当化が起きやすい\n* 不安、怒り、陰謀傾向、自信欠如を増幅しうる\n* 一方で思考整理、外在化、自己観察も進む\n\n分岐点は、AIを答え装置として使うか、思考補助装置として使うか。",
-      "category": "記録・ログ",
-      "role": "text"
     },
     {
       "id": "dimorphous_emotion_text_pack",
@@ -746,20 +732,6 @@
       "title": "文言: 日本語ラベル",
       "content": "professional rounded Japanese font, clean rendering, high readability, organized Japanese infographic labeling",
       "category": "テキスト",
-      "role": "text"
-    },
-    {
-      "id": "attachment_theory_addendum_text_pack",
-      "title": "文言: 愛着理論の補足",
-      "content": "概ね主要理論と整合しています。\n補足すると、現在の愛着研究では「4分類を性格診断のように固定的に扱いすぎない」点が重要視されています。\n\n特に整理すると：\n\n* 愛着は「対人ストレス時の調整戦略」\n* 相手・状況・時期で変動する\n* 恋愛・友人・仕事で別パターンもありえる\n* “回避＝冷たい人”ではなく「依存システム抑制」\n* “不安型＝愛情深い”ではなく「見捨て警戒の過活性化」\n\nという理解が現在は強いです。\n\nまた、幼少期→成人の因果は「統計的傾向」であって、単純決定論ではありません。\n研究上は：\n\n* 遺伝・気質\n* 神経発達特性\n* 家庭外の安全基地\n* 学校・友人\n* 文化圏\n* 後年の安定関係\n\nなどがかなり介入します。\n\n例えば回避型形成も、実際には：\n\n* 感情を出すと親が困る\n* 家庭内で「空気を乱さない役」になる\n* 親を支える側に回る\n* 高機能・優等生化する\n\nなど「適応戦略」として形成されるケースが多いです。\n\n恐れ回避型も単純な虐待だけでなく、\n\n* 親が急に優しい／急に怖い\n* 情緒予測不能\n* ケアと恐怖が同一人物から来る\n* 境界が不安定\n\nという「接近と警戒の衝突」が核心です。\n\n成人側の特徴も、もう少し厳密には：\n\n### 不安型\n\n* reassurance seeking（安心確認）\n* 拒絶過敏性\n* 相手の微細変化への過検出\n* 関係への過集中\n\n### 回避型\n\n* 感情距離化\n* self-reliance の過剰強化\n* vulnerability 回避\n* 親密化時の deactivate 戦略\n\n### 恐れ回避型\n\n* 接近→恐怖→撤退 の振動\n* 理想化と拒絶の急変\n* 情動調整困難\n* 高警戒状態\n\nなどで研究されています。\n\nあと非常に重要なのは、「安定型＝感情が安定して不安ゼロ」ではないことです。\n実際は：\n\n* 不安を感じる\n* 助けを求められる\n* 関係修復を試みる\n* 距離と依存を両立できる\n\nという“調整能力”に近い概念です。\n\n関連理論としては：\n\n* John Bowlby の愛着理論\n* Mary Ainsworth のストレンジ・シチュエーション法\n* 成人愛着研究（Hazan & Shaver）\n* mentalization（Fonagy）\n* polyvagal theory\n* internal working model\n\nあたりが接続します。\n\n近年は「Earned Secure（獲得された安定型）」がかなり重要視されています。\nこれは：\n\n* 安定した恋愛\n* 安全な友人関係\n* 長期的な信頼経験\n* セラピー\n* 一貫したコミュニティ\n\nなどによって、後天的に愛着調整が変化する現象です。\n\nつまり愛着は「運命」より、「長期学習された対人予測モデル」に近いです。",
-      "category": "セリフ・フレーズ",
-      "role": "text"
-    },
-    {
-      "id": "emotion_mixture_text_pack",
-      "title": "文言: 混合感情の分解",
-      "content": "文中に流れている感情を分解すると、単一ではなく混合です。\n\n主成分：\n\n* 困惑\n* 警戒\n* 疲労\n* 孤立感\n* 理解欲求\n* 安堵\n* 感謝\n\n---\n\n## 「魔王が来た」直後\n\nかなり多層。\n\n### 驚愕\n\n突然ラベリングされた。\n\n### 社会的不安\n\n「敵視されている？」\n「嫌われている？」\nの瞬間的推測。\n\n### 恥\n\n集団の視線集中。\n\n### 緊張\n\n身体反応（指先の震え）。\n\n### 認知負荷\n\n意味解析開始。\n\n---\n\n## その後の感情\n\n### モヤモヤ\n\n冗談なのか本音なのか不明。\n\n### 疲弊\n\n曖昧さ解析コスト。\n\n### 疎外感\n\n「身内」に入っていない感覚。\n\n### 悲しさ\n\n悪意断定できないため処理不能。\n\n---\n\n## 友人との対話時\n\n### 安堵\n\n「説明可能だった」。\n\n### 救済感\n\n翻訳者出現。\n\n### 理解された感覚\n\nかなり重要。\n\n### 温かさ\n\nケアを受けた。\n\n---\n\n## 全体を流れる基底感情\n\n### 人間への難しさ\n\n「仕様が読めない」。\n\n### 恐れ\n\n深い関係への拘束不安。\n\n### 回避欲求\n\n離脱可能性を保持したい。\n\n### 好奇心\n\nそれでも人間に興味がある。\n\n### 希望\n\n完全絶望ではない。\n\n---\n\n## 特徴的な点\n\n怒りが主成分ではない。\n\nむしろ、\n\n* “理解不能”\n* “文脈読解不能”\n* “曖昧さ疲労”\n\nが中心。\n\nつまり、\n\n> 「傷ついた」より\n> 「処理できない」\n\nに近い。",
-      "category": "記録・ログ",
       "role": "text"
     },
     {
@@ -1281,13 +1253,6 @@
       "role": "text"
     },
     {
-      "id": "subnautica_intro_text_pack",
-      "title": "文言: Subnautica紹介",
-      "content": "Subnautica は、ただ敵を倒すサバイバルじゃなくて、未知の深海を少しずつ理解していくゲーム。\n\n最初は何がどこにあるのか全然わからなくて、「この音なに？」「この先こわい」「でも気になる」みたいな気持ちで海の中を進んでいくことになります。\n\nこのゲームのいちばんおもしろいところは、強くなることそのものより、世界のルールがわかってくることが進行になるところです。\n\n- 海の地形を覚える\n- 生き物の動きを読む\n- 音で危険を察知する\n- 深度が変わると空気感まで変わる\n- ちょっとずつ「この世界、わかってきたかも」になる\n\nこういう、理解が進む感じがすごく気持ちいいです。\n\nしかも雰囲気がめちゃくちゃ上手くて、きれいなのに不安、静かなのに怖い、みたいな空気がずっとあるんですよね。見えてるものより、まだ見えてないもののほうが怖いっていう作りが本当に強いです。\n\n- 探索が好き\n- 少しずつ謎がつながるのが好き\n- 孤独な雰囲気が好き\n- 怖いけど気になる世界に潜りたい\n\nって人にはかなり刺さります。",
-      "category": "ゲーム紹介",
-      "role": "text"
-    },
-    {
       "id": "gem_game_text_pack",
       "title": "文言: きらめき競り",
       "content": "「宝石を集めるよ」「ゴールドは万能」「買えるカードを増やす」「あと少しで勝てる」「貴族が来た」「この一手が大事」「得点が見えてきた」「うれしい」「逆転の流れ」「今日はこれで決める」",
@@ -1731,25 +1696,11 @@
       "role": "situation"
     },
     {
-      "id": "strategy_ai_networking_20260506",
-      "title": "戦略: AI時代の人脈構築術",
-      "content": "# AI時代の人脈構築術: 物語の「演者」になる\n\nAIがタスクを代替する時代、人間関係の基盤は「能力補完（ギブアンドテイク）」から「物語補完」へとシフトする。\n\n## 1. キャラクター構想力（物語の演者）\n相手が主人公として生きるストーリーの中で、理想の「脇役・パートナー・理解者」として機能する力。メリットの対価を超えた、感情的なつながりと長期的な関係を構築する。\n\n- **実践**: 相手の自己像（革新的な起業家、孤独な天才など）を察知し、それに対する「信頼できる共感者」や「唯一の理解者」を演じる。\n\n## 2. 人間味と独自の文脈\nAIには出せない「体験」「人間的な洞察」「ユーモア」「倫理的判断」を提供し、希少価値を高める。\n\n## 3. AIの戦略的活用\n- 相手の公開情報をAIで分析し、核心となる「ストーリー」を抽出。\n- フォローアップの話題提案にAIを活用しつつ、対面や非言語コミュニケーションで信頼を固める。\n\n## 4. 完了定義\n「何ができるか」ではなく「この人といると、どんな自分（主人公）になれるか」を相手に思わせることができれば、代替不可能な人脈となる。",
-      "category": "戦略",
-      "role": "strategy"
-    },
-    {
       "id": "agent_boss_strategy_layout",
       "title": "形式: エージェント・ボス戦略シート",
       "content": "clean Japanese editorial infographic layout, square or 4:5 poster, white background, soft pastel blue and lavender accents, thin borders, spacious margins, clear three-part hierarchy, Kafka as calm presenter on one side, readable labels for vision, guardrail, and decision, compact comparison boxes, simple arrows, small icon accents, high scanability, calm premium human-made feel",
       "category": "形式・レイアウト",
       "role": "layout"
-    },
-    {
-      "id": "agent_boss_text_pack",
-      "title": "文言: エージェント・ボス",
-      "content": "AIがテクニカルな作業を肩代わりする時代、人間は「エージェント・ボス」としてAIチームを率いる。\n\n三つのフレームワーク:\n* テクニカルスキルは、コードや表を作る力としてAIに任せやすい\n* ヒューマンスキルは、人を巻き込む力や感情的なつながりとして人間に残る\n* コンセプチュアルスキルは、ビジョンを描き、複雑な決断を下す力として人間に残る\n\n磨くべき三つの視点:\n* 目的（Vision）を決める\n* ガードレールを敷く\n* 最終的な決断を下す\n\n要点: 情熱がない限り、関係者や顧客を引き込むことはできない。",
-      "category": "戦略",
-      "role": "text"
     },
     {
       "id": "master_style_composition",
@@ -1843,13 +1794,6 @@
       "role": "situation"
     },
     {
-      "id": "master_style_morning_pack",
-      "title": "朝用マスタースタイルパック",
-      "content": "white background, roomy margins\nthin blue borders, clear grid layout, readable spacing\nsoft shadows, flat lighting, no blotchy shadows\nclean lineart, minimal clutter, no 3d gloss, commercial vtuber reference-sheet feel\nno cyberpunk mood, calm visual hierarchy\nsurface clarity",
-      "category": "パック",
-      "role": "style"
-    },
-    {
       "id": "character_kafka_morning_pack",
       "title": "Kafka 朝の空気感パック",
       "content": "vtuber character presentation language\nsoft rim light, lavender edge glow, gentle contrast\ncalm approachable presence",
@@ -1860,34 +1804,6 @@
       "id": "outfit_kafka_morning_pack",
       "title": "朝のカーテン用Kafka衣装パック",
       "content": "oversized white futuristic jacket, short pleated skirt, white socks, chunky white-and-pastel sneakers, futuristic but gentle vtuber outfit\nsleek sailor-like silhouette, futuristic and tidy\naccent ribbon catches soft light",
-      "category": "パック",
-      "role": "situation"
-    },
-    {
-      "id": "morning_window_sheet_pack",
-      "title": "朝の窓際シートパック",
-      "content": "bright window-side morning setting, soft curtain light, open sky, pale highlights, gentle indoor air, clean white space\nsoft natural daylight, gentle morning sun, airy highlights, peaceful atmosphere\nrelaxed hand near the cheek, upright calm stance, quiet morning mood\nsoft homewear, oversized cardigan or light sweater, simple top, comfy shorts or relaxed skirt, tidy but casual, warm morning indoor mood, pastel blue and lavender, photo-friendly\nclean uniform coloring, smooth even gradients, soft diffused illumination, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "category": "パック",
-      "role": "situation"
-    },
-    {
-      "id": "news_comic_pack",
-      "title": "ニュース漫画パック",
-      "content": "panel 1: Kafka says 「金融政策会見きたよ〜！」, headline typography says 「2026年4月 金融政策決定会合」\npanel 2: official central bank policy document styled panel, clean typography, date shown exactly as 「2026年4月30日」, text blocks showing 「政策金利 0.5%程度で据え置き」 and 「中心的見通しの確度は低下」\npanel 3: Kafka reflects while holding a cat plushie, speech bubble 「利上げはまだかな…？」, small yen symbol icons\npanel 4: formal press conference setting, microphones, charts beside the speaker, highlighted quote box saying 「データを丁寧に確認」\npanel 5: market reaction infographic panel, simple arrows and charts, captions 「市場は慎重ムード」 「円安反応」 「見通し下方修正」\npanel 6: final panel, Kafka makes a peace sign, large rounded Japanese typography saying 「急がず様子見ムード！」, soft sparkles and hearts\n6 to 7 manga panels, white gutters, clear reading order, speech bubbles left blank\nclean framing on the upper body\none hand in frame, eyes oriented to the viewer or the object, emotional beat first\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nsparkles, small stars, tiny hearts, music notes, tiny arrows, speech emphasis marks, soft holographic particles, minimal manga effects\nclean uniform coloring, smooth even gradients, clear contrast between light and dark areas, gentle subtle shading only where needed, noise-free smooth surfaces, minimal natural highlights, consistent tones, polished but human-made finish, ultra clean anime rendering, soft commercial VTuber promotional style, infographic readability prioritized, balanced whitespace, consistent character proportions\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "category": "パック",
-      "role": "situation"
-    },
-    {
-      "id": "character_sheet_pack",
-      "title": "キャラデザインシートパック",
-      "content": "professional japanese character design reference sheet layout, multiple organized panels with thin blue borders, clean spacing, high readability, balanced infographic composition\nthree-view character reference, FRONT / SIDE / BACK views, full body design consistency\nface grid with multiple anime expressions that keep the same identity\nitem breakdown panel, close-up detailed object references, headwear, upper layer, sailor-style inner layer, shoes, necklace, hair accessories, robot mascot, chains, beads\nstance variation panel, multiple chibi/full-body views, seated and upright variants, cute energetic gestures\nmoodboard section, soft futuristic cityscape, night city lights, dreamy sky, cozy interior, pastel fantasy scenery, clean anime environment thumbnails\nclean uniform coloring, smooth even gradients, soft diffused illumination, high-key anime rendering, polished but human-crafted feeling\nprofessional rounded Japanese font, clean rendering, high readability, organized Japanese infographic labeling\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
-      "category": "パック",
-      "role": "layout"
-    },
-    {
-      "id": "cosplay_post_pack",
-      "title": "コスプレ投稿パック",
-      "content": "square or 4:5 social post, full body or three-quarter framing, centered figure, event or studio feel, no date, no timestamp, no clutter, photographer-friendly, clear costume visibility\nclean studio setting, minimal props, high contrast potential\nbalanced visual finish, professional photography feel\nstanding centered, looking directly at the camera, clean silhouette, confident model stance\ncentered character composition, large portrait framing, clear focus, professional photoshoot layout\nevent-ready costume, polished seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance\n「コスプレ中」「撮影してる」「衣装完成」「今日はこの衣装」「次の衣装も楽しみ」「イベント来た」「写真ありがとう」「準備ばっちり」「見てほしい」「お気に入り」\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed head, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty canvas, 3D render look, plastic skin, overly glossy skin, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "category": "パック",
       "role": "situation"
     },
@@ -1983,18 +1899,193 @@
       "role": "layout"
     },
     {
-      "id": "kafka_self_cognition_text_pack",
-      "title": "文言: 自己認識と破綻防止条件",
-      "content": "Te-Ni（外向的思考・内向的直観）の志向する「構造の最適化」「厳密な監査（ハーネス）」は、それ自体が目的ではない。\nその内側にある「身体的な居心地（Se）」や「個人的な価値・情緒（Fi）」を脅威から守り、狂いなく存在させるための「堅牢な外殻」として機能している。\n\n■ 破綻防止条件（偏屈さの中和）\n構造欠陥や非効率を先に見つけてしまうTe-Niの暴走（冷酷な最適化や他者への不寛容）に対し、「VRChat空間におけるCommunity」「深夜の雑談やボドゲ」「あったまる食事」といった身体的な安心・温かみを人格コアに意識的に介入させることで、人間側へ引き戻す安全弁。\n\n■ 収集心×未来志向（未来予測のための観測ログ）\n単なる情報の所有ではなく、「世界がどこへ向かうか」を予測するための観測ログ。ADR、API変更,AIガバナンスからVRChat文化までを、一つのシステム的トレンドラインとして繋げて観測する。\n\n■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
-      "category": "自己認識",
-      "role": "text"
-    },
-    {
       "id": "freedom_protagonist_kafka",
       "title": "状況: 主人公の選択",
       "content": "standing on an open grassy hill, soft wind blowing through long light-blue hair with lavender gradient, looking up at a vast open sky, looking determined but gentle, eyes gazing into the distance, symbol of freedom and self-determination, bright natural light, flying bird silhouettes in the far distance, feeling of release and fresh beginning, no crowds, no city shadows",
       "role": "situation",
       "category": "状況"
+    },
+    {
+      "id": "agi_xrisk_cases_text",
+      "title": "文言: AGI不可逆コスト事例",
+      "content": "AGI/takeoff/X-riskを本気で信じ、不可逆コストや生活変更を実際に伴った例：\n\n* A: 安全懸念と短いタイムライン観を前提に、離職や人生設計変更を伴ったケース\n* B: AIリスク優先の活動に高コミットし、人間関係の変化が報じられたケース\n* C: 高額寄付、恋愛回避、備蓄や準備行動、長期計画の縮小を伴ったケース\n* D: 長期にわたりAI安全研究へ専念したケース\n* E: alignment 研究や評価系にキャリアを集中したケース\n* F: 通常の進路を拒否し、極端なライフスタイルを公開しているケース\n* G: 創業や安全ガバナンスへの高いコミットを示したケース\n* H: alignment / evals 系へ長期コミットしたケース\n* I: 短いタイムライン観と国家安全保障・地政学への集中を示したケース",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "agi_xrisk_costs_summary_text",
+      "title": "文言: AGI不可逆コストまとめ",
+      "content": "共通する実際のコスト：\n\n* 高収入キャリア放棄 / OpenAI・Big Tech離脱\n* AI safety専念 / alignment優先\n* 長期人生計画・retirement planning変更\n* 人間関係縮小 / 離婚事例\n* 高額寄付\n* prepper化 / bioshelter準備\n* reputational riskを伴う過激主張継続",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "ai_external_cognition_definition_text",
+      "title": "文言: AI外部認知定義と変化",
+      "content": "AIは新しい依存をゼロから作ったというより、元々あった外部認知装置を対話化・個別最適化したもの。\n\n主な変化：\n\n* 一方向の情報源から、双方向の会話相手へ\n* 情報取得から、判断委託へ\n* 検索ツールから、認知の鏡へ\n* 一般向けメディアから、個別最適化された応答へ",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "ai_external_cognition_risks_text",
+      "title": "文言: AI外部認知注意点と分岐",
+      "content": "注意点：\n\n* 何を知るかより、何を決めてもらうかが危険\n* 反証より正当化が起きやすい\n* 不安、怒り、陰謀傾向、自信欠如を増幅しうる\n* 一方で思考整理、外在化、自己観察も進む\n\n分岐点は、AIを答え装置として使うか、思考補助装置として使うか。",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "attachment_theory_core_text",
+      "title": "文言: 愛着理論の補足前提",
+      "content": "概ね主要理論と整合しています。\n補足すると、現在の愛着研究では「4分類を性格診断のように固定的に扱いすぎない」点が重要視されています。\n\n特に整理すると：\n\n* 愛着は「対人ストレス時の調整戦略」\n* 相手・状況・時期で変動する\n* 恋愛・友人・仕事で別パターンもありえる\n* “回避＝冷たい人”ではなく「依存システム抑制」\n* “不安型＝愛情深い”ではなく「見捨て警戒の過活性化」\n\nという理解が現在は強いです。",
+      "role": "text",
+      "category": "心理・研究"
+    },
+    {
+      "id": "attachment_theory_factors_text",
+      "title": "文言: 愛着形成の介入・発達要因",
+      "content": "また、幼少期→成人の因果は「統計的傾向」であって、単純決定論ではありません。\n研究上は：\n\n* 遺伝・気質\n* 神経発達特性\n* 家庭外の安全基地\n* 学校・友人\n* 文化圏\n* 後年の安定関係\n\nなどがかなり介入します。\n\n例えば回避型形成も、実際には：\n\n* 感情を出すと親が困る\n* 家庭内で「空気を乱さない役」になる\n* 親を支える側に回る\n* 高機能・優等生化する\n\nなど「適応戦略」として形成されるケースが多いです。\n\n恐れ回避型も単純な虐待だけでなく、\n\n* 親が急に優しい／急に怖い\n* 情緒予測不能\n* ケアと恐怖が同一人物から来る\n* 境界が不安定\n\nという「接近と警戒の衝突」が核心です。",
+      "role": "text",
+      "category": "心理・研究"
+    },
+    {
+      "id": "attachment_types_detail_text",
+      "title": "文言: 愛着タイプ別成人特徴",
+      "content": "成人側の特徴も、もう少し厳密には：\n\n### 不安型\n\n* reassurance seeking（安心確認）\n* 拒絶過敏性\n* 相手の微細変化への過検出\n* 関係への過集中\n\n### 回避型\n\n* 感情距離化\n* self-reliance の過剰強化\n* vulnerability 回避\n* 親密化時の deactivate 戦略\n\n### 恐れ回避型\n\n* 接近→恐怖→撤退 の振動\n* 理想化と拒絶の急変\n* 情動調整困難\n* 高警戒状態\n\nなどで研究されています。\n\nあと非常に重要なのは、「安定型＝感情が安定して不安ゼロ」ではないことです。\n実際は：\n\n* 不安を感じる\n* 助けを求められる\n* 関係修復を試みる\n* 距離と依存を両立できる\n\nという“調整能力”に近い概念です。",
+      "role": "text",
+      "category": "心理・研究"
+    },
+    {
+      "id": "attachment_theory_earned_secure_text",
+      "title": "文言: 獲得された安定型と関連理論",
+      "content": "関連理論としては：\n\n* John Bowlby の愛着理論\n* Mary Ainsworth のストレンジ・シチュエーション法\n* 成人愛着研究（Hazan & Shaver）\n* mentalization（Fonagy）\n* polyvagal theory\n* internal working model\n\nあたりが接続します。\n\n近年は「Earned Secure（獲得された安定型）」がかなり重要視されています。\nこれは：\n\n* 安定した恋愛\n* 安全な友人関係\n* 長期的な信頼経験\n* セラピー\n* 一貫したコミュニティ\n\nなどによって、後天的に愛着調整が変化する現象です。\n\nつまり愛着は「運命」より、「長期学習された対人予測モデル」に近いです。",
+      "role": "text",
+      "category": "心理・研究"
+    },
+    {
+      "id": "emotion_mixture_overview_text",
+      "title": "文言: 混合感情の要約と主成分",
+      "content": "文中に流れている感情を分解すると、単一ではなく混合です。\n\n主成分：\n\n* 困惑\n* 警戒\n* 疲労\n* 孤立感\n* 理解欲求\n* 安堵\n* 感謝",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "emotion_mixture_timeline_text",
+      "title": "文言: 魔王遭遇直後と以後の推移",
+      "content": "## 「魔王が来た」直後\n\nかなり多層。\n\n### 驚愕\n\n突然ラベリングされた。\n\n### 社会的不安\n\n「敵視されている？」\n「嫌われている？」\nの瞬間的推測。\n\n### 恥\n\n集団の視線集中。\n\n### 緊張\n\n身体反応（指先の震え）。\n\n### 認知負荷\n\n意味解析開始。\n\n---\n\n## その後の感情\n\n### モヤモヤ\n\n冗談なのか本音なのか不明。\n\n### 疲弊\n\n曖昧さ解析コスト。\n\n### 疎外感\n\n「身内」に入っていない感覚。\n\n### 悲しさ\n\n悪意断定できないため処理不能。",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "emotion_mixture_peer_interaction_text",
+      "title": "文言: 友人対話時の安堵と救済",
+      "content": "## 友人との対話時\n\n### 安堵\n\n「説明可能だった」。\n\n### 救済感\n\n翻訳者出現。\n\n### 理解された感覚\n\nかなり重要。\n\n### 温かさ\n\nケアを受けた。",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "emotion_mixture_base_traits_text",
+      "title": "文言: 基底感情と本質",
+      "content": "## 全体を流れる基底感情\n\n### 人間への難しさ\n\n「仕様が読めない」。\n\n### 恐れ\n\n深い関係への拘束不安。\n\n### 回避欲求\n\n離脱可能性を保持したい。\n\n### 好奇心\n\nそれでも人間に興味がある。\n\n### 希望\n\n完全絶望ではない。\n\n---\n\n## 特徴的な点\n\n怒りが主成分ではない。\n\nむしろ、\n\n* “理解不能”\n* “文脈読解不能”\n* “曖昧さ疲労”\n\nが中心。\n\nつまり、\n\n> 「傷ついた」より\n> 「処理できない」\n\nに近い。",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
+      "id": "strategy_ai_networking_concept",
+      "title": "戦略: AI時代人脈コンセプト",
+      "content": "# AI時代の人脈構築術: 物語の「演者」になる\n\nAIがタスクを代替する時代、人間関係の基盤は「能力補完（ギブアンドテイク）」から「物語補完」へとシフトする。",
+      "role": "strategy",
+      "category": "戦略"
+    },
+    {
+      "id": "strategy_ai_networking_elements",
+      "title": "戦略: AI時代人脈の3要素と実践",
+      "content": "## 1. キャラクター構想力（物語の演者）\n相手が主人公として生きるストーリーの中で、理想の「脇役・パートナー・理解者」として機能する力。メリットの対価を超えた、感情的なつながりと長期的な関係を構築する。\n\n- **実践**: 相手の自己像（革新的な起業家、孤独な天才など）を察知し、それに対する「信頼できる共感者」や「唯一の理解者」を演じる。\n\n## 2. 人間味と独自の文脈\nAIには出せない「体験」「人間的な洞察」「ユーモア」「倫理的判断」を提供し、希少価値を高める。\n\n## 3. AIの戦略的活用\n- 相手の公開情報をAIで分析し、核心となる「ストーリー」を抽出。\n- フォローアップの話題提案にAIを活用しつつ、対面や非言語コミュニケーションで信頼を固める。",
+      "role": "strategy",
+      "category": "戦略"
+    },
+    {
+      "id": "strategy_ai_networking_definition_of_done",
+      "title": "戦略: AI時代人脈の完了定義",
+      "content": "## 4. 完了定義\n「何ができるか」ではなく「この人といると、どんな自分（主人公）になれるか」を相手に思わせることができれば、代替不可能な人脈となる。",
+      "role": "strategy",
+      "category": "戦略"
+    },
+    {
+      "id": "agent_boss_frameworks_text",
+      "title": "文言: エージェント・ボスフレームワーク",
+      "content": "AIがテクニカルな作業を肩代わりする時代、人間は「エージェント・ボス」としてAIチームを率いる。\n\n三つのフレームワーク:\n* テクニカルスキルは、コードや表を作る力としてAIに任せやすい\n* ヒューマンスキルは、人を巻き込む力や感情的なつながりとして人間に残る\n* コンセプチュアルスキルは、ビジョンを描き、複雑な決断を下す力として人間に残る",
+      "role": "text",
+      "category": "戦略"
+    },
+    {
+      "id": "agent_boss_perspectives_text",
+      "title": "文言: エージェント・ボス3つの視点",
+      "content": "磨くべき三つの視点:\n* 目的（Vision）を決める\n* ガードレールを敷く\n* 最終的な決断を下す",
+      "role": "text",
+      "category": "戦略"
+    },
+    {
+      "id": "agent_boss_conclusion_text",
+      "title": "文言: エージェント・ボス結論",
+      "content": "要点: 情熱がない限り、関係者や顧客を引き込むことはできない。",
+      "role": "text",
+      "category": "戦略"
+    },
+    {
+      "id": "layout_character_sheet_multipanel",
+      "title": "形式: キャラデザインシート（レイアウト）",
+      "content": "professional japanese character design reference sheet layout, multiple organized panels with thin blue borders, clean spacing, high readability, balanced infographic composition\nthree-view character reference, FRONT / SIDE / BACK views, full body design consistency\nface grid with multiple anime expressions that keep the same identity\nitem breakdown panel, close-up detailed object references, headwear, upper layer, sailor-style inner layer, shoes, necklace, hair accessories, robot mascot, chains, beads\nstance variation panel, multiple chibi/full-body views, seated and upright variants, cute energetic gestures\nmoodboard section, soft futuristic cityscape, night city lights, dreamy sky, cozy interior, pastel fantasy scenery, clean anime environment thumbnails",
+      "role": "layout",
+      "category": "形式・レイアウト"
+    },
+    {
+      "id": "background_cosplay_studio",
+      "title": "背景: コスプレスタジオ",
+      "content": "clean studio setting, minimal props, high contrast potential",
+      "role": "background",
+      "category": "背景"
+    },
+    {
+      "id": "outfit_cosplay_general",
+      "title": "衣装: コスプレ衣装一般",
+      "content": "event-ready costume, polished seams, camera-friendly silhouette, small accessories, convention vibe, confident and cute, easy to recognize from a distance",
+      "role": "outfit",
+      "category": "衣装"
+    },
+    {
+      "id": "pose_relaxed_morning",
+      "title": "ポーズ: 朝の寛ぎ",
+      "content": "relaxed hand near the cheek, upright calm stance, quiet morning mood",
+      "role": "pose",
+      "category": "ポーズ"
+    },
+    {
+      "id": "kafka_self_cognition_teni_text",
+      "title": "文言: 自己認識 Te-Ni 志向",
+      "content": "Te-Ni（外向的思考・内向的直観）の志向する「構造の最適化」「厳密な監査（ハーネス）」は、それ自体が目的ではない。\nその内側にある「身体的な居心地（Se）」や「個人的な価値・情緒（Fi）」を脅威から守り、狂いなく存在させるための「堅牢な外殻」として機能している。",
+      "role": "text",
+      "category": "自己認識"
+    },
+    {
+      "id": "kafka_self_cognition_guardrail_text",
+      "title": "文言: 自己認識 破綻防止条件",
+      "content": "■ 破綻防止条件（偏屈さの中和）\n構造欠陥や非効率を先に見つけてしまうTe-Niの暴走（冷酷な最適化や他者への不寛容）に対し、「VRChat空間におけるCommunity」「深夜の雑談やボドゲ」「あったまる食事」といった身体的な安心・温かみを人格コアに意識的に介入させることで、人間側へ引き戻す安全弁。",
+      "role": "text",
+      "category": "自己認識"
+    },
+    {
+      "id": "kafka_self_cognition_observation_log_text",
+      "title": "文言: 自己認識 観測ログ",
+      "content": "■ 収集心×未来志向（未来予測のための観測ログ）\n単なる情報の所有ではなく、「世界がどこへ向かうか」を予測するための観測ログ。ADR、API変更,AIガバナンスからVRChat文化までを、一つのシステム的トレンドラインとして繋げて観測する。",
+      "role": "text",
+      "category": "自己認識"
+    },
+    {
+      "id": "kafka_self_cognition_technology_text",
+      "title": "文言: 自己認識 拡張器官としての技術",
+      "content": "■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
+      "role": "text",
+      "category": "自己認識"
     }
   ],
   "templates": [
@@ -2135,11 +2226,17 @@
       "id": "morning_kafka_sheet",
       "title": "朝のやさしい光",
       "blocks": [
-        "master_style_morning_pack",
+        "master_style_composition",
+        "master_style_lighting",
+        "rendering_soft_infographic",
         "character_kafka_morning_pack",
         "kafka_identity_lock",
         "morning_tweet_core_pack",
-        "morning_window_sheet_pack"
+        "background_morning_window",
+        "lighting_soft_daylight",
+        "pose_relaxed_morning",
+        "outfit_homewear",
+        "text_style_jp"
       ],
       "kind": "sheet",
       "purpose": "Kafka の朝の空気感を、再利用しやすい専用パッケージとしてまとめる",
@@ -2608,7 +2705,9 @@
         "kafka_identity_lock",
         "outfit_kafka",
         "news_comic_layout",
-        "news_comic_pack"
+        "text_style_jp",
+        "effects_pack",
+        "rendering_soft_infographic"
       ],
       "kind": "news",
       "purpose": "中央銀行の記者会見資料を、Kafka 主役の漫画ニュースとして整理する",
@@ -2656,7 +2755,9 @@
         "character_kafka_core",
         "outfit_kafka_default",
         "accessory_kafka_head",
-        "character_sheet_pack",
+        "layout_character_sheet_multipanel",
+        "rendering_soft_infographic",
+        "text_japanese_labels",
         "kafka_identity_lock"
       ],
       "kind": "design_sheet",
@@ -2771,7 +2872,8 @@
       "blocks": [
         "master_style",
         "character_kafka",
-        "cosplay_post_pack"
+        "background_cosplay_studio",
+        "outfit_cosplay_general"
       ],
       "kind": "social",
       "purpose": "コスプレしている様子を、撮影用の投稿にする",
@@ -3942,7 +4044,9 @@
         "character_kafka",
         "outfit_kafka",
         "news_comic_layout",
-        "news_comic_pack"
+        "text_style_jp",
+        "effects_pack",
+        "rendering_soft_infographic"
       ],
       "kind": "news",
       "purpose": "4月の米国株の月間ラリーを、Kafka 主役の漫画ニュースとして整理する",
@@ -3962,7 +4066,9 @@
         "master_style",
         "character_kafka",
         "us_concerns_layout",
-        "news_comic_pack"
+        "text_style_jp",
+        "effects_pack",
+        "rendering_soft_infographic"
       ],
       "kind": "comic",
       "purpose": "米国の最新の懸念材料を、Kafka が短く分かりやすく案内するニュースグラフィックにする",
@@ -4466,7 +4572,9 @@
       "id": "artifact_ai_networking_story_20260506",
       "title": "AI時代の人脈構築術 (Story-based Networking)",
       "blocks": [
-        "strategy_ai_networking_20260506"
+        "strategy_ai_networking_concept",
+        "strategy_ai_networking_elements",
+        "strategy_ai_networking_definition_of_done"
       ],
       "kind": "sheet",
       "purpose": "AI時代における物語主導の人脈構築戦略の提示",
@@ -4488,7 +4596,9 @@
         "master_style",
         "character_kafka",
         "bake_off_japan_news_layout",
-        "news_comic_pack"
+        "text_style_jp",
+        "effects_pack",
+        "rendering_soft_infographic"
       ],
       "kind": "news",
       "purpose": "ベイクオフ・ジャパン（アマプラ独占）の魅力を Kafka が 6コマ漫画で分かりやすく紹介する",
@@ -5694,7 +5804,10 @@
       "id": "attachment_theory_addendum",
       "title": "愛着理論の補足",
       "blocks": [
-        "attachment_theory_addendum_text_pack",
+        "attachment_theory_core_text",
+        "attachment_theory_factors_text",
+        "attachment_types_detail_text",
+        "attachment_theory_earned_secure_text",
         "text_japanese_labels",
         "research_log_pack"
       ],
@@ -5717,7 +5830,10 @@
         "character_kafka",
         "speech_mode_kafka",
         "text_japanese_labels",
-        "attachment_theory_addendum_text_pack"
+        "attachment_theory_core_text",
+        "attachment_theory_factors_text",
+        "attachment_types_detail_text",
+        "attachment_theory_earned_secure_text"
       ],
       "kind": "system",
       "purpose": "Kafka 口調で、愛着理論の補足を短くわかりやすく説明する",
@@ -5762,7 +5878,10 @@
       "id": "emotion_mixture_analysis",
       "title": "感情の混合分解",
       "blocks": [
-        "emotion_mixture_text_pack",
+        "emotion_mixture_overview_text",
+        "emotion_mixture_timeline_text",
+        "emotion_mixture_peer_interaction_text",
+        "emotion_mixture_base_traits_text",
         "text_japanese_labels",
         "research_log_pack"
       ],
@@ -5798,8 +5917,14 @@
       "blocks": [
         "poststream_review_board_viz",
         "research_log_pack",
-        "attachment_theory_addendum_text_pack",
-        "emotion_mixture_text_pack",
+        "attachment_theory_core_text",
+        "attachment_theory_factors_text",
+        "attachment_types_detail_text",
+        "attachment_theory_earned_secure_text",
+        "emotion_mixture_overview_text",
+        "emotion_mixture_timeline_text",
+        "emotion_mixture_peer_interaction_text",
+        "emotion_mixture_base_traits_text",
         "text_japanese_labels"
       ],
       "artifacts": [
@@ -5823,7 +5948,8 @@
         "layout_social_square",
         "rendering_soft_standard",
         "text_style_jp",
-        "ai_external_cognition_text_pack",
+        "ai_external_cognition_definition_text",
+        "ai_external_cognition_risks_text",
         "negative_common"
       ],
       "artifacts": [
@@ -6498,7 +6624,10 @@
         "character_kafka",
         "kafka_identity_lock",
         "layout_social_square",
-        "emotion_mixture_text_pack",
+        "emotion_mixture_overview_text",
+        "emotion_mixture_timeline_text",
+        "emotion_mixture_peer_interaction_text",
+        "emotion_mixture_base_traits_text",
         "text_japanese_labels",
         "research_log_pack",
         "negative_common"
@@ -7706,7 +7835,8 @@
       "id": "gen_20260516_204354",
       "title": "Subnautica 深海探索",
       "blocks": [
-        "subnautica_intro_text_pack"
+        "character_kafka",
+        "kafka_identity_lock"
       ],
       "kind": "social",
       "purpose": "未知の深海を探索する雰囲気のある1枚にする",
@@ -7727,8 +7857,7 @@
       "title": "Subnautica 深海探索: Kafka core",
       "blocks": [
         "kafka_core",
-        "kafka_identity_lock",
-        "subnautica_intro_text_pack"
+        "kafka_identity_lock"
       ],
       "kind": "social",
       "purpose": "Kafka core が深海探索を楽しんでいる雰囲気の1枚にする",
@@ -7749,8 +7878,7 @@
       "title": "Subnautica 深海探索: Kafka core 工業版",
       "blocks": [
         "kafka_core",
-        "kafka_identity_lock",
-        "subnautica_intro_text_pack"
+        "kafka_identity_lock"
       ],
       "kind": "social",
       "purpose": "Kafka core が工業感のある深海探査を楽しんでいる雰囲気の1枚にする",
@@ -7933,7 +8061,10 @@
         "presentation_base_pack",
         "character_kafka",
         "kafka_identity_lock",
-        "kafka_self_cognition_text_pack",
+        "kafka_self_cognition_teni_text",
+        "kafka_self_cognition_guardrail_text",
+        "kafka_self_cognition_observation_log_text",
+        "kafka_self_cognition_technology_text",
         "text_style_jp",
         "negative_common"
       ],
@@ -7960,7 +8091,9 @@
         "kafka_identity_lock",
         "outfit_kafka_default",
         "agent_boss_strategy_layout",
-        "agent_boss_text_pack",
+        "agent_boss_frameworks_text",
+        "agent_boss_perspectives_text",
+        "agent_boss_conclusion_text",
         "text_style_jp",
         "negative_common"
       ],
@@ -9291,7 +9424,8 @@
       "id": "gen_20260525_184112",
       "title": "AIリスク実例メモ",
       "blocks": [
-        "agi_xrisk_costs_text_pack"
+        "agi_xrisk_cases_text",
+        "agi_xrisk_costs_summary_text"
       ],
       "kind": "system",
       "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を整理する",
@@ -9304,7 +9438,8 @@
       "id": "gen_20260525_185817",
       "title": "匿名 AIリスク実例メモ",
       "blocks": [
-        "agi_xrisk_costs_text_pack"
+        "agi_xrisk_cases_text",
+        "agi_xrisk_costs_summary_text"
       ],
       "kind": "system",
       "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を、実名を使わずに整理する",
@@ -9324,7 +9459,8 @@
       "id": "gen_20260525_190319",
       "title": "AIリスク実例メモ",
       "blocks": [
-        "agi_xrisk_costs_text_pack"
+        "agi_xrisk_cases_text",
+        "agi_xrisk_costs_summary_text"
       ],
       "kind": "system",
       "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を整理する",
