@@ -15,6 +15,7 @@ tasks:
     desc: Validate the database
     cmds:
       - python3 scripts/validate_db.py
+      - python3 scripts/audit_db.py
 
   artifacts-audit:
     desc: Audit artifact connectivity

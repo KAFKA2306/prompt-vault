@@ -156,15 +156,15 @@ def audit_db(strict=False):
 
         headings = re.findall(r"^(?:##|###)\s", b.get("content", ""), re.MULTILINE)
         if len(headings) >= 2 and block_role != "pack":
-            warnings.append(
+            errors.append(
                 f"Block '{bid}' contains multiple headings ({len(headings)}), "
-                "which suggests it should be split or structured as a template."
+                "which violates the single-responsibility rule (must be split or structured as a template)."
             )
 
         if re.search(r"\bpanel\s+\d+\b", content):
-            warnings.append(
+            errors.append(
                 f"Block '{bid}' contains concrete panel markers, "
-                "which suggests it lacks general reusability."
+                "which violates the reusability rule (cannot contain concrete session/panel references)."
             )
 
         list_items = re.findall(r"^\s*[\*\-]\s", b.get("content", ""), re.MULTILINE)

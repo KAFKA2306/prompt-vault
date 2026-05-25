@@ -47,6 +47,7 @@
 - **Role First**: `db/prompts.json` の `Block` には `role` を付ける。`identity`、`style`、`layout`、`outfit`、`pose`、`background`、`lighting`、`text`、`situation`、`pack` を基準に見る。
 - **Source Fidelity**: ボードゲーム系の画像は、元のルール、コンポーネント、既存の見た目を確認してから作る。知っている人が見て違和感を覚える抽象化や、雑な一般化は避ける。
 - **No Inference in Docs / Skills**: `docs/*` と `.agents/skills/*` には、ファイルから直接確認できる事実、明示された決定、実行手順だけを書く。推論、要約の飛躍、未確認の仕様や機能は書かない。
+- **Zero-Trust Block Constraints**: 新しいブロックを追加・生成する際は、具体的セリフや一回限りの日付などの再利用性の低い情報を blocks に含めてはならない。ブロック内に複数の見出し（##以上）、コマ割りマーカー（panel等）、および7行以上の箇条書きリストを含めることを永久に禁止する。追加前には必ず `python3 scripts/audit_db.py` による自動検証をパスさせ、プログラムによる客観的保証（ゼロトラスト）を貫徹せよ。
 
 ---
 
