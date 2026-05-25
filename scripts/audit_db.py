@@ -154,6 +154,26 @@ def audit_db(strict=False):
         ):
             warnings.append(f"Block '{bid}' mixes style with identity naming")
 
+        headings = re.findall(r"^(?:##|###)\s", b.get("content", ""), re.MULTILINE)
+        if len(headings) >= 2 and block_role != "pack":
+            warnings.append(
+                f"Block '{bid}' contains multiple headings ({len(headings)}), "
+                "which suggests it should be split or structured as a template."
+            )
+
+        if re.search(r"\bpanel\s+\d+\b", content):
+            warnings.append(
+                f"Block '{bid}' contains concrete panel markers, "
+                "which suggests it lacks general reusability."
+            )
+
+        list_items = re.findall(r"^\s*[\*\-]\s", b.get("content", ""), re.MULTILINE)
+        if len(list_items) >= 7 and block_role != "pack":
+            warnings.append(
+                f"Block '{bid}' contains too many list items ({len(list_items)}), "
+                "which suggests it might be a packed block that should be split."
+            )
+
     # 4. Pack size check
     for bid, block in block_by_id.items():
         if block.get("role") != "pack":
