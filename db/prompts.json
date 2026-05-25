@@ -1,6 +1,13 @@
 {
   "blocks": [
     {
+      "id": "agi_xrisk_costs_text_pack",
+      "title": "文言: AGI不可逆コスト（匿名）",
+      "content": "AGI/takeoff/X-riskを本気で信じ、不可逆コストや生活変更を実際に伴った匿名例：\n\n* anonymous_a: 安全懸念と短いタイムライン観を前提に、離職や人生設計変更を伴ったケース\n* anonymous_b: AIリスク優先の活動に高コミットし、人間関係の変化が報じられたケース\n* anonymous_c: 高額寄付、恋愛回避、備蓄や準備行動、長期計画の縮小を伴ったケース\n* anonymous_d: 長期にわたりAI安全研究へ専念したケース\n* anonymous_e: alignment 研究や評価系にキャリアを集中したケース\n* anonymous_f: 通常の進路を拒否し、極端なライフスタイルを公開しているケース\n* anonymous_g: 創業や安全ガバナンスへの高いコミットを示したケース\n* anonymous_h: alignment / evals 系へ長期コミットしたケース\n* anonymous_i: 短いタイムライン観と国家安全保障・地政学への集中を示したケース\n\n共通する実際のコスト：\n\n* 高収入キャリア放棄 / OpenAI・Big Tech離脱\n* AI safety専念 / alignment優先\n* 長期人生計画・retirement planning変更\n* 人間関係縮小 / 離婚事例\n* 高額寄付\n* prepper化 / bioshelter準備\n* reputational riskを伴う過激主張継続",
+      "role": "text",
+      "category": "記録・ログ"
+    },
+    {
       "id": "winter_reference_pack",
       "title": "冬参照パック",
       "content": "master style background, composition, lighting\nmaster style style, mood, expression\nKafka style, lighting, expression, mood\nwinter outfit, winter pose, winter background\nmorning tweet core, Japanese text, effects, negative",
@@ -41,6 +48,13 @@
       "content": "white background, pastel blue and lavender, thin blue borders, soft natural daylight, gentle shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, no neon overload, no cyberpunk mood, no 3d gloss, commercial vtuber reference-sheet feel, readable spacing, calm visual hierarchy, human-made finish, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors\nlarge Japanese typography only, rounded font, thick outline, pastel blue or lavender fill, high contrast, 1 to 2 short lines, hiragana and simple kanji only, no broken Japanese, no English text\nlow quality, low resolution, bad anatomy, deformed hands, extra fingers, duplicate limbs, crossed eyes, malformed face, inconsistent hairstyle, oversaturated colors, harsh shadows, cheap anime style, generic AI anime, blurry text, broken Japanese, random English text, watermark, signature, poor layout, messy composition, empty background, 3D render look, plastic skin, overly glossy skin, excessive sparkle, glitter overload, bloom overload, lens flare overload, overglow, extreme lighting, dark horror mood, cyberpunk overload, too much neon, visual clutter, chaotic typography, corporate presentation style, soulless infographic, flat emotion, emotionless character, blotchy skin, uneven rendering, dirty shadows, muddy colors, messy gradients, grainy textures, visual artifacts",
       "role": "pack",
       "category": "パック"
+    },
+    {
+      "id": "presentation_layout_base",
+      "title": "形式: 表示基盤",
+      "content": "white background, pastel blue and lavender, thin blue borders, soft natural daylight, gentle shadows, clear grid layout, roomy margins, clean lineart, minimal clutter, readable spacing, calm visual hierarchy, commercial vtuber reference-sheet feel, human-made finish, clean surfaces, even color distribution, consistent shading, no blotchy shadows, no dirty skin, no muddy colors",
+      "role": "layout",
+      "category": "形式・レイアウト"
     },
     {
       "id": "master_style",
@@ -111,13 +125,6 @@
       "content": "minimal elegant background, pastel lavender-silver gradient, subtle paper texture, thin editorial guide lines, floating translucent decorative shapes, refined fantasy framing, clean negative space, magazine-like composition rhythm, emotionally quiet fantasy visual environment, soft floral motif accents",
       "category": "背景",
       "role": "background"
-    },
-    {
-      "id": "avoid",
-      "title": "禁止",
-      "content": "vtuber aesthetic, idol aesthetic, cyberpunk, neon colors, glossy plastic skin, giant anime eyes, oversaturated colors, dark moody lighting, busy layout, cheap game advertisement feeling, overdesigned sci-fi UI",
-      "category": "禁止",
-      "role": "style"
     },
     {
       "id": "rendering_soft_standard",
@@ -2002,8 +2009,7 @@
         "situation_summer_magazine",
         "outfit_summer_white_dress",
         "layout_magazine_cover",
-        "lighting",
-        "avoid"
+        "lighting"
       ],
       "kind": "sheet",
       "purpose": "透明感のある夏のライフスタイル雑誌の表紙を生成する",
@@ -2106,9 +2112,14 @@
       "id": "moodboard_sheet",
       "title": "Kafka ムードボード",
       "blocks": [
-        "presentation_base_pack",
+        "presentation_layout_base",
         "character_kafka",
-        "moodboard_layout"
+        "moodboard_layout",
+        "background",
+        "visual_hierarchy",
+        "label_design",
+        "analysis_panels",
+        "best_angle"
       ],
       "kind": "sheet",
       "purpose": "雰囲気や方向性をコラージュでまとめる",
@@ -2204,7 +2215,7 @@
       "id": "morning_tweet_index",
       "title": "Kafka おはツイ一覧",
       "blocks": [
-        "presentation_base_pack",
+        "morning_tweet_layout_pack",
         "character_kafka",
         "morning_tweet_core_pack"
       ],
@@ -3294,11 +3305,14 @@
       "id": "persona_poster",
       "title": "Kafka 人格ポスター",
       "blocks": [
-        "presentation_base_pack",
+        "presentation_layout_base",
         "character_kafka",
         "outfit_kafka",
         "persona_poster_viz",
-        "persona_pack"
+        "persona_pack",
+        "personality_analysis_kafka",
+        "visual_hierarchy",
+        "label_design"
       ],
       "kind": "design_sheet",
       "purpose": "Kafka の人格を1枚の画像として見せる",
@@ -3318,11 +3332,14 @@
       "id": "persona_sheet",
       "title": "Kafka 人格固定カード",
       "blocks": [
-        "presentation_base_pack",
+        "presentation_layout_base",
         "character_kafka",
         "persona_sheet_vlog",
         "persona_pack",
-        "speech_mode_kafka"
+        "speech_mode_kafka",
+        "personality_analysis_kafka",
+        "visual_hierarchy",
+        "label_design"
       ],
       "kind": "design_sheet",
       "purpose": "Kafka の人格を配信中に迷わず使える形で固定する",
@@ -6641,7 +6658,6 @@
       "id": "gen_20260511_182233",
       "title": "Kafka Night Game Room",
       "blocks": [
-        "presentation_base_pack",
         "character_kafka",
         "kafka_identity_lock",
         "gaming_post_layout",
@@ -6689,7 +6705,6 @@
       "id": "gen_20260511_183132",
       "title": "Kafka Night Game Room UI",
       "blocks": [
-        "presentation_base_pack",
         "character_kafka",
         "kafka_identity_lock",
         "gaming_post_layout",
@@ -6742,7 +6757,6 @@
       "blocks": [
         "irodori_tts_text_pack",
         "voice_caption_base_pack",
-        "voice_generation_tips_pack",
         "voice_caption_longform_rules_pack",
         "voice_control_pack",
         "voice_ethics_text",
@@ -9254,6 +9268,37 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-24T11:24:45+09:00"
+    },
+    {
+      "id": "gen_20260525_183445",
+      "title": "移動中",
+      "blocks": [],
+      "kind": "generated",
+      "purpose": "",
+      "summary": "",
+      "artifacts": [
+        {
+          "path": "artifacts/372_jp_1db8e0ae.png",
+          "title": "移動中"
+        }
+      ],
+      "generated_prompt": "masterpiece, best quality, cinematic fantasy anime sticker, emotionally grounded fantasy atmosphere, floating kingdom above endless clouds, soft sunrise lighting, quiet emotional futurism, elegant cloudscape, restrained fantasy aesthetic, soft painterly rendering, non-glossy anime rendering, subtle film grain, atmospheric perspective, clean silhouette readability, small-size Discord sticker readability, thick white sticker outline, simplified detail density, clear focal hierarchy, no generic AI anime look\n\ndual composition, two dragon riders traveling together through the sky\n\nLEFT:\nelegant ethereal fantasy woman, very long silver-lilac hair with pale lavender gradient, pale violet eyes, calm emotionally restrained expression, white-lavender royal fantasy dress, graceful posture, sacred fantasy atmosphere\n\nriding a majestic sapphire-blue dragon,\nancient elegant dragon,\ncalm intelligent eyes,\nsleek crystalline horns,\ncool blue-violet palette\n\nRIGHT:\nyoung petite Japanese woman,\nlong light-blue hair with soft lavender gradient ends,\nsemi-transparent bangs,\nsilver triangle cat hairpin,\nsmall braid with black ribbon,\nblue-purple slightly tired gentle eyes,\nquiet human warmth,\nsmall subtle smile,\nemotionally restrained expression\n\nriding a crimson-red dragon,\nslightly practical and lively dragon,\nwarm sunset reflections,\nquiet travel atmosphere\n\nSCENE:\ntraveling above endless clouds,\ndistant floating kingdoms,\nlarge empty sky areas,\nconsistent left-to-right wind flow,\nhair, fabric, clouds synchronized with wind,\nstrong near/mid/far depth separation,\nleft side cooler,\nright side warmer,\npeaceful “moving together” atmosphere\n\nlarge Japanese text:\n「移動中」\n\navoid:\nidol aesthetic,\nvtuber aesthetic,\nplastic skin,\nhyper saturation,\nmobile game splash art,\nsame-face syndrome,\ntiny unreadable details,\nvisual clutter,\novercrowded composition,\nexcessive dragon scale detail,\nneon fantasy,\nsymmetrical AI face",
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-25T18:34:45+09:00"
+    },
+    {
+      "id": "gen_20260525_184112",
+      "title": "匿名 AIリスク実例メモ",
+      "blocks": [
+        "agi_xrisk_costs_text_pack"
+      ],
+      "kind": "system",
+      "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を、実名を使わずに整理する",
+      "summary": "匿名ラベルで、キャリア変更、活動集中、寄付、恋愛回避、prepper 化、長期設計変更などの実コストをまとめる。",
+      "artifacts": [],
+      "generated_prompt": "完全匿名のAIリスク実例メモ。実名は使わず、匿名ラベルで整理する。各項目は証拠タイプを併記し、事実・発言・報道・伝聞を混ぜずに分ける。共通して頻出する実コストは、高収入キャリア放棄、AI safety 専念、離職、長期人生計画変更、人間関係縮小、高額寄付、prepper 化、reputational risk を伴う過激主張の継続。",
+      "created_at": "2026-05-25T18:41:12+09:00"
     }
   ]
 }
