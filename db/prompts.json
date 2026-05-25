@@ -2,8 +2,8 @@
   "blocks": [
     {
       "id": "agi_xrisk_costs_text_pack",
-      "title": "文言: AGI不可逆コスト（匿名）",
-      "content": "AGI/takeoff/X-riskを本気で信じ、不可逆コストや生活変更を実際に伴った匿名例：\n\n* anonymous_a: 安全懸念と短いタイムライン観を前提に、離職や人生設計変更を伴ったケース\n* anonymous_b: AIリスク優先の活動に高コミットし、人間関係の変化が報じられたケース\n* anonymous_c: 高額寄付、恋愛回避、備蓄や準備行動、長期計画の縮小を伴ったケース\n* anonymous_d: 長期にわたりAI安全研究へ専念したケース\n* anonymous_e: alignment 研究や評価系にキャリアを集中したケース\n* anonymous_f: 通常の進路を拒否し、極端なライフスタイルを公開しているケース\n* anonymous_g: 創業や安全ガバナンスへの高いコミットを示したケース\n* anonymous_h: alignment / evals 系へ長期コミットしたケース\n* anonymous_i: 短いタイムライン観と国家安全保障・地政学への集中を示したケース\n\n共通する実際のコスト：\n\n* 高収入キャリア放棄 / OpenAI・Big Tech離脱\n* AI safety専念 / alignment優先\n* 長期人生計画・retirement planning変更\n* 人間関係縮小 / 離婚事例\n* 高額寄付\n* prepper化 / bioshelter準備\n* reputational riskを伴う過激主張継続",
+      "title": "文言: AGI不可逆コスト",
+      "content": "AGI/takeoff/X-riskを本気で信じ、不可逆コストや生活変更を実際に伴った例：\n\n* A: 安全懸念と短いタイムライン観を前提に、離職や人生設計変更を伴ったケース\n* B: AIリスク優先の活動に高コミットし、人間関係の変化が報じられたケース\n* C: 高額寄付、恋愛回避、備蓄や準備行動、長期計画の縮小を伴ったケース\n* D: 長期にわたりAI安全研究へ専念したケース\n* E: alignment 研究や評価系にキャリアを集中したケース\n* F: 通常の進路を拒否し、極端なライフスタイルを公開しているケース\n* G: 創業や安全ガバナンスへの高いコミットを示したケース\n* H: alignment / evals 系へ長期コミットしたケース\n* I: 短いタイムライン観と国家安全保障・地政学への集中を示したケース\n\n共通する実際のコスト：\n\n* 高収入キャリア放棄 / OpenAI・Big Tech離脱\n* AI safety専念 / alignment優先\n* 長期人生計画・retirement planning変更\n* 人間関係縮小 / 離婚事例\n* 高額寄付\n* prepper化 / bioshelter準備\n* reputational riskを伴う過激主張継続",
       "role": "text",
       "category": "記録・ログ"
     },
@@ -9289,6 +9289,19 @@
     },
     {
       "id": "gen_20260525_184112",
+      "title": "AIリスク実例メモ",
+      "blocks": [
+        "agi_xrisk_costs_text_pack"
+      ],
+      "kind": "system",
+      "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を整理する",
+      "summary": "キャリア変更、活動集中、寄付、恋愛回避、prepper 化、長期設計変更などの実コストをまとめる。",
+      "artifacts": [],
+      "generated_prompt": "AIリスク実例メモ。各項目は証拠タイプを併記し、事実・発言・報道・伝聞を混ぜずに分ける。共通して頻出する実コストは、高収入キャリア放棄、AI safety 専念、離職、長期人生計画変更、人間関係縮小、高額寄付、prepper 化、reputational risk を伴う過激主張の継続。",
+      "created_at": "2026-05-25T18:41:12+09:00"
+    },
+    {
+      "id": "gen_20260525_185817",
       "title": "匿名 AIリスク実例メモ",
       "blocks": [
         "agi_xrisk_costs_text_pack"
@@ -9296,9 +9309,16 @@
       "kind": "system",
       "purpose": "AGI / takeoff / X-risk を本気で信じた結果として語られる実例を、実名を使わずに整理する",
       "summary": "匿名ラベルで、キャリア変更、活動集中、寄付、恋愛回避、prepper 化、長期設計変更などの実コストをまとめる。",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "path": "artifacts/373_ai.png",
+          "title": "匿名 AIリスク実例メモ"
+        }
+      ],
       "generated_prompt": "完全匿名のAIリスク実例メモ。実名は使わず、匿名ラベルで整理する。各項目は証拠タイプを併記し、事実・発言・報道・伝聞を混ぜずに分ける。共通して頻出する実コストは、高収入キャリア放棄、AI safety 専念、離職、長期人生計画変更、人間関係縮小、高額寄付、prepper 化、reputational risk を伴う過激主張の継続。",
-      "created_at": "2026-05-25T18:41:12+09:00"
+      "voice_caption": null,
+      "voice_script": null,
+      "created_at": "2026-05-25T18:58:17+09:00"
     }
   ]
 }
