@@ -12,7 +12,6 @@ on:
         required: false
         default: "true"
   schedule:
-    # 22:00 UTC Friday == 07:00 JST Saturday.
     - cron: "0 22 * * 5"
 
 permissions:
@@ -36,7 +35,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Verify local agy runtime
+      - name: Verify local runtime
         run: |
           which agy
           timeout 60 agy --version
@@ -50,9 +49,9 @@ jobs:
       - name: Run Weekly Power & Macro Intelligence
         run: |
           if [ -n "${{ inputs.week_end }}" ]; then
-            bash scripts/run_weekly_power_macro_intelligence.sh --week-end "${{ inputs.week_end }}"
+            bash scripts/run_weekly_macro_intelligence.sh --week-end "${{ inputs.week_end }}"
           else
-            bash scripts/run_weekly_power_macro_intelligence.sh
+            bash scripts/run_weekly_macro_intelligence.sh
           fi
 
       - name: Commit generated report artifacts
