@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   weekly-power-macro-intelligence:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: [self-hosted, Linux, X64]
     timeout-minutes: 90
     env:
       WEEKLY_POWER_MACRO_REPO: ${{ github.repository }}
