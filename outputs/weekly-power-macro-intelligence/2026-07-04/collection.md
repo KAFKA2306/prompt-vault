@@ -1,119 +1,163 @@
 # Weekly Power & Macro Intelligence Collection 2026-07-04
 
 - period: 2026-06-28 to 2026-07-04
-- items: 62
+- items: 94
 - note: 本文未取得またはmetadata_onlyの項目は一覧ページ上のメタデータだけを使用。
 
 ## L0_market_price
 
-### Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team
+### Warsh's Sintra Serenade To The Bond Vigilantes
 - source: Yardeni Research Morning Briefings
 - source_class: market_expectation
-- date: 2026-07-04
+- date: 2026-07-02
+- observed_date: 2026-07-04
 - url: https://www.yardeniquicktakes.com/
 - region: us
 - asset_linkage: equity, rates, ai_capex
 - kafka_use: 
-- body_status: no_in_range_date_found
-- snippet: Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team Skip to content
-Home
-Posts
-About
-Our Charts
-Support
-Sign In
-Subscribe
-Home
-Posts
-About
-Our Charts
-Support
-Sign In
-Subscribe
-Daily Market Insights From Dr. Ed Yardeni
-Expert analysis on the economic forces shaping the market, delivered to your inbox every morning.
-Unlock QuickTakes
-Join 24,000+ investors who rely on QuickTakes
-As Featured In
-What Our Readers Say
-Previous Next
-Jennifer M.
-Timely, relevant, and always data-driven. I check QuickTakes before I check anything else.
-Daniel Z.
-QuickTakes is my go-to for level-headed, fact-based market analysis. Ed cuts through the noise, presenting timely updates with charts that make complex information simple and actionable.
-Robert K.
-I've been following Dr. Ed my whole career from way back in the Prudential Bache days. QuickTakes is the most practical thing he's ever create
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jul 2, 2026 6 min read / The United States of America has thrived for 250 years. There have been setbacks along the way. But they were overcome. The Declaration of Independence on July 4, 1776 set the stage for Americans to prosper by declaring: "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty / Ed Yardeni / Paid / Warsh's Sintra Serenade To The Bond Vigilantes
 
-### FactSet Insight - Commentary and research from our desk to yours | Earnings
+### S&P 500 Earnings Season Preview: Q2 2026
 - source: FactSet Insight Earnings
 - source_class: earnings
-- date: 2026-07-04
+- date: 2026-07-02
+- observed_date: 2026-07-04
 - url: https://insight.factset.com/topic/earnings
 - region: us
 - asset_linkage: equity, ai_capex
 - kafka_use: 
-- body_status: no_in_range_date_found
-- snippet: FactSet Insight - Commentary and research from our desk to yours | Earnings
-FactSet.com
-Support
-Developer Portal
-Login
-Back
-Companies & Markets
-Data Science & AI
-Earnings
-Economics
-More Topics
-Risk, Performance & Reporting
-Energy
-Wealth Management
-FactSet Insight Podcast
-Technology
-FactSet.com
-Subscribe
-Quick Links
-CRM Solutions
-Advisor Dashboard
-Support Downloads
-Sustainability
-FactSet Workstation
-FactSet Insight
-Join your peers in reading the latest perspectives and insights from FactSet experts across topics that matter to you.
-S&P 500 Earnings Season Preview: Q2 2026
-July 2, 2026
-FactSet S&P 500 earnings report: Heading into the earnings season, analysts and companies are more optimistic than normal in...
-By John Butters | Earnings
-Read more
-Blog Posts
-Companies and Markets
-Coronavirus
-Data Science and AI
-Earnings
-Economics
-Energy
-Sustainable Investment
-Risk, Performance, and Reporti
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 2, 2026 / S&P 500 Earnings Season Preview: Q2 2026 / FactSet S&P 500 earnings report: Heading into the earnings season, analysts and companies are more optimistic than normal in... / By John Butters | Earnings / Read more
+
+### FactSet S&P 500 earnings report: Heading into the earnings season, analysts and companies are more optimistic than normal in...
+- source: FactSet Insight Earnings
+- source_class: earnings
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://insight.factset.com/topic/earnings
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 2, 2026 / FactSet S&P 500 earnings report: Heading into the earnings season, analysts and companies are more optimistic than normal in... / By John Butters | Earnings / Read more / Blog Posts / Companies and Markets / Coronavirus / Data Science and AI / Earnings / Economics / Energy / Sustainable Investment
+
+### WEEKLY WEBCAST: Update On The ‘G-Shaped’ Versus ‘K-Shaped’ Economy Debate
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jul 1, 2026 4 min read paid / The temperature was 81 degrees in Sintra, Portugal, today. Tomorrow it will be 101 degrees. Fed Chair Kevin Warsh spoke on a panel in Sintra today. He was cool as a cucumber. This was his second public appearance since his first press conference as the new Fed chair on June 17. Back then, he was surprisingly hawkish, stressing that he and his colleagues on the FOMC are committed to restoring / Ed Yardeni / Elias Griepentrog / Paid / WEEKLY WEBCAST: Update On The ‘G-Shaped’ Versus ‘K-Shaped’ Economy Debate
+
+### A Well-Balanced US Labor Market
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jul 1, 2026 1 min read paid / Consumer spending has been remarkably resilient, growing for the past two years faster than consumers’ disposable incomes have and depressing their saving rate. Current trends point to a negative saving rate by 2030. But that’s nothing to worry about, explain Ed and Elias. What we have isn’t a “K-shaped” economy, with the affluent spending briskly and everyone else struggling to make ends meet, as many assume. It’ / Ed Yardeni / Paid / A Well-Balanced US Labor Market
+
+### Warsh Taking Hawkish Path to Lower Interest Rates
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jun 30, 2026 4 min read paid / The stock prices of ADP, Paychex, and ManpowerGroup sold off sharply last year as hiring cooled. Employers froze their headcounts as they assessed the impacts of Trump's tariffs and of AI technologies on their businesses (chart). On May 8, we wrote that the labor market was showing early signs of improvement and that employment-related stocks may have bottomed. So far, so good. / Employers now seem to have / Ed Yardeni / Elias Griepentrog / Paid / Warsh Taking Hawkish Path to Lower Interest Rates
+
+### GLOBAL MARKET CALL: War & Peace
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jun 29, 2026 4 min read paid / Fed Chair Kevin Warsh has often said that the members of the Federal Open Mouth Committee should talk publicly less often. He wants the Fed to follow the financial markets rather than the other way around. Yet, two weeks after his first press conference as Fed chair on Wednesday, June 17, he is scheduled to appear on a policy panel on Wednesday, July 1, at the annual ECB Forum on / Ed Yardeni / Elias Griepentrog / Paid / GLOBAL MARKET CALL: War & Peace
+
+### US MARKET CALL: AI Fatigue Weighs On The 'Lag-7'
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-06-28
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jun 28, 2026 4 min read / The S&P 500 closed Friday at 7,354.02, down 2.0% on the week, while the Nasdaq fell 4.5%. Apple and Microsoft raised their consumer product prices on Thursday, citing memory and storage chip costs that have more than doubled since last fall and are expected to double again by late 2027. The driver is demand for DRAM and NAND from AI data centers. Memory chip / Ed Yardeni / Toby Hearst / Public / US MARKET CALL: AI Fatigue Weighs On The 'Lag-7'
+
+### ECONOMIC WEEK AHEAD: June 29 - July 3
+- source: Yardeni Research Morning Briefings
+- source_class: market_expectation
+- date: 2026-06-28
+- observed_date: 2026-07-04
+- url: https://www.yardeniquicktakes.com/
+- region: us
+- asset_linkage: equity, rates, ai_capex
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jun 28, 2026 4 min read paid / During the Napoleonic Wars, British financier Nathan Mayer Rothschild allegedly said: "Buy on the sound of cannons, sell on the sound of trumpets." This has become a legendary contrarian investing maxim. It suggests you should buy stocks when war or panic causes markets to plummet ("cannons"), and sell to lock in profits when peace returns and market euphoria sets in ("trumpets"). / The maxim seems / Ed Yardeni / Toby Hearst / Public / ECONOMIC WEEK AHEAD: June 29 - July 3
 
 ### FactSet Earnings Insight
 - source: FactSet Earnings Insight
 - source_class: earnings
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight.pdf
 - region: us
 - asset_linkage: equity, ai_capex
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### CME FedWatch Tool
 - source: CME FedWatch Tool
 - source_class: market_expectation
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
 - region: us
 - asset_linkage: rates, fx, equity
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: FETCH_ERROR_TimeoutError
 
 ## L1_central_bank
@@ -121,12 +165,15 @@ Risk, Performance, and Reporti
 ### 金融政策決定会合の運営  : 日本銀行 Bank of Japan
 - source: 日本銀行 金融政策決定会合
 - source_class: central_bank
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.boj.or.jp/mopo/mpmsche_minu/index.htm
 - region: japan
 - asset_linkage: rates, fx, equity
 - kafka_use: jgb_yield_regime, yen_regime, nikkei_valuation, bank_stocks, softbank_nav_discount
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 金融政策決定会合の運営 : 日本銀行 Bank of Japan
 このページの本文へ移動
 日本語
@@ -215,12 +262,15 @@ English
 ### 経済・物価情勢の展望（展望レポート）  : 日本銀行 Bank of Japan
 - source: 日本銀行 経済・物価情勢の展望
 - source_class: central_bank
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.boj.or.jp/mopo/outlook/index.htm
 - region: japan
 - asset_linkage: rates, fx, equity
 - kafka_use: jgb_yield_regime, yen_regime, nikkei_valuation, softbank_nav_discount
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 経済・物価情勢の展望（展望レポート） : 日本銀行 Bank of Japan
 このページの本文へ移動
 日本語
@@ -309,65 +359,29 @@ English
 ### 日本銀行 公表予定
 - source: 日本銀行 公表予定
 - source_class: central_bank
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.boj.or.jp/research/rs_all/rel/index.htm
 - region: japan
 - asset_linkage: rates, fx
 - kafka_use: jgb_yield_regime, yen_regime, event_calendar
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
-
-### Federal Reserve Board - News & Events
-- source: Federal Reserve News & Events
-- source_class: central_bank
-- date: 2026-07-04
-- url: https://www.federalreserve.gov/newsevents.htm
-- region: us
-- asset_linkage: rates, fx, equity, credit
-- kafka_use: us_equity_discount_rate, nasdaq_swing_regime, ai_stock_duration_risk, usd_jpy, global_liquidity
-- body_status: no_in_range_date_found
-- snippet: ﻿ Federal Reserve Board - News & Events Skip to main content
-An official website of the United States Government
-Here's how you know
-Official websites use .gov
-A .gov website belongs to an official government organization in the United States.
-Secure .gov websites use HTTPS
-A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
-Back to Home Board of Governors of the Federal Reserve System
-Stay Connected
-Federal Reserve Facebook Page
-Federal Reserve Instagram Page
-Federal Reserve YouTube Page
-Federal Reserve Flickr Page
-Federal Reserve LinkedIn Page
-Federal Reserve Threads Page
-Federal Reserve X Page
-Federal Reserve Bluesky Page
-Subscribe to RSS
-Subscribe to Email
-Recent Postings
-Calendar
-Publications
-Site Map
-A-Z index
-Careers
-FAQs
-Videos
-Contact
-Search Submit Search Button
-Advanced
-Toggle Dropdown Menu
-Boa
 
 ### The Fed - Meeting calendars and information
 - source: Federal Reserve FOMC
 - source_class: central_bank
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 - region: us
 - asset_linkage: rates, fx, equity, credit
 - kafka_use: us_equity_discount_rate, nasdaq_swing_regime, usd_jpy, global_liquidity
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: ﻿ The Fed - Meeting calendars and information Skip to main content
 An official website of the United States Government
 Here's how you know
@@ -400,28 +414,230 @@ Search Submit Search Button
 Advanced
 Toggle Dropdown Me
 
+### Board of Governors of the Federal Reserve System
+- source: Federal Reserve News & Events
+- source_class: central_bank
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://www.federalreserve.gov/newsevents.htm
+- region: us
+- asset_linkage: rates, fx, equity, credit
+- kafka_use: us_equity_discount_rate, nasdaq_swing_regime, ai_stock_duration_risk, usd_jpy, global_liquidity
+- body_status: weak_title
+- evidence_level: weak_title
+- is_current_evidence: False
+- snippet: July 2, 2026 / Back to Top / Board of Governors of the Federal Reserve System / About the Fed / News & Events / Monetary Policy / Supervision & Regulation / Financial Stability / Payment Systems / Economic Research / Data / Consumers & Communities
+
 ## L2_state_policy
+
+### FREEDOM250 Countdown to America's 250th Anniversary July 4, 2026
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-04
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: FREEDOM250 Countdown to America's 250th Anniversary July 4, 2026 / Learn More / MENU MENU / U.S. Department of the Treasury / About Treasury / Enter Search Term(s): / Advanced Search / About Treasury / General Information / Role of the Treasury / Officials / Organizational Chart
+
+### Declaration of Emergency and Authorization for Temporary Duty Free Importation of Phosphate Fertilizer Morocco
+- source: White House Presidential Actions
+- source_class: us_executive_power
+- date: 2026-07-03
+- observed_date: 2026-07-04
+- url: https://www.whitehouse.gov/presidential-actions/
+- region: us
+- asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+- kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 3, 2026 / Declaration of Emergency and Authorization for Temporary Duty Free Importation of Phosphate Fertilizer Morocco / Presidential Actions , Proclamations
+
+### Treasury and IRS to Accept Philanthropic Stock Contributions for Trump Accounts
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 2, 2026 / Treasury and IRS to Accept Philanthropic Stock Contributions for Trump Accounts
+
+### A Look at the First-Year Results of the Working Families Tax Cuts
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 2, 2026 / A Look at the First-Year Results of the Working Families Tax Cuts
+
+### Treasury Sanctions Brazilian Criminal Network Exploiting U.S. Financial System to Launder Drug Proceeds
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 1, 2026 / Treasury Sanctions Brazilian Criminal Network Exploiting U.S. Financial System to Launder Drug Proceeds
+
+### Treasury Opens the New Designation Cycle for Opportunity Zones
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 1, 2026 / Treasury Opens the New Designation Cycle for Opportunity Zones
+
+### Treasury Announces Investment Lineup for Trump Accounts
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 1, 2026 / Treasury Announces Investment Lineup for Trump Accounts / View All Press Releases / Remarks and Statements
+
+### URIF Holds Fourth Board Meeting at Ukraine Recovery Conference
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / URIF Holds Fourth Board Meeting at Ukraine Recovery Conference
+
+### Treasury Targets Criminal Facilitators Behind CJNG’s Cross‑Border Fuel Smuggling Schemes
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / Treasury Targets Criminal Facilitators Behind CJNG’s Cross‑Border Fuel Smuggling Schemes
+
+### Terrorist Financing Targeting Center Jointly Designates Hizballah Financial Institutions and Senior Officials
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / Terrorist Financing Targeting Center Jointly Designates Hizballah Financial Institutions and Senior Officials
+
+### READOUT: Financial Action Task Force’s June 2026 Working Group and Plenary
+- source: U.S. Treasury Press Releases
+- source_class: us_executive_power
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://home.treasury.gov/news/press-releases
+- region: us
+- asset_linkage: rates, fx, credit
+- kafka_use: long_rate_risk, global_liquidity, sanctions
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 Readouts / READOUT: Financial Action Task Force’s June 2026 Working Group and Plenary
+
+### Lowering the Cost of Living by Promoting the Freedom to Fix
+- source: White House Presidential Actions
+- source_class: us_executive_power
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.whitehouse.gov/presidential-actions/
+- region: us
+- asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+- kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 29, 2026 / Lowering the Cost of Living by Promoting the Freedom to Fix / Presidential Actions , Presidential Memoranda
+
+### Advancing Regenerative Agriculture and Strengthening American Farm Resilience
+- source: White House Presidential Actions
+- source_class: us_executive_power
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.whitehouse.gov/presidential-actions/
+- region: us
+- asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+- kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 29, 2026 / Advancing Regenerative Agriculture and Strengthening American Farm Resilience / Presidential Actions , Executive Orders
 
 ### 首相官邸 経済財政諮問会議
 - source: 首相官邸 経済財政諮問会議
 - source_class: fiscal_state
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.kantei.go.jp/jp/singi/keizaisaisei/
 - region: japan
 - asset_linkage: equity, rates, manufacturing, ai_capex
 - kafka_use: japan_reflation, semiconductor_subsidy_theme, domestic_ai_policy
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 入札カレンダー : 財務省
 - source: 財務省 国債入札カレンダー
 - source_class: fiscal_state
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.mof.go.jp/jgbs/auction/calendar/index.htm
 - region: japan
 - asset_linkage: rates, fx
 - kafka_use: jgb_supply_pressure, yen_regime, bank_stocks
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: ﻿ 入札カレンダー : 財務省
 このページの本文へ移動
 English
@@ -519,23 +735,29 @@ English
 ### 経産省 AI・半導体産業基盤強化フレーム
 - source: 経産省 AI・半導体産業基盤強化フレーム
 - source_class: fiscal_state
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.meti.go.jp/policy/mono_info_service/ai_semiconductor_frame/ai_semiconductor_frame.html
 - region: japan
 - asset_linkage: ai_capex, manufacturing, equity
 - kafka_use: semiconductor_subsidy_theme, manufacturing_capex, domestic_ai_policy
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### 月例経済報告 - 内閣府
 - source: 内閣府 月例経済報告
 - source_class: fiscal_state
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www5.cao.go.jp/keizai3/getsurei/getsurei-index.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
 - kafka_use: japan_reflation, manufacturing_capex, consumption_regime
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 月例経済報告 - 内閣府
 内閣府ホーム
 内閣府の政策
@@ -590,77 +812,18 @@ English
 主要経済指標
 （PDF形式
 
-### Presidential Actions – The White House
-- source: White House Presidential Actions
-- source_class: us_executive_power
-- date: 2026-07-04
-- url: https://www.whitehouse.gov/presidential-actions/
-- region: us
-- asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
-- kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
-- body_status: no_in_range_date_found
-- snippet: Presidential Actions – The White House
-Menu
-Search
-Search for:
-Scroll Left
-News
-Gallery
-Livestream
-Trump Accounts
-SAVE America
-Investments
-Contact
-News
-Contact
-Trump Accounts
-Gallery
-Livestream
-Investments
-SAVE America
-Scroll Right
-Close
-News
-Featured
-Releases
-Aliens
-Lab Leak: The True Origins of Covid-19
-January 6: A Date Which Will Live in Infamy
-Arrested: Worst of the Worst
-This Is Our Why
-Criminal Aliens Receiving Medicaid
-The JFK Files
-The RFK Files
-Briefings & Statements
-Fact Sheets
-Presidential Actions
-Executive Orders
-Nominations & Appointments
-Presidential Memoranda
-Proclamations
-Remarks
-Research
-Administration
-President Donald J. Trump
-First Lady Melania Trump
-Vice President JD Vance
-Second Lady Usha Vance
-The Cabinet
-Executive Office of The President
-Office of Management and Budget
-Office of Science and Technology Policy
-Council of Economic Advisors
-Office of the National Cybe
-
 ### China Section 301-Tariff Actions and Exclusion Process | United States Trade Representative
 - source: USTR Presidential Tariff Actions
 - source_class: us_executive_power
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://ustr.gov/issue-areas/enforcement/section-301-investigations/tariff-actions
 - region: us
 - asset_linkage: equity, fx, commodity, manufacturing
 - kafka_use: tariff_inflation, us_japan_supply_chain, semiconductor_export_control
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: China Section 301-Tariff Actions and Exclusion Process | United States Trade Representative
 Skip to main content
 Trade Agreements
@@ -705,70 +868,286 @@ About
 About USTR
 Leadership
 
-### Press Releases | U.S. Department of the Treasury
-- source: U.S. Treasury Press Releases
-- source_class: us_executive_power
-- date: 2026-07-04
-- url: https://home.treasury.gov/news/press-releases
-- region: us
-- asset_linkage: rates, fx, credit
-- kafka_use: long_rate_risk, global_liquidity, sanctions
-- body_status: no_in_range_date_found
-- snippet: Press Releases | U.S. Department of the Treasury Skip to main content
-An official website of the United States government
-Here’s how you know
-Here’s how you know
-Official websites use .gov
-A .gov website belongs to an official government organization in the United States.
-Secure .gov websites use HTTPS
-A lock ( )
-or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
-FREEDOM250 Countdown to America's 250th Anniversary July 4, 2026
-Learn More
-MENU MENU
-U.S. Department of the Treasury
-About Treasury
-Enter Search Term(s):
-Advanced Search
-About Treasury
-General Information
-Role of the Treasury
-Officials
-Organizational Chart
-Orders and Directives
-Offices
-Domestic Finance
-Economic Policy
-General Counsel
-International Affairs
-Management
-Public Affairs
-Tax Policy
-Terrorism and Financial Intelligence
-Tribal and Native Affairs
-
 ### U.S. Commerce BIS Newsroom
 - source: U.S. Commerce BIS Newsroom
 - source_class: us_executive_power
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.bis.gov/newsroom
 - region: us
 - asset_linkage: ai_capex, manufacturing, equity
 - kafka_use: ai_geopolitics, semiconductor_export_control, us_japan_supply_chain
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ## L3_frontier_ai_lab
 
+### Joyride Through July With 12 Games Coming to GeForce NOW
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 02, 2026 / Joyride Through July With 12 Games Coming to GeForce NOW / Read Blog
+
+### More details on Fable 5’s cyber safeguards and our jailbreak framework
+- source: Anthropic Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://www.anthropic.com/news
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Jul 2, 2026 Announcements / More details on Fable 5’s cyber safeguards and our jailbreak framework
+
+### NVIDIA and Partners Build in America, for America
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 01, 2026 / NVIDIA and Partners Build in America, for America / Read Blog
+
+### NVIDIA Unlocks AI Compute at Scale, Inviting Capital Partners to Power the AI Infrastructure Buildout
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: July 01, 2026 / NVIDIA Unlocks AI Compute at Scale, Inviting Capital Partners to Power the AI Infrastructure Buildout / Read Blog
+
+### How HP is scaling early AI wins across the enterprise
+- source: OpenAI News
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://openai.com/news/
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Engineering Jun 30, 2026 / How HP is scaling early AI wins across the enterprise
+
+### Core dump epidemiology: fixing an 18-year-old bug
+- source: OpenAI News
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://openai.com/news/
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Research Jun 30, 2026 / Core dump epidemiology: fixing an 18-year-old bug
+
+### NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science / Read Blog
+
+### Into the Omniverse: Three Workflows for Improving Vision AI Agent Accuracy With Synthetic Data and Fine-Tuning
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / Into the Omniverse: Three Workflows for Improving Vision AI Agent Accuracy With Synthetic Data and Fine-Tuning / Read Blog
+
+### How NVIDIA’s Inference Software Stack Powers the Lowest Token Cost
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / How NVIDIA’s Inference Software Stack Powers the Lowest Token Cost / Read Blog
+
+### How Jaiveer Singh Is Helping Robots — and Developers — Move Faster
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 30, 2026 / How Jaiveer Singh Is Helping Robots — and Developers — Move Faster / Read Blog
+
+### Redeploying Fable 5
+- source: Anthropic Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.anthropic.com/news
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Announcements Jun 30, 2026 / Fable 5 returns globally July 1. We're also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.
+
+### Introducing Claude Sonnet 5
+- source: Anthropic Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.anthropic.com/news
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Product Jun 30, 2026 / Introducing Claude Sonnet 5 / Sonnet 5 delivers frontier performance across coding, agents, and professional work at scale.
+
+### Claude Science, an AI workbench for scientists, is now available
+- source: Anthropic Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.anthropic.com/news
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Announcements Jun 30, 2026 / Claude Science, an AI workbench for scientists, is now available / Claude Science is a customizable app that integrates the tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.
+
+### Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 29, 2026 / Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron / Read Blog / All News / Multimedia / NVIDIA RTX Spark / NVIDIA DGX Station for Windows / NVIDIA DSX Platform / NVIDIA Vera Rubin Platform / NVIDIA Vera CPU Rack / All Multimedia / In the News
+
+### Firefly Aerospace Operates NVIDIA Jetson in Lunar Orbit for the First Time
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 29, 2026 / Firefly Aerospace Operates NVIDIA Jetson in Lunar Orbit for the First Time / Read Blog
+
+### Claude Meets Blackwell Ultra: Anthropic’s Models Now Run on NVIDIA GB300 in Azure
+- source: NVIDIA Newsroom
+- source_class: frontier_ai_lab
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://nvidianews.nvidia.com/
+- region: us
+- asset_linkage: ai_capex, equity, manufacturing
+- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: June 29, 2026 / Claude Meets Blackwell Ultra: Anthropic’s Models Now Run on NVIDIA GB300 in Azure / Read Blog
+
+### AWS Weekly Roundup: Agentic CX designer for Amazon Connect Customer, EC2 AMI Watermarks, Open Governance for MySQL, and more (June 29, 2026)
+- source: AWS News Blog
+- source_class: frontier_ai_lab
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://aws.amazon.com/blogs/aws/
+- region: us
+- asset_linkage: ai_capex, equity
+- kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: AWS Weekly Roundup: Agentic CX designer for Amazon Connect Customer, EC2 AMI Watermarks, Open Governance for MySQL, and more (June 29, 2026) / by Micah Walter on 29 JUN 2026 in Amazon Connect , Amazon EC2 , Amazon GuardDuty , Amazon Managed Streaming for Apache Kafka (Amazon MSK) , Amazon OpenSearch Service , AWS Lambda , AWS Outposts Permalink Comments Share / It has been a busy stretch on the AWS Summit circuit. At the New York City Summit, I delivered a workshop called Building AI architectures with AWS Serverless, and it was a lot of fun watching builders wire up agents and serverless services to solve real problems in a single afternoon. This week I am […] / Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs / by Micah Walter on 22 JUN 2026 in AWS Lambda , Compute , Firecracker , Launch , News , Serverless Permalink Comments Share / AWS launches a...
+
+### Previewing GPT-5.6 Sol: a next-generation model
+- source: OpenAI News
+- source_class: frontier_ai_lab
+- date: 2026-06-28
+- observed_date: 2026-07-04
+- url: https://openai.com/news/
+- region: global
+- asset_linkage: ai_capex, equity
+- kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Company Jun 28, 2026 / Previewing GPT-5.6 Sol: a next-generation model
+
 ### Research | OpenAI
 - source: OpenAI Research
 - source_class: frontier_ai_lab
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://openai.com/research/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: ai_capex, enterprise_ai_adoption, ai_governance
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Research | OpenAI
 Skip to main content
 Research
@@ -796,138 +1175,33 @@ GPT
 OpenAI’s GPT series models are fast, versatile, and cost-efficient AI systems designed to understand context, generate content, and reason across text, images, and more.
 A new class of intelligence
 
-### OpenAI News | OpenAI
-- source: OpenAI News
-- source_class: frontier_ai_lab
-- date: 2026-07-04
-- url: https://openai.com/news/
-- region: global
-- asset_linkage: ai_capex, equity
-- kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
-- body_status: no_in_range_date_found
-- snippet: OpenAI News | OpenAI
-Skip to main content
-Research
-Products
-Business
-Developers
-Company
-Foundation (opens in a new window)
-Log in Try ChatGPT (opens in a new window)
-Research
-Products
-Business
-Developers
-Company
-Foundation (opens in a new window)
-Try ChatGPT (opens in a new window) Login
-OpenAI
-All
-Company
-Research
-Product
-Safety
-Engineering
-Security
-Global Affairs
-AI Adoption
-Applied AI
-All
-Filter
-Sort
-Switch cards to show Media
-Switch cards to hide Media
-Introducing GeneBench-Pro
-Research Jun 30, 2026
-Core dump epidemiology: fixing an 18-year-old bug
-Engineering Jun 30, 2026
-How HP is scaling early AI wins across the enterprise
-Company Jun 28, 2026
-Previewing GPT-5.6 Sol: a next-generation model
-Product Jun 26, 2026
-GPT‑5.6 Preview System Card
-Safety Jun 26, 2026
-(opens in a new window)
-How agents are transforming work
-Company Jun 25, 2026
-OpenAI and Broadcom unveil LLM-optimized infer
-
-### Home | NVIDIA Newsroom
-- source: NVIDIA Newsroom
-- source_class: frontier_ai_lab
-- date: 2026-07-04
-- url: https://nvidianews.nvidia.com/
-- region: us
-- asset_linkage: ai_capex, equity, manufacturing
-- kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
-- body_status: no_in_range_date_found
-- snippet: Home | NVIDIA Newsroom
-PLATFORMS
-Autonomous Machines
-Cloud & Data Center
-Deep Learning & Ai
-Design & Pro Visualization
-Healthcare
-High Performance Computing
-Self-Driving Cars
-Gaming & Entertainment
-other links
-Developers
-Industries
-Shop
-Drivers
-Support
-About NVIDIA
-View All Products
-GPU TECHNOLOGY CONFERENCE
-NVIDIA Blog
-Community
-Careers
-TECHNOLOGIES
-Newsroom
-NVIDIA in Brief
-Exec Bios
-NVIDIA Blog
-Podcast
-Media Assets
-In the News
-Press Contacts
-Online Press Kits
-NVIDIA in Brief
-Exec Bios
-NVIDIA Blog
-Podcast
-Media Assets
-In the News
-Press Contacts
-Online Press Kits
-NVIDIA Announces BioNeMo Agent Toolkit — Tools for Agents to Accelerate Scientific Discovery
-NVIDIA today announced NVIDIA BioNeMo Agent Toolkit, which provides domain-specific tools and skills for the agentic life sciences era.
-Read More
-Europe Unveils a Record 35 New NVIDIA AI Supercomputers
-ISC High Performance 2026 -- NVIDIA
-
 ### Microsoft Source
 - source: Microsoft Source
 - source_class: frontier_ai_lab
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://news.microsoft.com/source/
 - region: us
 - asset_linkage: ai_capex, equity
 - kafka_use: microsoft_azure_demand, enterprise_ai_adoption, ai_capex
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Microsoft Source
 Skip to main content Source Signal blog Official Microsoft Blog Microsoft On The Issues Asia Canada Europe, Middle East and Africa Latin America The Code of Us Conexiones What's new today AI Innovation Digital Transformation Sustainability Security Work & Life Diversity & Inclusion Unlocked Microsoft 365 Azure Copilot Windows Surface XBOX Deals Small Business Support Windows Apps Outlook OneDrive Microsoft Teams OneNote Microsoft Edge Moving from Skype to Teams Computers Shop XBOX Accessories VR & mixed reality Certified Refurbished Trade-in for cash XBOX Game Pass Ultimate PC Game Pass XBOX games PC games Microsoft AI Microsoft Security Dynamics 365 Microsoft 365 for business Microsoft Power Platform Windows 365 Small Business Digital Sovereignty Azure Microsoft Developer Microsoft Learn Support for AI marketplace apps Microsoft Tech Community Microsoft Marketplace Soft
 
 ### AI & Machine Learning | Google Cloud Blog
 - source: Google Cloud AI Blog
 - source_class: frontier_ai_lab
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://cloud.google.com/blog/products/ai-machine-learning
 - region: us
 - asset_linkage: ai_capex, equity
 - kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: AI & Machine Learning | Google Cloud Blog Jump to Content
 Cloud
 Blog
@@ -978,82 +1252,20 @@ Google Workspace
 Developers & Practitioners
 Transform with Google Cl
 
-### Newsroom \ Anthropic
-- source: Anthropic Newsroom
-- source_class: frontier_ai_lab
-- date: 2026-07-04
-- url: https://www.anthropic.com/news
-- region: global
-- asset_linkage: ai_capex, equity
-- kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
-- body_status: no_in_range_date_found
-- snippet: Newsroom \ Anthropic
-Skip to main content Skip to footer
-Research
-Policy
-Commitments
-Learn
-News
-Try Claude
-Newsroom
-Press inquires press@anthropic.com
-Non-media inquiries How to get support
-Media assets Download press kit
-Redeploying Fable 5
-Announcements Jun 30, 2026
-Fable 5 returns globally July 1. We're also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.
-Product Jun 30, 2026
-Introducing Claude Sonnet 5
-Sonnet 5 delivers frontier performance across coding, agents, and professional work at scale.
-Announcements Jun 30, 2026
-Claude Science, an AI workbench for scientists, is now available
-Claude Science is a customizable app that integrates the tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.
-Product Jun 23, 2026
-Intr
-
-### AWS News Blog
-- source: AWS News Blog
-- source_class: frontier_ai_lab
-- date: 2026-07-04
-- url: https://aws.amazon.com/blogs/aws/
-- region: us
-- asset_linkage: ai_capex, equity
-- kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
-- body_status: no_in_range_date_found
-- snippet: AWS News Blog Skip to Main Content
-Filter: All
-English
-Contact us
-AWS Marketplace
-Support
-My account
-Search
-Filter: All
-Sign in to console
-Create account
-AWS Blogs
-Home
-Blogs
-Editions
-AWS News Blog
-Top announcements of the AWS Summit in New York, 2026
-by AWS News Blog Team on 17 JUN 2026 in Amazon Bedrock , Amazon Bedrock AgentCore , Amazon Simple Storage Service (S3) , Announcements , AWS Summit New York , AWS Transform , AWS WAF , Kiro , Strands Agents Permalink Comments Share
-A recap of the top announcements from AWS’s New York Summit 2026
-Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks
-by Micah Walter on 01 JUL 2026 in Amazon Elastic Kubernetes Service , Compute , Launch , News Permalink Comments Share
-Learn how Kubernetes version rollbacks for Amazon EKS let you reverse cluster upgrades within seven days. This new feature provides a safety net for upgr
-
 ## L4_ai_power_ideology
 
 ### Sam Altman
 - source: Sam Altman Blog
 - source_class: ai_power_ideology
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://blog.samaltman.com/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: openai_strategy, agi_governance, ai_democratization, ai_power_concentration, sbg_openai_valuation_narrative
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Sam Altman
 Manage New Post Logout Login
 Sam Altman
@@ -1067,12 +1279,15 @@ Now I am awake in the middle of the night and pissed, and thinking that I have u
 ### Dario Amodei — Policy on the AI Exponential
 - source: Dario Amodei Policy on the AI Exponential
 - source_class: ai_power_ideology
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://darioamodei.com/post/policy-on-the-ai-exponential
 - region: global
 - asset_linkage: ai_capex, rates, equity
 - kafka_use: ai_governance, ai_tax_policy, ai_safety_regime, state_vs_society, geopolitical_ai, long_form_thesis
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Dario Amodei — Policy on the AI Exponential
 Dario Amodei
 Archive
@@ -1085,12 +1300,15 @@ The intersection of AI and our political institutions feels a bit like the Hobbi
 ### Dario Amodei
 - source: Dario Amodei Essays
 - source_class: ai_power_ideology
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://darioamodei.com/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: ai_governance, ai_safety_regime, geopolitical_ai, long_form_thesis
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Dario Amodei
 Dario Amodei
 Archive
@@ -1115,15 +1333,242 @@ NYT
 
 ## L5_analyst_interpretation
 
+### 米国
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-07-03
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年07月03日 / 米国 / 雇用者数は前月差＋5.7万人と減速 / 2026年6月米雇用統計：失業率は低下も、労働力人口の急減が主因
+
+### 消費データブック（2026/7/3号）
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-07-03
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 消費データブック（2026/7/3号） / 個社データ・業界統計・JCB消費NOWから消費動向を先取り
+
+### 日本
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-07-03
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年07月03日 / 日本 / 約40年ぶりの円安ドル高、日本経済への影響は？ / 円安の恩恵は偏在し、直近1年間の実質GDPへの影響は▲0.14％
+
+### 2026年07月01日 「100億宣言」の実効性向上に向けた提言 ～スタートアップとの連携や「経営者分身ＡＩ」の整備推進を～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年07月01日 「100億宣言」の実効性向上に向けた提言 ～スタートアップとの連携や「経営者分身ＡＩ」の整備推進を～
+
+### 地方創生・地方経済
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-07-01
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年07月01日 / 地方創生・地方経済 / 財政 / 日本 / 学校施設の廃止後の課題 / 廃校施設活用状況実態調査の分析
+
+### 藤本一輝、小林佑里恵、大島侑真、松田健太郎／リサーチ・レポート No.2026-002 2026年06月30日 衰退に向かっているのは米国か？中国か？
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 藤本一輝、小林佑里恵、大島侑真、松田健太郎／リサーチ・レポート No.2026-002 2026年06月30日 衰退に向かっているのは米国か？中国か？
+
+### 藤山光雄、西浦瑞穂／リサーチ・レポート No.2026-004 2026年06月30日 【2026～27年世界経済見通し】底堅い成長が続く世界経済～リスクは地経学的分断とAI過剰投資～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 藤山光雄、西浦瑞穂／リサーチ・レポート No.2026-004 2026年06月30日 【2026～27年世界経済見通し】底堅い成長が続く世界経済～リスクは地経学的分断とAI過剰投資～
+
+### 若林厚仁／リサーチ・レポート No.2026-003 2026年06月30日 【2026～27年度日本経済見通し】供給面から成長が制約される日本経済 ～ 国内外から強まる制約 ～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 若林厚仁／リサーチ・レポート No.2026-003 2026年06月30日 【2026～27年度日本経済見通し】供給面から成長が制約される日本経済 ～ 国内外から強まる制約 ～
+
+### 細井友洋／ビューポイント No.2026-014 2026年06月30日 【2026～27年欧州経済見通し】レジリエンスを高め、持ち直す欧州経済 ～ 対米関係・域内政治の混乱による政策停滞がリスク ～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 細井友洋／ビューポイント No.2026-014 2026年06月30日 【2026～27年欧州経済見通し】レジリエンスを高め、持ち直す欧州経済 ～ 対米関係・域内政治の混乱による政策停滞がリスク ～
+
+### 森田一至／リサーチ・レポート No.2026-005 2026年06月30日 《2026～27年度関西経済見通し》関西経済は一時減速も、緩やかに回復 ～新たな観光需要の取り込みや供給制約の克服に資する産業育成を～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 森田一至／リサーチ・レポート No.2026-005 2026年06月30日 《2026～27年度関西経済見通し》関西経済は一時減速も、緩やかに回復 ～新たな観光需要の取り込みや供給制約の克服に資する産業育成を～
+
+### 栂野裕貴、立石宗一郎／リサーチ・レポート No.2026-006 2026年06月30日 【2026～27年米国経済見通し】AIが主導する米国の景気回復と格差拡大～リスクは投資腰折れと分断の加速～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 栂野裕貴、立石宗一郎／リサーチ・レポート No.2026-006 2026年06月30日 【2026～27年米国経済見通し】AIが主導する米国の景気回復と格差拡大～リスクは投資腰折れと分断の加速～
+
+### 枩村秀樹、佐野淳也／ビューポイント No.2026-013 2026年06月30日 地方銀行に求められる資本市場を意識した経営改革 ― 資本市場改革、ファンドによる投資活発化が迫る成長戦略 ―
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 枩村秀樹、佐野淳也／ビューポイント No.2026-013 2026年06月30日 地方銀行に求められる資本市場を意識した経営改革 ― 資本市場改革、ファンドによる投資活発化が迫る成長戦略 ―
+
+### 米国
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年06月30日 / 米国 / 米国：AI活用は続くが、「選別」も本格化へ / 「選別」は過剰投資を抑制も、信用リスク・資産価格への波及に注意
+
+### 日本
+- source: 大和総研 経済分析レポート
+- source_class: official_macro
+- date: 2026-06-30
+- observed_date: 2026-07-04
+- url: https://www.dir.co.jp/report/research/economics/index.html
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 2026年06月30日 / 日本 / 2026年5月鉱工業生産 / 輸送機械工業（除．自動車工業）がけん引し、2カ月連続で上昇
+
+### 細井友洋、佐野淳也、呉子婧、古宮大夢、今川冬馬／リサーチ・レポート No.2026-001 2026年06月29日 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ―
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 細井友洋、佐野淳也、呉子婧、古宮大夢、今川冬馬／リサーチ・レポート No.2026-001 2026年06月29日 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ―
+
+### 大嶋秀雄／リサーチ・フォーカス No.2026-021 2026年06月29日 【2026～27年アジア経済見通し】アジア経済は減速～中東危機収束後も、短期・長期両面のリスクに要警戒～
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use: 
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 大嶋秀雄／リサーチ・フォーカス No.2026-021 2026年06月29日 【2026～27年アジア経済見通し】アジア経済は減速～中東危機収束後も、短期・長期両面のリスクに要警戒～
+
 ### 金融市場レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 - source: 第一ライフ資産運用経済研究所 金融市場レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/type/market.html
 - region: global
 - asset_linkage: equity, rates, fx, commodity
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 金融市場レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1166,45 +1611,57 @@ HOME
 ### 第一ライフ資産運用経済研究所 米国経済レポート
 - source: 第一ライフ資産運用経済研究所 米国経済レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/theme/us.html
 - region: us
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ資産運用経済研究所 欧州経済レポート
 - source: 第一ライフ資産運用経済研究所 欧州経済レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/theme/europe.html
 - region: europe
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ資産運用経済研究所 日本経済レポート
 - source: 第一ライフ資産運用経済研究所 日本経済レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/theme/japan.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### レポート詳細検索  | 第一ライフ資産運用経済研究所
 - source: 第一ライフ資産運用経済研究所 レポート詳細検索
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/report_index.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: レポート詳細検索 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1249,23 +1706,29 @@ HOME
 ### 第一ライフ資産運用経済研究所 アジア・新興国経済レポート
 - source: 第一ライフ資産運用経済研究所 アジア・新興国経済レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/theme/asia.html
 - region: china
 - asset_linkage: equity, fx, commodity, manufacturing
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ研レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 - source: 第一ライフ研レポート
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.dlri.co.jp/summary/type/dlri_report.html
 - region: global
 - asset_linkage: equity, rates, fx, ai_capex, manufacturing
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 第一ライフ研レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1307,12 +1770,15 @@ HOME
 ### 米国経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 米国経済展望
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.jri.co.jp/report/medium/usa/
 - region: us
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 米国経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1411,12 +1877,15 @@ CSR・環境経営の推進
 ### 為替相場展望｜経済・政策レポート｜日本総研
 - source: 日本総研 為替相場展望
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.jri.co.jp/report/medium/exchange/
 - region: global
 - asset_linkage: fx, rates
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 為替相場展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1515,23 +1984,29 @@ CSR・環境経営の推進
 ### 日本総研 欧州経済展望
 - source: 日本総研 欧州経済展望
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.jri.co.jp/report/medium/europe/
 - region: europe
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 日本経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 日本経済展望
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.jri.co.jp/report/medium/japan/
 - region: japan
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 日本経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1630,12 +2105,15 @@ CSR・環境経営の推進
 ### 中国経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 中国経済展望
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.jri.co.jp/report/medium/china/
 - region: china
 - asset_linkage: equity, fx, commodity, manufacturing
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 中国経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1734,34 +2212,43 @@ CSR・環境経営の推進
 ### みずほ経済ウィークリー
 - source: みずほ経済ウィークリー
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.mizuho-rt.co.jp/publication/report/research/weekly.html
 - region: global
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### みずほリサーチ&テクノロジーズ 調査本部レポート一覧
 - source: みずほリサーチ&テクノロジーズ 調査本部レポート一覧
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.mizuho-rt.co.jp/publication/report/research/index.html
 - region: global
 - asset_linkage: equity, rates, fx, manufacturing
 - kafka_use: 
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### 出版・刊行物 | ナレッジ・インサイト | 野村総合研究所(NRI)
 - source: NRI 金融ITフォーカス
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.nri.com/jp/knowledge/publication/kinyu_itf.html
 - region: japan
 - asset_linkage: credit, ai_capex
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 出版・刊行物 | ナレッジ・インサイト | 野村総合研究所(NRI)
 NRI 野村総合研究所
 サービス・ソリューション
@@ -1815,23 +2302,29 @@ NRIマネジメントレビュー
 ### NRI 大崎貞和のPoint of グローバル金融市場
 - source: NRI 大崎貞和のPoint of グローバル金融市場
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.nri.com/jp/knowledge/blog/lst/fis/osaki
 - region: global
 - asset_linkage: equity, rates, fx, credit
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: OK
 
 ### レポート一覧 | レポート | 野村総合研究所(NRI)
 - source: NRI レポート一覧
 - source_class: official_macro
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.nri.com/jp/knowledge/report/list.html
 - region: global
 - asset_linkage: equity, rates, fx, credit, ai_capex
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: レポート一覧 | レポート | 野村総合研究所(NRI)
 NRI 野村総合研究所
 サービス・ソリューション
@@ -1897,193 +2390,20 @@ NRIグループのサステナビリティ経営
 情報セキュリティ対策についての宣言文
 © Nomura Research Institute, Ltd. All rights reserved.
 
-### 米国
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-07-03
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年07月03日 / 米国 / 雇用者数は前月差＋5.7万人と減速 / 2026年6月米雇用統計：失業率は低下も、労働力人口の急減が主因
-
-### 日本
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-07-03
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年07月03日 / 日本 / 約40年ぶりの円安ドル高、日本経済への影響は？ / 円安の恩恵は偏在し、直近1年間の実質GDPへの影響は▲0.14％
-
-### 個社データ・業界統計・JCB消費NOWから消費動向を先取り
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-07-03
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 消費データブック（2026/7/3号） / 個社データ・業界統計・JCB消費NOWから消費動向を先取り
-
-### 2026年07月01日 「100億宣言」の実効性向上に向けた提言 ～スタートアップとの連携や「経営者分身ＡＩ」の整備推進を～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-07-01
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年07月01日 「100億宣言」の実効性向上に向けた提言 ～スタートアップとの連携や「経営者分身ＡＩ」の整備推進を～
-
-### 地方創生・地方経済
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-07-01
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年07月01日 / 地方創生・地方経済 / 財政 / 日本 / 学校施設の廃止後の課題 / 廃校施設活用状況実態調査の分析
-
-### 藤本一輝、小林佑里恵、大島侑真、松田健太郎／リサーチ・レポート No.2026-002 2026年06月30日 衰退に向かっているのは米国か？中国か？
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 藤本一輝、小林佑里恵、大島侑真、松田健太郎／リサーチ・レポート No.2026-002 2026年06月30日 衰退に向かっているのは米国か？中国か？
-
-### 藤山光雄、西浦瑞穂／リサーチ・レポート No.2026-004 2026年06月30日 【2026～27年世界経済見通し】底堅い成長が続く世界経済～リスクは地経学的分断とAI過剰投資～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 藤山光雄、西浦瑞穂／リサーチ・レポート No.2026-004 2026年06月30日 【2026～27年世界経済見通し】底堅い成長が続く世界経済～リスクは地経学的分断とAI過剰投資～
-
-### 若林厚仁／リサーチ・レポート No.2026-003 2026年06月30日 【2026～27年度日本経済見通し】供給面から成長が制約される日本経済 ～ 国内外から強まる制約 ～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 若林厚仁／リサーチ・レポート No.2026-003 2026年06月30日 【2026～27年度日本経済見通し】供給面から成長が制約される日本経済 ～ 国内外から強まる制約 ～
-
-### 細井友洋／ビューポイント No.2026-014 2026年06月30日 【2026～27年欧州経済見通し】レジリエンスを高め、持ち直す欧州経済 ～ 対米関係・域内政治の混乱による政策停滞がリスク ～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 細井友洋／ビューポイント No.2026-014 2026年06月30日 【2026～27年欧州経済見通し】レジリエンスを高め、持ち直す欧州経済 ～ 対米関係・域内政治の混乱による政策停滞がリスク ～
-
-### 森田一至／リサーチ・レポート No.2026-005 2026年06月30日 《2026～27年度関西経済見通し》関西経済は一時減速も、緩やかに回復 ～新たな観光需要の取り込みや供給制約の克服に資する産業育成を～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 森田一至／リサーチ・レポート No.2026-005 2026年06月30日 《2026～27年度関西経済見通し》関西経済は一時減速も、緩やかに回復 ～新たな観光需要の取り込みや供給制約の克服に資する産業育成を～
-
-### 栂野裕貴、立石宗一郎／リサーチ・レポート No.2026-006 2026年06月30日 【2026～27年米国経済見通し】AIが主導する米国の景気回復と格差拡大～リスクは投資腰折れと分断の加速～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 栂野裕貴、立石宗一郎／リサーチ・レポート No.2026-006 2026年06月30日 【2026～27年米国経済見通し】AIが主導する米国の景気回復と格差拡大～リスクは投資腰折れと分断の加速～
-
-### 枩村秀樹、佐野淳也／ビューポイント No.2026-013 2026年06月30日 地方銀行に求められる資本市場を意識した経営改革 ― 資本市場改革、ファンドによる投資活発化が迫る成長戦略 ―
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 枩村秀樹、佐野淳也／ビューポイント No.2026-013 2026年06月30日 地方銀行に求められる資本市場を意識した経営改革 ― 資本市場改革、ファンドによる投資活発化が迫る成長戦略 ―
-
-### 米国
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年06月30日 / 米国 / 米国：AI活用は続くが、「選別」も本格化へ / 「選別」は過剰投資を抑制も、信用リスク・資産価格への波及に注意
-
-### 日本
-- source: 大和総研 経済分析レポート
-- source_class: official_macro
-- date: 2026-06-30
-- url: https://www.dir.co.jp/report/research/economics/index.html
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 2026年06月30日 / 日本 / 2026年5月鉱工業生産 / 輸送機械工業（除．自動車工業）がけん引し、2カ月連続で上昇
-
-### 細井友洋、佐野淳也、呉子婧、古宮大夢、今川冬馬／リサーチ・レポート No.2026-001 2026年06月29日 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ―
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-29
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 細井友洋、佐野淳也、呉子婧、古宮大夢、今川冬馬／リサーチ・レポート No.2026-001 2026年06月29日 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ―
-
-### 大嶋秀雄／リサーチ・フォーカス No.2026-021 2026年06月29日 【2026～27年アジア経済見通し】アジア経済は減速～中東危機収束後も、短期・長期両面のリスクに要警戒～
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-06-29
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 大嶋秀雄／リサーチ・フォーカス No.2026-021 2026年06月29日 【2026～27年アジア経済見通し】アジア経済は減速～中東危機収束後も、短期・長期両面のリスクに要警戒～
-
 ## L6_personal_macro_narrative
 
 ### 人文科学アカデミー｜note
 - source: note 人文科学アカデミー
 - source_class: market_narrative
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://note.com/shennote
 - region: global
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 人文科学アカデミー｜note
 メインコンテンツへスキップ
 人文科学アカデミー
@@ -2116,12 +2436,15 @@ note pro
 ### 炭鉱のカナリア、炭鉱の龍
 - source: Shenmacro 炭鉱のカナリア、炭鉱の龍
 - source_class: market_narrative
-- date: 2026-07-04
+- date: not_detected
+- observed_date: 2026-07-04
 - url: https://www.shenmacro.com/
 - region: global
 - asset_linkage: equity, rates, fx
 - kafka_use: 
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 炭鉱のカナリア、炭鉱の龍
 炭鉱のカナリア、炭鉱の龍
 ホーム

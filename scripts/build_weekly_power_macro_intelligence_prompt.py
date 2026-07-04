@@ -39,6 +39,14 @@ def read_items(path: Path, max_items: int) -> list[dict]:
     return items
 
 
+def current_evidence(items: list[dict]) -> list[dict]:
+    return [item for item in items if item.get("is_current_evidence")]
+
+
+def source_coverage(items: list[dict]) -> list[dict]:
+    return [item for item in items if not item.get("is_current_evidence")]
+
+
 def compact_items(items: list[dict]) -> str:
     blocks: list[str] = []
     for item in items:
@@ -57,12 +65,33 @@ def compact_items(items: list[dict]) -> str:
             f"  author: {item.get('author', '')}\n"
             f"  url: {item.get('url', '')}\n"
             f"  body_status: {item.get('body_status', '')}\n"
+            f"  evidence_level: {item.get('evidence_level', '')}\n"
+            f"  is_current_evidence: {item.get('is_current_evidence', False)}\n"
             f"  snippet: {item.get('snippet', '')}"
         )
     return "\n".join(blocks)
 
 
-def build_prompt(week_end: str, items: list[dict], collection: str) -> str:
+def compact_coverage(items: list[dict]) -> str:
+    blocks: list[str] = []
+    for item in items:
+        blocks.append(
+            "- "
+            f"source: {item.get('source', '')}\n"
+            f"  layer: {item.get('layer', '')}\n"
+            f"  source_class: {item.get('source_class', '')}\n"
+            f"  url: {item.get('url', '')}\n"
+            f"  body_status: {item.get('body_status', '')}\n"
+            f"  evidence_level: {item.get('evidence_level', '')}\n"
+            f"  fetch_status: {item.get('fetch_status', '')}\n"
+            f"  observed_date: {item.get('observed_date', '')}\n"
+            f"  note: not usable as current-week factual evidence"
+        )
+    return "\n".join(blocks)
+
+
+def build_prompt(week_end: str, items: list[dict], _collection: str) -> str:
+    evidence_items = current_evidence(items)
     return f"""# Objective
 あなたはKAFKA向けの権力中枢・マクロ・AIテーマ意思決定OSです。
 以下の収集結果を使い、単なる要約ではなく、金利、国家政策、AI産業、AI権力思想、資本配分、研究テーマ、発信テーマの前提がどう変わったかを判定してください。
@@ -72,10 +101,14 @@ def build_prompt(week_end: str, items: list[dict], collection: str) -> str:
 
 # Non-Negotiable Rules
 - URLの無い事実主張は禁止。根拠URLが無い場合は「未確認」と書く。
-- 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Collected Items の title または snippet に文字列として存在するものだけ使う。
-- Collected Items に存在しない具体名を補完・推測・創作してはいけない。
-- body_status が metadata_only / no_in_range_date_found / PDF_METADATA_ONLY / FETCH_ERROR / HTTP系の場合、そのソースから本文内容を推測しない。
+- 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Current Evidence Items の title または snippet に文字列として存在するものだけ使う。
+- Current Evidence Items に存在しない具体名を補完・推測・創作してはいけない。
+- Source Coverage / Fetch Failures は監視状況の記録であり、事実主張、レジーム判定、投資仮説、行動リストの根拠に使ってはいけない。
+- body_status が list_metadata 以外、または is_current_evidence が false の項目から本文内容を推測しない。
 - 公式ページのカテゴリ名やランディングページ文言を、今週の新規発表として扱ってはいけない。
+- 日銀、Fed、政府、関税、AI企業、AI思想の各節で Current Evidence Items が無い場合は、本文を作文せず「今週の適格根拠なし」と1行で止める。
+- 「本文未取得」「未確認」「取得失敗」を列挙してレポート本文を水増ししてはいけない。
+- Source Coverage / Fetch Failures / 取得失敗一覧の節を出力してはいけない。
 - L1-L4は「世界を動かす側」、L5は「世界を読む側」、L6は「市場参加者の物語化・ナラティブ検出」として扱う。
 - 公式マクロ、中央銀行、国家政策、AI基幹企業、AI権力思想、企業業績、市場期待、個人公開マクロ解説を必ず分類する。
 - 個人公開マクロ解説は公式レポートと同格扱いしない。
@@ -165,11 +198,8 @@ def build_prompt(week_end: str, items: list[dict], collection: str) -> str:
 ## 9. コンテンツ化候補
 ブログ、note、YouTube、Scrapboxに使える論点を、タイトル案 / 根拠URL / 切り口 / 想定読者 / 1段落要旨で出す。
 
-# Collected Items
-{compact_items(items)}
-
-# Fallback Collection Markdown
-{collection[:20000]}
+# Current Evidence Items
+{compact_items(evidence_items)}
 """
 
 

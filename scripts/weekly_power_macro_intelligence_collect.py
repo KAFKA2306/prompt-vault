@@ -25,6 +25,47 @@ DATE_PATTERNS = [
     re.compile(r"(?P<year>20\d{2})年\s*(?P<month>\d{1,2})月\s*(?P<day>\d{1,2})日"),
 ]
 
+CURRENT_EVIDENCE_STATUSES = {"list_metadata"}
+
+MONTHS = {
+    "jan": 1,
+    "january": 1,
+    "feb": 2,
+    "february": 2,
+    "mar": 3,
+    "march": 3,
+    "apr": 4,
+    "april": 4,
+    "may": 5,
+    "jun": 6,
+    "june": 6,
+    "jul": 7,
+    "july": 7,
+    "aug": 8,
+    "august": 8,
+    "sep": 9,
+    "sept": 9,
+    "september": 9,
+    "oct": 10,
+    "october": 10,
+    "nov": 11,
+    "november": 11,
+    "dec": 12,
+    "december": 12,
+}
+
+EN_DATE_PATTERNS = [
+    re.compile(r"(?P<month_name>[A-Z][a-z]+)\.?\s+(?P<day>\d{1,2}),\s*(?P<year>20\d{2})"),
+    re.compile(r"(?P<day>\d{1,2})\s+(?P<month_name>[A-Z][a-z]+)\.?\s+(?P<year>20\d{2})"),
+]
+
+WEAK_TITLES = {
+    "ed yardeni",
+    "board of governors of the federal reserve system",
+    "about the fed",
+    "news & events",
+}
+
 
 class TextHTMLParser(HTMLParser):
     def __init__(self) -> None:
@@ -87,6 +128,7 @@ def parse_gate_args() -> argparse.Namespace:
     parser.add_argument("--week-end", required=True)
     parser.add_argument("--output-root", default=str(OUTPUT_ROOT))
     parser.add_argument("--min-items", type=int, default=10)
+    parser.add_argument("--min-current-items", type=int, default=10)
     parser.add_argument("--min-url-rate", type=float, default=0.95)
     parser.add_argument("--min-date-rate", type=float, default=0.70)
     parser.add_argument("--min-non-metadata-rate", type=float, default=0.30)
@@ -176,15 +218,53 @@ def parse_date(text: str) -> dt.date | None:
             return dt.date(int(match.group("year")), int(match.group("month")), int(match.group("day")))
         except ValueError:
             return None
+    for pattern in EN_DATE_PATTERNS:
+        match = pattern.search(text)
+        if not match:
+            continue
+        month = MONTHS.get(match.group("month_name").lower())
+        if not month:
+            continue
+        try:
+            return dt.date(int(match.group("year")), month, int(match.group("day")))
+        except ValueError:
+            return None
     return None
+
+
+def strip_date_text(text: str) -> str:
+    out = text
+    for pattern in DATE_PATTERNS + EN_DATE_PATTERNS:
+        out = pattern.sub("", out)
+    return " ".join(out.replace("|", " ").replace(",", " ").split())
 
 
 def title_from_block(lines: list[str], source_name: str) -> str:
     skip = {
         source_name,
+        source_name.lower(),
         "home",
         "report",
         "reports",
+        "read more",
+        "learn more",
+        "back to top",
+        "all categories",
+        "last update:",
+        "view all featured stories",
+        "press contacts",
+        "press releases",
+        "newsroom",
+        "blog",
+        "blogs",
+        "announcements",
+        "announcement",
+        "product",
+        "company",
+        "research",
+        "engineering",
+        "safety",
+        "readouts",
         "レポート",
         "レポート一覧",
         "検索",
@@ -192,7 +272,15 @@ def title_from_block(lines: list[str], source_name: str) -> str:
     }
     for line in lines:
         cleaned = line.strip(" -　")
-        if not cleaned or cleaned.lower() in skip:
+        lowered = cleaned.lower()
+        if not cleaned or lowered in skip:
+            continue
+        without_date = strip_date_text(cleaned).lower()
+        if not without_date or without_date in skip:
+            continue
+        if re.fullmatch(r"(\d+\s+min\s+read|paid|\d+\s+min\s+read\s+paid)+", without_date):
+            continue
+        if lowered.startswith(("read more", "learn more", "back to top")):
             continue
         if parse_date(cleaned) and len(cleaned) <= 12:
             continue
@@ -202,6 +290,17 @@ def title_from_block(lines: list[str], source_name: str) -> str:
     return source_name
 
 
+def refine_title(source: dict, title: str, snippet: str) -> tuple[str, bool]:
+    parts = [part.strip() for part in snippet.split(" / ") if part.strip()]
+    if source["id"].startswith("yardeni"):
+        for marker in ("Paid", "Public"):
+            for idx, part in enumerate(parts):
+                if part == marker and idx + 1 < len(parts):
+                    title = parts[idx + 1]
+    weak = title.strip().lower() in WEAK_TITLES
+    return title, weak
+
+
 def items_from_text(source: dict, page_title: str, text: str, start: dt.date, end: dt.date, limit: int, snippet_limit: int) -> list[dict]:
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     records: list[dict] = []
@@ -209,15 +308,31 @@ def items_from_text(source: dict, page_title: str, text: str, start: dt.date, en
         found = parse_date(line)
         if not found or found < start or found > end:
             continue
+        previous_lines = list(reversed(lines[max(0, idx - 4):idx]))
         block: list[str] = [line]
         for next_line in lines[idx + 1: idx + 12]:
             if parse_date(next_line):
                 break
             block.append(next_line)
-        title = title_from_block(block[1:] or block, source["name"])
+        line_without_date = strip_date_text(line).lower()
+        if not line_without_date or line_without_date in {
+            "announcements",
+            "announcement",
+            "product",
+            "company",
+            "research",
+            "engineering",
+            "safety",
+            "readouts",
+        }:
+            title_candidates = block[1:] + previous_lines
+        else:
+            title_candidates = [line] + block[1:] + previous_lines
+        title = title_from_block(title_candidates, source["name"])
         snippet = " / ".join(block)
         if len(snippet) > snippet_limit:
             snippet = snippet[: snippet_limit - 3].rstrip() + "..."
+        title, weak_title = refine_title(source, title, snippet)
         records.append({
             "source_id": source["id"],
             "source": source["name"],
@@ -232,11 +347,14 @@ def items_from_text(source: dict, page_title: str, text: str, start: dt.date, en
             "expected_cadence": source["expected_cadence"],
             "title": title,
             "published_date": found.isoformat(),
+            "observed_date": end.isoformat(),
             "author": "",
             "category": source["source_class"],
             "url": source["url"],
             "snippet": snippet,
-            "body_status": "list_metadata",
+            "body_status": "weak_title" if weak_title else "list_metadata",
+            "evidence_level": "weak_title" if weak_title else "dated_listing",
+            "is_current_evidence": not weak_title,
             "page_title": page_title,
         })
         if len(records) >= limit:
@@ -261,12 +379,15 @@ def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date,
         "priority": source["priority"],
         "expected_cadence": source["expected_cadence"],
         "title": page_title or source["name"],
-        "published_date": week_end.isoformat(),
+        "published_date": "",
+        "observed_date": week_end.isoformat(),
         "author": "",
         "category": source["source_class"],
         "url": source["url"],
         "snippet": snippet or "本文未取得",
         "body_status": "metadata_only" if status != "OK" else "no_in_range_date_found",
+        "evidence_level": "fetch_error" if status != "OK" else "source_landing",
+        "is_current_evidence": False,
         "fetch_status": status,
         "page_title": page_title,
     }
@@ -336,12 +457,15 @@ def write_markdown(path: Path, items: list[dict], start: dt.date, end: dt.date) 
                 f"### {item['title']}",
                 f"- source: {item['source']}",
                 f"- source_class: {item['source_class']}",
-                f"- date: {item['published_date']}",
+                f"- date: {item.get('published_date') or 'not_detected'}",
+                f"- observed_date: {item.get('observed_date', '')}",
                 f"- url: {item['url']}",
                 f"- region: {item['region']}",
                 f"- asset_linkage: {links}",
                 f"- kafka_use: {uses}",
                 f"- body_status: {item.get('body_status', '')}",
+                f"- evidence_level: {item.get('evidence_level', '')}",
+                f"- is_current_evidence: {item.get('is_current_evidence', False)}",
                 f"- snippet: {item.get('snippet', '')}",
                 "",
             ])
@@ -374,27 +498,37 @@ def gate_quality() -> int:
         print("quality_gate=fail reason=no_items")
         return 1
     url_rate = sum(1 for item in items if str(item.get("url", "")).startswith(("http://", "https://"))) / total
-    date_rate = sum(1 for item in items if parse_date(str(item.get("published_date", "")))) / total
-    non_metadata_rate = sum(1 for item in items if item.get("body_status") != "metadata_only") / total
+    current_items = [item for item in items if item.get("is_current_evidence")]
+    current_total = len(current_items)
+    evidence_rate = current_total / total
+    current_denominator = current_total or 1
+    date_rate = sum(1 for item in current_items if parse_date(str(item.get("published_date", "")))) / current_denominator
+    non_metadata_rate = sum(1 for item in current_items if item.get("body_status") in CURRENT_EVIDENCE_STATUSES) / current_denominator
     layers = {str(item.get("layer", "")) for item in items if item.get("layer")}
+    evidence_layers = {str(item.get("layer", "")) for item in current_items if item.get("layer")}
     metrics = {
         "items": total,
+        "current_evidence_items": current_total,
         "url_rate": round(url_rate, 3),
         "date_rate": round(date_rate, 3),
+        "evidence_rate": round(evidence_rate, 3),
         "non_metadata_rate": round(non_metadata_rate, 3),
         "layers": sorted(layers),
+        "evidence_layers": sorted(evidence_layers),
     }
     failures = []
     if total < args.min_items:
         failures.append("items")
+    if current_total < args.min_current_items:
+        failures.append("current_evidence_items")
     if url_rate < args.min_url_rate:
         failures.append("url_rate")
     if date_rate < args.min_date_rate:
         failures.append("date_rate")
     if non_metadata_rate < args.min_non_metadata_rate:
         failures.append("non_metadata_rate")
-    if len(layers) < args.min_layers:
-        failures.append("layers")
+    if len(evidence_layers) < args.min_layers:
+        failures.append("evidence_layers")
     print(json.dumps({"quality_gate": "fail" if failures else "pass", "failures": failures, **metrics}, ensure_ascii=False))
     return 1 if failures else 0
 
@@ -413,7 +547,15 @@ def main() -> int:
     for source in load_sources():
         items.extend(collect_source(source, start, end, week_end, args.max_source_items, args.max_snippet_chars))
     items = dedupe(items)
-    items.sort(key=lambda item: (item["published_date"], item["source"], item["title"]), reverse=True)
+    items.sort(
+        key=lambda item: (
+            bool(item.get("is_current_evidence")),
+            item.get("published_date") or item.get("observed_date") or "",
+            item["source"],
+            item["title"],
+        ),
+        reverse=True,
+    )
 
     write_jsonl(out_dir / "items.jsonl", items)
     write_markdown(out_dir / "collection.md", items, start, end)

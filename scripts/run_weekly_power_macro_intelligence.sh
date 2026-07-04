@@ -79,7 +79,28 @@ run_one() {
     --start "$s" \
     --end "$e"
 
-  python3 scripts/weekly_power_macro_intelligence_collect.py gate --week-end "$d"
+  if ! python3 scripts/weekly_power_macro_intelligence_collect.py gate --week-end "$d" >"$out_dir/quality.json"; then
+    {
+      printf '%s\n\n' "---"
+      printf 'type: weekly_power_macro_intelligence\n'
+      printf 'domain: Finance\n'
+      printf 'week_end: %s\n' "$d"
+      printf 'source: collection_quality_gate\n'
+      printf 'quality_status: failed\n'
+      printf '%s\n\n' "---"
+      printf '# Weekly Power & Macro Intelligence - %s\n\n' "$d"
+      printf '収集品質ゲートで停止。本文未取得やランディングページ由来の情報が多く、意思決定レポートとして投稿しません。\n\n'
+      printf '## Quality Gate\n\n```json\n'
+      cat "$out_dir/quality.json"
+      printf '\n```\n\n'
+      printf '## Collection\n\n'
+      cat "$out_dir/collection.md"
+      printf '\n'
+    } >"$report_file"
+    cp "$report_file" "$docs_report"
+    echo "quality gate failed; skipped agy and issue publish for $d" >&2
+    return 1
+  fi
 
   python3 scripts/build_weekly_power_macro_intelligence_prompt.py \
     --week-end "$d" \
@@ -122,6 +143,12 @@ run_one() {
     } >"$report_file"
   fi
   rm -f "$report_file.tmp"
+
+  if ! lint_report "$report_file" "$out_dir/report_lint.txt"; then
+    echo "report lint failed; skipped docs copy and issue publish for $d" >&2
+    return 1
+  fi
+
   cp "$report_file" "$docs_report"
 
   if [[ "$publish" == "true" ]]; then
@@ -150,6 +177,17 @@ issue_exists() {
     --search "$title in:title" \
     --json title \
     --jq '.[].title' 2>/dev/null | grep -Fxq "$title"
+}
+
+lint_report() {
+  local report_path="$1"
+  local lint_path="$2"
+  local forbidden_pattern='本文未取得|未確認|取得失敗|Fetch Failures|Source Coverage|HTTP_[0-9]+|FETCH_ERROR|URL_ERROR|ROBOTS_DISALLOW|no_in_range_date_found|metadata_only'
+  if grep -En "$forbidden_pattern" "$report_path" >"$lint_path"; then
+    return 1
+  fi
+  : >"$lint_path"
+  return 0
 }
 
 publish_issue() {
