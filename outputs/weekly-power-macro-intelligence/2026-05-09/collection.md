@@ -1,20 +1,543 @@
 # Weekly Power & Macro Intelligence Collection 2026-05-09
 
 - period: 2026-05-03 to 2026-05-09
-- items: 49
+- items: 90
 - note: 本文未取得またはmetadata_onlyの項目は一覧ページ上のメタデータだけを使用。
 
 ## L0_market_price
 
+### Productivity Booms As Labor Market Shows Signs Of Revival
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-09
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 9, 2026 4 min read / Since ChatGPT was introduced in late November 2022, the AI trade has been mostly focused on the Magnificent-7, especially the big cloud companies, i.e., the "hyperscalers” (chart). For a while, they were all viewed as AI dominators until DeepSeek was released by a Chinese software company in late January 2025. Increasing confidence that US Large Language Models (LLMs) would remain competitive revived the Mag-7's / Ed Yardeni / Toby Hearst / Paid / Productivity Booms As Labor Market Shows Signs Of Revival
+
+### S&P 500 Earnings Season Update: May 8, 2026
+- source: FactSet S&P 500 Earnings Season Update May 8 2026
+- source_class: earnings
+- date: 2026-05-08
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: S&P 500 Earnings Season Update: May 8, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+
+### By John Butters | May 8, 2026
+- source: FactSet S&P 500 Earnings Season Update May 8 2026
+- source_class: earnings
+- date: 2026-05-08
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: By John Butters | May 8, 2026 / At this late stage of the earnings season, the S&P 500 continues to report impressive results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting its highest earnings growth rate since Q4 2021. / Overall, 89% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. If 84% is the actual number for the quarter, it will mark the highest percentage of S&P 500 companies reporting a positive EPS surprise since Q2...
+
+### Earnings-Led Meltup
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-07
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 7, 2026 4 min read paid / When the labor market sneezes, ADP, Paychex, and ManpowerGroup catch colds. The stock prices of all three sold off sharply as hiring cooled starting early last year (chart). But on balance, the latest batch of labor market data suggests that employment conditions may be improving, and employment-related stocks may be bottoming (chart). / We disagree with the widely-held notion that AI is a net job killer. In our opinion, / Ed Yardeni / Elias Griepentrog / Paid / Earnings-Led Meltup
+
+### WEEKLY WEBCAST: Consumers Still Doing What They Do Best
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-06
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 6, 2026 4 min read paid / We have nothing to fear but nothing to fear. Stock investors have been fearless since the S&P 500 fell to the year's low on March 30, when war-related fears peaked. The index has soared 16.1% since then to a new record high. / Yesterday, we explained our Buzz Lightyear Theory (BLT) of the stock market. Investors have concluded that, thanks to AI, demand for " / Ed Yardeni / Elias Griepentrog / Paid / WEEKLY WEBCAST: Consumers Still Doing What They Do Best
+
+### Artificial Intelligence: To Infinity & Beyond!
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-06
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 6, 2026 1 min read paid / Consumer spending is the single biggest driver of US GDP growth, and its remarkable resilience despite lackluster income growth contributes mightily to the resilience of the US economy broadly. Today, Ed and Elias explain why consumer spending has seemed to defy economic gravity and why it should continue to do so. The short answer: our “gen-shaped economy,” shaped by generational dynamics as the Baby Boomers move through life’s / Ed Yardeni / Paid / Artificial Intelligence: To Infinity & Beyond!
+
+### Bond Yields Heating Up
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-05
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 5, 2026 4 min read paid / Before the Age of AI, economists were taught that there are only three factors of production, namely, Land, Labor, and Capital. The job of economists is to optimize the allocation of these scarce resources to maximize output (i.e., real GDP). Now, economists should recognize that there is a fourth factor of production, namely, Data. This resource is unlimited. But until AI, it wasn't very useful because it / Ed Yardeni / Elias Griepentrog / Paid / Bond Yields Heating Up
+
+### The Roaring 2020s Express Train
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-05-03
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 3, 2026 4 min read / The week ahead is chock-full of labor market indicators. In addition, nine Talking Fed Heads on the Federal Open Mouth Committee are on the speaking circuit, with Williams, Bowman, and Goolsbee coming up twice. Despite the elevated oil prices, the stock market continues to levitate to new highs. The price of a barrel of West Texas Intermediate crude hit $110.10 intraweek and closed on Friday at $102.48. / Ed Yardeni / Toby Hearst / Public / The Roaring 2020s Express Train
+
+### ECONOMIC WEEK AHEAD: May 4-8
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-05-03
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: May 3, 2026 5 min read / The stock market balloon is climbing higher, and the burners are firing. It isn't all hot air that is lifting stock prices. It's also earnings revisions, which are increasing for 2026 and 2027. Growth stocks and the Magnificent-7 have reasserted leadership over the past month. Small caps and the Russell 2000 are at fresh record highs too. Investor sentiment remains surprisingly lackluster, leaving plenty of / Ed Yardeni / Toby Hearst / Public / ECONOMIC WEEK AHEAD: May 4-8
+
+### S&P 500 Earnings Season Update: May 1, 2026
+- source: FactSet S&P 500 Earnings Season Update May 1 2026
+- source_class: earnings
+- date: 2026-05-01
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: S&P 500 Earnings Season Update: May 1, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+
+### By John Butters | May 1, 2026
+- source: FactSet S&P 500 Earnings Season Update May 1 2026
+- source_class: earnings
+- date: 2026-05-01
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: By John Butters | May 1, 2026 / Nearly two-thirds of the way through the earnings season, the S&P 500 is reporting impressive results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting its highest earnings growth rate since Q4 2021. / Overall, 63% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. If 84% is the actual number for the quarter, it will mark the highest percentage of S&P 500 companies reporting a positive EPS surprise s...
+
+### No More Mr. Nice Guy
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-30
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 30, 2026 5 min read / Why is the stock market continuing to make new highs? It's doing so because corporate earnings are doing the same, as the economy continues to speed along without stopping for a recession. The latest batch of data certainly drove the stock market higher today, confirming that we are still riding the rails on the Roaring 2020s Express. Nothing seems to stop or derail this train. / (1) GDP. The / Ed Yardeni / Elias Griepentrog / Paid / No More Mr. Nice Guy
+
+### Powell's Swan Song
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-29
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 29, 2026 1 min read paid / Why hasn’t the price of Brent crude oil gone through the roof despite the closure of the Strait of Hormuz since February 28? Ed and Elias explain the anomalous price action. … Also: Why US oil producers aren’t pumped enough by higher energy prices to save the day. … And: How the energy supply crisis is likely to feed into inflation, not just via higher gasoline and fuel prices but / Ed Yardeni / Paid / Powell's Swan Song
+
+### No More Mr. Nice Guy
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-29
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 29, 2026 4 min read paid
+
+### GLOBAL CALL: Why Are Stock Prices Rising Around The World?
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-28
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 28, 2026 4 min read paid / Tomorrow at 2:30 p.m., Jerome Powell will sing his swan song. That will be his last press conference after the latest FOMC meeting. The Senate Banking Committee is scheduled to confirm the nomination of Kevin Warsh to replace Powell tomorrow. The Senate could move to a final vote shortly thereafter. / Powell will likely explain why the FOMC is unlikely to lower the federal funds rate any time soon. / Ed Yardeni / Elias Griepentrog / Paid / GLOBAL CALL: Why Are Stock Prices Rising Around The World?
+
+### MARKET CALL: Devil-May-Care
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-27
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 27, 2026 3 min read paid / Stock markets around the world sold off sharply after the US and Israel attacked Iran on February 28. Despite the blockade of the Strait of Hormuz since the war began, global stock prices have rebounded since the end of March. That is surprising, given that many countries' economies are vulnerable to stagflation and even recessions if oil prices remain elevated and oil shortages occur. Even more surprising is that / Ed Yardeni / Paid / MARKET CALL: Devil-May-Care
+
+### ECONOMIC WEEK AHEAD: April 27-May 1
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-26
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 26, 2026 4 min read paid / In the autumn of 1956, Egypt's Gamal Abdel Nasser nationalized the Suez Canal. Britain, France, and Israel invaded. The canal closed for five months. Two-thirds of Western Europe's oil moved through it, and the price of crude doubled in dollar terms before the year was out. The Dow Jones Industrial Average fell about 10% from its July high to its October low. Tankers were forced / Ed Yardeni / Toby Hearst / Public / ECONOMIC WEEK AHEAD: April 27-May 1
+
+### INFORMATION TECHNOLOGY: Creative Destruction On Speed
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-25
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 25, 2026 4 min read / This is one of the busiest weeks of the year on the economic calendar. Five major central banks meet: the Fed, the Bank of Japan, the Bank of Canada, the European Central Bank, and the Bank of England. Five mega-cap tech names report earnings: Alphabet, Amazon, Meta, Microsoft, and Apple. Wednesday brings the advance Q1-2025 GDP report, and Thursday the March PCED, which will show how much of / Ed Yardeni / Toby Hearst / Public / INFORMATION TECHNOLOGY: Creative Destruction On Speed
+
+### S&P 500 Earnings Season Update: April 24, 2026
+- source: FactSet S&P 500 Earnings Season Update April 24 2026
+- source_class: earnings
+- date: 2026-04-24
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: S&P 500 Earnings Season Update: April 24, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+
+### By John Butters | April 24, 2026
+- source: FactSet S&P 500 Earnings Season Update April 24 2026
+- source_class: earnings
+- date: 2026-04-24
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: By John Butters | April 24, 2026 / Over one-quarter of the way through the earnings season, the S&P 500 is reporting strong results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting double-digit (year-over-year) earnings growth for the 6 th straight quarter. / Overall, 28% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. In aggregate, companies are reporting earnings that are 12.3% above estimates, which is above the 5-year avera...
+
+### Warsh, Rinse, Repeat
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-23
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 23, 2026 4 min read paid / President Donald Trump may have to write a sequel to his 1987 book, "Trump: The Art of the Deal." It's hard to make a deal if you kill your opponent. He said that about Iran today again: "They’re all messed up. They have no idea who their leader is... We took out, really, three levels of leaders... So they have a hard time figuring / Ed Yardeni / Elias Griepentrog / Paid / Warsh, Rinse, Repeat
+
+### S&P 500 Earnings Season Update: April 17, 2026
+- source: FactSet S&P 500 Earnings Season Update April 17 2026
+- source_class: earnings
+- date: 2026-04-17
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: S&P 500 Earnings Season Update: April 17, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+
+### By John Butters | April 17, 2026
+- source: FactSet S&P 500 Earnings Season Update April 17 2026
+- source_class: earnings
+- date: 2026-04-17
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: By John Butters | April 17, 2026 / At this early stage, the first quarter earnings season for the S&P 500 is off to a strong start relative to expectations. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week but still reporting flat earnings relative to the end of the quarter. However, the index is also reporting double-digit (year-over-year) earnings growth for the 6 th straight quarter. / Overall, 10% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 88% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. In aggregate, companies are reporting earnings that are...
+
+### S&P Global S&P 500 EPS, sales, and index level workbook
+- source: S&P Global S&P 500 EPS Estimates
+- source_class: market_metrics
+- date: 2026-01-29
+- observed_date: 2026-05-09
+- url: https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx
+- region: us
+- asset_linkage: equity
+- kafka_use:
+- body_status: structured_metrics
+- evidence_level: spglobal_xlsx
+- is_current_evidence: True
+- snippet: S&P Global S&P 500 EPS estimate workbook. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; official workbook states public files were discontinued after January 2026.
+
+### Yardeni Research YRI Earnings Outlook
+- source: Yardeni Research YRI Earnings Outlook
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeni.com/charts/yri-earnings-outlook/
+- region: us
+- asset_linkage: equity
+- kafka_use:
+- body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
+- snippet: HTTP_308
+
+### Yardeni Research S&P 500 Forward Revenues Earnings Margins
+- source: Yardeni Research S&P 500 Forward Revenues Earnings Margins
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeni.com/charts/sp-500-forward-revenues-earnings-margins/
+- region: us
+- asset_linkage: equity
+- kafka_use:
+- body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
+- snippet: HTTP_308
+
+### Yardeni QuickTakes (Page 5)
+- source: Yardeni Research QuickTakes Archive Page 5
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/5/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 5) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 5 of 150
+Paid
+GLOBAL MARKET CALL: US-Iran Deal Would Boost Go Global Investment Strategy
+May 25, 2026 5 min read paid
+On Sunday night, Reuters reported that oil prices slipped to a two-week low as US-Iran talks seemed to be moving closer to a peace deal. Then again, the news service also reported that President Donald Trump is in no rush to make a deal and that the US will continue to blockade Iran. If so, then Iran will continue to blockade the Strait of Hormuz. Nevertheless, Japan'
+Ed Yardeni
+Toby Hearst
+Paid
+CONSUMER DISCRETIONARY: Another Concentrated Sector
+May 24, 2026 3 min read paid
+We recommend a market-weight position in the S&P 500 Consumer Discretionary sector. At first glance, the sector looks strong. Its stock price ind
+
+### Yardeni QuickTakes (Page 4)
+- source: Yardeni Research QuickTakes Archive Page 4
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/4/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 4) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 4 of 150
+Paid
+WEEKLY WEBCAST: Fed Turning Hawkish
+Jun 3, 2026 1 min read paid
+Today, Dr Ed and Elias set out the case for the Fed to tighten sooner rather than later. Unlike the consensus, which doesn’t expect a rate hike until late this year at the earliest, we see the FOMC raising the federal funds rate in July, after pivoting to a tightening bias at its meeting this month. That would be appropriate given the resilient economy, stable labor market, and rising
+Ed Yardeni
+Paid
+Is Wall Street's AI Boom Spreading To Main Street? Nothing To Fear But FOMO?
+Jun 2, 2026 4 min read paid
+The S&P 500 rose to yet another record high today, rising above 7600 for the first time. On May 11, we raised our year-end S&P 500 target from 7700 to 8250,
+
+### Yardeni QuickTakes (Page 3)
+- source: Yardeni Research QuickTakes Archive Page 3
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/3/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 3) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 3 of 150
+Public
+ECONOMIC WEEK AHEAD: June 15-19
+Jun 13, 2026 3 min read
+The week ahead is dominated by the Fed. Kevin Warsh delivers his first press conference as Fed chair on Wednesday, right after the FOMC releases its policy statement and its Summary of Economic Projections (SEP), which includes the Dot Plot showing meeting participants’ forecasts for the federal funds rate. We expect the Fed to abandon its easing bias and pivot toward a tightening bias.
+The ECB raised its official rate
+Ed Yardeni
+Toby Hearst
+Public
+US MARKET CALL: Roaring 2020s Rockets To Mars & Beyond
+Jun 13, 2026 4 min read
+"Space: the final frontier. These are the voyages of the starship Enterprise. Its five-year mission: to explore strange new worlds, to seek
+
+### Yardeni QuickTakes (Page 2)
+- source: Yardeni Research QuickTakes Archive Page 2
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/2/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 2) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 2 of 150
+Paid
+June's Swoons
+Jun 23, 2026 4 min read paid
+The stock market was hit by another June swoon today. Investors were unnerved by the outcome of last Wednesday's FOMC meeting. The committee participants were more hawkish than expected, according to their Dot Plot. Fed Chair Kevin Warsh abstained from providing his dot, but he came across as very hawkish during his presser, repeatedly stressing the importance of the Fed achieving price stability. Also weighing on AI-related
+Ed Yardeni
+Elias Griepentrog
+Paid
+FEMO Lifting Economic Growth & Foreigners Lifting US Stocks
+Jun 22, 2026 4 min read paid
+In the spectrum of bullish stock markets, there are two polar opposites. The first is driven by FOMO, the Fear of Missing Out, which i
+
 ### Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team
 - source: Yardeni Research Morning Briefings
 - source_class: market_expectation
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.yardeniquicktakes.com/
 - region: us
 - asset_linkage: equity, rates, ai_capex
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team Skip to content
 Home
 Posts
@@ -44,15 +567,361 @@ QuickTakes is my go-to for level-headed, fact-based market analysis. Ed cuts thr
 Robert K.
 I've been following Dr. Ed my whole career from way back in the Prudential Bache days. QuickTakes is the most practical thing he's ever create
 
+### Stock Market | News, Analysis, Updates, Charts | Yardeni QuickTakes
+- source: Yardeni QuickTakes Stock Market Archive
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/tag/stock-market/
+- region: us
+- asset_linkage: equity
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Stock Market | News, Analysis, Updates, Charts | Yardeni QuickTakes Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Stock Market
+The stock market is driven by two key variables: the earnings estimates of industry analysts and the valuation multiple that investors are will to pay for those expectations. These QuickTakes monitor the latest developments relevant to stock investors.
+Page 1 of 20
+Public
+US MARKET CALL: AI Fatigue Weighs On The 'Lag-7'
+Jun 27, 2026 4 min read
+As we predicted, the S&P 500 had a June Swoon. We expected that it would be more of a broadening rotation than a widespread correction. That's the way it played out. The S&P 500 market-weighted stock price index peaked at a record high of 7,609.78 on June 2 (chart). It fell 3.4% through Friday's close. Over that same
+Ed Yardeni
+Toby Hearst
+Paid
+Ju
+
+### Relief Rally Ends Correction Risk
+- source: Yardeni QuickTakes Relief Rally Ends Correction Risk
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Relief Rally Ends Correction Risk Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Mar 31, 2026 3 min read JOLTS
+Relief Rally Ends Correction Risk
+Ed Yardeni
+Elias Griepentrog
+Today's powerful relief rally in the stock market was fueled by news that President Donald Trump intends to declare victory in the war with Iran, according to an article in this morning's Wall Street Journal . Around noon, the market moved higher still on a report that the President of Iran said his country is ready to end the war if the US agrees to its 5-point peace plan. Then, after the market closed, around 6:30 pm EST, Trump told reporters that the US would be leaving the war zone in 2-3 weeks. His press secretary announced that the President will deliver a formal Address to the Nation Wednesday night at 9:00 pm. He certainly won't be a
+
+### S&P 500 Earnings Season Preview: Q2 2026
+- source: FactSet S&P 500 Earnings Season Preview Q2 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-preview-q2-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Preview: Q2 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Preview: Q2 2026
+Earnings
+By John Butters | July 2, 2026
+Heading into the start of the earnings season, analysts and companies have been more optimistic than normal in their earnings outlooks for the second quarter. As a result, estimated earnings for the S&P 500 for the second quarter are higher today compared to
+
+### S&P 500 Earnings Season Preview: Q1 2026
+- source: FactSet S&P 500 Earnings Season Preview Q1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/sp-500-earnings-season-preview-q1-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Preview: Q1 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Preview: Q1 2026
+Earnings
+By John Butters | April 2, 2026
+Heading into the start of the earnings season, analysts and companies have been more optimistic than normal in their earnings outlooks for the first quarter. As a result, estimated earnings for the S&P 500 for the first quarter are higher today compared to
+
+### Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+- source: FactSet Quarterly EPS Estimates May 29 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+Earnings
+By John Butters | May 29, 2026
+Given concerns in the market about higher oil and gas prices, have analysts lowered EPS estimates more than normal for S&P 500 companies for the second
+
+### Market Is Punishing Negative EPS Surprises More Than Average for Q1
+- source: FactSet Negative EPS Surprises Q1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Market Is Punishing Negative EPS Surprises More Than Average for Q1
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Market Is Punishing Negative EPS Surprises More Than Average for Q1
+Earnings
+By John Butters | May 11, 2026
+To date, 89% of the companies in the S&P 500 have reported earnings for the first quarter. Of these companies, 84% have reported actual EPS above the mean EPS estimate, which is above the 5-year average o
+
+### FactSet Insight - Commentary and research from our desk to yours | Earnings (3)
+- source: FactSet Insight Earnings Archive Page 3
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/topic/earnings/page/3
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: FactSet Insight - Commentary and research from our desk to yours | Earnings (3)
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+FactSet Insight
+Join your peers in reading the latest perspectives and insights from FactSet experts across topics that matter to you.
+Blog Posts
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+April 2, 2026
+S&P 500 Earnings Season Preview: Q1 2026
+Stay updated on the S&P 500 with this earnings insight from FactSet, featuring a preview of the Q1 20
+
 ### FactSet Insight - Commentary and research from our desk to yours | Earnings
 - source: FactSet Insight Earnings
 - source_class: earnings
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://insight.factset.com/topic/earnings
 - region: us
 - asset_linkage: equity, ai_capex
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: FactSet Insight - Commentary and research from our desk to yours | Earnings
 FactSet.com
 Support
@@ -94,39 +963,186 @@ Energy
 Sustainable Investment
 Risk, Performance, and Reporti
 
+### FactSet Insight - Commentary and research from our desk to yours (7)
+- source: FactSet Insight Archive Page 7
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/page/7
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: FactSet Insight - Commentary and research from our desk to yours (7)
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+FactSet Insight
+Join your peers in reading the latest perspectives and insights from FactSet experts across topics that matter to you.
+Blog Posts
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+April 6, 2026
+Highest Number of S&P 500 Companies Issuing Positive EPS Guidance in 5 Years
+Explore the outlook on Q1 with this FactSet earnings report of S&P 500 compa
+
+### Earnings Insight Infographic: Q1 2026 By the Numbers
+- source: FactSet Earnings Insight Infographic Q1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Earnings Insight Infographic: Q1 2026 By the Numbers
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Earnings Insight Infographic: Q1 2026 By the Numbers
+Earnings
+By John Butters | June 2, 2026
+Each week, Earnings Insight offers analysis of critical trends in the S&P 500. Here are key highlights of the first quarter 2026 earnings season.
+This blog post is for informational purposes only. The information contained in this blo
+
 ### FactSet Earnings Insight
 - source: FactSet Earnings Insight
 - source_class: earnings
-- date: 2026-05-09
-- url: https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight.pdf
+- date: not_detected
+- observed_date: 2026-05-09
+- url: https://www.factset.com/earningsinsight
 - region: us
 - asset_linkage: equity, ai_capex
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
-- snippet: HTTP_404
+- evidence_level: fetch_error
+- is_current_evidence: False
+- snippet: PDF_METADATA_ONLY
 
 ### CME FedWatch Tool
 - source: CME FedWatch Tool
 - source_class: market_expectation
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
 - region: us
 - asset_linkage: rates, fx, equity
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: FETCH_ERROR_TimeoutError
+
+### Ed Yardeni
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: 2026-05-04
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: weak_title
+- evidence_level: weak_title
+- is_current_evidence: False
+- snippet: May 4, 2026 4 min read paid / Today, the US launched Project Freedom, deploying 15,000 service members and over 100 aircraft to escort stranded commercial vessels through the Strait of Hormuz. The first two US-flagged merchant tankers were successfully escorted this morning. However, Iran struck the UAE's Fujairah energy hub and a UAE oil tanker and damaged residential areas in Oman. US forces destroyed six Iranian small boats and intercepted multiple missiles and / Ed Yardeni / Elias Griepentrog / Prev Page 6 of 150 Next / Daily insights, focused news, clear charts, weekly video webcasts, and much more. Posted by Dr Ed Yardeni and his research team. / Join 24,000+ Subscribers / No ads. No fluff. Ever. / Facebook Twitter Bluesky Discord Github Instagram Linkedin Mastodon Pinterest Reddit Telegram Threads Tiktok Whatsapp Youtube RSS / ©2026 Yardeni QuickTakes / Published with Ghost & B...
+
+### Ed Yardeni
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-22
+- observed_date: 2026-05-09
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: weak_title
+- evidence_level: weak_title
+- is_current_evidence: False
+- snippet: Apr 22, 2026 5 min read paid / We are Fed Watchers. In his Senate Banking Committee hearing yesterday, Kevin Warsh suggested that under his leadership, we might have less to watch. He advocated ending current "forward guidance" practices, which means no more quarterly Summary of Economic Projections, including the Dot Plot (chart). He suggested that a press conference after FOMC meetings should only be held when there is "important news" to deliver, rather / Ed Yardeni / Elias Griepentrog / Prev Page 7 of 150 Next / Daily insights, focused news, clear charts, weekly video webcasts, and much more. Posted by Dr Ed Yardeni and his research team. / Join 24,000+ Subscribers / No ads. No fluff. Ever. / Facebook Twitter Bluesky Discord Github Instagram Linkedin Mastodon Pinterest Reddit Telegram Threads Tiktok Whatsapp Youtube RSS / ©2026 Yardeni QuickTakes / Published with Ghost & Brief & PUSH
 
 ## L1_central_bank
 
 ### 金融政策決定会合の運営  : 日本銀行 Bank of Japan
 - source: 日本銀行 金融政策決定会合
 - source_class: central_bank
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.boj.or.jp/mopo/mpmsche_minu/index.htm
 - region: japan
 - asset_linkage: rates, fx, equity
 - kafka_use: jgb_yield_regime, yen_regime, nikkei_valuation, bank_stocks, softbank_nav_discount
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 金融政策決定会合の運営 : 日本銀行 Bank of Japan
 このページの本文へ移動
 日本語
@@ -215,12 +1231,15 @@ English
 ### 経済・物価情勢の展望（展望レポート）  : 日本銀行 Bank of Japan
 - source: 日本銀行 経済・物価情勢の展望
 - source_class: central_bank
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.boj.or.jp/mopo/outlook/index.htm
 - region: japan
 - asset_linkage: rates, fx, equity
 - kafka_use: jgb_yield_regime, yen_regime, nikkei_valuation, softbank_nav_discount
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 経済・物価情勢の展望（展望レポート） : 日本銀行 Bank of Japan
 このページの本文へ移動
 日本語
@@ -309,23 +1328,29 @@ English
 ### 日本銀行 公表予定
 - source: 日本銀行 公表予定
 - source_class: central_bank
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.boj.or.jp/research/rs_all/rel/index.htm
 - region: japan
 - asset_linkage: rates, fx
 - kafka_use: jgb_yield_regime, yen_regime, event_calendar
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### Federal Reserve Board - News & Events
 - source: Federal Reserve News & Events
 - source_class: central_bank
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.federalreserve.gov/newsevents.htm
 - region: us
 - asset_linkage: rates, fx, equity, credit
 - kafka_use: us_equity_discount_rate, nasdaq_swing_regime, ai_stock_duration_risk, usd_jpy, global_liquidity
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: ﻿ Federal Reserve Board - News & Events Skip to main content
 An official website of the United States Government
 Here's how you know
@@ -362,12 +1387,15 @@ Boa
 ### The Fed - Meeting calendars and information
 - source: Federal Reserve FOMC
 - source_class: central_bank
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 - region: us
 - asset_linkage: rates, fx, equity, credit
 - kafka_use: us_equity_discount_rate, nasdaq_swing_regime, usd_jpy, global_liquidity
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: ﻿ The Fed - Meeting calendars and information Skip to main content
 An official website of the United States Government
 Here's how you know
@@ -405,23 +1433,29 @@ Toggle Dropdown Me
 ### 首相官邸 経済財政諮問会議
 - source: 首相官邸 経済財政諮問会議
 - source_class: fiscal_state
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.kantei.go.jp/jp/singi/keizaisaisei/
 - region: japan
 - asset_linkage: equity, rates, manufacturing, ai_capex
 - kafka_use: japan_reflation, semiconductor_subsidy_theme, domestic_ai_policy
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 入札カレンダー : 財務省
 - source: 財務省 国債入札カレンダー
 - source_class: fiscal_state
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.mof.go.jp/jgbs/auction/calendar/index.htm
 - region: japan
 - asset_linkage: rates, fx
 - kafka_use: jgb_supply_pressure, yen_regime, bank_stocks
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: ﻿ 入札カレンダー : 財務省
 このページの本文へ移動
 English
@@ -519,23 +1553,29 @@ English
 ### 経産省 AI・半導体産業基盤強化フレーム
 - source: 経産省 AI・半導体産業基盤強化フレーム
 - source_class: fiscal_state
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.meti.go.jp/policy/mono_info_service/ai_semiconductor_frame/ai_semiconductor_frame.html
 - region: japan
 - asset_linkage: ai_capex, manufacturing, equity
 - kafka_use: semiconductor_subsidy_theme, manufacturing_capex, domestic_ai_policy
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### 月例経済報告 - 内閣府
 - source: 内閣府 月例経済報告
 - source_class: fiscal_state
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www5.cao.go.jp/keizai3/getsurei/getsurei-index.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
 - kafka_use: japan_reflation, manufacturing_capex, consumption_regime
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 月例経済報告 - 内閣府
 内閣府ホーム
 内閣府の政策
@@ -593,12 +1633,15 @@ English
 ### Presidential Actions – The White House
 - source: White House Presidential Actions
 - source_class: us_executive_power
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.whitehouse.gov/presidential-actions/
 - region: us
 - asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
 - kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Presidential Actions – The White House
 Menu
 Search
@@ -655,12 +1698,15 @@ Office of the National Cybe
 ### China Section 301-Tariff Actions and Exclusion Process | United States Trade Representative
 - source: USTR Presidential Tariff Actions
 - source_class: us_executive_power
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://ustr.gov/issue-areas/enforcement/section-301-investigations/tariff-actions
 - region: us
 - asset_linkage: equity, fx, commodity, manufacturing
 - kafka_use: tariff_inflation, us_japan_supply_chain, semiconductor_export_control
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: China Section 301-Tariff Actions and Exclusion Process | United States Trade Representative
 Skip to main content
 Trade Agreements
@@ -708,12 +1754,15 @@ Leadership
 ### Press Releases | U.S. Department of the Treasury
 - source: U.S. Treasury Press Releases
 - source_class: us_executive_power
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://home.treasury.gov/news/press-releases
 - region: us
 - asset_linkage: rates, fx, credit
 - kafka_use: long_rate_risk, global_liquidity, sanctions
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Press Releases | U.S. Department of the Treasury Skip to main content
 An official website of the United States government
 Here’s how you know
@@ -750,36 +1799,70 @@ Tribal and Native Affairs
 ### U.S. Commerce BIS Newsroom
 - source: U.S. Commerce BIS Newsroom
 - source_class: us_executive_power
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.bis.gov/newsroom
 - region: us
 - asset_linkage: ai_capex, manufacturing, equity
 - kafka_use: ai_geopolitics, semiconductor_export_control, us_japan_supply_chain
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ## L3_frontier_ai_lab
 
-### OpenAI Research
+### Research | OpenAI
 - source: OpenAI Research
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://openai.com/research/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: ai_capex, enterprise_ai_adoption, ai_governance
-- body_status: metadata_only
-- snippet: HTTP_403
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Research | OpenAI
+Skip to main content
+Research
+Products
+Business
+Developers
+Company
+Foundation (opens in a new window)
+Log in Try ChatGPT (opens in a new window)
+Research
+Products
+Business
+Developers
+Company
+Foundation (opens in a new window)
+Try ChatGPT (opens in a new window) Login
+OpenAI
+Research
+Pioneering research on the path to AGI
+We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Our mission is to ensure that AGI benefits all of humanity.
+View research index Learn about safety
+Focus areas
+We use Deep Learning to leverage large amounts of data and advanced reasoning to train AI systems for task completion.
+GPT
+OpenAI’s GPT series models are fast, versatile, and cost-efficient AI systems designed to understand context, generate content, and reason across text, images, and more.
+A new class of intelligence
 
 ### OpenAI News | OpenAI
 - source: OpenAI News
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://openai.com/news/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: OpenAI News | OpenAI
 Skip to main content
 Research
@@ -830,12 +1913,15 @@ OpenAI and Broadcom unveil LLM-optimized infer
 ### Home | NVIDIA Newsroom
 - source: NVIDIA Newsroom
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://nvidianews.nvidia.com/
 - region: us
 - asset_linkage: ai_capex, equity, manufacturing
 - kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Home | NVIDIA Newsroom
 PLATFORMS
 Autonomous Machines
@@ -885,24 +1971,30 @@ ISC High Performance 2026 -- NVIDIA
 ### Microsoft Source
 - source: Microsoft Source
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://news.microsoft.com/source/
 - region: us
 - asset_linkage: ai_capex, equity
 - kafka_use: microsoft_azure_demand, enterprise_ai_adoption, ai_capex
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Microsoft Source
 Skip to main content Source Signal blog Official Microsoft Blog Microsoft On The Issues Asia Canada Europe, Middle East and Africa Latin America The Code of Us Conexiones What's new today AI Innovation Digital Transformation Sustainability Security Work & Life Diversity & Inclusion Unlocked Microsoft 365 Azure Copilot Windows Surface XBOX Deals Small Business Support Windows Apps Outlook OneDrive Microsoft Teams OneNote Microsoft Edge Moving from Skype to Teams Computers Shop XBOX Accessories VR & mixed reality Certified Refurbished Trade-in for cash XBOX Game Pass Ultimate PC Game Pass XBOX games PC games Microsoft AI Microsoft Security Dynamics 365 Microsoft 365 for business Microsoft Power Platform Windows 365 Small Business Digital Sovereignty Azure Microsoft Developer Microsoft Learn Support for AI marketplace apps Microsoft Tech Community Microsoft Marketplace Soft
 
 ### AI & Machine Learning | Google Cloud Blog
 - source: Google Cloud AI Blog
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://cloud.google.com/blog/products/ai-machine-learning
 - region: us
 - asset_linkage: ai_capex, equity
 - kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: AI & Machine Learning | Google Cloud Blog Jump to Content
 Cloud
 Blog
@@ -956,12 +2048,15 @@ Transform with Google Cl
 ### Newsroom \ Anthropic
 - source: Anthropic Newsroom
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.anthropic.com/news
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Newsroom \ Anthropic
 Skip to main content Skip to footer
 Research
@@ -989,12 +2084,15 @@ Intr
 ### AWS News Blog
 - source: AWS News Blog
 - source_class: frontier_ai_lab
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://aws.amazon.com/blogs/aws/
 - region: us
 - asset_linkage: ai_capex, equity
 - kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: AWS News Blog Skip to Main Content
 Filter: All
 English
@@ -1023,12 +2121,15 @@ Learn how Kubernetes version rollbacks for Amazon EKS let you reverse cluster up
 ### Sam Altman
 - source: Sam Altman Blog
 - source_class: ai_power_ideology
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://blog.samaltman.com/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: openai_strategy, agi_governance, ai_democratization, ai_power_concentration, sbg_openai_valuation_narrative
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Sam Altman
 Manage New Post Logout Login
 Sam Altman
@@ -1042,12 +2143,15 @@ Now I am awake in the middle of the night and pissed, and thinking that I have u
 ### Dario Amodei — Policy on the AI Exponential
 - source: Dario Amodei Policy on the AI Exponential
 - source_class: ai_power_ideology
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://darioamodei.com/post/policy-on-the-ai-exponential
 - region: global
 - asset_linkage: ai_capex, rates, equity
 - kafka_use: ai_governance, ai_tax_policy, ai_safety_regime, state_vs_society, geopolitical_ai, long_form_thesis
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Dario Amodei — Policy on the AI Exponential
 Dario Amodei
 Archive
@@ -1060,12 +2164,15 @@ The intersection of AI and our political institutions feels a bit like the Hobbi
 ### Dario Amodei
 - source: Dario Amodei Essays
 - source_class: ai_power_ideology
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://darioamodei.com/
 - region: global
 - asset_linkage: ai_capex, equity
 - kafka_use: ai_governance, ai_safety_regime, geopolitical_ai, long_form_thesis
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: Dario Amodei
 Dario Amodei
 Archive
@@ -1090,15 +2197,46 @@ NYT
 
 ## L5_analyst_interpretation
 
+### 熊谷章太郎／リサーチ・フォーカス No.2026-009 2026年05月08日 原油高がもたらす共和党への逆風―インフレの負担は低中所得層に集中、選挙への影響も―
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-05-08
+- observed_date: 2026-05-09
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 熊谷章太郎／リサーチ・フォーカス No.2026-009 2026年05月08日 原油高がもたらす共和党への逆風―インフレの負担は低中所得層に集中、選挙への影響も―
+
+### 森田一至／リサーチ・アイ No.2026-011 2026年05月07日 FOIPの進化と揺らぐルールに基づく経済秩序―IPEF型枠組みの必要性
+- source: 日本総研 経済・政策レポート
+- source_class: official_macro
+- date: 2026-05-07
+- observed_date: 2026-05-09
+- url: https://www.jri.co.jp/report/year/
+- region: global
+- asset_linkage: equity, rates, fx, manufacturing
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: 森田一至／リサーチ・アイ No.2026-011 2026年05月07日 FOIPの進化と揺らぐルールに基づく経済秩序―IPEF型枠組みの必要性
+
 ### 金融市場レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 - source: 第一ライフ資産運用経済研究所 金融市場レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/type/market.html
 - region: global
 - asset_linkage: equity, rates, fx, commodity
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 金融市場レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1141,45 +2279,57 @@ HOME
 ### 第一ライフ資産運用経済研究所 米国経済レポート
 - source: 第一ライフ資産運用経済研究所 米国経済レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/theme/us.html
 - region: us
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ資産運用経済研究所 欧州経済レポート
 - source: 第一ライフ資産運用経済研究所 欧州経済レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/theme/europe.html
 - region: europe
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ資産運用経済研究所 日本経済レポート
 - source: 第一ライフ資産運用経済研究所 日本経済レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/theme/japan.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### レポート詳細検索  | 第一ライフ資産運用経済研究所
 - source: 第一ライフ資産運用経済研究所 レポート詳細検索
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/report_index.html
 - region: japan
 - asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: レポート詳細検索 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1224,23 +2374,29 @@ HOME
 ### 第一ライフ資産運用経済研究所 アジア・新興国経済レポート
 - source: 第一ライフ資産運用経済研究所 アジア・新興国経済レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/theme/asia.html
 - region: china
 - asset_linkage: equity, fx, commodity, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 第一ライフ研レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 - source: 第一ライフ研レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dlri.co.jp/summary/type/dlri_report.html
 - region: global
 - asset_linkage: equity, rates, fx, ai_capex, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 第一ライフ研レポート | 種類別レポート一覧 | 第一ライフ資産運用経済研究所
 English 第一ライフグループ
 MENU
@@ -1282,12 +2438,15 @@ HOME
 ### 米国経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 米国経済展望
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.jri.co.jp/report/medium/usa/
 - region: us
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 米国経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1386,12 +2545,15 @@ CSR・環境経営の推進
 ### 為替相場展望｜経済・政策レポート｜日本総研
 - source: 日本総研 為替相場展望
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.jri.co.jp/report/medium/exchange/
 - region: global
 - asset_linkage: fx, rates
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 為替相場展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1490,23 +2652,29 @@ CSR・環境経営の推進
 ### 日本総研 欧州経済展望
 - source: 日本総研 欧州経済展望
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.jri.co.jp/report/medium/europe/
 - region: europe
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_404
 
 ### 日本経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 日本経済展望
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.jri.co.jp/report/medium/japan/
 - region: japan
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 日本経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1605,12 +2773,15 @@ CSR・環境経営の推進
 ### 中国経済展望｜経済・政策レポート｜日本総研
 - source: 日本総研 中国経済展望
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.jri.co.jp/report/medium/china/
 - region: china
 - asset_linkage: equity, fx, commodity, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 中国経済展望｜経済・政策レポート｜日本総研
 コンサルティングサービス
 経営コラム
@@ -1709,12 +2880,15 @@ CSR・環境経営の推進
 ### 経済分析 | 大和総研
 - source: 大和総研 経済分析レポート
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.dir.co.jp/report/research/economics/index.html
 - region: global
 - asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 経済分析 | 大和総研
 本文へジャンプ
 用語解説サイト ITソリューションサービスサイト
@@ -1808,34 +2982,43 @@ ESG投資/SDGs
 ### みずほ経済ウィークリー
 - source: みずほ経済ウィークリー
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.mizuho-rt.co.jp/publication/report/research/weekly.html
 - region: global
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### みずほリサーチ&テクノロジーズ 調査本部レポート一覧
 - source: みずほリサーチ&テクノロジーズ 調査本部レポート一覧
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.mizuho-rt.co.jp/publication/report/research/index.html
 - region: global
 - asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
+- kafka_use:
 - body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
 - snippet: HTTP_403
 
 ### 出版・刊行物 | ナレッジ・インサイト | 野村総合研究所(NRI)
 - source: NRI 金融ITフォーカス
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.nri.com/jp/knowledge/publication/kinyu_itf.html
 - region: japan
 - asset_linkage: credit, ai_capex
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 出版・刊行物 | ナレッジ・インサイト | 野村総合研究所(NRI)
 NRI 野村総合研究所
 サービス・ソリューション
@@ -1889,23 +3072,29 @@ NRIマネジメントレビュー
 ### NRI 大崎貞和のPoint of グローバル金融市場
 - source: NRI 大崎貞和のPoint of グローバル金融市場
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.nri.com/jp/knowledge/blog/lst/fis/osaki
 - region: global
 - asset_linkage: equity, rates, fx, credit
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: OK
 
 ### レポート一覧 | レポート | 野村総合研究所(NRI)
 - source: NRI レポート一覧
 - source_class: official_macro
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.nri.com/jp/knowledge/report/list.html
 - region: global
 - asset_linkage: equity, rates, fx, credit, ai_capex
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: レポート一覧 | レポート | 野村総合研究所(NRI)
 NRI 野村総合研究所
 サービス・ソリューション
@@ -1971,39 +3160,20 @@ NRIグループのサステナビリティ経営
 情報セキュリティ対策についての宣言文
 © Nomura Research Institute, Ltd. All rights reserved.
 
-### 熊谷章太郎／リサーチ・フォーカス No.2026-009 2026年05月08日 原油高がもたらす共和党への逆風―インフレの負担は低中所得層に集中、選挙への影響も―
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-05-08
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 熊谷章太郎／リサーチ・フォーカス No.2026-009 2026年05月08日 原油高がもたらす共和党への逆風―インフレの負担は低中所得層に集中、選挙への影響も―
-
-### 森田一至／リサーチ・アイ No.2026-011 2026年05月07日 FOIPの進化と揺らぐルールに基づく経済秩序―IPEF型枠組みの必要性
-- source: 日本総研 経済・政策レポート
-- source_class: official_macro
-- date: 2026-05-07
-- url: https://www.jri.co.jp/report/year/
-- region: global
-- asset_linkage: equity, rates, fx, manufacturing
-- kafka_use: 
-- body_status: list_metadata
-- snippet: 森田一至／リサーチ・アイ No.2026-011 2026年05月07日 FOIPの進化と揺らぐルールに基づく経済秩序―IPEF型枠組みの必要性
-
 ## L6_personal_macro_narrative
 
 ### 人文科学アカデミー｜note
 - source: note 人文科学アカデミー
 - source_class: market_narrative
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://note.com/shennote
 - region: global
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 人文科学アカデミー｜note
 メインコンテンツへスキップ
 人文科学アカデミー
@@ -2036,12 +3206,15 @@ note pro
 ### 炭鉱のカナリア、炭鉱の龍
 - source: Shenmacro 炭鉱のカナリア、炭鉱の龍
 - source_class: market_narrative
-- date: 2026-05-09
+- date: not_detected
+- observed_date: 2026-05-09
 - url: https://www.shenmacro.com/
 - region: global
 - asset_linkage: equity, rates, fx
-- kafka_use: 
+- kafka_use:
 - body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
 - snippet: 炭鉱のカナリア、炭鉱の龍
 炭鉱のカナリア、炭鉱の龍
 ホーム

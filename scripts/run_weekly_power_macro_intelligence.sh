@@ -143,6 +143,7 @@ run_one() {
     } >"$report_file"
   fi
   rm -f "$report_file.tmp"
+  perl -0pi -e 's/[ \t]+$//mg' "$report_file"
 
   if ! lint_report "$report_file" "$out_dir/report_lint.txt"; then
     echo "report lint failed; skipped docs copy and issue publish for $d" >&2
@@ -150,6 +151,7 @@ run_one() {
   fi
 
   cp "$report_file" "$docs_report"
+  python3 scripts/verify_weekly_power_macro_outputs.py --week-end "$d" >"$out_dir/verification.json"
 
   if [[ "$publish" == "true" ]]; then
     publish_issue "$repo" "$title" "$docs_report"
@@ -177,6 +179,17 @@ issue_exists() {
     --search "$title in:title" \
     --json title \
     --jq '.[].title' 2>/dev/null | grep -Fxq "$title"
+}
+
+issue_number() {
+  local repo_name="$1"
+  local title="$2"
+  gh issue list \
+    --repo "$repo_name" \
+    --state all \
+    --search "$title in:title" \
+    --json number,title \
+    --jq ".[] | select(.title == \"$title\") | .number" 2>/dev/null | head -n 1
 }
 
 lint_report() {
@@ -222,8 +235,11 @@ publish_issue() {
     echo "gh not found; skipping issue publish"
     return 0
   fi
-  if issue_exists "$repo_name" "$title"; then
-    echo "issue already exists: $title"
+  local existing_number
+  existing_number="$(issue_number "$repo_name" "$title")"
+  if [[ -n "$existing_number" ]]; then
+    gh issue edit "$existing_number" --repo "$repo_name" --body-file "$body_file" >/dev/null
+    echo "issue updated: $title (#$existing_number)"
     return 0
   fi
   for label in "${labels[@]}"; do

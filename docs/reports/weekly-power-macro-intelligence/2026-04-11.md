@@ -9,184 +9,169 @@ source: agy
 # Weekly Power & Macro Intelligence - 2026-04-11
 
 ## 0. 今週の支配的レジーム
-- **中央銀行**: 本文未取得（日本銀行、Federal Reserve ともに `no_in_range_date_found` または `metadata_only` のため今週の新規方針変更は未確認）。
-- **財政・政府**: 本文未取得（首相官邸経済財政諮問会議、財務省、内閣府、米国ホワイトハウス、財務省とも本文未取得または範囲内日付なし）。
-- **関税・地政学**: 未確認（USTR、米国商務省BISとも本文未取得または範囲外）。日本総研のレポート（2026年4月10日）にて、中東の混乱や米・イラン戦闘停止を踏まえた原油価格の見通し（当面100ドル前後、戦闘再開なら150ドルも）が言及されている。
-- **AI産業**: Frontier AI Lab各社より、エージェント支援ツールおよび次世代モデルの発表。Anthropicは「Claude Sonnet 5」の導入、科学者向けAIワークベンチ「Claude Science」の提供、および他社と共同での脱獄（jailbreak）深刻度評価フレームワークを提案。OpenAIは次世代モデル「GPT-5.6 Sol」のプレビューやBroadcomとの共同でのLLM最適化推論チップ（LLM-optimized infer）の発表、NVIDIAは「BioNeMo Agent Toolkit」の発表を行っている。
-- **AI統治思想**: 急速なAI指数関数的進化（AI Exponential）に対する政治的・制度的対応の遅れ（HobbitsとTreebeardの比喩）と、解釈可能性（Interpretability）や基本透過性ルールの緊急性がDario Amodeiの思想文書にて強調されている。
-
----
+- 中央銀行: FOMC（2026年4月8日リリース情報）の公表を控える・迎える中で、インフレと金利の高止まりリスク（Higher-for-Longer）を警戒する状況。
+- 財政・政府: トランプ大統領が「Power Plant Day」と呼ぶ最終通告期限を設定し、エネルギー・権力構造への介入を辞さない姿勢。日本の財政政策では都道府県間の税源偏在是正策が議論段階。
+- 関税・地政学: 米国とイランの戦闘停止、トランプ大統領の「2-3週間以内の戦闘地域からの撤退表明」および「勝利宣言」意向に伴う一時的緩和（安堵ラリー）がある一方、中東混乱による原油高（100ドル前後、戦闘再開なら150ドルの懸念）がくすぶる。
+- AI産業: ロボティクスへの民間資金流入と競争優位（モート）構築が進展中。
+- AI統治思想: 今週の適格根拠なし
 
 ## 1. 日銀/Fed: 割引率と為替
-- **日銀の変化**: 本文未取得（日本銀行の公表物「金融政策決定会合の運営」「経済・物価情勢の展望」等はすべて `no_in_range_date_found` または `metadata_only` のため未確認）。
-- **Fedの変化**: 本文未取得（Federal Reserve Boardの「News & Events」「Meeting calendars and information」はすべて `no_in_range_date_found` のため未確認）。
-- **CME FedWatchとの乖離**: CME FedWatch Toolのソースが `FETCH_ERROR_TimeoutError`（本文未取得）のため乖離状況は未確認。
-- **円金利・ドル円・日本株への示唆**: 日本総研の為替相場展望（2026年4月6日）では、ドル円およびユーロは「先行き横ばい圏で推移」と分析されている。また、個人マクロ解説（Shenmacro、2025年12月11日時点）では「通貨防衛のための利上げが迫る」との記述があるが、今週時点の公式判断は横ばい圏予測にとどまる。
-
----
+- 日銀の変化: 今週の適格根拠なし
+- Fedの変化: 2026年4月8日にFOMC関連文書（4月28-29日会合分スケジュール・議事要旨等）がリリース。ドル金利高止まり（Higher-for-Longer）懸念が株価バリュエーションの重石となっている。
+- CME FedWatchとの乖離: 今週の適格根拠なし
+- 円金利・ドル円・日本株への示唆: 日本総研の為替相場展望（2026年4月6日）では、先行きドル円は「横ばい圏で推移」と予測される一方、中東情勢の混乱が下押しリスク（近畿短観景況感への影響含め）として警戒されている。
 
 ## 2. 日本政府/トランプ政権: 国家政策ショック
-- **日本の財政・産業政策**: 本文未取得（首相官邸経済財政諮問会議および経産省のAI・半導体産業基盤強化フレームはいずれも `metadata_only` / `HTTP_404` / `HTTP_403` のため未確認）。
-- **JGB需給**: 本文未取得（財務省国債入札カレンダーが `no_in_range_date_found` のため未確認）。
-- **AI・半導体政策**: 本文未取得（経産省AI・半導体産業基盤強化フレームが `HTTP_403` のため未確認）。
-- **米国関税・輸出管理**: 本文未取得（USTRのSection 301や商務省BIS Newsroomが `no_in_range_date_found` または `HTTP_404` のため未確認）。
-- **日本企業への波及**: 日本総研のレポート（2026年4月8日）によると、「2026年夏季賞与の見通し」は想定外に良好な企業収益を支えに増勢を維持する見通しであるが、中東情勢の混乱が下押しリスクとして指摘されている。また近畿短観（2026年3月調査）では景況感は横ばい。
-
----
+- 日本の財政・産業政策: 日本総研レポート（2026年4月10日）において、都道府県間の税源偏在是正策が課題として浮上。財政力格差の実態把握と税のあるべき論の徹底が求められている。
+- JGB需給: 今週の適格根拠なし
+- AI・半導体政策: 今週の適格根拠なし
+- 米国関税・輸出管理: 今週の適格根拠なし
+- 日本企業への波及: 2026年夏季賞与の見通し（2026年4月8日）は想定外に良好な企業収益を背景に「増勢を維持」と予測されているが、中東情勢の混乱による原油価格高騰が企業業績の下振れリスクとして指摘されている。
 
 ## 3. OpenAI/Anthropic: AI産業カーブ
-- **モデル/製品の進化**: 
-  - Anthropicは、フロントエンド性能を高めた「Claude Sonnet 5」（[Anthropic Newsroom](https://www.anthropic.com/news)）および科学者向けカスタムアプリ「Claude Science」を発表。
-  - OpenAIは、次世代モデル「GPT-5.6 Sol」のプレビューおよびシステムカードを公開（[OpenAI News](https://openai.com/news/)）。
-- **enterprise adoption**: OpenAIはHPがエンタープライズ全体で初期のAI成果をスケールさせている事例を報告（[OpenAI News](https://openai.com/news/)）。
-- **AI safety / regulation**: Anthropicは、Amazon、Microsoft、Googleなど他のGlasswingパートナーと共に、業界全体での脱獄（jailbreak）深刻度評価フレームワークを提案（[Anthropic Newsroom](https://www.anthropic.com/news)）。またOpenAIは「GPT-5.6 Preview System Card」を公開（[OpenAI News](https://openai.com/news/)）。
-- **compute需要**: OpenAIとBroadcomがLLMに最適化された共同推論チップ（LLM-optimized infer）を発表（[OpenAI News](https://openai.com/news/)）。NVIDIAは欧州で新たに記録的な35台のNVIDIA AIスーパーコンピューターが公開されたことを発表（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
-- **SBG NAV / AI株への示唆**: エージェント機能の製品実装（BioNeMo Agent Toolkit、Claude Sonnet 5のマルチエージェント性能向上、Broadcom提携等）の加速により、AIインフラおよびエージェントレイヤーの企業価値（SBGのNAV構成要素を含む）への正の影響が示唆される。
-
----
+- モデル/製品の進化: 今週の適格根拠なし
+- enterprise adoption: 今週の適格根拠なし
+- AI safety / regulation: 今週の適格根拠なし
+- compute需要: 今週の適格根拠なし
+- SBG NAV / AI株への示唆: 今週の適格根拠なし
 
 ## 4. Altman/Dario: AI権力思想
-- **今週の思想的変化**: 
-  - Dario Amodei（[Dario Amodei Essays](https://darioamodei.com/)）は、「Policy on the AI Exponential」（2026年6月）において、AIの指数関数的成長スピードと政治制度・ガバナンス機関の意思決定スピードの乖離（指輪物語のHobbitsとTreebeardの比喩）を指摘。
-  - Sam Altman（[Sam Altman Blog](https://blog.samaltman.com/)）は、自身と家族に対する現実の脅威（自宅への火炎瓶投擲事件）を引き合いに出し、AIに対する強い不安や言葉・ナラティブが持つ扇動的な力について言及。
-- **国家との距離**: Dario Amodeiは、政治制度が技術の指数関数的変化に追いつくための政策的対話と枠組みの必要性を提示。
-- **規制への姿勢**: Dario Amodeiは「AIは基本的な透明性ルールを必要とする（AI Needs Basic Transparency Rules）」と主張。また、「Interpretability（解釈可能性）の緊急性」を説く。
-- **民主化/集中/安全保障の論点**: 輸出規制（On DeepSeek and Export Controls）に関する論考も含まれており、AI最先端技術の輸出管理と安全保障の相克が議論の中心となっている。
-- **投資テーマへの意味**: 規制当局のスピード感を超える技術の指数関数的進化に対し、業界主導の自主規制（Glasswingパートナーによるjailbreak枠組みなど）が先行する可能性が高く、標準化を握るアライアンス企業への資金集中が予想される。
-
----
+- 今週の思想的変化: 今週の適格根拠なし
+- 国家との距離: 今週の適格根拠なし
+- 規制への姿勢: 今週の適格根拠なし
+- 民主化/集中/安全保障の論点: 今週の適格根拠なし
+- 投資テーマへの意味: 今週の適格根拠なし
 
 ## 5. 投資仮説の更新
-- **米株スイング**: 日本総研の分析（井上肇、2026年4月9日）「高まる米国企業の収益力」より、米国企業の収益力向上が下値を支える一方、中東の混乱（原油価格100〜150ドルリスク）が上値を抑えるレンジ相場を想定。
-- **日経/日本株**: 日本総研の夏季賞与見通しに見る「想定外に良好な企業収益」が下支え要因。中東情勢の混乱に伴うエネルギーコスト上昇による企業収益の下押しリスクを監視。
-- **SBG NAV**: BroadcomとOpenAIのカスタムチップ提携、Anthropicの「Claude Sonnet 5」発表、NVIDIAの欧州での35台の新規AIスパコン導入等は、半導体・AIポートフォリオ企業のNAV成長期待を強化。
-- **AI半導体**: OpenAI×BroadcomのLLM最適化チップ共同発表およびNVIDIAのBioNeMo Agent Toolkitと欧州新規スパコン実績から、カスタムASIC（Broadcom）とGPU巨頭（NVIDIA）双方への二極化需要が強まる。
-- **製造業・素材**: 未確認（主要各省の公式産業政策、経済財政諮問会議、BIS等の公式アップデートは本文未取得のため、前提変化なし）。
-- **為替・金利**: 日本総研（2026年4月6日）の「ドル円：先行き横ばい圏で推移」の見通しに基づき、明確な日米金利差縮小シナリオが顕在化するまでは現行レンジでの推移を前提とする。
-
----
+- 米株スイング: Yardeni Research（2026年4月5日）は、S&P 500が1月27日高値から9.1%下落した時点をプルバックのボトム（大底）と判定。FactSet（2026年4月2日）によれば、S&P 500のQ1 2026業績予想は期初より上方修正され、6四半期連続の2桁増益が予想されるなどファンダメンタルズは強い。中東戦闘停止に伴う安堵ラリーが継続するか、高止まりする金利・原油価格（100ドル超え）が上値を抑えるかが焦点。
+- 日経/日本株: 日本総研（2026年4月8日）の夏季賞与予測が示すように企業収益は想定外に良好。しかし中東混乱に伴うエネルギー価格上昇が下押しリスク。
+- SBG NAV: 今週の適格根拠なし
+- AI半導体: ロボティクス分野への民間資本・スケール拡大（FactSet, 2026年3月31日）が新たな需要の柱として台頭しつつある。
+- 製造業・素材: 原油価格が100ドル前後で推移する中、米国バイデン・トランプ政権のエネルギー政策対立（トランプ氏の「すぐには掘りまくれない米国」の実態や「Power Plant Day」発言）により、エネルギーコスト高止まりへの耐性が製造業に求められる。
+- 為替・金利: ドル円は当面「横ばい圏で推移」（日本総研, 2026年4月6日）。中東地政学の展開が有事のドル買いや円売りどちらに振れるか監視が必要。
 
 ## 6. 反証リスト
-- **既存仮説と矛盾した情報**: 
-  - 米国の利下げサイクルに伴う急激なドル安・円高シナリオに対して、日本総研の見通し（2026年4月6日）は「ドル円：先行き横ばい圏で推移」としている点。
-  - トランプ政権の「掘りまくれ（Drill, baby, drill）」政策による原油価格の早期下落仮説に対し、日本総研（山田久、2026年4月10日）「すぐには『掘りまくれ』ない米国」および（石川智久、2026年4月10日）「当面100ドル前後で推移、戦闘再開なら150ドルも」という原油価格高止まりの指摘。
-- **重み**: 中
-- **対応**: ポートフォリオにおけるエネルギーコスト耐性の再評価、およびドル円のレンジ幅想定の維持。
-
----
+- 既存仮説と矛盾した情報: トランプ大統領がイランとの戦闘について「2-3週間での離脱・勝利宣言」へ動いたこと（Yardeni Research, 2026年3月31日）。これにより早期のイラン攻撃による原油150ドル化という最悪シナリオの確率が一時的に低下。
+- 重み: 中
+- 対応: 戦闘再開およびイランの5ポイント平和プランへの米国側対応、トランプ大統領の最終通告（Power Plant Day）期限に焦点を当て、原油が100ドルを突破して高止まりするかどうかを監視条件とする。
 
 ## 7. 来週の行動
-- **売買**: 原油価格100ドル台定着を見越し、インフレ耐性株・米国高収益バリュー株の監視。半導体セクターはASIC（Broadcom関連）およびエージェント関連の選別。
-- **調査**: 経産省「AI・半導体産業基盤強化フレーム」および内閣府「月例経済報告」の本文取得と具体的な補助金・制度変更の精査。
-- **発信**: note/Scrapboxにて「Dario Amodeiが唱えるAI Exponentialと政治（Hobbits & Treebeard）の速度差」についての論考記事を作成。
-
----
+- 売買: S&P 500 Q1決算シーズンの本格化（FactSet Earnings Season Preview Q1 2026）に伴い、上方修正されているEPS実績の進捗を確認しつつ、金利・原油価格高止まりを織り込み済みの水準で米株指数のスイング買いポジションを維持。
+- 調査: 米国企業の収益力が高まる要因（日本総研「高まる米国企業の収益力」2026年4月9日）およびロボティクスへの民間資金流入（FactSet「The Robotics Surge」2026年3月31日）の背景要因の深掘り。
+- 発信: 中東混乱が日本企業（夏季賞与・関西経済）に与える影響と、原油価格高騰がもたらす「すぐには掘りまくれない米国」の構造的課題についてのブログ記事化。
 
 ## 8. 重要ソースTop 10
 
-1. **Introducing Claude Sonnet 5**
-   - **source**: Anthropic Newsroom
-   - **layer**: L3_frontier_ai_lab
-   - **source_class**: frontier_ai_lab
-   - **published_date**: 2026-06-30
-   - **url**: [https://www.anthropic.com/news](https://www.anthropic.com/news)
-   - **KAFKAにとっての意味**: Frontierモデルの世代更新による生産性・エージェント能力の向上。
-   - **使途**: 投資（AIソフトウェア・インフラ株評価）
+1. **S&P 500 Earnings Season Preview Q1 2026**
+   - **source**: FactSet
+   - **layer**: L0_market_price
+   - **source_class**: earnings
+   - **published_date**: 2026-04-02
+   - **url**: [sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
+   - **KAFKAにとっての意味**: Q1業績予想が期初から0.4%上方修正され、6四半期連続の2桁増益となる見通し。強固な企業業績が株価の底堅さを支える根拠。
+   - **投資・研究・記事化のどれに使えるか**: 投資（米株スイング）
 
-2. **Previewing GPT-5.6 Sol: a next-generation model**
-   - **source**: OpenAI News
-   - **layer**: L3_frontier_ai_lab
-   - **source_class**: frontier_ai_lab
-   - **published_date**: 2026-06-26
-   - **url**: [https://openai.com/news/](https://openai.com/news/)
-   - **KAFKAにとっての意味**: 次世代主力モデル（GPT-5.6）のプレビュー開始によるAI性能ロードマップの明確化。
-   - **使途**: 投資（AIエコシステム動向分析）
+2. **MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates**
+   - **source**: Yardeni Research
+   - **layer**: L0_market_price
+   - **source_class**: market_metrics
+   - **published_date**: 2026-04-05
+   - **url**: [Yardeni QuickTakes](https://www.yardeniquicktakes.com/tag/stock-market/)
+   - **KAFKAにとっての意味**: S&P 500が1月27日高値から9.1%下落した時点がプルバックの底であると判断。トランプ大統領の「Power Plant Day」発言の市場影響。
+   - **投資・研究・記事化のどれに使えるか**: 投資（米株スイング）
 
-3. **OpenAI and Broadcom unveil LLM-optimized infer**
-   - **source**: OpenAI News
-   - **layer**: L3_frontier_ai_lab
-   - **source_class**: frontier_ai_lab
-   - **published_date**: 2026-06-25
-   - **url**: [https://openai.com/news/](https://openai.com/news/)
-   - **KAFKAにとっての意味**: カスタムシリコン（Broadcom提携）による推論コスト低下とチップ勢力図の変化。
-   - **使途**: 投資（半導体セクター・Broadcom評価）
+3. **Relief Rally Ends Correction Risk**
+   - **source**: Yardeni Research
+   - **layer**: L0_market_price
+   - **source_class**: market_metrics
+   - **published_date**: 2026-03-31
+   - **url**: [Yardeni QuickTakes](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/)
+   - **KAFKAにとっての意味**: トランプ大統領のイラン戦闘離脱・勝利宣言の意向表明によるショートカバー・安堵ラリーのトリガー分析。
+   - **投資・研究・記事化のどれに使えるか**: 投資・記事化
 
-4. **Policy on the AI Exponential**
-   - **source**: Dario Amodei Policy on the AI Exponential
-   - **layer**: L4_ai_power_ideology
-   - **source_class**: ai_power_ideology
-   - **published_date**: 2026-06-01 (単行本/ポスト内表記による)
-   - **url**: [https://darioamodei.com/post/policy-on-the-ai-exponential](https://darioamodei.com/post/policy-on-the-ai-exponential)
-   - **KAFKAにとっての意味**: AI最先端企業のガバナンスと政治機関の対立構造の理解。
-   - **使途**: 研究・記事化
-
-5. **NVIDIA Announces BioNeMo Agent Toolkit**
-   - **source**: NVIDIA Newsroom
-   - **layer**: L3_frontier_ai_lab
-   - **source_class**: frontier_ai_lab
-   - **published_date**: 2026-04-11
-   - **url**: [https://nvidianews.nvidia.com/](https://nvidianews.nvidia.com/)
-   - **KAFKAにとっての意味**: バイオ/ライフサイエンス領域でのエージェント社会実装の進展。
-   - **使途**: 研究・投資
-
-6. **米・イラン戦闘停止を踏まえ、今後の原油価格をどうみるか**
-   - **source**: 日本総研 経済・政策レポート（石川智久）
+4. **原油市場展望2026年4月号 ～トピック：すぐには「掘りまくれ」ない米国**
+   - **source**: 日本総研 経済・政策レポート
    - **layer**: L5_analyst_interpretation
    - **source_class**: official_macro
    - **published_date**: 2026-04-10
-   - **url**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
-   - **KAFKAにとっての意味**: 原油100-150ドルシナリオによるマクロインフレ・金利高止まりリスクの提示。
-   - **使途**: 投資（マクロ・エネルギー前提更新）
+   - **url**: [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)
+   - **KAFKAにとっての意味**: 米国がトランプ氏の「掘りまくれ（Drill, baby, drill）」政策下でも即座に増産できない構造的課題（労働力や投資規律等）を分析。
+   - **投資・研究・記事化のどれに使えるか**: 研究・記事化
 
-7. **米国経済展望2026年４月号：トピック：高まる米国企業の収益力**
-   - **source**: 日本総研 米国経済展望（井上肇）
+5. **米国経済展望2026年４月号：トピック：高まる米国企業の収益力**
+   - **source**: 日本総研 米国経済展望
    - **layer**: L5_analyst_interpretation
    - **source_class**: official_macro
    - **published_date**: 2026-04-09
-   - **url**: [https://www.jri.co.jp/report/medium/usa/](https://www.jri.co.jp/report/medium/usa/)
-   - **KAFKAにとっての意味**: 米国株のバリュエーションを支えるファンダメンタルズの堅調さの裏付け。
-   - **使途**: 投資（米国株スイング）
+   - **url**: [日本総研 米国経済展望](https://www.jri.co.jp/report/medium/usa/)
+   - **KAFKAにとっての意味**: 米国企業の構造的なマージン・収益力の高さの背景を日本総研の視点から紐解く。
+   - **投資・研究・記事化のどれに使えるか**: 研究・記事化
 
-8. **原油市場展望2026年4月号 ～トピック：すぐには「掘りまくれ」ない米国**
-   - **source**: 日本総研 経済・政策レポート（山田久）
-   - **layer**: L5_analyst_interpretation
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-10
-   - **url**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
-   - **KAFKAにとっての意味**: 米国シェール増産政策の物理的限界とインフレ長期化。
-   - **使途**: 投資・記事化
+6. **The Robotics Surge: Scale, Private Capital, and Competitive Moats**
+   - **source**: FactSet
+   - **layer**: L0_market_price
+   - **source_class**: earnings
+   - **published_date**: 2026-03-31
+   - **url**: [FactSet Insight Archive Page 7](https://insight.factset.com/page/7)
+   - **KAFKAにとっての意味**: ロボティクス分野でのスケールメリットとプライベートキャピタル蓄積の現状。AI半導体・設備投資の次なるドライバー。
+   - **投資・研究・記事化のどれに使えるか**: 投資・研究
 
-9. **2026年夏季賞与の見通し**
-   - **source**: 日本総研 経済・政策レポート（谷口栄治）
+7. **2026年夏季賞与の見通し ― 想定外に良好な企業収益を支えに増勢を維持、中東情勢がリスク ―**
+   - **source**: 日本総研 経済・政策レポート
    - **layer**: L5_analyst_interpretation
    - **source_class**: official_macro
    - **published_date**: 2026-04-08
-   - **url**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
-   - **KAFKAにとっての意味**: 日本国内の内需・個人消費を支える原資（賞与）の堅調さの確認。
-   - **使途**: 投資（日本株・消費関連）
+   - **url**: [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)
+   - **KAFKAにとっての意味**: 日本国内の良好なインカムゲイン環境が維持される一方、中東リスクによる下押しを懸念。
+   - **投資・研究・記事化のどれに使えるか**: 投資（日本株）
 
-10. **為替相場展望2026年４月号**
-    - **source**: 日本総研 為替相場展望（井上肇）
-    - **layer**: L5_analyst_interpretation
-    - **source_class**: official_macro
-    - **published_date**: 2026-04-06
-    - **url**: [https://www.jri.co.jp/report/medium/exchange/](https://www.jri.co.jp/report/medium/exchange/)
-    - **KAFKAにとっての意味**: ドル円およびユーロの先行き横ばいシナリオの提示。
-    - **使途**: 投資（為替ヘッジ戦略）
+8. **為替相場展望2026年４月号：◆ドル円：先行き横ばい圏で推移**
+   - **source**: 日本総研 為替相場展望
+   - **layer**: L5_analyst_interpretation
+   - **source_class**: official_macro
+   - **published_date**: 2026-04-06
+   - **url**: [日本総研 為替相場展望](https://www.jri.co.jp/report/medium/exchange/)
+   - **KAFKAにとっての意味**: ドル円の先行き見通しがレンジ推移にとどまるというシナリオ構築。
+   - **投資・研究・記事化のどれに使えるか**: 投資（為替・金利）
 
----
+9. **米・イラン戦闘停止を踏まえ、今後の原油価格をどうみるか**
+   - **source**: 日本総研 経済・政策レポート
+   - **layer**: L5_analyst_interpretation
+   - **source_class**: official_macro
+   - **published_date**: 2026-04-10
+   - **url**: [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)
+   - **KAFKAにとっての意味**: 戦闘停止後も原油が100ドル前後で推移するリスクと、再燃時の150ドル懸念の精査。
+   - **投資・研究・記事化のどれに使えるか**: 投資・記事化
+
+10. **Federal Reserve FOMC Schedule and Minutes**
+    - **source**: Federal Reserve FOMC
+    - **layer**: L1_central_bank
+    - **source_class**: central_bank
+    - **published_date**: 2026-04-08
+    - **url**: [FOMC Calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
+    - **KAFKAにとっての意味**: 4月末のFOMCに向けた警戒感と市場流動性、割引率の前提変化を追う一次情報。
+    - **投資・研究・記事化のどれに使えるか**: 投資（金利・為替）
 
 ## 9. コンテンツ化候補
 
-### タイトル案：ホビットとツリーベア：Dario Amodeiが警告する「AI指数関数成長」と「政治制度」の速度差
-- **根拠URL**: [https://darioamodei.com/post/policy-on-the-ai-exponential](https://darioamodei.com/post/policy-on-the-ai-exponential)
-- **切り口**: AI業界の最前線（わずか4年でコードの大部分をAI自身が書く時代へ）のスピードと、1つの意思決定に何ヶ月も要する政府機関の速度ギャップを「ロード・オブ・ザ・リング」の比喩を用いて解き明かす。
-- **想定読者**: テック投資家、政策担当者、AIエージェントの未来に関心のある開発者
-- **1段落要旨**: Dario Amodeiは、AIの指数関数的成長に対して政治システムが「Treebeard（遅鈍な木人）」のように反応が遅れていると警鐘を鳴らします。モデルの透明性ルールや解釈可能性の確保が急務である中、国家による規制が追いつかない現状への具体的な懸念と政策提言を読み解きます。
+- **タイトル案**: 「掘りまくれ」と言われても掘れない米国？原油100ドル時代の構造的制約
+  - **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/) (山田久／ビューポイント No.2026-002)
+  - **切り口**: トランプ大統領が「Drill, baby, drill（掘りまくれ）」と叫んでも、米国のシェールオイル・原油増産が即座に進まない労働市場や投資規律の裏事情を解説。
+  - **想定読者**: マクロ投資家、エネルギー株に関心があるビジネスパーソン
+  - **1段落要旨**: トランプ政権のエネルギー増産圧力に対し、米国内の生産現場は人手不足や資本の規律（株主還元優先）から即座の増産が困難な状況にある。この「すぐには掘れない」構造こそが、米イラン戦闘停止後も原油価格が100ドル前後の高値で推移し続ける主因であり、マクロ経済のインフレ高止まり要因として警戒し続ける必要がある。
 
-### タイトル案：トランプの「掘りまくれ」政策はなぜすぐには機能しないのか？原油100ドル時代への長期シナリオ
-- **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/) （山田久「すぐには『掘りまくれ』ない米国」および石川智久「米・イラン戦闘停止を踏まえ、今後の原油価格をどうみるか」より）
-- **切り口**: 米国のシェール増産政策に対するインフラ的制約と、中東地政学の混乱（戦闘再開なら150ドルのリスク）を対比させるマクロ経済分析。
-- **想定読者**: 個人投資家、製造業の調達担当、マクロ経済に関心がある読者
-- **1段落要旨**: トランプ政権が掲げるエネルギー大増産スローガンとは裏腹に、米国側の生産体制やインフラの制約から、即座に原油価格が下落するわけではない実態を解説します。イラン情勢の一時緩和を経てもなお原油価格が100ドル付近で高止まりし、マクロ金利に上昇圧力を与え続ける構造を明らかにします。
+- **タイトル案**: Q1決算前夜のS&P 500：なぜアナリストは「5年ぶりの強気予測」を出しているのか？
+  - **根拠URL**: [https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
+  - **切り口**: 通常は期中に下方修正される決算予想が、Q1 2026は異例の上方修正（+0.4%）となった要因と、好材料を出す企業の割合が過去5年で最高に達している点にフォーカス。
+  - **想定読者**: 米国株スイングトレーダー、投資学習者
+  - **1段落要旨**: 金利高止まりや地政学リスクが叫ばれる一方で、S&P 500構成企業のQ1 2026業績予想は異例の上方修正を記録している。6四半期連続の2桁増益見通しと、5年ぶりの高水準となったポジティブEPSガイダンスの存在は、企業収益の実態が市場の悲観論を上回っていることを示唆しており、株価プルバック局面における強力なクッションとなる。
+
+## 10. Market Metrics Coverage
+
+- **FactSet** ([https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)):
+  - S&P 500のQ1 2026推定総利益（index_earnings基準）は前年同期比で2桁成長（6四半期連続）が見込まれており、期初比でドルベース推定総利益が0.4%増加（6270億ドルから6293億ドル）へと上方修正された。
+- **S&P Global** ([https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)):
+  - 公式基準値（data_as_of=2026-01-29）: S&P 500 index level = 6,969.01。最新四半期行（2025-09-30時点）のoperating EPS = 72.03、as reported EPS = 63.52、sales per share（revenue） = 531.47。※公式の一般公開スプレッドシートは2026年1月をもって更新が終了しているため、この数値を公式基準値として扱う。
+- **Yardeni Research** ([https://www.yardeniquicktakes.com/tag/stock-market/](https://www.yardeniquicktakes.com/tag/stock-market/)):
+  - S&P 500指数は2026年1月27日高値から9.1%下落した水準（3月下旬〜4月上旬の調整局面）が直近のボトム（index_levelの底）を形成したと推定。中東地政学や「Power Plant Day」期限を通じ、高金利・高油価を織り込んだバリュエーション調整（valuation）が進行した。
 

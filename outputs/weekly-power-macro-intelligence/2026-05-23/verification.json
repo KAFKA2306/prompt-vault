@@ -1,0 +1,1 @@
+{"current_evidence_items": 48, "failures": [], "forbidden_matches": [], "future_item_dates": [], "future_report_dates": [], "metric_tags": ["company_earnings", "index_earnings", "index_level", "profit_margin", "revenue", "valuation"], "required_source_groups": {"factset": true, "spglobal": true, "yardeni": true}, "status": "pass", "week_end": "2026-05-23"}

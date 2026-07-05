@@ -6,7 +6,7 @@
 2026-07-04
 
 # Non-Negotiable Rules
-- URLの無い事実主張は禁止。根拠URLが無い場合は「未確認」と書く。
+- URLの無い事実主張は禁止。根拠URLが無い内容は書かない。
 - 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Current Evidence Items の title または snippet に文字列として存在するものだけ使う。
 - Current Evidence Items に存在しない具体名を補完・推測・創作してはいけない。
 - Source Coverage / Fetch Failures は監視状況の記録であり、事実主張、レジーム判定、投資仮説、行動リストの根拠に使ってはいけない。
@@ -18,12 +18,14 @@
 - L1-L4は「世界を動かす側」、L5は「世界を読む側」、L6は「市場参加者の物語化・ナラティブ検出」として扱う。
 - 公式マクロ、中央銀行、国家政策、AI基幹企業、AI権力思想、企業業績、市場期待、個人公開マクロ解説を必ず分類する。
 - 個人公開マクロ解説は公式レポートと同格扱いしない。
-- 本文未取得またはmetadata_onlyの場合は「本文未取得」と明記する。
 - FactSetをfactsetsと誤記しない。
 - FedWatchはCME FedWatchと表記する。
 - YardeniはYardeni Researchと表記する。
 - 売買推奨ではなく、監視条件・反証条件・行動候補として書く。
-- 十分な根拠がない節は「要追加確認」と書き、空想で埋めない。
+- 十分な根拠がない節は「今週の適格根拠なし」とだけ書き、空想で埋めない。
+- FactSet / S&P Global / Yardeni Research の company_earnings, index_earnings, revenue, index_level は米株スイングと重要ソースに必ず反映する。
+- S&P Global XLSが古い場合は、data_as_ofを明示し、現在値ではなく公式基準値として扱う。
+- Week End より後の日付、イベント、予定、数値を本文に書いてはいけない。Current Evidence Items 内の [future date redacted] は無視する。
 
 # Source Hierarchy
 - L0: 市場価格、CME FedWatch、決算
@@ -104,7 +106,42 @@
 ## 9. コンテンツ化候補
 ブログ、note、YouTube、Scrapboxに使える論点を、タイトル案 / 根拠URL / 切り口 / 想定読者 / 1段落要旨で出す。
 
+## 10. Market Metrics Coverage
+FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、収益、指数水準を箇条書きで確認する。
+
 # Current Evidence Items
+- title: God Bless America!
+  source: Yardeni Research Morning Briefings
+  layer: L0_market_price
+  source_class: market_expectation
+  importance: high
+  region: us
+  asset_linkage: equity, rates, ai_capex
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
+  published_date: 2026-07-04
+  author:
+  url: https://www.yardeniquicktakes.com/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jul 4, 2026 6 min read paid / The S&P 500 rose 9.3% ytd through July 2. Can it rise another 10.2% over the rest of this year to achieve our S&P 500 target of 8250? We still think so. Consider the following: / (1) FOMO vs FEMO. Is it time to underweight the S&P 500 Information Technology sector? It is if you believe the AI trade is a bubble about / Ed Yardeni / Public / God Bless America!
+- title: U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App
+  source: U.S. Treasury Press Releases
+  layer: L2_state_policy
+  source_class: us_executive_power
+  importance: high
+  region: us
+  asset_linkage: rates, fx, credit
+  metric_tags:
+  kafka_use: long_rate_risk, global_liquidity, sanctions
+  published_date: 2026-07-04
+  author:
+  url: https://home.treasury.gov/news/press-releases
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: July 4, 2026 / U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App
 - title: FREEDOM250 Countdown to America's 250th Anniversary July 4, 2026
   source: U.S. Treasury Press Releases
   layer: L2_state_policy
@@ -112,9 +149,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-04
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -127,9 +165,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-07-03
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -142,9 +181,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-07-03
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -157,9 +197,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-07-03
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -172,9 +213,10 @@
   importance: critical
   region: us
   asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+  metric_tags:
   kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
   published_date: 2026-07-03
-  author: 
+  author:
   url: https://www.whitehouse.gov/presidential-actions/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -187,9 +229,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -202,14 +245,15 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
   is_current_evidence: True
-  snippet: July 2, 2026 / Treasury and IRS to Accept Philanthropic Stock Contributions for Trump Accounts
+  snippet: July 2, 2026 / Treasury and IRS to Accept Philanthropic Stock Contributions for Trump Accounts / View All Press Releases / Remarks and Statements
 - title: A Look at the First-Year Results of the Working Families Tax Cuts
   source: U.S. Treasury Press Releases
   layer: L2_state_policy
@@ -217,9 +261,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -232,14 +277,31 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
   is_current_evidence: True
   snippet: July 02, 2026 / Joyride Through July With 12 Games Coming to GeForce NOW / Read Blog
+- title: By John Butters | July 2, 2026
+  source: FactSet S&P 500 Earnings Season Preview Q2 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin
+  kafka_use:
+  published_date: 2026-07-02
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-preview-q2-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: By John Butters | July 2, 2026 / Heading into the start of the earnings season, analysts and companies have been more optimistic than normal in their earnings outlooks for the second quarter. As a result, estimated earnings for the S&P 500 for the second quarter are higher today compared to expectations at the start of the quarter. In addition, the index is expected to report earnings growth above 20% for the second-straight quarter. / In terms of estimate revisions for companies in the S&P 500, analysts increased earnings estimates for Q2 2026 during the quarter. On a per-share basis, estimated earnings for the second quarter increased by 3.4% from March 31 to June 30. In a typical quarter, analysts usually lower earnings estimates during the quarter. Over the past five years (20 quarters), earnings expectations have fallen by 2.0% on average during the quarter. Over the past ten yea...
 - title: S&P 500 Earnings Season Preview: Q2 2026
   source: FactSet Insight Earnings
   layer: L0_market_price
@@ -247,9 +309,10 @@
   importance: medium
   region: us
   asset_linkage: equity, ai_capex
-  kafka_use: 
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin
+  kafka_use:
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://insight.factset.com/topic/earnings
   body_status: list_metadata
   evidence_level: dated_listing
@@ -262,9 +325,10 @@
   importance: medium
   region: us
   asset_linkage: equity, ai_capex
-  kafka_use: 
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin
+  kafka_use:
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://insight.factset.com/topic/earnings
   body_status: list_metadata
   evidence_level: dated_listing
@@ -277,9 +341,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
   published_date: 2026-07-02
-  author: 
+  author:
   url: https://www.anthropic.com/news
   body_status: list_metadata
   evidence_level: dated_listing
@@ -292,9 +357,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -307,9 +373,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -322,9 +389,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -337,9 +405,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -352,9 +421,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -367,9 +437,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -382,14 +453,15 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
   is_current_evidence: True
-  snippet: July 1, 2026 / Treasury Announces Investment Lineup for Trump Accounts / View All Press Releases / Remarks and Statements
+  snippet: July 1, 2026 / Treasury Announces Investment Lineup for Trump Accounts
 - title: NVIDIA and Partners Build in America, for America
   source: NVIDIA Newsroom
   layer: L3_frontier_ai_lab
@@ -397,9 +469,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -412,9 +485,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-07-01
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -427,9 +501,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -442,9 +517,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -457,9 +533,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -472,9 +549,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -487,9 +565,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -502,9 +581,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -517,9 +597,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -532,9 +613,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -547,9 +629,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.dir.co.jp/report/research/economics/index.html
   body_status: list_metadata
   evidence_level: dated_listing
@@ -562,9 +645,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -577,9 +661,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -592,9 +677,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -607,14 +693,15 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
   is_current_evidence: True
-  snippet: June 30, 2026 / Terrorist Financing Targeting Center Jointly Designates Hizballah Financial Institutions and Senior Officials
+  snippet: June 30, 2026 / Terrorist Financing Targeting Center Jointly Designates Hizballah Financial Institutions and Senior Officials / Pagination / Current page 1 / Page 2 / Page 3 / … / Next page / Keyword Search / Start date / End date / Subscribe to Press Releases
 - title: READOUT: Financial Action Task Force’s June 2026 Working Group and Plenary
   source: U.S. Treasury Press Releases
   layer: L2_state_policy
@@ -622,9 +709,10 @@
   importance: high
   region: us
   asset_linkage: rates, fx, credit
+  metric_tags:
   kafka_use: long_rate_risk, global_liquidity, sanctions
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://home.treasury.gov/news/press-releases
   body_status: list_metadata
   evidence_level: dated_listing
@@ -637,9 +725,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://openai.com/news/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -652,9 +741,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://openai.com/news/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -667,9 +757,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -682,9 +773,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -697,9 +789,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -712,9 +805,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -727,9 +821,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.anthropic.com/news
   body_status: list_metadata
   evidence_level: dated_listing
@@ -742,9 +837,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.anthropic.com/news
   body_status: list_metadata
   evidence_level: dated_listing
@@ -757,9 +853,10 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: claude_code_productivity, agentic_workflow, enterprise_ai, ai_safety_regulation, amazon_google_ai_exposure
   published_date: 2026-06-30
-  author: 
+  author:
   url: https://www.anthropic.com/news
   body_status: list_metadata
   evidence_level: dated_listing
@@ -772,9 +869,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -787,9 +885,10 @@
   importance: high
   region: global
   asset_linkage: equity, rates, fx, manufacturing
-  kafka_use: 
+  metric_tags:
+  kafka_use:
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://www.jri.co.jp/report/year/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -802,9 +901,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -817,9 +917,10 @@
   importance: critical
   region: us
   asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+  metric_tags:
   kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://www.whitehouse.gov/presidential-actions/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -832,9 +933,10 @@
   importance: critical
   region: us
   asset_linkage: equity, rates, fx, commodity, ai_capex, manufacturing
+  metric_tags:
   kafka_use: tariff_inflation, ai_geopolitics, long_rate_risk, us_japan_supply_chain
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://www.whitehouse.gov/presidential-actions/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -847,9 +949,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -862,9 +965,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -877,9 +981,10 @@
   importance: critical
   region: us
   asset_linkage: ai_capex, equity, manufacturing
+  metric_tags:
   kafka_use: ai_capex, semiconductor_supply_chain, data_center_power
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://nvidianews.nvidia.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -892,9 +997,10 @@
   importance: medium
   region: us
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: amazon_google_ai_exposure, enterprise_ai_adoption, ai_capex
   published_date: 2026-06-29
-  author: 
+  author:
   url: https://aws.amazon.com/blogs/aws/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -907,9 +1013,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-06-28
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -922,9 +1029,10 @@
   importance: high
   region: us
   asset_linkage: equity, rates, ai_capex
-  kafka_use: 
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
   published_date: 2026-06-28
-  author: 
+  author:
   url: https://www.yardeniquicktakes.com/
   body_status: list_metadata
   evidence_level: dated_listing
@@ -937,11 +1045,860 @@
   importance: critical
   region: global
   asset_linkage: ai_capex, equity
+  metric_tags:
   kafka_use: sbg_nav, ai_capex, enterprise_ai_adoption, labor_substitution, ai_governance, microsoft_azure_demand
   published_date: 2026-06-28
-  author: 
+  author:
   url: https://openai.com/news/
   body_status: list_metadata
   evidence_level: dated_listing
   is_current_evidence: True
   snippet: Company Jun 28, 2026 / Previewing GPT-5.6 Sol: a next-generation model
+- title: Fed Still Has An Inflation Problem Despite Plunging Oil Prices
+  source: Yardeni Research Morning Briefings
+  layer: L0_market_price
+  source_class: market_expectation
+  importance: high
+  region: us
+  asset_linkage: equity, rates, ai_capex
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
+  published_date: 2026-06-27
+  author:
+  url: https://www.yardeniquicktakes.com/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 27, 2026 4 min read / As we predicted, the S&P 500 had a June Swoon. We expected that it would be more of a broadening rotation than a widespread correction. That's the way it played out. The S&P 500 market-weighted stock price index peaked at a record high of 7,609.78 on June 2 (chart). It fell 3.4% through Friday's close. Over that same / Ed Yardeni / Toby Hearst / Paid / Fed Still Has An Inflation Problem Despite Plunging Oil Prices
+- title: June's Swoons
+  source: Yardeni QuickTakes Stock Market Archive
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: us
+  asset_linkage: equity
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-27
+  author:
+  url: https://www.yardeniquicktakes.com/tag/stock-market/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 27, 2026 4 min read / As we predicted, the S&P 500 had a June Swoon. We expected that it would be more of a broadening rotation than a widespread correction. That's the way it played out. The S&P 500 market-weighted stock price index peaked at a record high of 7,609.78 on June 2 (chart). It fell 3.4% through Friday's close. Over that same / Ed Yardeni / Toby Hearst / Paid / June's Swoons
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Update May 8 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Update May 1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Preview Q2 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-preview-q2-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet S&P 500 Earnings Season Preview Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-preview-q1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet Quarterly EPS Estimates May 29 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet Negative EPS Surprises Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet Insight Earnings
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/topic/earnings
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months
+  source: FactSet Earnings Insight Infographic Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-26
+  author:
+  url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 26, 2026 / Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months / FactSet S&P 500 earnings report: Explore sector price predictions and top/bottom 10 stocks with largest differences between... / By John Butters | Earnings / Read more
+- title: Is The Dollar Debasement Trade Kaput?
+  source: Yardeni Research Morning Briefings
+  layer: L0_market_price
+  source_class: market_expectation
+  importance: high
+  region: us
+  asset_linkage: equity, rates, ai_capex
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
+  published_date: 2026-06-25
+  author:
+  url: https://www.yardeniquicktakes.com/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 25, 2026 4 min read paid / The FOMC’s policy stance is determined by the balance of risks to its dual mandate of price stability and full employment. In the current environment, those risks remain firmly skewed toward inflation, justifying last week's FOMC pivot from an easing bias to a tightening one. Today's plethora of May economic data shows that the economy and the labor market are in great shape, while both / Ed Yardeni / Elias Griepentrog / Paid / Is The Dollar Debasement Trade Kaput?
+- title: WEEKLY WEBCAST: Will the Real Kevin Warsh Please Stand Up?
+  source: Yardeni Research Morning Briefings
+  layer: L0_market_price
+  source_class: market_expectation
+  importance: high
+  region: us
+  asset_linkage: equity, rates, ai_capex
+  metric_tags: index_level, index_earnings, revenue
+  kafka_use:
+  published_date: 2026-06-24
+  author:
+  url: https://www.yardeniquicktakes.com/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 24, 2026 5 min read paid / The "Dollar Debasement Trade" was a big theme in global financial markets last year. The thesis was that President Donald Trump's aggressive tariff hikes would revive inflation in the US and undermine foreigners' confidence in the US's reliability, especially among America's allies. In addition, the president's attacks on Fed Chair Jerome Powell threatened the Fed's independence and / Ed Yardeni / Elias Griepentrog / Paid / WEEKLY WEBCAST: Will the Real Kevin Warsh Please Stand Up?
+- title: FEMO Lifting Economic Growth & Foreigners Lifting US Stocks
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-23
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 23, 2026 4 min read paid / The stock market was hit by another June swoon today. Investors were unnerved by the outcome of last Wednesday's FOMC meeting. The committee participants were more hawkish than expected, according to their Dot Plot. Fed Chair Kevin Warsh abstained from providing his dot, but he came across as very hawkish during his presser, repeatedly stressing the importance of the Fed achieving price stability. Also weighing on AI-related / Ed Yardeni / Elias Griepentrog / Paid / FEMO Lifting Economic Growth & Foreigners Lifting US Stocks
+- title: Bull Jumping In Crete
+  source: Yardeni QuickTakes Stock Market Archive
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: us
+  asset_linkage: equity
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-23
+  author:
+  url: https://www.yardeniquicktakes.com/tag/stock-market/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 23, 2026 4 min read paid / The stock market was hit by another June swoon today. Investors were unnerved by the outcome of last Wednesday's FOMC meeting. The committee participants were more hawkish than expected, according to their Dot Plot. Fed Chair Kevin Warsh abstained from providing his dot, but he came across as very hawkish during his presser, repeatedly stressing the importance of the Fed achieving price stability. Also weighing on AI-related / Ed Yardeni / Elias Griepentrog / Paid / Bull Jumping In Crete
+- title: Healthcare: Pockets Of Alpha
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-22
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 22, 2026 4 min read paid / In the spectrum of bullish stock markets, there are two polar opposites. The first is driven by FOMO, the Fear of Missing Out, which inflates P/E multiples as investors chase hope and hype rather than fundamentals, creating the conditions for a bubble. The second is driven by FEMO, or Fabulous Earnings Momentum, which works the other way around: Corporate earnings grow faster than stock prices, compressing P/E multiples / Ed Yardeni / Elias Griepentrog / Public / Healthcare: Pockets Of Alpha
+- title: US MARKET CALL: Is Irrational Exuberance Driving FEMO?
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-21
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 21, 2026 3 min read / As we’ve flagged in recent weeks, an end to the conflict in the Middle East should see many foreign stock markets outperform the US. Lower oil prices reduce global inflationary pressures, give central banks room to ease policy, and tend to benefit oil-importing economies, particularly in emerging markets, more than the US, which exports oil. Last week’s tape delivered exactly that, with Asia leading the Go Global / Ed Yardeni / Toby Hearst / Public / US MARKET CALL: Is Irrational Exuberance Driving FEMO?
+- title: GLOBAL MARKET CALL: The Fog Of War Is Lifting
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-21
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 21, 2026 4 min read / The US economic calendar is mostly quiet this week, but Thursday packs a heavy data load: final Q1-2026 GDP, May PCED, May durable goods orders, and weekly jobless claims. / Lots of Fedspeak will be provided by FOMC participants this week. They will not lack for opinions to compare with those Fed Chair Warsh expressed in his debut presser last week. / Globally, the Bank of Canada's Tiff Macklem / Ed Yardeni / Toby Hearst / Public / GLOBAL MARKET CALL: The Fog Of War Is Lifting
+- title: ECONOMIC WEEK AHEAD: June 22-26
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-21
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 21, 2026 4 min read / We recommend a market-weight position in the S&P 500 Health Care sector. It is down 3.8% ytd, the worst among all 11 S&P 500 sectors, and remains one of the clear laggards of the bull market that began in October 2022 (chart). / That underperformance has created selective opportunities. The aggregate sector still lacks a near-term earnings catalyst, carries the second-lowest forward profit / Ed Yardeni / Toby Hearst / Public / ECONOMIC WEEK AHEAD: June 22-26
+- title: Geopolitical Release Valve Taking Pressure Off Resilient Economy
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-20
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 20, 2026 5 min read / The stock market bubble of the late 1990s was driven by fear of missing out (FOMO) on the tech-led bull market. As a result, the forward P/E of the S&P 500 rose to a record high of 25.0 in early 2000 as the forward P/E of the S&P 500 Information Technology sector soared to a record high of 55.0 (chart). / The / Ed Yardeni / Toby Hearst / Public / Geopolitical Release Valve Taking Pressure Off Resilient Economy
+- title: A Hawk In Dove's Clothing ... June Swoon Is Back ... 'We Have A Task Force On That'
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-19
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 19, 2026 4 min read / The US-Iran interim peace deal is shaky; but if it holds, it will end the US blockade of Iranian ports and reopen the Strait of Hormuz to commercial shipping. Now comes a 60-day negotiating period to hammer out a permanent agreement, centered on restricting Iran's nuclear program. The price of Brent crude oil extended its sharp decline following the peace deal announcement, with markets pricing in / Ed Yardeni / Elias Griepentrog / Public / A Hawk In Dove's Clothing ... June Swoon Is Back ... 'We Have A Task Force On That'
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet S&P 500 Earnings Season Update May 8 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet S&P 500 Earnings Season Update May 1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet S&P 500 Earnings Season Preview Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-preview-q1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet Quarterly EPS Estimates May 29 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet Negative EPS Surprises Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3?
+  source: FactSet Earnings Insight Infographic Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-18
+  author:
+  url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 18, 2026 / Where Are Analysts Most Optimistic on Ratings for S&P 500 Companies Heading into Q3? / FactSet earnings report: Ahead of Q3, explore the percentage of analysts' buy, hold, and sell ratings among the 12,840 ratings on... / By John Butters | Earnings / Read more
+- title: Why Is The US More Exuberant Than China?
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-17
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 17, 2026 5 min read / During the final four months of 2025, the Fed lowered the federal funds rate (FFR) three times by a total of 75bps. The cuts were justified for two reasons: Inflation was approaching the Fed's 2.0% target, and the labor market was weakening. So the FFR was deemed to be too restrictive, i.e., above the "neutral" FFR. Under the Fed's dual mandate, the / Ed Yardeni / Elias Griepentrog / Public / Why Is The US More Exuberant Than China?
+- title: WEEKLY WEBCAST: Hawks Versus Doves Debate At The Fed
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-17
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 17, 2026 4 min read / We weren't surprised by most of the news following today's FOMC meeting. We expected the committee to pivot from April's easing bias to a tightening bias, and they did. We expected the committee to acknowledge that, in their dual mandate, the risk of higher inflation had risen, while the risk of higher unemployment had fallen, and they did. The FOMC's Summary of / Ed Yardeni / Elias Griepentrog / Public / WEEKLY WEBCAST: Hawks Versus Doves Debate At The Fed
+- title: Crib Notes For Warsh & Co. On The Fed's Dual Mandate
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-17
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 17, 2026 1 min read / This week’s FOMC meeting will be the first over which Kevin Warsh, President Trump’s dovish appointee, presides as Fed chair. Will he succeed in dissuading the hawkishly leaning committee from moving to a tightening bias? Today, Ed and Elias set out both the dovish and hawkish points that the committee no doubt will discuss in what’s bound to be a heated debate. … Also: Warsh steps into his / Ed Yardeni / Public / Crib Notes For Warsh & Co. On The Fed's Dual Mandate
+- title: GLOBAL MARKET CALL: Peace Dividend Should Revive 'Go Global'
+  source: Yardeni Research QuickTakes Archive Page 2
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-16
+  author:
+  url: https://www.yardeniquicktakes.com/page/2/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 16, 2026 4 min read / China has accomplished a great deal over the past few decades, transforming from a poor, insular, and rural economy to the world's second-largest economy. Its transformation has been hailed as an economic miracle. Yet this miracle hasn't been reflected in China's stock market. The China MSCI stock price index has been flatlining since the end of the Great Financial Crisis (GFC) in 2010. / Ed Yardeni / Elias Griepentrog / Public / GLOBAL MARKET CALL: Peace Dividend Should Revive 'Go Global'
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet S&P 500 Earnings Season Update May 8 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet S&P 500 Earnings Season Update May 1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet S&P 500 Earnings Season Preview Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-preview-q1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet Quarterly EPS Estimates May 29 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet Negative EPS Surprises Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
+  source: FactSet Earnings Insight Infographic Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-15
+  author:
+  url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 15, 2026 / Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter / FactSet S&P 500 earnings report: the term “inflation” was cited on 220 earnings calls from March 15 through June 11. Explore... / By John Butters | Earnings / Read more
+- title: US MARKET CALL: Roaring 2020s Rockets To Mars & Beyond
+  source: Yardeni Research QuickTakes Archive Page 3
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-13
+  author:
+  url: https://www.yardeniquicktakes.com/page/3/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 13, 2026 3 min read / The week ahead is dominated by the Fed. Kevin Warsh delivers his first press conference as Fed chair on Wednesday, right after the FOMC releases its policy statement and its Summary of Economic Projections (SEP), which includes the Dot Plot showing meeting participants’ forecasts for the federal funds rate. We expect the Fed to abandon its easing bias and pivot toward a tightening bias. / The ECB raised its official rate / Ed Yardeni / Toby Hearst / Public / US MARKET CALL: Roaring 2020s Rockets To Mars & Beyond
+- title: Bull Jumping In Crete
+  source: Yardeni Research QuickTakes Archive Page 3
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-13
+  author:
+  url: https://www.yardeniquicktakes.com/page/3/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Jun 13, 2026 4 min read / "Space: the final frontier. These are the voyages of the starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before!" That's the introduction to Star Trek, the long-running TV series. On Friday, Elon Musk, the CEO of SpaceX, went where no man has gone before. He became / Ed Yardeni / Toby Hearst / Paid / Bull Jumping In Crete
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet S&P 500 Earnings Season Update May 8 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet S&P 500 Earnings Season Update May 1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet Quarterly EPS Estimates May 29 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet Negative EPS Surprises Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years
+  source: FactSet Earnings Insight Infographic Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-12
+  author:
+  url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: June 12, 2026 / Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years / FactSet S&P 500 earnings report: The term “AI” was cited on 337 earnings calls conducted from March 15 - June 11, well above the... / By John Butters | Earnings / Read more / Comments / The information contained in this article is not investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Sales +1.866.322.8738 / Support +1.877.322.8738 / Client Support / Contact Us / Our Solutions
+- title: By John Butters | June 2, 2026
+  source: FactSet Earnings Insight Infographic Q1 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: medium
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-06-02
+  author:
+  url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: By John Butters | June 2, 2026 / Each week, Earnings Insight offers analysis of critical trends in the S&P 500. Here are key highlights of the first quarter 2026 earnings season. / This blog post is for informational purposes only. The information contained in this blog post is not legal, tax, or investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Post Comment / John Butters / Vice President, Senior Earnings Analyst / Mr. John Butters is Vice President and Senior Earnings Analyst at FactSet. His weekly research report, “Earnings Insight,” provides analysis and commentary on trends in corporate earnings data for the S&P 500 including revisions to estimates, year-over-year growth, performance relative to e...
+- title: S&P Global S&P 500 EPS, sales, and index level workbook
+  source: S&P Global S&P 500 EPS Estimates
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: us
+  asset_linkage: equity
+  metric_tags: index_level, index_earnings, revenue, company_earnings
+  kafka_use:
+  published_date: 2026-01-29
+  author:
+  url: https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx
+  body_status: structured_metrics
+  evidence_level: spglobal_xlsx
+  is_current_evidence: True
+  snippet: S&P Global S&P 500 EPS estimate workbook. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; official workbook states public files were discontinued after January 2026.

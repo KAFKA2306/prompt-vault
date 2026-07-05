@@ -9,123 +9,197 @@ source: agy
 # Weekly Power & Macro Intelligence - 2026-06-27
 
 ## 0. 今週の支配的レジーム
-- **中央銀行**:
-  - 日本銀行: 「金融政策決定会合の運営」[boj.or.jp](https://www.boj.or.jp/mopo/mpmsche_minu/index.htm)および「経済・物価情勢の展望（展望レポート）」[boj.or.jp](https://www.boj.or.jp/mopo/outlook/index.htm)の情報が開示されているが、今週の具体的な政策金利やスタンス変更を示す記述は本文未取得のため「要追加確認」。
-  - Federal Reserve: 「Federal Reserve Board - News & Events」[federalreserve.gov](https://www.federalreserve.gov/newsevents.htm)および「The Fed - Meeting calendars and information」[federalreserve.gov](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)の情報があるが、本文未取得のため「要追加確認」。
-- **財政・政府**:
-  - 日本政府: 熊谷亮丸氏の分析（大和総研）によれば、高市政権の成長戦略や骨太の方針が注目されており、1人あたり実質賃金増加のカギとして「時間あたり労働生産性の引き上げ」と「1人あたり労働時間の増加」の2点が挙げられている[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。
-  - 米国政権: 米国独立250周年を控え、格差と分断を抱えながら発展を続ける状況にある（日本総研・野木森稔氏レポート）[jri.co.jp](https://www.jri.co.jp/report/year/)。
-- **関税・地政学**:
-  - 米国による最先端AIの輸出規制措置が「AI統治の転換点」として捉えられている（大和総研・米国レポート）[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。また、中国の規制、軍需拡大、備蓄競争を背景にタングステン価格が急騰しており、重要鉱物サプライチェーンの再編に追い風が吹いている（日本総研・王婷氏レポート）[jri.co.jp](https://www.jri.co.jp/report/year/)。中国経済は不動産不況の泥沼化により内需が低迷し、景気減速局面へ向かう中で、財政出動やさらなる金融緩和への期待が交錯している（大和総研、日本総研レポート）[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)[jri.co.jp](https://www.jri.co.jp/report/year/)。
-- **AI産業**:
-  - Anthropicが「Claude Sonnet 5」をリリースし、コーディング、エージェント、プロフェッショナル業務においてフロンティア性能をスケールで提供開始[anthropic.com](https://www.anthropic.com/news)。さらに、研究者向けのツール統合型AIワークベンチ「Claude Science」も提供開始された[anthropic.com](https://www.anthropic.com/news)。OpenAIは次世代モデル「GPT-5.6 Sol」のプレビューおよび「GPT-5.6 Preview System Card」を公開[openai.com](https://www.openai.com/news)。また、OpenAIとBroadcomがLLMに最適化した推論チップを公開している[openai.com](https://www.openai.com/news)。NVIDIAはライフサイエンスAI向けに「BioNeMo Agent Toolkit」を発表し、欧州で新たに35台のNVIDIA搭載AIスーパーコンピューターが稼働開始した[nvidianews.nvidia.com](https://nvidianews.nvidia.com/)。
-- **AI統治思想**:
-  - Dario Amodei氏（Anthropic CEO）はエッセイ「Policy on the AI Exponential」において、急激なAIの進化スピード（4年間でコード作成の大部分を代替するレベルに到達）と、政治制度・意思決定プロセス（遅鈍な「Treebeard」に例えられる）との速度ギャップに対する危機感を表明[darioamodei.com](https://darioamodei.com/post/policy-on-the-ai-exponential)。また、Fable 5の世界展開に伴い、Amazon、Microsoft、Google等のパートナー企業（Glasswingパートナー）と連携し、業界標準の「ジェイルブレイク深刻度評価フレームワーク」の構築を提案している[anthropic.com](https://www.anthropic.com/news)。
+- **中央銀行**: 利下げバイアスから利上げバイアス（tightening bias）への明確な転換。インフレ再燃リスクを最優先課題とするタカ派姿勢の強まり。
+- **財政・政府**: 今週の適格根拠なし
+- **関税・地政学**: イランとの暫定和平合意（US-Iran interim peace deal）の成立とそれに伴う原油価格の急落、ホルムズ海峡の再開交渉。
+- **AI産業**: BroadcomとのLLM最適化推論チップの発表や「GPT-5.6 Preview」「Claude Tag」などの登場による、エージェント型ワークフローおよび半導体・インフラ需要の急拡大。
+- **AI統治思想**: 国家安全保障と結びついた最先端AIモデルの輸出規制や、暗号攻撃・量子技術防衛に向けた大統領令を通じた国家管理・防衛重視のAI統治（AI Governance）への転換。
 
 ---
 
 ## 1. 日銀/Fed: 割引率と為替
-- **日銀の変化**: 本文未取得のため「要追加確認」。
-- **Fedの変化**: 本文未取得のため「要追加確認」。
-- **CME FedWatchとの乖離**: CME FedWatch Toolのデータ取得でタイムアウト（FETCH_ERROR_TimeoutError）が発生したため、現時点では市場の利下げ・利上げ確率の織り込み状況と公式スタンスとの乖離は「要追加確認」。
-- **円金利・ドル円・日本株への示唆**:
-  - 2025年末以降、米国の利下げサイクルが進んでも円安が継続していた背景（Shenmacro分析）がある[shenmacro.com](https://www.shenmacro.com/)が、2026年6月時点における足元の金利差と為替の反応については公式発表の本文未取得のため「要追加確認」。
-  - ナフサ問題による供給不足懸念および物価上昇リスクが日本経済の下押し要因として警戒されている（大和総研レポート）[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。
+- **日銀の変化**: 今週の適格根拠なし
+- **Fedの変化**: 2025年末の3回（計75bps）の利下げを経て、インフレリスクの上昇と労働市場の堅調さを背景に、前週のFOMCにて緩和バイアス（easing bias）から利上げバイアス（tightening bias）へピボット。新議長 Kevin Warsh はデビュー会見で dot は提供しなかったものの、物価安定の重要性を繰り返し強調する極めてタカ派的な姿勢を示した。
+- **CME FedWatchとの乖離**: CME FedWatchに関する直接的な数値乖離の記述は存在しないが、直近のインフレ・雇用データの混在やFRBの急なタカ派ピボット、および利上げ期待の上昇（rising Fed rate hike expectations）が市場の警戒を誘っている。
+- **円金利・ドル円・日本株への示唆**: 強い米国経済指標とFRBの利上げ懸念（rising Fed rate hike expectations）により、資本が米国へ再還流する動き（US share of ACW MSCI firming）が見られる。ドル高圧力および米金利の高止まりは円安と日本株マクロ環境に影響を及ぼす。
 
 ---
 
 ## 2. 日本政府/トランプ政権: 国家政策ショック
-- **日本の財政・産業政策**: 高市政権下の成長戦略や骨太の方針が注目されているが、実質賃金増加を実現するためには時間あたり労働生産性の向上と労働時間の増加が必要と分析されている[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。内閣府の6月月例経済報告閣僚会議資料が公表されているが、詳細な判断は本文未取得のため「要追加確認」。経済財政諮問会議の資料はHTTP 404のため本文未取得。
-- **JGB需給**: 財務省の国債入札カレンダー情報は存在するが、足元の需給への具体的な影響は本文未取得のため「要追加確認」。
-- **AI・半導体政策**: 経済産業省の「AI・半導体産業基盤強化フレーム」関連ページがHTTP 403のため本文未取得。
-- **米国関税・輸出管理**: 米国政府による最先端AIモデルの輸出規制措置が「AI統治の転換点」としてクローズアップされている[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。USTRのSection 301関税措置の動向は本文未取得のため「要追加確認」。
-- **日本企業への波及**: タングステン急騰に伴う重要鉱物サプライチェーンの再編（中国の規制や軍需拡大が要因）が、製造業や素材セクターの調達構造変化を促す可能性が示唆されている[jri.co.jp](https://www.jri.co.jp/report/year/)。
+- **日本の財政・産業政策**: 高市政権の成長戦略や「骨太の方針」における実質賃金増加の議論（時間あたり労働生産性の引き上げと1人あたり労働時間の増加が焦点）。
+- **JGB需給**: 今週の適格根拠なし
+- **AI・半導体政策**: 今週の適格根拠なし
+- **米国関税・輸出管理**: 最先端AIモデルに対する輸出規制措置が実施され、AI統治の転換点（米国政府が最先端AIを停止させた措置）となっている。
+- **日本企業への波及**: ナフサ問題による物価上昇と供給不足懸念、さらに中国の重要鉱物輸出規制や軍需拡大に伴うタングステン価格急騰が、サプライチェーン再編に直面する日本企業へ下押し圧力を与える。
 
 ---
 
 ## 3. OpenAI/Anthropic: AI産業カーブ
-- **モデル/製品の進化**:
-  - Anthropicは、コーディングやエージェント業務でフロンティア性能を発揮する「Claude Sonnet 5」をリリース[anthropic.com](https://www.anthropic.com/news)。
-  - OpenAIは、次世代モデル「GPT-5.6 Sol」のプレビューおよび安全対策基準を示す「System Card」を公開[openai.com](https://www.openai.com/news)。
-- **enterprise adoption**: HPが企業全体で早期のAI成果をスケールさせている事例が報告されている[openai.com](https://www.openai.com/news)。
-- **AI safety / regulation**: Anthropicは、脱獄（jailbreak）の深刻度を評価する業界横断のフレームワークをAmazon、Microsoft、Google等のパートナーと共同提案[anthropic.com](https://www.anthropic.com/news)。
-- **compute需要**: OpenAIとBroadcomがLLM最適化推論チップで提携・発表しており、推論側の効率化と専用シリコンへのシフトが加速している[openai.com](https://www.openai.com/news)。また、ヨーロッパでNVIDIA製GPUを搭載した新たなAIスーパーコンピューターが35台稼働開始し、インフラ需要の裾野が拡大している[nvidianews.nvidia.com](https://nvidianews.nvidia.com/)。
-- **SBG NAV / AI株への示唆**: OpenAIやAnthropicによる次世代モデル（GPT-5.6 Sol、Claude Sonnet 5）の矢継ぎ早な投入、およびBroadcom等の半導体パートナーとの連携強化は、未上場AIスタートアップの企業価値評価（バリュエーション・ナラティブ）を再膨張させ、ソフトバンクグループ（SBG）の保有ポートフォリオ評価やAI関連株への期待を強く支持する材料となる。
+- **モデル/製品の進化**: OpenAIが [GPT-5.6 Preview](https://openai.com/news/)（System Card公開）およびGPT-5を、Anthropicが [Claude Tag](https://www.anthropic.com/news)（チーム向け新機能）を発表。
+- **enterprise adoption**: AWSが VP of Agentic AI の Swami Sivasubramanian のもとでエージェントを基盤としたAIスタックをローンチ。Bedrockに「Grok 4.3」を導入するなど、企業のAIエージェント活用が本格化。
+- **AI safety / regulation**: 米国政府による最先端AIモデルの輸出規制措置の実施や、安全な自律エージェント運用に向けた「GPT-5.6 Preview System Card」の公開。
+- **compute需要**: OpenAIとBroadcomが共同でLLM最適化推論チップを発表。AWSがNVIDIA Blackwell（RTX PRO 4500 Blackwell Server Edition）を搭載したAmazon EC2 G7インスタンスを発表し、推論インフラ需要が急拡大。
+- **SBG NAV / AI株への示唆**: Broadcomとの半導体協業や Blackwell 採用など、AI半導体・電力インフラ（日本総研「AI競争の勝敗を左右する電力インフラ」）への投資テーマの裏付けとなり、ソフトバンクグループ（SBG）を含むAI・半導体・インフラ株のモメンタムを長期的に支える。
 
 ---
 
 ## 4. Altman/Dario: AI権力思想
-- **今週の思想的変化**:
-  - **Sam Altman氏**: 自身の自宅への火炎瓶（Molotov cocktail）投擲事件を受け、AIへの社会的不安が高まる中で「言葉とナラティブが持つ破壊的な力」を過小評価していたと吐露。テクノロジーの進化が物理的な脅威へと直結する時代における個人の安全保障と社会対話の重要性を認識している[blog.samaltman.com](https://blog.samaltman.com/)。
-  - **Dario Amodei氏**: 政治制度や政府（遅鈍な「Treebeard」）がAIの指数関数的進化スピードに追いついていないというガバナンスの根本的な欠陥を指摘。4年で主要AI企業のコードの大半を書くまでに進化した技術に対して、現行の政治機関が機能不全に陥るリスクを警告している[darioamodei.com](https://darioamodei.com/post/policy-on-the-ai-exponential)。
-- **国家との距離**: 米国政府による最先端AIの輸出規制措置（大和総研指摘の「AI統治の転換点」）に見られるように、国家が安全保障の観点からフロンティアAIモデルの流通を直接停止・制限するフェーズに入っており、民間ラボと国家権力とのパワーバランスが変化している[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)。
-- **規制への姿勢**: Anthropic主導で主要プラットフォーマー（Amazon、Microsoft、Google等）を巻き込んだ「ジェイルブレイク深刻度評価フレームワーク」の業界標準化を推進するなど、民間主導での事前規制（Self-regulation）をデファクト化する動きが目立つ[anthropic.com](https://www.anthropic.com/news)。
-- **民主化/集中/安全保障の論点**: 最先端AIの輸出制限措置[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)や、タングステン等の地政学的重要鉱物の囲い込み競争[jri.co.jp](https://www.jri.co.jp/report/year/)は、AI資源（チップ、電力、原材料、モデル）の「国家間での囲い込み・集中」が安全保障の最優先事項になっている現実を示している。
-- **投資テーマへの意味**: 単なるアルゴリズムの進化だけでなく、半導体製造からサプライチェーン、重要鉱物（タングステン等）、AIを動かす「電力インフラ」そのものがAI競争の勝敗を左右するボトルネック投資テーマとして顕在化している（日本総研・藤波匠氏レポート）[jri.co.jp](https://www.jri.co.jp/report/year/)。
+- **今週の思想的変化**: 今週の適格根拠なし
+- **国家との距離**: 今週の適格根拠なし
+- **規制への姿勢**: 今週の適格根拠なし
+- **民主化/集中/安全保障の論点**: 今週の適格根拠なし
+- **投資テーマへの意味**: 今週の適格根拠なし
 
 ---
 
 ## 5. 投資仮説の更新
-- **米株スイング**:
-  - **監視条件**: GPT-5.6 SolやClaude Sonnet 5の登場により、AI大手のモデル性能への失望リスクは後退。一方で、大手テックのAI投資継続（BroadcomのLLM推論チップやHPのエンタープライズ導入事例）の持続性を、2026年Q2決算プレビュー（FactSet Insight指摘の、アナリストと企業の楽観スタンス）と照らし合わせて検証する[insight.factset.com](https://insight.factset.com/topic/earnings)。
-- **日経/日本株**:
-  - **監視条件**: 高市政権の成長戦略（骨太の方針）による実質賃金・生産性向上効果の検証[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)と、ナフサ供給問題に伴うコストプッシュ型物価上昇リスク[dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html)を監視。
-- **SBG NAV**:
-  - **行動候補**: OpenAI（GPT-5.6 Sol）およびAnthropic（Claude Sonnet 5）の製品サイクル加速と、それに伴うNVIDIA等のスーパーコンピューター需要[nvidianews.nvidia.com](https://nvidianews.nvidia.com/)の再拡大から、SBGが保有する未上場AI関連株・Armのバリュエーション下支え効果を算定する。
-- **AI半導体**:
-  - **監視条件**: BroadcomとOpenAIのLLM最適化チップ共同開発[openai.com](https://www.openai.com/news)の進捗、およびNVIDIAのBioNeMo Agentによるライフサイエンス等のエージェント領域（ドメイン特化型）での実需創出スピードを注視。
-- **製造業・素材**:
-  - **行動候補**: 重要鉱物のタングステン価格急騰とサプライチェーン再編（軍需拡大・中国規制・備蓄競争）を受け、非鉄金属・重要素材セクターにおける代替調達網を持つ企業の優位性を調査[jri.co.jp](https://www.jri.co.jp/report/year/)。
-- **為替・金利**:
-  - **監視条件**: 米国の利下げが進みつつも円安が膠着する構造的要因について、エネルギー・原材料（ナフサ・重要鉱物輸入）価格の上昇が日本の貿易収支に与える影響を通じて再検討する。
+- **米株スイング**: 6月2日に record high の 7,609.78 を記録したS&P 500は、6月5日にかけ 7,383.74（2.64%安）へ下落（June Swoon）。バリュエーションの複数拡大（P/E倍率上昇）によるバブル警戒から、企業利益の成長が価格を上回る「FEMO（Fabulous Earnings Momentum）」への移行を注視。
+- **日経/日本株**: 高市政権の成長戦略や実質賃金の動向を注視。ナフサ調達問題や電力インフラ不足がサプライチェーンや製造業の利益率を圧迫するリスクに備える。
+- **SBG NAV**: BroadcomとOpenAIのチップ協業、NVIDIA Blackwell G7インスタンスの始動、および日本総研が指摘する電力インフラ需要の高まりは、SBG傘下のArmおよび関連AIポートフォリオの価値（NAV）を中長期的に支える。
+- **AI半導体**: OpenAI×Broadcomのカスタム推論チップ開発、およびAWSのBlackwellサーバーEC2インスタンス導入により、高性能半導体およびそのインターコネクト技術を持つ企業への資本配分を強化。
+- **製造業・素材**: タングステン価格急騰に見られる重要鉱物の中国規制・備蓄競争、およびナフサ供給不足は製造業のコスト増要因。S&P 500素材セクター（Materials）は利益成長に対して低ウェイトであり、Yardeni Researchはオーバーウェイトを推奨。
+- **為替・金利**: 米FRB（新議長 Kevin Warsh）のタカ派ピボットと利上げ懸念（rising Fed rate hike expectations）により、ドル金利の高止まりとドル還流（強ドル維持）が継続する前提。
 
 ---
 
 ## 6. 反証リスト
-- **既存仮説と矛盾した情報**:
-  - **AI競争の限界論に対する反証**: 「AIモデルの進化スピードは頭打ちになる」という仮説に対し、今週OpenAI（GPT-5.6 Sol）およびAnthropic（Claude Sonnet 5）が同時に次世代フロンティアモデルを発表したこと、さらにエージェントやサイエンス特化型アプリの提供が始まっていることは矛盾する[openai.com](https://www.openai.com/news)[anthropic.com](https://www.anthropic.com/news)。
-  - **重み**: 極めて重い。AI Capex（設備投資）のモメンタム維持を肯定する強力なファクト。
-  - **対応**: AIモデルレイヤーでの進歩が持続しているため、半導体・電力インフラ等の物理ハードウェア需要の持続期間予測を前倒し（長期化）に修正する。
+- **既存仮説と矛盾した情報**: FRBの利下げバイアスの継続および年内の安定した金融緩和を見込む仮説。
+- **重み**: 極めて重い。FOMCは前週に緩和（easing bias）から緊縮（tightening bias）へと明確にピボットしており、前提条件そのものが崩壊した。
+- **対応**: ポジションの金利感応度を見直し、強気な金利低下シナリオに依存するグロース株の配分を縮小、好調な決算裏付けのある銘柄（FEMO株）およびエネルギー・素材などのインフレヘッジセクターへのローテーションを進める。
 
 ---
 
 ## 7. 来週の行動
-- **売買**:
-  - 次世代モデル発表に伴うAIインフラ・半導体（特に推論用カスタムチップやスーパーコンピューター関連）の株価モメンタムを再評価。
-- **調査**:
-  - 日本総研指摘の「AI競争の勝敗を左右する電力インフラ」に関する具体策と、タングステン等重要鉱物の代替サプライチェーン企業をリストアップ。
-- **発信**:
-  - 「Dario AmodeiのAI Exponential（TreebeardとHobbitsの速度ギャップ）」を基に、官僚機構・法規制の遅れとAIエージェント社会の到来がもたらす地政学的変化について整理。
+- **売買**: S&P 500 Materials セクターの押し目買い検討。金利高環境に耐性のない金利高感応銘柄の削減。
+- **調査**: [GPT-5.6 Preview System Card](https://openai.com/news/)の技術仕様およびエージェント実行能力、およびBroadcom×OpenAIのチップ性能の調査。
+- **発信**: 「Kevin Warsh新FRB議長のタカ派ピボットが引き起こしたJune Swoonと、FEMOレジームへの移行」に関する解説記事の執筆。
 
 ---
 
 ## 8. 重要ソースTop 10
 
-| No | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 投資・研究・記事化の使途 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Introducing Claude Sonnet 5 / Claude Science | Anthropic Newsroom | L3 | frontier_ai_lab | 2026-06-30 | [anthropic.com](https://www.anthropic.com/news) | エージェントおよび科学研究向け機能の飛躍。実需の本格化。 | 投資（AIソフトウェア）、研究 |
-| 2 | Previewing GPT-5.6 Sol | OpenAI News | L3 | frontier_ai_lab | 2026-06-26 | [openai.com](https://www.openai.com/news) | OpenAIの次世代モデル進化の健在を示す。 | 投資（AIインフラ）、記事化 |
-| 3 | Policy on the AI Exponential | Dario Amodei Policy | L4 | ai_power_ideology | 2026-06-01 | [darioamodei.com](https://darioamodei.com/post/policy-on-the-ai-exponential) | 指数関数的進化と政治制度のスピード乖離リスクの指摘。 | 研究（AI統治思想）、記事化 |
-| 4 | 米国政府はなぜ最先端AIを停止させたのか | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-23 | [dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html) | 米国によるモデル輸出規制という「AI統治の転換点」の分析。 | 投資（地政学リスク）、研究 |
-| 5 | AI競争の勝敗を左右する電力インフラ | 日本総研 経済・政策レポート | L5 | official_macro | 2026-06-25 | [jri.co.jp](https://www.jri.co.jp/report/year/) | AI競争の最終的なボトルネックとしての電力インフラの重要性。 | 投資（電力・インフラ）、記事化 |
-| 6 | タングステン価格急騰と重要鉱物サプライチェーン再編への追い風 | 日本総研 経済・政策レポート | L5 | official_macro | 2026-06-22 | [jri.co.jp](https://www.jri.co.jp/report/year/) | 軍需と中国規制によるタングステン価格高騰とサプライチェーン影響。 | 投資（製造業・素材） |
-| 7 | Sam Altman Blog (House Attacked / Narratives) | Sam Altman Blog | L4 | ai_power_ideology | 2026-06-27 | [blog.samaltman.com](https://blog.samaltman.com/) | 社会的恐怖の物理化とナラティブ戦。 | 研究（社会受容性）、記事化 |
-| 8 | OpenAI and Broadcom unveil LLM-optimized infer | OpenAI News | L3 | frontier_ai_lab | 2026-06-25 | [openai.com](https://www.openai.com/news) | カスタムチップ（ASIC）への移行と推論コスト削減。 | 投資（半導体） |
-| 9 | 熊谷亮丸の経済・金融 Foresight 高市政権の成長戦略 | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-25 | [dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html) | 日本の骨太方針と賃金成長の必要条件。 | 投資（日本株マクロ） |
-| 10 | ナフサ問題がもたらす日本経済の不安要素 | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-22 | [dir.co.jp](https://www.dir.co.jp/report/research/economics/index.html) | 石油化学原材料の供給不足と物価下押しリスク。 | 投資（製造業・化学） |
+1. **GPT‑5.6 Preview System Card**
+   - **source**: OpenAI News
+   - **layer**: L3
+   - **source_class**: frontier_ai_lab
+   - **published_date**: 2026-06-26
+   - **url**: [https://openai.com/news/](https://openai.com/news/)
+   - **KAFKAにとっての意味**: 次世代フロンティアモデルのリリース前評価書であり、エージェント機能の向上とそれに伴うインフラ要件を規定する。
+   - **用途**: 研究・記事化
+
+2. **OpenAI and Broadcom unveil LLM-optimized inference chip**
+   - **source**: OpenAI News
+   - **layer**: L3
+   - **source_class**: frontier_ai_lab
+   - **published_date**: 2026-06-25
+   - **url**: [https://openai.com/news/](https://openai.com/news/)
+   - **KAFKAにとっての意味**: エヌビディア一強への対抗軸としてのカスタムシリコンの台頭、BroadcomのAI半導体バリューチェーンにおける地位強化。
+   - **用途**: 投資・記事化
+
+3. **Introducing Claude Tag**
+   - **source**: Anthropic Newsroom
+   - **layer**: L3
+   - **source_class**: frontier_ai_lab
+   - **published_date**: 2026-06-23
+   - **url**: [https://www.anthropic.com/news](https://www.anthropic.com/news)
+   - **KAFKAにとっての意味**: チーム協働におけるエージェント型UIの進化と、エンタープライズAI利用の敷居低下。
+   - **用途**: 研究・記事化
+
+4. **Is The Dollar Debasement Trade Kaput?**
+   - **source**: Yardeni Research Morning Briefings
+   - **layer**: L0
+   - **source_class**: market_expectation
+   - **published_date**: 2026-06-25
+   - **url**: [https://www.yardeniquicktakes.com/](https://www.yardeniquicktakes.com/)
+   - **KAFKAにとっての意味**: FRBのタカ派への方針転換と米国経済の強靭さによる、ドル安トレードの前提崩壊。
+   - **用途**: 投資
+
+5. **US MARKET CALL: June Swoon!**
+   - **source**: Yardeni Research QuickTakes Archive Page 3
+   - **layer**: L0
+   - **source_class**: market_metrics
+   - **published_date**: 2026-06-07
+   - **url**: [https://www.yardeniquicktakes.com/page/3/](https://www.yardeniquicktakes.com/page/3/)
+   - **KAFKAにとっての意味**: 雇用統計等の上振れと利上げ警戒がトリガーとなった6月株価調整の記録。
+   - **用途**: 投資
+
+6. **AWS Weekly Roundup (June 22, 2026)**
+   - **source**: AWS News Blog
+   - **layer**: L3
+   - **source_class**: frontier_ai_lab
+   - **published_date**: 2026-06-22
+   - **url**: [https://aws.amazon.com/blogs/aws/](https://aws.amazon.com/blogs/aws/)
+   - **KAFKAにとっての意味**: NVIDIA Blackwellを搭載したG7インスタンスの開始と、BedrockへのGrok 4.3等のマルチモデル統合。
+   - **用途**: 投資・研究
+
+7. **藤波匠／ビューポイント No.2026-012 AI競争の勝敗を左右する電力インフラ**
+   - **source**: 日本総研 経済・政策レポート
+   - **layer**: L5
+   - **source_class**: official_macro
+   - **published_date**: 2026-06-25
+   - **url**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
+   - **KAFKAにとっての意味**: AI競争のボトルネックが計算資源から送配電・発電インフラへ完全に移行したことの証左。
+   - **用途**: 投資・記事化
+
+8. **米国政府はなぜ最先端AIを停止させたのか**
+   - **source**: 大和総研 経済分析レポート
+   - **layer**: L5
+   - **source_class**: official_macro
+   - **published_date**: 2026-06-23
+   - **url**: [https://www.dir.co.jp/report/research/economics/index.html](https://www.dir.co.jp/report/research/economics/index.html)
+   - **KAFKAにとっての意味**: 米国政権による安全保障目的のAI直接介入（輸出規制）とそのインパクト。
+   - **用途**: 研究・記事化
+
+9. **王婷／Economist Column No.2026-034 【サプライチェーン再編シリーズ⑦】タングステン価格急騰と重要鉱物サプライチェーン再編への追い風**
+   - **source**: 日本総研 経済・政策レポート
+   - **layer**: L5
+   - **source_class**: official_macro
+   - **published_date**: 2026-06-22
+   - **url**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
+   - **KAFKAにとっての意味**: 中国規制と軍需拡大による重要鉱物サプライチェーンのリスクと投資妙味。
+   - **用途**: 投資・記事化
+
+10. **熊谷亮丸の経済・金融 Foresight 高市政権の成長戦略、骨太の方針で実質賃金は本当に増加するのか？**
+    - **source**: 大和総研 経済分析レポート
+    - **layer**: L5
+    - **source_class**: official_macro
+    - **published_date**: 2026-06-25
+    - **url**: [https://www.dir.co.jp/report/research/economics/index.html](https://www.dir.co.jp/report/research/economics/index.html)
+    - **KAFKAにとっての意味**: 国内実質賃金増加の実現可能性を測るためのマクロ枠組み（生産性と労働時間の分解）。
+    - **用途**: 記事化
 
 ---
 
 ## 9. コンテンツ化候補
-1. **タイトル案**: 「政治はAIの進化に追いつけるか？Dario Amodeiが警告する『Treebeard（樹人の長）』の遅鈍」
-   - **根拠URL**: [darioamodei.com](https://darioamodei.com/post/policy-on-the-ai-exponential)
-   - **切り口**: ロード・オブ・ザ・リングのTreebeard（遅鈍な樹人）のメタファーを用い、4年でコードの大部分を書くまでに進化したAIの速度と、法規制・政府決定の決定的なタイムラグを論じる。
-   - **想定読者**: テックリーダー、政策・ガバナンスに関心のあるビジネスパーソン
-   - **1段落要旨**: AnthropicのDario Amodei氏は、AIの指数関数的な進化に対して既存の政治制度があまりにも遅すぎると警告しています。AIモデルが極めて短いスパンで高度な自律的エージェント（Claude Sonnet 5等）へと進化する一方、民主的プロセスや法整備には数ヶ月〜数年を要するため、国家統治そのものが機能不全に陥るリスクに対する新たな安全保障的アプローチが必要です。
 
-2. **タイトル案**: 「AI競争のボトルネックは半導体から『電力インフラ』へ：日本総研が示す新たな勝敗の分岐点」
-   - **根拠URL**: [jri.co.jp](https://www.jri.co.jp/report/year/)（藤波匠氏レポート）
-   - **切り口**: AIの性能向上を支えるデータセンターの爆発的な消費電力が、今後のAI覇権と実需の物理的な上限になる構造を解説。
-   - **想定読者**: インフラ投資家、製造業関係者、テクノロジーアナリスト
-   - **1段落要旨**: AI競争の勝敗は、最先端モデルの開発だけでなく、それらを稼働し続ける「電力インフラ」の確保にシフトしています。日本総研の分析が示すように、送電網の強化やクリーンエネルギーの安定供給が不十分な地域では、どれだけ優れたGPUを調達してもAIの価値創出が物理的に制限されるため、エネルギーインフラ投資がAIテーマの最重要課題となっています。
+- **タイトル案**: 「June Swoon」から「FEMO」へ：強すぎる米国経済が引き起こしたFRBのタカ派大転換
+  - **根拠URL**: [https://www.yardeniquicktakes.com/](https://www.yardeniquicktakes.com/)
+  - **切り口**: 利下げ期待でバリュエーションを膨らませる「FOMO」相場が、Warsh新FRB議長の下での「利上げバイアスへのピボット」によって破壊され、企業業績そのもので株価を正当化する「FEMO」への移行が始まったメカニズム。
+  - **想定読者**: 米国株投資家、マクロ経済に関心があるビジネスパーソン
+  - **1段落要旨**: 2025年末に利下げを3回行ったFRBは、インフレ圧力の再燃を受け急遽タカ派へ転換した。これにより市場は一時的な調整（June Swoon）を迎えたが、これは単なる崩壊ではなく、期待先行のバブル相場から、堅調な実質経済成長と利益拡大を背景とした「Fabulous Earnings Momentum (FEMO)」レジームへの健全な移行期である可能性を分析する。
+
+- **タイトル案**: 計算資源から「電力インフラ」へ：AI覇権競争の主戦場シフトと輸出規制の行方
+  - **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/) / [https://www.dir.co.jp/report/research/economics/index.html](https://www.dir.co.jp/report/research/economics/index.html)
+  - **切り口**: GPT-5.6 PreviewやClaude Tag等の進化でAIエージェントの適用が進む中、日本総研が指摘する「電力インフラ」の制約と、大和総研が解説する最先端AI輸出規制の意図を交差させて解説。
+  - **想定読者**: ITベンチャー経営者、半導体・エネルギー関連セクターの投資家
+  - **1段落要旨**: OpenAIとBroadcomの推論チップ提携やAWSへのBlackwell導入に見られるように、AIモデルの実行とエージェント展開は加速している。しかし、そのボトルネックはすでにチップ単体から「電力グリッド」へと移行しており、さらに米国政府による最先端AIの輸出管理が安全保障上の強力なカードとして発動される中、今後のAIインフラ投資がどのように変容するかを地政学と技術の両面から明らかにする。
+
+---
+
+## 10. Market Metrics Coverage
+
+- **FactSet (S&P 500 Earnings Season Update - 各日付分)**:
+  - アナリストはS&P 500の価格について、今後12ヶ月間で21%の上昇を予測（Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months、John Butters報告）。
+  - インフレ（Inflation）への言及回数は3四半期連続で増加し、3月15日から6月11日までの期間で220回の決算説明会で言及された。
+  - AI（AI）への言及回数は、3月15日から6月11日までの期間に337回に達し、過去10年間で最高水準を記録。
+  - Q2のボトムアップEPS見積もりは、4月〜5月にかけて2.5%増加（$78.84から$80.80へ上昇）。通常の過去5年・10年平均の減少傾向（1.6%減）に反して異例の上方修正となった（2026年5月29日時点の公式データ）。
+- **S&P Global (S&P 500 EPS workbook)**:
+  - 公表データ基準日（data_as_of）：2026-01-29（※公式のパブリックファイルは2026年1月をもって更新が終了）。
+  - S&P 500 インデックスレベル基準値：6,969.01
+  - 最新四半期行（latest quarterly row）：2025-09-30
+  - 営業EPS（operating EPS）：72.03
+  - 報告EPS（as reported EPS）：63.52
+  - 1株当たり売上高（sales per share）：531.47
+- **Yardeni Research (Morning Briefings / QuickTakes)**:
+  - S&P 500は6月2日に史上最高値である 7,609.78 を記録した後、6月26日の金曜日終値までに3.4%下落。6月5日の調整局面では、S&P 500は 7,383.74（2.64%安）、Nasdaqは4.77%安となった。
 

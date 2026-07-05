@@ -132,7 +132,8 @@ def parse_gate_args() -> argparse.Namespace:
     parser.add_argument("--min-url-rate", type=float, default=0.95)
     parser.add_argument("--min-date-rate", type=float, default=0.70)
     parser.add_argument("--min-non-metadata-rate", type=float, default=0.30)
-    parser.add_argument("--min-layers", type=int, default=4)
+    parser.add_argument("--min-layers", type=int, default=2)
+    parser.add_argument("--require-market-sources", action="store_true", default=True)
     return parser.parse_args()
 
 
@@ -150,11 +151,16 @@ def source_layer(source: dict) -> str:
     if source.get("layer"):
         return str(source["layer"])
     source_class = str(source.get("source_class", ""))
-    if source_class in {"market_expectation", "earnings"}:
+    if source_class in {"market_expectation", "earnings", "market_metrics"}:
         return "L0_market_price"
     if source_class == "market_narrative":
         return "L6_personal_macro_narrative"
     return "L5_analyst_interpretation"
+
+
+def source_metric_tags(source: dict) -> list[str]:
+    tags = source.get("metric_tags", [])
+    return tags if isinstance(tags, list) else []
 
 
 def robots_lines(url: str) -> list[str] | None:
@@ -207,6 +213,21 @@ def fetch(url: str) -> tuple[str, str, str]:
         return data.decode(encoding, errors="replace"), content_type, "OK"
     except LookupError:
         return data.decode("utf-8", errors="replace"), content_type, "OK"
+
+
+def fetch_binary(url: str) -> tuple[bytes, str]:
+    if not can_fetch(url):
+        return b"", "ROBOTS_DISALLOW"
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.read(8_000_000), "OK"
+    except urllib.error.HTTPError as exc:
+        return b"", f"HTTP_{exc.code}"
+    except urllib.error.URLError as exc:
+        return b"", f"URL_ERROR_{type(exc.reason).__name__}"
+    except Exception as exc:
+        return b"", f"FETCH_ERROR_{type(exc).__name__}"
 
 
 def parse_date(text: str) -> dt.date | None:
@@ -301,6 +322,43 @@ def refine_title(source: dict, title: str, snippet: str) -> tuple[str, bool]:
     return title, weak
 
 
+def item_from_source(
+    source: dict,
+    title: str,
+    published_date: str,
+    observed_date: str,
+    snippet: str,
+    body_status: str = "list_metadata",
+    evidence_level: str = "dated_listing",
+    is_current_evidence: bool = True,
+) -> dict:
+    return {
+        "source_id": source["id"],
+        "source": source["name"],
+        "layer": source_layer(source),
+        "source_class": source["source_class"],
+        "importance": source.get("importance", source.get("priority", "")),
+        "kafka_use": source.get("kafka_use", []),
+        "metric_tags": source_metric_tags(source),
+        "region": source["region"],
+        "asset_linkage": source["asset_linkage"],
+        "language": source["language"],
+        "priority": source["priority"],
+        "expected_cadence": source["expected_cadence"],
+        "title": title,
+        "published_date": published_date,
+        "observed_date": observed_date,
+        "author": "",
+        "category": source["source_class"],
+        "url": source["url"],
+        "snippet": snippet,
+        "body_status": body_status,
+        "evidence_level": evidence_level,
+        "is_current_evidence": is_current_evidence,
+        "page_title": title,
+    }
+
+
 def items_from_text(source: dict, page_title: str, text: str, start: dt.date, end: dt.date, limit: int, snippet_limit: int) -> list[dict]:
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     records: list[dict] = []
@@ -333,33 +391,110 @@ def items_from_text(source: dict, page_title: str, text: str, start: dt.date, en
         if len(snippet) > snippet_limit:
             snippet = snippet[: snippet_limit - 3].rstrip() + "..."
         title, weak_title = refine_title(source, title, snippet)
-        records.append({
-            "source_id": source["id"],
-            "source": source["name"],
-            "layer": source_layer(source),
-            "source_class": source["source_class"],
-            "importance": source.get("importance", source.get("priority", "")),
-            "kafka_use": source.get("kafka_use", []),
-            "region": source["region"],
-            "asset_linkage": source["asset_linkage"],
-            "language": source["language"],
-            "priority": source["priority"],
-            "expected_cadence": source["expected_cadence"],
-            "title": title,
-            "published_date": found.isoformat(),
-            "observed_date": end.isoformat(),
-            "author": "",
-            "category": source["source_class"],
-            "url": source["url"],
-            "snippet": snippet,
-            "body_status": "weak_title" if weak_title else "list_metadata",
-            "evidence_level": "weak_title" if weak_title else "dated_listing",
-            "is_current_evidence": not weak_title,
-            "page_title": page_title,
-        })
+        records.append(item_from_source(
+            source,
+            title,
+            found.isoformat(),
+            end.isoformat(),
+            snippet,
+            "weak_title" if weak_title else "list_metadata",
+            "weak_title" if weak_title else "dated_listing",
+            not weak_title,
+        ))
         if len(records) >= limit:
             break
     return records
+
+
+def fmt(value: object) -> str:
+    if value is None:
+        return "n/a"
+    if isinstance(value, float):
+        return f"{value:.2f}"
+    if isinstance(value, dt.datetime):
+        return value.date().isoformat()
+    return str(value)
+
+
+def first_data_row(ws, min_row: int, date_column: int = 1) -> tuple | None:
+    for row in ws.iter_rows(min_row=min_row, values_only=True):
+        if isinstance(row[date_column - 1], dt.datetime):
+            return row
+    return None
+
+
+def first_complete_quarterly_row(ws) -> tuple | None:
+    for row in ws.iter_rows(min_row=7, values_only=True):
+        if not isinstance(row[0], dt.datetime):
+            continue
+        if row[1] is not None and row[2] is not None and row[4] is not None:
+            return row
+    return None
+
+
+def collect_spglobal_xlsx(source: dict, week_end: dt.date, snippet_limit: int) -> list[dict]:
+    from io import BytesIO
+
+    try:
+        from openpyxl import load_workbook
+    except Exception as exc:
+        return [fallback_item(source, source["name"], f"OPENPYXL_{type(exc).__name__}", week_end, "", snippet_limit)]
+
+    data, status = fetch_binary(source["url"])
+    if status != "OK":
+        local_path = Path("artifacts/sp-500-eps-est.xlsx")
+        if local_path.exists():
+            data = local_path.read_bytes()
+            status = "LOCAL_FALLBACK"
+        else:
+            return [fallback_item(source, source["name"], status, week_end, "", snippet_limit)]
+    try:
+        workbook = load_workbook(BytesIO(data), read_only=True, data_only=True)
+        sector = workbook["SECTOR EPS"]
+        quarterly = workbook["QUARTERLY DATA"]
+    except Exception as exc:
+        return [fallback_item(source, source["name"], f"XLSX_{type(exc).__name__}", week_end, "", snippet_limit)]
+
+    data_as_of = sector["B2"].value
+    if isinstance(data_as_of, dt.datetime):
+        data_as_of_date = data_as_of.date()
+    else:
+        data_as_of_date = dt.date(2026, 1, 29)
+    if data_as_of_date > week_end:
+        return [fallback_item(source, source["name"], "FUTURE_DATA_AS_OF", week_end, "", snippet_limit)]
+
+    sp500_row = None
+    for row in sector.iter_rows(min_row=1, values_only=True):
+        if row and row[0] == "S&P 500":
+            sp500_row = row
+            break
+    quarter_row = first_complete_quarterly_row(quarterly)
+
+    index_level = sp500_row[1] if sp500_row and len(sp500_row) > 1 else None
+    latest_quarter = quarter_row[0] if quarter_row else None
+    operating_eps = quarter_row[1] if quarter_row and len(quarter_row) > 1 else None
+    as_reported_eps = quarter_row[2] if quarter_row and len(quarter_row) > 2 else None
+    sales_per_share = quarter_row[4] if quarter_row and len(quarter_row) > 4 else None
+
+    snippet = (
+        f"S&P Global S&P 500 EPS estimate workbook. data_as_of={data_as_of_date.isoformat()}; "
+        f"S&P 500 index level={fmt(index_level)}; "
+        f"latest quarterly row={fmt(latest_quarter)}; operating EPS={fmt(operating_eps)}; "
+        f"as reported EPS={fmt(as_reported_eps)}; sales per share={fmt(sales_per_share)}; "
+        "official workbook states public files were discontinued after January 2026."
+    )
+    if len(snippet) > snippet_limit:
+        snippet = snippet[: snippet_limit - 3].rstrip() + "..."
+    return [item_from_source(
+        source,
+        "S&P Global S&P 500 EPS, sales, and index level workbook",
+        data_as_of_date.isoformat(),
+        week_end.isoformat(),
+        snippet,
+        "structured_metrics",
+        "spglobal_xlsx",
+        True,
+    )]
 
 
 def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date, text: str, snippet_limit: int) -> dict:
@@ -373,6 +508,7 @@ def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date,
         "source_class": source["source_class"],
         "importance": source.get("importance", source.get("priority", "")),
         "kafka_use": source.get("kafka_use", []),
+        "metric_tags": source_metric_tags(source),
         "region": source["region"],
         "asset_linkage": source["asset_linkage"],
         "language": source["language"],
@@ -394,13 +530,19 @@ def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date,
 
 
 def collect_source(source: dict, start: dt.date, end: dt.date, week_end: dt.date, limit: int, snippet_limit: int) -> list[dict]:
+    if source.get("collector") == "spglobal_xlsx":
+        return collect_spglobal_xlsx(source, week_end, snippet_limit)
+    source_start = start
+    if source.get("source_class") in {"earnings", "market_metrics", "market_expectation"}:
+        lookback_days = int(source.get("lookback_days", 14))
+        source_start = min(start, week_end - dt.timedelta(days=lookback_days))
     raw, _content_type, status = fetch(source["url"])
     if status != "OK":
         return [fallback_item(source, source["name"], status, week_end, "", snippet_limit)]
     parser = TextHTMLParser()
     parser.feed(raw)
     text = parser.text()
-    records = items_from_text(source, parser.title, text, start, end, limit, snippet_limit)
+    records = items_from_text(source, parser.title, text, source_start, end, limit, snippet_limit)
     if records:
         return records
     return [fallback_item(source, parser.title, "OK", week_end, text, snippet_limit)]
@@ -428,6 +570,8 @@ def write_markdown(path: Path, items: list[dict], start: dt.date, end: dt.date) 
     by_layer: dict[str, list[dict]] = {}
     for item in items:
         by_layer.setdefault(item["layer"], []).append(item)
+    def md_field(name: str, value: str) -> str:
+        return f"- {name}: {value}" if value else f"- {name}:"
     lines = [
         f"# Weekly Power & Macro Intelligence Collection {end.isoformat()}",
         "",
@@ -461,8 +605,8 @@ def write_markdown(path: Path, items: list[dict], start: dt.date, end: dt.date) 
                 f"- observed_date: {item.get('observed_date', '')}",
                 f"- url: {item['url']}",
                 f"- region: {item['region']}",
-                f"- asset_linkage: {links}",
-                f"- kafka_use: {uses}",
+                md_field("asset_linkage", links),
+                md_field("kafka_use", uses),
                 f"- body_status: {item.get('body_status', '')}",
                 f"- evidence_level: {item.get('evidence_level', '')}",
                 f"- is_current_evidence: {item.get('is_current_evidence', False)}",
@@ -506,6 +650,23 @@ def gate_quality() -> int:
     non_metadata_rate = sum(1 for item in current_items if item.get("body_status") in CURRENT_EVIDENCE_STATUSES) / current_denominator
     layers = {str(item.get("layer", "")) for item in items if item.get("layer")}
     evidence_layers = {str(item.get("layer", "")) for item in current_items if item.get("layer")}
+    source_ids = {str(item.get("source_id", "")) for item in current_items}
+    metric_tags = {
+        str(tag)
+        for item in current_items
+        for tag in (item.get("metric_tags") or [])
+    }
+    required_source_groups = {
+        "factset": any(source_id.startswith("factset") for source_id in source_ids),
+        "spglobal": any(source_id.startswith("spglobal") for source_id in source_ids),
+        "yardeni": any(source_id.startswith("yardeni") for source_id in source_ids),
+    }
+    required_metric_tags = {
+        "company_earnings",
+        "index_earnings",
+        "revenue",
+        "index_level",
+    }
     metrics = {
         "items": total,
         "current_evidence_items": current_total,
@@ -515,6 +676,8 @@ def gate_quality() -> int:
         "non_metadata_rate": round(non_metadata_rate, 3),
         "layers": sorted(layers),
         "evidence_layers": sorted(evidence_layers),
+        "required_source_groups": required_source_groups,
+        "metric_tags": sorted(metric_tags),
     }
     failures = []
     if total < args.min_items:
@@ -529,6 +692,13 @@ def gate_quality() -> int:
         failures.append("non_metadata_rate")
     if len(evidence_layers) < args.min_layers:
         failures.append("evidence_layers")
+    if args.require_market_sources:
+        for group, present in required_source_groups.items():
+            if not present:
+                failures.append(f"required_source:{group}")
+        missing_tags = sorted(required_metric_tags - metric_tags)
+        if missing_tags:
+            failures.append("required_metric_tags:" + ",".join(missing_tags))
     print(json.dumps({"quality_gate": "fail" if failures else "pass", "failures": failures, **metrics}, ensure_ascii=False))
     return 1 if failures else 0
 

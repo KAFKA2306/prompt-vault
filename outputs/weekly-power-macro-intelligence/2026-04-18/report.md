@@ -9,184 +9,96 @@ source: agy
 # Weekly Power & Macro Intelligence - 2026-04-18
 
 ## 0. 今週の支配的レジーム
-- **中央銀行**: 日本銀行およびFederal Reserve Boardの公式発表はいずれも一覧情報にとどまり、新規の緩和・緊縮方針を決定づける直接的なテキスト本文は得られていない（本文未取得/no_in_range_date_found）。
-- **財政・政府**: 日本政府および米国トランプ政権の個別具体的な政策決定について、首相官邸の経済財政諮問会議や経産省のAI・半導体産業基盤強化フレーム等はメタデータのみの取得、またはアクセス不可（本文未取得）であり、政策による直接支配的変化は確認できない。
-- **関税・地政学**: 米国通商代表部（USTR）の対中301条関税アクション、および米国財務省のプレスリリース等は一覧の見出し等にとどまり（no_in_range_date_found）、新規の関税ショックの具体的内容は未確認。
-- **AI産業**: 2026年6月後半から7月にかけての極めて解像度の高いプレビュー情報（OpenAIによる「GPT-5.6 Sol」プレビュー、Broadcomとの協業によるLLM最適化インファレンス半導体の開発、Anthropicによる「Claude Sonnet 5」およびサイエンスベンチ「Claude Science」の公開など）が一覧上に提示されているが、これらは本集計週（2026-04-18）の時点におけるリアルタイム発表としては時期が異なるため（Collected ItemsのOpenAI NewsおよびAnthropic News内の日付「Jun 30, 2026」などを参照）、今週の支配的発表としては扱わない。
-- **AI統治思想**: Sam AltmanおよびDario Amodeiの思想文書・ブログは一覧に存在するものの、Dario Amodeiの『Policy on the AI Exponential』は2026年6月の日付となっており、2026-04-18週としての思想的変化は確認できない（no_in_range_date_found / 本文未取得）。
-
----
+- **中央銀行**: 今週の適格根拠なし
+- **財政・政府**: 米国において、トランプ大統領が「Power Plant Day」（発電所の日）に向けた最後通牒を設定し、電力政策を巡る動きが緊迫化しているほか、子供の資産形成支援制度「トランプ口座」の概要が議論されている（[立岡健二郎／Economist Column No.2026-009](https://www.jri.co.jp/report/year/)、[MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **関税・地政学**: 中東（イラン）との戦争情勢を巡り、トランプ大統領が勝利宣言を意図していることや、2〜3週間以内の戦闘地域からの撤退、イラン側からの和平提案などの情報が交錯し、一時的な地政学的リスク緩和の期待感（リリーフラリー）が株価を押し上げた。一方で米国防省が15,000人の兵力を配備するなどの軍事的緊迫化も並行している（[Yardeni QuickTakes Relief Rally Ends Correction Risk](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/)、[Thanks For The Memory](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **AI産業**: AIバブル崩壊への懸念をよそに、3月30日の市場底打ち以降、ハイパースケーラー銘柄が主導する形でS&P 500およびNasdaqが最高値を更新している（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **AI統治思想**: 今週の適格根拠なし
 
 ## 1. 日銀/Fed: 割引率と為替
-- **日銀の変化**: 金融政策決定会合の運営および展望レポートのページは検出されたが、いずれも本期間内の直接的な言及は取得できず（no_in_range_date_found、本文未取得）。日本総研の経済・政策レポート（2026-04-13公表）において、「住宅価格と金利の上昇で変化する住宅ローン市場」や「『金利ある世界』で拡大する家計間格差」が論じられており、金利上昇に伴う国内家計およびローン市場への実質的負担増のリスクが顕在化している。
-- **Fedの変化**: Federal Reserve BoardおよびFOMCの関連ページは検出されたものの、本期間内の具体的な声明・議事録の追加は確認できず（no_in_range_date_found、本文未取得）。
-- **CME FedWatchとの乖離**: CME FedWatch Toolのデータ取得はタイムアウト（FETCH_ERROR_TimeoutError）となったため、乖離状況は「未確認」。
-- **円金利・ドル円・日本株への示唆**: 日本総研のレポートが示す通り、国内では「返済長期化で負担抑制を図るローン利用者が増加」しており、金融機関の審査厳格化や金利リスク認識のシフトが進みつつある。これは円金利上昇が国内不動産・住宅関連株に対して下押し圧力となる一方で、銀行セクターにおける貸出マージンの変化要因となることを示唆している。
-
----
+- **日銀の変化**: 今週の適格根拠なし
+- **Fedの変化**: 今週の適格根拠なし
+- **CME FedWatchとの乖離**: 今週の適格根拠なし
+- **円金利・ドル円・日本株への示唆**: 日本国内では「金利ある世界」における家計間格差の拡大や、住宅価格・金利上昇に伴う返済長期化ローン利用者の増加、金融機関の審査・リスク認識の変化が指摘されており、金利上昇が国内金融セクターや個人消費に与える影響が強まりつつある（[調査部 マクロ経済研究センター／日本経済展望 2026年04月13日](https://www.jri.co.jp/report/year/)、[井上恵理菜／JRIレビュー Vol.4, No.131](https://www.jri.co.jp/report/year/)）。
 
 ## 2. 日本政府/トランプ政権: 国家政策ショック
-- **日本の財政・産業政策**: 首相官邸の経済財政諮問会議はHTTP 404、経産省のAI・半導体産業基盤強化フレームはHTTP 403のため、政策の新規発表事実は「未確認」（本文未取得）。
-- **JGB需給**: 財務省の国債入札カレンダーは本期間外（no_in_range_date_found、本文未取得）。
-- **AI・半導体政策**: 経産省の関連フレームがアクセス不可（HTTP 403）のため「未確認」。
-- **米国関税・輸出管理**: USTRおよび米国商務省産業安全保障局（BIS）のニュースルームは本文未取得（HTTP 404 / no_in_range_date_found）であり、新規規制の詳細は「未確認」。
-- **日本企業への波及**: 日本総研のレポート（2026-04-17）等では、ドイツの公共投資における防衛とインフラの格差や、地政学リスクへの懸念が指摘されており、防衛力強化への依存だけでなく緊張緩和への取り組みの重要性が説かれている。地政学的なサプライチェーン分断リスクが日本企業の設備投資意欲の重石となっている可能性がある。
-
----
+- **日本の財政・産業政策**: 今週の適格根拠なし
+- **JGB需給**: 今週の適格根拠なし
+- **AI・半導体政策**: 今週の適格根拠なし
+- **米国関税・輸出管理**: トランプ大統領が設定した「Power Plant Day」に向けた最終期限と電力供給・インフラ規制への圧力が、エネルギーおよび製造業セクターの警戒感と株価評価（P/E）に影響を与えている（[MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **日本企業への波及**: コーポレートガバナンス・コードの改訂が実質的な成長投資の促進を目指す動きになっており、日本企業の取締役会の実効性向上と投資行動の活発化が期待される（[大嶋秀雄／リサーチ・アイ No.2026-008](https://www.jri.co.jp/report/year/)）。
 
 ## 3. OpenAI/Anthropic: AI産業カーブ
-- **モデル/製品の進化**: Collected ItemsのOpenAI NewsおよびAnthropic News（2026年6月付）には、GPT-5.6 Sol（2026-06-26）やClaude Sonnet 5（2026-06-30）のリリースが記録されているが、2026-04-18週時点における直接的な進化の公表は「未確認」。
-- **enterprise adoption**: HPにおけるエンタープライズAIのスケール実績（2026-06-28付ニュース）や、生成AIが高度現場人材（AEW）の創出へ寄与するとの日本総研レポート（2026-04-13）が示されている。
-- **AI safety / regulation**: Anthropicによる脱獄（jailbreak）の深刻度を評価する業界横断フレームワーク（Amazon、Microsoft、Google等とのGlasswingパートナーシップ）の提案（2026-06-30付）が確認できる。
-- **compute需要**: OpenAIとBroadcomによるLLM最適化インファレンス半導体（2026-06-25付ニュース）の共同開発など、コンピューティングパワーの効率化と垂直統合の動きが見られる。
-- **SBG NAV / AI株への示唆**: AI半導体およびエージェント領域での開発加速は観測されるが、本週における即時的なNAVインパクト要因は「未確認」。
-
----
+- **モデル/製品の進化**: 今週の適格根拠なし
+- **enterprise adoption**: 生成AIの普及に伴い、職種構造が変化し、高度現場人材（AEW: Advanced Engineering Worker / Advanced Expert Worker）の創出が必要とされている（[下田裕介／リサーチ・アイ No.2026-006](https://www.jri.co.jp/report/year/)）。
+- **AI safety / regulation**: 今週の適格根拠なし
+- **compute需要**: ハイパースケーラー各社によるAI投資と需要の継続が株価上昇を牽引している（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **SBG NAV / AI株への示唆**: 今週の適格根拠なし
 
 ## 4. Altman/Dario: AI権力思想
-- **今週の思想的変化**: Sam Altmanのブログ（no_in_range_date_found、本文未取得）において、Altman自身の自宅付近に火炎瓶が投げ込まれた事件への言及および「言葉とナラティブの力を過小評価していた」とする記述が存在する。AI不安の増大に伴う反発が深刻化している様子が窺える。Dario Amodeiの『Policy on the AI Exponential』（2026-06）は「未確認」（no_in_range_date_found、本文未取得）。
-- **国家との距離**: 「未確認」（両名とも本期間内の国家交渉等のテキスト本文は未取得）。
-- **規制への姿勢**: 「未確認」。
-- **民主化/集中/安全保障の論点**: Altmanに対する物理的攻撃のリスクに象徴される「AI不安」と「社会的分断」が、思想的・ナラティブ的対立の論点として浮上している。
-- **投資テーマへの意味**: AGI開発への期待の一方で、世論の反発やセキュリティリスクの増大が、AI基幹企業およびその背後にある資本配分に対するカントリーリスク/社会リスクとして認識されるべき局面に入っている。
-
----
+- **今週の思想的変化**: 今週の適格根拠なし
+- **国家との距離**: 今週の適格根拠なし
+- **規制への姿勢**: 今週の適格根拠なし
+- **民主化/集中/安全保障の論点**: 今週の適格根拠なし
+- **投資テーマへの意味**: 今週の適格根拠なし
 
 ## 5. 投資仮説の更新
-- **米株スイング**: FactSet Insight（2026-07-02付記述、S&P 500 Earnings Season Preview: Q2 2026）によれば、決算発表シーズンを前にアナリストおよび企業は通常よりも楽観的な見通しを持っているとされている。楽観的な市場期待を背景とした株価高値圏での推移が想定される。
-- **日経/日本株**: 日本総研のレポート（2026-04-14）が指摘するコーポレートガバナンス・コード改訂（ガバナンス改革の主軸を「形式」から「実質」へ移し、取締役会の実効性向上による成長投資を促進する）により、企業側の余剰資金の成長投資・株主還元への配分圧力が強まる。
-- **SBG NAV**: ソフトバンクグループの主要投資先であるOpenAI/Anthropicの技術的ロードマップは順調（GPT-5.6 Sol / Claude Sonnet 5の存在）であるものの、足元のNAVに対する新寄与度は「未確認」。
-- **AI半導体**: OpenAIとBroadcomのカスタム半導体開発協業に見られるように、特定用途（LLM最適化インファレンス）向けカスタムチップへのシフトが加速しており、NVIDIAの単一支配に対する中長期的な包囲網形成プロセスを注視する必要がある。
-- **製造業・素材**: 日本総研の中国経済展望（2026-04-15）における「中国第15次5カ年計画のエネルギー重点分野」への注目、および日本の温室効果ガス排出減少に伴う「GX・脱炭素電源強化へのエネルギー転換」は、電力設備、グリッドインフラ、およびGX関連素材の長期需要を支える要素となる。
-- **為替・金利**: 日本総研の「『金利ある世界』で拡大する家計間格差」および住宅ローン返済長期化の動きから、本邦金利の緩やかな上昇トレンドが個人の実需に浸透しつつある。日米金利差縮小プロセスは緩慢であるものの、国内金利上昇圧力は蓄積されている。
-
----
+- **米株スイング**: 3月30日に調整局面（January 27の最高値から9.1%下落した時点）からボトムアウトし、ハイパースケーラー株主導の強力なラリーに移行。第1四半期決算に対するポジティブなガイダンスを出す企業数が過去5年で最多であり、利益成長（E）と株価（P/E）の拮抗戦においてEPSの底堅さが支援要因となる（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)、[By John Butters | April 2, 2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)）。
+- **日経/日本株**: コーポレートガバナンス・コード改訂による実質的な取締役会改革と成長投資の促進が、日本株の長期的なバリュエーション向上を支援する（[大嶋秀雄／リサーチ・アイ No.2026-008](https://www.jri.co.jp/report/year/)）。
+- **SBG NAV**: 今週の適格根拠なし
+- **AI半導体**: ハイパースケーラーによる需要継続が実証されており、バブル崩壊論を乗り越え株高を先導するレジームが維持されている（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **製造業・素材**: トランプ政権による「Power Plant Day」期限設定が、エネルギーおよび電力価格上昇を通じてコスト要因に波及するリスクがある（[MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **為替・金利**: 日本国内における金利上昇と住宅ローン返済長期化への行動変化、および家計格差拡大という構造変化を注視する（[調査部 マクロ経済研究センター／日本経済展望 2026年04月13日](https://www.jri.co.jp/report/year/)）。
 
 ## 6. 反証リスト
-- **既存仮説と矛盾した情報**: 
-  - 米国の労働市場および利下げ局面において、2025年末以降も予想に反して円安が持続していた点（Shenmacro『またしても通貨防衛のための利上げが迫る』2025-12-11付記述）。
+- **既存仮説と矛盾した情報**: 米国の非農業部門雇用者数（Nonfarm Payrolls）の3月予測値が前月比60,000人増と比較的マイルドな水準に減速している点（[Total Nonfarm Payrolls for March 2026 Are Projected to Rise By 60,000](https://insight.factset.com/page/7)）。
 - **重み**: 中
-- **対応**: 「日米金利差のみでドル円為替を説明する」という単純なマクロドグマからの脱却。円建ての資本流出圧力、あるいは本邦貿易構造に起因する需給要因を精査し、為替の監視条件を再設定する。
-
----
+- **対応**: 雇用市場の大幅な悪化を示すものではないが、インフレ圧力が急激に高まることへの警戒感を和らげる一方、景気の減速スピードを観察するため今後のマクロデータ監視を続ける。
 
 ## 7. 来週の行動
-- **売買**: 
-  - ガバナンス・コード改訂の実質化恩恵を受けやすく、成長投資（または増配）余力のある国内中大型株の監視継続。
-- **調査**:
-  - 日本総研『生成ＡＩが変える職種構造と高度現場人材(AEW)の創出』のレポート本文を入手し、日本国内でのAI導入による生産性向上と労働シフトの実態を調査。
-- **発信**:
-  - ガバナンス・コード改訂がもたらす「形式から実質への成長投資促進」と、日本企業の資本配分行動の変化予測についてScrapboxへ整理。
-
----
+- **売買**: ハイパースケーラー銘柄の利益（E）の強さに依拠し、米株スイングは強気バイアスを維持しつつボトムアウト後のエントリーを継続。
+- **調査**: 生成AIが職種に与える影響（高度現場人材の需要）と、トランプ政権の「トランプ口座」に関する経済影響のさらなる調査。
+- **発信**: 日本国内の「金利ある世界」における住宅ローン利用者の行動変容と金融機関の審査・リスク管理姿勢の変化について解説を作成。
 
 ## 8. 重要ソースTop 10
 
-1. **コーポレートガバナンス・コード改訂のポイント**
-   - **source**: 日本総研 経済・政策レポート
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-14
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 取締役会の成長投資（設備投資・M&A・株主還元）促進メカニズムの実質化時期を測るため。
-   - **投資・研究・記事化のどれに使えるか**: 投資（日本株の選別スクリーニング）、記事化
-
-2. **生成ＡＩが変える職種構造と高度現場人材(AEW)の創出**
-   - **source**: 日本総研 経済・政策レポート
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-13
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 生成AIの普及が単なる事務代替に留まらず、「高度現場人材」の生産性向上としてどう具現化するかを分析するため。
-   - **投資・研究・記事化のどれに使えるか**: 研究、記事化
-
-3. **住宅価格と金利の上昇で変化する住宅ローン市場**
-   - **source**: 日本総研 日本経済展望
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-13
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 国内金利上昇が住宅セクターおよび金融機関のクレジット審査に与える影響を把握するため。
-   - **投資・研究・記事化のどれに使えるか**: 投資（日本の銀行・不動産株）
-
-4. **わが国の温室効果ガス排出量の減少と今後の課題 ―GX・脱炭素電源強化によるエネルギー転換の加速が重要に―**
-   - **source**: 日本総研 経済・政策レポート
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-15
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 国内のAIデータセンター急増に対する「脱炭素電源」供給能力のボトルネックと投資機会の検証。
-   - **投資・研究・記事化のどれに使えるか**: 投資（電力・インフラ・GX関連素材）
-
-5. **中国第15次5カ年計画におけるエネルギー重点分野の注目点**
-   - **source**: 日本総研 経済・政策レポート
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-15
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 中国の国家方針としてのエネルギーシフトが、グローバルの素材・資源価格におよぼす影響を見極める。
-   - **投資・研究・記事化のどれに使えるか**: 投資（コモディティ、製造業）
-
-6. **Sam Altman Blog**
-   - **source**: Sam Altman Blog
-   - **layer**: L4
-   - **source_class**: ai_power_ideology
-   - **published_date**: 2026-04-18
-   - **url**: https://blog.samaltman.com/
-   - **KAFKAにとっての意味**: Altmanの身辺脅威と「AIに対する大きな社会不安」の深刻さを直接示すため。
-   - **投資・研究・記事化のどれに使えるか**: 研究、記事化（AIのナラティブ抵抗運動）
-
-7. **S&P 500 Earnings Season Preview: Q2 2026**
-   - **source**: FactSet Insight Earnings
-   - **layer**: L0
-   - **source_class**: earnings
-   - **published_date**: 2026-04-18 (本文中記載は2026-07-02)
-   - **url**: https://insight.factset.com/topic/earnings
-   - **KAFKAにとっての意味**: 米国株スイングにおける決算期前のコンセンサス楽観偏向を定量把握するため。
-   - **投資・研究・記事化のどれに使えるか**: 投資（米株スイング）
-
-8. **またしても通貨防衛のための利上げが迫る**
-   - **source**: Shenmacro 炭鉱のカナリア、炭鉱の龍
-   - **layer**: L6
-   - **source_class**: market_narrative
-   - **published_date**: 2026-04-18 (本文中記載は2025-12-11)
-   - **url**: https://www.shenmacro.com/
-   - **KAFKAにとっての意味**: 金利差だけで説明がつかない「通貨防衛的な日銀追加利上げ」の市場ナラティブを追うため。
-   - **投資・研究・記事化のどれに使えるか**: 研究、投資（為替・国債）
-
-9. **地政学リスクに怯える世界経済 ～防衛力強化だけでなく、緊張緩和への努力を～**
-   - **source**: 日本総研 経済・政策レポート
-   - **layer**: L5
-   - **source_class**: official_macro
-   - **published_date**: 2026-04-17
-   - **url**: https://www.jri.co.jp/report/year/
-   - **KAFKAにとっての意味**: 地政学リスクの長期化が設備投資やグローバル供給網に与える不可逆的な影響の分析。
-   - **投資・研究・記事化のどれに使えるか**: 研究
-
-10. **米国における子どもの資産形成支援制度「トランプ口座」の概要**
-    - **source**: 日本総研 経済・政策レポート
-    - **layer**: L5
-    - **source_class**: official_macro
-    - **published_date**: 2026-04-17
-    - **url**: https://www.jri.co.jp/report/year/
-    - **KAFKAにとっての意味**: トランプ政権下での国内金融・優遇税制が個人の貯蓄から投資の流れに与える影響。
-    - **投資・研究・記事化のどれに使えるか**: 研究
-
----
+| # | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 用途 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | MARKET CALL: The Tug Of War Between P/E And E | Yardeni Research | L0 | market_metrics | 2026-04-15 | [Link](https://www.yardeniquicktakes.com/tag/stock-market/) | S&P 500とNasdaq最高値更新、ハイパースケーラー主導によるボトムアウトの確認 | 投資 |
+| 2 | By John Butters | April 2, 2026 | FactSet | L0 | earnings | 2026-04-02 | [Link](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026) | Q1決算でのポジティブなEPSガイダンスの多さとEPS推定値の上方修正傾向の把握 | 投資 |
+| 3 | MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates | Yardeni Research | L0 | market_metrics | 2026-04-05 | [Link](https://www.yardeniquicktakes.com/tag/stock-market/) | トランプ大統領による「Power Plant Day」期限設定がエネルギー価格等に与える影響 | 投資・研究 |
+| 4 | Yardeni QuickTakes Relief Rally Ends Correction Risk | Yardeni Research | L0 | market_metrics | 2026-03-31 | [Link](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/) | 中東情勢（イラン戦）を巡る和平観測とトランプ大統領の撤退方針発表による市場センチメント改善 | 投資 |
+| 5 | 日本経済展望2026年4月号：住宅価格と金利の上昇で変化する住宅ローン市場 | 日本総研 | L5 | official_macro | 2026-04-13 | [Link](https://www.jri.co.jp/report/year/) | 国内の金利上昇に伴う返済長期化ローンの普及と、金融機関のリスク管理姿勢の変化 | 研究・記事化 |
+| 6 | コーポレートガバナンス・コード改訂のポイント | 日本総研 | L5 | official_macro | 2026-04-14 | [Link](https://www.jri.co.jp/report/year/) | 形式から実質へのガバナンス改革推進がもたらす日本企業の成長投資促進期待 | 研究・記事化 |
+| 7 | 生成ＡＩが変える職種構造と高度現場人材(AEW)の創出 | 日本総研 | L5 | official_macro | 2026-04-13 | [Link](https://www.jri.co.jp/report/year/) | AIの浸透による現場労働者のスキル転換と職種構造変化の実態 | 研究・記事化 |
+| 8 | 米国における子どもの資産形成支援制度「トランプ口座」の概要 | 日本総研 | L5 | official_macro | 2026-04-17 | [Link](https://www.jri.co.jp/report/year/) | トランプ政権下における新制度導入に伴う資産形成への影響 | 研究 |
+| 9 | 日本経済展望2026年4月号：【「金利ある世界」で拡大する家計間格差】 | 日本総研 | L5 | official_macro | 2026-04-13 | [Link](https://www.jri.co.jp/report/year/) | 国内金利上昇局面に特有の金利収支の非対称性による格差拡大 | 研究 |
+| 10 | S&P Global S&P 500 EPS, sales, and index level workbook | S&P Global | L0 | market_metrics | 2026-01-29 | [Link](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx) | データ基準日（2026-01-29）におけるS&P 500指数基準値（6969.01）およびEPS水準の公式確認 | 投資 |
 
 ## 9. コンテンツ化候補
+### タイトル案：金利ある世界へのシフト：返済長期化へ動く住宅ローン利用者と金融機関の攻防
+- **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
+- **切り口**: 住宅価格の高騰と金利上昇というダブルパンチの中、返済期間を長期化させて月々の負担を抑えようとする利用者の実態と、それに対する銀行側の与信審査の変化。
+- **想定読者**: 不動産投資家、住宅購入検討層、金融機関の担当者
+- **1段落要旨**: 金利上昇が現実味を帯びる中、住宅購入者は毎月の支払額を抑えるために住宅ローンの返済期間を限界まで伸ばす防衛策をとっています。一方で、金融機関側は融資期間の長期化に伴う高齢化リスクや返済不能リスクを警戒し、与信審査や管理態勢の厳格化にかじを切り始めています。
 
-### 候補1
-- **タイトル案**: ガバナンス・コード「実質化」が引き金となる日本企業の成長投資シフト
-- **根拠URL**: https://www.jri.co.jp/report/year/（2026-04-14付『コーポレートガバナンス・コード改訂のポイント』）
-- **切り口**: 「形式的な社外取締役導入」のフェーズが終わり、取締役会の実効性向上を通じた「攻めの投資（M&A・設備・AI）」がどのように実質化されるかを検証。
-- **想定読者**: 日本株のアクティブ投資家、日本企業の経営企画部門
-- **1段落要旨**: 取締役会が単なる守りのガバナンス機関から、実質的な「成長投資の意思決定機関」へ移行することがコード改訂で求められている。これにより、日本企業の内部留保が国内のAIインフラやM&Aへ還流するペースが速まる可能性があり、投資家は「形式クリア企業」ではなく「実質投資能力のある企業」を選別する必要がある。
+### タイトル案：実質本位への転換点：コーポレートガバナンス・コード改訂と日本企業の「稼ぐ力」
+- **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
+- **切り口**: ガバナンス改革の主軸が社外取締役の人数などの「形式」から、取締役会の実効性向上による成長投資判断という「実質」へ移ることによる株価への影響。
+- **想定読者**: 日本株投資家、企業経営企画担当者
+- **1段落要旨**: コーポレートガバナンス・コードの改訂により、単に基準を満たすための形式的なガバナンスから、リスクをとって成長投資を促進するための実質的な取締役会の機能発揮が求められることになります。これが日本企業の資本効率向上と稼ぐ力の強化にどう繋がるかを考察します。
 
-### 候補2
-- **タイトル案**: AI不安とナラティブの衝突：サム・アルトマン襲撃が示すテクノロジーの「思春期の痛み」
-- **根拠URL**: https://blog.samaltman.com/ （2026-04-18付ブログより）
-- **切り口**: OpenAI CEOに対する物理的な襲撃事件（火炎瓶投擲）を端緒に、AIに対する社会不安と言葉（ナラティブ）の力が及ぼすセキュリティリスクを分析。
-- **想定読者**: テックトレンド追従者、社会学や思想に関心のある読者
-- **1段落要旨**: サム・アルトマンはブログで「AIに対する大きな不安の時代」において言葉とナラティブが暴力へ直結するリスクを吐露した。これは、先行する高度AI技術に対する一般社会の受容能力が限界を迎えている「テクノロジーの思春期」特有の摩擦であり、今後は製品スペックだけでなく、社会的なコンセンサス形成および防衛がテクノロジー企業の最重要課題となる。
+## 10. Market Metrics Coverage
+- **Yardeni Research**
+  - S&P 500とNasdaqは2026年4月15日の最高値を更新。3月30日の直近ボトム（1月27日の高値から9.1%下落した水準）からの上昇トレンドをハイパースケーラー主導で形成（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **FactSet**
+  - S&P 500の第1四半期におけるポジティブなEPSガイダンス提示企業数が過去5年で最多（[Highest Number of S&P 500 Companies Issuing Positive EPS Guidance in 5 Years](https://insight.factset.com/page/7)）。
+  - Q1推定利益は2025年12月31日時点から0.4%増加し、6293億ドル（当初見通し6270億ドルから上方修正）へ（[By John Butters | April 2, 2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)）。
+- **S&P Global**
+  - 公式基準ワークブック（data_as_of=2026-01-29）
+    - S&P 500 Index Level: 6969.01
+    - Operating EPS (latest quarterly row=2025-09-30): 72.03
+    - As Reported EPS: 63.52
+    - Sales per Share: 531.47
+    - （※公式ワークブックは2026年1月をもって一般公開を終了）（[S&P Global S&P 500 EPS, sales, and index level workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）
 
