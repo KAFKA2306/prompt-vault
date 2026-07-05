@@ -17,7 +17,24 @@ source: agy
 
 ---
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **FactSet**
+  - **企業利益**: S&P 500を構成する企業の89%がQ1決算を報告済みで、うち84%が予想を上回るEPSを達成（5年平均78%、10年平均75%を上回る）。全利益の集計値は市場予想を18.2%上回り、2021年Q1以来の高水準を記録（[FactSet Negative EPS Surprises Q1 2026](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)、[FactSet S&P 500 Earnings Season Update May 8 2026](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)）。
+  - **指数利益**: S&P 500はQ4 2021以来で最高の利益成長率を記録中（[FactSet S&P 500 Earnings Season Update May 8 2026](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)）。
+  - **収益**: S&P 500の売上高（Revenue）成長率は2022年以来の最高水準に到達（[FactSet Insight Earnings](https://insight.factset.com/topic/earnings)）。
+  - **指数水準**: 今週の適格根拠なし。
+- **S&P Global**
+  - **企業利益**: 2025年9月30日現在の四半期データ（※公式基準値データ）として、Operating EPSは72.03ドル、As Reported EPSは63.52ドル（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+  - **指数利益**: 今週の適格根拠なし。
+  - **収益**: 2025年9月30日現在の四半期データ（※公式基準値データ）として、一株当たり売上高（Sales per share）は531.47ドル（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+  - **指数水準**: データ日付2026年1月29日時点のS&P 500指数レベルは6969.01（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+- **Yardeni Research**
+  - **企業利益**: アナリストの利益予想コンセンサスが2026年および2027年に向けて急速に上方改定されており、「収益主導のメルトアップ」を支持（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
+  - **指数利益**: 今週の適格根拠なし。
+  - **収益**: 今週の適格根拠なし。
+  - **指数水準**: S&P 500は5月14日木曜日に過去最高値の7501.24を記録。Yardeni Researchによる2026年末のS&P 500ターゲットレンジは8250（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。
+
+## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 為替介入後も根強い円安圧力が存続。円安是正には成長力の向上が不可欠と指摘され、構造改革や生産性向上が円金利・為替の長期的焦点に（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **Fedの変化**: 新議長Kevin Warshの就任（初日は5月15日金曜日）直後から債券市場の警戒感が浮き彫りとなり、4月FOMC議事録でも利下げバイアスの維持に対して3名の投票メンバー（Hammack、Kashkari、Logan）が反対していた事実が判明（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)、[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
 - **CME FedWatchとの乖離**: 市場が金利の高止まり（Higher for longer）を織り込む中、Yardeni Researchは6月FOMCでの引き締めバイアス採用および7月FOMCでの25bps利上げを予測し、市場コンセンサスよりタカ派的（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。
@@ -25,7 +42,7 @@ source: agy
 
 ---
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - **日本の財政・産業政策**: 防衛力強化の支出を単なる財政「コスト」で終わらせず、国内の技術・産業基盤強化に繋げる産業政策論議が台頭（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **JGB需給**: 今週の適格根拠なし。
 - **AI・半導体政策**: トランプ政権の商務省はCHIPS法に基づくインセンティブを通じて量子コンピューティング・ハードウェア企業9社へ20億ドルを投資し、政府が少数株式を取得。民間戦略企業の「直接的な政府所有・関与」が進む（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。
@@ -34,7 +51,7 @@ source: agy
 
 ---
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - **モデル/製品の進化**: 今週の適格根拠なし。
 - **enterprise adoption**: 今週の適格根拠なし。
 - **AI safety / regulation**: 今週の適格根拠なし。
@@ -43,7 +60,7 @@ source: agy
 
 ---
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - **今週の思想的変化**: 今週の適格根拠なし。
 - **国家との距離**: 今週の適格根拠なし。
 - **規制への姿勢**: 今週の適格根拠なし。
@@ -52,7 +69,7 @@ source: agy
 
 ---
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - **米株スイング**: S&P 500は一時史上最高値の7501.24を記録したのち下落。Yardeni Researchは年末目標8250を維持するものの、金利急上昇による短期調整リスクを警戒（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。企業収益（EPS）は市場予想を18.2%上回るなど極めて好調であり、「収益主導のメルトアップ」の土台は揺らいでいない（[FactSet Negative EPS Surprises Q1 2026](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)）。
 - **日経/日本株**: 日経平均とTOPIXの乖離拡大を監視。円安が下支えするものの、米金利急上昇と日銀の対応が焦点（[日本総研 日本経済展望](https://www.jri.co.jp/report/medium/japan/)）。
 - **SBG NAV**: 今週の適格根拠なし。
@@ -62,7 +79,7 @@ source: agy
 
 ---
 
-## 6. 反証リスト
+## 7. 反証リスト
 - **既存仮説と矛盾した情報**:
   - 米国金利について「利下げサイクル開始による利回り低下」を前提とするシナリオと矛盾し、インフレ再加速（4月CPI 3.8%など）とFedのタカ派シフト懸念により、長期金利（10年債4.69%、30年債5.19%）が急騰（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。
   - OPLプラスによる原油価格統制力に関して、UAEの脱退懸念にともなう影響力低下リスクが台頭（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
@@ -71,14 +88,14 @@ source: agy
 
 ---
 
-## 7. 来週の行動
+## 8. 来週の行動
 - **売買**: 金利急騰局面を受け、バリュエーションの割高な中小型ハイテク株のポジションを縮小。好調な決算が確認されたNVIDIAや大手クラウド（ハイ hyperscalers）への傾斜。
 - **調査**: データセンターの電力逼迫要因となる米国各地域の電力網グリッド・ユーティリティ株およびエネルギーインフラ企業の規制環境。
 - **発信**: トランプ政権のCHIPS法に基づく「量子スタートアップへの政府持分取得」を通じた直接的産業関与アプローチの整理と記事化。
 
 ---
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 
 1. **Fed Minutes Should Please Bond Vigilantes**
    - **source**: Yardeni Research QuickTakes Archive Page 5
@@ -172,7 +189,7 @@ source: agy
 
 ---
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 
 ### タイトル案: トランプ政権が量子コンピュータで魅せる「直接持分取得」の国家資本主義
 - **根拠URL**: [https://www.yardeniquicktakes.com/page/5/](https://www.yardeniquicktakes.com/page/5/)
@@ -187,22 +204,3 @@ source: agy
 - **1段落要旨**: 生成AIとデータセンターの拡張により、米国の電力需要急増が顕在化しています。日本総研のレポートが警告する通り、インフラ側の電力供給網の負荷やグリッドのひっ迫は、単なるテック企業のコスト増に留まらず、他の製造業や実体経済の生産活動そのものの制限要因になりつつあります。AI株への投資にあたっては、コンピューティング能力だけでなく、「送電網と電源の確保力」というエネルギーボトルネックを最大の監視ポイントに置く必要があります。
 
 ---
-
-## 10. Market Metrics Coverage
-
-- **FactSet**
-  - **企業利益**: S&P 500を構成する企業の89%がQ1決算を報告済みで、うち84%が予想を上回るEPSを達成（5年平均78%、10年平均75%を上回る）。全利益の集計値は市場予想を18.2%上回り、2021年Q1以来の高水準を記録（[FactSet Negative EPS Surprises Q1 2026](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)、[FactSet S&P 500 Earnings Season Update May 8 2026](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)）。
-  - **指数利益**: S&P 500はQ4 2021以来で最高の利益成長率を記録中（[FactSet S&P 500 Earnings Season Update May 8 2026](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)）。
-  - **収益**: S&P 500の売上高（Revenue）成長率は2022年以来の最高水準に到達（[FactSet Insight Earnings](https://insight.factset.com/topic/earnings)）。
-  - **指数水準**: 今週の適格根拠なし。
-- **S&P Global**
-  - **企業利益**: 2025年9月30日現在の四半期データ（※公式基準値データ）として、Operating EPSは72.03ドル、As Reported EPSは63.52ドル（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-  - **指数利益**: 今週の適格根拠なし。
-  - **収益**: 2025年9月30日現在の四半期データ（※公式基準値データ）として、一株当たり売上高（Sales per share）は531.47ドル（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-  - **指数水準**: データ日付2026年1月29日時点のS&P 500指数レベルは6969.01（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-- **Yardeni Research**
-  - **企業利益**: アナリストの利益予想コンセンサスが2026年および2027年に向けて急速に上方改定されており、「収益主導のメルトアップ」を支持（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
-  - **指数利益**: 今週の適格根拠なし。
-  - **収益**: 今週の適格根拠なし。
-  - **指数水準**: S&P 500は5月14日木曜日に過去最高値の7501.24を記録。Yardeni Researchによる2026年末のS&P 500ターゲットレンジは8250（[Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/)）。
-

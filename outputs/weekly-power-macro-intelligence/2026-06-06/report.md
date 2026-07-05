@@ -15,34 +15,43 @@ source: agy
 - **AI産業**: 第一四半期のS&P 500決算で、AI関連の設備投資に支えられた非常に強力な業績モーメンタム「FEMO (Fabulous Earnings Momentum)」がS&P 500の株価上昇を牽引しています（[Yardeni Research](https://www.yardeniquicktakes.com/page/3/)）。また、SpaceX（6月12日上場予定、評価額最大1.8兆ドルで750億〜800億ドル調達）を皮切りに、AnthropicやOpenAIといった「AI-3」と呼ばれるメガIPOの到来とそれに伴う市場からの資金吸収懸念が浮上しています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 - **AI統治思想**: 今週の適格根拠なし
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **FactSet**:
+  - Q1 2026決算において、S&P 500構成企業のうち決算発表した企業の84%が予想を上回るEPSを記録し、予想比で+18.2%のサプライズを達成しました（2021年Q2以来の好調さ）（[FactSet](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)、[FactSet](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)）。
+  - Q2の bottom-up EPS予測値は、4月31日の78.84ドルから5月28日時点で80.80ドルへと2.5%上方修正されました（[FactSet](https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021)）。
+- **S&P Global**:
+  - 基準値（S&P 500指数：6969.01、営業EPS：72.03、報告EPS：63.52、一株当たり売上高：531.47ドル、データ基準日：2026年1月29日時点の公式公開XLS）（[S&P Global](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。※公式公開ファイルは2026年1月をもって更新停止となっています。
+- **Yardeni Research**:
+  - S&P 500指数は史上初めて7,600を突破しました（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。また、Yardeni Researchは強固なFEMOを背景に、2026年末のS&P 500ターゲットを従来の7,700から8,250へと引き上げています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
+
+## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 今週の適格根拠なし
 - **Fedの変化**: 新議長Kevin Warshの初登庁（5月15日）以降、債券市場で売りが先行し、30年債利回りが5.19%（2007年7月以来の高水準）、10年債利回りが4.69%へ急上昇しました（[Yardeni Research](https://www.yardeniquicktakes.com/page/5/)）。堅調な経済とインフレ指標を背景に、6月会合で引き締めバイアスを導入し、7月会合で利上げに動くシナリオが浮上しています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 - **CME FedWatchとの乖離**: 市場コンセンサス（CME FedWatch等）は早くとも年後半以降の利下げまたは据え置きを想定しているのに対し、Yardeni Researchは7月の利上げ（FF金利の引き上げ）を予測しており、市場予測よりも大幅にタカ派な乖離が生じています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 - **円金利・ドル円・日本株への示唆**: 日本総研の為替展望（新美陽大氏）では、年後半以降は緩やかな円高へ向かうとの予測が示されている一方、中東危機の長期化や米国の金利高止まりによるアジアの通貨安リスク、債務リスクへの警戒も指摘されています（[日本総研](https://www.jri.co.jp/report/year/)、[日本総研](https://www.jri.co.jp/report/medium/exchange/)）。
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - **日本の財政・産業政策**: 金融未来Tech2026年夏号にて、スタートアップに対する資金供給強化や、東証によるグロース市場改革に関する議論が行われています（[日本総研](https://www.jri.co.jp/report/year/)）。
 - **JGB需給**: 今週の適格根拠なし
 - **AI・半導体政策**: トランプ政権の商務省は、CHIPSおよび科学法に基づき量子コンピューティングおよびハードウェア企業9社に対して、研究助成金ではなく「政府による少数株主権（マジョリティではない株式取得）」という直接出資モデルでの20億ドル支援を決定しました（[Yardeni Research](https://www.yardeniquicktakes.com/page/5/)）。
 - **米国関税・輸出管理**: トランプ政権はイランへの経済制裁および海上封鎖を継続する姿勢を示しており、これが地政学リスクおよび物流リスクに影響を与えています（[Yardeni Research](https://www.yardeniquicktakes.com/page/5/)）。
 - **日本企業への波及**: 中国が推進する「新型エネルギーシステム」の構築に対し、日本の国際エネルギー秩序における対応や影響が議論されています（[日本総研](https://www.jri.co.jp/report/year/)）。
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - **モデル/製品の進化**: 今週の適格根拠なし
 - **enterprise adoption**: 今週の適格根拠なし
 - **AI safety / regulation**: 今週の適格根拠なし
 - **compute需要**: 米国政府による量子コンピューティング・ハードウェア分野の9社への20億ドル直接出資により、次世代ハードウェア・計算需要インフラ開発の多様化と政府管理が強まっています（[Yardeni Research](https://www.yardeniquicktakes.com/page/5/)）。
 - **SBG NAV / AI株への示唆**: OpenAIおよびAnthropicが将来的に時価総額1兆〜1.75兆ドル規模でのIPOを控えているとの観測が報じられており、これらのメガIPO（「AI-3」）の出現は、ソフトバンクグループを含むAI関連投資ポートフォリオの未公開株評価（NAV）の大幅な押し上げ要因となる一方、市場の既存の資金（流動性）を大量に吸収するリスクとして注視されています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - **今週の思想的変化**: 今週の適格根拠なし
 - **国家との距離**: 今週の適格根拠なし
 - **規制への姿勢**: 今週の適格根拠なし
 - **民主化/集中/安全保障の論点**: 今週の適格根拠なし
 - **投資テーマへの意味**: 今週の適格根拠なし
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - **米株スイング**: 第一四半期の決算におけるFabulous Earnings Momentum (FEMO) が下値を強力に支えており、S&P 500は7,600を突破しました（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。アナリストのQ2のEPS予測も上方修正されています（[FactSet](https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021)）。ただし、Warsh新FRB議長の下での利上げ観測や、金利急上昇による一時的な調整リスク（June Swoon）に対する警戒を高める必要があります（[Yardeni Research](https://www.yardeniquicktakes.com/page/3/)、[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 - **日経/日本株**: 東証によるグロース市場改革やスタートアップ資金供給の動きが、中長期的な日本株のアクティビティを刺激する可能性があります（[日本総研](https://www.jri.co.jp/report/year/)）。
 - **SBG NAV**: SpaceXの6月12日上場計画（評価額最大1.8兆ドル）およびOpenAI、Anthropicの将来のメガIPO計画（時価総額1兆〜1.75兆ドル）は、SBGの保有するAIポートフォリオの公正価値を強力に裏付ける材料となります（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
@@ -50,17 +59,17 @@ source: agy
 - **製造業・素材**: 今週の適格根拠なし
 - **為替・金利**: 米国30年債利回りが5.19%、10年債が4.69%へ急上昇する中、Warsh議長のタカ派的スタンスが明確になれば、円安圧力および長期金利高止まりが継続します（[Yardeni Research](https://www.yardeniquicktakes.com/page/5/)）。日本総研は年後半のドル円緩やかな円高移行を見込んでいますが、中東緊張に伴うアジア通貨全体の下押し圧力との相殺に注視が必要です（[日本総研](https://www.jri.co.jp/report/year/)、[日本総研](https://www.jri.co.jp/report/medium/exchange/)）。
 
-## 6. 反証リスト
+## 7. 反証リスト
 - **既存仮説と矛盾した情報**: FRBの利下げ期待が根強い中、Yardeni Researchが「FRBは6月に引き締めバイアスへ転換し、7月に利上げを行う」とのタカ派的予測を公表したこと（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
 - **重み**: 極めて高い。Kevin Warsh議長の意向と直近のインフレ指標（CPI 3.8%）がこのシナリオを補強しており、市場の利下げ前提を根底から覆すリスクがあるため。
 - **対応**: CME FedWatchによる金利先物市場の織り込み状況と、FRB高官・議長発言におけるタカ派トーンの強まりを引き続き監視。
 
-## 7. 来週の行動
+## 8. 来週の行動
 - **売買**: メガIPO（SpaceX等）の発表やWarsh利上げ懸念に伴う株価調整（pullback）が発生した場合に備え、S&P 500の情報技術セクターおよびAI関連株の買い増し余力を確保。
 - **調査**: 中国が構想する「新型エネルギーシステム」の進捗と、日本のエネルギー安全保障政策（METI等）の関連レポートを精読（[日本総研](https://www.jri.co.jp/report/year/)）。
 - **発信**: 米商務省の量子コンピューティング・ハードウェア企業への直接「株式取得（エクイティ投資）」モデルの進展と、それが民間エコシステムに与える影響についての解説記事の執筆。
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 1. **Title**: Is Wall Street's AI Boom Spreading To Main Street? Nothing To Fear But FOMO?
    - **Source**: Yardeni Research QuickTakes Archive Page 4
    - **Layer**: L0_market_price
@@ -151,7 +160,7 @@ source: agy
     - **KAFKAにとっての意味**: 2028年3月期から適用が予定される有報記載の整理による開示実務・制度動向。
     - **活用方法**: 研究（日本市場制度設計）
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 - **タイトル案**: 「資本主義の新たな国家介入：米国商務省による量子コンピュータ企業への直接出資モデル」
   - **根拠URL**: https://www.yardeniquicktakes.com/page/5/
   - **切り口**: 単なる研究助成ではなく「少数株式取得（エクイティ投資）」という国家による直接の戦略的企業所有モデルへの移行が意味する地政学的・産業的インパクト。
@@ -163,13 +172,3 @@ source: agy
   - **切り口**: SpaceX、OpenAI、Anthropicの歴史的規模の上場計画が市場の流動性に与える引き揚げストレス。
   - **想定読者**: 個人投資家、オルタナティブ投資アロケーター
   - **1段落要旨**: 近い将来に控えるSpaceX（評価額最大1.8兆ドル）、Anthropic、OpenAIといった時価総額1兆〜1.75兆ドル規模の超巨大企業の上場（メガIPO）は、AI産業の成熟と評価を強める。一方で、数千億ドル規模の資金を株式市場から一気に吸い上げるため、市場全体の流動性を枯渇させ、他のセクターや既存のIT株に急激な需給悪化をもたらす「流動性吸収懸念」を引き起こしている。
-
-## 10. Market Metrics Coverage
-- **FactSet**:
-  - Q1 2026決算において、S&P 500構成企業のうち決算発表した企業の84%が予想を上回るEPSを記録し、予想比で+18.2%のサプライズを達成しました（2021年Q2以来の好調さ）（[FactSet](https://insight.factset.com/sp-500-earnings-season-update-may-8-2026)、[FactSet](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)）。
-  - Q2の bottom-up EPS予測値は、4月31日の78.84ドルから5月28日時点で80.80ドルへと2.5%上方修正されました（[FactSet](https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021)）。
-- **S&P Global**:
-  - 基準値（S&P 500指数：6969.01、営業EPS：72.03、報告EPS：63.52、一株当たり売上高：531.47ドル、データ基準日：2026年1月29日時点の公式公開XLS）（[S&P Global](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。※公式公開ファイルは2026年1月をもって更新停止となっています。
-- **Yardeni Research**:
-  - S&P 500指数は史上初めて7,600を突破しました（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。また、Yardeni Researchは強固なFEMOを背景に、2026年末のS&P 500ターゲットを従来の7,700から8,250へと引き上げています（[Yardeni Research](https://www.yardeniquicktakes.com/page/4/)）。
-

@@ -145,6 +145,9 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
     group_presence = {name: any(check(source_id) for source_id in source_ids) for name, check in REQUIRED_GROUPS.items()}
     missing_groups = sorted(name for name, present in group_presence.items() if not present)
     missing_metric_tags = sorted(REQUIRED_METRIC_TAGS - metric_tags)
+    market_metrics_pos = report.find("## 1. Market Metrics Dashboard")
+    investment_pos = report.find("## 6. 投資仮説の更新")
+    market_metrics_order_ok = market_metrics_pos != -1 and investment_pos != -1 and market_metrics_pos < investment_pos
 
     if not report_path.exists():
         failures.append("missing_report")
@@ -160,6 +163,8 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         failures.append("missing_required_source_groups:" + ",".join(missing_groups))
     if missing_metric_tags:
         failures.append("missing_required_metric_tags:" + ",".join(missing_metric_tags))
+    if not market_metrics_order_ok:
+        failures.append("market_metrics_dashboard_order")
 
     return {
         "week_end": week_end.isoformat(),
@@ -168,6 +173,7 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         "current_evidence_items": len(current_items),
         "required_source_groups": group_presence,
         "metric_tags": sorted(metric_tags),
+        "market_metrics_dashboard_order": market_metrics_order_ok,
         "future_report_dates": future_report_dates,
         "future_item_dates": [
             {

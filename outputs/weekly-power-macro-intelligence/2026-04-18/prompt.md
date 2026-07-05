@@ -25,6 +25,7 @@
 - 十分な根拠がない節は「今週の適格根拠なし」とだけ書き、空想で埋めない。
 - FactSet / S&P Global / Yardeni Research の company_earnings, index_earnings, revenue, index_level は米株スイングと重要ソースに必ず反映する。
 - S&P Global XLSが古い場合は、data_as_ofを明示し、現在値ではなく公式基準値として扱う。
+- Week End より後の日付、イベント、予定、数値を本文に書いてはいけない。Current Evidence Items 内の [future date redacted] は無視する。
 
 # Source Hierarchy
 - L0: 市場価格、CME FedWatch、決算
@@ -54,34 +55,44 @@
 - AI産業:
 - AI統治思想:
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、収益、指数水準を確認する。
+この節は投資仮説の前提条件であり、末尾の補足欄にしてはいけない。
+- 企業利益:
+- 指数利益:
+- 収益:
+- 指数水準:
+- バリュエーション/市場水準:
+- 米株スイングへの一次示唆:
+
+## 2. 日銀/Fed: 割引率と為替
 - 日銀の変化:
 - Fedの変化:
 - CME FedWatchとの乖離:
 - 円金利・ドル円・日本株への示唆:
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - 日本の財政・産業政策:
 - JGB需給:
 - AI・半導体政策:
 - 米国関税・輸出管理:
 - 日本企業への波及:
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - モデル/製品の進化:
 - enterprise adoption:
 - AI safety / regulation:
 - compute需要:
 - SBG NAV / AI株への示唆:
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - 今週の思想的変化:
 - 国家との距離:
 - 規制への姿勢:
 - 民主化/集中/安全保障の論点:
 - 投資テーマへの意味:
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - 米株スイング:
 - 日経/日本株:
 - SBG NAV:
@@ -89,24 +100,21 @@
 - 製造業・素材:
 - 為替・金利:
 
-## 6. 反証リスト
+## 7. 反証リスト
 - 既存仮説と矛盾した情報:
 - 重み:
 - 対応:
 
-## 7. 来週の行動
+## 8. 来週の行動
 - 売買:
 - 調査:
 - 発信:
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 各項目は title / source / layer / source_class / published_date / url / KAFKAにとっての意味 / 投資・研究・記事化のどれに使えるか、で書く。
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 ブログ、note、YouTube、Scrapboxに使える論点を、タイトル案 / 根拠URL / 切り口 / 想定読者 / 1段落要旨で出す。
-
-## 10. Market Metrics Coverage
-FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、収益、指数水準を箇条書きで確認する。
 
 # Current Evidence Items
 - title: 調査部 マクロ経済研究センター／欧州経済展望 2026年04月17日 求められる給付付き税額控除の早期導入、事業所得の把握向上にも努めよ

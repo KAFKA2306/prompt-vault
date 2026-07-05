@@ -15,34 +15,46 @@ source: agy
 - AI産業: 今週の適格根拠なし
 - AI統治思想: 今週の適格根拠なし
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **FactSet (Q1 2026 Earnings Preview - 2026-04-02)**:
+  - 企業利益: S&P 500企業の第1四半期総利益見積額は期首の6,270億ドルから6,293億ドルへと0.4%上方修正された。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
+  - 指数利益: 6四半期連続の2桁増益が見込まれている。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
+- **FactSet (Analysts Projection - 2026-03-27)**:
+  - 指数水準予測: 業界アナリストによる今後12ヶ月のS&P 500指数目標は、現在値から29%の上昇が予測されている。[https://insight.factset.com/page/7](https://insight.factset.com/page/7)
+- **S&P Global (S&P 500 EPS Workbook - 2026-01-29データ)**:
+  - 指数水準: 6969.01 (公式ワークブック記載値)[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
+  - 企業利益 (四半期実績 2025-09-30): 営業EPS 72.03ドル、報告EPS 63.52ドル[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
+  - 収益 (四半期実績 2025-09-30): 1株当たり売上高 531.47ドル[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
+  - 注: S&P Global公式ワークブックによると、一般公開ファイルは2026年1月をもって更新が終了している。[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
+
+## 2. 日銀/Fed: 割引率と為替
 - 日銀の変化: 今週の適格根拠なし
 - Fedの変化: 今週の適格根拠なし
 - CME FedWatchとの乖離: 今週の適格根拠なし
 - 円金利・ドル円・日本株への示唆: 今週の適格根拠なし
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - 日本の財政・産業政策: 今週の適格根拠なし
 - JGB需給: 今週の適格根拠なし
 - AI・半導体政策: 今週の適格根拠なし
 - 米国関税・輸出管理: 今週の適格根拠なし
 - 日本企業への波及: 今週の適格根拠なし
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - モデル/製品の進化: 今週の適格根拠なし
 - enterprise adoption: 今週の適格根拠なし
 - AI safety / regulation: 今週の適格根拠なし
 - compute需要: 今週の適格根拠なし
 - SBG NAV / AI株への示唆: 今週の適格根拠なし
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - 今週の思想的変化: 今週の適格根拠なし
 - 国家との距離: 今週の適格根拠なし
 - 規制への姿勢: 今週の適格根拠なし
 - 民主化/集中/安全保障 of 論点: 今週の適格根拠なし
 - 投資テーマへの意味: 今週の適格根拠なし
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - 米株スイング: トランプ大統領がイランとの戦争終結に向けて勝利宣言する意向、および米軍の撤退方針（2-3週間以内の離脱）を表明したことで、地政学リスク後退による安堵ラリーが発生。FactSetによれば、アナリストによるS&P 500のQ1利益見通しは上方修正（総額6,270億ドルから6,293億ドルへ0.4%増加）されており、6四半期連続の2桁増益期待とあわせて堅調なセンチメントを維持。[https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/) [https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
 - 日経/日本株: 今週の適格根拠なし
 - SBG NAV: 今週の適格根拠なし
@@ -50,17 +62,17 @@ source: agy
 - 製造業・素材: ドイツの公共投資において、債務ブレーキ緩和から1年が経過する中、防衛部門（輸入依存強化）とインフラ部門（供給制約による苦慮）で進捗に大きな差が生じている点に注目。[https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
 - 為替・金利: 今週の適格根拠なし
 
-## 6. 反証リスト
+## 7. 反証リスト
 - 既存仮説と矛盾した情報: トランプ大統領は「戦争終結に向けて撤退する」意向を示しているが、イラン側は47年間にわたり対立姿勢を維持しており、イラン側の真意や15ポイント和平案（ホルムズ海峡開放含む）の受容状況など、戦争が長期化するリスク（ Department of War による1.5万人の増派など）も指摘されている。[https://www.yardeniquicktakes.com/tag/stock-market/](https://www.yardeniquicktakes.com/tag/stock-market/) [https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/)
 - 重み: 中〜高（地政学イベントの推移次第で安堵ラリーが反転し、ボラティリティが再上昇する可能性）
 - 対応: トランプ大統領による国民向け演説（水曜日夜）およびイラン側の対抗姿勢を注視し、ポジションの急激な拡大を避ける。
 
-## 7. 来週の行動
+## 8. 来週の行動
 - 売買: 地政学リスクの沈静化による安堵ラリーの持続性を検証しつつ、S&P 500 Q1決算プレビューの上方修正トレンドを確認した上で、米株インデックスのロングポジションを慎重に維持。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
 - 調査: ドイツにおける公共投資供給制約（インフラ部門）の実態調査、および米国株式市場における24時間/週5日取引（24/5 Trading）への移行準備がデータスタックに与える影響の精査。[https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/) [https://insight.factset.com/page/7](https://insight.factset.com/page/7)
 - 発信: 米株Q1決算へのアナリスト楽観見通しと上方修正トレンドの背景についての解説。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 1. **S&P 500 Earnings Season Preview Q1 2026**
    - source: FactSet
    - layer: L0_market_price
@@ -151,7 +163,7 @@ source: agy
     - KAFKAにとっての意味: シグナル加重の最適化による多様で堅牢なクオンツ運用の実証分析。
     - 投資・研究・記事化のどれに使えるか: 研究
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 ### ブログ/note用記事案：トランプの「勝利宣言」とイラン有事の不確実性――安堵ラリーは本物か？
 - 根拠URL: [https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/](https://www.yardeniquicktakes.com/relief-rally-ends-correction-risk/)
 - 切り口: トランプ大統領が示した米軍のイラン周辺からの早期撤退意向に対し、長期対立を辞さないイラン側とのギャップや増派事実から見た市場の「楽観主義」への警戒。
@@ -165,16 +177,3 @@ source: agy
 - 想定読者: 金融ITエンジニア、フィンテック事業者、アルゴリズムトレーダー。
 - 1段落要旨:
   米国株式市場がほぼ連続的な24時間取引（週5日）へと舵を切る中、従来の日次処理（EOD）やバッチ処理を前提としたデータスタックは抜本的な変革を迫られています。取引所やデータベンダーが直面するデータパイプラインのリアルタイム化、可用性向上の課題、そしてシステム開発者に求められるアーキテクチャ設計の変更点について考察します。
-
-## 10. Market Metrics Coverage
-- **FactSet (Q1 2026 Earnings Preview - 2026-04-02)**:
-  - 企業利益: S&P 500企業の第1四半期総利益見積額は期首の6,270億ドルから6,293億ドルへと0.4%上方修正された。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
-  - 指数利益: 6四半期連続の2桁増益が見込まれている。[https://insight.factset.com/sp-500-earnings-season-preview-q1-2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)
-- **FactSet (Analysts Projection - 2026-03-27)**:
-  - 指数水準予測: 業界アナリストによる今後12ヶ月のS&P 500指数目標は、現在値から29%の上昇が予測されている。[https://insight.factset.com/page/7](https://insight.factset.com/page/7)
-- **S&P Global (S&P 500 EPS Workbook - 2026-01-29データ)**:
-  - 指数水準: 6969.01 (公式ワークブック記載値)[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
-  - 企業利益 (四半期実績 2025-09-30): 営業EPS 72.03ドル、報告EPS 63.52ドル[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
-  - 収益 (四半期実績 2025-09-30): 1株当たり売上高 531.47ドル[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
-  - 注: S&P Global公式ワークブックによると、一般公開ファイルは2026年1月をもって更新が終了している。[https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)
-

@@ -17,7 +17,23 @@ source: agy
 
 ---
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **FactSet (S&P 500 Earnings Season Update - 各日付分)**:
+  - アナリストはS&P 500の価格について、今後12ヶ月間で21%の上昇を予測（Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months、John Butters報告）。
+  - インフレ（Inflation）への言及回数は3四半期連続で増加し、3月15日から6月11日までの期間で220回の決算説明会で言及された。
+  - AI（AI）への言及回数は、3月15日から6月11日までの期間に337回に達し、過去10年間で最高水準を記録。
+  - Q2のボトムアップEPS見積もりは、4月〜5月にかけて2.5%増加（$78.84から$80.80へ上昇）。通常の過去5年・10年平均の減少傾向（1.6%減）に反して異例の上方修正となった（2026年5月29日時点の公式データ）。
+- **S&P Global (S&P 500 EPS workbook)**:
+  - 公表データ基準日（data_as_of）：2026-01-29（※公式のパブリックファイルは2026年1月をもって更新が終了）。
+  - S&P 500 インデックスレベル基準値：6,969.01
+  - 最新四半期行（latest quarterly row）：2025-09-30
+  - 営業EPS（operating EPS）：72.03
+  - 報告EPS（as reported EPS）：63.52
+  - 1株当たり売上高（sales per share）：531.47
+- **Yardeni Research (Morning Briefings / QuickTakes)**:
+  - S&P 500は6月2日に史上最高値である 7,609.78 を記録した後、6月26日の金曜日終値までに3.4%下落。6月5日の調整局面では、S&P 500は 7,383.74（2.64%安）、Nasdaqは4.77%安となった。
+
+## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 今週の適格根拠なし
 - **Fedの変化**: 2025年末の3回（計75bps）の利下げを経て、インフレリスクの上昇と労働市場の堅調さを背景に、前週のFOMCにて緩和バイアス（easing bias）から利上げバイアス（tightening bias）へピボット。新議長 Kevin Warsh はデビュー会見で dot は提供しなかったものの、物価安定の重要性を繰り返し強調する極めてタカ派的な姿勢を示した。
 - **CME FedWatchとの乖離**: CME FedWatchに関する直接的な数値乖離の記述は存在しないが、直近のインフレ・雇用データの混在やFRBの急なタカ派ピボット、および利上げ期待の上昇（rising Fed rate hike expectations）が市場の警戒を誘っている。
@@ -25,7 +41,7 @@ source: agy
 
 ---
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - **日本の財政・産業政策**: 高市政権の成長戦略や「骨太の方針」における実質賃金増加の議論（時間あたり労働生産性の引き上げと1人あたり労働時間の増加が焦点）。
 - **JGB需給**: 今週の適格根拠なし
 - **AI・半導体政策**: 今週の適格根拠なし
@@ -34,7 +50,7 @@ source: agy
 
 ---
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - **モデル/製品の進化**: OpenAIが [GPT-5.6 Preview](https://openai.com/news/)（System Card公開）およびGPT-5を、Anthropicが [Claude Tag](https://www.anthropic.com/news)（チーム向け新機能）を発表。
 - **enterprise adoption**: AWSが VP of Agentic AI の Swami Sivasubramanian のもとでエージェントを基盤としたAIスタックをローンチ。Bedrockに「Grok 4.3」を導入するなど、企業のAIエージェント活用が本格化。
 - **AI safety / regulation**: 米国政府による最先端AIモデルの輸出規制措置の実施や、安全な自律エージェント運用に向けた「GPT-5.6 Preview System Card」の公開。
@@ -43,7 +59,7 @@ source: agy
 
 ---
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - **今週の思想的変化**: 今週の適格根拠なし
 - **国家との距離**: 今週の適格根拠なし
 - **規制への姿勢**: 今週の適格根拠なし
@@ -52,7 +68,7 @@ source: agy
 
 ---
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - **米株スイング**: 6月2日に record high の 7,609.78 を記録したS&P 500は、6月5日にかけ 7,383.74（2.64%安）へ下落（June Swoon）。バリュエーションの複数拡大（P/E倍率上昇）によるバブル警戒から、企業利益の成長が価格を上回る「FEMO（Fabulous Earnings Momentum）」への移行を注視。
 - **日経/日本株**: 高市政権の成長戦略や実質賃金の動向を注視。ナフサ調達問題や電力インフラ不足がサプライチェーンや製造業の利益率を圧迫するリスクに備える。
 - **SBG NAV**: BroadcomとOpenAIのチップ協業、NVIDIA Blackwell G7インスタンスの始動、および日本総研が指摘する電力インフラ需要の高まりは、SBG傘下のArmおよび関連AIポートフォリオの価値（NAV）を中長期的に支える。
@@ -62,21 +78,21 @@ source: agy
 
 ---
 
-## 6. 反証リスト
+## 7. 反証リスト
 - **既存仮説と矛盾した情報**: FRBの利下げバイアスの継続および年内の安定した金融緩和を見込む仮説。
 - **重み**: 極めて重い。FOMCは前週に緩和（easing bias）から緊縮（tightening bias）へと明確にピボットしており、前提条件そのものが崩壊した。
 - **対応**: ポジションの金利感応度を見直し、強気な金利低下シナリオに依存するグロース株の配分を縮小、好調な決算裏付けのある銘柄（FEMO株）およびエネルギー・素材などのインフレヘッジセクターへのローテーションを進める。
 
 ---
 
-## 7. 来週の行動
+## 8. 来週の行動
 - **売買**: S&P 500 Materials セクターの押し目買い検討。金利高環境に耐性のない金利高感応銘柄の削減。
 - **調査**: [GPT-5.6 Preview System Card](https://openai.com/news/)の技術仕様およびエージェント実行能力、およびBroadcom×OpenAIのチップ性能の調査。
 - **発信**: 「Kevin Warsh新FRB議長のタカ派ピボットが引き起こしたJune Swoonと、FEMOレジームへの移行」に関する解説記事の執筆。
 
 ---
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 
 1. **GPT‑5.6 Preview System Card**
    - **source**: OpenAI News
@@ -170,7 +186,7 @@ source: agy
 
 ---
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 
 - **タイトル案**: 「June Swoon」から「FEMO」へ：強すぎる米国経済が引き起こしたFRBのタカ派大転換
   - **根拠URL**: [https://www.yardeniquicktakes.com/](https://www.yardeniquicktakes.com/)
@@ -185,21 +201,3 @@ source: agy
   - **1段落要旨**: OpenAIとBroadcomの推論チップ提携やAWSへのBlackwell導入に見られるように、AIモデルの実行とエージェント展開は加速している。しかし、そのボトルネックはすでにチップ単体から「電力グリッド」へと移行しており、さらに米国政府による最先端AIの輸出管理が安全保障上の強力なカードとして発動される中、今後のAIインフラ投資がどのように変容するかを地政学と技術の両面から明らかにする。
 
 ---
-
-## 10. Market Metrics Coverage
-
-- **FactSet (S&P 500 Earnings Season Update - 各日付分)**:
-  - アナリストはS&P 500の価格について、今後12ヶ月間で21%の上昇を予測（Industry Analysts Project 21% Increase in S&P 500 Price Over the Next 12 Months、John Butters報告）。
-  - インフレ（Inflation）への言及回数は3四半期連続で増加し、3月15日から6月11日までの期間で220回の決算説明会で言及された。
-  - AI（AI）への言及回数は、3月15日から6月11日までの期間に337回に達し、過去10年間で最高水準を記録。
-  - Q2のボトムアップEPS見積もりは、4月〜5月にかけて2.5%増加（$78.84から$80.80へ上昇）。通常の過去5年・10年平均の減少傾向（1.6%減）に反して異例の上方修正となった（2026年5月29日時点の公式データ）。
-- **S&P Global (S&P 500 EPS workbook)**:
-  - 公表データ基準日（data_as_of）：2026-01-29（※公式のパブリックファイルは2026年1月をもって更新が終了）。
-  - S&P 500 インデックスレベル基準値：6,969.01
-  - 最新四半期行（latest quarterly row）：2025-09-30
-  - 営業EPS（operating EPS）：72.03
-  - 報告EPS（as reported EPS）：63.52
-  - 1株当たり売上高（sales per share）：531.47
-- **Yardeni Research (Morning Briefings / QuickTakes)**:
-  - S&P 500は6月2日に史上最高値である 7,609.78 を記録した後、6月26日の金曜日終値までに3.4%下落。6月5日の調整局面では、S&P 500は 7,383.74（2.64%安）、Nasdaqは4.77%安となった。
-

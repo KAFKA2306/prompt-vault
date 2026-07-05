@@ -17,7 +17,12 @@ source: agy
 
 ---
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **企業利益 (FactSet)**: 2026年Q1決算において、S&P 500構成企業の89%が発表を終え、そのうち84%が事前予想を上回るEPS（一株当たり利益）サプライズを記録。また、企業はコンセンサス予想を平均18.2%上回る水準で着地させている（[FactSet Negative EPS Surprises Q1 2026](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)）。
+- **収益 (FactSet)**: S&P 500は2022年以来で最高となる売上高（Revenue）成長率を記録中（[FactSet Insight Earnings](https://insight.factset.com/topic/earnings)）。
+- **指数水準 (S&P Global / Yardeni)**: S&P 500指数は2026年5月9日週に一時7,398.93の史上最高値を記録（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。S&P Globalの2026年1月29日時点の公式基準値（data_as_of=2026-01-29）における指数レベルは6969.01（[S&P Global S&P 500 EPS workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+
+## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 金融資本市場における不公正取引是正に向けた政策対応（市場制度ワーキング・グループ報告書）が議論されているが、利下げ・利上げの直接的な方針変更に関する今週の適格根拠なし（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **Fedの変化**: 4月FOMCで利下げバイアスに対する3名のメンバー（Hammack、Kashkari、Logan）の反対投票があり、さらにBoston FedのCollins総裁も同調。CPIが再熱する中で従来の利下げ路線の防衛が困難になっている（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
 - **CME FedWatchとの乖離**: 市場の2年債金利は4.00%を超えて取引されており、これは現在のFFRレンジ（3.50%-3.75%）より25bps以上高く、利下げを見込むCME FedWatch等のコンセンサスとは逆に、市場参加者が将来的な利上げ（FFR引き上げ）の可能性を織り込み始めている（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
@@ -25,7 +30,7 @@ source: agy
 
 ---
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - **日本の財政・産業政策**: 世界的な「大きな政府」化と産業政策の復権の流れを受け、日本も産業政策の再設計を迫られている（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **JGB需給**: IMFが懸念する主要国国債市場のリスクとして、ヘッジファンドによる裁定取引拡大に伴うレバレッジ巻き戻しリスクが警戒されている（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **AI・半導体政策**: AI時代の電力不足への対応と「脱中国」の徹底の狭間で産業政策の優先順位が揺れており、太陽光パネル産業政策の後退などの影響が出ている（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
@@ -34,7 +39,7 @@ source: agy
 
 ---
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - **モデル/製品の進化**: 今週の適格根拠なし。
 - **enterprise adoption**: 今週の適格根拠なし。
 - **AI safety / regulation**: 今週の適格根拠なし。
@@ -43,7 +48,7 @@ source: agy
 
 ---
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - **今週の思想的変化**: 今週の適格根拠なし。
 - **国家との距離**: 今週の適格根拠なし。
 - **規制への姿勢**: 今週の適格根拠なし。
@@ -52,7 +57,7 @@ source: agy
 
 ---
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - **米株スイング**: Yardeni ResearchはS&P 500の2026年末目標レンジを7700から8250へ引き上げ（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。Q1決算での強力なEPSサプライズ（84%が予想超え）を根拠とする。ただし、金利上昇懸念とインフレ加熱リスクが上値を抑える反証条件。
 - **日経/日本株**: 地政学リスクを背景とした「パワーアジア」供給網再編（日ASEAN連携）および、国内市場における不公正取引是正の制度改革が長期のガバナンス改善要因（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **SBG NAV**: 今週の適格根拠なし。
@@ -62,21 +67,21 @@ source: agy
 
 ---
 
-## 6. 反証リスト
+## 7. 反証リスト
 - **既存仮説と矛盾した情報**: Fedが「年内利下げ路線」を維持するという想定に対し、4月FOMCでの3名＋Collins総裁の利下げ反対・慎重姿勢、およびCPI再熱に伴う利上げ懸念（2年債金利4.00%超え）が浮上（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。
 - **重み**: 高（金利見通しの根本的な転換点となる可能性あり）。
 - **対応**: CME FedWatchの織り込みの急速な修正プロセス（利下げ回数減少、あるいは利上げの選択肢浮上）を監視し、株式のバリュエーション調整（マルチプル縮小）への耐性を確認する。
 
 ---
 
-## 7. 来週の行動
+## 8. 来週の行動
 - **売買**: 金利急騰局面（米国2年債4.00%超え定着時）におけるバリュエーション高水準銘柄のウェイト調整。
 - **調査**: 中国製造業の「中国製造2025」重点分野の研究開発投資実態についてのデータ分析（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 - **発信**: AI時代の電力供給制限問題（太陽光パネルの対中排除と電力供給のジレンマ）に関する解説記事の作成。
 
 ---
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 
 | No | Title / Source | Layer / Class | Published Date / URL | KAFKAにとっての意味 | 投資・研究・記事化 |
 |:---|:---|:---|:---|:---|:---|
@@ -93,7 +98,7 @@ source: agy
 
 ---
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 ### タイトル案: 「脱中国」と「AI電力不足」のジレンマ：米国太陽光パネル政策後退の裏側
 - **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)（調査部 マクロ経済研究センター／欧州経済展望 2026年05月15日）
 - **切り口**: AI大競争で膨張する電力需要に対して、クリーンエネルギーの供給源として機能していた中国製太陽光パネルを排除せざるを得ない安全保障上の制約と、それによるグリーン産業政策の機能不全を浮き彫りにする。
@@ -101,9 +106,3 @@ source: agy
 - **1段落要旨**: AIの急速な進展に伴うデータセンターの電力消費爆発に対し、安価な中国製クリーンエネルギー資材の排除（脱中国）が深刻なボトルネックになり始めている。米国では産業政策の後退が余儀なくされており、安全保障とAIインフラの拡張、そして気候変動対策の3つの間で政策的な自己矛盾が発生している。
 
 ---
-
-## 10. Market Metrics Coverage
-- **企業利益 (FactSet)**: 2026年Q1決算において、S&P 500構成企業の89%が発表を終え、そのうち84%が事前予想を上回るEPS（一株当たり利益）サプライズを記録。また、企業はコンセンサス予想を平均18.2%上回る水準で着地させている（[FactSet Negative EPS Surprises Q1 2026](https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1)）。
-- **収益 (FactSet)**: S&P 500は2022年以来で最高となる売上高（Revenue）成長率を記録中（[FactSet Insight Earnings](https://insight.factset.com/topic/earnings)）。
-- **指数水準 (S&P Global / Yardeni)**: S&P 500指数は2026年5月9日週に一時7,398.93の史上最高値を記録（[Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/)）。S&P Globalの2026年1月29日時点の公式基準値（data_as_of=2026-01-29）における指数レベルは6969.01（[S&P Global S&P 500 EPS workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-

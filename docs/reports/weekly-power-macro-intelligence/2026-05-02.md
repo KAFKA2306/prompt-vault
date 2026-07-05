@@ -15,34 +15,52 @@ source: agy
 - AI産業: 米国S&P 500企業の2026年第1四半期決算でダブルディジットの増益率が継続し、ハイパースケーラー等のAI主導企業が株価を牽引している（[yardeniquicktakes.com](https://www.yardeniquicktakes.com/tag/stock-market/)）。また、NVIDIAのジェンセン・フアンCEOがIEEE Medal of Honorを受賞した（[nvidianews.nvidia.com](https://nvidianews.nvidia.com/)）。
 - AI統治思想: インドが推進する「新興国型」AI政策などの国家主導の政策アプローチが台頭している（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **FactSet (Q1 2026 Earnings Season Update - May 1, 2026)** ([insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-may-1-2026)):
+  - S&P 500構成企業の63%が第1四半期決算を発表済。
+  - 発表済みのうち84%が市場予想を上回るEPS（一株当たり利益）を報告（5年平均の78%、10年平均の76%を上回る）。
+  - 第1四半期決算におけるS&P 500の利益成長率はQ4 2021以来の最高水準を達成。
+  - 28%の中間集計（4月24日時点）では、実績が市場予想を12.3%上回る進捗であった（[insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-april-24-2026)）。
+- **S&P Global (S&P 500 EPS, sales, and index level workbook)** ([spglobal.com](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)):
+  - 基準データ日付 (data_as_of): 2026-01-29
+  - S&P 500 指数水準 (index level): 6969.01 (公式基準値)
+  - 直近四半期データ: 2025-09-30
+  - 営業利益 (operating EPS): 72.03
+  - 報告利益 (as reported EPS): 63.52
+  - 一株当たり売上高 (sales per share): 531.47
+  - ※公式ブックレットの一般公開は2026年1月をもって終了した旨が公式ドキュメントに記載されている。
+- **Yardeni Research (MARKET CALL - April 15, 2026)** ([yardeniquicktakes.com](https://www.yardeniquicktakes.com/tag/stock-market/)):
+  - S&P 500およびNasdaqが史上最高値を更新。
+  - 2026年3月30日の市場底入れ以降、ハイパースケーラー銘柄を中心としたAI関連株が主導して株価を牽引。
+
+## 2. 日銀/Fed: 割引率と為替
 - 日銀の変化: 2026年4月28日に「経済・物価情勢の展望（基本的見解）」、4月30日に「同（背景説明を含む全文）」を公表し、金利政策や物価見通しに関する公式スタンスを示した（[boj.or.jp](https://www.boj.or.jp/mopo/outlook/index.htm)）。
 - Fedの変化: 今週の適格根拠なし
 - CME FedWatchとの乖離: 今週の適格根拠なし
 - 円金利・ドル円・日本株への示唆: 日本総研の大嶋秀雄氏等の分析によると、ドル円およびユーロ円相場の先行きは横ばい圏での推移が見込まれている（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - 日本の財政・産業政策: 2026年5月1日より「企業価値担保権」が始動し、企業と銀行の緊密な連携と新たな融資・担保手法の課題が議論されている（[jri.co.jp](https://www.jri.co.jp/report/year/)）。また、「ＧＸイノベーション」支援策へのインパクト評価手法（IMM）の導入が提唱されている（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - JGB需給: 今週の適格根拠なし
 - AI・半導体政策: インドにおける「新興国型」AI政策の推進が、新興国のAI政策として分析されている（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - 米国関税・輸出管理: 翁百合氏の指摘によれば、経済安全保障分析において「国家間のパワー」と「世界経済の分断」に注目が集まっている（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - 日本企業への波及: 企業価値担保権の導入に伴い、中小企業やスタートアップへの資金供給手法に変化が生じる可能性がある（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - モデル/製品の進化: 今週の適格根拠なし
 - enterprise adoption: 今週の適格根拠なし
 - AI safety / regulation: 今週の適格根拠なし
 - compute需要: 今週の適格根拠なし
 - SBG NAV / AI株への示唆: 今週の適格根拠なし
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - 今週の思想的変化: 今週の適格根拠なし
 - 国家との距離: 今週の適格根拠なし
 - 規制への姿勢: 今週の適格根拠なし
 - 民主化/集中/安全保障の論点: 今週の適格根拠なし
 - 投資テーマへの意味: 今週の適格根拠なし
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - 米株スイング: S&P 500のQ1決算は、全体の63%が発表を終えた時点で84%の企業がEPS市場予想を上回り、Q4 2021以来の最高水準の利益成長率を記録している（[insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-may-1-2026)）。ハイパースケーラーを中心とするAI銘柄の上昇が相場を牽引しており、バリュエーション（P/E）と利益（E）の綱引きが継続する（[yardeniquicktakes.com](https://www.yardeniquicktakes.com/tag/stock-market/)）。
 - 日経/日本株: TOPIXの動きと乖離する日経平均株価の急騰現象について、指数の構成要因や市場構造の乖離要因を検証し、持続性を監視する（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - SBG NAV: 今週の適格根拠なし
@@ -50,17 +68,17 @@ source: agy
 - 製造業・素材: 中国の新5カ年計画が「製造強国」を目指す動きを見せており、サプライチェーンや素材産業への影響を監視する（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - 為替・金利: 日銀の2026年4月展望レポートを受けた金利見通しと、日本総研のドル円「先行き横ばい圏」予測を基準とし、実勢レートが乖離した場合のヘッジを検討する（[boj.or.jp](https://www.boj.or.jp/mopo/outlook/index.htm)、[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 
-## 6. 反証リスト
+## 7. 反証リスト
 - 既存仮説と矛盾した情報: 日経平均がTOPIXと乖離して急騰している現象（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - 重み: 中（インデックス取引特有の歪みである可能性）。
 - 対応: 日経平均とTOPIXのスプレッド、値がさ株の寄与度を分解して要因調査を行う。
 
-## 7. 来週の行動
+## 8. 来週の行動
 - 売買: S&P 500の好調な決算進捗（EPSサプライズ率84%）を背景に、押し目買い方針を維持（[insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-may-1-2026)）。
 - 調査: 日本の「企業価値担保権」始動に伴う地銀・中小企業の融資実務の変化についての継続調査（[jri.co.jp](https://www.jri.co.jp/report/year/)）。
 - 発信: 日経平均とTOPIXの乖離要因、およびGXイノベーションIMM手法に関する解説記事の作成。
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 1. **S&P 500 Earnings Season Update: May 1, 2026**
    - source: FactSet
    - layer: L0_market_price
@@ -142,7 +160,7 @@ source: agy
     - KAFKAにとっての意味: 新興国におけるAIの利活用と産業誘致政策の動向。
     - 投資・研究・記事化のどれに使えるか: 研究
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 - タイトル案: なぜ日経平均はTOPIXを置き去りにして急騰するのか？指数乖離の背景を解明する
   - 根拠URL: https://www.jri.co.jp/report/year/
   - 切り口: 日本総研の分析をベースに、日本株の二大指数の値動きの歪みと、投資家が注意すべきアロケーションの罠を指摘する。
@@ -153,22 +171,3 @@ source: agy
   - 切り口: 不動産担保に依存しない「企業価値担保権」の本格始動に伴い、銀行と企業の新しい関係構築と普及に向けた課題を整理する。
   - 想定読者: スタートアップ経営者、CFO、金融機関関係者
   - 1段落要旨: 2026年5月1日より事業全体を担保とする「企業価値担保権」が始動した。有形資産の乏しい新興企業への資金供給円滑化が期待される一方、実務上の評価手法や銀行との緊密な連携構築には依然として多くの課題が残る。日本総研の論考から、今後のファイナンス環境の地殻変動を読み解く。
-
-## 10. Market Metrics Coverage
-- **FactSet (Q1 2026 Earnings Season Update - May 1, 2026)** ([insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-may-1-2026)):
-  - S&P 500構成企業の63%が第1四半期決算を発表済。
-  - 発表済みのうち84%が市場予想を上回るEPS（一株当たり利益）を報告（5年平均の78%、10年平均の76%を上回る）。
-  - 第1四半期決算におけるS&P 500の利益成長率はQ4 2021以来の最高水準を達成。
-  - 28%の中間集計（4月24日時点）では、実績が市場予想を12.3%上回る進捗であった（[insight.factset.com](https://insight.factset.com/sp-500-earnings-season-update-april-24-2026)）。
-- **S&P Global (S&P 500 EPS, sales, and index level workbook)** ([spglobal.com](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)):
-  - 基準データ日付 (data_as_of): 2026-01-29
-  - S&P 500 指数水準 (index level): 6969.01 (公式基準値)
-  - 直近四半期データ: 2025-09-30
-  - 営業利益 (operating EPS): 72.03
-  - 報告利益 (as reported EPS): 63.52
-  - 一株当たり売上高 (sales per share): 531.47
-  - ※公式ブックレットの一般公開は2026年1月をもって終了した旨が公式ドキュメントに記載されている。
-- **Yardeni Research (MARKET CALL - April 15, 2026)** ([yardeniquicktakes.com](https://www.yardeniquicktakes.com/tag/stock-market/)):
-  - S&P 500およびNasdaqが史上最高値を更新。
-  - 2026年3月30日の市場底入れ以降、ハイパースケーラー銘柄を中心としたAI関連株が主導して株価を牽引。
-

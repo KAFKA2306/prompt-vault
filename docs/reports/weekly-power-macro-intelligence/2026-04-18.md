@@ -15,34 +15,48 @@ source: agy
 - **AI産業**: AIバブル崩壊への懸念をよそに、3月30日の市場底打ち以降、ハイパースケーラー銘柄が主導する形でS&P 500およびNasdaqが最高値を更新している（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
 - **AI統治思想**: 今週の適格根拠なし
 
-## 1. 日銀/Fed: 割引率と為替
+## 1. Market Metrics Dashboard
+- **Yardeni Research**
+  - S&P 500とNasdaqは2026年4月15日の最高値を更新。3月30日の直近ボトム（1月27日の高値から9.1%下落した水準）からの上昇トレンドをハイパースケーラー主導で形成（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
+- **FactSet**
+  - S&P 500の第1四半期におけるポジティブなEPSガイダンス提示企業数が過去5年で最多（[Highest Number of S&P 500 Companies Issuing Positive EPS Guidance in 5 Years](https://insight.factset.com/page/7)）。
+  - Q1推定利益は2025年12月31日時点から0.4%増加し、6293億ドル（当初見通し6270億ドルから上方修正）へ（[By John Butters | April 2, 2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)）。
+- **S&P Global**
+  - 公式基準ワークブック（data_as_of=2026-01-29）
+    - S&P 500 Index Level: 6969.01
+    - Operating EPS (latest quarterly row=2025-09-30): 72.03
+    - As Reported EPS: 63.52
+    - Sales per Share: 531.47
+    - （※公式ワークブックは2026年1月をもって一般公開を終了）（[S&P Global S&P 500 EPS, sales, and index level workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）
+
+## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 今週の適格根拠なし
 - **Fedの変化**: 今週の適格根拠なし
 - **CME FedWatchとの乖離**: 今週の適格根拠なし
 - **円金利・ドル円・日本株への示唆**: 日本国内では「金利ある世界」における家計間格差の拡大や、住宅価格・金利上昇に伴う返済長期化ローン利用者の増加、金融機関の審査・リスク認識の変化が指摘されており、金利上昇が国内金融セクターや個人消費に与える影響が強まりつつある（[調査部 マクロ経済研究センター／日本経済展望 2026年04月13日](https://www.jri.co.jp/report/year/)、[井上恵理菜／JRIレビュー Vol.4, No.131](https://www.jri.co.jp/report/year/)）。
 
-## 2. 日本政府/トランプ政権: 国家政策ショック
+## 3. 日本政府/トランプ政権: 国家政策ショック
 - **日本の財政・産業政策**: 今週の適格根拠なし
 - **JGB需給**: 今週の適格根拠なし
 - **AI・半導体政策**: 今週の適格根拠なし
 - **米国関税・輸出管理**: トランプ大統領が設定した「Power Plant Day」に向けた最終期限と電力供給・インフラ規制への圧力が、エネルギーおよび製造業セクターの警戒感と株価評価（P/E）に影響を与えている（[MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates](https://www.yardeniquicktakes.com/tag/stock-market/)）。
 - **日本企業への波及**: コーポレートガバナンス・コードの改訂が実質的な成長投資の促進を目指す動きになっており、日本企業の取締役会の実効性向上と投資行動の活発化が期待される（[大嶋秀雄／リサーチ・アイ No.2026-008](https://www.jri.co.jp/report/year/)）。
 
-## 3. OpenAI/Anthropic: AI産業カーブ
+## 4. OpenAI/Anthropic: AI産業カーブ
 - **モデル/製品の進化**: 今週の適格根拠なし
 - **enterprise adoption**: 生成AIの普及に伴い、職種構造が変化し、高度現場人材（AEW: Advanced Engineering Worker / Advanced Expert Worker）の創出が必要とされている（[下田裕介／リサーチ・アイ No.2026-006](https://www.jri.co.jp/report/year/)）。
 - **AI safety / regulation**: 今週の適格根拠なし
 - **compute需要**: ハイパースケーラー各社によるAI投資と需要の継続が株価上昇を牽引している（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
 - **SBG NAV / AI株への示唆**: 今週の適格根拠なし
 
-## 4. Altman/Dario: AI権力思想
+## 5. Altman/Dario: AI権力思想
 - **今週の思想的変化**: 今週の適格根拠なし
 - **国家との距離**: 今週の適格根拠なし
 - **規制への姿勢**: 今週の適格根拠なし
 - **民主化/集中/安全保障の論点**: 今週の適格根拠なし
 - **投資テーマへの意味**: 今週の適格根拠なし
 
-## 5. 投資仮説の更新
+## 6. 投資仮説の更新
 - **米株スイング**: 3月30日に調整局面（January 27の最高値から9.1%下落した時点）からボトムアウトし、ハイパースケーラー株主導の強力なラリーに移行。第1四半期決算に対するポジティブなガイダンスを出す企業数が過去5年で最多であり、利益成長（E）と株価（P/E）の拮抗戦においてEPSの底堅さが支援要因となる（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)、[By John Butters | April 2, 2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)）。
 - **日経/日本株**: コーポレートガバナンス・コード改訂による実質的な取締役会改革と成長投資の促進が、日本株の長期的なバリュエーション向上を支援する（[大嶋秀雄／リサーチ・アイ No.2026-008](https://www.jri.co.jp/report/year/)）。
 - **SBG NAV**: 今週の適格根拠なし
@@ -50,17 +64,17 @@ source: agy
 - **製造業・素材**: トランプ政権による「Power Plant Day」期限設定が、エネルギーおよび電力価格上昇を通じてコスト要因に波及するリスクがある（[MARKET CALL: Stock P/Es Discounting Higher-For-Longer Oil Prices & Interest Rates](https://www.yardeniquicktakes.com/tag/stock-market/)）。
 - **為替・金利**: 日本国内における金利上昇と住宅ローン返済長期化への行動変化、および家計格差拡大という構造変化を注視する（[調査部 マクロ経済研究センター／日本経済展望 2026年04月13日](https://www.jri.co.jp/report/year/)）。
 
-## 6. 反証リスト
+## 7. 反証リスト
 - **既存仮説と矛盾した情報**: 米国の非農業部門雇用者数（Nonfarm Payrolls）の3月予測値が前月比60,000人増と比較的マイルドな水準に減速している点（[Total Nonfarm Payrolls for March 2026 Are Projected to Rise By 60,000](https://insight.factset.com/page/7)）。
 - **重み**: 中
 - **対応**: 雇用市場の大幅な悪化を示すものではないが、インフレ圧力が急激に高まることへの警戒感を和らげる一方、景気の減速スピードを観察するため今後のマクロデータ監視を続ける。
 
-## 7. 来週の行動
+## 8. 来週の行動
 - **売買**: ハイパースケーラー銘柄の利益（E）の強さに依拠し、米株スイングは強気バイアスを維持しつつボトムアウト後のエントリーを継続。
 - **調査**: 生成AIが職種に与える影響（高度現場人材の需要）と、トランプ政権の「トランプ口座」に関する経済影響のさらなる調査。
 - **発信**: 日本国内の「金利ある世界」における住宅ローン利用者の行動変容と金融機関の審査・リスク管理姿勢の変化について解説を作成。
 
-## 8. 重要ソースTop 10
+## 9. 重要ソースTop 10
 
 | # | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 用途 |
 |---|---|---|---|---|---|---|---|---|
@@ -75,7 +89,7 @@ source: agy
 | 9 | 日本経済展望2026年4月号：【「金利ある世界」で拡大する家計間格差】 | 日本総研 | L5 | official_macro | 2026-04-13 | [Link](https://www.jri.co.jp/report/year/) | 国内金利上昇局面に特有の金利収支の非対称性による格差拡大 | 研究 |
 | 10 | S&P Global S&P 500 EPS, sales, and index level workbook | S&P Global | L0 | market_metrics | 2026-01-29 | [Link](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx) | データ基準日（2026-01-29）におけるS&P 500指数基準値（6969.01）およびEPS水準の公式確認 | 投資 |
 
-## 9. コンテンツ化候補
+## 10. コンテンツ化候補
 ### タイトル案：金利ある世界へのシフト：返済長期化へ動く住宅ローン利用者と金融機関の攻防
 - **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)
 - **切り口**: 住宅価格の高騰と金利上昇というダブルパンチの中、返済期間を長期化させて月々の負担を抑えようとする利用者の実態と、それに対する銀行側の与信審査の変化。
@@ -87,18 +101,3 @@ source: agy
 - **切り口**: ガバナンス改革の主軸が社外取締役の人数などの「形式」から、取締役会の実効性向上による成長投資判断という「実質」へ移ることによる株価への影響。
 - **想定読者**: 日本株投資家、企業経営企画担当者
 - **1段落要旨**: コーポレートガバナンス・コードの改訂により、単に基準を満たすための形式的なガバナンスから、リスクをとって成長投資を促進するための実質的な取締役会の機能発揮が求められることになります。これが日本企業の資本効率向上と稼ぐ力の強化にどう繋がるかを考察します。
-
-## 10. Market Metrics Coverage
-- **Yardeni Research**
-  - S&P 500とNasdaqは2026年4月15日の最高値を更新。3月30日の直近ボトム（1月27日の高値から9.1%下落した水準）からの上昇トレンドをハイパースケーラー主導で形成（[MARKET CALL: The Tug Of War Between P/E And E](https://www.yardeniquicktakes.com/tag/stock-market/)）。
-- **FactSet**
-  - S&P 500の第1四半期におけるポジティブなEPSガイダンス提示企業数が過去5年で最多（[Highest Number of S&P 500 Companies Issuing Positive EPS Guidance in 5 Years](https://insight.factset.com/page/7)）。
-  - Q1推定利益は2025年12月31日時点から0.4%増加し、6293億ドル（当初見通し6270億ドルから上方修正）へ（[By John Butters | April 2, 2026](https://insight.factset.com/sp-500-earnings-season-preview-q1-2026)）。
-- **S&P Global**
-  - 公式基準ワークブック（data_as_of=2026-01-29）
-    - S&P 500 Index Level: 6969.01
-    - Operating EPS (latest quarterly row=2025-09-30): 72.03
-    - As Reported EPS: 63.52
-    - Sales per Share: 531.47
-    - （※公式ワークブックは2026年1月をもって一般公開を終了）（[S&P Global S&P 500 EPS, sales, and index level workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）
-
