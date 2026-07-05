@@ -51,7 +51,7 @@ EN_DATE_PATTERNS = [
 FORBIDDEN = re.compile(
     r"本文未取得|未確認|取得失敗|Fetch Failures|Source Coverage|"
     r"HTTP_[0-9]+|FETCH_ERROR|URL_ERROR|ROBOTS_DISALLOW|"
-    r"no_in_range_date_found|metadata_only"
+    r"no_in_range_date_found|metadata_only|file://|</?br>|<[^>\n]+>"
 )
 
 REQUIRED_GROUPS = {
@@ -65,6 +65,22 @@ REQUIRED_METRIC_TAGS = {
     "index_earnings",
     "revenue",
     "index_level",
+}
+
+REQUIRED_MARKET_SECTION_TERMS = {
+    "指数EPSスコア",
+    "S&P 500",
+    "S&P 500 IT",
+    "SOX proxy",
+    "Nasdaq-100",
+    "日経半導体",
+    "TOPIX",
+    "TECL",
+    "SOXL",
+    "TQQQ",
+    "XLK",
+    "SOXX",
+    "QQQ",
 }
 
 
@@ -148,6 +164,12 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
     market_metrics_pos = report.find("## 1. Market Metrics Dashboard")
     investment_pos = report.find("## 6. 投資仮説の更新")
     market_metrics_order_ok = market_metrics_pos != -1 and investment_pos != -1 and market_metrics_pos < investment_pos
+    market_section = ""
+    if market_metrics_pos != -1 and investment_pos != -1 and market_metrics_pos < investment_pos:
+        market_section = report[market_metrics_pos:investment_pos]
+    missing_market_section_terms = sorted(term for term in REQUIRED_MARKET_SECTION_TERMS if term not in market_section)
+    leveraged_proxy_present = "leveraged-etf-eps-proxy-map" in source_ids
+    index_eps_scorecard_present = "index-eps-scorecard-framework" in source_ids
 
     if not report_path.exists():
         failures.append("missing_report")
@@ -165,6 +187,12 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         failures.append("missing_required_metric_tags:" + ",".join(missing_metric_tags))
     if not market_metrics_order_ok:
         failures.append("market_metrics_dashboard_order")
+    if not leveraged_proxy_present:
+        failures.append("missing_leveraged_etf_eps_proxy")
+    if not index_eps_scorecard_present:
+        failures.append("missing_index_eps_scorecard")
+    if missing_market_section_terms:
+        failures.append("missing_market_metrics_dashboard_terms:" + ",".join(missing_market_section_terms))
 
     return {
         "week_end": week_end.isoformat(),
@@ -174,6 +202,9 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         "required_source_groups": group_presence,
         "metric_tags": sorted(metric_tags),
         "market_metrics_dashboard_order": market_metrics_order_ok,
+        "leveraged_etf_eps_proxy": leveraged_proxy_present,
+        "index_eps_scorecard": index_eps_scorecard_present,
+        "missing_market_metrics_dashboard_terms": missing_market_section_terms,
         "future_report_dates": future_report_dates,
         "future_item_dates": [
             {

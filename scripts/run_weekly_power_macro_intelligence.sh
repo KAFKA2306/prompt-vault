@@ -195,7 +195,7 @@ issue_number() {
 lint_report() {
   local report_path="$1"
   local lint_path="$2"
-  local forbidden_pattern='本文未取得|未確認|取得失敗|Fetch Failures|Source Coverage|HTTP_[0-9]+|FETCH_ERROR|URL_ERROR|ROBOTS_DISALLOW|no_in_range_date_found|metadata_only'
+  local forbidden_pattern='本文未取得|未確認|取得失敗|Fetch Failures|Source Coverage|HTTP_[0-9]+|FETCH_ERROR|URL_ERROR|ROBOTS_DISALLOW|no_in_range_date_found|metadata_only|file://|</?br>|<[^>\n]+>'
   if grep -En "$forbidden_pattern" "$report_path" >"$lint_path"; then
     return 1
   fi

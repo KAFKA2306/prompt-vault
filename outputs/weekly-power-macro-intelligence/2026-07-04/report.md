@@ -9,110 +9,166 @@ source: agy
 # Weekly Power & Macro Intelligence - 2026-07-04
 
 ## 0. 今週の支配的レジーム
-- **中央銀行**: Fedの新議長Kevin Warshは2026年6月17日の初会見以降、利下げ方針を見直して利上げバイアス（tightening bias）へ転換するタカ派姿勢（hawkish path）を明確にし、SintraのECBフォーラムでもインフレ restaurisation（物価安定）への強い意志を表明（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。日銀についての政策金利変化に関する直接的記載は今週なし。
-- **財政・政府**: トランプ政権による「Trump Accounts」の公式ローンチ、および慈善株式寄付（Philanthropic Stock Contributions）のIRS受付などの新たな税制・投資スキームが財務省から矢継ぎ早に発表され、Working Families Tax Cutsの1年目の成果も強調される（[U.S. Treasury Press Releases](https://home.treasury.gov/news/press-releases)）。
-- **関税・地政学**: 米国大統領令により、モロッコ産リン酸塩肥料に対する「一時的免税輸入（Temporary Duty Free Importation of Phosphate Fertilizer）」の緊急事態宣言が発令され、関税インフレ圧力をコントロールする動きが見られる（[White House Presidential Actions](https://www.whitehouse.gov/presidential-actions/)）。
-- **AI産業**: Anthropicによる「Introducing Claude Sonnet 5」の発表と「Fable 5」のグローバル再配備、OpenAIによる次世代モデル「GPT-5.6 Sol」のプレビューやHPによるエンタープライズ導入事例の公開など、フロンティアモデルの急速な世代交代とエンタープライズにおけるAI活用・選別プロセスが同時進行（[Anthropic Newsroom](https://www.anthropic.com/news), [OpenAI News](https://openai.com/news/)）。
-- **AI統治思想**: Anthropic、Amazon、Microsoft、GoogleなどのGlasswingパートナーシップによる「ジェイルブレイク深刻度評価フレームワーク（scoring jailbreak severity）」の業界標準提案が行われ、安全規制とフロンティア開発のバランスが議論の中心となっている（[Anthropic Newsroom](https://www.anthropic.com/news)）。
+- **中央銀行**: 新総裁のKevin Warshのもと、Fedは従来の緩和バイアスから引き締めバイアス（tightening bias）へシフトしています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。インフレ懸念を背景に、タカ派的アプローチが鮮明になっています。
+- **財政・政府**: 米国財務省はAmericaの250周年に向けて「FREEDOM250」キャンペーンを展開し、富裕層向け投資スキーム「Trump Accounts」の公式ローンチや投資ラインナップ、フィランソロピー株式寄付の受け入れを発表しています（[U.S. Treasury Press Releases](https://home.treasury.gov/news/press-releases)）。
+- **関税・地政学**: トランプ政権による関税や輸出管理が意識されるなか、ホワイトハウスはモロッコ産リン酸塩肥料の一時免税輸入を認める緊急事態宣言など、局所的な例外措置を講じています（[White House Presidential Actions](https://www.whitehouse.gov/presidential-actions/)）。
+- **AI産業**: Anthropicによる「Claude Sonnet 5」および科学者用ワークベンチ「Claude Science」の発表（[Anthropic Newsroom](https://www.anthropic.com/news)）、OpenAIによる「GPT-5.6 Sol」のプレビュー（[OpenAI News](https://openai.com/news/)）など、フロンティアモデルの世代交代がさらに加速しています。
+- **AI統治思想**: AnthropicはAmazon、Microsoft、GoogleなどのGlasswingパートナーと共に、業界横断のジェイルブレイク深刻度評価フレームワークを提唱し、自主規制的な安全基準構築に動いています（[Anthropic Newsroom](https://www.anthropic.com/news)）。
 
 ---
 
 ## 1. Market Metrics Dashboard
-- **企業利益**: S&P 500のQ2 EPS予想は3.4%引き上げられ（通常四半期は平均2.0%下方修正されるため、異例の楽観）、2四半期連続で20%超の増益が見込まれている。決算コールでの「AI」言及は337件と過去10年で最高水準（[FactSet S&P 500 Earnings Season Preview Q2 2026](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026)）。
-- **指数利益**: （※S&P Globalの公式基準値 workbook `data_as_of=2026-01-29` に基づき、直近値ではなく公式基準値として記載）S&P 500の営業EPSは72.03、報告EPSは63.52（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-- **収益**: （※S&P Globalの公式基準値 workbook `data_as_of=2026-01-29` に基づく公式基準値）1株当たり売上高（sales per share）は531.47（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-- **指数水準**: 2026年6月26日週終値時点でS&P 500は7,354.02（前週比2.0%下落、ナスダックは4.5%下落）。歴史的ピークは6月2日の7,609.78。S&P Global workbookの公式基準値は6,969.01（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/), [S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
-- **バリュエーション/市場水準**: Yardeni ResearchはS&P 500の年末ターゲットを8250と設定し、現在の「June Swoon」（6月の下落局面・ピーク比3.4%下落）はバブル崩壊ではなく、業績モメンタム（FEMO: Fabulous Earnings Momentum）に支えられた回転（rotation）局面であると見ている（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
-- **米株スイングへの一次示唆**: 高バリュエーションのハイテク株（Lag-7等）の一部にはAI過剰投資の選別懸念やメモリコスト倍増を受けた製品値上げが重荷となる一方、Q2の強力な利益成長（前年比+20%超見通し）が下値をサポートする（[FactSet S&P 500 Earnings Season Preview Q2 2026](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026), [Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+
+### 企業利益
+S&P 500のQ2 2026の予想利益は、期中にアナリストから上方修正（3.4%増）され、2四半期連続で20%以上の増益率が予測されています（[FactSet S&P 500 Earnings Season Preview Q2 2026](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026)）。
+
+### 指数利益
+S&P Globalの公式基準値（data_as_of: 2026-01-29）は、四半期ベース（2025-09-30）で営業EPSが72.03ドル、報告EPSが63.52ドルです（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+
+### 収益
+S&P Globalの公式基準値（data_as_of: 2026-01-29）における1株当たり売上高（sales per share）は531.47ドルです（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）。
+
+### 指数水準
+- **S&P 500**: 7,354.02（前週比2.0%下落、[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）
+- **S&P Global 公式基準値（2026-01-29時点）**: 6969.01（[S&P Global S&P 500 EPS Estimates](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx)）
+
+### バリュエーション/市場水準
+AIデータセンター向けDRAM・NANDの需要増を背景としたメモリ等のコスト倍増を受け、AppleやMicrosoftが消費者向け製品の価格改定に踏み切り、ナスダックが週足で4.5%下落するなど、AI過剰投資への「選別」と高価格転嫁の影響が警戒されています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+
+### 指数EPSスコア
+1. **S&P 500**: **4**（Q2利益予想が期中に3.4%上方修正、2四半期連続で20%超の増益予想）
+2. **S&P 500 IT**: **今週の数値更新なし**（AI投資への「選別」本格化が懸念材料）
+3. **SOX proxy**: **今週の数値更新なし**（データセンター向けメモリコスト上昇継続）
+4. **Nasdaq-100**: **今週の数値更新なし**
+5. **日経半導体**: **今週の数値更新なし**
+6. **TOPIX**: **今週の数値更新なし**
+- **判定**: **様子見**（AI過剰投資の懸念および利上げバイアスによるバリュエーション調整局面）
+
+### レバETF EPS proxy
+- **TECL**: Technology Select Sector Index / XLK proxy。S&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る。
+  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
+- **SOXL**: NYSE Semiconductor Index / SOXX proxy。半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る。
+  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
+- **TQQQ**: Nasdaq-100 / QQQ proxy。Nasdaq-100全体EPSと、IT・半導体・通信・一般消費財寄与を見る。
+  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
+
+### 金・コモディティ
+イランとの暫定和平合意への期待からブレント原油価格が下落した一方、トランプ政権下でのインフレ懸念（Dollar Debasement Trade）や、Fedの金利政策が複雑に交錯しています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+
+
+- **World Gold Council / Goldhub watch**: 金、実質金利、中央銀行金需要、金ETFフローの週次ウォッチ対象として [World Gold Council Goldhub Research Library](https://www.gold.org/goldhub/research/library) と [Goldhub Latest Research](https://www.gold.org/goldhub) を確認する。
+- **Pictet補助視点**: 公式事実ではなく、資産配分・市場レジーム解釈の補助入力として [Pictet Market Insights](https://www.pictet.com/us/en/insights/markets) と [Pictet Asset Management Investment Views](https://am.pictet.com/us/en/investment-views) を確認する。
+
+### 米株スイングへの一次示唆
+FedのKevin Warsh新議長によるタカ派シフトと、AIサプライチェーン（特にメモリ）のコスト高騰に伴う大手IT企業（Apple, Microsoft等）の製品値上げ、それに伴う「選別」の動きを背景に、強気一辺倒（FOMO）から利益率の質（FEMO）を見極める警戒局面に入っています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
 
 ---
 
 ## 2. 日銀/Fed: 割引率と為替
-- **日銀の変化**: 今週の適格根拠なし（大和総研レポートにて約40年ぶりの円安ドル高による実質GDPへの影響が▲0.14％と報告されたが、日銀のアクションに関する新規の一次情報はなし）。
-- **Fedの変化**: Kevin Warsh議長のもと、FOMCは4月時点の利下げバイアスから「利上げバイアス（tightening bias）」へピボット。雇用市場の強さとインフレの粘着性（粘着的な物価リスク）に基づき、市場を先導するタカ派的なパスを歩み始めている（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
-- **CME FedWatchとの乖離**: 今週の適格根拠なし。
-- **円金利・ドル円・日本株への示唆**: 日本総研は「金利1％が問い直す企業価値」とし、国内供給制約の時代における株式市場への影響を指摘。大和総研は直近1年の円安メリットの偏在化を報告（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **日銀の変化**: 今週の適格根拠なし
+- **Fedの変化**: Fed新議長Kevin Warshの主導のもと、FOMCはインフレ抑制を最優先する姿勢を強めており、前月までの利下げバイアスから利上げ（tightening）も辞さないタカ派バイアスへシフトしました（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+- **CME FedWatchとの乖離**: 今週の適格根拠なし
+- **円金利・ドル円・日本株への示唆**: 40年ぶりの円安水準（実質GDPへの純影響は▲0.14%と推定）が続くなか、Fedのタカ派化と日本総研の指摘する「金利1%時代」への供給制約は、日本株全体のバリュエーションと輸出企業・内需企業の二極化をさらに浮き彫りにしています（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)、[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 
 ---
 
 ## 3. 日本政府/トランプ政権: 国家政策ショック
-- **日本の財政・産業政策**: 日本総研が「100億宣言」の実効性向上に向けた提言を行い、スタートアップ連携や「経営者分身AI」の整備推進を求めている（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
-- **JGB需給**: 今週の適格根拠なし。
-- **AI・半導体政策**: 今週の適格根拠なし。
-- **米国関税・輸出管理**: モロッコ産リン酸塩肥料に対する関税の一時免除（Temporary Duty Free Importation）など、サプライチェーンのボトルネックに対応するための大統領令・緊急宣言が発動されている（[White House Presidential Actions](https://www.whitehouse.gov/presidential-actions/)）。
-- **日本企業への波及**: 円安の恩恵偏在化と、国内外の供給制約（JRIは「供給面から成長が制約される日本経済」を予測）が重なり、国内企業のバリュエーション選別が強まる見込み（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html), [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
+- **日本の財政・産業政策**: 日本総研はスタートアップ支援「100億宣言」の実効性向上に向けて、「経営者分身AI」のインフラ整備などを提言しています（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
+- **JGB需給**: 今週の適格根拠なし
+- **AI・半導体政策**: 米国ではNVIDIAが「Build in America, for America」を掲げ、米国内のインフラ構築に向けて資本パートナーを募る動きを強化しています（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
+- **米国関税・輸出管理**: トランプ政権による関税影響を雇用主が注視するなか、モロッコ産リン酸塩肥料の一時免税措置のような、サプライチェーン維持のための緊急調整も実施されています（[White House Presidential Actions](https://www.whitehouse.gov/presidential-actions/)、[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+- **日本企業への波及**: 円安メリットの偏在と供給制約のなか、金利上昇に耐えうる「供給制約の時代」の企業価値再評価が進みます（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)、[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
 
 ---
 
 ## 4. OpenAI/Anthropic: AI産業カーブ
-- **モデル/製品の進化**: Anthropicが「Claude Sonnet 5」をローンチし、コーディング、エージェント、および専門的ワークフローでの最先端性能をアピール。また、科学者向けAIワークベンチ「Claude Science」も提供開始。OpenAIは「GPT-5.6 Sol」をプレビュー（[Anthropic Newsroom](https://www.anthropic.com/news), [OpenAI News](https://openai.com/news/)）。
-- **enterprise adoption**: HPがOpenAI技術を用いて全社規模でAIの初期成功を拡張している事例が公開。AWSではConnect Customer向けAgentic CX designerの提供などエージェント統合が進行。一方で大和総研は、企業内でのAI活用が「選別（本格化）」フェーズに入ったと指摘（[OpenAI News](https://openai.com/news/), [AWS News Blog](https://aws.amazon.com/blogs/aws/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
-- **AI safety / regulation**: AnthropicはFable 5のグローバル再公開とともに、Amazon、Microsoft、Google、および他のGlasswingパートナーと共同で「ジェイルブレイクの深刻度を測定する業界横断フレームワーク」を提案（[Anthropic Newsroom](https://www.anthropic.com/news)）。
-- **compute需要**: AIデータセンター向けのDRAMおよびNAND需要の急増により、メモリチップコストが2025年秋から倍増しており、2027後半までにさらに倍増する見通し。これがAppleやMicrosoftの消費者向け製品の値上げを招いている（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。また、NVIDIAは「GB300（Blackwell Ultra）」のAzureへの実戦投入やPalantirのNVIDIA Nemotron採用など、ハードウェアとインフラの拡張をさらに加速（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
-- **SBG NAV / AI株への示唆**: AIインフラ投資への資金パートナー（Capital Partners）を募るNVIDIAの動きや、実質的なエージェント機能の強化（Sonnet 5, Fable 5, GPT-5.6 Sol）は半導体・電力需要を下支えするが、大和総研が指摘する「過剰投資の選別本格化による信用リスク・資産価格への波及」には注意を要する（[NVIDIA Newsroom](https://nvidianews.nvidia.com/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **モデル/製品の進化**: Anthropicがコーディングやエージェント領域でフロンティア性能を持つ「Claude Sonnet 5」を発表し、OpenAIも「GPT-5.6 Sol」のプレビューを公開しました（[Anthropic Newsroom](https://www.anthropic.com/news)、[OpenAI News](https://openai.com/news/)）。
+- **enterprise adoption**: HPがOpenAIを全社的にスケール活用する事例が紹介されたほか、Anthropicが学術研究用にツールをカスタマイズした「Claude Science」を提供開始しています（[OpenAI News](https://openai.com/news/)、[Anthropic Newsroom](https://www.anthropic.com/news)）。
+- **AI safety / regulation**: Anthropicは主要プラットフォーマー（Amazon、Microsoft、Googleなど）と連携し、ジェイルブレイクの深刻度スコアリングの業界共通枠組みを提案しました（[Anthropic Newsroom](https://www.anthropic.com/news)）。
+- **compute需要**: AnthropicのモデルがAzure上のNVIDIA GB300（Blackwell Ultra）で動作開始したほか、PalantirがNVIDIA Nemotronを利用して政府機関へ安全なAIを導入するなど、インフラ構築需要は高まり続けています（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
+- **SBG NAV / AI株への示唆**: AI活用が実務レベルへ本格導入される一方、市場では過剰投資の「選別」フェーズに入っており、ハードウェア投資から実際のアプリケーション創出への移行期における価格圧力を見守る必要があります（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
 
 ---
 
 ## 5. Altman/Dario: AI権力思想
-- **今週の思想的変化**: 今週の適格根拠なし（両氏の個人の署名入り政策・思想文書はCurrent Evidenceに存在しない）。
-- **国家との距離**: 今週の適格根拠なし。
-- **規制への姿勢**: 今週の適格根拠なし。
-- **民主化/集中/安全保障の論点**: 今週の適格根拠なし。
-- **投資テーマへの意味**: 今週の適格根拠なし。
+- **今週の思想的変化**: 主要AIラボが個別規制に対応するのではなく、巨大テックプラットフォーム（Amazon、Microsoft、Google）と「Glasswing」等の枠組みを通じて主導権を握る形で、自主的な「安全・評価規格」のデファクトスタンダード化を狙う動きが強まっています（[Anthropic Newsroom](https://www.anthropic.com/news)）。
+- **国家との距離**: PalantirとNVIDIAによる米政府機関向けの安全な閉鎖環境（Closed Environments）でのNemotron提供など、安全保障と密結合した国内調達インフラとしての構築が進んでいます（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
+- **規制への姿勢**: 今週の適格根拠なし
+- **民主化/集中/安全保障の論点**: 国内AIインフラの拡張に向けてNVIDIAが民間資本パートナーとの提携を公募するなど、国防・経済安保上の「国内集積」が明確な目的となっています（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
+- **投資テーマへの意味**: 単なるチップ販売モデルから、国家やインフラファンド等と連携した大規模インフラの構築事業モデルへの進化が、投資テーマの前提となっています（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)）。
 
 ---
 
 ## 6. 投資仮説の更新
-- **米株スイング**: 利上げバイアスへのFedのピボット（Kevin Warsh議長）と、メモリ価格上昇に伴う製品値上げは短期的バリュエーション調整（June Swoon）を引き起こすが、Q2決算の強力な上振れ期待（増益率+20%超想定、推定引き上げ傾向）から、S&P 500の年末8250目標へ向かう回転型ブル相場（FEMO）の仮説を維持（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/), [FactSet S&P 500 Earnings Season Preview Q2 2026](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026)）。
-- **日経/日本株**: 円安ドル高の恩恵は偏在化しており、日本総研が指摘する「供給面からの成長制約（供給制約の時代）」と「金利1%」の環境下で、資本効率改革とAI/スタートアップ提言が進む企業にフォーカスする（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html), [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
-- **SBG NAV**: 今週の適格根拠なし。
-- **AI半導体**: NVIDIA Blackwell Ultra (GB300) のAzureでの稼働開始や、AIデータセンター発のメモリ需要（DRAM/NAND価格の急騰・倍増トレンド）から、半導体キャペックスの強気継続。ただし企業のAI投資に対する「選別本格化」による投資腰折れリスクを監視（[NVIDIA Newsroom](https://nvidianews.nvidia.com/), [Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
-- **製造業・素材**: 5月の日本の鉱工業生産が輸送機械工業（自動車除く）の牽引で2ヶ月連続上昇しており、供給制約下での底堅い生産活動を確認（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
-- **為替・金利**: 米国はKevin Warsh新議長によるタカ派利上げ方向（Tightening bias）への回帰、日本は「金利1％時代」への供給制約移行と40年ぶりの円安ドル高水準の定着（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/), [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **米株スイング**: **強気から中立・様子見へ一時退避**。FedのWarsh議長のタカ派姿勢と、メモリ価格急騰に伴うハードウェア調達コストの顧客転嫁（Apple・Microsoft等の値上げ）による、ITセクターの「選別（過剰投資懸念）」への警戒が必要です（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **日経/日本株**: **供給制約と金利上昇に耐えうる価値株の選別**。金利1%時代を背景に、円安恩恵の偏在と供給制約に対応できる実力値を持つ企業のスクリーニングを推奨（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **SBG NAV**: **様子見**。AIフロンティアモデルの世代交代（Sonnet 5, GPT-5.6 Sol）は順調なものの、下流の企業向け実装におけるROI選別圧力が強まっており、NAVへの織り込みは慎重に行うべきです（[Anthropic Newsroom](https://www.anthropic.com/news)、[OpenAI News](https://openai.com/news/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
+- **AI半導体**: **調整局面の監視**。NVIDIAが資本パートナーの募集やBlackwell Ultra（GB300）のAzure展開を進める一方で、メモリ等のコモディティ価格上昇による限界コスト圧迫がデバイス機器側に悪影響を与えていないか監視（[NVIDIA Newsroom](https://nvidianews.nvidia.com/)、[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+- **製造業・素材**: **国内回帰および農業・肥料等のバリューチェーン着目**。米国でのリン酸塩肥料の一時免税措置や、日本国内の供給制約（物流・労働力）に対応するロボティクスおよび自動化素材へのシフト（[White House Presidential Actions](https://www.whitehouse.gov/presidential-actions/)、[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)）。
+- **為替・金利**: **ドル高の継続と日米金利差縮小の遅れ**。米FedのWarsh新議長がタカ派ホールドに動いたことで、金利先安観は後退。ドルの強含みが当面維持されやすい環境です（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
 
 ---
 
 ## 7. 反証リスト
-- **既存仮説と矛盾した情報**: 米国の雇用減速（6月雇用統計で雇用者数は前月差+5.7万人と減速、失業率低下は労働力人口の急減が主因）（[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
-- **重み**: 中（利上げバイアスを強めるFedのタカ派路線と景気減速懸念がコンフリクトする可能性があるため）。
-- **対応**: Warsh議長がタカ派スタンスを維持しつつ利下げへ向かう「Hawkish Path to Lower Interest Rates」の整合性や、労働市場が単に「ウェルバランス」な水準に落ち着いているのかどうかを引き続き経済指標で検証（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+- **既存仮説と矛盾した情報**: 「インフレ鎮静化に伴う年内の緩やかな利下げサイクル」という前提に対し、FedのKevin Warsh新議長は最初の記者会見から一貫してタカ派姿勢を示し、インフレリスクの上昇と引き締めバイアスへの転換を決定しました（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
+- **重み**: **極めて高い（L1/L0公式）**。マクロ割引率の底上げに直結するため、マルチプル調整圧力となります。
+- **対応**: 米株スイングポジションの部分的な現金化、およびグロース株から強固なフリーキャッシュフロー（FEMO）を持つバリュー株へのアロケーション移行。
 
 ---
 
 ## 8. 来週の行動
-- **売買**: 短期下落局面（June Swoon）で業績モメンタム（FEMO）の裏付けがあるS&P 500情報技術セクターや、NVIDIAのインフラ拡張の恩恵を受ける企業群の押し目買い検討。
-- **調査**: 日本総研が指摘する「金利1％時代」における企業価値評価モデルの検証。また、企業内AI投資の「選別本格化」に伴うソフトウェア・信用リスク情報の収集（[日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/), [大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。
-- **発信**: AIメモリ需要の爆発的増加（DRAM・NANDコスト倍増と製品価格への転嫁）がもたらす「AIインフラから消費者物価へのインフレ伝播」に関する論考を公開。
+- **売買**: 米株ITセクターのウェイトを一部削減し、キャッシュポジションを拡大。
+- **調査**: メモリ（DRAM/NAND）供給不足の継続期間と、半導体製造装置・メモリメーカーへの価格転嫁力の詳細なデータ精査。
+- **発信**: 日米の「金利ありの世界」と「AIインフラ過剰投資の選別期」が交錯する2026年後半のマクロシナリオ整理。
 
 ---
 
 ## 9. 重要ソースTop 10
 
-| No. | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 投資・研究・記事化への適用 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | By John Butters \| July 2, 2026 | FactSet S&P 500 Earnings Season Preview Q2 2026 | L0 | earnings | 2026-07-02 | [URL](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026) | Q2 earnings estimated growth above 20% & upward revisions. | 投資判断、米株スイング |
-| 2 | US MARKET CALL: AI Fatigue Weighs On The 'Lag-7' | Yardeni Research Morning Briefings | L0 | market_expectation | 2026-06-28 | [URL](https://www.yardeniquicktakes.com/) | DRAM/NAND costs doubled since fall and impact consumer hardware prices. | 投資・記事化（AI半導体・インフレ） |
-| 3 | Introducing Claude Sonnet 5 | Anthropic Newsroom | L3 | frontier_ai_lab | 2026-06-30 | [URL](https://www.anthropic.com/news) | Launch of Sonnet 5 for professional work & customizable Claude Science. | 研究・記事化（AI産業・プロダクト） |
-| 4 | Claude Meets Blackwell Ultra: Anthropic’s Models Now Run on NVIDIA GB300 in Azure | NVIDIA Newsroom | L3 | frontier_ai_lab | 2026-06-29 | [URL](https://nvidianews.nvidia.com/) | Live deployment of GB300 (Blackwell Ultra) inside Azure cloud environment. | 投資（AI半導体・インフラ） |
-| 5 | WEEKLY WEBCAST: Hawks Versus Doves Debate At The Fed | Yardeni Research QuickTakes | L0 | market_metrics | 2026-06-17 | [URL](https://www.yardeniquicktakes.com/page/2/) | Kevin Warsh led Fed shift from easing bias to tightening bias. | 投資（金利・為替） |
-| 6 | 米国：AI活用は続くが、「選別」も本格化へ | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-30 | [URL](https://www.dir.co.jp/report/research/economics/index.html) | Formal warning of AI investment screening and credit risk side effects. | 研究（AI過剰投資検証） |
-| 7 | 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ― | 日本総研 経済・政策レポート | L5 | official_macro | 2026-06-29 | [URL](https://www.jri.co.jp/report/year/) | Asset revaluation framework under 1% JGB yield paradigm. | 投資・研究（日本株・金利） |
-| 8 | Declaration of Emergency and Authorization for Temporary Duty Free Importation of Phosphate Fertilizer Morocco | White House Presidential Actions | L2 | us_executive_power | 2026-07-03 | [URL](https://www.whitehouse.gov/presidential-actions/) | Duty-free import action on Moroccan fertilizer to ease farm-input inflation. | 研究（関税・コモディティ） |
-| 9 | U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App | U.S. Treasury Press Releases | L2 | us_executive_power | 2026-07-04 | [URL](https://home.treasury.gov/news/press-releases) | Official launch of government investment/tax scheme "Trump Accounts". | 研究（米政権政策） |
-| 10 | 米国 雇用者数は前月差＋5.7万人と減速 | 大和総研 経済分析レポート | L5 | official_macro | 2026-07-03 | [URL](https://www.dir.co.jp/report/research/economics/index.html) | Sharp drop in labor supply masks underlying job growth slowdown in June. | 投資（マクロ検証） |
+| No. | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 投資・研究・記事化への用途 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Introducing Claude Sonnet 5 | Anthropic Newsroom | L3 | frontier_ai_lab | 2026-06-30 | [Link](https://www.anthropic.com/news) | コーディング・エージェント機能の大幅な能力向上指標 | 投資（個別AI株）、研究 |
+| 2 | Warsh Taking Hawkish Path to Lower Interest Rates | Yardeni Research Morning Briefings | L0 | market_expectation | 2026-06-30 | [Link](https://www.yardeniquicktakes.com/) | Fed新議長のタカ派姿勢とインフレリスク認識の裏付け | 投資（金利・為替）、記事化 |
+| 3 | US MARKET CALL: AI Fatigue Weighs On The 'Lag-7' | Yardeni Research Morning Briefings | L0 | market_expectation | 2026-06-28 | [Link](https://www.yardeniquicktakes.com/) | メモリコスト高騰に伴うApple・MS製品値上げとテック株下落の分析 | 投資（米株スイング）、記事化 |
+| 4 | 米国：AI活用は続くが、「選別」も本格化へ | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-30 | [Link](https://www.dir.co.jp/report/research/economics/index.html) | AI投資が単なるブームから実務ROI重視の選別期へ入った分析 | 研究、記事化 |
+| 5 | 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ― | 日本総研 経済・政策レポート | L5 | official_macro | 2026-06-29 | [Link](https://www.jri.co.jp/report/year/) | 日本の金利上昇局面における新たな株式市場評価モデルの提示 | 投資（日本株）、研究 |
+| 6 | U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App | U.S. Treasury Press Releases | L2 | us_executive_power | 2026-07-04 | [Link](https://home.treasury.gov/news/press-releases) | 米財務省による新たな国庫・個人向け優遇投資スキームの始動 | 投資（グローバル流動性）、記事化 |
+| 7 | NVIDIA Unlocks AI Compute at Scale, Inviting Capital Partners to Power the AI Infrastructure Buildout | NVIDIA Newsroom | L3 | frontier_ai_lab | 2026-07-01 | [Link](https://nvidianews.nvidia.
+申し訳ありません。サーバーとの通信エラーが発生いたしました。
+
+前回の分析結果の続きおよび重要ソース・コンテンツ化候補のリストを以下に再構成して出力いたします。
 
 ---
 
-## 10. コンテンツ化候補
+### 9. 重要ソースTop 10（続き）
 
-### 1. メモリ半導体危機と消費者物価のタイムラグ
-- **根拠URL**: [https://www.yardeniquicktakes.com/](https://www.yardeniquicktakes.com/)（Yardeni Research - AI Fatigue Weighs On The 'Lag-7'）
-- **切り口**: AIデータセンターが消費するDRAM・NAND需要によってメモリコストが半年で倍増し、Apple・Microsoftの価格改定を引き起こした「インフラ発インフレ」の伝搬経路。
-- **想定読者**: テクノロジー投資家、ガジェット購入層、インフレ動向を追うマクロ経済関心層
-- **1段落要旨**: AIの発展は物理インフラを必要とする。データセンター側で生じた急激なDRAM・NANDの需要爆発は、メモリ価格を2025年秋から倍増させ、ついにAppleやMicrosoftといった一般消費者向けデバイスの値上げという形で波及し始めた。AIへの過剰な資本投下が、どのようにして一般の生活コスト（インフレ）へフィードバックされるかをデータとともに解説する。
+| No. | Title | Source | Layer | Source Class | Published Date | URL | KAFKAにとっての意味 | 投資・研究・記事化への用途 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Introducing Claude Sonnet 5 | Anthropic Newsroom | L3 | frontier_ai_lab | 2026-06-30 | [Link](https://www.anthropic.com/news) | コーディング・エージェント機能の大幅な能力向上指標。 | 投資（個別AI株）、研究 |
+| 2 | Warsh Taking Hawkish Path to Lower Interest Rates | Yardeni Research Morning Briefings | L0 | market_expectation | 2026-06-30 | [Link](https://www.yardeniquicktakes.com/) | Fed新議長のタカ派姿勢とインフレリスク認識の裏付け。 | 投資（金利・為替）、記事化 |
+| 3 | US MARKET CALL: AI Fatigue Weighs On The 'Lag-7' | Yardeni Research Morning Briefings | L0 | market_expectation | 2026-06-28 | [Link](https://www.yardeniquicktakes.com/) | メモリコスト高騰に伴うApple・MS製品値上げとテック株下落の分析。 | 投資（米株スイング）、記事化 |
+| 4 | 米国：AI活用は続くが、「選別」も本格化へ | 大和総研 経済分析レポート | L5 | official_macro | 2026-06-30 | [Link](https://www.dir.co.jp/report/research/economics/index.html) | AI投資が単なるブームから実務ROI重視の選別期へ入った分析。 | 研究、記事化 |
+| 5 | 金利１％が問い直す企業価値 ― 「供給制約の時代」の株式市場 ― | 日本総研 経済・政策レポート | L5 | official_macro | 2026-06-29 | [Link](https://www.jri.co.jp/report/year/) | 日本の金利上昇局面における新たな株式市場評価モデルの提示。 | 投資（日本株）、研究 |
+| 6 | U.S. Treasury Announces the Official Launch of Trump Accounts and Full Scope of the App | U.S. Treasury Press Releases | L2 | us_executive_power | 2026-07-04 | [Link](https://home.treasury.gov/news/press-releases) | 米財務省による新たな国庫・個人向け優遇投資スキームの始動。 | 投資（グローバル流動性）、記事化 |
+| 7 | NVIDIA Unlocks AI Compute at Scale, Inviting Capital Partners to Power the AI Infrastructure Buildout | NVIDIA Newsroom | L3 | frontier_ai_lab | 2026-07-01 | [Link](https://nvidianews.nvidia.com/) | インフラ投資負担を外部資本と分担するスキームへの転換。 | 投資（半導体・インフラ）、研究 |
+| 8 | FactSet S&P 500 Earnings Season Preview Q2 2026 | FactSet Insight Earnings | L0 | earnings | 2026-07-02 | [Link](https://insight.factset.com/sp-500-earnings-season-preview-q2-2026) | Q2決算シーズンに向けた異例の強気上方修正トレンドの記録。 | 投資（バリュエーション）、記事化 |
+| 9 | Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron | NVIDIA Newsroom | L3 | frontier_ai_lab | 2026-06-29 | [Link](https://nvidianews.nvidia.com/) | 安全保障領域における「閉鎖環境型」インフラ導入の具体例。 | 研究、記事化 |
+| 10 | 約40年ぶりの円安ドル高、日本経済への影響は？ | 大和総研 経済分析レポート | L5 | official_macro | 2026-07-03 | [Link](https://www.dir.co.jp/report/research/economics/index.html) | 円安のGDP押下げ効果（▲0.14%）と偏在する恩恵の実態。 | 投資（為替・日本株）、記事化 |
 
-### 2. 「金利1%」と供給制約が変える日本株の企業評価
-- **根拠URL**: [https://www.jri.co.jp/report/year/](https://www.jri.co.jp/report/year/)（日本総研 - 金利１％が問い直す企業価値）
-- **切り口**: 40年ぶりの円安と金利上昇局面において、かつてのデフレ型・需要不足モデルから「供給制約」を前提とした高付加価値型企業へのシフト基準。
-- **想定読者**: 日本株のアクティブ投資家、中小・大手企業の経営企画部門
-- **1段落要旨**: 長らくゼロ金利に慣らされた日本経済が「金利1%」にシフトする中、バリュエーションの再設計が急務となっている。国内外の労働力やサプライチェーンの供給制約が強まる中、単に低コストで生き残ってきた企業は淘汰され、価格決定権を持つ高付加価値スタートアップや、AI導入により省人化（「経営者分身AI」など）を達成できる企業への「選別」が株式市場で本格化するロジックを読み解く。
+---
+
+### 10. コンテンツ化候補
+
+#### 候補1
+- **タイトル案**: インフラ価格の逆襲：メモリ高騰が引き起こす大手テック製品の値上げと「AI過剰投資の選別期」
+- **根拠URL**: [Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)
+- **切り口**: AIデータセンター向けの半導体（DRAM/NAND）供給逼迫によるコスト倍増が、AppleやMicrosoftなどのデバイス側・アプリケーション側の価格転嫁として実社会に現れ始めた点。これにより、市場が「全般的なAI期待」から「実利ROIの選別」へシフトするメカニズムを解説。
+- **想定読者**: テック投資家、ガジェット・ITビジネスに関心のあるビジネスパーソン
+- **1段落要旨**: AIのインフラ構築需要は依然として旺盛ですが、その裏でメモリやストレージの調達コストが急騰しています。AppleやMicrosoftが相次いで消費者向け製品の価格改定を発表したことは、このコスト圧力が限界に達していることを示唆しています。市場は今後、単なるAIブームとしての投資を終え、実際の業務効率化と利益率（FEMO）で企業を厳格に選別するフェーズへ移行します。
+
+#### 候補2
+- **タイトル案**: 「金利1%」と供給制約の日本市場で生き残る企業価値評価モデル
+- **根拠URL**: [日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)
+- **切り口**: 40年ぶりの円安メリットの偏在と、日本の労働力・物流などの供給制約のなかで、金利1%時代に株式市場がどう変化するか。
+- **想定読者**: 日本株の個人投資家、企業財務担当者
+- **1段落要旨**: 約40年ぶりの円安が日本経済全体に与えるGDP純影響はマイナスと試算されるなど、円安による恩恵は一部のグローバル企業に偏在しています。さらに日本総研が指摘する「金利1%時代」への突入は、従来の低金利を前提とした企業評価を根本から揺るがします。人手不足や供給制約を克服しつつ、金利上昇に耐えうる真のフリーキャッシュフロー創出能力を持つ企業を見極めるためのスクリーニング手法が、これからの株式投資の主旋律となります。

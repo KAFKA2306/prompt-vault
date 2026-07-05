@@ -31,6 +31,23 @@ FactSet、S&P Global、Yardeni Research より抽出した企業利益、指数�
   - 1株当たり売上高 (Sales per share): 531.47
   - (※S&P Globalの公式基準データ。なお、同社によるパブリックファイルの更新は2026年1月をもって停止されているため、本データは公式基準値として扱う。)
 
+
+- **指数EPSスコア**:
+  - **S&P 500**: 既存のFactSet/S&P Global/Yardeni Research根拠を優先して、S&P500全体EPSの上方修正継続を判定する。
+  - **S&P 500 IT**: S&P500 ITのEPS成長、ドル利益修正、AI/半導体寄与を確認する。
+  - **SOX proxy**: SOX指数そのもののEPSではなく、半導体・半導体装置業界EPSとSOXX proxyを確認する。
+  - **Nasdaq-100**: QQQ / Nasdaq-100全体EPSと主力メガテック寄与を確認する。
+  - **日経半導体**: 日経半導体株指数の構成銘柄、会社予想修正、米SOX連動をproxyとして確認する。
+  - **TOPIX**: TOPIX EPS予想を日本株全体の利益環境として確認する。
+  - **判定**: 買い増し寄り / 様子見 / 減らす、のどれかに分類する。
+- **レバETF EPS proxy**:
+  - **TECL / XLK**: TECLそのもののEPSは見ず、Technology Select Sector Index / XLK proxyとしてS&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る（[Direxion TECL](https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs)）。
+  - **SOXL / SOXX**: SOXLそのもののEPSは見ず、NYSE Semiconductor Index / SOXX proxyとして半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る（[Direxion SOXL](https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs)）。
+  - **TQQQ / QQQ**: TQQQそのもののEPSは見ず、Nasdaq-100 / QQQ proxyとしてNasdaq-100全体EPSとIT・半導体・通信・一般消費財の寄与を見る（[ProShares TQQQ](https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq), [Invesco QQQ](https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html)）。
+  - **今週のproxy EPS変化**: price ÷ P/Eで直接計算する場合は、非レバproxy ETFまたは指数の価格、P/E、データ日付、根拠URLを明記する。根拠がない場合は今週の数値更新なしとする。
+- **金・コモディティ**: World Gold Council / Goldhubを、金、実質金利、中央銀行金需要、金ETFフローの週次ウォッチ対象として扱う。今週の判断に使う場合は該当URLを付ける。
+- **Pictet補助視点**: Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
+
 ## 2. 日銀/Fed: 割引率と為替
 - 日銀の変化: 「今週の適格根拠なし」
 - Fedの変化: 「今週の適格根拠なし」

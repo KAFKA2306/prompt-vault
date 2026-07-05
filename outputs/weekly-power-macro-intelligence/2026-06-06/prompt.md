@@ -7,6 +7,8 @@
 
 # Non-Negotiable Rules
 - URLの無い事実主張は禁止。根拠URLが無い内容は書かない。
+- 根拠リンクは Current Evidence Items の url に存在する http:// または https:// のURLだけを使う。file://、ローカルパス、Antigravity transcript、内部ログへのリンクは禁止。
+- HTMLタグや壊れたタグ断片（例: <br>, </br>, <...>）を出力してはいけない。
 - 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Current Evidence Items の title または snippet に文字列として存在するものだけ使う。
 - Current Evidence Items に存在しない具体名を補完・推測・創作してはいけない。
 - Source Coverage / Fetch Failures は監視状況の記録であり、事実主張、レジーム判定、投資仮説、行動リストの根拠に使ってはいけない。
@@ -25,6 +27,14 @@
 - 十分な根拠がない節は「今週の適格根拠なし」とだけ書き、空想で埋めない。
 - FactSet / S&P Global / Yardeni Research の company_earnings, index_earnings, revenue, index_level は米株スイングと重要ソースに必ず反映する。
 - S&P Global XLSが古い場合は、data_as_ofを明示し、現在値ではなく公式基準値として扱う。
+- 毎週のMarket Metricsの目的は値上がりランキングではなく、指数EPSの上方修正が継続しているかを判定すること。
+- 指数EPSスコアは S&P500全体、S&P500 IT、半導体/SOX proxy、Nasdaq-100、日本半導体、TOPIX の6本を固定順で見る。
+- TECL / SOXL / TQQQ そのもののEPSを見てはいけない。必ず非レバ裏側指数・proxy ETF・セクター/業界EPSの変化として扱う。
+- TECLはTechnology Select Sector Index / XLK proxy、SOXLはNYSE Semiconductor Index / SOXX proxy、TQQQはNasdaq-100 / QQQ proxyとして整理する。
+- レバETF EPS proxy欄では、数値更新がない場合でも TECL / XLK、SOXL / SOXX、TQQQ / QQQ の対応関係を文字列として必ず書く。
+- proxy EPSの数値を書く場合は price ÷ P/E などの計算式、データ日付、根拠URLを必ず書く。根拠がない場合は「今週の数値更新なし」と書く。
+- World Gold Councilは金・実質金利・中央銀行金需要・金ETFフローの公式/準公式コモディティ入力として扱う。
+- Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
 - Week End より後の日付、イベント、予定、数値を本文に書いてはいけない。Current Evidence Items 内の [future date redacted] は無視する。
 
 # Source Hierarchy
@@ -33,7 +43,7 @@
 - L2: 国家政策、日本政府、米国政権、USTR、Commerce、Treasury、METI、MOF
 - L3: AI基幹企業、OpenAI、Anthropic、NVIDIA、Microsoft、Amazon、Google
 - L4: AI権力者の思想・政策文書、Sam Altman、Dario Amodei
-- L5: アナリスト解釈、Yardeni Research、FactSet、第一ライフ研、日本総研、NRI、みずほ、大和総研
+- L5: アナリスト解釈、Yardeni Research、FactSet、Pictet、第一ライフ研、日本総研、NRI、みずほ、大和総研
 - L6: 個人マクロ・ナラティブ、Shenmacro、人文科学アカデミー
 
 # KAFKA Themes
@@ -43,6 +53,7 @@
 - AI・半導体・電力・データセンター
 - 製造業・素材・設備投資
 - 金利、為替、流動性
+- 金、コモディティ、実質金利
 - ブログ、note、YouTube、Scrapboxへの発信材料
 
 # Required Output
@@ -63,6 +74,20 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
 - 収益:
 - 指数水準:
 - バリュエーション/市場水準:
+- 指数EPSスコア:
+  - S&P500:
+  - S&P500 IT:
+  - SOX proxy:
+  - Nasdaq-100:
+  - 日経半導体:
+  - TOPIX:
+  - 判定: 買い増し寄り / 様子見 / 減らす
+- レバETF EPS proxy:
+  - TECL: Technology Select Sector Index / XLK proxy。S&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る。
+  - SOXL: NYSE Semiconductor Index / SOXX proxy。半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る。
+  - TQQQ: Nasdaq-100 / QQQ proxy。Nasdaq-100全体EPSと、IT・半導体・通信・一般消費財寄与を見る。
+  - 今週のproxy EPS変化:
+- 金・コモディティ:
 - 米株スイングへの一次示唆:
 
 ## 2. 日銀/Fed: 割引率と為替
@@ -869,3 +894,35 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   evidence_level: spglobal_xlsx
   is_current_evidence: True
   snippet: S&P Global S&P 500 EPS estimate workbook. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; official workbook states public files were discontinued after January 2026.
+- title: Weekly index EPS revision scorecard framework
+  source: Index EPS Revision Scorecard Framework
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: global
+  asset_linkage: equity, ai_capex, manufacturing
+  metric_tags: index_eps_score, index_eps_proxy, sector_earnings, company_earnings, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-06
+  author:
+  url: https://www.factset.com/earningsinsight
+  body_status: structured_metrics
+  evidence_level: index_eps_scorecard_framework
+  is_current_evidence: True
+  snippet: Weekly index EPS revision scorecard framework. The weekly objective is not return ranking; it is to detect whether index EPS upward revision momentum is continuing. Track six lines in this fixed order: S&P500 overall EPS growth and estimated earnings; S&P500 IT EPS growth and estimated earnings; semiconductor/SOX proxy using S&P500 Semiconductors & Semiconductor Equipment industry when SOX EPS is not publicly available; Nasdaq-100 using QQQ/Nasdaq Monthly Scorecard and mega-cap AI/technology earnings contribution; Japan semiconductor proxy using Nikkei Semiconductor Stock Index constituents and company guidance revisions; TOPIX EPS forecast as the Japan market-wide earnings environment. Score each line from 1 to 5: 5 means EPS growth above 100 percent or a clear index-moving earnings leader; 4 means EPS growth 40-99 percent or strong upward revisions; 3 means 15-39 percent growth; 2 m...
+- title: TECL SOXL TQQQ underlying index EPS proxy map
+  source: Leveraged ETF Underlying Index EPS Proxy Map
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: leveraged_etf_proxy, index_eps_proxy, sector_earnings, company_earnings, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-06-06
+  author:
+  url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
+  body_status: structured_metrics
+  evidence_level: leveraged_etf_eps_proxy_map
+  is_current_evidence: True
+  snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...

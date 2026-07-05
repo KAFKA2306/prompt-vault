@@ -33,6 +33,23 @@ source: agy
 - **Yardeni Research (Morning Briefings / QuickTakes)**:
   - S&P 500は6月2日に史上最高値である 7,609.78 を記録した後、6月26日の金曜日終値までに3.4%下落。6月5日の調整局面では、S&P 500は 7,383.74（2.64%安）、Nasdaqは4.77%安となった。
 
+
+- **指数EPSスコア**:
+  - **S&P 500**: 既存のFactSet/S&P Global/Yardeni Research根拠を優先して、S&P500全体EPSの上方修正継続を判定する。
+  - **S&P 500 IT**: S&P500 ITのEPS成長、ドル利益修正、AI/半導体寄与を確認する。
+  - **SOX proxy**: SOX指数そのもののEPSではなく、半導体・半導体装置業界EPSとSOXX proxyを確認する。
+  - **Nasdaq-100**: QQQ / Nasdaq-100全体EPSと主力メガテック寄与を確認する。
+  - **日経半導体**: 日経半導体株指数の構成銘柄、会社予想修正、米SOX連動をproxyとして確認する。
+  - **TOPIX**: TOPIX EPS予想を日本株全体の利益環境として確認する。
+  - **判定**: 買い増し寄り / 様子見 / 減らす、のどれかに分類する。
+- **レバETF EPS proxy**:
+  - **TECL / XLK**: TECLそのもののEPSは見ず、Technology Select Sector Index / XLK proxyとしてS&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る（[Direxion TECL](https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs)）。
+  - **SOXL / SOXX**: SOXLそのもののEPSは見ず、NYSE Semiconductor Index / SOXX proxyとして半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る（[Direxion SOXL](https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs)）。
+  - **TQQQ / QQQ**: TQQQそのもののEPSは見ず、Nasdaq-100 / QQQ proxyとしてNasdaq-100全体EPSとIT・半導体・通信・一般消費財の寄与を見る（[ProShares TQQQ](https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq), [Invesco QQQ](https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html)）。
+  - **今週のproxy EPS変化**: price ÷ P/Eで直接計算する場合は、非レバproxy ETFまたは指数の価格、P/E、データ日付、根拠URLを明記する。根拠がない場合は今週の数値更新なしとする。
+- **金・コモディティ**: World Gold Council / Goldhubを、金、実質金利、中央銀行金需要、金ETFフローの週次ウォッチ対象として扱う。今週の判断に使う場合は該当URLを付ける。
+- **Pictet補助視点**: Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
+
 ## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 今週の適格根拠なし
 - **Fedの変化**: 2025年末の3回（計75bps）の利下げを経て、インフレリスクの上昇と労働市場の堅調さを背景に、前週のFOMCにて緩和バイアス（easing bias）から利上げバイアス（tightening bias）へピボット。新議長 Kevin Warsh はデビュー会見で dot は提供しなかったものの、物価安定の重要性を繰り返し強調する極めてタカ派的な姿勢を示した。

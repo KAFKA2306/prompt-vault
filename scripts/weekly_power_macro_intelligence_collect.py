@@ -521,6 +521,66 @@ def collect_spglobal_xlsx(source: dict, week_end: dt.date, snippet_limit: int) -
     )]
 
 
+def collect_leveraged_etf_eps_proxy(source: dict, week_end: dt.date, snippet_limit: int) -> list[dict]:
+    snippet = (
+        "Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; "
+        "they target daily leveraged returns through derivatives/cash mechanics. "
+        "TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. "
+        "SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. "
+        "TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. "
+        "EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. "
+        "Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponsor, or index provider evidence. "
+        "Reference URLs: TECL Direxion https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs ; "
+        "SOXL Direxion https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs ; "
+        "TQQQ ProShares https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq ; "
+        "QQQ Invesco https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html ."
+    )
+    if len(snippet) > snippet_limit:
+        snippet = snippet[: snippet_limit - 3].rstrip() + "..."
+    return [item_from_source(
+        source,
+        "TECL SOXL TQQQ underlying index EPS proxy map",
+        week_end.isoformat(),
+        week_end.isoformat(),
+        snippet,
+        "structured_metrics",
+        "leveraged_etf_eps_proxy_map",
+        True,
+    )]
+
+
+def collect_index_eps_scorecard(source: dict, week_end: dt.date, snippet_limit: int) -> list[dict]:
+    snippet = (
+        "Weekly index EPS revision scorecard framework. The weekly objective is not return ranking; "
+        "it is to detect whether index EPS upward revision momentum is continuing. "
+        "Track six lines in this fixed order: S&P500 overall EPS growth and estimated earnings; "
+        "S&P500 IT EPS growth and estimated earnings; semiconductor/SOX proxy using S&P500 Semiconductors & Semiconductor Equipment industry when SOX EPS is not publicly available; "
+        "Nasdaq-100 using QQQ/Nasdaq Monthly Scorecard and mega-cap AI/technology earnings contribution; "
+        "Japan semiconductor proxy using Nikkei Semiconductor Stock Index constituents and company guidance revisions; "
+        "TOPIX EPS forecast as the Japan market-wide earnings environment. "
+        "Score each line from 1 to 5: 5 means EPS growth above 100 percent or a clear index-moving earnings leader; "
+        "4 means EPS growth 40-99 percent or strong upward revisions; 3 means 15-39 percent growth; "
+        "2 means 5-14 percent growth; 1 means low growth, downgrade, or unknown. "
+        "Required weekly fields: S&P500 EPS growth latest/previous, S&P500 estimated earnings latest/previous, "
+        "top positive sectors, top negative sectors, IT EPS growth, IT estimated earnings, Semi/SOX proxy EPS growth, "
+        "Nasdaq-100 EPS growth latest, Japan semiconductor proxy, TOPIX EPS forecast, top contributing companies, negative evidence, final score, action. "
+        "Numeric values must come from dated evidence such as FactSet Earnings Insight, Nasdaq Monthly Scorecard, Nikkei index materials, TOPIX EPS forecast sources, company releases, or index providers; "
+        "if no current numeric evidence exists, write 今週の数値更新なし."
+    )
+    if len(snippet) > snippet_limit:
+        snippet = snippet[: snippet_limit - 3].rstrip() + "..."
+    return [item_from_source(
+        source,
+        "Weekly index EPS revision scorecard framework",
+        week_end.isoformat(),
+        week_end.isoformat(),
+        snippet,
+        "structured_metrics",
+        "index_eps_scorecard_framework",
+        True,
+    )]
+
+
 def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date, text: str, snippet_limit: int) -> dict:
     snippet = text[:snippet_limit].strip() if text else status
     if len(snippet) > snippet_limit:
@@ -556,6 +616,10 @@ def fallback_item(source: dict, page_title: str, status: str, week_end: dt.date,
 def collect_source(source: dict, start: dt.date, end: dt.date, week_end: dt.date, limit: int, snippet_limit: int) -> list[dict]:
     if source.get("collector") == "spglobal_xlsx":
         return collect_spglobal_xlsx(source, week_end, snippet_limit)
+    if source.get("collector") == "index_eps_scorecard":
+        return collect_index_eps_scorecard(source, week_end, snippet_limit)
+    if source.get("collector") == "leveraged_etf_eps_proxy":
+        return collect_leveraged_etf_eps_proxy(source, week_end, snippet_limit)
     source_start = start
     if source.get("source_class") in {"earnings", "market_metrics", "market_expectation"}:
         lookback_days = int(source.get("lookback_days", 14))

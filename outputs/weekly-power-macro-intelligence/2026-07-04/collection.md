@@ -1,7 +1,7 @@
 # Weekly Power & Macro Intelligence Collection 2026-07-04
 
 - period: 2026-06-28 to 2026-07-04
-- items: 161
+- items: 170
 - note: 本文未取得またはmetadata_onlyの項目は一覧ページ上のメタデータだけを使用。
 
 ## L0_market_price
@@ -20,6 +20,34 @@
 - is_current_evidence: True
 - snippet: Jul 4, 2026 6 min read / The S&P 500 rose 9.3% ytd through July 2. Can it rise another 10.2% over the rest of this year to achieve our S&P 500 target of 8250? We still think so. Consider the following: / (1) FOMO vs FEMO. Is it time to underweight the S&P 500 Information Technology sector? It is if you believe the AI trade is a bubble about / Ed Yardeni / Public / God Bless America!
 
+### TECL SOXL TQQQ underlying index EPS proxy map
+- source: Leveraged ETF Underlying Index EPS Proxy Map
+- source_class: market_metrics
+- date: 2026-07-04
+- observed_date: 2026-07-04
+- url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: structured_metrics
+- evidence_level: leveraged_etf_eps_proxy_map
+- is_current_evidence: True
+- snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
+
+### Weekly index EPS revision scorecard framework
+- source: Index EPS Revision Scorecard Framework
+- source_class: market_metrics
+- date: 2026-07-04
+- observed_date: 2026-07-04
+- url: https://www.factset.com/earningsinsight
+- region: global
+- asset_linkage: equity, ai_capex, manufacturing
+- kafka_use:
+- body_status: structured_metrics
+- evidence_level: index_eps_scorecard_framework
+- is_current_evidence: True
+- snippet: Weekly index EPS revision scorecard framework. The weekly objective is not return ranking; it is to detect whether index EPS upward revision momentum is continuing. Track six lines in this fixed order: S&P500 overall EPS growth and estimated earnings; S&P500 IT EPS growth and estimated earnings; semiconductor/SOX proxy using S&P500 Semiconductors & Semiconductor Equipment industry when SOX EPS is not publicly available; Nasdaq-100 using QQQ/Nasdaq Monthly Scorecard and mega-cap AI/technology earnings contribution; Japan semiconductor proxy using Nikkei Semiconductor Stock Index constituents and company guidance revisions; TOPIX EPS forecast as the Japan market-wide earnings environment. Score each line from 1 to 5: 5 means EPS growth above 100 percent or a clear index-moving earnings leader; 4 means EPS growth 40-99 percent or strong upward revisions; 3 means 15-39 percent growth; 2 m...
+
 ### Warsh's Sintra Serenade To The Bond Vigilantes
 - source: Yardeni Research Morning Briefings
 - source_class: market_expectation
@@ -33,6 +61,20 @@
 - evidence_level: dated_listing
 - is_current_evidence: True
 - snippet: Jul 2, 2026 6 min read / The United States of America has thrived for 250 years. There have been setbacks along the way. But they were overcome. The Declaration of Independence on July 4, 1776 set the stage for Americans to prosper by declaring: "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty / Ed Yardeni / Paid / Warsh's Sintra Serenade To The Bond Vigilantes
+
+### Macroeconomics · 02 Jul 2026
+- source: Pictet Market Insights
+- source_class: market_expectation
+- date: 2026-07-02
+- observed_date: 2026-07-04
+- url: https://www.pictet.com/us/en/insights/markets
+- region: global
+- asset_linkage: equity, rates, fx, commodity
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Macroeconomics · 02 Jul 2026 / Barometer: Equity rally to roll on as stagflation risks recede
 
 ### By John Butters | July 2, 2026
 - source: FactSet S&P 500 Earnings Season Preview Q2 2026
@@ -131,6 +173,20 @@
 - evidence_level: dated_listing
 - is_current_evidence: True
 - snippet: Jun 29, 2026 4 min read paid / Fed Chair Kevin Warsh has often said that the members of the Federal Open Mouth Committee should talk publicly less often. He wants the Fed to follow the financial markets rather than the other way around. Yet, two weeks after his first press conference as Fed chair on Wednesday, June 17, he is scheduled to appear on a policy panel on Wednesday, July 1, at the annual ECB Forum on / Ed Yardeni / Elias Griepentrog / Paid / GLOBAL MARKET CALL: War & Peace
+
+### Macroeconomics · 29 Jun 2026
+- source: Pictet Market Insights
+- source_class: market_expectation
+- date: 2026-06-29
+- observed_date: 2026-07-04
+- url: https://www.pictet.com/us/en/insights/markets
+- region: global
+- asset_linkage: equity, rates, fx, commodity
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Macroeconomics · 29 Jun 2026 / Weekly house view | Happy 250th Anniversary
 
 ### US MARKET CALL: AI Fatigue Weighs On The 'Lag-7'
 - source: Yardeni Research Morning Briefings
@@ -398,6 +454,20 @@
 - is_current_evidence: True
 - snippet: Jun 22, 2026 4 min read paid / In the spectrum of bullish stock markets, there are two polar opposites. The first is driven by FOMO, the Fear of Missing Out, which inflates P/E multiples as investors chase hope and hype rather than fundamentals, creating the conditions for a bubble. The second is driven by FEMO, or Fabulous Earnings Momentum, which works the other way around: Corporate earnings grow faster than stock prices, compressing P/E multiples / Ed Yardeni / Elias Griepentrog / Public / Healthcare: Pockets Of Alpha
 
+### Macroeconomics · 22 Jun 2026
+- source: Pictet Market Insights
+- source_class: market_expectation
+- date: 2026-06-22
+- observed_date: 2026-07-04
+- url: https://www.pictet.com/us/en/insights/markets
+- region: global
+- asset_linkage: equity, rates, fx, commodity
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Macroeconomics · 22 Jun 2026 / Weekly house view | Regime change at the Fed
+
 ### US MARKET CALL: Is Irrational Exuberance Driving FEMO?
 - source: Yardeni Research QuickTakes Archive Page 2
 - source_class: market_metrics
@@ -635,6 +705,20 @@
 - evidence_level: dated_listing
 - is_current_evidence: True
 - snippet: Jun 16, 2026 4 min read / China has accomplished a great deal over the past few decades, transforming from a poor, insular, and rural economy to the world's second-largest economy. Its transformation has been hailed as an economic miracle. Yet this miracle hasn't been reflected in China's stock market. The China MSCI stock price index has been flatlining since the end of the Great Financial Crisis (GFC) in 2010. / Ed Yardeni / Elias Griepentrog / Public / GLOBAL MARKET CALL: Peace Dividend Should Revive 'Go Global'
+
+### Macroeconomics · 15 Jun 2026
+- source: Pictet Market Insights
+- source_class: market_expectation
+- date: 2026-06-15
+- observed_date: 2026-07-04
+- url: https://www.pictet.com/us/en/insights/markets
+- region: global
+- asset_linkage: equity, rates, fx, commodity
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Macroeconomics · 15 Jun 2026 / Weekly house view | A deal… to sign a deal
 
 ### Number of S&P 500 Earnings Calls Citing “Inflation” Increased for 3rd Straight Quarter
 - source: FactSet S&P 500 Earnings Season Update May 8 2026
@@ -1118,6 +1202,102 @@ Relief Rally Ends Correction Risk
 Ed Yardeni
 Elias Griepentrog
 Today's powerful relief rally in the stock market was fueled by news that President Donald Trump intends to declare victory in the war with Iran, according to an article in this morning's Wall Street Journal . Around noon, the market moved higher still on a report that the President of Iran said his country is ready to end the war if the US agrees to its 5-point peace plan. Then, after the market closed, around 6:30 pm EST, Trump told reporters that the US would be leaving the war zone in 2-3 weeks. His press secretary announced that the President will deliver a formal Address to the Nation Wednesday night at 9:00 pm. He certainly won't be a
+
+### Gold Research Report Library | Goldhub | World Gold Council
+- source: World Gold Council Goldhub Research Library
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-07-04
+- url: https://www.gold.org/goldhub/research/library
+- region: global
+- asset_linkage: commodity, rates, fx, equity
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Gold Research Report Library | Goldhub | World Gold Council Skip to main content
+Global
+Global 中国 日本
+Data Research Tools ESG Events Insights
+World Gold Council Gold Industry & Corporate Goldhub Professional Investors Invest.gold Individual Investors
+Gold Spot price
+-
+AWAITED
+Last Updated Show chart
+Gold spot price
+Price and Premium Data
+Research
+Looking for insight and analysis on gold? Our expert team produces market-leading research and macroeconomic commentary on gold.
+Featured articles
+Gold Mid-Year Outlook 2026: Point break
+Central Banks Survey 2026
+Gold Market Commentary
+Monthly ETF Commentary
+Gold Demand Trends: Q1 2026
+Gold Demand Trends: India Focus Q1 2026
+Gold the safe haven versus silver the wildcard
+Why gold in 2026? An anchor for Indian portfolios
+Why gold in 2026? A cross-asset perspective
+Gold as a strategic asset: 2026 edition
+Gold Outlook 2026
+The Portfolio Continuum: R
+
+### Goldhub | The Definitive Source for Gold Data and Insight
+- source: World Gold Council Goldhub Latest Research
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-07-04
+- url: https://www.gold.org/goldhub
+- region: global
+- asset_linkage: commodity, rates, fx, equity
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Goldhub | The Definitive Source for Gold Data and Insight Skip to main content
+Global
+Global 中国 日本
+Data Research Tools ESG Events Insights
+World Gold Council Gold Industry & Corporate Goldhub Professional Investors Invest.gold Individual Investors
+Gold Spot price
+-
+AWAITED
+Last Updated Show chart
+Gold spot price
+Price and Premium Data
+Latest research
+Looking for insight and analysis on gold?
+Our team of experts produce market-leading research and macroeconomic commentary on gold.
+Central Bank Gold Reserves Survey 2026
+16 June, 2026
+Gold ETF Flows: May 2026
+4 June, 2026
+Gold Mid-Year Outlook 2026: Point break
+1 July, 2026
+Gold Market Commentary: Hiking up a volcano
+4 June, 2026
+Research Topics
+Market Structure & Trends Investment Commentary Central Banks ESG
+Unearthed: Central Banks, Gold and the Road Ahead
+25 June, 2026
+Digital Gold
+The Case for a Shared Infrastructure
+Insights
+See more
+
+### Pictet Asset Management Investment Views
+- source: Pictet Asset Management Investment Views
+- source_class: market_expectation
+- date: not_detected
+- observed_date: 2026-07-04
+- url: https://am.pictet.com/us/en/investment-views
+- region: global
+- asset_linkage: equity, rates, fx, commodity
+- kafka_use:
+- body_status: metadata_only
+- evidence_level: fetch_error
+- is_current_evidence: False
+- snippet: HTTP_403
 
 ### FactSet Insight - Commentary and research from our desk to yours | Earnings (3)
 - source: FactSet Insight Earnings Archive Page 3

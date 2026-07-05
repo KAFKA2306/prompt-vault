@@ -1,10 +1,24 @@
 # Weekly Power & Macro Intelligence Collection 2026-05-02
 
 - period: 2026-04-26 to 2026-05-02
-- items: 83
+- items: 98
 - note: 本文未取得またはmetadata_onlyの項目は一覧ページ上のメタデータだけを使用。
 
 ## L0_market_price
+
+### TECL SOXL TQQQ underlying index EPS proxy map
+- source: Leveraged ETF Underlying Index EPS Proxy Map
+- source_class: market_metrics
+- date: 2026-05-02
+- observed_date: 2026-05-02
+- url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: structured_metrics
+- evidence_level: leveraged_etf_eps_proxy_map
+- is_current_evidence: True
+- snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
 
 ### S&P 500 Earnings Season Update: May 1, 2026
 - source: FactSet S&P 500 Earnings Season Update May 1 2026
@@ -34,6 +48,104 @@
 - is_current_evidence: True
 - snippet: By John Butters | May 1, 2026 / Nearly two-thirds of the way through the earnings season, the S&P 500 is reporting impressive results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting its highest earnings growth rate since Q4 2021. / Overall, 63% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. If 84% is the actual number for the quarter, it will mark the highest percentage of S&P 500 companies reporting a positive EPS surprise s...
 
+### No More Mr. Nice Guy
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-30
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 30, 2026 5 min read / Why is the stock market continuing to make new highs? It's doing so because corporate earnings are doing the same, as the economy continues to speed along without stopping for a recession. The latest batch of data certainly drove the stock market higher today, confirming that we are still riding the rails on the Roaring 2020s Express. Nothing seems to stop or derail this train. / (1) GDP. The / Ed Yardeni / Elias Griepentrog / Paid / No More Mr. Nice Guy
+
+### Powell's Swan Song
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-29
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 29, 2026 1 min read paid / Why hasn’t the price of Brent crude oil gone through the roof despite the closure of the Strait of Hormuz since February 28? Ed and Elias explain the anomalous price action. … Also: Why US oil producers aren’t pumped enough by higher energy prices to save the day. … And: How the energy supply crisis is likely to feed into inflation, not just via higher gasoline and fuel prices but / Ed Yardeni / Paid / Powell's Swan Song
+
+### No More Mr. Nice Guy
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-29
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 29, 2026 4 min read paid
+
+### GLOBAL CALL: Why Are Stock Prices Rising Around The World?
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-28
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 28, 2026 4 min read paid / Tomorrow at 2:30 p.m., Jerome Powell will sing his swan song. That will be his last press conference after the latest FOMC meeting. The Senate Banking Committee is scheduled to confirm the nomination of Kevin Warsh to replace Powell tomorrow. The Senate could move to a final vote shortly thereafter. / Powell will likely explain why the FOMC is unlikely to lower the federal funds rate any time soon. / Ed Yardeni / Elias Griepentrog / Paid / GLOBAL CALL: Why Are Stock Prices Rising Around The World?
+
+### MARKET CALL: Devil-May-Care
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-27
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 27, 2026 3 min read paid / Stock markets around the world sold off sharply after the US and Israel attacked Iran on February 28. Despite the blockade of the Strait of Hormuz since the war began, global stock prices have rebounded since the end of March. That is surprising, given that many countries' economies are vulnerable to stagflation and even recessions if oil prices remain elevated and oil shortages occur. Even more surprising is that / Ed Yardeni / Paid / MARKET CALL: Devil-May-Care
+
+### ECONOMIC WEEK AHEAD: April 27-May 1
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-26
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 26, 2026 4 min read paid / In the autumn of 1956, Egypt's Gamal Abdel Nasser nationalized the Suez Canal. Britain, France, and Israel invaded. The canal closed for five months. Two-thirds of Western Europe's oil moved through it, and the price of crude doubled in dollar terms before the year was out. The Dow Jones Industrial Average fell about 10% from its July high to its October low. Tankers were forced / Ed Yardeni / Toby Hearst / Public / ECONOMIC WEEK AHEAD: April 27-May 1
+
+### INFORMATION TECHNOLOGY: Creative Destruction On Speed
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-25
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 25, 2026 4 min read / This is one of the busiest weeks of the year on the economic calendar. Five major central banks meet: the Fed, the Bank of Japan, the Bank of Canada, the European Central Bank, and the Bank of England. Five mega-cap tech names report earnings: Alphabet, Amazon, Meta, Microsoft, and Apple. Wednesday brings the advance Q1-2025 GDP report, and Thursday the March PCED, which will show how much of / Ed Yardeni / Toby Hearst / Public / INFORMATION TECHNOLOGY: Creative Destruction On Speed
+
 ### S&P 500 Earnings Season Update: April 24, 2026
 - source: FactSet S&P 500 Earnings Season Update April 24 2026
 - source_class: earnings
@@ -61,6 +173,20 @@
 - evidence_level: dated_listing
 - is_current_evidence: True
 - snippet: By John Butters | April 24, 2026 / Over one-quarter of the way through the earnings season, the S&P 500 is reporting strong results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting double-digit (year-over-year) earnings growth for the 6 th straight quarter. / Overall, 28% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. In aggregate, companies are reporting earnings that are 12.3% above estimates, which is above the 5-year avera...
+
+### Warsh, Rinse, Repeat
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-23
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: Apr 23, 2026 4 min read paid / President Donald Trump may have to write a sequel to his 1987 book, "Trump: The Art of the Deal." It's hard to make a deal if you kill your opponent. He said that about Iran today again: "They’re all messed up. They have no idea who their leader is... We took out, really, three levels of leaders... So they have a hard time figuring / Ed Yardeni / Elias Griepentrog / Paid / Warsh, Rinse, Repeat
 
 ### S&P 500 Earnings Season Update: April 17, 2026
 - source: FactSet S&P 500 Earnings Season Update April 17 2026
@@ -145,6 +271,202 @@
 - evidence_level: fetch_error
 - is_current_evidence: False
 - snippet: HTTP_308
+
+### Yardeni QuickTakes (Page 6)
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 6) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 6 of 150
+Paid
+Another Day, Another Step Closer to a Tightening Bias
+May 15, 2026 4 min read paid
+Two important psychological levels are being tested in the US Treasury market right now. The 2-year yield is trading just above 4.00% this evening, May 14 (chart). That's 25bps above the current federal funds rate (FFR) range of 3.50%-3.75%. That implies investors believe the Fed may need to raise the FFR by at least 25 bps in the foreseeable future.
+The 30-year
+Ed Yardeni
+Elias Griepentrog
+Paid
+From Cuts to Hikes: The Fed's Shifting Calculus
+May 13, 2026 5 min read paid
+The April FOMC statement contained an easing bias, signaling that the Fed remained likely to cut the federal funds rate (FFR) over the rest of the year. That bias is beco
+
+### Yardeni QuickTakes (Page 5)
+- source: Yardeni Research QuickTakes Archive Page 5
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/5/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 5) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 5 of 150
+Paid
+GLOBAL MARKET CALL: US-Iran Deal Would Boost Go Global Investment Strategy
+May 25, 2026 5 min read paid
+On Sunday night, Reuters reported that oil prices slipped to a two-week low as US-Iran talks seemed to be moving closer to a peace deal. Then again, the news service also reported that President Donald Trump is in no rush to make a deal and that the US will continue to blockade Iran. If so, then Iran will continue to blockade the Strait of Hormuz. Nevertheless, Japan'
+Ed Yardeni
+Toby Hearst
+Paid
+CONSUMER DISCRETIONARY: Another Concentrated Sector
+May 24, 2026 3 min read paid
+We recommend a market-weight position in the S&P 500 Consumer Discretionary sector. At first glance, the sector looks strong. Its stock price ind
+
+### Yardeni QuickTakes (Page 4)
+- source: Yardeni Research QuickTakes Archive Page 4
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/4/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 4) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 4 of 150
+Paid
+WEEKLY WEBCAST: Fed Turning Hawkish
+Jun 3, 2026 1 min read paid
+Today, Dr Ed and Elias set out the case for the Fed to tighten sooner rather than later. Unlike the consensus, which doesn’t expect a rate hike until late this year at the earliest, we see the FOMC raising the federal funds rate in July, after pivoting to a tightening bias at its meeting this month. That would be appropriate given the resilient economy, stable labor market, and rising
+Ed Yardeni
+Paid
+Is Wall Street's AI Boom Spreading To Main Street? Nothing To Fear But FOMO?
+Jun 2, 2026 4 min read paid
+The S&P 500 rose to yet another record high today, rising above 7600 for the first time. On May 11, we raised our year-end S&P 500 target from 7700 to 8250,
+
+### Yardeni QuickTakes (Page 3)
+- source: Yardeni Research QuickTakes Archive Page 3
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/3/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 3) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 3 of 150
+Public
+ECONOMIC WEEK AHEAD: June 15-19
+Jun 13, 2026 3 min read
+The week ahead is dominated by the Fed. Kevin Warsh delivers his first press conference as Fed chair on Wednesday, right after the FOMC releases its policy statement and its Summary of Economic Projections (SEP), which includes the Dot Plot showing meeting participants’ forecasts for the federal funds rate. We expect the Fed to abandon its easing bias and pivot toward a tightening bias.
+The ECB raised its official rate
+Ed Yardeni
+Toby Hearst
+Public
+US MARKET CALL: Roaring 2020s Rockets To Mars & Beyond
+Jun 13, 2026 4 min read
+"Space: the final frontier. These are the voyages of the starship Enterprise. Its five-year mission: to explore strange new worlds, to seek
+
+### Yardeni QuickTakes (Page 2)
+- source: Yardeni Research QuickTakes Archive Page 2
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/2/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 2) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 2 of 150
+Paid
+June's Swoons
+Jun 23, 2026 4 min read paid
+The stock market was hit by another June swoon today. Investors were unnerved by the outcome of last Wednesday's FOMC meeting. The committee participants were more hawkish than expected, according to their Dot Plot. Fed Chair Kevin Warsh abstained from providing his dot, but he came across as very hawkish during his presser, repeatedly stressing the importance of the Fed achieving price stability. Also weighing on AI-related
+Ed Yardeni
+Elias Griepentrog
+Paid
+FEMO Lifting Economic Growth & Foreigners Lifting US Stocks
+Jun 22, 2026 4 min read paid
+In the spectrum of bullish stock markets, there are two polar opposites. The first is driven by FOMO, the Fear of Missing Out, which i
 
 ### Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team
 - source: Yardeni Research Morning Briefings
@@ -735,6 +1057,20 @@ This blog post is for informational purposes only. The information contained in 
 - evidence_level: fetch_error
 - is_current_evidence: False
 - snippet: FETCH_ERROR_TimeoutError
+
+### Ed Yardeni
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: 2026-04-22
+- observed_date: 2026-05-02
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: weak_title
+- evidence_level: weak_title
+- is_current_evidence: False
+- snippet: Apr 22, 2026 5 min read paid / We are Fed Watchers. In his Senate Banking Committee hearing yesterday, Kevin Warsh suggested that under his leadership, we might have less to watch. He advocated ending current "forward guidance" practices, which means no more quarterly Summary of Economic Projections, including the Dot Plot (chart). He suggested that a press conference after FOMC meetings should only be held when there is "important news" to deliver, rather / Ed Yardeni / Elias Griepentrog / Prev Page 7 of 150 Next / Daily insights, focused news, clear charts, weekly video webcasts, and much more. Posted by Dr Ed Yardeni and his research team. / Join 24,000+ Subscribers / No ads. No fluff. Ever. / Facebook Twitter Bluesky Discord Github Instagram Linkedin Mastodon Pinterest Reddit Telegram Threads Tiktok Whatsapp Youtube RSS / ©2026 Yardeni QuickTakes / Published with Ghost & Brief & PUSH
 
 ## L1_central_bank
 

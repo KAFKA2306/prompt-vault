@@ -1,10 +1,24 @@
 # Weekly Power & Macro Intelligence Collection 2026-04-04
 
 - period: 2026-04-03 to 2026-04-04
-- items: 70
+- items: 84
 - note: 本文未取得またはmetadata_onlyの項目は一覧ページ上のメタデータだけを使用。
 
 ## L0_market_price
+
+### TECL SOXL TQQQ underlying index EPS proxy map
+- source: Leveraged ETF Underlying Index EPS Proxy Map
+- source_class: market_metrics
+- date: 2026-04-04
+- observed_date: 2026-04-04
+- url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: structured_metrics
+- evidence_level: leveraged_etf_eps_proxy_map
+- is_current_evidence: True
+- snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
 
 ### By John Butters | April 2, 2026
 - source: FactSet S&P 500 Earnings Season Preview Q1 2026
@@ -103,6 +117,20 @@
 - evidence_level: dated_listing
 - is_current_evidence: True
 - snippet: April 1, 2026 / 24/5 Trading: What It Is, Why It’s Coming, and What It Means for Your Data Stack / U.S. equity markets are moving toward near-continuous trading. If you work with real-time market data, this FactSet overview of... / By Matthew Timberlake | Data Science and AI / Read more
+
+### MARKET CALL: Time for A Break Or a Brake?
+- source: Yardeni Research QuickTakes Archive Page 5
+- source_class: market_metrics
+- date: 2026-03-31
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/5/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: list_metadata
+- evidence_level: dated_listing
+- is_current_evidence: True
+- snippet: The current bull market didn't start on March 31, 2026. Yet many commentators have noted that the bull market is at risk because it has been so narrow since then. The bull market actually started on October 12, 2022. Since then, most market segments have delivered solid double-digit gains. The problem is that several large-cap technology companies have delivered triple-digit gains, thereby making the double- / Ed Yardeni / Paid / MARKET CALL: Time for A Break Or a Brake?
 
 ### Mar 31, 2026 3 min read JOLTS
 - source: Yardeni QuickTakes Relief Rally Ends Correction Risk
@@ -286,6 +314,202 @@
 - is_current_evidence: False
 - snippet: HTTP_308
 
+### Yardeni QuickTakes (Page 7)
+- source: Yardeni Research QuickTakes Archive Page 7
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/7/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 7) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 7 of 150
+Public
+MARKET CALL: Up, Up & Away
+May 3, 2026 5 min read
+The stock market balloon is climbing higher, and the burners are firing. It isn't all hot air that is lifting stock prices. It's also earnings revisions, which are increasing for 2026 and 2027. Growth stocks and the Magnificent-7 have reasserted leadership over the past month. Small caps and the Russell 2000 are at fresh record highs too. Investor sentiment remains surprisingly lackluster, leaving plenty of
+Ed Yardeni
+Toby Hearst
+Public
+ECONOMIC WEEK AHEAD: May 4-8
+May 3, 2026 4 min read
+The week ahead is chock-full of labor market indicators. In addition, nine Talking Fed Heads on the Federal Open Mouth Committee are on the speaking circuit, with Williams, Bowman, and
+
+### Yardeni QuickTakes (Page 6)
+- source: Yardeni Research QuickTakes Archive Page 6
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/6/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 6) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 6 of 150
+Paid
+Another Day, Another Step Closer to a Tightening Bias
+May 15, 2026 4 min read paid
+Two important psychological levels are being tested in the US Treasury market right now. The 2-year yield is trading just above 4.00% this evening, May 14 (chart). That's 25bps above the current federal funds rate (FFR) range of 3.50%-3.75%. That implies investors believe the Fed may need to raise the FFR by at least 25 bps in the foreseeable future.
+The 30-year
+Ed Yardeni
+Elias Griepentrog
+Paid
+From Cuts to Hikes: The Fed's Shifting Calculus
+May 13, 2026 5 min read paid
+The April FOMC statement contained an easing bias, signaling that the Fed remained likely to cut the federal funds rate (FFR) over the rest of the year. That bias is beco
+
+### Yardeni QuickTakes (Page 4)
+- source: Yardeni Research QuickTakes Archive Page 4
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/4/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 4) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 4 of 150
+Paid
+WEEKLY WEBCAST: Fed Turning Hawkish
+Jun 3, 2026 1 min read paid
+Today, Dr Ed and Elias set out the case for the Fed to tighten sooner rather than later. Unlike the consensus, which doesn’t expect a rate hike until late this year at the earliest, we see the FOMC raising the federal funds rate in July, after pivoting to a tightening bias at its meeting this month. That would be appropriate given the resilient economy, stable labor market, and rising
+Ed Yardeni
+Paid
+Is Wall Street's AI Boom Spreading To Main Street? Nothing To Fear But FOMO?
+Jun 2, 2026 4 min read paid
+The S&P 500 rose to yet another record high today, rising above 7600 for the first time. On May 11, we raised our year-end S&P 500 target from 7700 to 8250,
+
+### Yardeni QuickTakes (Page 3)
+- source: Yardeni Research QuickTakes Archive Page 3
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/3/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 3) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 3 of 150
+Public
+ECONOMIC WEEK AHEAD: June 15-19
+Jun 13, 2026 3 min read
+The week ahead is dominated by the Fed. Kevin Warsh delivers his first press conference as Fed chair on Wednesday, right after the FOMC releases its policy statement and its Summary of Economic Projections (SEP), which includes the Dot Plot showing meeting participants’ forecasts for the federal funds rate. We expect the Fed to abandon its easing bias and pivot toward a tightening bias.
+The ECB raised its official rate
+Ed Yardeni
+Toby Hearst
+Public
+US MARKET CALL: Roaring 2020s Rockets To Mars & Beyond
+Jun 13, 2026 4 min read
+"Space: the final frontier. These are the voyages of the starship Enterprise. Its five-year mission: to explore strange new worlds, to seek
+
+### Yardeni QuickTakes (Page 2)
+- source: Yardeni Research QuickTakes Archive Page 2
+- source_class: market_metrics
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://www.yardeniquicktakes.com/page/2/
+- region: us
+- asset_linkage: equity, rates
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Yardeni QuickTakes (Page 2) Skip to content
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Home
+Posts
+About
+Our Charts
+Support
+Sign In
+Subscribe
+Page 2 of 150
+Paid
+June's Swoons
+Jun 23, 2026 4 min read paid
+The stock market was hit by another June swoon today. Investors were unnerved by the outcome of last Wednesday's FOMC meeting. The committee participants were more hawkish than expected, according to their Dot Plot. Fed Chair Kevin Warsh abstained from providing his dot, but he came across as very hawkish during his presser, repeatedly stressing the importance of the Fed achieving price stability. Also weighing on AI-related
+Ed Yardeni
+Elias Griepentrog
+Paid
+FEMO Lifting Economic Growth & Foreigners Lifting US Stocks
+Jun 22, 2026 4 min read paid
+In the spectrum of bullish stock markets, there are two polar opposites. The first is driven by FOMO, the Fear of Missing Out, which i
+
 ### Yardeni QuickTakes - Economic insight from Dr Ed Yardeni and his team
 - source: Yardeni Research Morning Briefings
 - source_class: market_expectation
@@ -326,6 +550,222 @@ Daniel Z.
 QuickTakes is my go-to for level-headed, fact-based market analysis. Ed cuts through the noise, presenting timely updates with charts that make complex information simple and actionable.
 Robert K.
 I've been following Dr. Ed my whole career from way back in the Prudential Bache days. QuickTakes is the most practical thing he's ever create
+
+### S&P 500 Earnings Season Update: May 8, 2026
+- source: FactSet S&P 500 Earnings Season Update May 8 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-8-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Update: May 8, 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Update: May 8, 2026
+Earnings
+By John Butters | May 8, 2026
+At this late stage of the earnings season, the S&P 500 continues to report impressive results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result,
+
+### S&P 500 Earnings Season Update: May 1, 2026
+- source: FactSet S&P 500 Earnings Season Update May 1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/sp-500-earnings-season-update-may-1-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Update: May 1, 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Update: May 1, 2026
+Earnings
+By John Butters | May 1, 2026
+Nearly two-thirds of the way through the earnings season, the S&P 500 is reporting impressive results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a
+
+### S&P 500 Earnings Season Update: April 24, 2026
+- source: FactSet S&P 500 Earnings Season Update April 24 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Update: April 24, 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Update: April 24, 2026
+Earnings
+By John Butters | April 24, 2026
+Over one-quarter of the way through the earnings season, the S&P 500 is reporting strong results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages.
+
+### S&P 500 Earnings Season Update: April 17, 2026
+- source: FactSet S&P 500 Earnings Season Update April 17 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: S&P 500 Earnings Season Update: April 17, 2026
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+S&P 500 Earnings Season Update: April 17, 2026
+Earnings
+By John Butters | April 17, 2026
+At this early stage, the first quarter earnings season for the S&P 500 is off to a strong start relative to expectations. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are
 
 ### S&P 500 Earnings Season Preview: Q2 2026
 - source: FactSet S&P 500 Earnings Season Preview Q2 2026
@@ -381,6 +821,114 @@ Earnings
 By John Butters | July 2, 2026
 Heading into the start of the earnings season, analysts and companies have been more optimistic than normal in their earnings outlooks for the second quarter. As a result, estimated earnings for the S&P 500 for the second quarter are higher today compared to
 
+### Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+- source: FactSet Quarterly EPS Estimates May 29 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/analysts-making-largest-increases-in-quarterly-eps-estimates-for-sp-500-companies-since-2021
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Analysts Making Largest Increases in Quarterly EPS Estimates for S&P 500 Companies Since 2021
+Earnings
+By John Butters | May 29, 2026
+Given concerns in the market about higher oil and gas prices, have analysts lowered EPS estimates more than normal for S&P 500 companies for the second
+
+### Market Is Punishing Negative EPS Surprises More Than Average for Q1
+- source: FactSet Negative EPS Surprises Q1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/market-is-punishing-negative-eps-surprises-more-than-average-for-q1
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Market Is Punishing Negative EPS Surprises More Than Average for Q1
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Market Is Punishing Negative EPS Surprises More Than Average for Q1
+Earnings
+By John Butters | May 11, 2026
+To date, 89% of the companies in the S&P 500 have reported earnings for the first quarter. Of these companies, 84% have reported actual EPS above the mean EPS estimate, which is above the 5-year average o
+
 ### FactSet Insight - Commentary and research from our desk to yours | Earnings
 - source: FactSet Insight Earnings
 - source_class: earnings
@@ -433,6 +981,61 @@ Economics
 Energy
 Sustainable Investment
 Risk, Performance, and Reporti
+
+### Earnings Insight Infographic: Q1 2026 By the Numbers
+- source: FactSet Earnings Insight Infographic Q1 2026
+- source_class: earnings
+- date: not_detected
+- observed_date: 2026-04-04
+- url: https://insight.factset.com/earnings-insight-infographic-q1-2026-by-the-numbers
+- region: us
+- asset_linkage: equity, ai_capex
+- kafka_use:
+- body_status: no_in_range_date_found
+- evidence_level: source_landing
+- is_current_evidence: False
+- snippet: Earnings Insight Infographic: Q1 2026 By the Numbers
+FactSet.com
+Support
+Developer Portal
+Login
+Back
+Companies & Markets
+Data Science & AI
+Earnings
+Economics
+More Topics
+Risk, Performance & Reporting
+Energy
+Wealth Management
+FactSet Insight Podcast
+Technology
+FactSet.com
+Subscribe
+Quick Links
+CRM Solutions
+Advisor Dashboard
+Support Downloads
+Sustainability
+FactSet Workstation
+Companies and Markets
+Coronavirus
+Data Science and AI
+Earnings
+Economics
+Energy
+Sustainable Investment
+Risk, Performance, and Reporting
+Regulations
+Technology
+Wealth Management
+All Categories
+0
+Earnings Insight Infographic: Q1 2026 By the Numbers
+Earnings
+By John Butters | June 2, 2026
+Each week, Earnings Insight offers analysis of critical trends in the S&P 500. Here are key highlights of the first quarter 2026 earnings season.
+This blog post is for informational purposes only. The information contained in this blo
 
 ### FactSet Earnings Insight
 - source: FactSet Earnings Insight

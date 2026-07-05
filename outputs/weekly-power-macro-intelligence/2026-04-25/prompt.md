@@ -7,6 +7,8 @@
 
 # Non-Negotiable Rules
 - URLの無い事実主張は禁止。根拠URLが無い内容は書かない。
+- 根拠リンクは Current Evidence Items の url に存在する http:// または https:// のURLだけを使う。file://、ローカルパス、Antigravity transcript、内部ログへのリンクは禁止。
+- HTMLタグや壊れたタグ断片（例: <br>, </br>, <...>）を出力してはいけない。
 - 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Current Evidence Items の title または snippet に文字列として存在するものだけ使う。
 - Current Evidence Items に存在しない具体名を補完・推測・創作してはいけない。
 - Source Coverage / Fetch Failures は監視状況の記録であり、事実主張、レジーム判定、投資仮説、行動リストの根拠に使ってはいけない。
@@ -25,6 +27,14 @@
 - 十分な根拠がない節は「今週の適格根拠なし」とだけ書き、空想で埋めない。
 - FactSet / S&P Global / Yardeni Research の company_earnings, index_earnings, revenue, index_level は米株スイングと重要ソースに必ず反映する。
 - S&P Global XLSが古い場合は、data_as_ofを明示し、現在値ではなく公式基準値として扱う。
+- 毎週のMarket Metricsの目的は値上がりランキングではなく、指数EPSの上方修正が継続しているかを判定すること。
+- 指数EPSスコアは S&P500全体、S&P500 IT、半導体/SOX proxy、Nasdaq-100、日本半導体、TOPIX の6本を固定順で見る。
+- TECL / SOXL / TQQQ そのもののEPSを見てはいけない。必ず非レバ裏側指数・proxy ETF・セクター/業界EPSの変化として扱う。
+- TECLはTechnology Select Sector Index / XLK proxy、SOXLはNYSE Semiconductor Index / SOXX proxy、TQQQはNasdaq-100 / QQQ proxyとして整理する。
+- レバETF EPS proxy欄では、数値更新がない場合でも TECL / XLK、SOXL / SOXX、TQQQ / QQQ の対応関係を文字列として必ず書く。
+- proxy EPSの数値を書く場合は price ÷ P/E などの計算式、データ日付、根拠URLを必ず書く。根拠がない場合は「今週の数値更新なし」と書く。
+- World Gold Councilは金・実質金利・中央銀行金需要・金ETFフローの公式/準公式コモディティ入力として扱う。
+- Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
 - Week End より後の日付、イベント、予定、数値を本文に書いてはいけない。Current Evidence Items 内の [future date redacted] は無視する。
 
 # Source Hierarchy
@@ -33,7 +43,7 @@
 - L2: 国家政策、日本政府、米国政権、USTR、Commerce、Treasury、METI、MOF
 - L3: AI基幹企業、OpenAI、Anthropic、NVIDIA、Microsoft、Amazon、Google
 - L4: AI権力者の思想・政策文書、Sam Altman、Dario Amodei
-- L5: アナリスト解釈、Yardeni Research、FactSet、第一ライフ研、日本総研、NRI、みずほ、大和総研
+- L5: アナリスト解釈、Yardeni Research、FactSet、Pictet、第一ライフ研、日本総研、NRI、みずほ、大和総研
 - L6: 個人マクロ・ナラティブ、Shenmacro、人文科学アカデミー
 
 # KAFKA Themes
@@ -43,6 +53,7 @@
 - AI・半導体・電力・データセンター
 - 製造業・素材・設備投資
 - 金利、為替、流動性
+- 金、コモディティ、実質金利
 - ブログ、note、YouTube、Scrapboxへの発信材料
 
 # Required Output
@@ -63,6 +74,20 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
 - 収益:
 - 指数水準:
 - バリュエーション/市場水準:
+- 指数EPSスコア:
+  - S&P500:
+  - S&P500 IT:
+  - SOX proxy:
+  - Nasdaq-100:
+  - 日経半導体:
+  - TOPIX:
+  - 判定: 買い増し寄り / 様子見 / 減らす
+- レバETF EPS proxy:
+  - TECL: Technology Select Sector Index / XLK proxy。S&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る。
+  - SOXL: NYSE Semiconductor Index / SOXX proxy。半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る。
+  - TQQQ: Nasdaq-100 / QQQ proxy。Nasdaq-100全体EPSと、IT・半導体・通信・一般消費財寄与を見る。
+  - 今週のproxy EPS変化:
+- 金・コモディティ:
 - 米株スイングへの一次示唆:
 
 ## 2. 日銀/Fed: 割引率と為替
@@ -117,6 +142,38 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
 ブログ、note、YouTube、Scrapboxに使える論点を、タイトル案 / 根拠URL / 切り口 / 想定読者 / 1段落要旨で出す。
 
 # Current Evidence Items
+- title: INFORMATION TECHNOLOGY: Creative Destruction On Speed
+  source: Yardeni Research QuickTakes Archive Page 7
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-04-25
+  author:
+  url: https://www.yardeniquicktakes.com/page/7/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Apr 25, 2026 4 min read / This is one of the busiest weeks of the year on the economic calendar. Five major central banks meet: the Fed, the Bank of Japan, the Bank of Canada, the European Central Bank, and the Bank of England. Five mega-cap tech names report earnings: Alphabet, Amazon, Meta, Microsoft, and Apple. Wednesday brings the advance Q1-2025 GDP report, and Thursday the March PCED, which will show how much of / Ed Yardeni / Toby Hearst / Public / INFORMATION TECHNOLOGY: Creative Destruction On Speed
+- title: TECL SOXL TQQQ underlying index EPS proxy map
+  source: Leveraged ETF Underlying Index EPS Proxy Map
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: leveraged_etf_proxy, index_eps_proxy, sector_earnings, company_earnings, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-04-25
+  author:
+  url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
+  body_status: structured_metrics
+  evidence_level: leveraged_etf_eps_proxy_map
+  is_current_evidence: True
+  snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
 - title: 翁百合／翁百合の主張 2026年04月24日 中国経済展望2026年５月号：景気は足元上振れ、先行きは緩やかに減速（PDF：885KB）
   source: 日本総研 経済・政策レポート
   layer: L5_analyst_interpretation
@@ -149,6 +206,38 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   evidence_level: dated_listing
   is_current_evidence: True
   snippet: 調査部 マクロ経済研究センター 2026年04月24日 中国経済展望2026年５月号：景気は足元上振れ、先行きは緩やかに減速（PDF：885KB）
+- title: S&P 500 Earnings Season Update: April 24, 2026
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-04-24
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: S&P 500 Earnings Season Update: April 24, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+- title: By John Butters | April 24, 2026
+  source: FactSet S&P 500 Earnings Season Update April 24 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-04-24
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-24-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: By John Butters | April 24, 2026 / Over one-quarter of the way through the earnings season, the S&P 500 is reporting strong results. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week and relative to the end of the quarter. In addition, the index is reporting double-digit (year-over-year) earnings growth for the 6 th straight quarter. / Overall, 28% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 84% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. In aggregate, companies are reporting earnings that are 12.3% above estimates, which is above the 5-year avera...
 - title: 調査部 マクロ経済研究センター／中国経済展望 2026年04月23日 アクティビストの動向と本邦上場企業に求められる対応
   source: 日本総研 経済・政策レポート
   layer: L5_analyst_interpretation
@@ -197,6 +286,22 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   evidence_level: dated_listing
   is_current_evidence: True
   snippet: 吉田剛士／リサーチ・フォーカス No.2026-007 2026年04月23日 財政規律の向上には多年度予算編成と独立財政機関が必要
+- title: Warsh, Rinse, Repeat
+  source: Yardeni Research QuickTakes Archive Page 7
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: medium
+  region: us
+  asset_linkage: equity, rates
+  metric_tags: index_level, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-04-23
+  author:
+  url: https://www.yardeniquicktakes.com/page/7/
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: Apr 23, 2026 4 min read paid / President Donald Trump may have to write a sequel to his 1987 book, "Trump: The Art of the Deal." It's hard to make a deal if you kill your opponent. He said that about Iran today again: "They’re all messed up. They have no idea who their leader is... We took out, really, three levels of leaders... So they have a hard time figuring / Ed Yardeni / Elias Griepentrog / Paid / Warsh, Rinse, Repeat
 - title: Release Apr 23, 2026 12 min read
   source: OpenAI Research
   layer: L3_frontier_ai_lab
@@ -341,6 +446,38 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   evidence_level: dated_listing
   is_current_evidence: True
   snippet: 大嶋秀雄／Economist Column No.2026-010 2026年04月20日 インドの中国との経済関係改善に向けた動きをどう見るか
+- title: S&P 500 Earnings Season Update: April 17, 2026
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-04-17
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: S&P 500 Earnings Season Update: April 17, 2026 / FactSet.com / Support / Developer Portal / Login / Back / Companies & Markets / Data Science & AI / Earnings / Economics / More Topics / Risk, Performance & Reporting
+- title: By John Butters | April 17, 2026
+  source: FactSet S&P 500 Earnings Season Update April 17 2026
+  layer: L0_market_price
+  source_class: earnings
+  importance: high
+  region: us
+  asset_linkage: equity, ai_capex
+  metric_tags: company_earnings, index_earnings, revenue, profit_margin, valuation
+  kafka_use:
+  published_date: 2026-04-17
+  author:
+  url: https://insight.factset.com/sp-500-earnings-season-update-april-17-2026
+  body_status: list_metadata
+  evidence_level: dated_listing
+  is_current_evidence: True
+  snippet: By John Butters | April 17, 2026 / At this early stage, the first quarter earnings season for the S&P 500 is off to a strong start relative to expectations. Both the percentage of S&P 500 companies reporting positive earnings surprises and the magnitude of earnings surprises are above recent averages. As a result, the index is reporting higher earnings for the first quarter today relative to the end of last week but still reporting flat earnings relative to the end of the quarter. However, the index is also reporting double-digit (year-over-year) earnings growth for the 6 th straight quarter. / Overall, 10% of the companies in the S&P 500 have reported actual results for Q1 2026 to date. Of these companies, 88% have reported actual EPS above estimates, which is above the 5-year average of 78% and above the 10-year average of 76%. In aggregate, companies are reporting earnings that are...
 - title: MARKET CALL: The Tug Of War Between P/E And E
   source: Yardeni QuickTakes Stock Market Archive
   layer: L0_market_price
@@ -437,3 +574,19 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   evidence_level: spglobal_xlsx
   is_current_evidence: True
   snippet: S&P Global S&P 500 EPS estimate workbook. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; official workbook states public files were discontinued after January 2026.
+- title: Weekly index EPS revision scorecard framework
+  source: Index EPS Revision Scorecard Framework
+  layer: L0_market_price
+  source_class: market_metrics
+  importance: high
+  region: global
+  asset_linkage: equity, ai_capex, manufacturing
+  metric_tags: index_eps_score, index_eps_proxy, sector_earnings, company_earnings, index_earnings, revenue, valuation
+  kafka_use:
+  published_date: 2026-04-25
+  author:
+  url: https://www.factset.com/earningsinsight
+  body_status: structured_metrics
+  evidence_level: index_eps_scorecard_framework
+  is_current_evidence: True
+  snippet: Weekly index EPS revision scorecard framework. The weekly objective is not return ranking; it is to detect whether index EPS upward revision momentum is continuing. Track six lines in this fixed order: S&P500 overall EPS growth and estimated earnings; S&P500 IT EPS growth and estimated earnings; semiconductor/SOX proxy using S&P500 Semiconductors & Semiconductor Equipment industry when SOX EPS is not publicly available; Nasdaq-100 using QQQ/Nasdaq Monthly Scorecard and mega-cap AI/technology earnings contribution; Japan semiconductor proxy using Nikkei Semiconductor Stock Index constituents and company guidance revisions; TOPIX EPS forecast as the Japan market-wide earnings environment. Score each line from 1 to 5: 5 means EPS growth above 100 percent or a clear index-moving earnings leader; 4 means EPS growth 40-99 percent or strong upward revisions; 3 means 15-39 percent growth; 2 m...

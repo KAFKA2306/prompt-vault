@@ -685,6 +685,58 @@
       "expected_cadence": "discontinued_static"
     },
     {
+      "id": "index-eps-scorecard-framework",
+      "name": "Index EPS Revision Scorecard Framework",
+      "url": "https://www.factset.com/earningsinsight",
+      "collector": "index_eps_scorecard",
+      "source_class": "market_metrics",
+      "region": "global",
+      "asset_linkage": ["equity", "ai_capex", "manufacturing"],
+      "metric_tags": ["index_eps_score", "index_eps_proxy", "sector_earnings", "company_earnings", "index_earnings", "revenue", "valuation"],
+      "language": "ja",
+      "priority": "high",
+      "expected_cadence": "weekly"
+    },
+    {
+      "id": "leveraged-etf-eps-proxy-map",
+      "name": "Leveraged ETF Underlying Index EPS Proxy Map",
+      "url": "https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs",
+      "collector": "leveraged_etf_eps_proxy",
+      "source_class": "market_metrics",
+      "region": "us",
+      "asset_linkage": ["equity", "ai_capex"],
+      "metric_tags": ["leveraged_etf_proxy", "index_eps_proxy", "sector_earnings", "company_earnings", "index_earnings", "revenue", "valuation"],
+      "language": "en",
+      "priority": "high",
+      "expected_cadence": "weekly"
+    },
+    {
+      "id": "world-gold-council-goldhub-research",
+      "name": "World Gold Council Goldhub Research Library",
+      "url": "https://www.gold.org/goldhub/research/library",
+      "source_class": "market_metrics",
+      "region": "global",
+      "asset_linkage": ["commodity", "rates", "fx", "equity"],
+      "metric_tags": ["gold", "commodity", "central_bank_gold", "gold_etf_flows", "real_rates"],
+      "language": "en",
+      "priority": "high",
+      "expected_cadence": "weekly",
+      "lookback_days": 21
+    },
+    {
+      "id": "world-gold-council-goldhub",
+      "name": "World Gold Council Goldhub Latest Research",
+      "url": "https://www.gold.org/goldhub",
+      "source_class": "market_metrics",
+      "region": "global",
+      "asset_linkage": ["commodity", "rates", "fx", "equity"],
+      "metric_tags": ["gold", "commodity", "central_bank_gold", "gold_etf_flows", "real_rates"],
+      "language": "en",
+      "priority": "high",
+      "expected_cadence": "weekly",
+      "lookback_days": 21
+    },
+    {
       "id": "factset-earnings-insight",
       "name": "FactSet Earnings Insight",
       "url": "https://www.factset.com/earningsinsight",
@@ -860,6 +912,32 @@
       "language": "en",
       "priority": "high",
       "expected_cadence": "daily"
+    },
+    {
+      "id": "pictet-market-insights",
+      "name": "Pictet Market Insights",
+      "url": "https://www.pictet.com/us/en/insights/markets",
+      "source_class": "market_expectation",
+      "region": "global",
+      "asset_linkage": ["equity", "rates", "fx", "commodity"],
+      "metric_tags": ["asset_allocation", "market_regime", "macro_view"],
+      "language": "en",
+      "priority": "medium",
+      "expected_cadence": "weekly",
+      "lookback_days": 21
+    },
+    {
+      "id": "pictet-am-investment-views",
+      "name": "Pictet Asset Management Investment Views",
+      "url": "https://am.pictet.com/us/en/investment-views",
+      "source_class": "market_expectation",
+      "region": "global",
+      "asset_linkage": ["equity", "rates", "fx", "commodity"],
+      "metric_tags": ["asset_allocation", "market_regime", "macro_view"],
+      "language": "en",
+      "priority": "medium",
+      "expected_cadence": "weekly",
+      "lookback_days": 21
     },
     {
       "id": "shenmacro-canary",

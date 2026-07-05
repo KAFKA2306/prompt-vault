@@ -25,6 +25,23 @@ source: agy
 - **S&P 500 売上 (revenue / sales)**:
   - 2025年9月30日時点 1株当たり売上高 (Sales per share): 531.47ドル（S&P Global公式基準値、data_as_of=2026-01-29） ([S&P Global S&P 500 EPS workbook](https://www.spglobal.com/spdji/en/documents/additional-material/sp-500-eps-est.xlsx))
 
+
+- **指数EPSスコア**:
+  - **S&P 500**: 既存のFactSet/S&P Global/Yardeni Research根拠を優先して、S&P500全体EPSの上方修正継続を判定する。
+  - **S&P 500 IT**: S&P500 ITのEPS成長、ドル利益修正、AI/半導体寄与を確認する。
+  - **SOX proxy**: SOX指数そのもののEPSではなく、半導体・半導体装置業界EPSとSOXX proxyを確認する。
+  - **Nasdaq-100**: QQQ / Nasdaq-100全体EPSと主力メガテック寄与を確認する。
+  - **日経半導体**: 日経半導体株指数の構成銘柄、会社予想修正、米SOX連動をproxyとして確認する。
+  - **TOPIX**: TOPIX EPS予想を日本株全体の利益環境として確認する。
+  - **判定**: 買い増し寄り / 様子見 / 減らす、のどれかに分類する。
+- **レバETF EPS proxy**:
+  - **TECL / XLK**: TECLそのもののEPSは見ず、Technology Select Sector Index / XLK proxyとしてS&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る（[Direxion TECL](https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs)）。
+  - **SOXL / SOXX**: SOXLそのもののEPSは見ず、NYSE Semiconductor Index / SOXX proxyとして半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る（[Direxion SOXL](https://www.direxion.com/product/daily-semiconductor-bull-bear-3x-etfs)）。
+  - **TQQQ / QQQ**: TQQQそのもののEPSは見ず、Nasdaq-100 / QQQ proxyとしてNasdaq-100全体EPSとIT・半導体・通信・一般消費財の寄与を見る（[ProShares TQQQ](https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq), [Invesco QQQ](https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html)）。
+  - **今週のproxy EPS変化**: price ÷ P/Eで直接計算する場合は、非レバproxy ETFまたは指数の価格、P/E、データ日付、根拠URLを明記する。根拠がない場合は今週の数値更新なしとする。
+- **金・コモディティ**: World Gold Council / Goldhubを、金、実質金利、中央銀行金需要、金ETFフローの週次ウォッチ対象として扱う。今週の判断に使う場合は該当URLを付ける。
+- **Pictet補助視点**: Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
+
 ## 2. 日銀/Fed: 割引率と為替
 - **日銀の変化**: 「金利のある世界」の本格的な到来。平成デフレの反動や中東情勢を踏まえた政策転換が問われる局面に入っている ([日本総研 経済・政策レポート](https://www.jri.co.jp/report/year/))。
 - **Fedの変化**: 新総裁Kevin Warshの就任（初登庁）と、タカ派化するインフレ懸念およびイールドの急上昇。4月FOMC議事要旨にて3名（Hammack, Kashkari, Logan）がイージングバイアスの維持に反対し、利下げ路線から引き締めバイアスへのシフトが意識されている ([Yardeni Research QuickTakes Archive Page 5](https://www.yardeniquicktakes.com/page/5/), [Yardeni Research QuickTakes Archive Page 6](https://www.yardeniquicktakes.com/page/6/))。
