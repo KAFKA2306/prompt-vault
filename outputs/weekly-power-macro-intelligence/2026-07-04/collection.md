@@ -18,7 +18,7 @@
 - body_status: list_metadata
 - evidence_level: dated_listing
 - is_current_evidence: True
-- snippet: Jul 4, 2026 6 min read paid / The S&P 500 rose 9.3% ytd through July 2. Can it rise another 10.2% over the rest of this year to achieve our S&P 500 target of 8250? We still think so. Consider the following: / (1) FOMO vs FEMO. Is it time to underweight the S&P 500 Information Technology sector? It is if you believe the AI trade is a bubble about / Ed Yardeni / Public / God Bless America!
+- snippet: Jul 4, 2026 6 min read / The S&P 500 rose 9.3% ytd through July 2. Can it rise another 10.2% over the rest of this year to achieve our S&P 500 target of 8250? We still think so. Consider the following: / (1) FOMO vs FEMO. Is it time to underweight the S&P 500 Information Technology sector? It is if you believe the AI trade is a bubble about / Ed Yardeni / Public / God Bless America!
 
 ### Warsh's Sintra Serenade To The Bond Vigilantes
 - source: Yardeni Research Morning Briefings
@@ -888,7 +888,7 @@
 - is_current_evidence: True
 - snippet: By John Butters | June 2, 2026 / Each week, Earnings Insight offers analysis of critical trends in the S&P 500. Here are key highlights of the first quarter 2026 earnings season. / This blog post is for informational purposes only. The information contained in this blog post is not legal, tax, or investment advice. FactSet does not endorse or recommend any investments and assumes no liability for any consequence relating directly or indirectly to any action or inaction taken based on the information contained in this article. / Post Comment / John Butters / Vice President, Senior Earnings Analyst / Mr. John Butters is Vice President and Senior Earnings Analyst at FactSet. His weekly research report, “Earnings Insight,” provides analysis and commentary on trends in corporate earnings data for the S&P 500 including revisions to estimates, year-over-year growth, performance relative to e...
 
-### S&P Global S&P 500 EPS, sales, and index level workbook snapshot
+### S&P Global S&P 500 EPS, sales, and index level workbook
 - source: S&P Global S&P 500 EPS Estimates
 - source_class: market_metrics
 - date: 2026-01-29
@@ -898,9 +898,9 @@
 - asset_linkage: equity
 - kafka_use:
 - body_status: structured_metrics
-- evidence_level: spglobal_static_public_workbook_snapshot
+- evidence_level: spglobal_xlsx
 - is_current_evidence: True
-- snippet: S&P Global S&P 500 EPS estimate workbook snapshot. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; used static public workbook snapshot because live workbook fetch status was HTTP_403.
+- snippet: S&P Global S&P 500 EPS estimate workbook. data_as_of=2026-01-29; S&P 500 index level=6969.01; latest quarterly row=2025-09-30; operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; official workbook states public files were discontinued after January 2026.
 
 ### Yardeni Research YRI Earnings Outlook
 - source: Yardeni Research YRI Earnings Outlook
