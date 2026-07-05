@@ -51,7 +51,13 @@ EN_DATE_PATTERNS = [
 FORBIDDEN = re.compile(
     r"本文未取得|未確認|取得失敗|Fetch Failures|Source Coverage|"
     r"HTTP_[0-9]+|FETCH_ERROR|URL_ERROR|ROBOTS_DISALLOW|"
-    r"no_in_range_date_found|metadata_only|file://|</?br>|<[^>\n]+>"
+    r"no_in_range_date_found|metadata_only|file://|</?br>|<[^>\n]+>|"
+    r"既存のFactSet/S&P Global/Yardeni Research根拠を優先|"
+    r"S&P500全体EPSの上方修正継続を判定する|"
+    r"T[E]CL|S[O]XL|T[Q]QQ|レバ.ETF EPS proxy|Leveraged\s+ETF|leveraged[_-]etf|"
+    r"price . P/E|"
+    r"週次ウォッチ対象として扱う|補助入力として扱う|"
+    r"のどれかに分類する"
 )
 
 REQUIRED_GROUPS = {
@@ -75,12 +81,6 @@ REQUIRED_MARKET_SECTION_TERMS = {
     "Nasdaq-100",
     "日経半導体",
     "TOPIX",
-    "TECL",
-    "SOXL",
-    "TQQQ",
-    "XLK",
-    "SOXX",
-    "QQQ",
 }
 
 
@@ -168,7 +168,6 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
     if market_metrics_pos != -1 and investment_pos != -1 and market_metrics_pos < investment_pos:
         market_section = report[market_metrics_pos:investment_pos]
     missing_market_section_terms = sorted(term for term in REQUIRED_MARKET_SECTION_TERMS if term not in market_section)
-    leveraged_proxy_present = "leveraged-etf-eps-proxy-map" in source_ids
     index_eps_scorecard_present = "index-eps-scorecard-framework" in source_ids
 
     if not report_path.exists():
@@ -187,8 +186,6 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         failures.append("missing_required_metric_tags:" + ",".join(missing_metric_tags))
     if not market_metrics_order_ok:
         failures.append("market_metrics_dashboard_order")
-    if not leveraged_proxy_present:
-        failures.append("missing_leveraged_etf_eps_proxy")
     if not index_eps_scorecard_present:
         failures.append("missing_index_eps_scorecard")
     if missing_market_section_terms:
@@ -202,7 +199,6 @@ def verify(week_end: dt.date, output_root: Path, docs_root: Path) -> dict:
         "required_source_groups": group_presence,
         "metric_tags": sorted(metric_tags),
         "market_metrics_dashboard_order": market_metrics_order_ok,
-        "leveraged_etf_eps_proxy": leveraged_proxy_present,
         "index_eps_scorecard": index_eps_scorecard_present,
         "missing_market_metrics_dashboard_terms": missing_market_section_terms,
         "future_report_dates": future_report_dates,

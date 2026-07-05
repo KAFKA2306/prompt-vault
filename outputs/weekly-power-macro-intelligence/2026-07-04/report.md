@@ -44,20 +44,13 @@ AIデータセンター向けDRAM・NANDの需要増を背景としたメモリ�
 6. **TOPIX**: **今週の数値更新なし**
 - **判定**: **様子見**（AI過剰投資の懸念および利上げバイアスによるバリュエーション調整局面）
 
-### レバETF EPS proxy
-- **TECL**: Technology Select Sector Index / XLK proxy。S&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る。
-  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
-- **SOXL**: NYSE Semiconductor Index / SOXX proxy。半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る。
-  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
-- **TQQQ**: Nasdaq-100 / QQQ proxy。Nasdaq-100全体EPSと、IT・半導体・通信・一般消費財寄与を見る。
-  - *今週のproxy EPS変化*: **今週の数値更新なし**（対応指標関係のみ確認）。
 
 ### 金・コモディティ
 イランとの暫定和平合意への期待からブレント原油価格が下落した一方、トランプ政権下でのインフレ懸念（Dollar Debasement Trade）や、Fedの金利政策が複雑に交錯しています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)）。
 
 
-- **World Gold Council / Goldhub watch**: 金、実質金利、中央銀行金需要、金ETFフローの週次ウォッチ対象として [World Gold Council Goldhub Research Library](https://www.gold.org/goldhub/research/library) と [Goldhub Latest Research](https://www.gold.org/goldhub) を確認する。
-- **Pictet補助視点**: 公式事実ではなく、資産配分・市場レジーム解釈の補助入力として [Pictet Market Insights](https://www.pictet.com/us/en/insights/markets) と [Pictet Asset Management Investment Views](https://am.pictet.com/us/en/investment-views) を確認する。
+- **World Gold Council / Goldhub**: 今週の適格根拠なし。
+- **Pictet補助視点**: 今週の適格根拠なし。
 
 ### 米株スイングへの一次示唆
 FedのKevin Warsh新議長によるタカ派シフトと、AIサプライチェーン（特にメモリ）のコスト高騰に伴う大手IT企業（Apple, Microsoft等）の製品値上げ、それに伴う「選別」の動きを背景に、強気一辺倒（FOMO）から利益率の質（FEMO）を見極める警戒局面に入っています（[Yardeni Research Morning Briefings](https://www.yardeniquicktakes.com/)、[大和総研 経済分析レポート](https://www.dir.co.jp/report/research/economics/index.html)）。

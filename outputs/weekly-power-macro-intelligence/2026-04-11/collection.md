@@ -6,19 +6,6 @@
 
 ## L0_market_price
 
-### TECL SOXL TQQQ underlying index EPS proxy map
-- source: Leveraged ETF Underlying Index EPS Proxy Map
-- source_class: market_metrics
-- date: 2026-04-11
-- observed_date: 2026-04-11
-- url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
-- region: us
-- asset_linkage: equity, ai_capex
-- kafka_use:
-- body_status: structured_metrics
-- evidence_level: leveraged_etf_eps_proxy_map
-- is_current_evidence: True
-- snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
 
 ### U.S. ETF Monthly Summary: March 2026
 - source: FactSet Insight Archive Page 7

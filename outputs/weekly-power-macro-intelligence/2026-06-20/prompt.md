@@ -9,6 +9,9 @@
 - URLの無い事実主張は禁止。根拠URLが無い内容は書かない。
 - 根拠リンクは Current Evidence Items の url に存在する http:// または https:// のURLだけを使う。file://、ローカルパス、Antigravity transcript、内部ログへのリンクは禁止。
 - HTMLタグや壊れたタグ断片（例: <br>, </br>, <...>）を出力してはいけない。
+- Required Output の箇条書きや Current Evidence Items の framework / rule / proxy map 文を、そのまま本文にコピーしてはいけない。
+- レポート本文は「何を見るべきか」ではなく「今週どう評価したか」だけを書く。評価不能な場合は「スコア未算定」「今週の数値更新なし」「今週の適格根拠なし」のいずれかで止める。
+- 「確認する」「見る」「扱う」「分類する」などの運用指示文を本文に出してはいけない。
 - 固有名詞、モデル名、製品名、事件、数値、日付、レポート名は、Current Evidence Items の title または snippet に文字列として存在するものだけ使う。
 - Current Evidence Items に存在しない具体名を補完・推測・創作してはいけない。
 - Source Coverage / Fetch Failures は監視状況の記録であり、事実主張、レジーム判定、投資仮説、行動リストの根拠に使ってはいけない。
@@ -29,10 +32,6 @@
 - S&P Global XLSが古い場合は、data_as_ofを明示し、現在値ではなく公式基準値として扱う。
 - 毎週のMarket Metricsの目的は値上がりランキングではなく、指数EPSの上方修正が継続しているかを判定すること。
 - 指数EPSスコアは S&P500全体、S&P500 IT、半導体/SOX proxy、Nasdaq-100、日本半導体、TOPIX の6本を固定順で見る。
-- TECL / SOXL / TQQQ そのもののEPSを見てはいけない。必ず非レバ裏側指数・proxy ETF・セクター/業界EPSの変化として扱う。
-- TECLはTechnology Select Sector Index / XLK proxy、SOXLはNYSE Semiconductor Index / SOXX proxy、TQQQはNasdaq-100 / QQQ proxyとして整理する。
-- レバETF EPS proxy欄では、数値更新がない場合でも TECL / XLK、SOXL / SOXX、TQQQ / QQQ の対応関係を文字列として必ず書く。
-- proxy EPSの数値を書く場合は price ÷ P/E などの計算式、データ日付、根拠URLを必ず書く。根拠がない場合は「今週の数値更新なし」と書く。
 - World Gold Councilは金・実質金利・中央銀行金需要・金ETFフローの公式/準公式コモディティ入力として扱う。
 - Pictetは公式事実ではなく、資産配分・市場レジーム解釈の補助入力として扱う。
 - Week End より後の日付、イベント、予定、数値を本文に書いてはいけない。Current Evidence Items 内の [future date redacted] は無視する。
@@ -82,11 +81,6 @@ FactSet / S&P Global / Yardeni Research から、企業利益、指数利益、�
   - 日経半導体:
   - TOPIX:
   - 判定: 買い増し寄り / 様子見 / 減らす
-- レバETF EPS proxy:
-  - TECL: Technology Select Sector Index / XLK proxy。S&P 500 Information TechnologyのEPS・売上・利益修正・指数水準を見る。
-  - SOXL: NYSE Semiconductor Index / SOXX proxy。半導体・半導体装置のEPS成長・売上・利益修正・指数水準を見る。
-  - TQQQ: Nasdaq-100 / QQQ proxy。Nasdaq-100全体EPSと、IT・半導体・通信・一般消費財寄与を見る。
-  - 今週のproxy EPS変化:
 - 金・コモディティ:
 - 米株スイングへの一次示唆:
 

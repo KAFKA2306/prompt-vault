@@ -20,19 +20,6 @@
 - is_current_evidence: True
 - snippet: Jul 4, 2026 6 min read / The S&P 500 rose 9.3% ytd through July 2. Can it rise another 10.2% over the rest of this year to achieve our S&P 500 target of 8250? We still think so. Consider the following: / (1) FOMO vs FEMO. Is it time to underweight the S&P 500 Information Technology sector? It is if you believe the AI trade is a bubble about / Ed Yardeni / Public / God Bless America!
 
-### TECL SOXL TQQQ underlying index EPS proxy map
-- source: Leveraged ETF Underlying Index EPS Proxy Map
-- source_class: market_metrics
-- date: 2026-07-04
-- observed_date: 2026-07-04
-- url: https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs
-- region: us
-- asset_linkage: equity, ai_capex
-- kafka_use:
-- body_status: structured_metrics
-- evidence_level: leveraged_etf_eps_proxy_map
-- is_current_evidence: True
-- snippet: Leveraged ETF EPS proxy rule. Do not inspect TECL, SOXL, or TQQQ own EPS; they target daily leveraged returns through derivatives/cash mechanics. TECL proxy: Technology Select Sector Index / XLK; monitor S&P 500 Information Technology sector earnings, revenue, index level, valuation, and EPS revisions. SOXL proxy: NYSE Semiconductor Index / SOXX; monitor semiconductor and semiconductor equipment earnings growth, revenue, index level, valuation, and EPS revisions. TQQQ proxy: Nasdaq-100 / QQQ; monitor Nasdaq-100 aggregate earnings, revenue, index level, valuation, and mega-cap technology/communication/consumer discretionary earnings contribution. EPS proxy formula when current price and P/E are available: unlevered proxy ETF or index price divided by P/E. Use this as a mapping framework; current numeric values must still come from dated FactSet, S&P Global, Yardeni Research, ETF sponso...
 
 ### Weekly index EPS revision scorecard framework
 - source: Index EPS Revision Scorecard Framework

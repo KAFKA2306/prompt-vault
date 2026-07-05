@@ -698,19 +698,6 @@
       "expected_cadence": "weekly"
     },
     {
-      "id": "leveraged-etf-eps-proxy-map",
-      "name": "Leveraged ETF Underlying Index EPS Proxy Map",
-      "url": "https://www.direxion.com/product/daily-technology-bull-bear-3x-etfs",
-      "collector": "leveraged_etf_eps_proxy",
-      "source_class": "market_metrics",
-      "region": "us",
-      "asset_linkage": ["equity", "ai_capex"],
-      "metric_tags": ["leveraged_etf_proxy", "index_eps_proxy", "sector_earnings", "company_earnings", "index_earnings", "revenue", "valuation"],
-      "language": "en",
-      "priority": "high",
-      "expected_cadence": "weekly"
-    },
-    {
       "id": "world-gold-council-goldhub-research",
       "name": "World Gold Council Goldhub Research Library",
       "url": "https://www.gold.org/goldhub/research/library",
