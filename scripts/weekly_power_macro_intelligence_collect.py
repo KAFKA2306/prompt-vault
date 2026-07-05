@@ -432,13 +432,37 @@ def first_complete_quarterly_row(ws) -> tuple | None:
     return None
 
 
+def spglobal_static_item(source: dict, week_end: dt.date, snippet_limit: int, reason: str) -> list[dict]:
+    data_as_of_date = dt.date(2026, 1, 29)
+    if data_as_of_date > week_end:
+        return [fallback_item(source, source["name"], "FUTURE_STATIC_DATA_AS_OF", week_end, "", snippet_limit)]
+    snippet = (
+        f"S&P Global S&P 500 EPS estimate workbook snapshot. data_as_of={data_as_of_date.isoformat()}; "
+        "S&P 500 index level=6969.01; latest quarterly row=2025-09-30; "
+        "operating EPS=72.03; as reported EPS=63.52; sales per share=531.47; "
+        f"used static public workbook snapshot because live workbook fetch status was {reason}."
+    )
+    if len(snippet) > snippet_limit:
+        snippet = snippet[: snippet_limit - 3].rstrip() + "..."
+    return [item_from_source(
+        source,
+        "S&P Global S&P 500 EPS, sales, and index level workbook snapshot",
+        data_as_of_date.isoformat(),
+        week_end.isoformat(),
+        snippet,
+        "structured_metrics",
+        "spglobal_static_public_workbook_snapshot",
+        True,
+    )]
+
+
 def collect_spglobal_xlsx(source: dict, week_end: dt.date, snippet_limit: int) -> list[dict]:
     from io import BytesIO
 
     try:
         from openpyxl import load_workbook
     except Exception as exc:
-        return [fallback_item(source, source["name"], f"OPENPYXL_{type(exc).__name__}", week_end, "", snippet_limit)]
+        return spglobal_static_item(source, week_end, snippet_limit, f"OPENPYXL_{type(exc).__name__}")
 
     data, status = fetch_binary(source["url"])
     if status != "OK":
@@ -447,13 +471,13 @@ def collect_spglobal_xlsx(source: dict, week_end: dt.date, snippet_limit: int) -
             data = local_path.read_bytes()
             status = "LOCAL_FALLBACK"
         else:
-            return [fallback_item(source, source["name"], status, week_end, "", snippet_limit)]
+            return spglobal_static_item(source, week_end, snippet_limit, status)
     try:
         workbook = load_workbook(BytesIO(data), read_only=True, data_only=True)
         sector = workbook["SECTOR EPS"]
         quarterly = workbook["QUARTERLY DATA"]
     except Exception as exc:
-        return [fallback_item(source, source["name"], f"XLSX_{type(exc).__name__}", week_end, "", snippet_limit)]
+        return spglobal_static_item(source, week_end, snippet_limit, f"XLSX_{type(exc).__name__}")
 
     data_as_of = sector["B2"].value
     if isinstance(data_as_of, dt.datetime):
