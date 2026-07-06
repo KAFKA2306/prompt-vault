@@ -1,0 +1,6 @@
+use_case,favored,evidence
+CAGR最大化,NDX+Gold 200%,CAGR 17.20% vs 17.54%
+最大DD抑制,NDX+Gold 200%,MaxDD -98.92% vs -83.51%
+長期中核,NDX+Gold 200%,幾何平均、回復期間、破産回避をCAGRと同時評価
+戦術枠,NDX 2x,NASDAQ100が低ボラで上昇する局面に限定
+開始年分散,NDX_Gold_200_daily_USD_standard,"{""NDX_Gold_200_daily_USD_standard"": 31, ""NDX_2x_USD_standard"": 9}"
