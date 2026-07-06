@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-07-06T09:52:46.842003",
+  "data_start": "1986-01-31",
+  "data_end": "2026-07-02",
+  "sources": {
+    "NASDAQ100": {
+      "fred_id": "NASDAQ100",
+      "name": "NASDAQ100 Index",
+      "url": "https://fred.stlouisfed.org/series/NASDAQ100"
+    },
+    "GOLD": {
+      "fred_id": "GOLDPMGBD228NLBM",
+      "name": "Gold Fixing Price 3:00 P.M. London",
+      "url": "https://fred.stlouisfed.org/series/GOLDPMGBD228NLBM",
+      "fallback_url": "https://datahub.io/core/gold-prices/r/monthly.csv",
+      "fallback_name": "DataHub gold monthly price dataset"
+    },
+    "USDJPY": {
+      "fred_id": "DEXJPUS",
+      "name": "Japan / U.S. Foreign Exchange Rate",
+      "url": "https://fred.stlouisfed.org/series/DEXJPUS"
+    },
+    "TBILL3M": {
+      "fred_id": "DTB3",
+      "name": "3-Month Treasury Bill Secondary Market Rate",
+      "url": "https://fred.stlouisfed.org/series/DTB3"
+    },
+    "SP500": {
+      "fred_id": "SP500",
+      "name": "S&P 500 Index",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+    }
+  },
+  "product_sources": {
+    "rakuten_leverage_nasdaq100": "https://www.rakuten-toushin.co.jp/fund/nav/rilvns/",
+    "tracers_nasdaq100_gold_plus": "https://www.amova-am.com/api/reports/prospectus?fundcode=645133",
+    "wgc_gold_prices": "https://www.gold.org/goldhub/data/gold-prices",
+    "lbma_prices": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+    "nasdaq_historical": "https://www.nasdaq.com/market-activity/index/ndx/historical",
+    "datahub_gold_monthly": "https://datahub.io/core/gold-prices/r/monthly.csv"
+  },
+  "outputs": [
+    "outputs/data/cost_scenario_results.csv",
+    "outputs/data/daily_asset_returns.csv",
+    "outputs/data/investment_decision_table.csv",
+    "outputs/data/metrics_summary.csv",
+    "outputs/data/raw_fred_prices.csv",
+    "outputs/data/rolling_cagr_summary.csv",
+    "outputs/data/sensitivity_break_even.csv",
+    "outputs/data/shock_period_results.csv",
+    "outputs/data/start_year_results.csv",
+    "outputs/data/strategy_daily_returns.csv",
+    "outputs/data/strategy_wealth_index.csv",
+    "outputs/data/theory_checks.csv",
+    "outputs/figures/01_cumulative_wealth_log.png",
+    "outputs/figures/02_drawdowns.png",
+    "outputs/figures/03_rolling_10y_cagr.png",
+    "outputs/figures/03_rolling_15y_cagr.png",
+    "outputs/figures/03_rolling_20y_cagr.png",
+    "outputs/figures/03_rolling_30y_cagr.png",
+    "outputs/figures/03_rolling_5y_cagr.png",
+    "outputs/figures/04_rolling_10y_max_drawdown.png",
+    "outputs/figures/04_rolling_20y_max_drawdown.png",
+    "outputs/figures/04_rolling_5y_max_drawdown.png",
+    "outputs/figures/05_stock_gold_rolling_correlation.png",
+    "outputs/figures/06_sensitivity_heatmap.png",
+    "outputs/manifest.json",
+    "outputs/ndx_gold_leverage_analysis.ipynb",
+    "outputs/ndx_gold_leverage_analysis.xlsx",
+    "outputs/summary_report.md"
+  ]
+}
