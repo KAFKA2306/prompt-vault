@@ -12,105 +12,15 @@
     "alt_policy": "Use empty alt when decorative; use short contextual alt only when the illustration itself is discussed."
   },
   "assets": [
-    {
-      "id": "crewtrade-basic",
-      "repository": "KAFKA2306/CrewTrade",
-      "file": "crewtrade-basic-illustration.webp",
-      "size": [256, 176],
-      "sha256": "61e6927e4e59718214cbdfbce6c98ca8270b4644087cceb523cb338365e65d9b",
-      "gen_id": "b21cd774-7180-4e09-98e5-c6147e011783",
-      "theme": "research notes, evidence cards, magnifier, comparison chart and folders",
-      "forbidden": ["financial-claim", "official-evidence", "safety-warning", "destructive-action"]
-    },
-    {
-      "id": "bonus-basic",
-      "repository": "KAFKA2306/bonus",
-      "file": "bonus-basic-illustration.webp",
-      "size": [256, 176],
-      "sha256": "46a6159fc27d92747889e67ceeda0e2c7ca4eefd6c7b16930292287cf7423736",
-      "gen_id": "66d06eb0-192e-4102-a2f8-f321cf04fe69",
-      "theme": "company cards, calculator, balance scale, gift and uncertainty chart",
-      "forbidden": ["compensation-fact", "financial-claim", "official-evidence", "destructive-action"]
-    },
-    {
-      "id": "boothitemmanager-basic",
-      "repository": "KAFKA2306/boothitemmanager",
-      "file": "boothitemmanager-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "5cfe497454f4d881a6eacc288439f26135a1fa8bd51ee2d5bd20cf8dd9562e1a",
-      "gen_id": "9b9c4806-7708-454c-87e6-cf642a912d6a",
-      "theme": "generic products, provenance tags, shelf, bag and comparison tiles",
-      "forbidden": ["seller-content", "product-proof", "compatibility-evidence", "official-endorsement"]
-    },
-    {
-      "id": "semiconductor-earnings-model-basic",
-      "repository": "KAFKA2306/semiconductor-earnings-model",
-      "file": "semiconductor-earnings-model-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "eb26b4712315ceb34f6facf32d525a9f4ceebadbfd51de193bd291f7e409e696",
-      "gen_id": "2992144b-9510-4370-bbff-091f8966d274",
-      "theme": "wafer, fab silhouette, evidence sheets and analytical charts",
-      "forbidden": ["earnings-fact", "valuation-claim", "model-output", "official-evidence"]
-    },
-    {
-      "id": "bodogenomikata2-basic",
-      "repository": "KAFKA2306/bodogenomikata2",
-      "file": "bodogenomikata2-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "4a0acbf1bc6a569156e4f3d1bcf93892a86d3f58953e740579d320b428a2199f",
-      "gen_id": "ff65f5df-5044-478e-9bac-a8118dac0999",
-      "theme": "generic tabletop cards, dice, rulebook, tokens and magnifier",
-      "forbidden": ["official-ruling", "rule-evidence", "spoiler-warning", "specific-game-art"]
-    },
-    {
-      "id": "investor-basic",
-      "repository": "KAFKA2306/investor",
-      "file": "investor-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "0cc579e97429f587a0ef1a5362729e9c4e82c3856195c4de23c3f906e4e03a3f",
-      "gen_id": "645c4f8b-c164-4bbf-a0ca-424e9fdeccbc",
-      "theme": "research dashboard, evidence folders, risk markers and checklist",
-      "forbidden": ["investment-conclusion", "performance-claim", "risk-warning", "trade-control", "kill-switch"]
-    },
-    {
-      "id": "travel-basic",
-      "repository": "KAFKA2306/travel",
-      "file": "travel-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "ca9787fe2a8630157fedfe782778ea3a759fb7dafef83010cca0c699c3ee468c",
-      "gen_id": "bd4e0734-fd34-4af3-b9e1-1d620ba30a87",
-      "theme": "map, train ticket, suitcase and quiet scenic vignette",
-      "forbidden": ["official-destination-photo", "booking-proof", "operational-fact", "official-endorsement"]
-    },
-    {
-      "id": "anime-basic",
-      "repository": "KAFKA2306/anime",
-      "file": "anime-basic-illustration.webp",
-      "size": [192, 128],
-      "sha256": "5bc11098bd6691dec2457ecaf3650e5d77431fb1cc7f01f969b5e6ea73b85960",
-      "gen_id": "e9af5a4e-6cd3-46f6-bf27-ab31943698af",
-      "theme": "year-based generic poster and media catalogue browser",
-      "forbidden": ["official-poster", "copyrighted-character", "catalogue-fact", "recommendation-proof"]
-    },
-    {
-      "id": "vrc-cast-event-calendar-basic",
-      "repository": "KAFKA2306/vrc_cast_event_calender",
-      "file": "vrc-cast-event-calendar-basic-illustration.webp",
-      "size": [64, 43],
-      "sha256": "933508c040549d11c3563c7993106b6195b2ce365e9f33a3ede3b6ae7dc9a6c6",
-      "gen_id": "cc3e5b66-c1ff-428c-842c-a6e57bb3a7e2",
-      "theme": "VR headset, calendar, night sky and generic event cards",
-      "forbidden": ["official-announcement", "participation-instruction", "event-organizer-identity", "official-endorsement"]
-    },
-    {
-      "id": "pal-atlas-basic",
-      "repository": "KAFKA2306/pal-atlas",
-      "file": "pal-atlas-basic-illustration.webp",
-      "size": [64, 43],
-      "sha256": "90b557fae7a9dd3dbf305ef4c28d02e4c56875b9130b25e3f8ee18fa888238fd",
-      "gen_id": "c90a2fe5-8c1a-4084-ac09-12614c7b04a0",
-      "theme": "original fantasy silhouettes, egg, elemental icons and recipe nodes",
-      "forbidden": ["official-game-art", "palworld-character", "pokemon-character", "breeding-proof", "official-endorsement"]
-    }
+    {"id":"crewtrade-basic","repository":"KAFKA2306/CrewTrade","file":"crewtrade-basic-illustration.webp","size":[256,176],"sha256":"61e6927e4e59718214cbdfbce6c98ca8270b4644087cceb523cb338365e65d9b","gen_id":"b21cd774-7180-4e09-98e5-c6147e011783","theme":"research notes, evidence cards, magnifier, comparison chart and folders","forbidden":["financial-claim","official-evidence","safety-warning","destructive-action"]},
+    {"id":"bonus-basic","repository":"KAFKA2306/bonus","file":"bonus-basic-illustration.webp","size":[256,176],"sha256":"46a6159fc27d92747889e67ceeda0e2c7ca4eefd6c7b16930292287cf7423736","gen_id":"66d06eb0-192e-4102-a2f8-f321cf04fe69","theme":"company cards, calculator, balance scale, gift and uncertainty chart","forbidden":["compensation-fact","financial-claim","official-evidence","destructive-action"]},
+    {"id":"boothitemmanager-basic","repository":"KAFKA2306/boothitemmanager","file":"boothitemmanager-basic-illustration.webp","size":[192,128],"sha256":"5cfe497454f4d881a6eacc288439f26135a1fa8bd51ee2d5bd20cf8dd9562e1a","gen_id":"9b9c4806-7708-454c-87e6-cf642a912d6a","theme":"generic products, provenance tags, shelf, bag and comparison tiles","forbidden":["seller-content","product-proof","compatibility-evidence","official-endorsement"]},
+    {"id":"semiconductor-earnings-model-basic","repository":"KAFKA2306/semiconductor-earnings-model","file":"semiconductor-earnings-model-basic-illustration.webp","size":[192,128],"sha256":"eb26b4712315ceb34f6facf32d525a9f4ceebadbfd51de193bd291f7e409e696","gen_id":"2992144b-9510-4370-bbff-091f8966d274","theme":"wafer, fab silhouette, evidence sheets and analytical charts","forbidden":["earnings-fact","valuation-claim","model-output","official-evidence"]},
+    {"id":"bodogenomikata2-basic","repository":"KAFKA2306/bodogenomikata2","file":"bodogenomikata2-basic-illustration.webp","size":[192,128],"sha256":"4a0acbf1bc6a569156e4f3d1bcf93892a86d3f58953e740579d320b428a2199f","gen_id":"ff65f5df-5044-478e-9bac-a8118dac0999","theme":"generic tabletop cards, dice, rulebook, tokens and magnifier","forbidden":["official-ruling","rule-evidence","spoiler-warning","specific-game-art"]},
+    {"id":"investor-basic","repository":"KAFKA2306/investor","file":"investor-basic-illustration.webp","size":[192,128],"sha256":"0cc579e97429f587a0ef1a5362729e9c4e82c3856195c4de23c3f906e4e03a3f","gen_id":"645c4f8b-c164-4bbf-a0ca-424e9fdeccbc","theme":"research dashboard, evidence folders, risk markers and checklist","forbidden":["investment-conclusion","performance-claim","risk-warning","trade-control","kill-switch"]},
+    {"id":"travel-basic","repository":"KAFKA2306/travel","file":"travel-basic-illustration.webp","size":[192,128],"sha256":"ca9787fe2a8630157fedfe782778ea3a759fb7dafef83010cca0c699c3ee468c","gen_id":"bd4e0734-fd34-4af3-b9e1-1d620ba30a87","theme":"map, train ticket, suitcase and quiet scenic vignette","forbidden":["official-destination-photo","booking-proof","operational-fact","official-endorsement"]},
+    {"id":"anime-basic","repository":"KAFKA2306/anime","file":"anime-basic-illustration.webp","size":[192,128],"sha256":"5bc11098bd6691dec2457ecaf3650e5d77431fb1cc7f01f969b5e6ea73b85960","gen_id":"e9af5a4e-6cd3-46f6-bf27-ab31943698af","theme":"year-based generic poster and media catalogue browser","forbidden":["official-poster","copyrighted-character","catalogue-fact","recommendation-proof"]},
+    {"id":"vrc-cast-event-calendar-basic","repository":"KAFKA2306/vrc_cast_event_calender","file":"vrc-cast-event-calendar-basic-illustration.webp","size":[128,85],"sha256":"982ae4f2e0d20cbebae9ed357ef8710f4685958572b326cb5c7ca7ba5c01e7bb","gen_id":"cc3e5b66-c1ff-428c-842c-a6e57bb3a7e2","theme":"VR headset, calendar, night sky and generic event cards","forbidden":["official-announcement","participation-instruction","event-organizer-identity","official-endorsement"]},
+    {"id":"pal-atlas-basic","repository":"KAFKA2306/pal-atlas","file":"pal-atlas-basic-illustration.webp","size":[128,85],"sha256":"2b006db3941fd2df785d3ac63a4037ff0e4a84cbaad31b61396bff1a9248866b","gen_id":"c90a2fe5-8c1a-4084-ac09-12614c7b04a0","theme":"original fantasy silhouettes, egg, elemental icons and recipe nodes","forbidden":["official-game-art","palworld-character","pokemon-character","breeding-proof","official-endorsement"]}
   ]
 }
