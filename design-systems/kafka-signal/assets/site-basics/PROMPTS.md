@@ -34,6 +34,11 @@ Create a reusable basic site asset illustration with a transparent background. U
 - gen_id: `645c4f8b-c164-4bbf-a0ca-424e9fdeccbc`
 - Add a sober research dashboard, evidence folders, risk-boundary markers and a checklist. Avoid celebratory performance imagery.
 
+## investor2
+
+- gen_id: `62cc9b98-2d75-42ab-8f79-217c1b20aaab`
+- Add a research lifecycle board showing hypothesis, dataset, experiment, ablation, Frozen OOS and decision, with evidence sheets and a magnifying glass. Keep the character observational; never present her as the authority for promotion or rejection.
+
 ## travel
 
 - gen_id: `bd4e0734-fd34-4af3-b9e1-1d620ba30a87`
