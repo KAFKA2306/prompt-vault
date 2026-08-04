@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kafka2306.github.io/prompt-vault/schemas/kafka-signal-site-assets-v0.1.0.schema.json",
+  "title": "KAFKA SIGNAL site asset manifest",
+  "type": "object",
+  "required": ["schema", "version", "created_at", "status", "identity", "kafka_character", "accessibility", "storage", "base_prompt", "assets"],
+  "properties": {
+    "schema": {"const": "kafka-signal-site-assets/v1"},
+    "version": {"const": "0.1.0"},
+    "created_at": {"type": "string", "format": "date"},
+    "status": {"enum": ["draft-reviewed", "approved", "retired"]},
+    "related_issue": {"type": "string", "format": "uri"},
+    "identity": {"type": "object"},
+    "kafka_character": {"type": "object"},
+    "accessibility": {"type": "object"},
+    "storage": {"type": "object"},
+    "base_prompt": {"type": "string", "minLength": 100},
+    "assets": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "items": {
+        "type": "object",
+        "required": ["id", "repo", "site", "file", "format", "width", "height", "has_alpha", "sha256", "source", "prompt_delta", "alt_ja", "approved_use", "restricted_use", "embedded_raster", "distribution_profile", "production_note", "license"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "repo": {"type": "string", "pattern": "^KAFKA2306/"},
+          "site": {"type": "string", "format": "uri"},
+          "file": {"type": "string", "pattern": "^assets/.+\\.svg$"},
+          "format": {"const": "image/svg+xml"},
+          "width": {"const": 64},
+          "height": {"const": 43},
+          "has_alpha": {"const": true},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "source": {
+            "type": "object",
+            "required": ["format", "width", "height", "sha256", "generator"],
+            "properties": {
+              "format": {"const": "image/png"},
+              "width": {"const": 1536},
+              "height": {"const": 1024},
+              "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "generator": {"type": "string"}
+            }
+          },
+          "prompt_delta": {"type": "string", "minLength": 40},
+          "alt_ja": {"type": "string", "minLength": 8},
+          "approved_use": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "restricted_use": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "embedded_raster": {
+            "type": "object",
+            "required": ["format", "encoding"],
+            "properties": {
+              "format": {"const": "image/webp"},
+              "encoding": {"const": "base64-data-uri"}
+            }
+          },
+          "distribution_profile": {"const": "identity-index-preview"},
+          "production_note": {"type": "string", "minLength": 20},
+          "license": {"const": "user-owned-generated-asset"}
+        }
+      }
+    }
+  }
+}
