@@ -1,0 +1,1 @@
+export default{theme:{extend:{colors:{canvas:'var(--ks-canvas)',ink:'var(--ks-ink)',primary:'var(--ks-primary)',verified:'var(--ks-verified)',estimated:'var(--ks-estimated)',attention:'var(--ks-attention)',rejected:'var(--ks-rejected)',unavailable:'var(--ks-unavailable)'},fontFamily:{display:['var(--ks-font-display)'],body:['var(--ks-font-body)']}}}};

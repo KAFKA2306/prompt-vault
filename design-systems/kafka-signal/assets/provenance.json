@@ -1,0 +1,1 @@
+{"version":"1.0.0","license":"MIT for package code and original SVG geometry","assets":[{"path":"icons/sprite.svg","origin":"original geometric line icons","approval":"approved"},{"path":"motifs/sprite.svg","origin":"original abstract motifs","approval":"approved"},{"path":"characters/*","origin":"specification only; no binary/generated art","approval":"approved specification"}]}

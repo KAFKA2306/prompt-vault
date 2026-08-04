@@ -1,0 +1,1 @@
+export type EvidenceState='verified'|'estimated'|'attention'|'rejected'|'unavailable';export function EvidenceStatus({state,label}:{state:EvidenceState;label:string}){return <span className="ks-status" data-state={state}>{label}</span>}
