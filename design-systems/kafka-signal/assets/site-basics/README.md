@@ -20,7 +20,7 @@ Kafkaキャラクターはidentity accentであり、専門家、運営者、公
 
 ## 配布仕様
 
-- 透過WebP
+- 透過WebP、または透過WebPを内包した自己完結SVG
 - UI用の軽量プレビュー／ベーシック資産
 - 元の生成セッション出力: 1536 × 1024
 - リポジトリ格納版: 128〜256px幅
@@ -47,6 +47,7 @@ Kafkaキャラクターはidentity accentであり、専門家、運営者、公
 | semiconductor-earnings-model | `semiconductor-earnings-model-basic-illustration.webp` |
 | bodogenomikata2 | `bodogenomikata2-basic-illustration.webp` |
 | investor | `investor-basic-illustration.webp` |
+| investor2 | `investor2-basic-illustration.svg` |
 | travel | `travel-basic-illustration.webp` |
 | anime | `anime-basic-illustration.webp` |
 | vrc_cast_event_calender | `vrc-cast-event-calendar-basic-illustration.webp` |
