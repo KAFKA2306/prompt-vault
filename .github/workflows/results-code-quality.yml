@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           sparse-checkout: |
             scripts/collect_code_quality.py
@@ -39,7 +39,7 @@ jobs:
             docs/results-code-quality.md
             .github/workflows/results-code-quality.yml
           sparse-checkout-cone-mode: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Unit tests
