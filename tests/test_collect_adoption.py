@@ -4,6 +4,7 @@ import importlib.util
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "collect_adoption.py"
 spec = importlib.util.spec_from_file_location("collect_adoption", MODULE_PATH)
@@ -70,9 +71,10 @@ class AdoptionCollectorTests(unittest.TestCase):
 
         def fake_get(path, token=None):
             calls.append(path)
-            if "page=1" in path:
+            page = int(parse_qs(urlparse(path).query)["page"][0])
+            if page == 1:
                 return [{"name": str(i)} for i in range(100)]
-            if "page=2" in path:
+            if page == 2:
                 return [{"name": "last"}]
             return []
 
@@ -83,7 +85,7 @@ class AdoptionCollectorTests(unittest.TestCase):
             module.gh_get = original
         self.assertEqual(len(repos), 101)
         self.assertEqual(len(calls), 2)
-        self.assertIn("page=2", calls[1])
+        self.assertEqual(int(parse_qs(urlparse(calls[1]).query)["page"][0]), 2)
 
 
 if __name__ == "__main__":
