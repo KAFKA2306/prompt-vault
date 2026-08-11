@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import platform
@@ -12,14 +13,18 @@ from pathlib import Path
 SCHEMA_VERSION = "kafka.results.native-tool-metric.v1"
 
 
-def run_suite(start_dir: str, pattern: str) -> unittest.TestResult:
-    # top_level_dir keeps the repository root importable even when this file is
-    # executed as `python scripts/emit_native_test_metric.py`.
-    suite = unittest.defaultTestLoader.discover(
-        start_dir=start_dir,
-        pattern=pattern,
-        top_level_dir=".",
-    )
+def load_test_module(test_file: Path):
+    spec = importlib.util.spec_from_file_location("kafka_results_native_test_scope", test_file)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load native test scope: {test_file}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def run_suite(test_file: Path) -> unittest.TestResult:
+    module = load_test_module(test_file)
+    suite = unittest.defaultTestLoader.loadTestsFromModule(module)
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
@@ -55,8 +60,7 @@ def build_evidence(
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start-dir", default="tests")
-    parser.add_argument("--pattern", default="test_collect_code_quality.py")
+    parser.add_argument("--test-file", default="tests/test_collect_code_quality.py")
     parser.add_argument("--repository", default=os.getenv("GITHUB_REPOSITORY", "KAFKA2306/prompt-vault"))
     parser.add_argument("--source-commit", default=os.getenv("GITHUB_SHA", ""))
     parser.add_argument("--run-url", default="")
@@ -68,16 +72,20 @@ def main() -> int:
     )
     if not args.source_commit or len(args.source_commit) != 40:
         raise SystemExit("source commit must be a 40-character Git SHA")
-    if not run_url.rstrip("/").split("/")[-1]:
-        raise SystemExit("run URL must include a run id")
+    if "/actions/runs/" not in run_url or not run_url.rstrip("/").split("/")[-1]:
+        raise SystemExit("run URL must identify a GitHub Actions run")
 
-    result = run_suite(args.start_dir, args.pattern)
+    test_file = Path(args.test_file)
+    if not test_file.is_file():
+        raise SystemExit(f"native test scope does not exist: {test_file}")
+
+    result = run_suite(test_file)
     evidence = build_evidence(
         result,
         repository=args.repository,
         source_commit=args.source_commit,
         run_url=run_url,
-        scope=f"unittest discover -s {args.start_dir} -p {args.pattern}",
+        scope=f"python-unittest:{test_file.as_posix()}",
     )
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
