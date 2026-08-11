@@ -47,6 +47,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p results
           for category in code-quality data-quality reliability automation adoption business; do
             workflow="results-${category}.yml"
             run_id="$(gh run list --workflow "$workflow" --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId')"
@@ -54,8 +55,7 @@ jobs:
               echo "No successful main run for $workflow" >&2
               exit 1
             fi
-            mkdir -p "results/$category"
-            gh run download "$run_id" -n "kafka-results-$category" -D "results/$category"
+            gh run download "$run_id" -n "kafka-results-$category" -D results
             test -n "$(find "results/$category" -maxdepth 1 -name '*.json' -print -quit)"
           done
       - name: Aggregate results
@@ -63,7 +63,6 @@ jobs:
       - name: Contract audit
         run: |
           python - <<'PY'
-          import hashlib
           import json
           from pathlib import Path
 
