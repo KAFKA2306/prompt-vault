@@ -6,12 +6,14 @@ import json
 import os
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 API = "https://api.github.com"
 OWNER = "KAFKA2306"
 QUALITY_HINTS = ("quality", "lint", "type", "test", "smoke", "validate", "check")
+MAX_WORKERS = 8
 
 
 def gh_get(path: str, token: str | None = None):
@@ -144,17 +146,24 @@ def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
 def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[Path]:
     now = datetime.now(timezone.utc).replace(microsecond=0)
     since = now - timedelta(days=60)
-    repos = list_owner_repositories(owner, token)
-    written: list[Path] = []
+    repos = [repo for repo in list_owner_repositories(owner, token) if not repo.get("archived")]
     out_dir.mkdir(parents=True, exist_ok=True)
-    for repo in repos:
-        if repo.get("archived"):
-            continue
-        name = repo["name"]
-        runs = list_repository_runs(owner, name, since, token)
-        report = aggregate(f"{owner}/{name}", runs, now)
+
+    reports: dict[str, dict] = {}
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = {
+            executor.submit(list_repository_runs, owner, repo["name"], since, token): repo["name"]
+            for repo in repos
+        }
+        for future in as_completed(futures):
+            name = futures[future]
+            runs = future.result()
+            reports[name] = aggregate(f"{owner}/{name}", runs, now)
+
+    written: list[Path] = []
+    for name in sorted(reports):
         path = out_dir / f"{name}.json"
-        path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        path.write_text(json.dumps(reports[name], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(path)
     return written
 
