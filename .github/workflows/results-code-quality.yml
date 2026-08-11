@@ -18,6 +18,10 @@ on:
   schedule:
     - cron: "41 1 * * *"
 
+concurrency:
+  group: results-code-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   actions: read
