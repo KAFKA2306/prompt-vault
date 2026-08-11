@@ -48,8 +48,9 @@ class DataQualityCollectorTest(unittest.TestCase):
         def fake_get(path, token=None):
             if "/commits/" in path:
                 return {"sha": "abc123"}
+            request_path = path.split("?", 1)[0]
             for filename, data in docs.items():
-                if filename in path:
+                if request_path.endswith("/" + filename):
                     return contents(data, filename)
             raise AssertionError(path)
 
