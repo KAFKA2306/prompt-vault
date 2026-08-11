@@ -1,0 +1,111 @@
+name: KAFKA RESULTS aggregate
+
+on:
+  pull_request:
+    paths:
+      - "scripts/aggregate_results.py"
+      - "tests/test_aggregate_results.py"
+      - ".github/workflows/results-aggregate.yml"
+      - "docs/results-aggregate.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/aggregate_results.py"
+      - "tests/test_aggregate_results.py"
+      - ".github/workflows/results-aggregate.yml"
+      - "docs/results-aggregate.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "15 3 * * *"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            scripts/aggregate_results.py
+            tests/test_aggregate_results.py
+            docs/results-aggregate.md
+            .github/workflows/results-aggregate.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_aggregate_results.py'
+      - name: Download latest successful domain snapshots
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for category in code-quality data-quality reliability automation adoption business; do
+            workflow="results-${category}.yml"
+            run_id="$(gh run list --workflow "$workflow" --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId')"
+            if [[ -z "$run_id" || "$run_id" == "null" ]]; then
+              echo "No successful main run for $workflow" >&2
+              exit 1
+            fi
+            mkdir -p "results/$category"
+            gh run download "$run_id" -n "kafka-results-$category" -D "results/$category"
+            test -n "$(find "results/$category" -maxdepth 1 -name '*.json' -print -quit)"
+          done
+      - name: Aggregate results
+        run: python scripts/aggregate_results.py --root results --require-all
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path('results')
+          data = json.loads((root / 'results.json').read_text())
+          assert data['schema_version'] == 'kafka.results.aggregate.v1'
+          assert data['contract']['unknown_is_zero'] is False
+          assert data['contract']['not_available_is_zero'] is False
+          assert data['contract']['cross_metric_score_created'] is False
+          assert len(data['views']['by_category']) == 6
+          assert data['results'], 'empty aggregate is forbidden'
+          ids = [row['canonical_result_id'] for row in data['results']]
+          assert len(ids) == len(set(ids)), 'duplicate canonical result id'
+          for row in data['results']:
+              assert row['category'] in {'code-quality','data-quality','reliability','automation','adoption','business'}
+              assert len(row['input_sha256']) == 64
+              int(row['input_sha256'], 16)
+              assert Path(row['source_path']).exists(), row['source_path']
+              for url in row['evidence_urls']:
+                  assert url.startswith(('https://', 'http://'))
+          snapshots = sorted((root / 'snapshots').glob('*.json'))
+          assert snapshots, 'daily snapshot missing'
+          snapshot = json.loads(snapshots[-1].read_text())
+          assert snapshot == data
+          markdown = (root / 'RESULTS.md').read_text()
+          assert '# KAFKA RESULTS' in markdown
+          assert 'Unknown, not-instrumented' in markdown
+          schema = json.loads((root / 'schema.json').read_text())
+          assert schema['properties']['schema_version']['const'] == 'kafka.results.aggregate.v1'
+          print(f"validated {len(data['results'])} canonical results across {len(data['views']['by_repository'])} repositories")
+          PY
+      - name: Upload canonical aggregate snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-aggregate
+          path: |
+            results/results.json
+            results/RESULTS.md
+            results/schema.json
+            results/snapshots/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
