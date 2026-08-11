@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KAFKA2306/prompt-vault/design-systems/kafka-signal/audit/scorecard.schema.json",
+  "title": "KAFKA SIGNAL UI Scorecard",
+  "type": "object",
+  "required": ["version", "generated_at", "records"],
+  "properties": {
+    "version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/record"}
+    }
+  },
+  "$defs": {
+    "score": {"type": "integer", "minimum": 0, "maximum": 5},
+    "record": {
+      "type": "object",
+      "required": [
+        "repo", "element", "path", "source_commit", "scores", "total", "grade",
+        "evidence", "canonical_candidate", "decision_status"
+      ],
+      "properties": {
+        "repo": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+        "element": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "scores": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visual_quality", "task_completion", "responsiveness", "accessibility",
+            "interaction_quality", "data_semantics", "reusability", "evidence_maintainability"
+          ],
+          "properties": {
+            "visual_quality": {"$ref": "#/$defs/score"},
+            "task_completion": {"$ref": "#/$defs/score"},
+            "responsiveness": {"$ref": "#/$defs/score"},
+            "accessibility": {"$ref": "#/$defs/score"},
+            "interaction_quality": {"$ref": "#/$defs/score"},
+            "data_semantics": {"$ref": "#/$defs/score"},
+            "reusability": {"$ref": "#/$defs/score"},
+            "evidence_maintainability": {"$ref": "#/$defs/score"}
+          }
+        },
+        "total": {"type": "integer", "minimum": 0, "maximum": 40},
+        "grade": {"enum": ["S", "A", "B", "C", "D"]},
+        "decision_status": {"enum": ["provisional", "verified"]},
+        "canonical_candidate": {"type": "boolean"},
+        "canonical_target": {"type": ["string", "null"]},
+        "evidence": {
+          "type": "object",
+          "required": ["static", "browser"],
+          "properties": {
+            "static": {"type": "array", "items": {"type": "string"}},
+            "browser": {
+              "type": "object",
+              "required": ["verified"],
+              "properties": {
+                "verified": {"type": "boolean"},
+                "viewports": {"type": "array", "items": {"type": "integer"}},
+                "screenshots": {"type": "array", "items": {"type": "string"}},
+                "console_errors": {"type": "integer", "minimum": 0},
+                "unexpected_overflow": {"type": "integer", "minimum": 0},
+                "keyboard_focus_verified": {"type": "boolean"}
+              }
+            }
+          }
+        },
+        "strengths": {"type": "array", "items": {"type": "string"}},
+        "defects": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
