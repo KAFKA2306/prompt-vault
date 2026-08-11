@@ -26,9 +26,10 @@ class BusinessCollectorTests(unittest.TestCase):
             "default_branch": "main",
         }
         declarations = [{"path": "docs/business/demo.md", "blob_sha": "abc", "url": "https://example.test", "kind": "repository_owned_business_declaration"}]
-        report = module.aggregate(repo, declarations, datetime(2026, 8, 12, tzinfo=timezone.utc))
+        report = module.aggregate(repo, declarations, True, datetime(2026, 8, 12, tzinfo=timezone.utc))
         self.assertEqual(report["schema_version"], "kafka.results.business.v1")
         self.assertEqual(report["inventory"]["status"], "declared_business_surface_detected")
+        self.assertTrue(report["inventory"]["tree_complete"])
         for metric in report["metrics"].values():
             self.assertIsNone(metric["value"])
             self.assertEqual(metric["status"], "not_instrumented")
@@ -52,20 +53,34 @@ class BusinessCollectorTests(unittest.TestCase):
 
         module.gh_get = fake_get
         try:
-            declarations = module.list_business_declarations(repo)
+            declarations, tree_complete = module.list_business_declarations(repo)
         finally:
             module.gh_get = original
+        self.assertTrue(tree_complete)
         self.assertEqual([d["path"] for d in declarations], ["docs/business/offer.md", "docs/services/service.md"])
 
-    def test_truncated_tree_fails_closed_without_inventing_inventory(self):
-        repo = {"full_name": "KAFKA2306/demo", "default_branch": "main"}
+    def test_truncated_tree_is_unknown_not_empty_inventory(self):
+        repo = {
+            "id": 2,
+            "node_id": "R_truncated",
+            "name": "demo",
+            "full_name": "KAFKA2306/demo",
+            "private": False,
+            "archived": False,
+            "html_url": "https://github.com/KAFKA2306/demo",
+            "default_branch": "main",
+        }
         original = module.gh_get
         module.gh_get = lambda path, token=None: {"truncated": True, "tree": []}
         try:
-            declarations = module.list_business_declarations(repo)
+            declarations, tree_complete = module.list_business_declarations(repo)
         finally:
             module.gh_get = original
         self.assertEqual(declarations, [])
+        self.assertFalse(tree_complete)
+        report = module.aggregate(repo, declarations, tree_complete, datetime(2026, 8, 12, tzinfo=timezone.utc))
+        self.assertEqual(report["inventory"]["status"], "unknown_tree_truncated")
+        self.assertFalse(report["inventory"]["tree_complete"])
 
     def test_repository_listing_paginates(self):
         calls = []
