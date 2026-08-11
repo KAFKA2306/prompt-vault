@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timezone
 
-from scripts.collect_code_quality import aggregate, is_quality_run
+from scripts.collect_code_quality import aggregate, is_quality_run, ratchet_status
 
 
 class CodeQualityCollectorTests(unittest.TestCase):
@@ -9,6 +9,11 @@ class CodeQualityCollectorTests(unittest.TestCase):
         self.assertTrue(is_quality_run({"name": "Quality", "path": ".github/workflows/quality.yml"}))
         self.assertTrue(is_quality_run({"name": "Smoke", "path": ".github/workflows/smoke.yml"}))
         self.assertFalse(is_quality_run({"name": "Deploy Pages", "path": ".github/workflows/pages.yml"}))
+
+    def test_ratchet_status(self):
+        self.assertEqual(ratchet_status(2), "WORSENED")
+        self.assertEqual(ratchet_status(0), "UNCHANGED")
+        self.assertEqual(ratchet_status(-1), "IMPROVED")
 
     def test_baseline_current_and_unknown_semantics(self):
         now = datetime(2026, 8, 12, tzinfo=timezone.utc)
@@ -80,6 +85,22 @@ class CodeQualityCollectorTests(unittest.TestCase):
         self.assertEqual(report["quality_gates"]["delta"]["regression_gate_rejections"], 0)
         self.assertEqual(report["quality_gates"]["current"]["quality_gate_runs"], 2)
         self.assertEqual(report["quality_gates"]["current"]["quality_gate_success"], 1)
+        self.assertEqual(report["ratchet"]["before"], 1)
+        self.assertEqual(report["ratchet"]["after"], 1)
+        self.assertEqual(report["ratchet"]["delta"], 0)
+        self.assertEqual(report["ratchet"]["status"], "UNCHANGED")
+        self.assertFalse(report["ratchet"]["worsened"])
+        self.assertEqual(report["measurement"]["tool"], "github-actions-workflow-runs-rest-api")
+        self.assertEqual(report["measurement"]["tool_version"], "2026-03-10")
+        self.assertEqual(report["measurement"]["source_commits"], ["b" * 40, "c" * 40])
+        self.assertEqual(
+            report["measurement"]["run_urls"],
+            [
+                "https://github.com/example/r/actions/runs/2",
+                "https://github.com/example/r/actions/runs/3",
+                "https://github.com/example/r/actions/runs/4",
+            ],
+        )
         self.assertIsNone(report["tool_metrics"]["lint_errors"]["value"])
         self.assertEqual(report["tool_metrics"]["lint_errors"]["status"], "not_instrumented")
         self.assertFalse(report["evidence_boundary"]["gate_failure_is_bug"])

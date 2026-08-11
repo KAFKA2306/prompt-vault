@@ -11,6 +11,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 API = "https://api.github.com"
+API_VERSION = "2026-03-10"
 OWNER = "KAFKA2306"
 QUALITY_HINTS = ("quality", "lint", "type", "test", "smoke", "validate", "check")
 MAX_WORKERS = 8
@@ -19,7 +20,7 @@ MAX_WORKERS = 8
 def gh_get(path: str, token: str | None = None):
     req = urllib.request.Request(f"{API}{path}")
     req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("X-GitHub-Api-Version", "2026-03-10")
+    req.add_header("X-GitHub-Api-Version", API_VERSION)
     if token:
         req.add_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(req, timeout=30) as response:
@@ -99,11 +100,23 @@ def unknown_metric(reason: str = "not_instrumented") -> dict:
     return {"value": None, "status": reason}
 
 
+def ratchet_status(delta: int) -> str:
+    if delta > 0:
+        return "WORSENED"
+    if delta < 0:
+        return "IMPROVED"
+    return "UNCHANGED"
+
+
 def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
     current_start = generated_at - timedelta(days=30)
     baseline_start = generated_at - timedelta(days=60)
     baseline = summarize_window(runs, baseline_start, current_start)
     current = summarize_window(runs, current_start, generated_at)
+    rejection_delta = current["regression_gate_rejections"] - baseline["regression_gate_rejections"]
+    run_delta = current["quality_gate_runs"] - baseline["quality_gate_runs"]
+    current_commits = sorted({p["head_sha"] for p in current["provenance"] if p.get("head_sha")})
+    current_run_urls = sorted({p["run_url"] for p in current["provenance"] if p.get("run_url")})
     return {
         "schema_version": "kafka.results.code-quality.v1",
         "repository": repo,
@@ -116,10 +129,25 @@ def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
             "baseline": baseline,
             "current": current,
             "delta": {
-                "regression_gate_rejections": current["regression_gate_rejections"] - baseline["regression_gate_rejections"],
-                "quality_gate_runs": current["quality_gate_runs"] - baseline["quality_gate_runs"],
+                "regression_gate_rejections": rejection_delta,
+                "quality_gate_runs": run_delta,
             },
             "definition": "Observed first-attempt GitHub Actions runs whose workflow name/path is quality-oriented. A failed gate is not counted as a product bug without separate reproduction evidence.",
+        },
+        "ratchet": {
+            "metric": "first_attempt_quality_gate_rejections",
+            "before": baseline["regression_gate_rejections"],
+            "after": current["regression_gate_rejections"],
+            "delta": rejection_delta,
+            "status": ratchet_status(rejection_delta),
+            "worsened": rejection_delta > 0,
+            "interpretation": "This is a gate-rejection count trend, not a product-bug count. Activity volume can differ between windows.",
+        },
+        "measurement": {
+            "tool": "github-actions-workflow-runs-rest-api",
+            "tool_version": API_VERSION,
+            "source_commits": current_commits,
+            "run_urls": current_run_urls,
         },
         "tool_metrics": {
             "lint_errors": unknown_metric(),
