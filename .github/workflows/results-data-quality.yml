@@ -1,0 +1,79 @@
+name: KAFKA RESULTS data quality
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect_data_quality.py"
+      - "tests/test_collect_data_quality.py"
+      - ".github/workflows/results-data-quality.yml"
+      - "docs/results-data-quality.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/collect_data_quality.py"
+      - "tests/test_collect_data_quality.py"
+      - ".github/workflows/results-data-quality.yml"
+      - "docs/results-data-quality.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "47 1 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  data-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            scripts/collect_data_quality.py
+            tests/test_collect_data_quality.py
+            docs/results-data-quality.md
+            .github/workflows/results-data-quality.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_data_quality.py'
+      - name: Collect data-quality reports
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/collect_data_quality.py --owner KAFKA2306 --out results/data-quality
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('results/data-quality').glob('*.json'))
+          assert files, 'no data-quality reports generated'
+          measured = []
+          for path in files:
+              data = json.loads(path.read_text())
+              assert data['schema_version'] == 'kafka.results.data-quality.v1'
+              if data['instrumentation']['status'] == 'measured':
+                  measured.append(data)
+                  assert data['canonical_population']['value'] is not None
+                  assert data['provenance']['source_commit']
+                  assert data['provenance']['evidence']
+                  for key in ('source_hash_coverage', 'rejection_reason_coverage'):
+                      metric = data['metrics'][key]
+                      assert 'numerator' in metric and 'denominator' in metric
+              else:
+                  assert data['canonical_population']['value'] is None
+          assert any(d['repository'] == 'KAFKA2306/semiconductor-earnings-model' for d in measured)
+          print(f'validated {len(files)} reports; measured adapters={len(measured)}')
+          PY
+      - name: Upload data-quality snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-data-quality
+          path: results/data-quality/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results/data-quality tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
