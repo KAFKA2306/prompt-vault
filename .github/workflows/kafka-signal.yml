@@ -1,0 +1,42 @@
+name: KAFKA SIGNAL
+
+on:
+  pull_request:
+    paths:
+      - "design-systems/kafka-signal/**"
+      - ".github/workflows/kafka-signal.yml"
+  push:
+    branches: [main]
+    paths:
+      - "design-systems/kafka-signal/**"
+      - ".github/workflows/kafka-signal.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate canonical package
+        run: python design-systems/kafka-signal/scripts/validate.py
+      - name: Test scoring engine
+        run: python -m unittest discover -s design-systems/kafka-signal/tests -p "test_*.py" -v
+      - name: Verify fail-close fixture
+        run: |
+          python design-systems/kafka-signal/scripts/score.py \
+            --input design-systems/kafka-signal/audit/fixtures/high-score-unverified.json \
+            --output /tmp/scorecard.json
+          python - <<'PY'
+          import json
+          data=json.load(open('/tmp/scorecard.json'))
+          row=data['records'][0]
+          assert row['nominal_grade']=='S'
+          assert row['grade']=='B'
+          assert row['canonical_candidate'] is False
+          assert row['decision_status']=='provisional'
+          PY

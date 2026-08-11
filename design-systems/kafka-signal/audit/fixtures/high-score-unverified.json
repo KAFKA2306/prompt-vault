@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "repo": "KAFKA2306/example",
+      "element": "SearchFilter",
+      "path": "web/components/SearchFilter.tsx",
+      "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "scores": {
+        "visual_quality": 5,
+        "task_completion": 5,
+        "responsiveness": 5,
+        "accessibility": 4,
+        "interaction_quality": 4,
+        "data_semantics": 4,
+        "reusability": 4,
+        "evidence_maintainability": 4
+      },
+      "evidence": {
+        "static": ["web/components/SearchFilter.tsx"],
+        "browser": {
+          "verified": false,
+          "viewports": [],
+          "screenshots": [],
+          "console_errors": 0,
+          "unexpected_overflow": 0,
+          "keyboard_focus_verified": false
+        }
+      },
+      "canonical_target": "components/search-filter"
+    }
+  ]
+}

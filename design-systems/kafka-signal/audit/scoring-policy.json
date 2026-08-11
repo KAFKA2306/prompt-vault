@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "dimensions": [
+    "visual_quality",
+    "task_completion",
+    "responsiveness",
+    "accessibility",
+    "interaction_quality",
+    "data_semantics",
+    "reusability",
+    "evidence_maintainability"
+  ],
+  "thresholds": [
+    {"grade": "S", "min": 34, "max": 40},
+    {"grade": "A", "min": 29, "max": 33},
+    {"grade": "B", "min": 23, "max": 28},
+    {"grade": "C", "min": 16, "max": 22},
+    {"grade": "D", "min": 0, "max": 15}
+  ],
+  "canonical_candidate_grades": ["S", "A"],
+  "browser_verification_required_for": ["S", "A"],
+  "required_viewports": [360, 768, 1440],
+  "fail_close": {
+    "console_errors_must_equal": 0,
+    "unexpected_overflow_must_equal": 0,
+    "keyboard_focus_verified_must_equal": true
+  }
+}

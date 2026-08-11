@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KAFKA2306/prompt-vault/design-systems/kafka-signal/audit/input.schema.json",
+  "title": "KAFKA SIGNAL scoring input",
+  "type": "object",
+  "required": ["records"],
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["repo", "element", "path", "source_commit", "scores", "evidence"],
+        "properties": {
+          "repo": {"type": "string"},
+          "element": {"type": "string"},
+          "path": {"type": "string"},
+          "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "scores": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["visual_quality", "task_completion", "responsiveness", "accessibility", "interaction_quality", "data_semantics", "reusability", "evidence_maintainability"],
+            "properties": {
+              "visual_quality": {"type": "integer", "minimum": 0, "maximum": 5},
+              "task_completion": {"type": "integer", "minimum": 0, "maximum": 5},
+              "responsiveness": {"type": "integer", "minimum": 0, "maximum": 5},
+              "accessibility": {"type": "integer", "minimum": 0, "maximum": 5},
+              "interaction_quality": {"type": "integer", "minimum": 0, "maximum": 5},
+              "data_semantics": {"type": "integer", "minimum": 0, "maximum": 5},
+              "reusability": {"type": "integer", "minimum": 0, "maximum": 5},
+              "evidence_maintainability": {"type": "integer", "minimum": 0, "maximum": 5}
+            }
+          },
+          "evidence": {
+            "type": "object",
+            "required": ["static", "browser"],
+            "properties": {
+              "static": {"type": "array", "items": {"type": "string"}},
+              "browser": {"type": "object", "required": ["verified"]}
+            }
+          },
+          "canonical_target": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
