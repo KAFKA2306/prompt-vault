@@ -1,0 +1,55 @@
+name: KAFKA SIGNAL retrieval
+
+on:
+  pull_request:
+    paths:
+      - 'design-systems/kafka-signal/components.manifest.json'
+      - 'design-systems/kafka-signal/manifest.json'
+      - 'design-systems/kafka-signal/scripts/retrieve_components.py'
+      - 'design-systems/kafka-signal/USAGE.md'
+      - 'tests/test_kafka_signal_retrieval.py'
+      - '.github/workflows/kafka-signal-retrieval.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'design-systems/kafka-signal/components.manifest.json'
+      - 'design-systems/kafka-signal/manifest.json'
+      - 'design-systems/kafka-signal/scripts/retrieve_components.py'
+      - 'design-systems/kafka-signal/USAGE.md'
+      - 'tests/test_kafka_signal_retrieval.py'
+      - '.github/workflows/kafka-signal-retrieval.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            design-systems/kafka-signal
+            tests/test_kafka_signal_retrieval.py
+            .github/workflows/kafka-signal-retrieval.yml
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Compile retrieval tool
+        run: python -m py_compile design-systems/kafka-signal/scripts/retrieve_components.py tests/test_kafka_signal_retrieval.py
+      - name: Test retrieval contract
+        run: python -m unittest tests.test_kafka_signal_retrieval -v
+      - name: Smoke machine-readable retrieval
+        run: |
+          python design-systems/kafka-signal/scripts/retrieve_components.py '証拠 出典 更新日時' > /tmp/kafka-signal-retrieval.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('/tmp/kafka-signal-retrieval.json').read_text())
+          assert payload['schema_version'] == 'kafka-signal-retrieval-result.v1'
+          assert payload['results']
+          assert payload['results'][0]['component_id'] == 'EvidenceMeta'
+          PY
+      - name: Verify clean checkout
+        if: always()
+        run: test -z "$(git status --porcelain --untracked-files=all)"
