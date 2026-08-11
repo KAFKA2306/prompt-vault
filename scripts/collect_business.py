@@ -42,12 +42,13 @@ def list_owner_repositories(owner: str, token: str | None = None) -> list[dict]:
     return repositories
 
 
-def list_business_declarations(repo: dict, token: str | None = None) -> list[dict]:
+def list_business_declarations(repo: dict, token: str | None = None) -> tuple[list[dict], bool]:
     owner, name = repo["full_name"].split("/", 1)
-    ref = urllib.parse.quote(repo.get("default_branch") or "main", safe="")
+    branch = repo.get("default_branch") or "main"
+    ref = urllib.parse.quote(branch, safe="")
     tree = gh_get(f"/repos/{owner}/{name}/git/trees/{ref}?recursive=1", token)
     if tree.get("truncated"):
-        return []
+        return [], False
     declarations = []
     for entry in tree.get("tree", []):
         path = entry.get("path")
@@ -58,18 +59,18 @@ def list_business_declarations(repo: dict, token: str | None = None) -> list[dic
                 {
                     "path": path,
                     "blob_sha": entry.get("sha"),
-                    "url": f"https://github.com/{repo['full_name']}/blob/{repo.get('default_branch') or 'main'}/{path}",
+                    "url": f"https://github.com/{repo['full_name']}/blob/{branch}/{path}",
                     "kind": "repository_owned_business_declaration",
                 }
             )
-    return sorted(declarations, key=lambda item: item["path"])
+    return sorted(declarations, key=lambda item: item["path"]), True
 
 
 def unknown_metric(reason: str) -> dict:
     return {"value": None, "status": "not_instrumented", "reason": reason}
 
 
-def aggregate(repo: dict, declarations: list[dict], generated_at: datetime) -> dict:
+def aggregate(repo: dict, declarations: list[dict], tree_complete: bool, generated_at: datetime) -> dict:
     source_reason = (
         "No repository-owned machine-readable transaction source is connected. "
         "A business/service document is evidence of a declared offer, not evidence of orders, revenue, customers, or conversion."
@@ -84,12 +85,19 @@ def aggregate(repo: dict, declarations: list[dict], generated_at: datetime) -> d
         "conversion_events": unknown_metric(source_reason),
         "qualified_leads": unknown_metric(source_reason),
     }
+    if not tree_complete:
+        inventory_status = "unknown_tree_truncated"
+    elif declarations:
+        inventory_status = "declared_business_surface_detected"
+    else:
+        inventory_status = "no_declared_business_surface_detected"
     return {
         "schema_version": "kafka.results.business.v1",
         "repository": repo["full_name"],
         "data_as_of": generated_at.isoformat(),
         "inventory": {
-            "status": "declared_business_surface_detected" if declarations else "no_declared_business_surface_detected",
+            "status": inventory_status,
+            "tree_complete": tree_complete,
             "declarations": declarations,
             "classification_limit": "Only repository-owned docs/business/*.md and docs/services/*.md are inventoried; README prose, prices, stars, downloads, and issue text are not interpreted as sales evidence.",
         },
@@ -115,8 +123,7 @@ def aggregate(repo: dict, declarations: list[dict], generated_at: datetime) -> d
             "repository_url": repo.get("html_url"),
             "repository_id": repo.get("id"),
             "repository_node_id": repo.get("node_id"),
-            "default_branch": repo.get("default_branch"),
-            "source_commit": repo.get("default_branch"),
+            "source_ref": repo.get("default_branch") or "main",
             "tree_endpoint": f"/repos/{repo['full_name']}/git/trees/{repo.get('default_branch') or 'main'}?recursive=1",
         },
     }
@@ -129,8 +136,8 @@ def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[P
     for repo in list_owner_repositories(owner, token):
         if repo.get("archived") or repo.get("private"):
             continue
-        declarations = list_business_declarations(repo, token)
-        report = aggregate(repo, declarations, now)
+        declarations, tree_complete = list_business_declarations(repo, token)
+        report = aggregate(repo, declarations, tree_complete, now)
         path = out_dir / f"{repo['name']}.json"
         path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(path)
