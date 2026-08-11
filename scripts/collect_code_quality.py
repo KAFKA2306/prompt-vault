@@ -24,6 +24,33 @@ def gh_get(path: str, token: str | None = None):
         return json.load(response)
 
 
+def list_owner_repositories(owner: str, token: str | None = None) -> list[dict]:
+    repositories: list[dict] = []
+    page = 1
+    while True:
+        batch = gh_get(f"/users/{owner}/repos?per_page=100&type=owner&sort=full_name&page={page}", token)
+        repositories.extend(batch)
+        if len(batch) < 100:
+            return repositories
+        page += 1
+
+
+def list_repository_runs(owner: str, repo: str, since: datetime, token: str | None = None) -> list[dict]:
+    runs: list[dict] = []
+    created = urllib.parse.quote(f">={since.strftime('%Y-%m-%dT%H:%M:%SZ')}")
+    page = 1
+    while True:
+        payload = gh_get(
+            f"/repos/{owner}/{repo}/actions/runs?per_page=100&page={page}&created={created}",
+            token,
+        )
+        batch = payload.get("workflow_runs", [])
+        runs.extend(batch)
+        if len(batch) < 100:
+            return runs
+        page += 1
+
+
 def is_quality_run(run: dict) -> bool:
     text = f"{run.get('name', '')} {run.get('path', '')}".lower()
     return any(hint in text for hint in QUALITY_HINTS)
@@ -116,16 +143,16 @@ def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
 
 def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[Path]:
     now = datetime.now(timezone.utc).replace(microsecond=0)
-    repos = gh_get(f"/users/{owner}/repos?per_page=100&type=owner&sort=full_name", token)
+    since = now - timedelta(days=60)
+    repos = list_owner_repositories(owner, token)
     written: list[Path] = []
     out_dir.mkdir(parents=True, exist_ok=True)
-    created = urllib.parse.quote(f">={(now - timedelta(days=60)).strftime('%Y-%m-%dT%H:%M:%SZ')}")
     for repo in repos:
         if repo.get("archived"):
             continue
         name = repo["name"]
-        payload = gh_get(f"/repos/{owner}/{name}/actions/runs?per_page=100&created={created}", token)
-        report = aggregate(f"{owner}/{name}", payload.get("workflow_runs", []), now)
+        runs = list_repository_runs(owner, name, since, token)
+        report = aggregate(f"{owner}/{name}", runs, now)
         path = out_dir / f"{name}.json"
         path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(path)
