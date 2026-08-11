@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -42,13 +43,18 @@ def list_owner_repositories(owner: str, token: str | None = None) -> list[dict]:
     return repositories
 
 
-def list_business_declarations(repo: dict, token: str | None = None) -> tuple[list[dict], bool]:
+def list_business_declarations(repo: dict, token: str | None = None) -> tuple[list[dict], str]:
     owner, name = repo["full_name"].split("/", 1)
     branch = repo.get("default_branch") or "main"
     ref = urllib.parse.quote(branch, safe="")
-    tree = gh_get(f"/repos/{owner}/{name}/git/trees/{ref}?recursive=1", token)
+    try:
+        tree = gh_get(f"/repos/{owner}/{name}/git/trees/{ref}?recursive=1", token)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 409:
+            return [], "unavailable_conflict"
+        raise
     if tree.get("truncated"):
-        return [], False
+        return [], "truncated"
     declarations = []
     for entry in tree.get("tree", []):
         path = entry.get("path")
@@ -63,14 +69,14 @@ def list_business_declarations(repo: dict, token: str | None = None) -> tuple[li
                     "kind": "repository_owned_business_declaration",
                 }
             )
-    return sorted(declarations, key=lambda item: item["path"]), True
+    return sorted(declarations, key=lambda item: item["path"]), "complete"
 
 
 def unknown_metric(reason: str) -> dict:
     return {"value": None, "status": "not_instrumented", "reason": reason}
 
 
-def aggregate(repo: dict, declarations: list[dict], tree_complete: bool, generated_at: datetime) -> dict:
+def aggregate(repo: dict, declarations: list[dict], tree_status: str, generated_at: datetime) -> dict:
     source_reason = (
         "No repository-owned machine-readable transaction source is connected. "
         "A business/service document is evidence of a declared offer, not evidence of orders, revenue, customers, or conversion."
@@ -85,8 +91,10 @@ def aggregate(repo: dict, declarations: list[dict], tree_complete: bool, generat
         "conversion_events": unknown_metric(source_reason),
         "qualified_leads": unknown_metric(source_reason),
     }
-    if not tree_complete:
+    if tree_status == "truncated":
         inventory_status = "unknown_tree_truncated"
+    elif tree_status == "unavailable_conflict":
+        inventory_status = "unknown_tree_unavailable"
     elif declarations:
         inventory_status = "declared_business_surface_detected"
     else:
@@ -97,7 +105,7 @@ def aggregate(repo: dict, declarations: list[dict], tree_complete: bool, generat
         "data_as_of": generated_at.isoformat(),
         "inventory": {
             "status": inventory_status,
-            "tree_complete": tree_complete,
+            "tree_status": tree_status,
             "declarations": declarations,
             "classification_limit": "Only repository-owned docs/business/*.md and docs/services/*.md are inventoried; README prose, prices, stars, downloads, and issue text are not interpreted as sales evidence.",
         },
@@ -136,8 +144,8 @@ def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[P
     for repo in list_owner_repositories(owner, token):
         if repo.get("archived") or repo.get("private"):
             continue
-        declarations, tree_complete = list_business_declarations(repo, token)
-        report = aggregate(repo, declarations, tree_complete, now)
+        declarations, tree_status = list_business_declarations(repo, token)
+        report = aggregate(repo, declarations, tree_status, now)
         path = out_dir / f"{repo['name']}.json"
         path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(path)
