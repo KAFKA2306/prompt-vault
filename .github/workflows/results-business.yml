@@ -1,0 +1,85 @@
+name: KAFKA RESULTS business
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect_business.py"
+      - "tests/test_collect_business.py"
+      - ".github/workflows/results-business.yml"
+      - "docs/results-business.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/collect_business.py"
+      - "tests/test_collect_business.py"
+      - ".github/workflows/results-business.yml"
+      - "docs/results-business.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "47 1 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  business:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            scripts/collect_business.py
+            tests/test_collect_business.py
+            docs/results-business.md
+            .github/workflows/results-business.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_business.py'
+      - name: Collect business reports
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/collect_business.py --owner KAFKA2306 --out results/business
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('results/business').glob('*.json'))
+          assert files, 'no business reports generated'
+          for path in files:
+              data = json.loads(path.read_text())
+              assert data['schema_version'] == 'kafka.results.business.v1'
+              contract = data['measurement_contract']
+              assert contract['actual_and_estimate_separated'] is True
+              assert contract['revenue_and_profit_separated'] is True
+              assert contract['gross_net_fee_tax_separated'] is True
+              assert contract['unobserved_business_metric_is_zero'] is False
+              assert contract['private_transaction_detail_published'] is False
+              assert contract['free_usage_or_downloads_counted_as_revenue'] is False
+              for metric in data['metrics'].values():
+                  assert metric['value'] is None
+                  assert metric['status'] == 'not_instrumented'
+              for period in ('7d', '30d', 'monthly'):
+                  assert data['periods'][period]['status'] == 'not_instrumented'
+              for declaration in data['inventory']['declarations']:
+                  assert declaration['path'].startswith(('docs/business/', 'docs/services/'))
+                  assert declaration['blob_sha']
+                  assert declaration['url'].startswith('https://github.com/')
+              assert data['provenance']['source_system'] == 'GitHub REST API'
+              assert data['provenance']['repository_url']
+          print(f'validated {len(files)} repository reports')
+          PY
+      - name: Upload business snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-business
+          path: results/business/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results/business tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
