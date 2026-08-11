@@ -107,6 +107,19 @@ class AggregateResultsTests(unittest.TestCase):
             self.assertTrue(first.exists())
             self.assertNotEqual(first.read_text(), revision.read_text())
 
+    def test_url_status_is_metadata_not_an_evidence_url(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            write(root, "adoption", "repo", {
+                "schema_version": "kafka.results.adoption.v1",
+                "repository": "KAFKA2306/repo",
+                "metrics": {},
+                "inventory": {"url_status": "not_resolved_from_repository_metadata"},
+                "provenance": {"repository_url": "https://github.com/KAFKA2306/repo"},
+            })
+            rows = agg.load_inputs(root)
+            self.assertEqual(rows[0]["evidence_urls"], ["https://github.com/KAFKA2306/repo"])
+
     def test_invalid_evidence_url_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
