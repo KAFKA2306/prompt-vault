@@ -28,6 +28,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/collect_reliability.py
+            tests/test_collect_reliability.py
+            docs/results-reliability.md
+            .github/workflows/results-reliability.yml
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
