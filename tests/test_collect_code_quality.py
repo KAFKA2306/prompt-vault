@@ -1,7 +1,13 @@
 import unittest
 from datetime import datetime, timezone
 
-from scripts.collect_code_quality import aggregate, is_quality_run, ratchet_status
+from scripts.collect_code_quality import (
+    aggregate,
+    apply_native_evidence,
+    is_quality_run,
+    ratchet_status,
+    validate_native_evidence,
+)
 
 
 class CodeQualityCollectorTests(unittest.TestCase):
@@ -105,6 +111,54 @@ class CodeQualityCollectorTests(unittest.TestCase):
         self.assertEqual(report["tool_metrics"]["lint_errors"]["status"], "not_instrumented")
         self.assertFalse(report["evidence_boundary"]["gate_failure_is_bug"])
         self.assertFalse(report["evidence_boundary"]["unknown_is_zero"])
+
+    def test_native_metric_measured_zero_is_not_unknown(self):
+        now = datetime(2026, 8, 12, tzinfo=timezone.utc)
+        report = aggregate("KAFKA2306/prompt-vault", [], now)
+        evidence = {
+            "schema_version": "kafka.results.native-tool-metric.v1",
+            "repository": "KAFKA2306/prompt-vault",
+            "scope": "unittest discover -s tests -p test_collect_code_quality.py",
+            "captured_at": "2026-08-12T00:00:00+00:00",
+            "source_commit": "a" * 40,
+            "run_url": "https://github.com/KAFKA2306/prompt-vault/actions/runs/123",
+            "tool": "python-unittest",
+            "tool_version": "3.11.13",
+            "metrics": {
+                "failing_tests": {
+                    "value": 0,
+                    "status": "measured",
+                    "tests_run": 4,
+                    "failures": 0,
+                    "errors": 0,
+                    "skipped": 0,
+                }
+            },
+        }
+        validate_native_evidence(evidence)
+        apply_native_evidence(report, evidence)
+        metric = report["tool_metrics"]["failing_tests"]
+        self.assertEqual(metric["value"], 0)
+        self.assertEqual(metric["status"], "measured")
+        self.assertEqual(metric["tests_run"], 4)
+        self.assertEqual(metric["source_commit"], "a" * 40)
+        self.assertEqual(metric["tool"], "python-unittest")
+        self.assertIsNone(report["tool_metrics"]["lint_errors"]["value"])
+
+    def test_native_metric_mismatched_repository_fails_closed(self):
+        report = aggregate("KAFKA2306/prompt-vault", [], datetime(2026, 8, 12, tzinfo=timezone.utc))
+        evidence = {
+            "schema_version": "kafka.results.native-tool-metric.v1",
+            "repository": "KAFKA2306/books",
+            "scope": "tests",
+            "source_commit": "b" * 40,
+            "run_url": "https://github.com/KAFKA2306/books/actions/runs/123",
+            "tool": "python-unittest",
+            "tool_version": "3.11.13",
+            "metrics": {"failing_tests": {"value": 0, "status": "measured"}},
+        }
+        with self.assertRaises(ValueError):
+            apply_native_evidence(report, evidence)
 
 
 if __name__ == "__main__":
