@@ -1,0 +1,81 @@
+name: KAFKA RESULTS code quality
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect_code_quality.py"
+      - "tests/test_collect_code_quality.py"
+      - ".github/workflows/results-code-quality.yml"
+      - "docs/results-code-quality.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/collect_code_quality.py"
+      - "tests/test_collect_code_quality.py"
+      - ".github/workflows/results-code-quality.yml"
+      - "docs/results-code-quality.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "41 1 * * *"
+
+concurrency:
+  group: results-code-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/collect_code_quality.py
+            tests/test_collect_code_quality.py
+            docs/results-code-quality.md
+            .github/workflows/results-code-quality.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_code_quality.py'
+      - name: Collect 30-day quality reports against prior 30-day baseline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/collect_code_quality.py --owner KAFKA2306 --out results/code-quality
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('results/code-quality').glob('*.json'))
+          assert files, 'no code-quality reports generated'
+          for path in files:
+              data = json.loads(path.read_text())
+              assert data['schema_version'] == 'kafka.results.code-quality.v1'
+              assert data['window']['baseline']['days'] == 30
+              assert data['window']['current']['days'] == 30
+              assert data['evidence_boundary']['gate_failure_is_bug'] is False
+              assert data['evidence_boundary']['unknown_is_zero'] is False
+              for metric in data['tool_metrics'].values():
+                  assert metric['value'] is None
+              for window in ('baseline', 'current'):
+                  for p in data['quality_gates'][window]['provenance']:
+                      assert p['run_url'] and p['head_sha'] and p['run_attempt']
+          print(f'validated {len(files)} repository reports')
+          PY
+      - name: Upload code-quality snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-code-quality
+          path: results/code-quality/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results/code-quality tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
