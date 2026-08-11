@@ -48,7 +48,9 @@ def _walk(value: Any, key: str = ""):
 def evidence_urls(payload: dict) -> list[str]:
     urls = set()
     for key, value in _walk(payload):
-        if "url" not in key.lower() or value is None:
+        lowered = key.lower()
+        is_url_field = lowered == "url" or lowered.endswith("_url") or lowered.endswith("_urls")
+        if not is_url_field or value is None:
             continue
         if isinstance(value, str):
             if not value.startswith(("https://", "http://")):
