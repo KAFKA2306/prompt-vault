@@ -1,0 +1,67 @@
+name: KAFKA RESULTS reliability
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect_reliability.py"
+      - "tests/test_collect_reliability.py"
+      - ".github/workflows/results-reliability.yml"
+      - "docs/results-reliability.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/collect_reliability.py"
+      - "tests/test_collect_reliability.py"
+      - ".github/workflows/results-reliability.yml"
+      - "docs/results-reliability.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  reliability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_reliability.py'
+      - name: Collect 30-day reliability reports
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/collect_reliability.py --owner KAFKA2306 --out results/reliability
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('results/reliability').glob('*.json'))
+          assert files, 'no reliability reports generated'
+          for path in files:
+              data = json.loads(path.read_text())
+              assert data['schema_version'] == 'kafka.results.reliability.v1'
+              assert data['window']['days'] == 30
+              assert set(data['runs']) >= {'total','success','failure','cancelled'}
+              for wf in data['workflows']:
+                  assert wf['state'] == 'active'
+                  for p in wf['provenance']:
+                      assert p['run_url'] and p['head_sha'] and p['run_attempt']
+          print(f'validated {len(files)} repository reports')
+          PY
+      - name: Upload reliability snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-reliability
+          path: results/reliability/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results/reliability tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
