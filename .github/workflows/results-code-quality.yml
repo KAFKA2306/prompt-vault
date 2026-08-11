@@ -49,9 +49,11 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_collect_code_quality.py'
       - name: Emit repo-native unittest evidence
         run: |
-          python scripts/emit_native_test_metric.py \
+          python -m scripts.emit_native_test_metric \
             --start-dir tests \
             --pattern 'test_collect_code_quality.py' \
+            --source-commit "${{ github.event.pull_request.head.sha || github.sha }}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             --out results/native/prompt-vault.json
       - name: Collect 30-day quality reports against prior 30-day baseline
         env:
