@@ -1,0 +1,74 @@
+name: KAFKA RESULTS automation
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect_automation.py"
+      - "tests/test_collect_automation.py"
+      - ".github/workflows/results-automation.yml"
+      - "docs/results-automation.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/collect_automation.py"
+      - "tests/test_collect_automation.py"
+      - ".github/workflows/results-automation.yml"
+      - "docs/results-automation.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "27 1 * * *"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/collect_automation.py
+            tests/test_collect_automation.py
+            docs/results-automation.md
+            .github/workflows/results-automation.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_automation.py'
+      - name: Collect 30-day automation reports
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/collect_automation.py --owner KAFKA2306 --out results/automation
+      - name: Contract audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('results/automation').glob('*.json'))
+          assert files, 'no automation reports generated'
+          for path in files:
+              data = json.loads(path.read_text())
+              assert data['schema_version'] == 'kafka.results.automation.v1'
+              assert data['window']['days'] == 30
+              assert data['runs']['scheduled_runs'] == data['manual_start_actions_avoided']['observed']
+              assert data['manual_interventions']['value'] is None
+              assert data['hours_saved']['value'] is None
+              for p in data['provenance']:
+                  assert p['run_url'] and p['head_sha'] and p['run_attempt']
+          print(f'validated {len(files)} repository reports')
+          PY
+      - name: Upload automation snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: kafka-results-automation
+          path: results/automation/*.json
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results/automation tests/__pycache__ scripts/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
