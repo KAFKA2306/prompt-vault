@@ -92,10 +92,11 @@ class CodeQualityCollectorTests(unittest.TestCase):
         self.assertFalse(report["ratchet"]["worsened"])
         self.assertEqual(report["measurement"]["tool"], "github-actions-workflow-runs-rest-api")
         self.assertEqual(report["measurement"]["tool_version"], "2026-03-10")
-        self.assertEqual(report["measurement"]["source_commits"], ["c" * 40])
+        self.assertEqual(report["measurement"]["source_commits"], ["b" * 40, "c" * 40])
         self.assertEqual(
             report["measurement"]["run_urls"],
             [
+                "https://github.com/example/r/actions/runs/2",
                 "https://github.com/example/r/actions/runs/3",
                 "https://github.com/example/r/actions/runs/4",
             ],
