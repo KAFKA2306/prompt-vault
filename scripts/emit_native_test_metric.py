@@ -13,7 +13,13 @@ SCHEMA_VERSION = "kafka.results.native-tool-metric.v1"
 
 
 def run_suite(start_dir: str, pattern: str) -> unittest.TestResult:
-    suite = unittest.defaultTestLoader.discover(start_dir=start_dir, pattern=pattern)
+    # top_level_dir keeps the repository root importable even when this file is
+    # executed as `python scripts/emit_native_test_metric.py`.
+    suite = unittest.defaultTestLoader.discover(
+        start_dir=start_dir,
+        pattern=pattern,
+        top_level_dir=".",
+    )
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
