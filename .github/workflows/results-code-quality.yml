@@ -50,8 +50,7 @@ jobs:
       - name: Emit repo-native unittest evidence
         run: |
           python -m scripts.emit_native_test_metric \
-            --start-dir tests \
-            --pattern 'test_collect_code_quality.py' \
+            --test-file tests/test_collect_code_quality.py \
             --source-commit "${{ github.event.pull_request.head.sha || github.sha }}" \
             --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             --out results/native/prompt-vault.json
@@ -98,6 +97,7 @@ jobs:
           failing = prompt['tool_metrics']['failing_tests']
           assert failing['status'] == 'measured'
           assert failing['value'] == failing['failures'] + failing['errors']
+          assert failing['value'] == 0, 'native test scope has failures'
           assert failing['tool'] == 'python-unittest'
           assert failing['tests_run'] > 0
           assert prompt['tool_metrics']['lint_errors']['status'] == 'not_instrumented'
