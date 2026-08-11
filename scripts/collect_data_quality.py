@@ -78,7 +78,6 @@ def semiconductor_report(repo: str, default_branch: str, token: str | None) -> d
     lineage = documents["lineage"]
     duplicates = documents["duplicates"]
     rejections = documents["rejections"]
-
     lineage_artifacts = lineage.get("artifacts", [])
     hash_numerator = sum(bool(row.get("sha256")) for row in lineage_artifacts)
     rejected = int(rejections.get("rejected_events_total", 0))
@@ -166,8 +165,22 @@ def uninstrumented_report(repo: str) -> dict:
     }
 
 
+def list_repositories(owner: str, token: str | None = None) -> list[dict]:
+    repos: list[dict] = []
+    page = 1
+    while True:
+        batch = gh_get(
+            f"/users/{owner}/repos?per_page=100&page={page}&type=owner&sort=full_name",
+            token,
+        )
+        repos.extend(batch)
+        if len(batch) < 100:
+            return repos
+        page += 1
+
+
 def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[Path]:
-    repos = gh_get(f"/users/{owner}/repos?per_page=100&type=owner&sort=full_name", token)
+    repos = list_repositories(owner, token)
     out_dir.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
     for item in repos:
