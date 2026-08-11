@@ -15,6 +15,7 @@ API_VERSION = "2026-03-10"
 OWNER = "KAFKA2306"
 QUALITY_HINTS = ("quality", "lint", "type", "test", "smoke", "validate", "check")
 MAX_WORKERS = 8
+NATIVE_SCHEMA_VERSION = "kafka.results.native-tool-metric.v1"
 
 
 def gh_get(path: str, token: str | None = None):
@@ -108,7 +109,83 @@ def ratchet_status(delta: int) -> str:
     return "UNCHANGED"
 
 
-def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
+def validate_native_evidence(evidence: dict) -> None:
+    if evidence.get("schema_version") != NATIVE_SCHEMA_VERSION:
+        raise ValueError("unsupported native metric schema")
+    repository = evidence.get("repository")
+    if not isinstance(repository, str) or "/" not in repository:
+        raise ValueError("native metric repository is required")
+    source_commit = evidence.get("source_commit")
+    if not isinstance(source_commit, str) or len(source_commit) != 40:
+        raise ValueError("native metric source_commit must be a 40-character Git SHA")
+    run_url = evidence.get("run_url")
+    if not isinstance(run_url, str) or "/actions/runs/" not in run_url:
+        raise ValueError("native metric run_url must identify a GitHub Actions run")
+    if not evidence.get("tool") or not evidence.get("tool_version") or not evidence.get("scope"):
+        raise ValueError("native metric tool, tool_version, and scope are required")
+    metrics = evidence.get("metrics")
+    if not isinstance(metrics, dict) or not metrics:
+        raise ValueError("native metric metrics are required")
+    for name, metric in metrics.items():
+        if name not in {
+            "lint_errors",
+            "lint_warnings",
+            "type_errors",
+            "failing_tests",
+            "flaky_tests",
+            "dead_code",
+            "duplicates",
+            "complexity",
+        }:
+            raise ValueError(f"unsupported native metric: {name}")
+        if metric.get("status") != "measured":
+            raise ValueError(f"native metric {name} must have status=measured")
+        value = metric.get("value")
+        if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+            raise ValueError(f"native metric {name} value must be a non-negative integer")
+
+
+def load_native_evidence(native_dir: Path | None) -> dict[str, dict]:
+    if native_dir is None or not native_dir.exists():
+        return {}
+    evidence_by_repo: dict[str, dict] = {}
+    for path in sorted(native_dir.glob("*.json")):
+        evidence = json.loads(path.read_text(encoding="utf-8"))
+        validate_native_evidence(evidence)
+        repository = evidence["repository"]
+        if repository in evidence_by_repo:
+            raise ValueError(f"duplicate native metric evidence for {repository}")
+        evidence_by_repo[repository] = evidence
+    return evidence_by_repo
+
+
+def apply_native_evidence(report: dict, evidence: dict | None) -> dict:
+    if evidence is None:
+        return report
+    validate_native_evidence(evidence)
+    if evidence["repository"] != report["repository"]:
+        raise ValueError("native metric repository does not match report repository")
+    for name, metric in evidence["metrics"].items():
+        report["tool_metrics"][name] = {
+            **metric,
+            "source_commit": evidence["source_commit"],
+            "run_url": evidence["run_url"],
+            "tool": evidence["tool"],
+            "tool_version": evidence["tool_version"],
+            "scope": evidence["scope"],
+            "captured_at": evidence.get("captured_at"),
+        }
+    report["measurement"]["native_tool_evidence"] = {
+        "source_commit": evidence["source_commit"],
+        "run_url": evidence["run_url"],
+        "tool": evidence["tool"],
+        "tool_version": evidence["tool_version"],
+        "scope": evidence["scope"],
+    }
+    return report
+
+
+def aggregate(repo: str, runs: list[dict], generated_at: datetime, native_evidence: dict | None = None) -> dict:
     current_start = generated_at - timedelta(days=30)
     baseline_start = generated_at - timedelta(days=60)
     baseline = summarize_window(runs, baseline_start, current_start)
@@ -117,7 +194,7 @@ def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
     run_delta = current["quality_gate_runs"] - baseline["quality_gate_runs"]
     current_commits = sorted({p["head_sha"] for p in current["provenance"] if p.get("head_sha")})
     current_run_urls = sorted({p["run_url"] for p in current["provenance"] if p.get("run_url")})
-    return {
+    report = {
         "schema_version": "kafka.results.code-quality.v1",
         "repository": repo,
         "window": {
@@ -166,15 +243,26 @@ def aggregate(repo: str, runs: list[dict], generated_at: datetime) -> dict:
         "evidence_boundary": {
             "gate_failure_is_bug": False,
             "unknown_is_zero": False,
-            "note": "Workflow outcomes are observable evidence of gate acceptance/rejection only. Tool violation counts remain unknown until a repository emits machine-readable native tool output.",
+            "note": "Workflow outcomes are observable evidence of gate acceptance/rejection only. Tool violation counts stay unknown unless a repository emits validated native tool evidence for the exact run scope.",
         },
     }
+    return apply_native_evidence(report, native_evidence)
 
 
-def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[Path]:
+def collect_owner(
+    owner: str,
+    out_dir: Path,
+    token: str | None = None,
+    native_dir: Path | None = None,
+) -> list[Path]:
     now = datetime.now(timezone.utc).replace(microsecond=0)
     since = now - timedelta(days=60)
     repos = [repo for repo in list_owner_repositories(owner, token) if not repo.get("archived")]
+    native_by_repo = load_native_evidence(native_dir)
+    known_repositories = {f"{owner}/{repo['name']}" for repo in repos}
+    unknown_native_repositories = set(native_by_repo) - known_repositories
+    if unknown_native_repositories:
+        raise ValueError(f"native metric evidence references unknown repositories: {sorted(unknown_native_repositories)}")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     reports: dict[str, dict] = {}
@@ -186,7 +274,8 @@ def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[P
         for future in as_completed(futures):
             name = futures[future]
             runs = future.result()
-            reports[name] = aggregate(f"{owner}/{name}", runs, now)
+            repository = f"{owner}/{name}"
+            reports[name] = aggregate(repository, runs, now, native_by_repo.get(repository))
 
     written: list[Path] = []
     for name in sorted(reports):
@@ -200,8 +289,10 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--owner", default=OWNER)
     parser.add_argument("--out", default="results/code-quality")
+    parser.add_argument("--native-metrics", default=None)
     args = parser.parse_args()
-    written = collect_owner(args.owner, Path(args.out), os.getenv("GITHUB_TOKEN"))
+    native_dir = Path(args.native_metrics) if args.native_metrics else None
+    written = collect_owner(args.owner, Path(args.out), os.getenv("GITHUB_TOKEN"), native_dir)
     print(json.dumps({"repositories": len(written), "output": args.out}))
     return 0
 

@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/collect_code_quality.py"
+      - "scripts/emit_native_test_metric.py"
       - "tests/test_collect_code_quality.py"
       - ".github/workflows/results-code-quality.yml"
       - "docs/results-code-quality.md"
@@ -11,6 +12,7 @@ on:
     branches: [main]
     paths:
       - "scripts/collect_code_quality.py"
+      - "scripts/emit_native_test_metric.py"
       - "tests/test_collect_code_quality.py"
       - ".github/workflows/results-code-quality.yml"
       - "docs/results-code-quality.md"
@@ -35,6 +37,7 @@ jobs:
         with:
           sparse-checkout: |
             scripts/collect_code_quality.py
+            scripts/emit_native_test_metric.py
             tests/test_collect_code_quality.py
             docs/results-code-quality.md
             .github/workflows/results-code-quality.yml
@@ -44,10 +47,21 @@ jobs:
           python-version: "3.11"
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_collect_code_quality.py'
+      - name: Emit repo-native unittest evidence
+        run: |
+          python -m scripts.emit_native_test_metric \
+            --test-file tests/test_collect_code_quality.py \
+            --source-commit "${{ github.event.pull_request.head.sha || github.sha }}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --out results/native/prompt-vault.json
       - name: Collect 30-day quality reports against prior 30-day baseline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/collect_code_quality.py --owner KAFKA2306 --out results/code-quality
+        run: |
+          python scripts/collect_code_quality.py \
+            --owner KAFKA2306 \
+            --out results/code-quality \
+            --native-metrics results/native
       - name: Contract audit
         run: |
           python - <<'PY'
@@ -69,19 +83,35 @@ jobs:
               assert data['measurement']['tool'] == 'github-actions-workflow-runs-rest-api'
               assert data['measurement']['tool_version'] == '2026-03-10'
               for metric in data['tool_metrics'].values():
-                  assert metric['value'] is None
+                  if metric['status'] == 'measured':
+                      assert isinstance(metric['value'], int) and metric['value'] >= 0
+                      assert metric['source_commit'] and metric['run_url']
+                      assert metric['tool'] and metric['tool_version'] and metric['scope']
+                  else:
+                      assert metric['value'] is None
               for window in ('baseline', 'current'):
                   for p in data['quality_gates'][window]['provenance']:
                       assert p['run_url'] and p['head_sha'] and p['run_attempt']
-          print(f'validated {len(files)} repository reports')
+
+          prompt = json.loads(Path('results/code-quality/prompt-vault.json').read_text())
+          failing = prompt['tool_metrics']['failing_tests']
+          assert failing['status'] == 'measured'
+          assert failing['value'] == failing['failures'] + failing['errors']
+          assert failing['value'] == 0, 'native test scope has failures'
+          assert failing['tool'] == 'python-unittest'
+          assert failing['tests_run'] > 0
+          assert prompt['tool_metrics']['lint_errors']['status'] == 'not_instrumented'
+          print(f"validated {len(files)} repository reports; prompt-vault failing_tests={failing['value']} tests_run={failing['tests_run']}")
           PY
-      - name: Upload code-quality snapshot
+      - name: Upload code-quality snapshot and native evidence
         uses: actions/upload-artifact@v4
         with:
           name: kafka-results-code-quality
-          path: results/code-quality/*.json
+          path: |
+            results/code-quality/*.json
+            results/native/*.json
           retention-days: 30
       - name: Verify clean checkout
         run: |
-          rm -rf results/code-quality tests/__pycache__ scripts/__pycache__
+          rm -rf results/code-quality results/native tests/__pycache__ scripts/__pycache__
           test -z "$(git status --porcelain --untracked-files=all)"
