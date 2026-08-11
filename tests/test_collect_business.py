@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import unittest
+import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -14,8 +15,8 @@ spec.loader.exec_module(module)
 
 
 class BusinessCollectorTests(unittest.TestCase):
-    def test_declared_offer_does_not_become_revenue(self):
-        repo = {
+    def base_repo(self):
+        return {
             "id": 1,
             "node_id": "R_test",
             "name": "demo",
@@ -25,11 +26,14 @@ class BusinessCollectorTests(unittest.TestCase):
             "html_url": "https://github.com/KAFKA2306/demo",
             "default_branch": "main",
         }
+
+    def test_declared_offer_does_not_become_revenue(self):
+        repo = self.base_repo()
         declarations = [{"path": "docs/business/demo.md", "blob_sha": "abc", "url": "https://example.test", "kind": "repository_owned_business_declaration"}]
-        report = module.aggregate(repo, declarations, True, datetime(2026, 8, 12, tzinfo=timezone.utc))
+        report = module.aggregate(repo, declarations, "complete", datetime(2026, 8, 12, tzinfo=timezone.utc))
         self.assertEqual(report["schema_version"], "kafka.results.business.v1")
         self.assertEqual(report["inventory"]["status"], "declared_business_surface_detected")
-        self.assertTrue(report["inventory"]["tree_complete"])
+        self.assertEqual(report["inventory"]["tree_status"], "complete")
         for metric in report["metrics"].values():
             self.assertIsNone(metric["value"])
             self.assertEqual(metric["status"], "not_instrumented")
@@ -53,34 +57,41 @@ class BusinessCollectorTests(unittest.TestCase):
 
         module.gh_get = fake_get
         try:
-            declarations, tree_complete = module.list_business_declarations(repo)
+            declarations, tree_status = module.list_business_declarations(repo)
         finally:
             module.gh_get = original
-        self.assertTrue(tree_complete)
+        self.assertEqual(tree_status, "complete")
         self.assertEqual([d["path"] for d in declarations], ["docs/business/offer.md", "docs/services/service.md"])
 
     def test_truncated_tree_is_unknown_not_empty_inventory(self):
-        repo = {
-            "id": 2,
-            "node_id": "R_truncated",
-            "name": "demo",
-            "full_name": "KAFKA2306/demo",
-            "private": False,
-            "archived": False,
-            "html_url": "https://github.com/KAFKA2306/demo",
-            "default_branch": "main",
-        }
+        repo = self.base_repo()
         original = module.gh_get
         module.gh_get = lambda path, token=None: {"truncated": True, "tree": []}
         try:
-            declarations, tree_complete = module.list_business_declarations(repo)
+            declarations, tree_status = module.list_business_declarations(repo)
         finally:
             module.gh_get = original
         self.assertEqual(declarations, [])
-        self.assertFalse(tree_complete)
-        report = module.aggregate(repo, declarations, tree_complete, datetime(2026, 8, 12, tzinfo=timezone.utc))
+        self.assertEqual(tree_status, "truncated")
+        report = module.aggregate(repo, declarations, tree_status, datetime(2026, 8, 12, tzinfo=timezone.utc))
         self.assertEqual(report["inventory"]["status"], "unknown_tree_truncated")
-        self.assertFalse(report["inventory"]["tree_complete"])
+
+    def test_git_tree_conflict_is_unknown_not_collection_failure(self):
+        repo = self.base_repo()
+        original = module.gh_get
+
+        def conflict(path, token=None):
+            raise urllib.error.HTTPError("https://api.github.test/tree", 409, "Conflict", None, None)
+
+        module.gh_get = conflict
+        try:
+            declarations, tree_status = module.list_business_declarations(repo)
+        finally:
+            module.gh_get = original
+        self.assertEqual(declarations, [])
+        self.assertEqual(tree_status, "unavailable_conflict")
+        report = module.aggregate(repo, declarations, tree_status, datetime(2026, 8, 12, tzinfo=timezone.utc))
+        self.assertEqual(report["inventory"]["status"], "unknown_tree_unavailable")
 
     def test_repository_listing_paginates(self):
         calls = []
