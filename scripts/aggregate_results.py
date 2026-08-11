@@ -19,6 +19,17 @@ CATEGORIES = {
     "business": "kafka.results.business.v1",
 }
 PERIODS = ("today", "7d", "30d", "all-time")
+STRICT_EVIDENCE_URL_KEYS = {
+    "repository_url",
+    "run_url",
+    "source_url",
+    "evidence_url",
+    "artifact_url",
+    "workflow_run_url",
+    "commit_url",
+    "issue_url",
+    "pr_url",
+}
 
 
 def canonical_json(value: Any) -> bytes:
@@ -45,17 +56,32 @@ def _walk(value: Any, key: str = ""):
         yield key, value
 
 
+def _walk_paths(value: Any, path: tuple[str, ...] = ()):
+    if isinstance(value, dict):
+        for child_key, child in value.items():
+            yield from _walk_paths(child, path + (child_key,))
+    elif isinstance(value, list):
+        for child in value:
+            yield from _walk_paths(child, path)
+    else:
+        yield path, value
+
+
 def evidence_urls(payload: dict) -> list[str]:
     urls = set()
-    for key, value in _walk(payload):
-        lowered = key.lower()
-        is_url_field = lowered == "url" or lowered.endswith("_url") or lowered.endswith("_urls")
-        if not is_url_field or value is None:
+    for path, value in _walk_paths(payload):
+        if not path or not isinstance(value, str):
             continue
-        if isinstance(value, str):
-            if not value.startswith(("https://", "http://")):
-                raise ValueError(f"invalid evidence URL in {key}: {value!r}")
-            urls.add(value)
+        key = path[-1].lower()
+        parent_tokens = {part.lower() for part in path[:-1]}
+        provenance_context = bool(parent_tokens & {"provenance", "evidence", "evidences"})
+        is_strict = key in STRICT_EVIDENCE_URL_KEYS
+        is_contextual = provenance_context and (key == "url" or key.endswith("_url") or key.endswith("_urls"))
+        if not (is_strict or is_contextual):
+            continue
+        if not value.startswith(("https://", "http://")):
+            raise ValueError(f"invalid evidence URL in {'.'.join(path)}: {value!r}")
+        urls.add(value)
     return sorted(urls)
 
 
