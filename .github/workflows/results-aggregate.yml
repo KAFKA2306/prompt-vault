@@ -60,6 +60,10 @@ jobs:
             target="results/$category"
             mkdir -p "$incoming" "$target"
             gh run download "$run_id" -n "kafka-results-$category" -D "$incoming"
+            source_root="$incoming"
+            if [[ -d "$incoming/$category" ]]; then
+              source_root="$incoming/$category"
+            fi
             count=0
             while IFS= read -r -d '' source; do
               name="$(basename "$source")"
@@ -70,9 +74,9 @@ jobs:
               fi
               cp "$source" "$destination"
               count=$((count + 1))
-            done < <(find "$incoming" -type f -name '*.json' -print0)
+            done < <(find "$source_root" -maxdepth 1 -type f -name '*.json' -print0)
             if [[ "$count" -eq 0 ]]; then
-              echo "Artifact kafka-results-$category contained no JSON input" >&2
+              echo "Artifact kafka-results-$category contained no domain JSON input" >&2
               exit 1
             fi
           done
