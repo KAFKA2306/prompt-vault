@@ -62,6 +62,12 @@ jobs:
               assert data['window']['current']['days'] == 30
               assert data['evidence_boundary']['gate_failure_is_bug'] is False
               assert data['evidence_boundary']['unknown_is_zero'] is False
+              assert data['ratchet']['status'] in {'WORSENED', 'UNCHANGED', 'IMPROVED'}
+              assert data['ratchet']['worsened'] is (data['ratchet']['delta'] > 0)
+              assert data['ratchet']['before'] == data['quality_gates']['baseline']['regression_gate_rejections']
+              assert data['ratchet']['after'] == data['quality_gates']['current']['regression_gate_rejections']
+              assert data['measurement']['tool'] == 'github-actions-workflow-runs-rest-api'
+              assert data['measurement']['tool_version'] == '2026-03-10'
               for metric in data['tool_metrics'].values():
                   assert metric['value'] is None
               for window in ('baseline', 'current'):
