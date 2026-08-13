@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KAFKA2306/prompt-vault/blob/main/design-systems/kafka-signal/consumers/schema.json",
+  "title": "KAFKA SIGNAL Pages asset consumer manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "repository", "assets"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "repository": {"type": "string", "pattern": "^KAFKA2306/[A-Za-z0-9._-]+$"},
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["collection", "id", "destination"],
+        "properties": {
+          "collection": {"type": "string", "minLength": 1},
+          "id": {"type": "string", "minLength": 1},
+          "destination": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!\\.git(?:/|$)).+$"
+          }
+        }
+      }
+    }
+  }
+}
