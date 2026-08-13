@@ -1,1 +1,33 @@
-<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="../tokens.css"><title>KAFKA SIGNAL preview</title><style>body{margin:0;background:var(--ks-canvas);color:var(--ks-ink);font:1rem/1.7 var(--ks-font-body)}main{max-width:72rem;margin:auto;padding:2rem 1rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem}.panel{padding:1rem}</style><main><h1>KAFKA SIGNAL preview</h1><p>Catalogue, comparison, evidence, timeline, empty, loading, and error states use the same semantic contract.</p><div class="grid"><section class="ks-surface panel"><h2>Evidence</h2><span class="ks-status" data-state="verified">確認済み</span><p>根拠、日時、状態、修正経路を表示します。</p></section><section class="ks-surface panel"><h2>Empty</h2><p>比較対象がありません。2件以上を選択してください。</p></section><section class="ks-surface panel"><h2>Error</h2><span class="ks-status" data-state="attention">要確認</span><p>対象データの取得に失敗しました。既存データは維持されます。</p></section></div></main></html>
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="../tokens.css">
+<title>KAFKA SIGNAL preview</title>
+<style>
+body{margin:0;background:var(--ks-canvas);color:var(--ks-ink);font:1rem/1.7 var(--ks-font-body)}
+main{max-width:72rem;margin:auto;padding:2rem 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem}.panel{padding:1rem}
+.asset-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem}
+.asset{margin:0;padding:1rem;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:1rem;background:color-mix(in srgb,var(--ks-canvas) 80%,white)}
+.asset img{width:100%;height:8rem;object-fit:contain;display:block}.asset figcaption{margin-top:.5rem;font-size:.78rem;overflow-wrap:anywhere}
+</style>
+<main>
+<h1>KAFKA SIGNAL preview</h1>
+<p>Catalogue, comparison, evidence, timeline, empty, loading, and error states use the same semantic contract.</p>
+<div class="grid"><section class="ks-surface panel"><h2>Evidence</h2><span class="ks-status" data-state="verified">確認済み</span><p>根拠、日時、状態、修正経路を表示します。</p></section><section class="ks-surface panel"><h2>Empty</h2><p>比較対象がありません。2件以上を選択してください。</p></section><section class="ks-surface panel"><h2>Error</h2><span class="ks-status" data-state="attention">要確認</span><p>対象データの取得に失敗しました。既存データは維持されます。</p></section></div>
+<section><h2>Agent World asset pack</h2><p>Role / state / scene / prop のstable asset ID一覧。runtimeでは装飾扱いとし、GitHubの正準情報はDOM/data側に残します。</p><div class="asset-grid">
+<figure class="asset"><img src="../assets/agent-world/role-issue-working.svg" alt="issue-working"><figcaption><code>role.issue-working.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/role-pull-request-review.svg" alt="pull-request-review"><figcaption><code>role.pull-request-review.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/role-workflow-terminal.svg" alt="workflow-terminal"><figcaption><code>role.workflow-terminal.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/state-working.svg" alt="working"><figcaption><code>state.working.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/state-waiting.svg" alt="waiting"><figcaption><code>state.waiting.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/state-done.svg" alt="done"><figcaption><code>state.done.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/state-failed.svg" alt="failed"><figcaption><code>state.failed.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/scene-desk.svg" alt="desk"><figcaption><code>scene.desk.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/scene-review-bench.svg" alt="review-bench"><figcaption><code>scene.review-bench.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/scene-terminal.svg" alt="terminal"><figcaption><code>scene.terminal.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/scene-sign.svg" alt="sign"><figcaption><code>scene.sign.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/scene-floor.svg" alt="floor"><figcaption><code>scene.floor.v1</code></figcaption></figure>
+<figure class="asset"><img src="../assets/agent-world/prop-pack.svg" alt="small-props"><figcaption><code>prop.small-pack.v1</code></figcaption></figure>
+</div></section></main></html>

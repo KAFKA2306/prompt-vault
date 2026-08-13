@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "kafka-signal-agent-world",
+  "status": "approved",
+  "recorded_at": "2026-08-13T19:52:00+09:00",
+  "canonical_path": "design-systems/kafka-signal/assets/agent-world",
+  "note": "Original transparent-background SVG scene assets for Agent World. Decorative only: canonical GitHub state remains DOM/data. Consumers must pin a Prompt Vault commit/release and SHA-256 via the registry vendor contract.",
+  "defaults": {
+    "alt_policy": "Use empty alt in Agent World runtime; descriptive labels are only for the preview catalogue.",
+    "hotlink_policy": "Do not runtime-hotlink mutable main URLs."
+  },
+  "assets": [
+    {"id":"role.issue-working.v1","file":"role-issue-working.svg","class":"role","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"09a99c78a2dfd316ece822a87c631ea8a4f35489bf80674104be1f5a6372c63f","role":"issue-working"},
+    {"id":"role.pull-request-review.v1","file":"role-pull-request-review.svg","class":"role","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"dcf2d63d314e2dd25a4ea8f083b630cc606ceadf455939c34c54da1eadf5f256","role":"pull-request-review"},
+    {"id":"role.workflow-terminal.v1","file":"role-workflow-terminal.svg","class":"role","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"370131f456d9d7c0158714fd5a4bebeb47983647599411fb5ef5e73067210d7f","role":"workflow-terminal"},
+    {"id":"state.working.v1","file":"state-working.svg","class":"state","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"23ed9e699c5d6bd139f81af9654ea937beb9bebf61473592e861c05161ce69f7","state":"working"},
+    {"id":"state.waiting.v1","file":"state-waiting.svg","class":"state","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"73475d0d7b6c69be6bb594168524c4fff55ce368b89800a0f327ec4abafe5d45","state":"waiting"},
+    {"id":"state.done.v1","file":"state-done.svg","class":"state","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"5d382bc8a6b4548435aaaf3c064da09f2574c78a986af2bfa22cd34448b84138","state":"done"},
+    {"id":"state.failed.v1","file":"state-failed.svg","class":"state","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"a60a42ccbad068e21028b1e78e2b46e572b7b20697df47f46a76cde6e7a9ac01","state":"failed"},
+    {"id":"scene.desk.v1","file":"scene-desk.svg","class":"scene","format":"image/svg+xml","dimensions":[192,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"379e4d45866a5a2f951e67a287146e7ab56c269175f2b47bfd0e7906b37c6997","role":"desk"},
+    {"id":"scene.review-bench.v1","file":"scene-review-bench.svg","class":"scene","format":"image/svg+xml","dimensions":[192,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"6a7ade4c3a36ca0f6c2dafc2b851bb9975e29cbc395d8926aa9478b1df98192f","role":"review-bench"},
+    {"id":"scene.terminal.v1","file":"scene-terminal.svg","class":"scene","format":"image/svg+xml","dimensions":[192,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"60e2812b2a6063236856b78515d1787fadcc57084438645f1fa497a24da7a0f2","role":"terminal"},
+    {"id":"scene.sign.v1","file":"scene-sign.svg","class":"scene","format":"image/svg+xml","dimensions":[128,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"82d950ce3b6bed367e169831da71bab68d088394f5465b792c75265154a58a95","role":"sign"},
+    {"id":"scene.floor.v1","file":"scene-floor.svg","class":"scene","format":"image/svg+xml","dimensions":[192,96],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"e64f00f4f9c2982ab32b99f9502151638266caad826ae7bd69af25f673941310","role":"floor"},
+    {"id":"prop.small-pack.v1","file":"prop-pack.svg","class":"prop","format":"image/svg+xml","dimensions":[192,128],"provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#58","generator":"ChatGPT GPT-5.6 Sol SVG authoring","created_at":"2026-08-13"},"sha256":"207487c3ca5df8029776fb6e100dd3d6ef0503a28064b4a6a3d44e857adcd1ec","role":"small-props"}
+  ]
+}
