@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <title>CI terminal station</title>
+  <g stroke="#243653" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="19" y="10" width="58" height="38" rx="8" fill="#FBFAF7"/>
+    <rect x="26" y="17" width="44" height="22" rx="4" fill="#A8D5BA" opacity=".45"/>
+    <path d="m33 25 5 4-5 4M44 33h12"/>
+    <circle cx="66" cy="44" r="5" fill="#FFD8A8"/>
+    <path d="M30 48v8M66 49v7M25 56h46"/>
+  </g>
+</svg>
