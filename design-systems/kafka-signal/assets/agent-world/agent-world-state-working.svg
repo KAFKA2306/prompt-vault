@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Working state</title>
+  <g stroke="#243653" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="24" fill="#7BA7E1" opacity=".3"/>
+    <path d="m20 42 8-2 18-18-6-6-18 18z" fill="#FFD8A8"/>
+    <path d="m39 17 6 6M20 42l3-8 5 5z"/>
+    <path d="M17 20h8M19 15l5 3M47 39h7M46 45l5 3"/>
+  </g>
+</svg>
