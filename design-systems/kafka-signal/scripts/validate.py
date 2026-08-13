@@ -143,7 +143,10 @@ if registry:
                     continue
                 actual_hash = sha256_file(asset_path)
                 if actual_hash != expected_hash:
-                    errors.append(f"asset hash mismatch {collection_id}/{asset_id}")
+                    errors.append(
+                        f"asset hash mismatch {collection_id}/{asset_id} "
+                        f"expected={expected_hash} actual={actual_hash}"
+                    )
 
 policy = load_json("audit/scoring-policy.json") if (R / "audit/scoring-policy.json").is_file() else None
 if policy:
