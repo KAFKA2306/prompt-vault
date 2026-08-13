@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <title>Issue worker at a laptop</title>
+  <g stroke="#243653" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="40" cy="69" rx="25" ry="5" fill="#7BA7E1" opacity=".14" stroke="none"/>
+    <circle cx="38" cy="23" r="11" fill="#FFD8A8"/>
+    <path d="M29 21c1-9 17-13 22-2l-2 6-5-5-4 4-5-4-6 4z" fill="#B8A7E6"/>
+    <circle cx="34.5" cy="24" r="1.2" fill="#243653" stroke="none"/>
+    <circle cx="41.5" cy="24" r="1.2" fill="#243653" stroke="none"/>
+    <path d="M35 28c2 1.8 4 1.8 6 0"/>
+    <path d="M26 56c2-14 6-20 12-20s11 6 13 20" fill="#7BA7E1"/>
+    <path d="M23 50h32l-3 15H26z" fill="#FBFAF7"/>
+    <path d="M36 56h6"/>
+    <path d="M18 47h9v13h-9z" fill="#F7B7C1"/>
+    <path d="M20 51h5M20 55h4"/>
+  </g>
+</svg>
