@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "canonical_repository": "KAFKA2306/prompt-vault",
+  "canonical_path": "design-systems/kafka-signal",
+  "release_manifest": "manifest.json",
+  "collections": [
+    {
+      "id": "site-basics",
+      "manifest": "assets/site-basics/manifest.json",
+      "description": "Approved editorial and empty-state illustrations for KAFKA2306 Pages sites."
+    }
+  ]
+}
