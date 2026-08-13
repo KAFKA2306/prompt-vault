@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "kafka-signal-agent-world",
+  "status": "approved",
+  "recorded_at": "2026-08-13T19:55:00+09:00",
+  "generator": "OpenAI ChatGPT-authored deterministic SVG",
+  "canonical_path": "design-systems/kafka-signal/assets/agent-world",
+  "visual_direction": {
+    "identity": "KAFKA SIGNAL",
+    "palette": [
+      "#243653",
+      "#7BA7E1",
+      "#B8A7E6",
+      "#F7B7C1",
+      "#A8D5BA",
+      "#FFD8A8",
+      "#FBFAF7"
+    ],
+    "rules": [
+      "small silhouettes remain legible",
+      "state is not communicated by color alone",
+      "no sparkle, magic-wand, brain, or generic AI-robot motifs",
+      "worker characters are not the Kafka identity character"
+    ]
+  },
+  "consumer_contract": {
+    "runtime_hotlink_mutable_main": false,
+    "pin": "exact commit or release plus sha256",
+    "mapping": "work item kind selects role asset; lane selects state asset; scene assets are presentation only",
+    "fallback": "GitHub-derived DOM information remains complete when assets fail"
+  },
+  "assets": [
+    {"id":"agent-world.role.issue-working","file":"agent-world-role-issue-working.svg","format":"image/svg+xml","category":"role","size":[80,80],"sha256":"1dfc3e6d3c61269f682f67fb0852954812208464577b69e154c4289170a7b412","decorative":true,"role":"issue"},
+    {"id":"agent-world.role.pull-request-review","file":"agent-world-role-pr-review.svg","format":"image/svg+xml","category":"role","size":[80,80],"sha256":"ac24519a1bd794bdc5ea05473bba1b1b9143cea0d46e9e0ef71ffbbedb030217","decorative":true,"role":"pull_request"},
+    {"id":"agent-world.role.workflow-terminal","file":"agent-world-role-workflow-terminal.svg","format":"image/svg+xml","category":"role","size":[80,80],"sha256":"4d4ceacb17c46115364bf19c5afa0d9eefc8b7801370b32e7cb2dc8e82a81b01","decorative":true,"role":"workflow_run"},
+    {"id":"agent-world.state.working","file":"agent-world-state-working.svg","format":"image/svg+xml","category":"state","size":[64,64],"sha256":"7006833f39201d27775d6e8eb18a379c45b61299a66a338233af3f512388129e","decorative":true,"state":"working"},
+    {"id":"agent-world.state.waiting","file":"agent-world-state-waiting.svg","format":"image/svg+xml","category":"state","size":[64,64],"sha256":"d172e021e4e621fc7de1d6fdc4c26ff416e1fd196e45bd1f01e7df4e4316ce63","decorative":true,"state":"waiting"},
+    {"id":"agent-world.state.done","file":"agent-world-state-done.svg","format":"image/svg+xml","category":"state","size":[64,64],"sha256":"d9f6a2b155fe89e8041888b4883942d415a0893588d310e44c0cd1add3961bf5","decorative":true,"state":"done"},
+    {"id":"agent-world.state.failed","file":"agent-world-state-failed.svg","format":"image/svg+xml","category":"state","size":[64,64],"sha256":"6d19f3fc3cc8da5cf20a6674896a3687df0ec5c535de32baaba7b945b44b7481","decorative":true,"state":"failed"},
+    {"id":"agent-world.scene.desk","file":"agent-world-scene-desk.svg","format":"image/svg+xml","category":"scene","size":[96,64],"sha256":"8b73b34de8e99a4e0c3f8bf1bb07f9558a595c261d0df421d85767fffe75ac44","decorative":true,"scene":"desk"},
+    {"id":"agent-world.scene.review-bench","file":"agent-world-scene-review-bench.svg","format":"image/svg+xml","category":"scene","size":[96,64],"sha256":"182a4ddeade9101b8ad4f483fe99d6326bcfaf961d96a9d28f9ea8b5ef3ce43f","decorative":true,"scene":"review-bench"},
+    {"id":"agent-world.scene.station-sign","file":"agent-world-scene-station-sign.svg","format":"image/svg+xml","category":"scene","size":[96,64],"sha256":"17db7699e83b780b8faf921f304edfd504dfb47c2e92f30b1a6fe45798f382ed","decorative":true,"scene":"station-sign"},
+    {"id":"agent-world.scene.floor-tile","file":"agent-world-scene-floor-tile.svg","format":"image/svg+xml","category":"scene","size":[96,64],"sha256":"63082aaca988ffe1010b397dc8d3cd1a8a7118962b308cf8588f25689b5eda1b","decorative":true,"scene":"floor-tile"},
+    {"id":"agent-world.scene.terminal","file":"agent-world-scene-terminal.svg","format":"image/svg+xml","category":"scene","size":[96,64],"sha256":"67dcf69548ffccc5df00d5773ff7fb4ea65ac8d5b1f0ac28035bc3aabdfde59a","decorative":true,"scene":"terminal"}
+  ]
+}
