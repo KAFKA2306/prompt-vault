@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <title>Agent work desk</title>
+  <g stroke="#243653" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 29h68l-5 14H19z" fill="#FFD8A8"/>
+    <path d="M24 43v15M72 43v15"/>
+    <rect x="35" y="12" width="26" height="18" rx="4" fill="#7BA7E1"/>
+    <path d="M43 30v4M53 30v4M39 34h18"/>
+    <rect x="18" y="19" width="12" height="10" rx="2" fill="#F7B7C1"/>
+    <path d="M21 23h6M21 26h4"/>
+    <circle cx="76" cy="24" r="5" fill="#A8D5BA"/>
+  </g>
+</svg>
