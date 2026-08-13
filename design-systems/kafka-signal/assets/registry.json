@@ -8,6 +8,11 @@
       "id": "site-basics",
       "manifest": "assets/site-basics/manifest.json",
       "description": "Approved editorial and empty-state illustrations for KAFKA2306 Pages sites."
+    },
+    {
+      "id": "agent-world",
+      "manifest": "assets/agent-world/manifest.json",
+      "description": "Reusable KAFKA SIGNAL worker, state, and scene SVG assets for live Agent World interfaces."
     }
   ]
 }
