@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <title>Project station sign</title>
+  <g stroke="#243653" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="16" y="10" width="64" height="28" rx="8" fill="#FBFAF7"/>
+    <path d="M27 24h42"/>
+    <circle cx="24" cy="24" r="4" fill="#7BA7E1"/>
+    <path d="M29 38v18M67 38v18M24 56h48"/>
+    <path d="M69 14h7v7h-7z" fill="#F7B7C1"/>
+  </g>
+</svg>
