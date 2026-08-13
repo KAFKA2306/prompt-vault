@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "KAFKA2306/travel",
+  "assets": [
+    {
+      "collection": "site-basics",
+      "id": "travel-basic",
+      "destination": "public/assets/kafka-signal/travel-basic-illustration.webp"
+    }
+  ]
+}
