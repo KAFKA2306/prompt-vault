@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <title>Soft isometric floor tile</title>
+  <g stroke="#243653" stroke-width="2" stroke-linejoin="round">
+    <path d="M48 7 87 28 48 57 9 28z" fill="#FBFAF7"/>
+    <path d="M48 7v50M9 28h78" opacity=".28"/>
+    <path d="m28 18 40 21M68 18 28 39" opacity=".2"/>
+    <path d="M48 12 79 29 48 52 17 29z" fill="#7BA7E1" opacity=".12" stroke="none"/>
+  </g>
+</svg>
