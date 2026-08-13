@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <title>Review and waiting bench</title>
+  <g stroke="#243653" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="17" y="25" width="62" height="15" rx="5" fill="#B8A7E6"/>
+    <path d="M23 40v15M73 40v15M17 34h62"/>
+    <rect x="35" y="9" width="26" height="13" rx="4" fill="#FBFAF7"/>
+    <path d="M41 15h14M48 12v6"/>
+    <circle cx="26" cy="19" r="5" fill="#FFD8A8"/>
+    <circle cx="70" cy="19" r="5" fill="#A8D5BA"/>
+  </g>
+</svg>
