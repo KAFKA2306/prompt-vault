@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "KAFKA2306/investor2",
+  "assets": [
+    {
+      "collection": "site-basics",
+      "id": "investor2-basic",
+      "destination": "vendor/kafka-signal/investor2-basic-illustration.svg"
+    }
+  ]
+}
