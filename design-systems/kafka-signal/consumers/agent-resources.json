@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "KAFKA2306/agent-resources",
+  "assets": [
+    {"collection":"agent-world","id":"agent-world.role.issue-working","destination":"docs/dashboard/assets/agent-world/agent-world-role-issue-working.svg"},
+    {"collection":"agent-world","id":"agent-world.role.pull-request-review","destination":"docs/dashboard/assets/agent-world/agent-world-role-pr-review.svg"},
+    {"collection":"agent-world","id":"agent-world.role.workflow-terminal","destination":"docs/dashboard/assets/agent-world/agent-world-role-workflow-terminal.svg"},
+    {"collection":"agent-world","id":"agent-world.state.working","destination":"docs/dashboard/assets/agent-world/agent-world-state-working.svg"},
+    {"collection":"agent-world","id":"agent-world.state.waiting","destination":"docs/dashboard/assets/agent-world/agent-world-state-waiting.svg"},
+    {"collection":"agent-world","id":"agent-world.state.done","destination":"docs/dashboard/assets/agent-world/agent-world-state-done.svg"},
+    {"collection":"agent-world","id":"agent-world.state.failed","destination":"docs/dashboard/assets/agent-world/agent-world-state-failed.svg"},
+    {"collection":"agent-world","id":"agent-world.scene.desk","destination":"docs/dashboard/assets/agent-world/agent-world-scene-desk.svg"},
+    {"collection":"agent-world","id":"agent-world.scene.review-bench","destination":"docs/dashboard/assets/agent-world/agent-world-scene-review-bench.svg"},
+    {"collection":"agent-world","id":"agent-world.scene.station-sign","destination":"docs/dashboard/assets/agent-world/agent-world-scene-station-sign.svg"},
+    {"collection":"agent-world","id":"agent-world.scene.floor-tile","destination":"docs/dashboard/assets/agent-world/agent-world-scene-floor-tile.svg"},
+    {"collection":"agent-world","id":"agent-world.scene.terminal","destination":"docs/dashboard/assets/agent-world/agent-world-scene-terminal.svg"}
+  ]
+}
