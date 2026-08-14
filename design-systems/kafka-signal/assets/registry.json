@@ -18,6 +18,11 @@
       "id": "pipeline",
       "manifest": "assets/pipeline/manifest.json",
       "description": "Reusable data-flow connectors, stage primitives, lanes, and a composition fixture for KAFKA SIGNAL consumers."
+    },
+    {
+      "id": "agent-world-props",
+      "manifest": "assets/agent-world-props/manifest.json",
+      "description": "Stable modular prop SVG assets for compositing into Agent World scenes without encoding canonical state."
     }
   ]
 }

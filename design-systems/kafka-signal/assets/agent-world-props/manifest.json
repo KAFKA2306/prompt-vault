@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "kafka-signal-agent-world-props",
+  "status": "approved",
+  "recorded_at": "2026-08-14T16:46:00+09:00",
+  "canonical_path": "design-systems/kafka-signal/assets/agent-world",
+  "note": "Modular Agent World props. Decorative only: canonical role and state remain visible DOM/data. Consumers resolve stable IDs, pin an immutable Prompt Vault commit, vendor files locally, and keep information intact when artwork is unavailable.",
+  "defaults": {"view_box": "0 0 128 128", "background": "transparent", "visible_label_required": true, "mutable_main_hotlink": false},
+  "assets": [
+    {"id":"prop.server-rack.v1","file":"../agent-world/prop-server-rack.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"2b7dff997856fcbdf36b4895fda239a4c1c19a98c023e95930670e651fd9a844","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.build-terminal.v1","file":"../agent-world/prop-build-terminal.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"5093eb718858cd1171ffb5838896d311611c9278530c8f55000f8628b6dd1257","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.review-board.v1","file":"../agent-world/prop-review-board.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"af748473fd7d741adb38231576d93cf3a31c5f580407849b808aa2c7098174af","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.issue-board.v1","file":"../agent-world/prop-issue-board.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"3205a8be184b96c26d6a94612686908e5fdc49ac6c63a704525c1db8d9ce582c","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.data-crate.v1","file":"../agent-world/prop-data-crate.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"de15a868fda2867424a7ae989ed2873767af19242617a24f4fd2775b935211f6","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.deploy-gate.v1","file":"../agent-world/prop-deploy-gate.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"32fe7a4bc0a9fd21b6b1885c9f59f13f8421b5fb269bff4d58e3b5ef581da888","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.database.v1","file":"../agent-world/prop-database.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"e030c441275f5b6003c7b8d9e223f3e5e45b3c19045966525055b8716e569b7b","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.chart-wall.v1","file":"../agent-world/prop-chart-wall.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"5217f2ccbdd5c7a3fff32f20f9c428213e6f914907ac0354f238fc24acede6e9","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.package-box.v1","file":"../agent-world/prop-package-box.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"42cd6b44162093bfa0781a461ceb6edd53bf674a66a1afb6cda660e06ce3dac3","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.warning-cone.v1","file":"../agent-world/prop-warning-cone.svg","format":"image/svg+xml","dimensions":[128,128],"sha256":"84890b07520a6d0bdb40a2f0950ce4a635b382b57159c8685b3cd6d01f79bc74","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"}},
+    {"id":"prop.composition.v1","file":"../agent-world/prop-composition.svg","format":"image/svg+xml","dimensions":[384,192],"sha256":"ae9fce105d384d1e9c50bcf6d3d166d7b11a2fe8d40ca52a6c0d00e297599081","provenance":{"type":"original-vector","issue":"KAFKA2306/prompt-vault#66","created_at":"2026-08-14"},"notes":"Representative multi-prop composition fixture; decorative only."}
+  ]
+}
