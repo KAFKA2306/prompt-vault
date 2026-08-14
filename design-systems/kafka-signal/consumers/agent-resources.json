@@ -14,6 +14,7 @@
     {"collection":"agent-world","id":"scene.terminal.v1","destination":"docs/dashboard/assets/agent-world/scene-terminal.svg"},
     {"collection":"agent-world","id":"scene.sign.v1","destination":"docs/dashboard/assets/agent-world/scene-sign.svg"},
     {"collection":"agent-world","id":"scene.floor.v1","destination":"docs/dashboard/assets/agent-world/scene-floor.svg"},
-    {"collection":"agent-world","id":"prop.small-pack.v1","destination":"docs/dashboard/assets/agent-world/prop-pack.svg"}
+    {"collection":"agent-world","id":"prop.small-pack.v1","destination":"docs/dashboard/assets/agent-world/prop-pack.svg"},
+    {"collection":"icons","id":"icons.sprite.v1","destination":"docs/dashboard/assets/kafka-signal-icons.svg"}
   ]
 }
