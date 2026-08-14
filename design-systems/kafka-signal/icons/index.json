@@ -1,1 +1,1 @@
-{"version":"1.0.0","sprite":"icons/sprite.svg","icons":["evidence","compare","calendar","source","warning","history","filter","map","model","external-link","search","clock"],"policy":"Icons supplement visible text; status never relies on icon or color alone."}
+{"version":"1.1.0","sprite":"icons/sprite.svg","icons":["evidence","compare","calendar","source","warning","history","filter","map","model","external-link","search","clock","issue","pull-request","workflow","timeline"],"policy":"Icons supplement visible text; status never relies on icon or color alone."}
