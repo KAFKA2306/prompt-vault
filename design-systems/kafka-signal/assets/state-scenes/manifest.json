@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "kafka-signal-state-scenes",
+  "status": "approved",
+  "recorded_at": "2026-08-14T16:53:00+09:00",
+  "canonical_path": "design-systems/kafka-signal/assets/state-scenes",
+  "note": "Reusable semantic mini-scenes for KAFKA SIGNAL consumers. Artwork is supplemental: visible heading and description are mandatory, state comes from canonical data, and asset failure must not remove state information or actions.",
+  "defaults": {
+    "view_box": "0 0 192 128",
+    "visible_heading_required": true,
+    "visible_description_required": true,
+    "asset_failure_keeps_information_ui": true,
+    "mutable_main_hotlink": false
+  },
+  "assets": [
+    {
+      "id": "empty.no-activity.v1",
+      "file": "empty-no-activity.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "ffa880570bb99210ba9cb7ae6532cf78fa59f2d43e5660a32bc03a1c2ebcecd7",
+      "semantic": "No recent activity is available for the consumer-defined time window. The visible UI must state that time window or context.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "empty.no-issues.v1",
+      "file": "empty-no-issues.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "d92da2bea4515be4a3ad9a72bf97f5486cbf3bea0779de01c754acc5e8cc7ba2",
+      "semantic": "No issues match the consumer's canonical query or filter. The visible UI must identify the query or filtering context when relevant.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "success.all-green.v1",
+      "file": "success-all-green.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "78be257d8f0e4b5177a9e58dfee269601abd4db0e9001a71513bf5bd5d70786a",
+      "semantic": "All consumer-defined required checks currently pass. The visible UI must name or link the underlying checks; green artwork alone is not evidence.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "waiting.approval.v1",
+      "file": "waiting-approval.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "4c693629831643aa976b0adf0dadf6ecfec98f0a18ac0bba7f8688e62b26ca46",
+      "semantic": "A consumer-defined approval is pending. The visible UI must identify what approval is awaited and any known next action.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "failure.ci.v1",
+      "file": "failure-ci.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "204d47eac59850379aca80427474e74ab122ea4aad4b614a12c25aaec32c4a93",
+      "semantic": "A CI check or workflow has failed according to canonical consumer data. The visible UI must identify the failing check and provide evidence or a link when available.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "deploy.completed.v1",
+      "file": "deploy-completed.svg",
+      "format": "image/svg+xml",
+      "dimensions": [192, 128],
+      "sha256": "680b4ff979b357699a265c052d083ba08997c805874e451f5145d9f1763575a5",
+      "semantic": "A deployment is recorded as completed by canonical consumer data. The visible UI must identify the target/environment and relevant evidence when available.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "state-scenes.fixture.v1",
+      "file": "fixture.svg",
+      "format": "image/svg+xml",
+      "dimensions": [576, 176],
+      "sha256": "e059d712b2fe79b26bc069791cc32f20f0559c5ed5948aa3369cf5aff7b7cc05",
+      "semantic": "Catalogue fixture for reviewing representative empty, success, and failure compositions; not a runtime state source.",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#67", "created_at": "2026-08-14"}
+    }
+  ]
+}

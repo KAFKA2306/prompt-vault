@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 128" role="img" aria-labelledby="t">
+<title id="t">Deploy completed mini scene</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="20" y="18" width="152" height="92" rx="14" fill="#F7F1E8"/>
+<path d="M44 92V42h68v50M44 54h68M60 42V32h36v10" fill="none"/>
+<path d="M78 84V60M68 70l10-10 10 10" fill="none"/>
+<circle cx="138" cy="72" r="22" fill="#BFE4D0"/><path d="m126 72 8 8 17-20" fill="none"/>
+</g></svg>

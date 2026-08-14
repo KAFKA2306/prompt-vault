@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 128" role="img" aria-labelledby="t">
+<title id="t">Waiting approval mini scene</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="24" y="18" width="144" height="92" rx="14" fill="#F7F1E8"/>
+<path d="M44 34h64v58H44zM56 50h40M56 64h32" fill="#EEF4FB"/>
+<path d="M126 38h28M126 88h28M132 38v10l8 13-8 13v14M148 38v10l-8 13 8 13v14" fill="none"/>
+<circle cx="140" cy="61" r="3" fill="#F5D7B8"/>
+</g></svg>

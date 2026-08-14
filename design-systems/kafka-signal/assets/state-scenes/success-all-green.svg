@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 128" role="img" aria-labelledby="t">
+<title id="t">All green mini scene</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="18" y="18" width="156" height="92" rx="14" fill="#F7F1E8"/>
+<rect x="36" y="34" width="120" height="18" rx="7" fill="#BFE4D0"/><rect x="36" y="60" width="120" height="18" rx="7" fill="#BFE4D0"/><rect x="36" y="86" width="120" height="12" rx="6" fill="#BFE4D0"/>
+<path d="m44 43 5 5 9-11M44 69l5 5 9-11M44 92l4 4 8-9" fill="none"/>
+</g></svg>

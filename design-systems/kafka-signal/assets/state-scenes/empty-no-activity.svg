@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 128" role="img" aria-labelledby="t">
+<title id="t">No activity mini scene</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="20" y="18" width="152" height="92" rx="14" fill="#F7F1E8"/>
+<path d="M54 38v54M54 48h34M54 66h48M54 84h26" fill="none"/>
+<circle cx="54" cy="48" r="6" fill="#CFE3F3"/><circle cx="54" cy="66" r="6" fill="#E4D5F3"/><circle cx="54" cy="84" r="6" fill="#BFE4D0"/>
+<circle cx="134" cy="50" r="18" fill="#EEF4FB"/><path d="M134 40v11l8 5" fill="none"/>
+</g></svg>
