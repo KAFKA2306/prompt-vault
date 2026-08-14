@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="t">
+<title id="t">Agent World chart wall</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="14" width="96" height="84" rx="6" fill="#F7F1E8"/><path d="M30 82V30M30 82h68M38 72l18-18 15 8 22-28" fill="none"/><circle cx="38" cy="72" r="4" fill="#F5D7B8"/><circle cx="56" cy="54" r="4" fill="#CFE3F3"/><circle cx="71" cy="62" r="4" fill="#E4D5F3"/><circle cx="93" cy="34" r="4" fill="#BFE4D0"/></g></svg>
