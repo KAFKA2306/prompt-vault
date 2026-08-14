@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "kafka-signal-icons",
+  "status": "approved",
+  "recorded_at": "2026-08-14T16:02:00+09:00",
+  "canonical_path": "design-systems/kafka-signal/icons",
+  "note": "Shared KAFKA SIGNAL icon sprite. Icons supplement visible text and never replace semantic labels.",
+  "assets": [
+    {
+      "id": "icons.sprite.v1",
+      "file": "sprite.svg",
+      "format": "image/svg+xml",
+      "provenance": {
+        "type": "original-vector",
+        "generator": "ChatGPT GPT-5.6 Sol SVG authoring",
+        "created_at": "2026-08-14"
+      },
+      "sha256": "161cec65877dc460d844f74132a3d32a26bad3e9a1c78da64451091a22e1985f",
+      "symbols": ["evidence","compare","calendar","source","warning","history","filter","map","model","external-link","search","clock","issue","pull-request","workflow","timeline"],
+      "allowed_usage": ["kafka-signal-consumer-runtime","kafka-signal-preview"],
+      "notes": "Consumers must pin an immutable Prompt Vault commit and vendor this sprite locally."
+    }
+  ]
+}
