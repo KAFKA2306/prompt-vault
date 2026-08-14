@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "collection": "kafka-signal-icons",
   "status": "approved",
-  "recorded_at": "2026-08-14T16:25:00+09:00",
+  "recorded_at": "2026-08-14T16:31:00+09:00",
   "canonical_path": "design-systems/kafka-signal/icons",
   "note": "Shared KAFKA SIGNAL icon sprite. Icons supplement visible text and never replace semantic labels.",
   "assets": [
@@ -15,7 +15,7 @@
         "generator": "ChatGPT GPT-5.6 Sol SVG authoring",
         "created_at": "2026-08-14"
       },
-      "sha256": "79606b993d98f82b8793e3ad98a801cd33b5c76fa64803b92521baf4ad389e88",
+      "sha256": "65e0e6a5aac70e9afe67405fdfe38edfea55b91f275650215ef1f4cfa585df7a",
       "symbols": [
         "evidence",
         "compare",
@@ -43,7 +43,16 @@
         "package",
         "tag",
         "comment",
-        "review"
+        "review",
+        "live",
+        "snapshot",
+        "refresh",
+        "waiting",
+        "blocked",
+        "success",
+        "failed",
+        "stale",
+        "fallback"
       ],
       "action_symbols": [
         "commit",
@@ -64,7 +73,18 @@
         "kafka-signal-consumer-runtime",
         "kafka-signal-preview"
       ],
-      "notes": "Consumers must keep visible text, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main."
+      "notes": "Consumers must keep visible text, render icons with sufficient contrast on light surfaces, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main.",
+      "status_symbols": [
+        "live",
+        "snapshot",
+        "refresh",
+        "waiting",
+        "blocked",
+        "success",
+        "failed",
+        "stale",
+        "fallback"
+      ]
     }
   ]
 }
