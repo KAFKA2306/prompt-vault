@@ -27,7 +27,7 @@
         "human-reviewed": "A human review step is recorded; do not equate this with independent verification and show review evidence."
       },
       "allowed_usage": ["kafka-signal-consumer-runtime", "kafka-signal-preview"],
-      "notes": "Consumers must keep visible text and evidence links for provenance claims, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main. Existing evidence and source remain generic concepts; the provenance symbols express narrower recorded states."
+      "notes": "Consumers must keep visible text and evidence links for provenance claims, render icons with sufficient contrast on light surfaces, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main. Existing evidence and source remain generic concepts; the provenance symbols express narrower recorded states."
     }
   ]
 }
