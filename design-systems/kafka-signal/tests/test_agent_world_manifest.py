@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PACK_DIR = ROOT / "assets" / "agent-world"
 MANIFEST_PATH = PACK_DIR / "manifest.json"
+PROP_MANIFEST_PATH = ROOT / "assets" / "agent-world-props" / "manifest.json"
 CONSUMER_PATH = ROOT / "consumers" / "agent-resources.json"
 
 
@@ -47,9 +48,15 @@ class AgentWorldManifestTest(unittest.TestCase):
             self.assertTrue(asset["notes"], asset["id"])
 
     def test_all_raw_svg_files_are_registered_exactly_once(self) -> None:
-        registered = [asset["file"] for asset in self.assets]
+        registered = [(PACK_DIR / asset["file"]).resolve() for asset in self.assets]
+        if PROP_MANIFEST_PATH.is_file():
+            prop_manifest = json.loads(PROP_MANIFEST_PATH.read_text(encoding="utf-8"))
+            registered.extend(
+                (PROP_MANIFEST_PATH.parent / asset["file"]).resolve()
+                for asset in prop_manifest["assets"]
+            )
         self.assertEqual(len(registered), len(set(registered)))
-        raw = sorted(path.name for path in PACK_DIR.glob("*.svg"))
+        raw = sorted(path.resolve() for path in PACK_DIR.glob("*.svg"))
         self.assertEqual(sorted(registered), raw)
 
     def test_role_state_selectors_are_deterministic_and_consistent(self) -> None:
