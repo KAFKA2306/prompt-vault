@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "collection": "kafka-signal-icons",
   "status": "approved",
-  "recorded_at": "2026-08-14T16:40:00+09:00",
+  "recorded_at": "2026-08-14T17:00:00+09:00",
   "canonical_path": "design-systems/kafka-signal/icons",
-  "note": "Shared KAFKA SIGNAL icon sprite. Icons supplement visible text and never replace semantic labels or evidence.",
+  "note": "Shared KAFKA SIGNAL icon assets. Icons supplement visible text and never replace semantic labels, evidence, or canonical repository metadata.",
   "assets": [
     {
       "id": "icons.sprite.v1",
@@ -28,6 +28,29 @@
       },
       "allowed_usage": ["kafka-signal-consumer-runtime", "kafka-signal-preview"],
       "notes": "Consumers must keep visible text and evidence links for provenance claims, render icons with sufficient contrast on light surfaces, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main. Existing evidence and source remain generic concepts; the provenance symbols express narrower recorded states."
+    },
+    {
+      "id": "icons.repository-categories.v1",
+      "file": "repository-categories.svg",
+      "format": "image/svg+xml",
+      "provenance": {"type": "original-vector", "issue": "KAFKA2306/prompt-vault#68", "generator": "ChatGPT GPT-5.6 Sol SVG authoring", "created_at": "2026-08-14"},
+      "sha256": "6cfaa143e2e5c173fce090ae78003f5848d6aa328d60a4bd97a9ea14b4bc17b5",
+      "symbols": ["category-finance", "category-boardgame", "category-vr", "category-avatar", "category-research", "category-data", "category-developer-tool", "category-media", "category-automation", "category-unknown"],
+      "category_mapping": {
+        "finance": "category-finance",
+        "boardgame": "category-boardgame",
+        "vr": "category-vr",
+        "avatar": "category-avatar",
+        "research": "category-research",
+        "data": "category-data",
+        "developer-tool": "category-developer-tool",
+        "media": "category-media",
+        "automation": "category-automation",
+        "unknown": "category-unknown"
+      },
+      "fallback_category": "unknown",
+      "allowed_usage": ["kafka-signal-consumer-runtime", "kafka-signal-preview", "agent-resources-repository-station", "agent-resources-repository-list"],
+      "notes": "Repository category must be supplied by canonical repository metadata. Never infer a category from this artwork, GitHub topics, colors, filenames, or repository names. Unclassified or unsupported values render the neutral unknown pictogram with visible category text. Consumers pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main. Apply KAFKA SIGNAL pastel surfaces in the consumer without using color as the sole category signal."
     }
   ]
 }
