@@ -23,6 +23,11 @@
       "id": "agent-world-props",
       "manifest": "assets/agent-world-props/manifest.json",
       "description": "Stable modular prop SVG assets for compositing into Agent World scenes without encoding canonical state."
+    },
+    {
+      "id": "state-scenes",
+      "manifest": "assets/state-scenes/manifest.json",
+      "description": "Reusable empty, success, waiting, failure, and deployment mini-scenes with explicit semantic and fallback contracts."
     }
   ]
 }
