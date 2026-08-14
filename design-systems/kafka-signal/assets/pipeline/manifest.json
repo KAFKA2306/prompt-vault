@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "pipeline",
+  "status": "approved",
+  "recorded_at": "2026-08-14T16:35:00+09:00",
+  "note": "Reusable KAFKA SIGNAL data-flow primitives. Consumers must pair visual stages with visible labels and vendor assets from an immutable Prompt Vault commit.",
+  "assets": [
+    {
+      "id": "pipeline.connector.horizontal.v1",
+      "file": "connector-horizontal.svg",
+      "format": "image/svg+xml",
+      "sha256": "653c15b0481093f4097546099df8011b228363f7c33d04255da76613591c96d9",
+      "provenance": {"type": "original-vector", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "pipeline.connector.vertical.v1",
+      "file": "connector-vertical.svg",
+      "format": "image/svg+xml",
+      "sha256": "028d545eb8897cb38d6e548ed238b4ebbd0d2cd86e222f4101e8cd2f5db36bef",
+      "provenance": {"type": "original-vector", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "pipeline.stage-node.v1",
+      "file": "stage-node.svg",
+      "format": "image/svg+xml",
+      "sha256": "48406a0f30d8627458735d27f97a1419d81a8ff0b72aa632d612954f1c6e2b4e",
+      "provenance": {"type": "original-vector", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "pipeline.lane.v1",
+      "file": "lane.svg",
+      "format": "image/svg+xml",
+      "sha256": "89bc3ad90ea53b08ddc5e38f9f645026409411f9eadc9d598020d5007f92c4fe",
+      "provenance": {"type": "original-vector", "created_at": "2026-08-14"}
+    },
+    {
+      "id": "pipeline.example-flow.v1",
+      "file": "example-flow.svg",
+      "format": "image/svg+xml",
+      "sha256": "b61af45c84ccfc14eda08133a3c014e76dbd34972cc100d1ef6a0f86528ff7b8",
+      "provenance": {"type": "original-vector", "created_at": "2026-08-14"},
+      "notes": "Reference composition for source → ingest → normalize → validate → model → publish → deploy → monitor."
+    }
+  ]
+}

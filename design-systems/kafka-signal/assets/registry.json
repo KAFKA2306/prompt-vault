@@ -13,6 +13,11 @@
       "id": "agent-world",
       "manifest": "assets/agent-world/manifest.json",
       "description": "Stable role, state, scene and prop SVG assets for the Agent World dashboard."
+    },
+    {
+      "id": "pipeline",
+      "manifest": "assets/pipeline/manifest.json",
+      "description": "Reusable data-flow connectors, stage primitives, lanes, and a composition fixture for KAFKA SIGNAL consumers."
     }
   ]
 }

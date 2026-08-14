@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "collection": "kafka-signal-icons",
   "status": "approved",
-  "recorded_at": "2026-08-14T16:31:00+09:00",
+  "recorded_at": "2026-08-14T16:35:00+09:00",
   "canonical_path": "design-systems/kafka-signal/icons",
   "note": "Shared KAFKA SIGNAL icon sprite. Icons supplement visible text and never replace semantic labels.",
   "assets": [
@@ -15,76 +15,15 @@
         "generator": "ChatGPT GPT-5.6 Sol SVG authoring",
         "created_at": "2026-08-14"
       },
-      "sha256": "65e0e6a5aac70e9afe67405fdfe38edfea55b91f275650215ef1f4cfa585df7a",
+      "sha256": "421083b8f47afd78a654175825b2c298d43303f5e8a78b48c8faf2c21ecd2913",
       "symbols": [
-        "evidence",
-        "compare",
-        "calendar",
-        "source",
-        "warning",
-        "history",
-        "filter",
-        "map",
-        "model",
-        "external-link",
-        "search",
-        "clock",
-        "issue",
-        "pull-request",
-        "workflow",
-        "timeline",
-        "commit",
-        "merge",
-        "branch",
-        "release",
-        "deploy",
-        "test",
-        "build",
-        "package",
-        "tag",
-        "comment",
-        "review",
-        "live",
-        "snapshot",
-        "refresh",
-        "waiting",
-        "blocked",
-        "success",
-        "failed",
-        "stale",
-        "fallback"
+        "evidence", "compare", "calendar", "source", "warning", "history", "filter", "map", "model", "external-link", "search", "clock", "issue", "pull-request", "workflow", "timeline", "commit", "merge", "branch", "release", "deploy", "test", "build", "package", "tag", "comment", "review", "live", "snapshot", "refresh", "waiting", "blocked", "success", "failed", "stale", "fallback", "ingest", "normalize", "validate", "publish", "monitor"
       ],
-      "action_symbols": [
-        "commit",
-        "pull-request",
-        "workflow",
-        "merge",
-        "deploy",
-        "branch",
-        "release",
-        "test",
-        "build",
-        "package",
-        "tag",
-        "comment",
-        "review"
-      ],
-      "allowed_usage": [
-        "kafka-signal-consumer-runtime",
-        "kafka-signal-preview"
-      ],
-      "notes": "Consumers must keep visible text, render icons with sufficient contrast on light surfaces, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main.",
-      "status_symbols": [
-        "live",
-        "snapshot",
-        "refresh",
-        "waiting",
-        "blocked",
-        "success",
-        "failed",
-        "stale",
-        "fallback"
-      ]
+      "action_symbols": ["commit", "pull-request", "workflow", "merge", "deploy", "branch", "release", "test", "build", "package", "tag", "comment", "review"],
+      "status_symbols": ["live", "snapshot", "refresh", "waiting", "blocked", "success", "failed", "stale", "fallback"],
+      "pipeline_stage_symbols": ["source", "ingest", "normalize", "validate", "model", "publish", "deploy", "monitor"],
+      "allowed_usage": ["kafka-signal-consumer-runtime", "kafka-signal-preview"],
+      "notes": "Consumers must keep visible text, render icons with sufficient contrast on light surfaces, preserve information when an asset fails to load, pin an immutable Prompt Vault commit, vendor this sprite locally, and must not hotlink mutable main. Existing source, model, and deploy symbols are reused for pipeline stages."
     }
   ]
 }
