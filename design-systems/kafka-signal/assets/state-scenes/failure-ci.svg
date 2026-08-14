@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 128" role="img" aria-labelledby="t">
+<title id="t">CI failure mini scene</title>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="20" y="18" width="152" height="92" rx="14" fill="#F7F1E8"/>
+<rect x="36" y="34" width="92" height="58" rx="8" fill="#EEF4FB"/><path d="M50 50l10 9-10 9M68 70h30" fill="none"/>
+<circle cx="140" cy="72" r="22" fill="#F5D7B8"/><path d="m130 62 20 20M150 62l-20 20" fill="none"/>
+</g></svg>
