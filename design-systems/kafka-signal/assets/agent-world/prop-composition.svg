@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 192" role="img" aria-labelledby="t d">
+<title id="t">Agent World modular prop composition</title><desc id="d">Representative composition of server rack, terminal, issue board, database, package box, and warning cone.</desc>
+<g stroke="#4A4A5A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(10 20) scale(.75)"><rect x="30" y="12" width="68" height="104" rx="6" fill="#EEF4FB"/><path d="M40 30h48M40 52h48M40 74h48M40 96h48" fill="none"/></g>
+<g transform="translate(90 32) scale(.72)"><rect x="16" y="20" width="96" height="68" rx="8" fill="#EEF4FB"/><path d="M30 40l12 10-12 10M50 61h25" fill="none"/><path d="M48 88v18M80 88v18M38 108h52" fill="none"/></g>
+<g transform="translate(190 18) scale(.65)"><rect x="16" y="16" width="96" height="88" rx="6" fill="#F7F1E8"/><rect x="28" y="30" width="22" height="24" rx="3" fill="#F5D7B8"/><rect x="54" y="30" width="22" height="34" rx="3" fill="#CFE3F3"/></g>
+<g transform="translate(282 18) scale(.66)"><ellipse cx="64" cy="26" rx="38" ry="14" fill="#E4D5F3"/><path d="M26 26v60c0 8 17 14 38 14s38-6 38-14V26" fill="#E4D5F3"/><path d="M26 46c0 8 17 14 38 14s38-6 38-14" fill="none"/></g>
+<g transform="translate(126 108) scale(.55)"><path d="m20 42 44-22 44 22v54l-44 22-44-22z" fill="#F5D7B8"/><path d="m20 42 44 22 44-22M64 64v54" fill="none"/></g>
+<g transform="translate(240 110) scale(.55)"><path d="M64 18 96 100H32z" fill="#F5D7B8"/><path d="M46 64h36M22 104h84v12H22z" fill="none"/></g>
+</g>
+<text x="192" y="184" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#4A4A5A">Decorative props only; canonical state remains visible in the UI.</text>
+</svg>
