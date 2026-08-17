@@ -20,6 +20,12 @@ DIST_PATH = root_path(CONFIG["paths"]["dist"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
 PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
 SKILLS_INDEX_PATH = root_path(CONFIG["paths"]["skills_index"])
+KAFKA_SIGNAL_PATH = ROOT / "design-systems" / "kafka-signal"
+KAFKA_SIGNAL_PUBLIC_FILES = (
+    "components.html",
+    "components.manifest.json",
+    "tokens.css",
+)
 
 
 def load_db() -> PromptDB:
@@ -54,6 +60,16 @@ def render_app_js(db: PromptDB, skills_index: list[dict[str, object]]) -> str:
         .replace("__DB_JSON__", json.dumps(db_json, ensure_ascii=False))
         .replace("__SKILLS_JSON__", json.dumps(skills_index, ensure_ascii=False))
     )
+
+
+def copy_kafka_signal_catalog() -> None:
+    destination = DIST_PATH / "kafka-signal"
+    destination.mkdir(parents=True, exist_ok=True)
+    for name in KAFKA_SIGNAL_PUBLIC_FILES:
+        source = KAFKA_SIGNAL_PATH / name
+        if not source.is_file():
+            raise FileNotFoundError(f"missing KAFKA SIGNAL public file: {source}")
+        shutil.copy2(source, destination / name)
 
 
 def write_dist() -> None:
@@ -101,6 +117,8 @@ def write_dist() -> None:
     skills_dest = DIST_PATH / "docs" / "SKILLS.md"
     skills_dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(SKILLS_INDEX_PATH, skills_dest)
+
+    copy_kafka_signal_catalog()
 
     # Convert PNGs to WebP if Pillow is available, otherwise copy PNG/WAV as-is.
     active_artifacts = {a.path for t in db.templates for a in t.artifacts}
