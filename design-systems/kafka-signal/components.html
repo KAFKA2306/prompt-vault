@@ -1,1 +1,146 @@
-<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="tokens.css"><title>KAFKA SIGNAL</title><style>body{margin:0;background:var(--ks-canvas);color:var(--ks-ink);font:1rem/1.7 var(--ks-font-body)}main{max-width:72rem;margin:auto;padding:2rem 1rem}.row{display:flex;flex-wrap:wrap;gap:.75rem}.panel{padding:1rem;margin:2rem 0}</style><main><h1>KAFKA SIGNAL</h1><p>状態は色だけでなく文字で示します。</p><div class="row"><span class="ks-status" data-state="verified">確認済み</span><span class="ks-status" data-state="estimated">推定</span><span class="ks-status" data-state="attention">要確認</span><span class="ks-status" data-state="rejected">棄却</span><span class="ks-status" data-state="unavailable">利用不可</span></div><section class="ks-surface panel"><h2>Evidence metadata</h2><dl><dt>データ時点</dt><dd>2026-08-04 18:00 JST</dd><dt>根拠</dt><dd><a href="#source">一次資料を開く</a></dd><dt>修正経路</dt><dd>根拠を添えて訂正Issueを作成</dd></dl></section></main></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KAFKA SIGNAL components</title>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    body {
+      margin: 0;
+      background: var(--ks-canvas);
+      color: var(--ks-ink);
+      font: 1rem/1.7 var(--ks-font-body);
+    }
+
+    main {
+      max-width: 72rem;
+      margin: auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .controls {
+      display: grid;
+      gap: 0.5rem;
+      max-width: 34rem;
+      margin: 1.5rem 0;
+    }
+
+    input[type="search"] {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid currentColor;
+      border-radius: 0.5rem;
+      background: var(--ks-canvas);
+      color: inherit;
+      font: inherit;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .component-card {
+      padding: 1rem;
+    }
+
+    .component-card h2 {
+      margin-top: 0;
+    }
+
+    .component-card ul {
+      padding-left: 1.25rem;
+    }
+
+    .meta {
+      color: var(--ks-ink-muted, currentColor);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p><a href="../">Prompt Vault</a></p>
+      <h1>KAFKA SIGNAL components</h1>
+      <p>正準の <code>components.manifest.json</code> に登録されたcomponentを検索して確認できます。</p>
+    </header>
+
+    <section aria-labelledby="component-search-label">
+      <div class="controls">
+        <label id="component-search-label" for="component-search">componentを検索</label>
+        <input id="component-search" type="search" autocomplete="off" placeholder="例: evidence, history, timeline">
+      </div>
+      <p id="result-count" class="meta" aria-live="polite">読み込み中</p>
+      <div id="component-grid" class="grid"></div>
+    </section>
+
+    <noscript>
+      <p>一覧の表示にはJavaScriptが必要です。<a href="components.manifest.json">正準manifest</a>を直接確認できます。</p>
+    </noscript>
+  </main>
+
+  <script>
+    const searchInput = document.querySelector("#component-search");
+    const grid = document.querySelector("#component-grid");
+    const resultCount = document.querySelector("#result-count");
+    let components = [];
+
+    function render(query = "") {
+      const needle = query.trim().toLocaleLowerCase();
+      const matches = components.filter(({ name, features }) => {
+        const searchable = [name, ...features].join(" ").toLocaleLowerCase();
+        return searchable.includes(needle);
+      });
+
+      grid.replaceChildren(...matches.map(({ name, features }) => {
+        const article = document.createElement("article");
+        article.className = "ks-surface component-card";
+
+        const heading = document.createElement("h2");
+        heading.textContent = name;
+        article.append(heading);
+
+        const list = document.createElement("ul");
+        for (const feature of features) {
+          const item = document.createElement("li");
+          item.textContent = feature;
+          list.append(item);
+        }
+        article.append(list);
+        return article;
+      }));
+
+      resultCount.textContent = `${matches.length} / ${components.length} components`;
+    }
+
+    fetch("components.manifest.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`manifest request failed: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((manifest) => {
+        components = Object.entries(manifest.components ?? {}).map(([name, features]) => ({
+          name,
+          features: Array.isArray(features) ? features : [],
+        }));
+        render();
+      })
+      .catch((error) => {
+        resultCount.textContent = "component一覧を読み込めませんでした";
+        console.error(error);
+      });
+
+    searchInput.addEventListener("input", () => render(searchInput.value));
+  </script>
+</body>
+</html>
