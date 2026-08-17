@@ -1,5 +1,7 @@
 # Prompt Vault
 
+[![Deploy](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml/badge.svg)](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml)
+
 **良かった生成プロンプトを後で再現しようとしても、文章だけでは「何が効いたか」は分からない。**
 
 同じ長いプロンプトをコピーして残すだけでは、固定したい人物・画風・構図と、その一回だけの衣装・背景・文言が混ざります。さらに生成画像や用途、来歴が本文から離れると、「この画像は何から作ったのか」「どの部分を別用途へ再利用できるのか」を後から追えません。
@@ -41,7 +43,6 @@ db/prompts.json
         ├─ Pydanticモデルと監査スクリプトで検証
         │
         ├─ artifacts/の画像と接続
-        │
         ▼
 build.py
         │
