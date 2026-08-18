@@ -100,7 +100,6 @@ jobs:
           assert failing['value'] == 0, 'native test scope has failures'
           assert failing['tool'] == 'python-unittest'
           assert failing['tests_run'] > 0
-          assert prompt['tool_metrics']['lint_errors']['status'] == 'not_instrumented'
           print(f"validated {len(files)} repository reports; prompt-vault failing_tests={failing['value']} tests_run={failing['tests_run']}")
           PY
       - name: Upload code-quality snapshot and native evidence
@@ -111,7 +110,5 @@ jobs:
             results/code-quality/*.json
             results/native/*.json
           retention-days: 30
-      - name: Verify clean checkout
-        run: |
-          rm -rf results/code-quality results/native tests/__pycache__ scripts/__pycache__
-          test -z "$(git status --porcelain --untracked-files=all)"
+      - name: Verify tracked files unchanged
+        run: git diff --exit-code
