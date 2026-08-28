@@ -1,142 +1,64 @@
+https://kafka2306.github.io/prompt-vault/
+https://prompt-vault-cg3.pages.dev/
+
 # Prompt Vault
 
 [![Deploy](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml/badge.svg)](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml)
 
-**良かった生成プロンプトを後で再現しようとしても、文章だけでは「何が効いたか」は分からない。**
+生成プロンプトを文章のまま保存するのではなく、再利用できる構成要素、組み合わせ、生成画像、用途、来歴を分けて管理する保管庫です。
 
-同じ長いプロンプトをコピーして残すだけでは、固定したい人物・画風・構図と、その一回だけの衣装・背景・文言が混ざります。さらに生成画像や用途、来歴が本文から離れると、「この画像は何から作ったのか」「どの部分を別用途へ再利用できるのか」を後から追えません。
+- 再利用単位: `block`
+- 組み合わせ: `template`
+- 生成物: `artifact`
+- 正準データ: `db/prompts.json`
+- 正準アセット: `artifacts/`
+- データ型と制約: `src/models.py`
+- 静的生成: `build.py`
+- UI: `static/`
+- 生成物: `dist/`（直接編集しない）
 
-Prompt Vaultは、プロンプト本文・再利用できる構成要素・生成画像・用途・来歴を分けて管理し、必要な組み合わせを再構成できる保管庫です。再利用単位を`block`、組み合わせを`template`、生成物を`artifact`として管理し、Pydanticモデルでデータ構造を検証します。
-
-> **公開サイト:** https://kafka2306.github.io/prompt-vault/  
-> **Cloudflare Pages:** https://prompt-vault-cg3.pages.dev/  
-> **対応Python:** 3.11系  
-> **正準データ:** `db/prompts.json`  
-> **正準アセット:** `artifacts/`  
-> **生成物:** `dist/`
-
----
-
-## 何ができるか
-
-- 画像生成プロンプトを部品、テンプレート、生成例として整理する
-- 画像を見ながらプロンプト全文をコピーする
-- タグや構成要素から関連プロンプトをたどる
-- 既存blockを組み合わせて新しいプロンプトを構築する
-- 生成画像を採番し、データベースと同時に登録する
-- 未接続アセット、破損データ、命名違反を監査する
-- GitHub PagesまたはCloudflare Pages向けの静的サイトを生成する
-- Cloudflare Pages Functionから、管理されたプロンプトを参照する
-
-現在のUIは、長時間閲覧しても疲れにくいこと、生成例から目的のプロンプトへ短く到達できること、コピー操作を妨げないことを重視しています。
-
----
-
-## データと生成物の関係
+## 構造
 
 ```text
-プロンプトblock・template・artifact参照
-        │
-        ▼
 db/prompts.json
         │
-        ├─ Pydanticモデルと監査スクリプトで検証
-        │
-        ├─ artifacts/の画像と接続
+        ├─ src/models.py / validator で検証
+        ├─ artifacts/ と接続
         ▼
 build.py
-        │
         ▼
-dist/  静的サイト生成物
-        │
+dist/
         ▼
 GitHub Pages / Cloudflare Pages
 ```
 
-### 正準
-
-| 種類 | 正準 |
-|---|---|
-| block、template、artifact接続 | `db/prompts.json` |
-| データ型と制約 | `src/models.py`、`docs/SCHEMA.md` |
-| 採用済み画像 | `artifacts/` |
-| デザイン原則 | `DESIGN.md` |
-| 設計判断 | `docs/ADR/` |
-| エージェント操作契約 | `AGENTS.md` |
-
-### 生成物
-
-`dist/`は`build.py`から生成される公開用成果物です。直接編集しません。
-
-`artifacts/_orphaned/`は、現在のデータベースへ接続されていない旧アセットの退避先です。公開アセットの正準として扱いません。
-
----
-
-## blockの考え方
-
-Prompt Vaultでは、再利用できる構成要素をblockとして扱います。
-
-主なrole:
-
-- `identity` — キャラクターやブランドの固定要素
-- `style` — 描画・写真・質感の方向性
-- `layout` — 構図や情報配置
-- `outfit` — 衣装
-- `pose` — 姿勢や動き
-- `background` — 背景
-- `lighting` — 光
-- `text` — 画像内文字の条件
-- `situation` — 一時的な場面
-- `pack` — 複数要素をまとめた再利用単位
-
-キャラクターKafkaの同一性に関する固定要素と、一回限りの状況や衣装を分離します。具体的な日付、特定投稿だけの文言、長大な構成を汎用blockへ混ぜません。
-
-詳細は[`docs/SCHEMA.md`](docs/SCHEMA.md)と[`docs/ADR/0012-semantic-block-naming.md`](docs/ADR/0012-semantic-block-naming.md)を参照してください。
-
----
+変更され得る仕様は Markdown に重複して持たず、現在の実装と機械可読データを優先します。AI coding agent の作業規約は `AGENTS.md` を参照してください。
 
 ## セットアップ
 
-### 必要環境
-
-- Python 3.11
-- `uv`
-- Git
-- 画面を使った検証を行う場合は、Seleniumが利用できるブラウザ環境
-
-### 依存関係の導入
+必要環境は Python 3.11、`uv`、Git です。
 
 ```bash
 uv sync
 ```
 
-`pyproject.toml`では、Pydantic、PyYAML、Selenium、Pillowを利用します。
-
----
-
-## ローカルで閲覧する
+ローカル表示:
 
 ```bash
 uv run python app.py
 ```
 
-既定のローカルURLは起動時の出力で確認します。固定URLだけを根拠に起動済みとは判断しません。
-
----
-
-## 静的サイトを生成する
+静的サイト生成:
 
 ```bash
 uv run python build.py
 ```
 
-生成後は`dist/`を直接修正せず、正準データまたは生成処理を修正して再生成します。
-
----
+`dist/` は生成物です。修正は正準データ、UI、または生成処理へ行います。
 
 ## 生成画像を登録する
 
-採用する画像は、手動で`artifacts/`へ移動しません。次のスクリプトで、採番、コピー、データベース追記、静的生成、検証をまとめて行います。
+採用する画像は登録スクリプトを通して、採番、コピー、データベース追記、静的生成、検証をまとめて行います。
 
 ```bash
 uv run python scripts/register_generated_artifact.py \
@@ -146,124 +68,41 @@ uv run python scripts/register_generated_artifact.py \
   --summary "内容の要約"
 ```
 
-必要に応じて`--generated-prompt`と`--blocks`を指定します。
-
-`--source`には、現在の環境に存在する画像ファイルを渡します。生成ツール固有の絶対パスはリポジトリの契約ではありません。
-
-登録方針は[`docs/ADR/0018-unconnected-png-reconnect-workflow.md`](docs/ADR/0018-unconnected-png-reconnect-workflow.md)に記録しています。
-
----
-
-## 未接続画像を再接続する
-
-事前確認:
-
-```bash
-uv run python scripts/reconnect_unconnected_pngs.py --dry-run
-```
-
-実行:
-
-```bash
-uv run python scripts/reconnect_unconnected_pngs.py
-```
-
-この処理は、旧PNGの再採番と`db/prompts.json`への再接続に使います。結果を確認せずに大量ファイルを移動しません。
-
----
+外部ツール固有の絶対パスを repository の契約にしません。
 
 ## 検証
 
-主な検証入口:
+既存の共通入口を使います。
 
 ```bash
-uv run python scripts/validate_db.py
-uv run python scripts/audit_db.py
-uv run python scripts/audit_artifacts.py
-bash scripts/verify_pages.sh
+task validate
+task artifacts-audit
+task build
 ```
 
-確認対象:
+全体確認:
 
-- JSONがモデルとschemaに適合すること
-- block名、role、参照関係が有効であること
-- `db/prompts.json`と`artifacts/`が接続していること
-- rootの`artifacts/`に未接続PNGを残していないこと
-- 再利用性の低い文言や過大なblockが混入していないこと
-- 静的サイトが再生成できること
-- 公開前のファイル構造がPagesの前提を満たすこと
+```bash
+task deliver
+```
 
-検証スクリプトの存在だけでは、現在の公開サイトが正しい証拠にはなりません。公開後は実URLも確認します。
+Pull Request では変更した head SHA を checkout してデータ検証と build を行います。`main` では GitHub Pages へ deploy し、公開 URL を取得して実ページを確認します。ローカル build や CI 成功だけを production 成功の証拠にしません。
 
----
+## データ方針
+
+- `db/prompts.json` と `artifacts/` の接続を検証する。
+- synthetic、fixture、placeholder を実生成物の代用にしない。
+- 未接続・未使用・重複を確認できたものは残さず削除する。
+- 一回限りの日付、文言、衣装、背景を汎用 `block` に混ぜない。
+- 取得失敗や検証失敗を fallback や broad exception で成功扱いにしない。
+- 新しい個別 script を増やす前に既存 validator へ統合する。
 
 ## Cloudflare Pages Function
 
-`functions/api/prompt-generate.js`はCloudflare Pages Functionです。生成本文の管理対象として`prompts/frontend_codex.md`を参照します。
+`functions/api/prompt-generate.js` は Cloudflare Pages Function です。秘密情報は repository に保存せず、必要な環境変数は Cloudflare 側で管理します。
 
-FunctionへAPIキーや秘密情報を直接コミットしません。Cloudflare側の環境変数が必要な場合は、リポジトリ外で管理します。
+## 公開境界
 
----
+公開 repository へ API key、token、cookie、認証情報、個人情報、非公開会話、利用権を確認できない第三者アセットを保存しません。
 
-## ディレクトリ構成
-
-```text
-artifacts/               採用済み画像
-  _orphaned/             未接続旧画像の退避
-config.yaml              モデルなどの共通設定
-db/prompts.json          block、template、artifact接続の正準
-src/models.py            Pydanticモデル
-static/                   UIのHTML、CSS、JavaScript
-prompts/                  Functionなどから参照するプロンプト
-functions/                Cloudflare Pages Function
-scripts/                  登録、再接続、監査、公開検証
-docs/                     schema、skills、運用文書
-docs/ADR/                 設計判断
-dist/                     build.pyによる静的生成物
-DESIGN.md                 デザイン方針
-AGENTS.md                 エージェント操作契約
-```
-
----
-
-## セキュリティと公開境界
-
-公開リポジトリへ次を保存しません。
-
-- APIキー、token、cookie、認証情報
-- 非公開の会話全文
-- 個人情報
-- ローカル環境固有の秘密パス
-- 利用権を確認できない第三者アセット
-- 未公開の生成入力や機密prompt
-
-画像、キャラクター、外部作品を参照する場合は、来歴、利用条件、変更内容を確認します。「特定作品風」など曖昧な模倣表現を正準データへ残しません。
-
----
-
-## 既知の制約
-
-- 公開サイトは静的生成物を中心とし、すべての生成処理をブラウザだけで完結させるものではありません。
-- プロンプトから同じ画像が必ず再生成されることは保証しません。モデル、seed、サービス仕様、入力画像などの条件に依存します。
-- 未接続画像を自動的に正しいtemplateへ推測接続しません。
-- Cloudflare Pages Functionの稼働状態や環境変数は、Gitの内容だけでは確認できません。
-- 外部生成ツールの出力場所は環境依存です。
-
----
-
-## 関連文書
-
-- [`DESIGN.md`](DESIGN.md) — UIと見た目の方針
-- [`AGENTS.md`](AGENTS.md) — エージェント操作契約
-- [`docs/SCHEMA.md`](docs/SCHEMA.md) — データモデル
-- [`docs/SKILLS.md`](docs/SKILLS.md) — repo-local skill一覧
-- [`docs/ADR/README.md`](docs/ADR/README.md) — ADR索引
-- [`docs/ADR/0018-unconnected-png-reconnect-workflow.md`](docs/ADR/0018-unconnected-png-reconnect-workflow.md) — 未接続画像の再接続
-- [`docs/ADR/0019-config-and-shared-artifact-ops.md`](docs/ADR/0019-config-and-shared-artifact-ops.md) — 設定と共通アセット操作
-- [`docs/ADR/0021-external-reference-hygiene.md`](docs/ADR/0021-external-reference-hygiene.md) — 外部参照の衛生管理
-
----
-
-## ライセンス
-
-コード、生成画像、プロンプト、第三者素材では適用条件が異なる場合があります。リポジトリの`LICENSE`、各アセットの来歴、外部サービスの利用規約を確認してください。
+公開 URL の稼働状態は Git の内容だけでは判断せず、実 URL を確認します。
