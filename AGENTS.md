@@ -1,70 +1,57 @@
-# AGENTS.md - 思考ガイドライン
+# AGENTS.md
 
-## 戦略的エントリポイント（どのファイルをどう見るか）
+## 正本
 
-エージェントは、タスクの種類に応じて以下の順序で思考し、ファイルを読み取ること。
+変更判断は現在の実装と機械可読データを優先する。
 
-### 1. 構造とルールの把握（迷ったとき、新規追加時）
+- データ構造: `src/models.py`
+- 正準データ: `db/prompts.json`
+- 正準アセット: `artifacts/`
+- 静的生成: `build.py`
+- 共通コマンド: `Taskfile.yml`
+- UI: `static/`
+- `dist/` は生成物。直接編集しない。
 
-- **[SCHEMA.md](docs/SCHEMA.md)**: データの「型」と「分類」の正解。
-- **[AGENTS.md](AGENTS.md)**: このファイル。開発の「作法」と「優先順位」。
-- **[ADR/](docs/ADR/)**: 過去の「決定事項」とその理由。特に [ADR 0012](docs/ADR/0012-semantic-block-naming.md) の命名規則。
-- **[src/models.py](src/models.py)**: 実装上の「真実」。Pydantic モデルがデータの整合性を担保する。
-- **[docs/ADR/0022-docs-and-skills-no-inference-policy.md](docs/ADR/0022-docs-and-skills-no-inference-policy.md)**: docs と skills に書いてよい範囲の決定事項。
-- **[docs/ADR/0023-unity-command-queue-bridge.md](docs/ADR/0023-unity-command-queue-bridge.md)**: Unity 操作を command queue と result file に寄せる決定事項。
+Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、現在の実装を確認し、古い説明を更新または削除する。未確認の仕様を docs や skills に書かない。
 
-### 2. 視覚的・体験的な修正（表示崩れ、UI改善）
+## 変更方針
 
-- **[DESIGN.md](DESIGN.md)**: 視覚的な「美学」と「禁止事項」。
-- **[static/app.js](static/app.js)**: 表示の「ロジック」。検索、モーダル、画像表示の振る舞い。
-- **[static/style.css](static/style.css)**: 見た目の「詳細」。余白、色、レスポンス。
-- **[static/index.html](static/index.html)**: 画面の「骨格」。セクション配置。
+- 既存の標準処理で解決できるなら新しい script、workflow、独自形式を増やさない。
+- DELETE > MERGE > REPLACE > ADD。未使用・重複を実参照で確認してから削除する。
+- synthetic、fixture、placeholder を本番結果や実アセットの代用にしない。
+- 取得失敗、検証失敗、参照切れを silent fallback や broad exception で成功扱いにしない。
+- コメントはコードから分からない理由、外部制約、互換性理由だけに使う。処理内容の言い換えは書かない。
+- host 固有パス、個人環境、one-off 手順を repository の恒久ルールにしない。
 
-### 3. コンテンツの追加・変更（プロンプト、画像）
+## データとアセット
 
-- **[db/prompts.json](db/prompts.json)**: 全ての「源泉」。テンプレート、ブロック、`artifacts` の接続。
-- **[artifacts/](artifacts/)**: 実体の「アセット」。ファイル名は `NNN_slug.png`。
-- **[artifacts/_orphaned/](artifacts/_orphaned/)**: 退避した古い PNG の保管先。root の `artifacts/` に未接続 PNG を残さない。
-- 生成画像の一次出力先: `/home/kafka/.codex/generated_images/`
-- Kafka の見た目: `character_kafka`、`character_kafka_soft_reference`、`kafka_identity_lock`
+- `db/prompts.json` の変更は `src/models.py` と既存 validator に適合させる。
+- アセットを追加・変更した場合は DB との接続を検証する。
+- 未接続ファイルを「念のため」保存し続けない。参照がないことを確認できたものは削除する。
+- 一回限りの具体的な日付、セリフ、用途を再利用 block に混ぜない。再利用可能な構造と生成ごとの差分を分離する。
 
-### 4. 生成物の登録
+## 検証
 
-- **[scripts/register_generated_artifact.py](scripts/register_generated_artifact.py)**: 生成画像を `artifacts/` と `db/prompts.json` に同時登録する単一入口。
-- **[scripts/reconnect_unconnected_pngs.py](scripts/reconnect_unconnected_pngs.py)**: 既存の未接続PNGを再採番して `artifacts/` と `db/prompts.json` に再接続する整備用スクリプト。事前確認は `--dry-run` を使う。
-- **[docs/ADR/0018-unconnected-png-reconnect-workflow.md](docs/ADR/0018-unconnected-png-reconnect-workflow.md)**: 未接続PNGの再採番・再接続に関する正式な決定事項。
+変更後は対象範囲に応じて既存 Task を使う。
 
----
+```bash
+task validate
+task artifacts-audit
+task build
+```
 
-## 思考の原則 (Meta Principles)
+全体確認が必要な変更では `task deliver` を使う。新しい個別検証 script を追加する前に既存 validator へ統合できないか確認する。
 
-- **DB-First**: 画面を直す前に、まず `db/prompts.json` のデータ構造が正しいか、モデルに適合しているかを確認せよ。
-- **Zero-Fat**: 「単機能・最小構成」を維持せよ。重複したロジックや、使われていないフィールドは削除の対象。
-- **Gallery-First**: このプロジェクトは「ギャラリー」である。全ての変更は「画像が見やすく、プロンプトがコピーしやすいか」という基準で評価せよ。
-- **Naming as Logic**: 名称（title）は単なるラベルではなく、システム内の役割（[ADR 0012](docs/ADR/0012-semantic-block-naming.md)）を示す。類似したブロックは「包含関係」がないか常に疑え。
-- **External Reference Hygiene**: 外部参照は、借りるもの、変えるもの、一目で修正するものを分ける。[ADR 0021](docs/ADR/0021-external-reference-hygiene.md) に従い、`〇〇風` と `inspired by` は使わない。
-- **Structure Boundaries**: `character_kafka`、`kafka_identity_lock`、`speech_mode_kafka` は identity block として固定する。`morning_*`、`gaming_*`、`news_*`、`cosplay_*` は situation block として一時注入だけにする。`pack` は最大 5 blocks 相当、`template.blocks` は最大 8 blocks を目安にする。
-- **Role First**: `db/prompts.json` の `Block` には `role` を付ける。`identity`、`style`、`layout`、`outfit`、`pose`、`background`、`lighting`、`text`、`situation`、`pack` を基準に見る。
-- **Source Fidelity**: ボードゲーム系の画像は、元のルール、コンポーネント、既存の見た目を確認してから作る。知っている人が見て違和感を覚える抽象化や、雑な一般化は避ける。
-- **No Inference in Docs / Skills**: `docs/*` と `.agents/skills/*` には、ファイルから直接確認できる事実、明示された決定、実行手順だけを書く。推論、要約の飛躍、未確認の仕様や機能は書かない。
-- **Zero-Trust Block Constraints**: 新しいブロックを追加・生成する際は、具体的セリフや一回限りの日付などの再利用性の低い情報を blocks に含めてはならない。ブロック内に複数の見出し（##以上）、コマ割りマーカー（panel等）、および7行以上の箇条書きリストを含めることを永久に禁止する。追加前には必ず `python3 scripts/audit_db.py` による自動検証をパスさせ、プログラムによる客観的保証（ゼロトラスト）を貫徹せよ。
+Pull Request では変更した head SHA の CI を確認する。merge 後は `main` を読み返し、公開物に影響する変更は GitHub Pages / Cloudflare Pages の実 URL を確認する。ローカル build や CI 成功だけを production 成功の証拠にしない。
 
----
+## 完了条件
 
-## 変更手順のメタ思考
+次を満たしたときだけ完了とする。
 
-1. **データ整合性**: `src/models.py` の Pydantic モデルを確認し、`db/prompts.json` を編集。
-2. **生成物登録**: 画像を採用する場合は、`scripts/register_generated_artifact.py` を使って `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。生成画像の一次出力先は `/home/kafka/.codex/generated_images/`。既存の未接続PNGを整理する場合は ADR 0018 に従って `scripts/reconnect_unconnected_pngs.py` を使う。手動の移動、手動の採番、`dist/` への直接編集はしない。
-3. **静的生成**: 登録スクリプトが `python3 build.py` と `python3 scripts/validate_db.py` を通す。`dist/` はこのコマンドでのみ更新される「生成物」であり、直接編集は厳禁。
-4. **内容照合**: `character_kafka` と `kafka_identity_lock` を確認してから画像を作る。
-5. **ローカル検証**: 必要な場合のみ `python3 app.py` で表示を確認する。画像が表示されない、あるいは `画像なし` のラベルが出る場合は、`artifacts/` と JSON の接続ミスを疑う。
-6. **アセット監査**: `python3 scripts/audit_artifacts.py` で root `artifacts/` と `db/prompts.json` の接続状態を確認する。
-7. **公開検証**: `scripts/verify_pages.sh` でデプロイ後の状態をシミュレート。
+1. 正準データ・実装・生成物の整合性が既存 validator で確認できる。
+2. 変更した PR head SHA の CI が成功している。
+3. merge 後の `main` に変更が存在する。
+4. 公開物に影響する場合は production URL で結果を確認できる。
+5. 古い説明、重複処理、不要な一時物を残していない。
 
----
-
-## 自律実行と完了定義
-
-- **完遂の定義**: 登録スクリプト実行後に `build.py` と `validate_db.py` が通り、必要に応じてローカル表示確認まで済んだ状態を指す。
-- **停止の判断**: 大規模なディレクトリ構造の変更、あるいは既存の ADR に抵触する可能性が高い場合は、プランを提示して停止せよ。
-- **文言の誠実さ**: 実装されていない機能を「できる」と書かない。DBにあるデータと、実際に画面に出る導線のみを記述せよ。
+確認できない項目は成功扱いにせず `UNVERIFIED` とする。
