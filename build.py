@@ -19,6 +19,7 @@ STATIC_PATH = root_path(CONFIG["paths"]["static"])
 DIST_PATH = root_path(CONFIG["paths"]["dist"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
 DESIGNS_PATH = ROOT / "designs"
+GENERATED_ASSETS_PATH = ROOT / "assets" / "generated"
 PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
 SKILLS_INDEX_PATH = root_path(CONFIG["paths"]["skills_index"])
 KAFKA_SIGNAL_PATH = ROOT / "design-systems" / "kafka-signal"
@@ -48,7 +49,6 @@ def is_png(path: Path) -> bool:
 
 def render_app_js(db: PromptDB, skills_index: list[dict[str, object]]) -> str:
     db_json = db.model_dump(exclude_none=True)
-    # Rewrite artifact paths to .webp ONLY if Pillow is available
     if HAS_PILLOW:
         for t in db_json.get("templates", []):
             for a in t.get("artifacts", []):
@@ -76,8 +76,13 @@ def copy_kafka_signal_catalog() -> None:
 def copy_canonical_designs() -> None:
     if not DESIGNS_PATH.is_dir():
         raise FileNotFoundError(f"missing canonical designs directory: {DESIGNS_PATH}")
-    destination = DIST_PATH / "designs"
-    shutil.copytree(DESIGNS_PATH, destination)
+    shutil.copytree(DESIGNS_PATH, DIST_PATH / "designs")
+
+
+def copy_generated_assets() -> None:
+    if not GENERATED_ASSETS_PATH.is_dir():
+        raise FileNotFoundError(f"missing generated assets directory: {GENERATED_ASSETS_PATH}")
+    shutil.copytree(GENERATED_ASSETS_PATH, DIST_PATH / "assets" / "generated")
 
 
 def write_dist() -> None:
@@ -88,7 +93,6 @@ def write_dist() -> None:
     DIST_PATH.mkdir(exist_ok=True)
     (DIST_PATH / "artifacts").mkdir(exist_ok=True)
 
-    # Inject commit hash for observability
     try:
         import subprocess
 
@@ -108,14 +112,12 @@ def write_dist() -> None:
         encoding="utf-8",
     )
 
-    # Copy other static assets
     for s in STATIC_PATH.rglob("*"):
         if s.is_file() and s.name not in ["index.html", "style.css", "app.js"]:
             dest = DIST_PATH / s.relative_to(STATIC_PATH)
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(s, dest)
 
-    # Copy prompt templates for Pages Functions
     for s in PROMPTS_PATH.rglob("*"):
         if s.is_file():
             dest = DIST_PATH / s.relative_to(ROOT)
@@ -128,8 +130,8 @@ def write_dist() -> None:
 
     copy_kafka_signal_catalog()
     copy_canonical_designs()
+    copy_generated_assets()
 
-    # Convert PNGs to WebP if Pillow is available, otherwise copy PNG/WAV as-is.
     active_artifacts = {a.path for t in db.templates for a in t.artifacts}
     if HAS_PILLOW:
         print("Converting artifacts to WebP...")
