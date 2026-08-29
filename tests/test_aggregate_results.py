@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "aggregate_results.py"
+MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "results" / "aggregate.py"
 spec = importlib.util.spec_from_file_location("aggregate_results", MODULE_PATH)
 agg = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
