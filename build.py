@@ -18,6 +18,7 @@ DB_PATH = root_path(CONFIG["paths"]["db"])
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
 DIST_PATH = root_path(CONFIG["paths"]["dist"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
+DESIGNS_PATH = ROOT / "designs"
 PROMPTS_PATH = root_path(CONFIG["paths"]["prompts"]).parent
 SKILLS_INDEX_PATH = root_path(CONFIG["paths"]["skills_index"])
 KAFKA_SIGNAL_PATH = ROOT / "design-systems" / "kafka-signal"
@@ -72,6 +73,13 @@ def copy_kafka_signal_catalog() -> None:
         shutil.copy2(source, destination / name)
 
 
+def copy_canonical_designs() -> None:
+    if not DESIGNS_PATH.is_dir():
+        raise FileNotFoundError(f"missing canonical designs directory: {DESIGNS_PATH}")
+    destination = DIST_PATH / "designs"
+    shutil.copytree(DESIGNS_PATH, destination)
+
+
 def write_dist() -> None:
     db = load_db()
     skills_index = load_skills_index(SKILLS_INDEX_PATH)
@@ -119,6 +127,7 @@ def write_dist() -> None:
     shutil.copy2(SKILLS_INDEX_PATH, skills_dest)
 
     copy_kafka_signal_catalog()
+    copy_canonical_designs()
 
     # Convert PNGs to WebP if Pillow is available, otherwise copy PNG/WAV as-is.
     active_artifacts = {a.path for t in db.templates for a in t.artifacts}
