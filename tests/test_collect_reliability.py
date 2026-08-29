@@ -3,7 +3,7 @@ import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 
-SPEC = importlib.util.spec_from_file_location("collect_reliability", Path("scripts/collect_reliability.py"))
+SPEC = importlib.util.spec_from_file_location("collect_reliability", Path("scripts/results/collect_reliability.py"))
 assert SPEC and SPEC.loader
 mod = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(mod)

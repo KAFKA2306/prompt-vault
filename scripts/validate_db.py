@@ -12,6 +12,20 @@ LEGACY_SRC_IMPORTS = (
     "src." + "artifact_ops",
     "src." + "skills_index",
 )
+LEGACY_RESULTS_REFERENCES = (
+    "scripts/" + "aggregate_results.py",
+    "scripts/" + "collect_adoption.py",
+    "scripts/" + "collect_automation.py",
+    "scripts/" + "collect_business.py",
+    "scripts/" + "collect_code_quality.py",
+    "scripts/" + "collect_data_quality.py",
+    "scripts/" + "collect_reliability.py",
+    "scripts/" + "emit_native_test_metric.py",
+    "scripts." + "collect_code_quality",
+    "scripts." + "collect_data_quality",
+    "scripts." + "emit_native_test_metric",
+)
+TEXT_SUFFIXES = {".py", ".yml", ".yaml", ".md", ".sh", ".txt"}
 
 
 def validate_no_legacy_src_imports() -> None:
@@ -24,8 +38,21 @@ def validate_no_legacy_src_imports() -> None:
                 raise ValueError(f"{path}: legacy src import is forbidden: {legacy_import}")
 
 
+def validate_no_legacy_results_references() -> None:
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
+            continue
+        if any(part in {"dist", ".venv", "__pycache__"} for part in path.parts):
+            continue
+        content = path.read_text(encoding="utf-8")
+        for legacy_reference in LEGACY_RESULTS_REFERENCES:
+            if legacy_reference in content:
+                raise ValueError(f"{path}: legacy KAFKA RESULTS path is forbidden: {legacy_reference}")
+
+
 def main() -> int:
     validate_no_legacy_src_imports()
+    validate_no_legacy_results_references()
     db = load_prompt_db(ROOT / CONFIG["paths"]["db"])
 
     artifact_paths = defaultdict(list)

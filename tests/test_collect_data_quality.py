@@ -3,7 +3,7 @@ import json
 import unittest
 from unittest.mock import patch
 
-from scripts.collect_data_quality import semiconductor_report, uninstrumented_report
+from scripts.results.collect_data_quality import semiconductor_report, uninstrumented_report
 
 
 def contents(data, path):
@@ -54,7 +54,7 @@ class DataQualityCollectorTest(unittest.TestCase):
                     return contents(data, filename)
             raise AssertionError(path)
 
-        with patch("scripts.collect_data_quality.gh_get", side_effect=fake_get):
+        with patch("scripts.results.collect_data_quality.gh_get", side_effect=fake_get):
             report = semiconductor_report("KAFKA2306/semiconductor-earnings-model", "main", None)
 
         self.assertEqual(report["canonical_population"]["value"], 3)

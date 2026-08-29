@@ -3,14 +3,14 @@ name: KAFKA RESULTS aggregate
 on:
   pull_request:
     paths:
-      - "scripts/aggregate_results.py"
+      - "scripts/results/aggregate.py"
       - "tests/test_aggregate_results.py"
       - ".github/workflows/results-aggregate.yml"
       - "docs/results-aggregate.md"
   push:
     branches: [main]
     paths:
-      - "scripts/aggregate_results.py"
+      - "scripts/results/aggregate.py"
       - "tests/test_aggregate_results.py"
       - ".github/workflows/results-aggregate.yml"
       - "docs/results-aggregate.md"
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           sparse-checkout: |
-            scripts/aggregate_results.py
+            scripts/results/aggregate.py
             tests/test_aggregate_results.py
             docs/results-aggregate.md
             .github/workflows/results-aggregate.yml
@@ -82,7 +82,7 @@ jobs:
           done
           rm -rf .incoming
       - name: Aggregate results
-        run: python scripts/aggregate_results.py --root results --require-all
+        run: python scripts/results/aggregate.py --root results --require-all
       - name: Contract audit
         run: |
           python - <<'PY'
@@ -129,5 +129,5 @@ jobs:
           retention-days: 30
       - name: Verify clean checkout
         run: |
-          rm -rf results .incoming tests/__pycache__ scripts/__pycache__
+          rm -rf results .incoming tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
           test -z "$(git status --porcelain --untracked-files=all)"

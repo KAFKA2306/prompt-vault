@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timezone
 
-from scripts.collect_code_quality import (
+from scripts.results.collect_code_quality import (
     aggregate,
     apply_native_evidence,
     is_quality_run,

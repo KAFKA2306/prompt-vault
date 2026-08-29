@@ -3,14 +3,14 @@ name: KAFKA RESULTS reliability
 on:
   pull_request:
     paths:
-      - "scripts/collect_reliability.py"
+      - "scripts/results/collect_reliability.py"
       - "tests/test_collect_reliability.py"
       - ".github/workflows/results-reliability.yml"
       - "docs/results-reliability.md"
   push:
     branches: [main]
     paths:
-      - "scripts/collect_reliability.py"
+      - "scripts/results/collect_reliability.py"
       - "tests/test_collect_reliability.py"
       - ".github/workflows/results-reliability.yml"
       - "docs/results-reliability.md"
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            scripts/collect_reliability.py
+            scripts/results/collect_reliability.py
             tests/test_collect_reliability.py
             docs/results-reliability.md
             .github/workflows/results-reliability.yml
@@ -43,7 +43,7 @@ jobs:
       - name: Collect 30-day reliability reports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/collect_reliability.py --owner KAFKA2306 --out results/reliability
+        run: python scripts/results/collect_reliability.py --owner KAFKA2306 --out results/reliability
       - name: Contract audit
         run: |
           python - <<'PY'
@@ -70,5 +70,5 @@ jobs:
           retention-days: 30
       - name: Verify clean checkout
         run: |
-          rm -rf results/reliability tests/__pycache__ scripts/__pycache__
+          rm -rf results/reliability tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
           test -z "$(git status --porcelain --untracked-files=all)"
