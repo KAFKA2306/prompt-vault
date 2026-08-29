@@ -3,14 +3,14 @@ name: KAFKA RESULTS data quality
 on:
   pull_request:
     paths:
-      - "scripts/collect_data_quality.py"
+      - "scripts/results/collect_data_quality.py"
       - "tests/test_collect_data_quality.py"
       - ".github/workflows/results-data-quality.yml"
       - "docs/results-data-quality.md"
   push:
     branches: [main]
     paths:
-      - "scripts/collect_data_quality.py"
+      - "scripts/results/collect_data_quality.py"
       - "tests/test_collect_data_quality.py"
       - ".github/workflows/results-data-quality.yml"
       - "docs/results-data-quality.md"
@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           sparse-checkout: |
-            scripts/collect_data_quality.py
+            scripts/results/collect_data_quality.py
             tests/test_collect_data_quality.py
             docs/results-data-quality.md
             .github/workflows/results-data-quality.yml
@@ -42,7 +42,7 @@ jobs:
       - name: Collect data-quality reports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/collect_data_quality.py --owner KAFKA2306 --out results/data-quality
+        run: python scripts/results/collect_data_quality.py --owner KAFKA2306 --out results/data-quality
       - name: Contract audit
         run: |
           python - <<'PY'
@@ -75,5 +75,5 @@ jobs:
           retention-days: 30
       - name: Verify clean checkout
         run: |
-          rm -rf results/data-quality tests/__pycache__ scripts/__pycache__
+          rm -rf results/data-quality tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
           test -z "$(git status --porcelain --untracked-files=all)"
