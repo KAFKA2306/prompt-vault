@@ -10,7 +10,10 @@
 
 変更判断は現在の実装と機械可読データを優先する。
 
-- データ構造: `src/models.py`
+- Prompt DBの型・読書き: `src/prompt_db.py`
+- アセット採番・命名: `src/artifacts.py`
+- 固定サイズ2D SVG検証: `src/designs.py`
+- Skill一覧の読取り: `src/skills.py`
 - 正準データ: `db/prompts.json`
 - 正準アセット: `artifacts/`
 - 固定サイズ2Dの編集可能な正準デザイン: `designs/*.svg`
@@ -23,6 +26,8 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 
 ## 変更方針
 
+- `src/` は用途が名前から分かる小さなモジュールを保つ。汎用的な `models.py` / `utils.py` / `helpers.py` を作らない。
+- 現行規模で `domain/infra/services/` のような多層化を追加しない。責務が実際に分裂してから分割する。
 - 既存の標準処理で解決できるなら新しい script、workflow、独自形式を増やさない。
 - DELETE > MERGE > REPLACE > ADD。未使用・重複を実参照で確認してから削除する。
 - synthetic、fixture、placeholder を本番結果や実アセットの代用にしない。
@@ -32,7 +37,7 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 
 ## データとアセット
 
-- `db/prompts.json` の変更は `src/models.py` と既存 validator に適合させる。
+- `db/prompts.json` の変更は `src/prompt_db.py` と既存 validator に適合させる。
 - アセットを追加・変更した場合は DB との接続を検証する。
 - `designs/*.svg` では文字列、font、座標、図形を構造として保持し、`dist/` 側のコピーを正本にしない。
 - 未接続ファイルを「念のため」保存し続けない。参照がないことを確認できたものは削除する。

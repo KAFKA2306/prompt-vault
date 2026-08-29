@@ -4,7 +4,7 @@ import sys
 
 from _bootstrap import ROOT
 from config import CONFIG
-from src.db_io import load_json_db
+from src.prompt_db import load_json_db
 
 KNOWN_ROLES = {
     "identity",
@@ -64,7 +64,6 @@ def audit_db(strict=False):
     errors = []
     warnings = []
 
-    # 1. Unknown Block & Empty Template Check
     for t in templates:
         tid = t.get("id")
         t_blocks = t.get("blocks", [])
@@ -79,7 +78,6 @@ def audit_db(strict=False):
             if bid not in block_ids:
                 errors.append(f"Template '{tid}' references unknown block: {bid}")
 
-    # 2. Duplicate ID Check
     seen_bids = set()
     for b in blocks:
         bid = b.get("id")
@@ -95,7 +93,6 @@ def audit_db(strict=False):
         elif role not in KNOWN_ROLES:
             warnings.append(f"Unknown role on block '{bid}': {role}")
 
-    # 3. Oversized / Mixed Role Check (Banned Keywords)
     BANNED_KEYWORDS = ["scene"]
     ROLE_KEYWORDS = {
         "pose": [r"pose", r"standing", r"sitting"],
@@ -114,7 +111,6 @@ def audit_db(strict=False):
             if re.search(rf"\b{kw}\b", content):
                 warnings.append(f"Block '{bid}' contains banned/mixed-role term: {kw}")
 
-        # Multiple Roles detection
         roles = []
         for role, kws in ROLE_KEYWORDS.items():
             if any(re.search(rf"\b{kw}\b", content) for kw in kws):
@@ -174,7 +170,6 @@ def audit_db(strict=False):
                 "which suggests it might be a packed block that should be split."
             )
 
-    # 4. Pack size check
     for bid, block in block_by_id.items():
         if block.get("role") != "pack":
             continue
@@ -184,7 +179,6 @@ def audit_db(strict=False):
         elif len(lines) > 5:
             warnings.append(f"Pack block '{bid}' should be split: {len(lines)} lines")
 
-    # 5. Template / block structure checks
     used_block_ids = {bid for t in templates for bid in t.get("blocks", [])}
     unused_blocks = sorted(bid for bid in block_ids if bid not in used_block_ids)
     if unused_blocks:
@@ -198,7 +192,6 @@ def audit_db(strict=False):
         ):
             warnings.append(f"Suspicious broad pack name: {bid}")
 
-    # 6. Result Reporting
     print("--- DB Audit Report ---")
     print(f"Templates: {len(templates)}, Blocks: {len(blocks)}")
 

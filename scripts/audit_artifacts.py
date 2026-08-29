@@ -2,7 +2,7 @@ from collections import defaultdict
 
 from _bootstrap import ROOT
 from config import CONFIG
-from src.db_io import load_prompt_db
+from src.prompt_db import load_prompt_db
 
 
 def main() -> int:

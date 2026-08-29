@@ -10,9 +10,8 @@ except ImportError:
     HAS_PILLOW = False
 
 from config import CONFIG, ROOT, root_path
-from src.db_io import load_prompt_db
-from src.models import PromptDB
-from src.skills_index import load_skills_index
+from src.prompt_db import PromptDB, load_prompt_db
+from src.skills import load_skills_index
 
 DB_PATH = root_path(CONFIG["paths"]["db"])
 STATIC_PATH = root_path(CONFIG["paths"]["static"])

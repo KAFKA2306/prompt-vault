@@ -43,7 +43,7 @@ description: MUST use this skill to audit db/prompts.json canonical drift. Detec
 
 ## 実行順
 
-1. `src/models.py` で実際のスキーマを確認する
+1. `src/prompt_db.py` で実際のスキーマを確認する
 2. `python3 scripts/audit_db.py` で構造監査をする
 3. `python3 scripts/validate_db.py` で artifact 参照を検証する
 4. `python3 scripts/audit_artifacts.py` で root / `_orphaned` の接続を確認する
