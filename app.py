@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 
 from build import load_db, render_app_js
 from config import CONFIG, ROOT, root_path
-from src.skills_index import load_skills_index
+from src.skills import load_skills_index
 
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
@@ -41,7 +41,6 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/docs/SKILLS.md":
             return self._send(200, "text/markdown; charset=utf-8", SKILLS_INDEX_PATH.read_bytes())
 
-        # Static files
         p = self.path.split("?")[0]
         if p == "/":
             p = "/index.html"
@@ -68,9 +67,7 @@ class Handler(BaseHTTPRequestHandler):
             )
             return self._send(200, mime, content)
 
-        # Artifacts
         if p.startswith("/artifacts/"):
-            # Try dist/ first, then root
             af = DIST_PATH / p.lstrip("/")
             if not af.exists():
                 af = ROOT / p.lstrip("/")
