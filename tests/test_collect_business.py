@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "collect_business.py"
+MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "results" / "collect_business.py"
 spec = importlib.util.spec_from_file_location("collect_business", MODULE_PATH)
 module = importlib.util.module_from_spec(spec)
 assert spec and spec.loader
