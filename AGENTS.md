@@ -1,5 +1,11 @@
 # AGENTS.md
 
+## Short-context start
+
+最初に読むのはこのファイルと、現在のtaskを所有する実装・正準データ・validatorだけです。README、全Issue、全docs、過去artifactを先読みしません。必要なauthorityだけを追加で読み、同じ目的のIssue/PRがあれば継続します。
+
+途中で止まる場合は、既存Issue/PRへ「現在state・確認済みevidence・blocker・次の1 action」を短く残します。chat historyを継続の正本にしません。
+
 ## 正本
 
 変更判断は現在の実装と機械可読データを優先する。
