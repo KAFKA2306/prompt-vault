@@ -13,6 +13,7 @@
 - データ構造: `src/models.py`
 - 正準データ: `db/prompts.json`
 - 正準アセット: `artifacts/`
+- 固定サイズ2Dの編集可能な正準デザイン: `designs/*.svg`
 - 静的生成: `build.py`
 - 共通コマンド: `Taskfile.yml`
 - UI: `static/`
@@ -33,6 +34,7 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 
 - `db/prompts.json` の変更は `src/models.py` と既存 validator に適合させる。
 - アセットを追加・変更した場合は DB との接続を検証する。
+- `designs/*.svg` では文字列、font、座標、図形を構造として保持し、`dist/` 側のコピーを正本にしない。
 - 未接続ファイルを「念のため」保存し続けない。参照がないことを確認できたものは削除する。
 - 一回限りの具体的な日付、セリフ、用途を再利用 block に混ぜない。再利用可能な構造と生成ごとの差分を分離する。
 
