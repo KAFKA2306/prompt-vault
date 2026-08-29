@@ -12,7 +12,11 @@ https://prompt-vault-cg3.pages.dev/
 - 生成物: `artifact`
 - 正準データ: `db/prompts.json`
 - 正準アセット: `artifacts/`
-- データ型と制約: `src/models.py`
+- 編集可能な固定サイズ2Dデザイン: `designs/*.svg`
+- Prompt DBの型・読書き: `src/prompt_db.py`
+- アセット採番・命名: `src/artifacts.py`
+- SVG検証: `src/designs.py`
+- Skill一覧読取り: `src/skills.py`
 - 静的生成: `build.py`
 - UI: `static/`
 - 生成物: `dist/`（直接編集しない）
@@ -20,17 +24,13 @@ https://prompt-vault-cg3.pages.dev/
 ## 構造
 
 ```text
-db/prompts.json
-        │
-        ├─ src/models.py / validator で検証
-        ├─ artifacts/ と接続
-        ▼
-build.py
-        ▼
-dist/
-        ▼
-GitHub Pages / Cloudflare Pages
+db/prompts.json ── src/prompt_db.py ─┐
+artifacts/ ─────── src/artifacts.py ──┤
+designs/*.svg ─── src/designs.py ────┼─> build.py ─> dist/ ─> Pages
+skills index ───── src/skills.py ─────┘
 ```
+
+`src/` は用途が名前から分かる小さなモジュールだけを置きます。現行規模では `domain/infra/services/` のような多層化や、`models.py` / `utils.py` のような広すぎる名前を使いません。
 
 変更され得る仕様は Markdown に重複して持たず、現在の実装と機械可読データを優先します。AI coding agent の作業規約は `AGENTS.md` を参照してください。
 
