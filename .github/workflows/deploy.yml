@@ -61,3 +61,7 @@ jobs:
           test -n "$PAGE_URL"
           curl --fail --silent --show-error --location --retry 0 "$PAGE_URL" -o /tmp/index.html
           grep -F "Prompt Vault" /tmp/index.html
+          DESIGN_URL="${PAGE_URL%/}/designs/issue-91-blueprint-proof.svg"
+          curl --fail --silent --show-error --location --retry 0 "$DESIGN_URL" -o /tmp/issue-91-blueprint-proof.svg
+          grep -F "設計図派" /tmp/issue-91-blueprint-proof.svg
+          grep -F 'font-family="Noto Sans CJK JP, sans-serif"' /tmp/issue-91-blueprint-proof.svg

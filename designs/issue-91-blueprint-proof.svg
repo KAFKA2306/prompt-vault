@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">設計図派の最小実証</title>
+  <desc id="desc">文字、図形、配置をSVGの構造として保持し、画像生成モデルには焼き込まない例。</desc>
+  <rect id="background" width="1200" height="630" fill="#f8fafc"/>
+  <rect id="frame" x="54" y="52" width="1092" height="526" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+
+  <text id="eyebrow" x="96" y="112" font-family="Noto Sans CJK JP, sans-serif" font-size="24" font-weight="500" fill="#475569">PROMPT VAULT / ISSUE #91 PROOF</text>
+  <text id="headline" x="96" y="190" font-family="Noto Sans CJK JP, sans-serif" font-size="64" font-weight="700" fill="#0f172a">設計図派</text>
+  <text id="subhead" x="96" y="238" font-family="Noto Sans CJK JP, sans-serif" font-size="27" font-weight="400" fill="#334155">意味を持つものは、ピクセルではなく構造として残す。</text>
+
+  <g id="text-card">
+    <rect x="96" y="302" width="286" height="180" rx="20" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="124" y="354" font-family="Noto Sans CJK JP, sans-serif" font-size="24" font-weight="700" fill="#1e3a8a">文字</text>
+    <text id="text-value" x="124" y="404" font-family="Noto Sans CJK JP, sans-serif" font-size="30" font-weight="700" fill="#0f172a">「今週の市場」</text>
+    <text x="124" y="448" font-family="Noto Sans CJK JP, sans-serif" font-size="20" fill="#475569">&lt;text&gt; として保持</text>
+  </g>
+
+  <g id="shape-card">
+    <rect x="420" y="302" width="286" height="180" rx="20" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="448" y="354" font-family="Noto Sans CJK JP, sans-serif" font-size="24" font-weight="700" fill="#5b21b6">図形・配置</text>
+    <rect id="sample-shape" x="448" y="382" width="92" height="54" rx="12" fill="#ddd6fe" stroke="#8b5cf6"/>
+    <path id="sample-arrow" d="M558 409 H642 M626 393 L642 409 L626 425" fill="none" stroke="#7c3aed" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="448" y="462" font-family="Noto Sans CJK JP, sans-serif" font-size="20" fill="#475569">座標・pathとして保持</text>
+  </g>
+
+  <g id="image-card">
+    <rect x="744" y="302" width="306" height="180" rx="20" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="772" y="354" font-family="Noto Sans CJK JP, sans-serif" font-size="24" font-weight="700" fill="#166534">生成画像</text>
+    <rect x="772" y="382" width="250" height="56" rx="12" fill="#dcfce7"/>
+    <text x="897" y="418" text-anchor="middle" font-family="Noto Sans CJK JP, sans-serif" font-size="22" font-weight="500" fill="#166534">素材だけ ImageGen</text>
+    <text x="772" y="462" font-family="Noto Sans CJK JP, sans-serif" font-size="20" fill="#475569">文字・表・ラベルは焼かない</text>
+  </g>
+
+  <text id="footer" x="96" y="538" font-family="Noto Sans CJK JP, sans-serif" font-size="20" fill="#64748b">SVG = canonical · PNG = rendered derivative</text>
+</svg>
