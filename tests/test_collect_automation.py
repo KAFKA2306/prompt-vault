@@ -3,7 +3,7 @@ import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 
-SPEC = importlib.util.spec_from_file_location("collect_automation", Path("scripts/collect_automation.py"))
+SPEC = importlib.util.spec_from_file_location("collect_automation", Path("scripts/results/collect_automation.py"))
 assert SPEC and SPEC.loader
 mod = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(mod)
