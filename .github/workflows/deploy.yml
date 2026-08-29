@@ -65,3 +65,14 @@ jobs:
           curl --fail --silent --show-error --location --retry 0 "$DESIGN_URL" -o /tmp/issue-91-blueprint-proof.svg
           grep -F "設計図派" /tmp/issue-91-blueprint-proof.svg
           grep -F 'font-family="Noto Sans CJK JP, sans-serif"' /tmp/issue-91-blueprint-proof.svg
+          ASSET_URL="${PAGE_URL%/}/assets/generated/issue-91-business-analyst.jpg"
+          curl --fail --silent --show-error --location --retry 0 "$ASSET_URL" -o /tmp/issue-91-business-analyst.jpg
+          test -s /tmp/issue-91-business-analyst.jpg
+          THIS_WEEK_URL="${PAGE_URL%/}/designs/issue-91-market-thisweek.svg"
+          curl --fail --silent --show-error --location --retry 0 "$THIS_WEEK_URL" -o /tmp/issue-91-market-thisweek.svg
+          grep -F "今週の市場" /tmp/issue-91-market-thisweek.svg
+          grep -F '../assets/generated/issue-91-business-analyst.jpg' /tmp/issue-91-market-thisweek.svg
+          NEXT_WEEK_URL="${PAGE_URL%/}/designs/issue-91-market-nextweek.svg"
+          curl --fail --silent --show-error --location --retry 0 "$NEXT_WEEK_URL" -o /tmp/issue-91-market-nextweek.svg
+          grep -F "来週の市場" /tmp/issue-91-market-nextweek.svg
+          grep -F '../assets/generated/issue-91-business-analyst.jpg' /tmp/issue-91-market-nextweek.svg
