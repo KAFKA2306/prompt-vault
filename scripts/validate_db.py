@@ -6,8 +6,26 @@ from config import CONFIG
 from src.designs import validate_canonical_designs
 from src.prompt_db import load_prompt_db
 
+LEGACY_SRC_IMPORTS = (
+    "src." + "models",
+    "src." + "db_io",
+    "src." + "artifact_ops",
+    "src." + "skills_index",
+)
+
+
+def validate_no_legacy_src_imports() -> None:
+    for path in ROOT.rglob("*.py"):
+        if any(part in {"dist", ".venv", "__pycache__"} for part in path.parts):
+            continue
+        content = path.read_text(encoding="utf-8")
+        for legacy_import in LEGACY_SRC_IMPORTS:
+            if legacy_import in content:
+                raise ValueError(f"{path}: legacy src import is forbidden: {legacy_import}")
+
 
 def main() -> int:
+    validate_no_legacy_src_imports()
     db = load_prompt_db(ROOT / CONFIG["paths"]["db"])
 
     artifact_paths = defaultdict(list)
