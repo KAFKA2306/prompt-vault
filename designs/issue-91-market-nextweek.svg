@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">来週の市場</title>
+  <desc id="desc">ImageGenで生成した人物素材と、SVGで保持する文字・数値・図形・レイアウトを合成した市場サマリー。</desc>
+  <defs>
+    <clipPath id="portrait-clip"><rect x="52" y="52" width="390" height="526" rx="26"/></clipPath>
+  </defs>
+  <rect id="background" width="1200" height="630" fill="#f8fafc"/>
+  <rect id="panel" x="28" y="28" width="1144" height="574" rx="34" fill="#ffffff" stroke="#dbe3ee" stroke-width="2"/>
+  <image id="generated-portrait" href="../assets/generated/issue-91-business-analyst.jpg" x="52" y="52" width="390" height="526" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)"/>
+  <rect x="52" y="52" width="390" height="526" rx="26" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  <g id="content">
+    <text id="kicker" x="500" y="96" font-family="Noto Sans CJK JP, sans-serif" font-size="22" font-weight="500" fill="#64748b">PROMPT VAULT · ISSUE #91</text>
+    <text id="headline" x="500" y="165" font-family="Noto Sans CJK JP, sans-serif" font-size="58" font-weight="700" fill="#0f172a">来週の市場</text>
+    <text id="subhead" x="500" y="207" font-family="Noto Sans CJK JP, sans-serif" font-size="22" fill="#475569">文字・数値・配置はSVG。人物だけImageGen。</text>
+    <g id="metric-nikkei"><rect x="500" y="248" width="196" height="126" rx="18" fill="#eff6ff" stroke="#bfdbfe"/><text x="524" y="282" font-family="Noto Sans CJK JP, sans-serif" font-size="18" fill="#475569">日経平均</text><text id="nikkei-value" x="524" y="330" font-family="Noto Sans CJK JP, sans-serif" font-size="36" font-weight="700" fill="#0f172a">38,642</text><text x="524" y="356" font-family="Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700" fill="#2563eb">+1.25%</text></g>
+    <g id="metric-usdjpy"><rect x="716" y="248" width="196" height="126" rx="18" fill="#fff7ed" stroke="#fed7aa"/><text x="740" y="282" font-family="Noto Sans CJK JP, sans-serif" font-size="18" fill="#475569">ドル円</text><text id="usdjpy-value" x="740" y="330" font-family="Noto Sans CJK JP, sans-serif" font-size="36" font-weight="700" fill="#0f172a">146.85</text><text x="740" y="356" font-family="Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700" fill="#dc2626">-0.42%</text></g>
+    <g id="metric-yield"><rect x="932" y="248" width="196" height="126" rx="18" fill="#f0fdf4" stroke="#bbf7d0"/><text x="956" y="282" font-family="Noto Sans CJK JP, sans-serif" font-size="18" fill="#475569">米10年債利回り</text><text id="yield-value" x="956" y="330" font-family="Noto Sans CJK JP, sans-serif" font-size="36" font-weight="700" fill="#0f172a">4.32%</text><text x="956" y="356" font-family="Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700" fill="#16a34a">+0.05%</text></g>
+    <g id="trend"><rect x="500" y="398" width="628" height="144" rx="18" fill="#f8fafc" stroke="#e2e8f0"/><text x="524" y="432" font-family="Noto Sans CJK JP, sans-serif" font-size="18" font-weight="700" fill="#334155">週次推移</text><path id="trend-line" d="M540 500 L620 482 L700 492 L780 466 L860 476 L940 448 L1020 456 L1100 426" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="540" cy="500" r="6" fill="#2563eb"/><circle cx="620" cy="482" r="6" fill="#2563eb"/><circle cx="700" cy="492" r="6" fill="#2563eb"/><circle cx="780" cy="466" r="6" fill="#2563eb"/><circle cx="860" cy="476" r="6" fill="#2563eb"/><circle cx="940" cy="448" r="6" fill="#2563eb"/><circle cx="1020" cy="456" r="6" fill="#2563eb"/><circle cx="1100" cy="426" r="6" fill="#2563eb"/></g>
+    <text id="footer" x="500" y="574" font-family="Noto Sans CJK JP, sans-serif" font-size="17" fill="#64748b">Image asset: ImageGen · Design source: SVG · rendered derivative: PNG</text>
+  </g>
+</svg>
