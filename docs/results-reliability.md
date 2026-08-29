@@ -19,7 +19,7 @@ Issue #37 の正準計測契約。GitHub Actions REST API の workflow / workflo
 ## 再生成
 
 ```bash
-GITHUB_TOKEN=... python scripts/collect_reliability.py --owner KAFKA2306 --out results/reliability
+GITHUB_TOKEN=... python scripts/results/collect_reliability.py --owner KAFKA2306 --out results/reliability
 ```
 
 CI `KAFKA RESULTS reliability` は日次、手動、関連変更のPR/main pushで実行する。collectorのunit test、全生成JSONのcontract audit、artifact保存、runtime生成物削除後のclean-checkoutをblocking stepとして持つ。
