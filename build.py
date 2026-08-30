@@ -107,7 +107,7 @@ def write_dist() -> None:
 
     (DIST_PATH / "app.js").write_text(render_app_js(db, skills_index), encoding="utf-8")
     (DIST_PATH / "config.json").write_text(
-        json.dumps({"model": CONFIG["ai"]["model"]}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps({"model": CONFIG["model"]}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
