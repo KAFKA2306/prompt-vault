@@ -19,7 +19,7 @@ Prompt Vault では、生成物を `db/prompts.json` の `artifacts` で管理�
 
 ## 決定
 
-- `scripts/register_generated_artifact.py` は PNG と wav を登録対象にする。
+- `scripts/artifacts/register_generated_artifact.py` は PNG と wav を登録対象にする。
 - `src/artifact_ops.py` の採番は、`artifacts/` 内のファイル全体を見て決める。
 - `build.py` は PNG を WebP 化し、wav はそのまま dist にコピーする。
 - `app.py` は wav を `audio/wav` で配信する。
@@ -42,7 +42,7 @@ Prompt Vault では、生成物を `db/prompts.json` の `artifacts` で管理�
 
 ## 運用
 
-1. PNG か wav を登録するときは `scripts/register_generated_artifact.py` を使う。
+1. PNG か wav を登録するときは `scripts/artifacts/register_generated_artifact.py` を使う。
 2. 変更後は `python3 build.py` と `python3 scripts/validate_db.py` を実行する。
 3. 追加した wav は `http://127.0.0.1:8787/` で再生確認する。
 4. root `artifacts/` に未接続ファイルを残さない。
