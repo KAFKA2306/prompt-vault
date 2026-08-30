@@ -9,6 +9,6 @@ scratch/
 .tmp/
 tmp/
 runs/
+outputs/weekly-power-macro-intelligence/
 reconnect_dry_run.txt
 data/
-

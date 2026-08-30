@@ -37,9 +37,7 @@ Markdownだけを根拠に実装挙動を推測しません。
 - `results-*.md`: KAFKA RESULTS 系workflowの個別契約・説明。
 - `PERSONA_DEVELOPMENT.md`: personaに関するドメイン文書。
 
-## Deprecated entry points
-
-`AUDIT_SPEC.md`、`AUDIT_SYSTEM.md`、`HARNESS_CHECKLIST.md` は過去に別々の監査概念を記述していました。現在の実装契約は [VALIDATION.md](VALIDATION.md) に統合しています。既存リンクを壊さないためファイル自体は短い移行ポインタとして残します。
+過去の削除済みdocumentationはGit履歴から参照できます。current treeに互換ポインタだけを残しません。
 
 ## Documentation rule
 
