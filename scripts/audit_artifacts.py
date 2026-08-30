@@ -5,6 +5,14 @@ from config import CONFIG
 from src.prompt_db import load_prompt_db
 
 
+def _files(path, prefix):
+    if not path.exists():
+        return set()
+    if not path.is_dir():
+        raise NotADirectoryError(f"artifact audit path is not a directory: {path}")
+    return {f"{prefix}/{item.name}" for item in path.iterdir() if item.is_file()}
+
+
 def main() -> int:
     db = load_prompt_db(ROOT / CONFIG["paths"]["db"])
 
@@ -16,8 +24,8 @@ def main() -> int:
         for artifact in template.artifacts:
             linked_paths[artifact.path].append(template.id)
 
-    root_files = {f"artifacts/{path.name}" for path in root_artifacts.iterdir() if path.is_file()}
-    orphaned_files = {f"artifacts/_orphaned/{path.name}" for path in orphaned_artifacts.iterdir() if path.is_file()}
+    root_files = _files(root_artifacts, "artifacts")
+    orphaned_files = _files(orphaned_artifacts, "artifacts/_orphaned")
 
     root_unlinked = sorted(root_files - set(linked_paths))
     missing_linked = sorted(set(linked_paths) - root_files)

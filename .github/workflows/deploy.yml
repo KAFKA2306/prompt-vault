@@ -40,8 +40,14 @@ jobs:
           uv run python scripts/artifacts/imagegen_postrun_register.py --help
       - name: Install canonical SVG font
         run: sudo apt-get update && sudo apt-get install --yes fonts-noto-cjk
-      - run: uv run scripts/validate_db.py
-      - run: uv run build.py
+      - name: Validate prompt database and canonical designs
+        run: uv run python scripts/validate_db.py
+      - name: Audit prompt database structure
+        run: uv run python scripts/audit_db.py
+      - name: Audit artifact connectivity
+        run: uv run python scripts/audit_artifacts.py
+      - name: Build static site
+        run: uv run build.py
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
