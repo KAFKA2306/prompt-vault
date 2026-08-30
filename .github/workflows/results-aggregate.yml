@@ -6,6 +6,7 @@ on:
       - "scripts/results/**"
       - "tests/test_collect_*.py"
       - "tests/test_aggregate_results.py"
+      - "tests/test_results_pipeline_contract.py"
       - "docs/results-*.md"
       - ".github/workflows/results-aggregate.yml"
   push:
@@ -14,6 +15,7 @@ on:
       - "scripts/results/**"
       - "tests/test_collect_*.py"
       - "tests/test_aggregate_results.py"
+      - "tests/test_results_pipeline_contract.py"
       - "docs/results-*.md"
       - ".github/workflows/results-aggregate.yml"
   workflow_dispatch:
@@ -111,6 +113,7 @@ jobs:
           sparse-checkout: |
             scripts/results/aggregate.py
             tests/test_aggregate_results.py
+            tests/test_results_pipeline_contract.py
             docs/results-aggregate.md
             .github/workflows/results-aggregate.yml
           sparse-checkout-cone-mode: false
@@ -118,7 +121,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Unit tests
-        run: python -m unittest discover -s tests -p 'test_aggregate_results.py'
+        run: python -m unittest -v tests.test_aggregate_results tests.test_results_pipeline_contract
       - name: Download this run's domain snapshots
         uses: actions/download-artifact@v7
         with:
