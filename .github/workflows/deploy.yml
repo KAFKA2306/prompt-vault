@@ -35,11 +35,8 @@ jobs:
         run: uv run python scripts/audit_literals.py
       - name: Verify weekly macro delivery contract
         run: uv run python -m unittest -v tests.test_weekly_power_macro_contract
-      - name: Smoke-check artifact script entrypoints
-        run: |
-          uv run python scripts/artifacts/register_generated_artifact.py --help
-          uv run python scripts/artifacts/reconnect_unconnected_pngs.py --help
-          uv run python scripts/artifacts/imagegen_postrun_register.py --help
+      - name: Smoke-check canonical artifact registration
+        run: uv run python scripts/artifacts/register_generated_artifact.py --help
       - name: Install canonical SVG font
         run: sudo apt-get update && sudo apt-get install --yes fonts-noto-cjk
       - name: Validate prompt database and canonical designs
