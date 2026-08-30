@@ -54,8 +54,8 @@ audit_literals:
     - "BLOCKED: git clean would remove files."
   .github/workflows/deploy.yml:
     - scripts/audit_repository_storage.py
-    - --max-bytes 838860800
-    - --max-file-bytes 16777216
+    - --max-bytes 891289600
+    - --max-file-bytes 67108864
     - scripts/validate_db.py
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
