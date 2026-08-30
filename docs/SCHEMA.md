@@ -1,116 +1,157 @@
-# Prompt Vault データベース定義 (Schema)
+# Prompt DB Schema
 
-`db/prompts.json` の構造を定義します。本ドキュメントは `src/models.py` (Pydantic) の定義に基づいた、人間向けの解説書です。
+`db/prompts.json` の人間向け説明です。**型の正本は `src/prompt_db.py`** です。この文書と実装が食い違う場合は、Pydantic modelとvalidatorを確認して文書を更新します。
 
-## 1. 基本構造
+Prompt DBは次の2配列を持ちます。
 
-データベースは、部品（Blocks）と組み合わせ（Templates）の2階層で構成されます。
+```json
+{
+  "blocks": [],
+  "templates": []
+}
+```
 
-### 1.1 Block (構成要素)
+## `Artifact`
 
-プロンプトを構成する最小単位（パーツ）です。
+`Template.artifacts` の要素です。
 
-| フィールド | 型 | 説明 | 具体例 |
-| :--- | :--- | :--- | :--- |
-| `id` | 文字列 | 一意の識別子 | `"master_style"` |
-| `title` | 文字列 | 部品の名称。[ADR 0012](ADR/0012-semantic-block-naming.md) の形式。 | `"キャラクター: KAFKA"` |
-| `content` | 文字列 | プロンプト本文 | `"high quality, master piece..."` |
-| `role` | 文字列 | 主役割。`identity` / `style` / `layout` / `outfit` / `pose` / `background` / `lighting` / `text` / `situation` / `pack`。 | `"identity"` |
-| `category` | 文字列 | 部品の分類（任意） | `"style"`, `"character"` |
+| field | type | required | default |
+| --- | --- | --- | --- |
+| `path` | string | yes | — |
+| `title` | string | no | `""` |
 
-### 1.2 Template (プロンプトの型 / 成果物)
+現在のPydantic schemaにhash、model identifier、generator version等のprovenance fieldはありません。それらを必須仕様として扱う場合は、先にschemaを実装します。
 
-複数の Block を組み合わせて、具体的な用途（漫画、スタンプ等）を定義したもの、または生成済みの記録です。
+## `Block`
 
-| フィールド | 型 | 説明 |
-| :--- | :--- | :--- |
-| `id` | 文字列 | 一意の識別子。生成データは `gen_YYYYMMDD_HHMMSS` 形式。 |
-| `title` | 文字列 | テンプレートまたは作品の名称。 |
-| `blocks` | 配列 | 使用する `Block` の ID リスト。 |
-| `kind` | 文字列 | **重要：** コンテンツの性質を定義します（実態に基づく11種類）。 |
-| `purpose` | 文字列 | 使用目的（任意）。 |
-| `summary` | 文字列 | 内容の要約（任意）。 |
-| `artifacts` | 配列 | 画像ファイルや音声ファイル (`path`) とそのタイトル (`title`) のリスト。 |
-| `generated_prompt` | 文字列 | 生成済みの完成プロンプト全文（任意）。 |
-| `created_at` | 文字列 | 作成日時の ISO8601 文字列（任意）。 |
+再利用可能なprompt構成要素です。
 
-生成画像や生成音声を正式な資産として残す場合は、`artifacts/NNN_slug.png` または `artifacts/NNN_slug.wav` へ登録し、`db/prompts.json` の `artifacts` に必ず接続します。  
-このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/artifacts/register_generated_artifact.py` を単一入口として扱います。  
-既存の未接続PNGを再採番して戻す場合は `scripts/artifacts/reconnect_unconnected_pngs.py` を使います。  
-未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
-- 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
-- 生成音声の一次出力先は、各ワークフローが指定する出力先です。
-- Kafka の見た目は `character_kafka` と `kafka_identity_lock` です。
+| field | type | required | default |
+| --- | --- | --- | --- |
+| `id` | string | yes | — |
+| `title` | string | yes | — |
+| `content` | string | yes | — |
+| `role` | string | yes | — |
+| `category` | string | no | `""` |
 
-### 1.3 構造ルール
+`role` はPydantic上は任意文字列ではなく「必須のstring」ですが、Literal enumには固定されていません。`scripts/audit_db.py` がknown rolesを持ち、unknown roleをWARNINGとして扱います。
 
-`db/prompts.json` の編集では、次の境界を守ります。
+Semanticなsingle-responsibility、identity/style境界、pack size等はschemaではなく`audit_db.py`のaudit規則です。
 
-- `character_kafka`、`character_kafka_core`、`hair_kafka_detail`、`accessory_kafka_hairpin`、`kafka_identity_lock`、`speech_mode_kafka` は identity block として扱う。
-- `master_style`、`rendering_soft_standard`、`rendering_soft_infographic`、`rendering`、`clean_quality_rendering` は style block として扱う。
-- `morning_*`、`gaming_*`、`reading_*`、`news_*`、`poker_*`、`joinwars_*`、`cosplay_*` は situation block として扱う。
-- `pack` は最大 5 blocks 相当までに抑える。
-- `template.blocks` は最大 8 blocks に抑える。
-- 1 block は 1 主役割に抑える。
-- 新規 block 作成前に既存 block を検索する。
-- style と identity を混ぜない。
-- template は用途だけを書く。
+## `Template`
 
----
+Blockの組み合わせ、用途、生成記録、artifact接続を表します。
 
-## 2. `kind` の定義
+| field | type | required | default |
+| --- | --- | --- | --- |
+| `id` | string | yes | — |
+| `title` | string | yes | — |
+| `blocks` | list[string] | no | `[]` |
+| `kind` | Literal | no | `"social"` |
+| `purpose` | string | no | `""` |
+| `summary` | string | no | `""` |
+| `artifacts` | list[Artifact] | no | `[]` |
+| `generated_prompt` | string or null | no | `null` |
+| `voice_caption` | string or null | no | `null` |
+| `voice_script` | string or null | no | `null` |
+| `created_at` | string or null | no | `null` |
 
-`kind` は、そのデータが「どのようなコンテンツか」を指定する属性です。
+### `kind`
 
-| 値 | 意味 |
-| :--- | :--- |
-| `social` | SNS投稿 |
-| `design_sheet` | デザイン設計 |
-| `sheet` | 設定シート |
-| `announcement` | 告知バナー |
-| `stamp` | スタンプ |
-| `reaction` | 反応画像 |
-| `brand` | ブランドロゴ |
-| `comic` | 漫画 |
-| `system` | システム基盤 |
-| `news` | ニュース |
+現在 `src/prompt_db.py` が受理する値は11種類です。
 
----
+```text
+announcement
+brand
+comic
+design_sheet
+news
+reaction
+sheet
+social
+stamp
+system
+generated
+```
 
-## 3. 具体的な記述例
+`generated` は生成artifactの登録記録等に使用されます。`audit_db.py` は `kind != generated` のTemplateでblocksが空の場合にWARNINGを出します。
 
-### 標準テンプレート (Standard)
+## Legacy migration
+
+`PromptDB` はload時にlegacy top-level `generated_prompts` が存在すれば、未登録IDを `templates` へ移し、`kind="generated"` として扱うmigrationを持ちます。
+
+これはload-time compatibilityです。legacy fieldを新規データの正本として使う理由にはしません。
+
+## Reference integrity
+
+Schema parseだけではすべての参照整合性を保証しません。現在は複数の層で確認します。
+
+- `build.py`: Templateのblock IDが存在すること、artifact pathが実在すること
+- `scripts/audit_db.py`: unknown block reference、duplicate block ID等
+- `scripts/audit_artifacts.py`: DBと`artifacts/`の接続
+- `scripts/validate_db.py`: Pydantic parse、duplicate artifact条件、canonical SVG等
+
+詳細は [VALIDATION.md](VALIDATION.md) を参照してください。
+
+## Generated artifact registration
+
+標準登録scriptは現在 `.png` と `.wav` をsourceとして受け付けます。
+
+```bash
+uv run python scripts/artifacts/register_generated_artifact.py --help
+```
+
+このscriptは `src/artifacts.py` の採番・slug規則を使い、`artifacts/NNN_slug.ext` を作成して `kind=generated` のTemplateを追加します。
+
+Pydantic `Artifact.path` 自体は拡張子をLiteral制約していません。登録入口の対応formatとschemaの型制約を混同しません。
+
+## Example
+
+### Reusable template
 
 ```json
 {
   "id": "kafka_stamp_01",
-  "title": "Kafkaスタンプ基本",
+  "title": "Kafka stamp",
   "blocks": ["master_style", "character_kafka", "layout_stamp"],
   "kind": "stamp",
-  "summary": "LINEスタンプ用。デフォルメされたKafkaの感情表現。"
+  "summary": "Reusable stamp composition"
 }
 ```
 
-### 生成済みスナップショット (Generated)
+### Generated record
 
 ```json
 {
-  "id": "gen_20260506_150000",
-  "title": "Kafka: 朝のコーヒー",
+  "id": "gen_20260830_120000",
+  "title": "Generated example",
   "blocks": ["master_style", "character_kafka"],
-  "kind": "social",
-  "summary": "朝の光の中でコーヒーを飲むKafkaの生成結果。",
-  "generated_prompt": "high quality, coffee, morning sun...",
+  "kind": "generated",
+  "purpose": "Example",
+  "summary": "Generated result",
   "artifacts": [
-    { "path": "artifacts/128_kafka_evening_twilight.webp", "title": "Evening Twilight" }
-  ]
+    {
+      "path": "artifacts/321_generated_example.png",
+      "title": "Generated example"
+    }
+  ],
+  "generated_prompt": "...",
+  "voice_caption": null,
+  "voice_script": null,
+  "created_at": "2026-08-30T12:00:00+09:00"
 }
 ```
 
----
+## SVG designs are not Prompt DB records
 
-## 4. バリデーションルール
+`designs/*.svg` と `assets/generated/` はPrompt DB schemaとは別のcanonical pathです。
 
-1. **参照整合性**: `templates.blocks` に記述する ID は、必ず `blocks` リストに存在すること。
-2. **画像の実在**: `artifacts.path` に記述するファイルは、必ず `artifacts/` フォルダ内に存在すること。
-3. **WebP 最適化**: [ADR 0014](ADR/0014-webp-optimization.md) に従い、画像は原則として `.webp` 形式で管理すること。音声は `.wav` のまま扱うこと。
+- Prompt DB: prompt構造とDB接続artifact
+- SVG: fixed-size 2Dのlayout/text/font/shape構造
+- `assets/generated/`: SVGから参照するimage asset
+
+SVG contractは `src/designs.py` がauthorityです。詳細は [ARCHITECTURE.md](ARCHITECTURE.md) を参照してください。
+
+## Do not duplicate schema in Markdown
+
+新しいfield、`kind`、validation ruleを追加した場合は、まず実装を変更します。この文書は実装変更後に人間向け説明として追従させます。ADRやplanへ同じfield一覧をcurrent contractとして複製しません。

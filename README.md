@@ -5,74 +5,91 @@ https://prompt-vault-cg3.pages.dev/
 
 [![Deploy](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml/badge.svg)](https://github.com/KAFKA2306/prompt-vault/actions/workflows/deploy.yml)
 
-生成プロンプトを文章のまま保存するのではなく、再利用できる構成要素、組み合わせ、生成画像、用途、来歴を分けて管理する保管庫です。
+Prompt Vault は、promptを文章の塊として保存するだけでなく、**再利用構造・生成artifact・編集可能な2D design・公開UIを別々の正本として管理する repository** です。
 
-- 再利用単位: `block`
-- 組み合わせ: `template`
-- 生成物: `artifact`
-- 正準データ: `db/prompts.json`
-- 正準アセット: `artifacts/`
-- 編集可能な固定サイズ2Dデザイン: `designs/*.svg`
-- Prompt DBの型・読書き: `src/prompt_db.py`
-- アセット採番・命名: `src/artifacts.py`
-- SVG検証: `src/designs.py`
-- Skill一覧読取り: `src/skills.py`
-- 静的生成: `build.py`
-- UI: `static/`
-- 生成物: `dist/`（直接編集しない）
-
-## 構造
+## System at a glance
 
 ```text
-db/prompts.json ── src/prompt_db.py ─┐
-artifacts/ ─────── src/artifacts.py ──┤
-designs/*.svg ─── src/designs.py ────┼─> build.py ─> dist/ ─> Pages
-skills index ───── src/skills.py ─────┘
+db/prompts.json ──────┐
+artifacts/ ────────────┤
+designs/*.svg ─────────┤
+assets/generated/ ─────┤
+docs/SKILLS.md ─────────┤
+static/ ────────────────┤
+                        ↓
+                     build.py
+                        ↓
+                      dist/
+                        ↓
+                   GitHub Pages
 ```
 
-`src/` は用途が名前から分かる小さなモジュールだけを置きます。現行規模では `domain/infra/services/` のような多層化や、`models.py` / `utils.py` のような広すぎる名前を使いません。
+主な正本:
 
-変更され得る仕様は Markdown に重複して持たず、現在の実装と機械可読データを優先します。AI coding agent の作業規約は `AGENTS.md` を参照してください。
+- Prompt DB: `db/prompts.json` / `src/prompt_db.py`
+- DB接続済み生成物: `artifacts/`
+- 固定サイズ2Dの編集可能な正本: `designs/*.svg`
+- SVG用generated asset: `assets/generated/`
+- UI source: `static/`
+- 実行設定: `config.yaml`
+- 静的生成: `build.py`
+- 生成物: `dist/` — 直接編集しない
 
-## セットアップ
+固定サイズ2Dでは、文字・font・座標・図形をSVG構造として保持し、画像生成は写真・人物・イラスト等のasset生成に分離できます。
 
-必要環境は Python 3.11、`uv`、Git です。
+## Documentation
+
+現在仕様の入口は [docs/README.md](docs/README.md) です。
+
+- [Architecture](docs/ARCHITECTURE.md) — 正本、責務、データフロー
+- [Schema](docs/SCHEMA.md) — `db/prompts.json`
+- [Operations](docs/OPERATIONS.md) — 日常操作とdelivery
+- [Validation](docs/VALIDATION.md) — validator / CI / production verification
+- [UI Design](docs/UI_DESIGN.md) — UIのstable design intent
+- [AGENTS.md](AGENTS.md) — AI coding agentの作業契約
+
+ADR、plan、reportは履歴・記録です。現在の実装と矛盾する場合はcurrent code / data / workflowを確認します。
+
+## Quick start
 
 ```bash
 uv sync
+task run
 ```
 
-ローカル表示:
+静的build:
 
 ```bash
-uv run python app.py
+task build
 ```
 
-静的サイト生成:
+全体delivery check:
 
 ```bash
-uv run python build.py
+task deliver
 ```
 
-`dist/` は生成物です。修正は正準データ、UI、または生成処理へ行います。
+## Register generated artifacts
 
-## 生成画像を登録する
-
-採用する画像は登録スクリプトを通して、採番、コピー、データベース追記、静的生成、検証をまとめて行います。
+PNG/WAVを正式なDB接続artifactとして採用する標準入口:
 
 ```bash
 uv run python scripts/artifacts/register_generated_artifact.py \
   --source /path/to/generated.png \
-  --title "画像のタイトル" \
-  --purpose "利用目的" \
-  --summary "内容の要約"
+  --title "Artifact title" \
+  --purpose "Purpose" \
+  --summary "Summary"
 ```
 
-外部ツール固有の絶対パスを repository の契約にしません。
+未接続PNGの確認:
 
-## 検証
+```bash
+uv run python scripts/artifacts/reconnect_unconnected_pngs.py --dry-run
+```
 
-既存の共通入口を使います。
+詳細は [docs/OPERATIONS.md](docs/OPERATIONS.md) を参照してください。
+
+## Validation and delivery
 
 ```bash
 task validate
@@ -80,29 +97,19 @@ task artifacts-audit
 task build
 ```
 
-全体確認:
+PRではexact head SHAをcheckoutして検証・buildします。`main` pushではGitHub Pagesへdeployした後、workflowが取得したproduction URLを実際に確認します。PR CI successとproduction successを同一視しません。
 
-```bash
-task deliver
-```
+詳細は [docs/VALIDATION.md](docs/VALIDATION.md) を参照してください。
 
-Pull Request では変更した head SHA を checkout してデータ検証と build を行います。`main` では GitHub Pages へ deploy し、公開 URL を取得して実ページを確認します。ローカル build や CI 成功だけを production 成功の証拠にしません。
+## Repository rules
 
-## データ方針
+- `dist/` を直接修正しない。
+- DB、artifact、SVGの意味構造をpixel出力だけに潰さない。
+- 新しいscriptや独自schemaを増やす前に既存責務へ統合できるか確認する。
+- 未接続・参照切れ・検証失敗をsilent fallbackで成功扱いしない。
+- host固有pathやone-off手順を恒久documentationへ固定しない。
+- Markdownへ実装仕様を重複コピーしない。current code / machine-readable dataをauthorityとする。
 
-- `db/prompts.json` と `artifacts/` の接続を検証する。
-- synthetic、fixture、placeholder を実生成物の代用にしない。
-- 未接続・未使用・重複を確認できたものは残さず削除する。
-- 一回限りの日付、文言、衣装、背景を汎用 `block` に混ぜない。
-- 取得失敗や検証失敗を fallback や broad exception で成功扱いにしない。
-- 新しい個別 script を増やす前に既存 validator へ統合する。
+## Cloudflare
 
-## Cloudflare Pages Function
-
-`functions/api/prompt-generate.js` は Cloudflare Pages Function です。秘密情報は repository に保存せず、必要な環境変数は Cloudflare 側で管理します。
-
-## 公開境界
-
-公開 repository へ API key、token、cookie、認証情報、個人情報、非公開会話、利用権を確認できない第三者アセットを保存しません。
-
-公開 URL の稼働状態は Git の内容だけでは判断せず、実 URL を確認します。
+`functions/api/prompt-generate.js` はCloudflare Pages Functionです。GitHub Pages workflowとは別の公開経路です。秘密情報はrepositoryへ保存しません。

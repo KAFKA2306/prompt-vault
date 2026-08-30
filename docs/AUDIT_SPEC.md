@@ -1,42 +1,13 @@
-# 監査システム仕様書 (AUDIT_SPEC)
+# AUDIT_SPEC — superseded
 
-## 概要
-本プロジェクトにおける監査システムは、LLM の主張を決定論的な証拠（Evidence）に基づいて検証するための仕組みである。
+このファイルは既存リンク維持のため残しています。
 
-## 監査の5層構造
+現在のPrompt Vaultで実装されているvalidation contractは [VALIDATION.md](VALIDATION.md) を参照してください。
 
-1. **Structure (構造)**
-   - 必須ファイル、必須ディレクトリの存在確認。
-   - 禁止パス、スキーマ、シンボリックリンクの検証。
+過去のこの文書には、汎用runtime budget、claim classification、incident taxonomy等の構想が含まれていましたが、それらを現在実装済みのrepository仕様として扱いません。
 
-2. **Artifacts (アセット)**
-   - 生成物の実在、ハッシュ値、デコード可能性の確認。
-   - データの切り捨て（Truncation）、型、サイズの検証。
+原則:
 
-3. **Runtime (実行環境)**
-   - コマンド実行、環境変数、タイムアウトの管理。
-   - メモリ使用量、ネットワーク・ファイルシステムの隔離状況の検証。
-
-4. **Claims (主張)**
-   - LLM による「完了」「修正」「生成」といった主張をエビデンスに紐づける。
-   - 主張を `OBSERVED / INFERRED / ASSUMED / UNVERIFIED` に分類。
-
-5. **Budget (予算)**
-   - 実行時間、トークン使用量、ツールコール回数、スキャン数、出力サイズの制限。
-
-## 判定基準
-- **PASS**: すべての検証項目が `OBSERVED`（観察済み）のエビデンスによって裏付けられている。
-- **FAIL**: 検証項目に失敗がある、またはエビデンスが不足している。
-- **UNVERIFIED**: 検証が実施されていない、または判定不能。
-
-## インシデント分類
-以下のコードを用いてインシデントを記録する：
-- `MISSING_CANONICAL`: 正準ファイルの欠落
-- `INVALID_SCHEMA`: スキーマ不正
-- `FORBIDDEN_PATH`: 禁止パスの検出
-- `HASH_MISMATCH`: ハッシュ不一致
-- `TRUNCATED_ARTIFACT`: アセットの欠損
-- `UNVERIFIED_RUNTIME`: 実行環境の未検証
-- `BUDGET_EXCEEDED`: 予算超過
-- `CLAIM_WITHOUT_EVIDENCE`: エビデンスなき主張
-- `TIMEOUT`: タイムアウト
+- current code / validator / workflowをauthorityとする
+- 実装されていないaudit conceptをMarkdownだけで仕様化しない
+- 新しいenforcementが必要なら実装 → test/validator → documentationの順で追加する

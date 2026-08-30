@@ -16,41 +16,32 @@ paths:
   generated_images: /home/kafka/.codex/generated_images/
 
 audit_literals:
-  AGENTS.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/NNN_slug.png
-    - character_kafka
-    - kafka_identity_lock
   README.md:
-    - /home/kafka/.codex/generated_images/
-    - character_kafka
-    - kafka_identity_lock
-  docs/SCHEMA.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/NNN_slug.png
-    - artifacts/_orphaned/
-    - character_kafka
-    - kafka_identity_lock
-  docs/ADR/0011-artifact-graph-connectivity.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/NNN_slug.png
-    - character_kafka
-    - kafka_identity_lock
-  docs/ADR/0014-webp-optimization.md:
-    - /home/kafka/projects/prompt-vault/artifacts/NNN_slug.png
-    - /home/kafka/projects/prompt-vault/dist/artifacts/NNN_slug.webp
+    - docs/ARCHITECTURE.md
+    - docs/SCHEMA.md
+    - docs/OPERATIONS.md
+    - docs/VALIDATION.md
+  docs/README.md:
+    - ARCHITECTURE.md
+    - SCHEMA.md
+    - OPERATIONS.md
+    - VALIDATION.md
+  docs/ARCHITECTURE.md:
     - db/prompts.json
-  docs/ADR/0018-unconnected-png-reconnect-workflow.md:
-    - /home/kafka/.codex/generated_images/
-    - artifacts/_orphaned/
-    - character_kafka
-    - kafka_identity_lock
-
-  /home/kafka/projects/.agent/skills/.system/imagegen/SKILL.md:
-    - /home/kafka/.codex/generated_images/
-    - /home/kafka/projects/prompt-vault/artifacts/NNN_slug.png
-    - /home/kafka/projects/prompt-vault/db/prompts.json
-    - /home/kafka/projects/prompt-vault/artifacts/_orphaned/
-    - character_kafka
-    - character_kafka_soft_reference
-    - kafka_identity_lock
+    - designs/*.svg
+    - assets/generated/
+    - build.py
+    - dist/
+  docs/SCHEMA.md:
+    - src/prompt_db.py
+    - voice_caption
+    - voice_script
+    - generated
+  docs/OPERATIONS.md:
+    - scripts/artifacts/register_generated_artifact.py
+    - task deliver
+  docs/VALIDATION.md:
+    - scripts/validate_db.py
+    - scripts/audit_db.py
+    - scripts/audit_artifacts.py
+    - .github/workflows/deploy.yml
