@@ -87,9 +87,16 @@ FAIL対象:
 
 ## `scripts/audit_literals.py`
 
-少数のstable documentation anchorを確認する単純なliteral auditです。Proseの内容が正しいことや、実装と一致すること自体を証明するvalidatorではありません。
+Current documentationのstable anchorを確認する軽量auditです。
 
-このcheckへhost固有pathや過去ADRの文言を大量に固定しません。Current documentationの主要入口が消えていないことを確認する用途に限定します。
+現在は `config.yaml` の `audit_literals` に列挙したcurrent documentについて、次を確認します。
+
+- document自体が存在する
+- architecture/schema/operations/validation等のstable pathが残っている
+- Markdown内のrepository-local linkがrepository外へ逃げない
+- repository-local link先が実在する
+
+Proseの内容が正しいことや、実装と一致すること自体を証明するvalidatorではありません。host固有pathや過去ADRの文言を大量に固定せず、documentation navigationの破損検出に限定します。
 
 ## Build validation
 
@@ -117,6 +124,8 @@ buildが生成した `dist/` は証拠の一つですが正本ではありませ
 6. `build.py`
 
 PRではdeploy / verify-production jobはskipされます。
+
+`task deliver` はPR workflowとは別のlocal/full delivery入口で、documentation anchor auditやartifact connectivity auditも含みます。
 
 ## Main deployment and production verification
 
