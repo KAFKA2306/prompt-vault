@@ -29,7 +29,7 @@ jobs:
       - name: Verify generated output is untracked
         run: test -z "$(git ls-files dist tmp)"
       - name: Audit tracked repository storage
-        run: python scripts/audit_repository_storage.py --max-bytes 891289600 --max-file-bytes 67108864
+        run: python scripts/audit_repository_storage.py --max-bytes 838860800 --max-file-bytes 16777216
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
