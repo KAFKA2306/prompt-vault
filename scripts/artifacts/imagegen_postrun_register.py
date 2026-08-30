@@ -37,7 +37,7 @@ def main() -> int:
 
     command = [
         sys.executable,
-        str(ROOT / "scripts/register_generated_artifact.py"),
+        str(ROOT / "scripts/artifacts/register_generated_artifact.py"),
         "--source",
         str(source),
         "--title",
