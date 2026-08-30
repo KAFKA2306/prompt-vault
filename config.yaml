@@ -53,6 +53,7 @@ audit_literals:
     - git clean -fdn
     - "BLOCKED: git clean would remove files."
   .github/workflows/deploy.yml:
+    - scripts/audit_repository_storage.py
     - scripts/validate_db.py
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
