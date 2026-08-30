@@ -6,16 +6,14 @@ Repository-local index of available prompt vault skills.
 
 | Skill | Purpose | Path |
 | --- | --- | --- |
-| `prompt-db-ideal-state-guard` | Audit `db/prompts.json` against the canonical target. | `.agents/skills/prompt-db-guard/SKILL.md` |
+| `prompt-db-auditor` | Audit `db/prompts.json` canonical drift and repair evidenced structural violations. | `.agents/skills/prompt-db-auditor/SKILL.md` |
 | `prompt-vault-workflow` | Route source inputs into DB and artifact updates. | `.agents/skills/workflow/SKILL.md` |
-| `safe-git-delivery` | Validate, preflight-audit, and safely commit repository changes. | `.agents/skills/safe-git-delivery/SKILL.md` |
 
 ## Voice
 
 | Skill | Purpose | Path |
 | --- | --- | --- |
-| `voice-caption-writer` | Draft concise Japanese captions for TTS and VoiceDesign voices. | `.agents/skills/voice-caption-writer/SKILL.md` |
-| `speech-mode-kafka-writer` | Draft `speech_mode_kafka` text for concise Kafka-style replies and narration. | `.agents/skills/speech-mode-kafka-writer/SKILL.md` |
+| `tts-validate` | Create and validate Japanese TTS scripts with transcription feedback. | `.agents/skills/tts-validate/SKILL.md` |
 
 ## Subagents
 

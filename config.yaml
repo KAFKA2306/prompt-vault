@@ -21,6 +21,8 @@ audit_literals:
     - docs/SCHEMA.md
     - docs/OPERATIONS.md
     - docs/VALIDATION.md
+  AGENTS.md:
+    - scripts/guard_destructive.sh
   docs/README.md:
     - ARCHITECTURE.md
     - SCHEMA.md
@@ -45,6 +47,13 @@ audit_literals:
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
     - .github/workflows/deploy.yml
+  docs/SKILLS.md:
+    - .agents/skills/prompt-db-auditor/SKILL.md
+    - .agents/skills/workflow/SKILL.md
+    - .agents/skills/tts-validate/SKILL.md
+  scripts/guard_destructive.sh:
+    - git clean -fdn
+    - "BLOCKED: git clean would remove files."
   .github/workflows/deploy.yml:
     - scripts/validate_db.py
     - scripts/audit_db.py
