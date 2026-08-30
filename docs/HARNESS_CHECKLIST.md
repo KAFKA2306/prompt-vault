@@ -1,22 +1,9 @@
-# 監査ハーネス・チェックリスト (HARNESS_CHECKLIST)
+# HARNESS_CHECKLIST — superseded
 
-## 監査の禁止事項
-- [ ] LLM に `PASS` 判断をさせていないか
-- [ ] LLM の要約を証拠として採用していないか
-- [ ] 監査中に自動修復を行っていないか
-- [ ] 欠落しているファイルを勝手に生成していないか
-- [ ] 警告（Warning）だけでパスさせていないか
-- [ ] 無制限のスキャンを許可していないか
-- [ ] 無制限のリトライを許可していないか
-- [ ] 推測に基づいた `PASS` を出していないか
-- [ ] 偽の完了（Fake Completeness）を見逃していないか
+このファイルは既存リンク維持のため残しています。
 
-## 実行前確認
-- [ ] `config/audit.yaml` は現在のプロジェクト構成に合致しているか
-- [ ] 各バリデータ・スクリプトは独立して実行可能か
-- [ ] `data/incidents.jsonl` への書き込み権限はあるか
+現在のrepository-level validationは [VALIDATION.md](VALIDATION.md) を参照してください。AI coding agentの作業契約は [../AGENTS.md](../AGENTS.md) がauthorityです。
 
-## 証拠（Evidence）の要件
-- [ ] 証拠は決定論的（Deterministic）か
-- [ ] 証拠は機械可読（Machine-verifiable）か
-- [ ] 証拠は外部ツールまたはファイルシステムから直接取得されたものか
+旧checklistには、現在存在しない `config/audit.yaml` や `data/incidents.jsonl` を前提にした項目が含まれていました。そのためcurrent checklistとしては使用しません。
+
+現在の完了判定は、実際に存在するvalidator、exact-head CI、merge後main、必要なproduction verificationで行います。
