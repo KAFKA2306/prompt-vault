@@ -34,7 +34,7 @@ LLM はソースに基づきアセットと JSON ドラフトを準備する。
 
 ## 3. 登録系 (Registration Phase)
 
-- **Command**: `python3 scripts/register_generated_artifact.py --source <path> --title <title> ...`
+- **Command**: `python3 scripts/artifacts/register_generated_artifact.py --source <path> --title <title> ...`
 - **Exit Condition**: スクリプトが正常終了し、`artifacts/` への物理登録と DB 追記が完了すること。
 
 ## 4. 監査系 (Audit Phase)

@@ -61,7 +61,7 @@ uv run python build.py
 採用する画像は登録スクリプトを通して、採番、コピー、データベース追記、静的生成、検証をまとめて行います。
 
 ```bash
-uv run python scripts/register_generated_artifact.py \
+uv run python scripts/artifacts/register_generated_artifact.py \
   --source /path/to/generated.png \
   --title "画像のタイトル" \
   --purpose "利用目的" \

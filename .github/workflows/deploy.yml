@@ -29,6 +29,11 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
+      - name: Smoke-check artifact script entrypoints
+        run: |
+          uv run python scripts/artifacts/register_generated_artifact.py --help
+          uv run python scripts/artifacts/reconnect_unconnected_pngs.py --help
+          uv run python scripts/artifacts/imagegen_postrun_register.py --help
       - name: Install canonical SVG font
         run: sudo apt-get update && sudo apt-get install --yes fonts-noto-cjk
       - run: uv run scripts/validate_db.py

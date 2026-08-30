@@ -16,8 +16,8 @@
 - 既存の画像に対しては、新しい `generated_prompt` レコードを追加して接続してよい。
 - すでに意味のある親レコードがある場合は、その `artifacts` 配列に足してよい。
 - 参照できない画像は、原則として残さない。
-- 新規画像の登録は `python3 scripts/register_generated_artifact.py` を単一入口とし、手動の移動・採番・DB追記を避ける。
-- 既存の未接続PNGを再採番して戻す場合は `python3 scripts/reconnect_unconnected_pngs.py` を使う。
+- 新規画像の登録は `python3 scripts/artifacts/register_generated_artifact.py` を単一入口とし、手動の移動・採番・DB追記を避ける。
+- 既存の未接続PNGを再採番して戻す場合は `python3 scripts/artifacts/reconnect_unconnected_pngs.py` を使う。
 - DB を直したら `python3 build.py` と `python3 scripts/validate_db.py` を実行する。
 
 ## 理由

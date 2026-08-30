@@ -259,5 +259,5 @@
 
 1. **DB定義**: `db/prompts.json` に通し番号付きの衣装・背景ブロックを追加。
 2. **画像生成**: built-in `image_gen` で画像を作る。CLI fallback は使わない。
-3. **資産登録**: `scripts/register_generated_artifact.py` で `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。
+3. **資産登録**: `scripts/artifacts/register_generated_artifact.py` で `artifacts/NNN_slug.png` への採番・コピー・DB追記を一度に行う。
 4. **ビルドと検証**: 登録スクリプト経由で `python3 build.py` と `python3 scripts/validate_db.py` を通す。

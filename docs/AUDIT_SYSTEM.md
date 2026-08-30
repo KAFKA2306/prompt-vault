@@ -50,7 +50,7 @@ AI エージェントの実行環境の品質を、本プロジェクト独自�
 
 ### 構成要素と実行コマンド
 
-- **アセット再接続**: `scripts/reconnect_unconnected_pngs.py`
+- **アセット再接続**: `scripts/artifacts/reconnect_unconnected_pngs.py`
   - 孤立した PNG を検出し、自動採番（`NNN_slug.png`）して DB に再接続する。
 - **サイトビルド**: `task build` (`build.py`)
   - DB から静的な HTML ギャラリーを生成。
@@ -207,7 +207,7 @@ task deliver
 
 ### 定期メンテナンス
 
-- `task artifacts-audit` でアセットの接続状態を定期的に確認し、必要に応じて `reconnect_unconnected_pngs.py` を実行する。
+- `task artifacts-audit` でアセットの接続状態を定期的に確認し、必要に応じて `scripts/artifacts/reconnect_unconnected_pngs.py` を実行する。
 - [docs/HARNESS_CHECKLIST.md](docs/HARNESS_CHECKLIST.md) を半手動で確認し、ハーネスのドリフトを防止する。
 
 ## 参照ファイル

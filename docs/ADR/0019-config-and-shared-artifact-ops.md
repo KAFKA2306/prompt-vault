@@ -58,7 +58,7 @@
 - `slugify`
 - `next_artifact_number`
 
-`scripts/register_generated_artifact.py` と `scripts/reconnect_unconnected_pngs.py` はこれを呼ぶだけにする。
+`scripts/artifacts/register_generated_artifact.py` と `scripts/artifacts/reconnect_unconnected_pngs.py` はこれを呼ぶだけにする。
 
 ### 4. 生成プロンプト本文は `prompts/frontend_codex.md` を正本にする
 

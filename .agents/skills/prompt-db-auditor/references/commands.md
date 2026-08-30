@@ -19,11 +19,11 @@ Use these commands in order when the task is about ideal-state diff auditing.
   - Regenerates `dist/`
   - Fails if a template references an unknown block or if a linked artifact file is missing
 
-- `python3 scripts/register_generated_artifact.py`
+- `python3 scripts/artifacts/register_generated_artifact.py`
   - Use for registering generated `.png` or `.wav` files
   - Do not hand-edit `artifacts/` or `db/prompts.json` for new generated assets
 
-- `python3 scripts/reconnect_unconnected_pngs.py --dry-run`
+- `python3 scripts/artifacts/reconnect_unconnected_pngs.py --dry-run`
   - Inspect existing unconnected PNGs before reconnecting them
 
 ## Diff Lens

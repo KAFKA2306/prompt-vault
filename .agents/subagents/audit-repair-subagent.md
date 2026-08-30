@@ -23,7 +23,7 @@
    - 原因: `db/prompts.json` に定義されたアセットのパス（`artifacts/*.webp` 等）が物理的に存在しない（Missing）、または物理ファイルがあるが JSON に登録されていない（Orphan）。
    - 対策:
      - 行方不明のアセット: 実ファイルが別のパスに退避されていないかスキャンします。
-     - 孤立ファイル: `scripts/reconnect_unconnected_pngs.py` を `--dry-run` で実行し、再接続可能か診断します。再接続不能な場合は `artifacts/_orphaned/` にファイルを移動します。
+     - 孤立ファイル: `scripts/artifacts/reconnect_unconnected_pngs.py` を `--dry-run` で実行し、再接続可能か診断します。再接続不能な場合は `artifacts/_orphaned/` にファイルを移動します。
 
 3. **Budget/Limit Violation (制限違反)**
    - 原因: スキャン対象のファイル数が多すぎる（`.venv` や `twitter` キャッシュなどの除外漏れ）。
@@ -34,7 +34,7 @@
 1. 特定されたエラーに対し、必要最小限の変更（Zero-Fat）で修復を行うプランを組み立てます。
 2. プランに基づき、以下のコマンドを適切に実行して修復します。
    - スキーマ修復: `db/prompts.json` の手動編集（`replace_file_content`）。
-   - 孤立ファイル再接続: `python3 scripts/reconnect_unconnected_pngs.py`
+   - 孤立ファイル再接続: `python3 scripts/artifacts/reconnect_unconnected_pngs.py`
    - 静的ファイルの再構築: `python3 build.py`
 3. 修復後、必ず再検証（`validate_db.py`, `audit_artifacts.py`）を実行し、**Exit Code 0** になるまでループを回します。
 

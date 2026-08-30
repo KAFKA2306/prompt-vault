@@ -35,8 +35,8 @@
 | `created_at` | 文字列 | 作成日時の ISO8601 文字列（任意）。 |
 
 生成画像や生成音声を正式な資産として残す場合は、`artifacts/NNN_slug.png` または `artifacts/NNN_slug.wav` へ登録し、`db/prompts.json` の `artifacts` に必ず接続します。  
-このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/register_generated_artifact.py` を単一入口として扱います。  
-既存の未接続PNGを再採番して戻す場合は `scripts/reconnect_unconnected_pngs.py` を使います。  
+このリポジトリでは、手動の移動・採番・参照追記を避けるため、`scripts/artifacts/register_generated_artifact.py` を単一入口として扱います。  
+既存の未接続PNGを再採番して戻す場合は `scripts/artifacts/reconnect_unconnected_pngs.py` を使います。  
 未接続の古い PNG は `artifacts/_orphaned/` に退避し、`artifacts/` の根には残さない運用です。
 - 生成画像の一次出力先は `/home/kafka/.codex/generated_images/` です。
 - 生成音声の一次出力先は、各ワークフローが指定する出力先です。
