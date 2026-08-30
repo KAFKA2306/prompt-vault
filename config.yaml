@@ -40,15 +40,19 @@ audit_literals:
     - generated
   docs/OPERATIONS.md:
     - scripts/artifacts/register_generated_artifact.py
-    - scripts/ideation.py
-    - db/tweetsdb.json
     - task deliver
   docs/VALIDATION.md:
     - scripts/validate_db.py
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
-    - src/ideation.py
     - .github/workflows/deploy.yml
+  docs/IDEATION.md:
+    - db/tweetsdb.json
+    - scripts/tweetsdb.py
+    - src/ideation.py
+    - scripts/compile_ideation_profile.py
+    - scripts/ideation.py
+    - dist/data/ideation_profile.json
   docs/SKILLS.md:
     - .agents/skills/prompt-db-auditor/SKILL.md
     - .agents/skills/workflow/SKILL.md
