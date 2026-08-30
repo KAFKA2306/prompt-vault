@@ -8,6 +8,7 @@ artifacts/_orphaned/
 scratch/
 .tmp/
 tmp/
+dist/
 runs/
 outputs/weekly-power-macro-intelligence/
 reconnect_dry_run.txt
