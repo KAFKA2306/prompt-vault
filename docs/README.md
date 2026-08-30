@@ -33,7 +33,7 @@ Markdownだけを根拠に実装挙動を推測しません。
 - `manual/`: 特定サービス・作業の手順書。
 - `ops/`: 個別運用の説明。
 - `plans/`: 計画・作業メモ。完了済みでも現行仕様の正本にはしません。
-- `reports/`, `FTA/`: 調査・生成結果などの記録。
+- `reports/`: 調査結果などの記録。
 - `results-*.md`: KAFKA RESULTS 系workflowの個別契約・説明。
 - `PERSONA_DEVELOPMENT.md`: personaに関するドメイン文書。
 
