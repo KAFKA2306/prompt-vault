@@ -56,6 +56,7 @@ def validate_no_legacy_results_references() -> None:
 
 
 def validate_no_legacy_artifact_references() -> None:
+    violations = []
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
             continue
@@ -64,7 +65,9 @@ def validate_no_legacy_artifact_references() -> None:
         content = path.read_text(encoding="utf-8")
         for legacy_reference in LEGACY_ARTIFACT_REFERENCES:
             if legacy_reference in content:
-                raise ValueError(f"{path}: legacy artifact script path is forbidden: {legacy_reference}")
+                violations.append(f"{path}: {legacy_reference}")
+    if violations:
+        raise ValueError("legacy artifact script paths are forbidden:\n" + "\n".join(sorted(violations)))
 
 
 def main() -> int:
