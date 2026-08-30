@@ -10,10 +10,12 @@ except ImportError:
     HAS_PILLOW = False
 
 from config import CONFIG, ROOT, root_path
+from src.ideation import compile_ideation_profile
 from src.prompt_db import PromptDB, load_prompt_db
 from src.skills import load_skills_index
 
 DB_PATH = root_path(CONFIG["paths"]["db"])
+TWEETSDB_PATH = root_path(CONFIG["paths"]["tweetsdb"])
 STATIC_PATH = root_path(CONFIG["paths"]["static"])
 DIST_PATH = root_path(CONFIG["paths"]["dist"])
 ARTIFACTS_PATH = root_path(CONFIG["paths"]["artifacts"])
@@ -153,6 +155,14 @@ def write_dist() -> None:
             rel_path = f"artifacts/{s.name}"
             if rel_path in active_artifacts:
                 shutil.copy2(s, DIST_PATH / "artifacts" / s.name)
+
+    ideation_output = DIST_PATH / "data" / "ideation_profile.json"
+    profile = compile_ideation_profile(TWEETSDB_PATH, ideation_output)
+    print(
+        "Compiled Kafka ideation profile: "
+        f"{profile['meta']['source_record_count']} records -> "
+        f"{profile['meta']['exemplar_count']} exemplars"
+    )
 
 
 if __name__ == "__main__":
