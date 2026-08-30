@@ -26,6 +26,8 @@ jobs:
         env:
           EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+      - name: Verify generated output is untracked
+        run: test -z "$(git ls-files dist tmp)"
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"

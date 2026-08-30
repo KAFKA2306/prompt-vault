@@ -58,4 +58,5 @@ audit_literals:
     - scripts/validate_db.py
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
+    - git ls-files dist tmp
     - build.py
