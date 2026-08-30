@@ -1,29 +1,108 @@
-name: KAFKA RESULTS aggregate
+name: KAFKA RESULTS
 
 on:
   pull_request:
     paths:
-      - "scripts/results/aggregate.py"
+      - "scripts/results/**"
+      - "tests/test_collect_*.py"
       - "tests/test_aggregate_results.py"
+      - "docs/results-*.md"
       - ".github/workflows/results-aggregate.yml"
-      - "docs/results-aggregate.md"
   push:
     branches: [main]
     paths:
-      - "scripts/results/aggregate.py"
+      - "scripts/results/**"
+      - "tests/test_collect_*.py"
       - "tests/test_aggregate_results.py"
+      - "docs/results-*.md"
       - ".github/workflows/results-aggregate.yml"
-      - "docs/results-aggregate.md"
   workflow_dispatch:
   schedule:
     - cron: "15 3 * * *"
+
+concurrency:
+  group: kafka-results-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
   actions: read
 
 jobs:
+  collect:
+    name: collect / ${{ matrix.category }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - category: code-quality
+            script: code_quality
+          - category: data-quality
+            script: data_quality
+          - category: reliability
+            script: reliability
+          - category: automation
+            script: automation
+          - category: adoption
+            script: adoption
+          - category: business
+            script: business
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            scripts/results
+            tests
+            docs/results-*.md
+            .github/workflows/results-aggregate.yml
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_collect_${{ matrix.script }}.py'
+      - name: Emit repo-native unittest evidence
+        if: matrix.category == 'code-quality'
+        run: |
+          python -m scripts.results.emit_native_test_metric \
+            --test-file tests/test_collect_code_quality.py \
+            --source-commit "${{ github.event.pull_request.head.sha || github.sha }}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --out results/native/prompt-vault.json
+      - name: Collect code-quality reports
+        if: matrix.category == 'code-quality'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/results/collect_code_quality.py \
+            --owner KAFKA2306 \
+            --out results/code-quality \
+            --native-metrics results/native
+      - name: Collect reports
+        if: matrix.category != 'code-quality'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/results/collect_${{ matrix.script }}.py --owner KAFKA2306 --out results/${{ matrix.category }}
+      - name: Validate snapshot
+        run: python scripts/results/validate_snapshot.py '${{ matrix.category }}'
+      - name: Upload domain snapshot
+        uses: actions/upload-artifact@v7
+        with:
+          name: kafka-results-${{ matrix.category }}
+          path: |
+            results/${{ matrix.category }}/*.json
+            results/native/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Verify clean checkout
+        run: |
+          rm -rf results tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
+          test -z "$(git status --porcelain --untracked-files=all)"
+
   aggregate:
+    needs: collect
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -40,47 +119,12 @@ jobs:
           python-version: "3.11"
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_aggregate_results.py'
-      - name: Download latest successful domain snapshots
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          rm -rf results .incoming
-          mkdir -p results .incoming
-          for category in code-quality data-quality reliability automation adoption business; do
-            workflow="results-${category}.yml"
-            run_id="$(gh run list --workflow "$workflow" --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId')"
-            if [[ -z "$run_id" || "$run_id" == "null" ]]; then
-              echo "No successful main run for $workflow" >&2
-              exit 1
-            fi
-            incoming=".incoming/$category"
-            target="results/$category"
-            mkdir -p "$incoming" "$target"
-            gh run download "$run_id" -n "kafka-results-$category" -D "$incoming"
-            source_root="$incoming"
-            if [[ -d "$incoming/$category" ]]; then
-              source_root="$incoming/$category"
-            fi
-            count=0
-            while IFS= read -r -d '' source; do
-              name="$(basename "$source")"
-              destination="$target/$name"
-              if [[ -e "$destination" ]] && ! cmp -s "$source" "$destination"; then
-                echo "Conflicting duplicate artifact file: $destination" >&2
-                exit 1
-              fi
-              cp "$source" "$destination"
-              count=$((count + 1))
-            done < <(find "$source_root" -maxdepth 1 -type f -name '*.json' -print0)
-            if [[ "$count" -eq 0 ]]; then
-              echo "Artifact kafka-results-$category contained no domain JSON input" >&2
-              exit 1
-            fi
-          done
-          rm -rf .incoming
+      - name: Download this run's domain snapshots
+        uses: actions/download-artifact@v7
+        with:
+          pattern: kafka-results-*
+          path: results
+          merge-multiple: true
       - name: Aggregate results
         run: python scripts/results/aggregate.py --root results --require-all
       - name: Contract audit
@@ -129,5 +173,5 @@ jobs:
           retention-days: 30
       - name: Verify clean checkout
         run: |
-          rm -rf results .incoming tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
+          rm -rf results tests/__pycache__ scripts/__pycache__ scripts/results/__pycache__
           test -z "$(git status --porcelain --untracked-files=all)"
