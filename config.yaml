@@ -45,3 +45,8 @@ audit_literals:
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
     - .github/workflows/deploy.yml
+  .github/workflows/deploy.yml:
+    - scripts/validate_db.py
+    - scripts/audit_db.py
+    - scripts/audit_artifacts.py
+    - build.py
