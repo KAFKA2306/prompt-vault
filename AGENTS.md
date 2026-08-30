@@ -34,6 +34,7 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 - 取得失敗、検証失敗、参照切れを silent fallback や broad exception で成功扱いにしない。
 - コメントはコードから分からない理由、外部制約、互換性理由だけに使う。処理内容の言い換えは書かない。
 - host 固有パス、個人環境、one-off 手順を repository の恒久ルールにしない。
+- `git clean`、`git restore`、`git reset` など変更を破棄し得る操作の前には `scripts/guard_destructive.sh` を実行する。guard が FAIL / BLOCKED の場合は破壊操作を実行しない。
 
 ## データとアセット
 
