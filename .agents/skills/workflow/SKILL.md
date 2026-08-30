@@ -1,27 +1,38 @@
 ---
 name: prompt-vault-workflow
-description: Prompt Vault の素材取り込みとアセット管理を扱う skill。画像だけ渡されたとき、path だけ渡されたとき、画像生成プロンプトだけ渡されたとき、`db/prompts.json` を直したいとき、`validate_db.py` / `audit_db.py` で検証したいとき、`register_generated_artifact.py` で画像登録したいとき、`reconnect_unconnected_pngs.py` で未接続 PNG を再接続したいとき、`audit_artifacts.py` で監査したいとき、`build.py` と `verify_pages.sh` で公開前確認したいときに使う。
+description: Prompt Vault の生成アセット登録と DB 更新を、現在の実装・validator・delivery contract に沿って行う skill。
 ---
 
-# Prompt Vault Workflow (FSM Edition)
+# Prompt Vault Workflow
 
-この skill は、Prompt Vault の入力が画像だけ、path だけ、画像生成プロンプトだけ、または `db/prompts.json` とアセットの整合性相談だけのときに使う。まず `references/workflow.md` で該当する分岐を選び、その分岐に書かれたコマンドだけを実行する。
+`AGENTS.md` と現在の実装を正本とする。過去の一括migration、host固有path、会話上の状態機械を恒久手順にしない。
 
-## 1. 最初に見るもの
+## Route
 
-- 画像または path があるとき: そのファイルを登録対象として扱う。
-- 画像生成プロンプトだけがあるとき: 生成結果を `register_generated_artifact.py` に渡せる形にする。
-- `db/prompts.json` の修正があるとき: `validate_db.py` と `audit_db.py` を通す。
+### 生成アセットを登録する
 
-## 2. 実行ルール
+1. 登録する PNG / WAV の実体を確認する。
+2. `scripts/artifacts/register_generated_artifact.py` で `artifacts/` と `db/prompts.json` を同時に更新する。
+3. `scripts/audit_artifacts.py` で接続を確認する。
 
-- `artifacts/` と DB を手で更新しない。
-- `reconnect_unconnected_pngs.py` は未接続 PNG の整理に使う。
-- 登録後は `audit_artifacts.py` を確認する。
-- 公開前は `build.py` と `scripts/verify_pages.sh` を確認する。
-- `character_kafka` と `kafka_identity_lock` を崩さない。
+### DBだけを変更する
 
-## 3. 参照
+- `db/prompts.json` と `src/prompt_db.py` の現行schemaに従う。
+- `scripts/validate_db.py` と `scripts/audit_db.py` を通す。
 
-- 入力の判断は `references/input-routing.md` を読む。
-- コマンドと検証の詳細は `references/workflow.md` を読む。
+### 未接続アセットを扱う
+
+- まず `scripts/audit_artifacts.py` で実状態を確認する。
+- 残す必要がある実アセットは通常の登録経路へ戻す。
+- 参照がなく不要と確認できたものは削除する。
+- 特定ファイル名を列挙した一回限りの再接続scriptを正本にしない。
+
+## Validation
+
+全体変更は既存Taskを使う。
+
+```bash
+task deliver
+```
+
+PRではexact head SHAのCIを確認し、merge後は`main`をread-backする。公開物に影響する場合はproduction verificationまで確認する。確認できない状態を成功扱いにしない。
