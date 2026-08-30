@@ -15,5 +15,3 @@ jobs:
     permissions:
       contents: write
     uses: KAFKA2306/agent-resources/.github/workflows/reusable-weekly-repo-research.yml@main
-    secrets:
-      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
