@@ -1,6 +1,6 @@
 interface:
   display_name: "Prompt Vault Update"
-  short_description: "Turn sources or artifact requests into DB updates"
-  default_prompt: "エージェントとして Prompt Vault の更新を行う際、本ワークフローを「状態遷移（FSM）」として扱うこと。1. ソースに基づき生成系（Generation）として JSON 案とアセットドラフトを作成せよ。 2. 登録前に必ず検証系（Validation）として `validate_db.py` を実行せよ。 3. 物理的な資産登録は手動で行わず、必ず登録系（Registration）の `register_generated_artifact.py` を通せ。 4. 完了前に監査系（Audit）の `audit_artifacts.py` をパスさせ、Missing/Orphan アセットが 0 であることを確認せよ。 5. FAIL 時は成功を推定せず、原因を特定して修復ループに入れ。Kafka の見た目は `character_kafka` および `kafka_identity_lock` を厳守すること。"
+  short_description: "Register artifacts and update the prompt DB through canonical validators"
+  default_prompt: "Follow AGENTS.md and this skill. Use scripts/artifacts/register_generated_artifact.py for artifact registration, existing validators for verification, and fail closed on unverified state."
 policy:
   allow_implicit_invocation: true
