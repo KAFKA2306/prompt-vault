@@ -8,13 +8,14 @@
 
 ## 正本
 
-変更判断は現在の実装と機械可読データを優先する。
+変更判断は現在の実装と機械可読データを優先する。ただし、current codeからの直接参照がないことだけを理由に正準データを不要判定しない。
 
 - Prompt DBの型・読書き: `src/prompt_db.py`
 - アセット採番・命名: `src/artifacts.py`
 - 固定サイズ2D SVG検証: `src/designs.py`
 - Skill一覧の読取り: `src/skills.py`
-- 正準データ: `db/prompts.json`
+- Prompt正準データ: `db/prompts.json`
+- Tweet正準データ: `db/tweetsdb.json`
 - 正準アセット: `artifacts/`
 - 固定サイズ2Dの編集可能な正準デザイン: `designs/*.svg`
 - 静的生成: `build.py`
@@ -29,7 +30,8 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 - `src/` は用途が名前から分かる小さなモジュールを保つ。汎用的な `models.py` / `utils.py` / `helpers.py` を作らない。
 - 現行規模で `domain/infra/services/` のような多層化を追加しない。責務が実際に分裂してから分割する。
 - 既存の標準処理で解決できるなら新しい script、workflow、独自形式を増やさない。
-- DELETE > MERGE > REPLACE > ADD。未使用・重複を実参照で確認してから削除する。
+- DELETE > MERGE > REPLACE > ADD。削除前に、実参照だけでなく、生成元・更新経路・外部利用・履歴用途・正本指定・ユーザー意図を確認する。
+- 「repository内で参照されていない」「検索結果が0件」「現在のbuildで読まれない」だけでは削除根拠にしない。用途を確認できない正準候補は `UNVERIFIED` として保持する。
 - synthetic、fixture、placeholder を本番結果や実アセットの代用にしない。
 - 取得失敗、検証失敗、参照切れを silent fallback や broad exception で成功扱いにしない。
 - コメントはコードから分からない理由、外部制約、互換性理由だけに使う。処理内容の言い換えは書かない。
@@ -39,9 +41,12 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 ## データとアセット
 
 - `db/prompts.json` の変更は `src/prompt_db.py` と既存 validator に適合させる。
+- `db/tweetsdb.json` は必要な正準データとして保持する。current codeの直接参照有無だけで削除・縮小・別形式への置換を決めない。
+- 正準データの削除・移動・圧縮・分割を行う場合は、変更前に生成元、更新方法、利用者、外部consumer、復元可能性を確認し、PRに根拠を残す。
+- 正準データを消すためにrepository storage budgetやsingle-file上限を先に下げない。上限変更は、保持すべき正準データを含む現行treeを基準に決める。
 - アセットを追加・変更した場合は DB との接続を検証する。
 - `designs/*.svg` では文字列、font、座標、図形を構造として保持し、`dist/` 側のコピーを正本にしない。
-- 未接続ファイルを「念のため」保存し続けない。参照がないことを確認できたものは削除する。
+- 未接続ファイルの削除は生成物・一時物・重複物を優先する。正準データや用途未確認のデータへ「未接続だから削除」を適用しない。
 - 一回限りの具体的な日付、セリフ、用途を再利用 block に混ぜない。再利用可能な構造と生成ごとの差分を分離する。
 
 ## 検証
