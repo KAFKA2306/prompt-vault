@@ -7,9 +7,15 @@ tasks:
       - uv run app.py
 
   build:
-    desc: Build the static site
+    desc: Build the static site and compact Kafka ideation profile
     cmds:
       - uv run build.py
+
+  ideation:
+    desc: Retrieve evidence-backed Kafka ideation examples; usage: task ideation -- "query"
+    deps: [build]
+    cmds:
+      - uv run python scripts/ideation.py "{{.CLI_ARGS}}"
 
   validate:
     desc: Validate the database
@@ -41,6 +47,14 @@ tasks:
     desc: Verify the pages
     cmds:
       - bash scripts/verify_pages.sh
+
+  ideation-smoke:
+    desc: Verify the built Kafka ideation index is queryable
+    cmds:
+      - test -s dist/data/ideation_profile.json
+      - uv run python scripts/ideation.py "画像生成" --profile dist/data/ideation_profile.json --limit 1 > /tmp/ideation.json
+      - uv run python -c 'import json; d=json.load(open("/tmp/ideation.json")); assert d["reference_examples"]; assert d["seed"]["trait_tags"]'
+
   test:
     desc: Run all tests and validation
     cmds:
@@ -55,3 +69,4 @@ tasks:
       - task: validate
       - task: artifacts-audit
       - task: build
+      - task: ideation-smoke

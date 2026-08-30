@@ -39,6 +39,8 @@ jobs:
         run: uv run python scripts/audit_literals.py
       - name: Verify weekly macro delivery contract
         run: uv run python -m unittest -v tests.test_weekly_power_macro_contract
+      - name: Verify Kafka ideation contract
+        run: uv run python -m unittest -v tests.test_ideation_contract
       - name: Smoke-check canonical artifact registration
         run: uv run python scripts/artifacts/register_generated_artifact.py --help
       - name: Install canonical SVG font
@@ -51,6 +53,11 @@ jobs:
         run: uv run python scripts/audit_artifacts.py
       - name: Build static site
         run: uv run build.py
+      - name: Smoke-check Kafka ideation retrieval
+        run: |
+          test -s dist/data/ideation_profile.json
+          uv run python scripts/ideation.py "画像生成" --profile dist/data/ideation_profile.json --limit 1 > /tmp/ideation.json
+          uv run python -c 'import json; d=json.load(open("/tmp/ideation.json")); assert d["reference_examples"]; assert d["seed"]["trait_tags"]'
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
@@ -81,6 +88,10 @@ jobs:
           test -n "$PAGE_URL"
           curl --fail --silent --show-error --location --retry 0 "$PAGE_URL" -o /tmp/index.html
           grep -F "Prompt Vault" /tmp/index.html
+          IDEATION_URL="${PAGE_URL%/}/data/ideation_profile.json"
+          curl --fail --silent --show-error --location --retry 0 "$IDEATION_URL" -o /tmp/ideation_profile.json
+          grep -F '"name": "kafka-ideation-profile"' /tmp/ideation_profile.json
+          grep -F '"exemplars": [' /tmp/ideation_profile.json
           DESIGN_URL="${PAGE_URL%/}/designs/issue-91-blueprint-proof.svg"
           curl --fail --silent --show-error --location --retry 0 "$DESIGN_URL" -o /tmp/issue-91-blueprint-proof.svg
           grep -F "設計図派" /tmp/issue-91-blueprint-proof.svg

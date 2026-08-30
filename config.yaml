@@ -6,6 +6,7 @@ model: gemini-2.5-flash-lite
 
 paths:
   db: db/prompts.json
+  tweetsdb: db/tweetsdb.json
   static: static
   dist: dist
   artifacts: artifacts
@@ -45,6 +46,13 @@ audit_literals:
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
     - .github/workflows/deploy.yml
+  docs/IDEATION.md:
+    - db/tweetsdb.json
+    - scripts/tweetsdb.py
+    - src/ideation.py
+    - scripts/compile_ideation_profile.py
+    - scripts/ideation.py
+    - dist/data/ideation_profile.json
   docs/SKILLS.md:
     - .agents/skills/prompt-db-auditor/SKILL.md
     - .agents/skills/workflow/SKILL.md
@@ -56,6 +64,8 @@ audit_literals:
     - scripts/audit_repository_storage.py
     - --max-bytes 891289600
     - --max-file-bytes 67108864
+    - tests.test_ideation_contract
+    - scripts/ideation.py
     - scripts/validate_db.py
     - scripts/audit_db.py
     - scripts/audit_artifacts.py
