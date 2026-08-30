@@ -85,7 +85,7 @@
 {
   "id": "kafka_stamp_01",
   "title": "Kafkaスタンプ基本",
-  "blocks": ["master_style", "character_kafka"],
+  "blocks": ["master_style", "character_kafka", "layout_stamp"],
   "kind": "stamp",
   "summary": "LINEスタンプ用。デフォルメされたKafkaの感情表現。"
 }
