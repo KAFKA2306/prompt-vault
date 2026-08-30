@@ -2,8 +2,7 @@ app:
   host: 127.0.0.1
   port: 8787
 
-ai:
-  model: gemini-2.5-flash-lite
+model: gemini-2.5-flash-lite
 
 paths:
   db: db/prompts.json
@@ -13,7 +12,6 @@ paths:
   orphaned_artifacts: artifacts/_orphaned
   prompts: prompts/frontend_codex.md
   skills_index: docs/SKILLS.md
-  generated_images: /home/kafka/.codex/generated_images/
 
 audit_literals:
   README.md:
