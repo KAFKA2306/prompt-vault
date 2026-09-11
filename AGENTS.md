@@ -15,6 +15,7 @@
 - 固定サイズ2D SVG検証: `src/designs.py`
 - Skill一覧の読取り: `src/skills.py`
 - Prompt正準データ: `db/prompts.json`
+- Prompt機械規則: `db/machine_rules.json`
 - Tweet正準データ: `db/tweetsdb.json`
 - 正準アセット: `artifacts/`
 - 固定サイズ2Dの編集可能な正準デザイン: `designs/*.svg`
@@ -22,6 +23,8 @@
 - 共通コマンド: `Taskfile.yml`
 - UI: `static/`
 - `dist/` は生成物。直接編集しない。
+
+画像生成・prompt合成では `db/prompts.json` を先に読み、続いて `db/machine_rules.json` で entity alias、identity lock、intent、合成優先順位を解決する。Kafka / Sylfanel / card などの認識規則を個別promptやagent指示へ重複ハードコードしない。
 
 Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、現在の実装を確認し、古い説明を更新または削除する。未確認の仕様を docs や skills に書かない。
 
@@ -41,6 +44,7 @@ Markdown、Issue、過去の ADR が現在の実装と矛盾する場合は、�
 ## データとアセット
 
 - `db/prompts.json` の変更は `src/prompt_db.py` と既存 validator に適合させる。
+- `db/machine_rules.json` はPrompt DBのblock/templateを参照する機械規則の正本とし、entity・intent・合成順序・表示制約を構造化する。block参照は既存validatorで実在確認し、prompt本文との重複を増やさない。
 - `db/tweetsdb.json` は必要な正準データとして保持する。current codeの直接参照有無だけで削除・縮小・別形式への置換を決めない。
 - 正準データの削除・移動・圧縮・分割を行う場合は、変更前に生成元、更新方法、利用者、外部consumer、復元可能性を確認し、PRに根拠を残す。
 - 正準データを消すためにrepository storage budgetやsingle-file上限を先に下げない。上限変更は、保持すべき正準データを含む現行treeを基準に決める。

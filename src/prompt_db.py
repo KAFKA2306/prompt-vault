@@ -71,6 +71,39 @@ class PromptDB(BaseModel):
         return data
 
 
+class EntityRule(BaseModel):
+    aliases: list[str] = Field(default_factory=list)
+    required_blocks: list[str] = Field(default_factory=list)
+    default_negative_blocks: list[str] = Field(default_factory=list)
+    hard_locks: list[str] = Field(default_factory=list)
+    soft_traits: list[str] = Field(default_factory=list)
+    override_policy: str = ""
+
+
+class IntentRule(BaseModel):
+    aliases: list[str] = Field(default_factory=list)
+    preferred_blocks: list[str] = Field(default_factory=list)
+    context_rules: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class MachineRule(BaseModel):
+    id: str
+    priority: int
+    applies_to: list[str] = Field(default_factory=list)
+    level: Literal["must", "default", "warning"]
+    instruction: str
+
+
+class MachineRulesDB(BaseModel):
+    version: int
+    updated_at: str
+    load_order: list[str] = Field(default_factory=list)
+    entities: dict[str, EntityRule] = Field(default_factory=dict)
+    intents: dict[str, IntentRule] = Field(default_factory=dict)
+    composition: dict[str, Any] = Field(default_factory=dict)
+    rules: list[MachineRule] = Field(default_factory=list)
+
+
 def load_json_db(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -81,3 +114,7 @@ def save_json_db(path: Path, db: dict[str, Any]) -> None:
 
 def load_prompt_db(path: Path) -> PromptDB:
     return PromptDB.model_validate_json(path.read_text(encoding="utf-8"))
+
+
+def load_machine_rules(path: Path) -> MachineRulesDB:
+    return MachineRulesDB.model_validate_json(path.read_text(encoding="utf-8"))
