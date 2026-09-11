@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-11",
+  "load_order": [
+    "db/prompts.json",
+    "db/machine_rules.json"
+  ],
+  "entities": {
+    "kafka": {
+      "aliases": [
+        "kafka",
+        "Kafka",
+        "KAFKA",
+        "かふか",
+        "カフカ"
+      ],
+      "required_blocks": [
+        "kafka_core",
+        "kafka_identity_lock"
+      ],
+      "default_negative_blocks": [
+        "negative_common"
+      ],
+      "hard_locks": [
+        "long light-blue hair",
+        "soft lavender gradient at hair ends",
+        "silver triangle cat hairpin",
+        "blue-purple eyes"
+      ],
+      "soft_traits": [
+        "quiet emotional futurism",
+        "observational loneliness",
+        "natural asymmetry",
+        "non-glossy rendering",
+        "emotionally grounded presence"
+      ],
+      "override_policy": "hard locks change only when the user explicitly requests a redesign"
+    },
+    "sylfanel": {
+      "aliases": [
+        "sylfanel",
+        "Sylfanel",
+        "SYLFANEL",
+        "シルファネル"
+      ],
+      "required_blocks": [
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction"
+      ],
+      "default_negative_blocks": [
+        "negative_common"
+      ],
+      "hard_locks": [
+        "very long silver-lilac hair",
+        "soft lavender gradient",
+        "pale violet eyes",
+        "elegant ethereal identity"
+      ],
+      "soft_traits": [
+        "quiet nobility",
+        "graceful silhouette",
+        "emotionally real presence"
+      ],
+      "override_policy": "hard locks change only when the user explicitly requests a redesign"
+    },
+    "shafuka": {
+      "aliases": [
+        "shafuka",
+        "しゃふか"
+      ],
+      "required_blocks": [
+        "character_shafuka_core",
+        "outfit_shafuka_default",
+        "style_shafuka_flat"
+      ],
+      "default_negative_blocks": [
+        "negative_common"
+      ]
+    },
+    "miyu": {
+      "aliases": [
+        "miyu",
+        "みゆ",
+        "みゆみゆ"
+      ],
+      "required_blocks": [
+        "miyu_identity_lock"
+      ],
+      "default_negative_blocks": [
+        "negative_common"
+      ]
+    }
+  },
+  "intents": {
+    "card": {
+      "aliases": [
+        "card",
+        "カード"
+      ],
+      "context_rules": [
+        {
+          "contains_any": [
+            "game",
+            "boardgame",
+            "poker",
+            "JoinWars",
+            "TCG",
+            "deck",
+            "ゲーム",
+            "ボドゲ",
+            "ポーカー",
+            "デッキ"
+          ],
+          "resolve_to": "cardgame"
+        },
+        {
+          "default": "design_card"
+        }
+      ]
+    },
+    "cardgame": {
+      "aliases": [
+        "cardgame",
+        "card game",
+        "カードゲーム"
+      ],
+      "preferred_blocks": [
+        "cardgame_post_layout",
+        "background_fantasy_table",
+        "card_game_status_text_pack"
+      ]
+    },
+    "design_card": {
+      "aliases": [
+        "design card",
+        "info card",
+        "情報カード"
+      ],
+      "preferred_blocks": [
+        "presentation_base_pack",
+        "presentation_layout_base"
+      ]
+    },
+    "stamp": {
+      "aliases": [
+        "stamp",
+        "sticker",
+        "スタンプ",
+        "ステッカー"
+      ]
+    },
+    "comic": {
+      "aliases": [
+        "comic",
+        "manga",
+        "漫画",
+        "4コマ"
+      ]
+    },
+    "social": {
+      "aliases": [
+        "social",
+        "post",
+        "tweet",
+        "投稿",
+        "ツイート"
+      ]
+    },
+    "design_sheet": {
+      "aliases": [
+        "design sheet",
+        "reference sheet",
+        "デザインシート",
+        "設定画",
+        "三面図"
+      ]
+    },
+    "brand": {
+      "aliases": [
+        "logo",
+        "icon",
+        "banner",
+        "ロゴ",
+        "アイコン",
+        "ブランド"
+      ]
+    }
+  },
+  "composition": {
+    "stages": [
+      "resolve_entities",
+      "resolve_intent",
+      "select_template",
+      "apply_identity",
+      "apply_scene",
+      "apply_style",
+      "apply_text_layout_rules",
+      "append_negative",
+      "validate"
+    ],
+    "precedence": [
+      "explicit_current_user_request",
+      "explicit_template_configuration",
+      "entity_hard_lock",
+      "scene_specific_blocks",
+      "entity_soft_traits",
+      "global_machine_rules",
+      "generic_defaults"
+    ],
+    "deprecated_templates": "exclude_by_default",
+    "negative_policy": "union_and_deduplicate"
+  },
+  "rules": [
+    {
+      "id": "load_prompt_vault_first",
+      "priority": 1000,
+      "applies_to": [
+        "all_generation",
+        "all_prompt_composition"
+      ],
+      "level": "must",
+      "instruction": "Load db/prompts.json and db/machine_rules.json before composing prompts; resolve known entities and intents before freehand generation."
+    },
+    {
+      "id": "prefer_canonical_blocks",
+      "priority": 950,
+      "applies_to": [
+        "all_generation"
+      ],
+      "level": "must",
+      "instruction": "Reuse canonical blocks/templates when they cover the request; add a reusable block only for a genuinely new reusable concept."
+    },
+    {
+      "id": "character_identity_lock",
+      "priority": 930,
+      "applies_to": [
+        "character_generation"
+      ],
+      "level": "must",
+      "instruction": "Inject the registered character required_blocks and preserve hard_locks unless redesign intent is explicit."
+    },
+    {
+      "id": "text_area_plain_white",
+      "priority": 900,
+      "applies_to": [
+        "infographic",
+        "document_like_image",
+        "text_heavy_image",
+        "explanation_comic"
+      ],
+      "level": "must",
+      "instruction": "Reserve body-text areas as pure solid white. Do not place paper grain, halftone, checkerboard, grid, noise, gradient, illustration, or decoration behind body text."
+    },
+    {
+      "id": "separate_text_and_illustration",
+      "priority": 890,
+      "applies_to": [
+        "text_heavy_image"
+      ],
+      "level": "must",
+      "instruction": "Separate illustration and body-text zones clearly; decoration must not run behind body text."
+    },
+    {
+      "id": "long_text_post_typeset",
+      "priority": 880,
+      "applies_to": [
+        "text_heavy_image"
+      ],
+      "level": "must",
+      "instruction": "When visible body text is long or accuracy-critical, generate illustration/layout first and typeset the long text deterministically afterward."
+    },
+    {
+      "id": "regenerate_on_visual_drift",
+      "priority": 860,
+      "applies_to": [
+        "image_editing",
+        "iterative_generation"
+      ],
+      "level": "must",
+      "instruction": "If repeated editing causes identity drift, anatomy damage, text corruption, muddy rendering, or accumulated artifacts, stop editing that image and regenerate from canonical blocks plus the latest accepted reference."
+    },
+    {
+      "id": "avoid_excessive_gloss",
+      "priority": 840,
+      "applies_to": [
+        "all_generation"
+      ],
+      "level": "default",
+      "instruction": "Avoid excessive gloss, sparkle, bloom, lens flare, plastic skin, neon overload, and generic AI-anime polish unless explicitly requested."
+    },
+    {
+      "id": "user_request_overrides_soft_defaults",
+      "priority": 800,
+      "applies_to": [
+        "all_generation"
+      ],
+      "level": "must",
+      "instruction": "The current explicit user request overrides soft defaults, but does not silently override registered character hard_locks."
+    }
+  ]
+}

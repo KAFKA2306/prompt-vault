@@ -4,7 +4,7 @@ from collections import defaultdict
 from _bootstrap import ROOT
 from config import CONFIG
 from src.designs import validate_canonical_designs
-from src.prompt_db import load_prompt_db
+from src.prompt_db import load_machine_rules, load_prompt_db
 
 LEGACY_SRC_IMPORTS = (
     "src." + "models",
@@ -70,11 +70,37 @@ def validate_no_legacy_artifact_references() -> None:
         raise ValueError("legacy artifact script paths are forbidden:\n" + "\n".join(sorted(violations)))
 
 
+def validate_machine_rule_references(db) -> None:
+    rules = load_machine_rules(ROOT / "db" / "machine_rules.json")
+    block_ids = {block.id for block in db.blocks}
+
+    missing = []
+    for entity_id, entity in rules.entities.items():
+        for block_id in entity.required_blocks + entity.default_negative_blocks:
+            if block_id not in block_ids:
+                missing.append(f"entity {entity_id}: {block_id}")
+    for intent_id, intent in rules.intents.items():
+        for block_id in intent.preferred_blocks:
+            if block_id not in block_ids:
+                missing.append(f"intent {intent_id}: {block_id}")
+        for context_rule in intent.context_rules:
+            target = context_rule.get("resolve_to")
+            if target and target not in rules.intents:
+                raise ValueError(f"machine rule intent {intent_id}: unknown resolve_to {target}")
+    if missing:
+        raise ValueError("machine rules reference unknown prompt blocks:\n" + "\n".join(sorted(missing)))
+
+    rule_ids = [rule.id for rule in rules.rules]
+    if len(rule_ids) != len(set(rule_ids)):
+        raise ValueError("machine rule ids must be unique")
+
+
 def main() -> int:
     validate_no_legacy_src_imports()
     validate_no_legacy_results_references()
     validate_no_legacy_artifact_references()
     db = load_prompt_db(ROOT / CONFIG["paths"]["db"])
+    validate_machine_rule_references(db)
 
     artifact_paths = defaultdict(list)
     linked_paths = set()
