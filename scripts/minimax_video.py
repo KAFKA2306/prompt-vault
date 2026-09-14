@@ -99,7 +99,7 @@ class MiniMaxClient:
         return file_data
 
     def download(self, url: str, output: Path) -> str:
-        request = urllib.request.Request(url, headers={"Authorization": f"Bearer {self.api_key}"})
+        request = urllib.request.Request(url)
         try:
             with urllib.request.urlopen(request, timeout=self.timeout) as response:
                 content = response.read()
