@@ -69,6 +69,16 @@ task build
 task deliver
 ```
 
+## MiniMax text-to-video
+
+`MINIMAX_API_KEY` を環境変数へ設定すると、ブラウザなしで動画生成開始、task polling、MP4保存まで1コマンドで実行できます。
+
+```bash
+task minimax-video -- "a quiet riverside in Kyoto at dusk" --output output/kyoto.mp4
+```
+
+生成条件、`task_id`、`file_id`、出力SHA-256はMP4隣接のJSONへ保存します。API contractの回帰確認は `task minimax-video-test` で実行できます。
+
 ## Register generated artifacts
 
 PNG/WAVを正式なDB接続artifactとして採用する標準入口:
