@@ -128,6 +128,10 @@ class MiniMaxVideoTest(unittest.TestCase):
         self.assertGreaterEqual(paths.count("/v1/query/video_generation?task_id=task-123"), 2)
         self.assertIn("/v1/files/retrieve?file_id=file-456", paths)
         self.assertIn("/download/video.mp4", paths)
+        download_request = next(
+            request for request in MiniMaxFixtureHandler.requests if request[1] == "/download/video.mp4"
+        )
+        self.assertIsNone(download_request[3])
 
     def test_failed_task_returns_nonzero_and_writes_no_completed_artifact(self):
         MiniMaxFixtureHandler.fail_task = True
