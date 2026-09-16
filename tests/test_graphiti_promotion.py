@@ -1,6 +1,6 @@
+import unittest
 from datetime import datetime, timezone
 
-import pytest
 from pydantic import ValidationError
 
 from src.graphiti_promotion import build_promotion_candidate, promote_candidate
@@ -26,37 +26,38 @@ def payload(**overrides: object) -> dict[str, object]:
     return value
 
 
-def test_valid_candidate_registers_in_existing_prompt_db() -> None:
-    candidate = build_promotion_candidate(payload())
-    db = PromptDB(blocks=[], templates=[])
+class GraphitiPromotionTest(unittest.TestCase):
+    def test_valid_candidate_registers_in_existing_prompt_db(self) -> None:
+        candidate = build_promotion_candidate(payload())
+        db = PromptDB(blocks=[], templates=[])
+        promoted = promote_candidate(db, candidate)
 
-    promoted = promote_candidate(db, candidate)
+        self.assertEqual(db.templates, [])
+        self.assertEqual(len(promoted.templates), 1)
+        template = promoted.templates[0]
+        self.assertEqual(template.id, candidate.id)
+        self.assertEqual(template.kind, "generated")
+        self.assertEqual(template.generated_prompt, candidate.prompt)
+        self.assertIn("KAFKA2306/example@" + "a" * 40, template.summary)
+        self.assertIn("episode-42:fact-3", template.summary)
 
-    assert db.templates == []
-    assert len(promoted.templates) == 1
-    template = promoted.templates[0]
-    assert template.id == candidate.id
-    assert template.kind == "generated"
-    assert template.generated_prompt == candidate.prompt
-    assert "KAFKA2306/example@" + "a" * 40 in template.summary
-    assert "episode-42:fact-3" in template.summary
+    def test_missing_provenance_is_rejected(self) -> None:
+        invalid = payload()
+        invalid.pop("provenance")
+        with self.assertRaises(ValidationError):
+            build_promotion_candidate(invalid)
+
+    def test_stale_graphiti_knowledge_is_rejected(self) -> None:
+        for state in ("corrected", "superseded"):
+            with self.subTest(state=state), self.assertRaisesRegex(ValidationError, "cannot promote"):
+                build_promotion_candidate(payload(knowledge_state=state))
+
+    def test_duplicate_candidate_does_not_create_second_authority(self) -> None:
+        candidate = build_promotion_candidate(payload())
+        promoted = promote_candidate(PromptDB(blocks=[], templates=[]), candidate)
+        with self.assertRaisesRegex(ValueError, "template already exists"):
+            promote_candidate(promoted, candidate)
 
 
-def test_missing_provenance_is_rejected() -> None:
-    invalid = payload()
-    invalid.pop("provenance")
-    with pytest.raises(ValidationError):
-        build_promotion_candidate(invalid)
-
-
-@pytest.mark.parametrize("state", ["corrected", "superseded"])
-def test_stale_graphiti_knowledge_is_rejected(state: str) -> None:
-    with pytest.raises(ValidationError, match="cannot promote"):
-        build_promotion_candidate(payload(knowledge_state=state))
-
-
-def test_duplicate_candidate_does_not_create_second_authority() -> None:
-    candidate = build_promotion_candidate(payload())
-    promoted = promote_candidate(PromptDB(blocks=[], templates=[]), candidate)
-    with pytest.raises(ValueError, match="template already exists"):
-        promote_candidate(promoted, candidate)
+if __name__ == "__main__":
+    unittest.main()
