@@ -41,6 +41,8 @@ jobs:
         run: uv run python -m unittest -v tests.test_weekly_power_macro_contract
       - name: Verify Kafka ideation contract
         run: uv run python -m unittest -v tests.test_ideation_contract
+      - name: Verify Graphiti promotion contract
+        run: uv run pytest -q tests/test_graphiti_promotion.py
       - name: Smoke-check canonical artifact registration
         run: uv run python scripts/artifacts/register_generated_artifact.py --help
       - name: Install canonical SVG font
