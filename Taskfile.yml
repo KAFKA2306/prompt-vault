@@ -17,6 +17,16 @@ tasks:
     cmds:
       - uv run python scripts/ideation.py "{{.CLI_ARGS}}"
 
+  minimax-video:
+    desc: Generate and save MiniMax text-to-video; usage: task minimax-video -- "prompt" [options]
+    cmds:
+      - uv run python scripts/minimax_video.py {{.CLI_ARGS}}
+
+  minimax-video-test:
+    desc: Run the MiniMax video CLI contract tests
+    cmds:
+      - python3 -m unittest -v tests.test_minimax_video
+
   validate:
     desc: Validate the database
     cmds:
@@ -58,6 +68,7 @@ tasks:
   test:
     desc: Run all tests and validation
     cmds:
+      - task: minimax-video-test
       - task: lint
       - task: format
       - task: deliver
