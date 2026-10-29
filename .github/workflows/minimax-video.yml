@@ -1,0 +1,34 @@
+name: MiniMax video CLI
+
+on:
+  pull_request:
+    paths:
+      - "scripts/minimax_video.py"
+      - "tests/test_minimax_video.py"
+      - "Taskfile.yml"
+      - "README.md"
+      - ".github/workflows/minimax-video.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/minimax_video.py"
+      - "tests/test_minimax_video.py"
+      - "Taskfile.yml"
+      - "README.md"
+      - ".github/workflows/minimax-video.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run MiniMax CLI regression tests
+        run: python3 -m unittest -v tests.test_minimax_video
+      - name: Compile CLI
+        run: python3 -m py_compile scripts/minimax_video.py tests/test_minimax_video.py
