@@ -2079,6 +2079,20 @@
       "content": "■ 拡張器官としての技術\n技術愛そのものではなく、世界と人間を観測するための拡張器官。根本にあるのは「人類観測」。\n\n「論理で世界を切り分けながら、最後は人間の居心地へ戻る」という軌道こそが、システムの正しさを手段とし、人が安心して存在できる場を守るための本質である。",
       "role": "text",
       "category": "自己認識"
+    },
+    {
+      "id": "shiroinu_sticker_identity",
+      "title": "しろい〜ぬ: Discordスタンプ用参照",
+      "role": "identity",
+      "category": "キャラクター核",
+      "content": "Shiroi~nu (しろい〜ぬ) is a small fluffy white dog mascot. Preserve the rounded fluffy silhouette, soft white fur, friendly compact face, and small paws. The blue scarf is a styling detail of the current Discord trio sticker series, not a global identity hard lock. When a user-supplied original character reference is available, use that as visual identity authority instead of inferring anatomy or breed from prior generated stickers. Do not replace the dog with a cat or a different mascot."
+    },
+    {
+      "id": "discord_trio_daily_sticker_layout",
+      "title": "Discord 3人組・日常リアクションスタンプ",
+      "role": "layout",
+      "category": "形式・レイアウト",
+      "content": "One image is exactly one square Discord sticker, with Kafka, Sylfanel and Shiroi~nu visible together. Large readable faces and gestures, tightly grouped but distinct silhouettes, bold clean outlines and a white cutout sticker border; pastel blue and lavender accents, matte chibi anime finish, genuine transparent background, no scenery, no grid, no date, no watermark. One short Japanese reaction phrase placed prominently in a clean single text region, accurate spelling, strong contrast. Readable when reduced to 64px. Keep accents and props minimal. Preserve each character identity; do not treat a 4x4 preview sheet or cropped panel as a substitute for a correctly composed single sticker."
     }
   ],
   "templates": [
@@ -9467,6 +9481,310 @@
       "voice_caption": null,
       "voice_script": null,
       "created_at": "2026-05-25T19:03:19+09:00"
+    },
+    {
+      "id": "discord_trio_daily_ryoukai",
+      "title": "Discordトリオ: りょうかい！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の01番。りょうかい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「りょうかい！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka gives a small serious salute; Sylfanel nods gracefully; the white dog tumbles forward with excitement. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_arigatou",
+      "title": "Discordトリオ: ありがとう！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の02番。ありがとう！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「ありがとう！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka bows shyly; Sylfanel offers a simple flower bouquet; the white dog brings its tiny paws together into a heart. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_gomenne",
+      "title": "Discordトリオ: ごめんね",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の03番。ごめんねの表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「ごめんね」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka averts her eyes apologetically; Sylfanel bows with a worried face; the white dog lies flat on the floor, ears lowered. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_ima_iku",
+      "title": "Discordトリオ: いま行く！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の04番。いま行く！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「いま行く！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka hurriedly ties her shoes; Sylfanel gestures to follow; the white dog is already sprinting with motion streaks. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_onegai",
+      "title": "Discordトリオ: おねがい！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の05番。おねがい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「おねがい！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka looks up with hopeful eyes and hands near her chin; Sylfanel gently clasps her hands; the white dog pleads with sparkling eyes. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_omedetou",
+      "title": "Discordトリオ: おめでとう！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の06番。おめでとう！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「おめでとう！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka pops a small party cracker; Sylfanel holds a flower crown; the white dog cheers under falling confetti. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_okaeri",
+      "title": "Discordトリオ: おかえり！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の07番。おかえり！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「おかえり！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka opens a door, only a hint of door frame visible; Sylfanel smiles in welcome; the white dog leaps happily toward the viewer. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_matane",
+      "title": "Discordトリオ: またね！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の08番。またね！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「またね！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka gives a small wave from an oversized sleeve; Sylfanel bows elegantly; the white dog waves one paw and wags its tail. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_erai",
+      "title": "Discordトリオ: えらい！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の09番。えらい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「えらい！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka claps softly; Sylfanel presents a gold medal; the white dog proudly raises a paw as if requesting a medal too. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_nande",
+      "title": "Discordトリオ: なんで！？",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の10番。なんで！？の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「なんで！？」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka freezes in stunned disbelief; Sylfanel covers her mouth, wide-eyed; the white dog tilts its head dramatically. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_daijoubu",
+      "title": "Discordトリオ: だいじょうぶ？",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の11番。だいじょうぶ？の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「だいじょうぶ？」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka leans closer to check on someone; Sylfanel holds a tiny first-aid kit; the white dog gently reaches out a worried paw. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_makasete",
+      "title": "Discordトリオ: まかせて！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の12番。まかせて！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「まかせて！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka holds a small toolbox; Sylfanel lifts a modest magic wand; the white dog confidently brings a tiny shovel. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_naruhodo",
+      "title": "Discordトリオ: なるほど！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の13番。なるほど！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「なるほど！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka raises a little lightbulb icon in realization; Sylfanel nods admiringly; the white dog innocently mistakes it for a treat without touching it. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_himitsu",
+      "title": "Discordトリオ: ひみつ！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の14番。ひみつ！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「ひみつ！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka places a finger to her lips; Sylfanel gives a small wink; the white dog covers its mouth with both paws. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_ganbare",
+      "title": "Discordトリオ: がんばれ！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の15番。がんばれ！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「がんばれ！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka waves a small cheering flag; Sylfanel holds a supportive ribbon banner; the white dog bounces with oversized pom-poms. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "discord_trio_daily_waai",
+      "title": "Discordトリオ: わーい！",
+      "kind": "stamp",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "emotional_direction",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "negative_common"
+      ],
+      "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
+      "summary": "全16種の16番。わーい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
+      "artifacts": [],
+      "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「わーい！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka raises both hands a little; Sylfanel spins gently in celebration; the white dog jumps in the air with paws out. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
     }
   ]
 }
