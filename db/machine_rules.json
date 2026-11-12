@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-11-12",
   "load_order": [
     "db/prompts.json",
     "db/machine_rules.json"
@@ -90,6 +90,33 @@
       "default_negative_blocks": [
         "negative_common"
       ]
+    },
+    "shiroinu": {
+      "aliases": [
+        "しろい〜ぬ",
+        "しろい～ぬ",
+        "しろいーぬ",
+        "Shiroi~nu",
+        "Shiroinu",
+        "shiroinu",
+        "shiroi-nu"
+      ],
+      "required_blocks": [
+        "shiroinu_sticker_identity"
+      ],
+      "default_negative_blocks": [
+        "negative_common"
+      ],
+      "hard_locks": [
+        "small fluffy white dog",
+        "white fur"
+      ],
+      "soft_traits": [
+        "round fluffy silhouette",
+        "small expressive paws",
+        "playful friendly presence"
+      ],
+      "override_policy": "Use original character references for further identity detail; do not overwrite the original design from generated sticker variants."
     }
   },
   "intents": {
