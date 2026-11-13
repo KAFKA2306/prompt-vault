@@ -25,7 +25,9 @@
         "long light-blue hair",
         "soft lavender gradient at hair ends",
         "silver triangle cat hairpin",
-        "blue-purple eyes"
+        "blue-purple eyes",
+        "left-side silver triangle cat hairpin",
+        "small braided hair section with black ribbon"
       ],
       "soft_traits": [
         "quiet emotional futurism",
@@ -55,7 +57,8 @@
         "very long silver-lilac hair",
         "soft lavender gradient",
         "pale violet eyes",
-        "elegant ethereal identity"
+        "elegant ethereal identity",
+        "delicate floral hair ornament"
       ],
       "soft_traits": [
         "quiet nobility",
@@ -108,13 +111,17 @@
         "negative_common"
       ],
       "hard_locks": [
-        "small fluffy white dog",
-        "white fur"
+        "small round pure-white fluffy dog",
+        "drooping ears and short legs",
+        "tiny deep blue-green eyes and nose",
+        "very small mouth",
+        "identity consistent with original user reference"
       ],
       "soft_traits": [
-        "round fluffy silhouette",
+        "plush-like three-dimensional fluffy silhouette",
+        "friendly compact face",
         "small expressive paws",
-        "playful friendly presence"
+        "optional blue scarf only when requested or template-specific"
       ],
       "override_policy": "Use original character references for further identity detail; do not overwrite the original design from generated sticker variants."
     }
@@ -224,6 +231,29 @@
       "preferred_blocks": [
         "animation_preserve_approved_character_motion"
       ]
+    },
+    "trio_sticker": {
+      "aliases": [
+        "トリオスタンプ",
+        "3人スタンプ",
+        "Discordトリオ",
+        "three-character sticker"
+      ],
+      "preferred_blocks": [
+        "trio_stamp_quality_contract",
+        "single_image_output_contract"
+      ]
+    },
+    "travel_photo_grid": {
+      "aliases": [
+        "travel photo grid",
+        "旅行フォトグリッド",
+        "北欧9シーン",
+        "3x3 travel grid"
+      ],
+      "preferred_blocks": [
+        "nordic_travel_photogrid"
+      ]
     }
   },
   "composition": {
@@ -262,6 +292,16 @@
       "instruction": "Load db/prompts.json and db/machine_rules.json before composing prompts; resolve known entities and intents before freehand generation."
     },
     {
+      "id": "character_system_isolation",
+      "priority": 970,
+      "applies_to": [
+        "character_generation",
+        "all_prompt_composition"
+      ],
+      "level": "must",
+      "instruction": "Do not blend visual identity or color-system instructions between Kafka and another distinct or unnamed character; preserve the user's corrected design-system separation."
+    },
+    {
       "id": "prefer_canonical_blocks",
       "priority": 950,
       "applies_to": [
@@ -278,6 +318,44 @@
       ],
       "level": "must",
       "instruction": "Inject the registered character required_blocks and preserve hard_locks unless redesign intent is explicit."
+    },
+    {
+      "id": "keep_approved_motion_when_animating_caption",
+      "priority": 920,
+      "applies_to": [
+        "animated_caption",
+        "iterative_generation"
+      ],
+      "level": "must",
+      "instruction": "When the user asks to add or animate text on an approved animated image, preserve the approved character-frame sequence and gesture anatomy as an unchanged base; move only the typography overlay. If rebuilding rather than compositing is required, disclose that exact motion retention cannot be guaranteed and compare hand frames before acceptance."
+    },
+    {
+      "id": "one_concept_one_asset",
+      "priority": 920,
+      "applies_to": [
+        "all_generation"
+      ],
+      "level": "must",
+      "instruction": "Produce one independent image per requested pattern by default; use a grid, sprite sheet or multi-panel layout only when explicitly requested. Never substitute a contact-sheet crop for an independently generated sticker."
+    },
+    {
+      "id": "trio_sticker_approved_spec",
+      "priority": 915,
+      "applies_to": [
+        "trio_sticker"
+      ],
+      "level": "must",
+      "instruction": "For the 2026-11-12 approved ten labels, generate each as its own square transparent asset, with Kafka, Sylfanel and Shiroi~nu all present and only that exact Japanese label visible. Keep six other labels pending."
+    },
+    {
+      "id": "all_frame_character_consistency",
+      "priority": 905,
+      "applies_to": [
+        "animated_character_generation",
+        "gif"
+      ],
+      "level": "must",
+      "instruction": "Inspect start/middle/end and identity-critical frames. Reject animation when any character changes identity, goes missing or is replaced; start again from last accepted reference."
     },
     {
       "id": "text_area_plain_white",
@@ -320,6 +398,25 @@
       "instruction": "If repeated editing causes identity drift, anatomy damage, text corruption, muddy rendering, or accumulated artifacts, stop editing that image and regenerate from canonical blocks plus the latest accepted reference."
     },
     {
+      "id": "fact_preserving_manzai",
+      "priority": 850,
+      "applies_to": [
+        "humorous_comic"
+      ],
+      "level": "must",
+      "instruction": "Build ordinary situation, oddity, escalation/repetition, then sharp punchline while preserving the supplied facts and clear visual scene."
+    },
+    {
+      "id": "anatomy_scene_redesign",
+      "priority": 845,
+      "applies_to": [
+        "character_generation",
+        "iterative_generation"
+      ],
+      "level": "must",
+      "instruction": "Check basic anatomy, camera geometry, hands and interactions; where composition is fundamentally broken, redesign the scene instead of layering small corrections."
+    },
+    {
       "id": "avoid_excessive_gloss",
       "priority": 840,
       "applies_to": [
@@ -336,16 +433,34 @@
       ],
       "level": "must",
       "instruction": "The current explicit user request overrides soft defaults, but does not silently override registered character hard_locks."
-    },
-    {
-      "id": "keep_approved_motion_when_animating_caption",
-      "priority": 920,
-      "applies_to": [
-        "animated_caption",
-        "iterative_generation"
-      ],
-      "level": "must",
-      "instruction": "When the user asks to add or animate text on an approved animated image, preserve the approved character-frame sequence and gesture anatomy as an unchanged base; move only the typography overlay. If rebuilding rather than compositing is required, disclose that exact motion retention cannot be guaranteed and compare hand frames before acceptance."
     }
-  ]
+  ],
+  "production_sets": {
+    "discord_trio_daily_20261112": {
+      "status": "10 approved, 6 pending",
+      "approved": [
+        "りょうかい！",
+        "ありがとう！",
+        "ごめんね",
+        "おねがい！",
+        "いま行く！",
+        "おかえり！",
+        "またね！",
+        "なんで！？",
+        "だいじょうぶ？",
+        "がんばれ！"
+      ],
+      "pending": [
+        "おめでとう！",
+        "えらい！",
+        "まかせて！",
+        "なるほど！",
+        "ひみつ！",
+        "わーい！"
+      ],
+      "output": "one individual image per label; exact sole label; all three characters; real alpha; no collage cropping",
+      "animation": "reject any identity drift at any frame",
+      "source": "user decisions on 2026-11-12"
+    }
+  }
 }
