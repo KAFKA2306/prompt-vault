@@ -2093,6 +2093,41 @@
       "role": "layout",
       "category": "形式・レイアウト",
       "content": "One image is exactly one square Discord sticker, with Kafka, Sylfanel and Shiroi~nu visible together. Large readable faces and gestures, tightly grouped but distinct silhouettes, bold clean outlines and a white cutout sticker border; pastel blue and lavender accents, matte chibi anime finish, genuine transparent background, no scenery, no grid, no date, no watermark. One short Japanese reaction phrase placed prominently in a clean single text region, accurate spelling, strong contrast. Readable when reduced to 64px. Keep accents and props minimal. Preserve each character identity; do not treat a 4x4 preview sheet or cropped panel as a substitute for a correctly composed single sticker."
+    },
+    {
+      "id": "animation_preserve_approved_character_motion",
+      "title": "動画: 採用済みキャラクター動作の固定",
+      "role": "control",
+      "category": "動画・動作",
+      "content": "When adding or revising animated text on an approved character animation, treat the approved character frames as the immutable base layer. Do not redraw, retime, reframe or change the face, hand, finger shapes or gesture progression. Animate typography only as a separate overlay. If exact overlay editing is unavailable, use the approved frames as references and explicitly check each gesture frame; never claim pixel-identical preservation after regeneration."
+    },
+    {
+      "id": "pose_kafka_finger_point_reveal",
+      "title": "ポーズ: Kafka 指差しからウインク",
+      "role": "pose",
+      "category": "ポーズ",
+      "content": "Start with the pointing hand lowered or outside the crop; gradually lift the same hand toward the viewer into a natural index-finger point, with the other fingers gently curled and the thumb relaxed. Hold the point as Kafka talks, then wink and smile. Keep the wrist, knuckles, finger count, scale and camera foreshortening anatomically coherent across every frame. Do not replace the point with a thumbs-up or begin every frame with the hand already extended."
+    },
+    {
+      "id": "text_lets_gamble_animated",
+      "title": "文字: LET’S GAMBLE! バウンス",
+      "role": "text",
+      "category": "テキスト・動画",
+      "content": "Exact English caption: “LET’S GAMBLE!” in bold readable uppercase letters. Use pale cyan/white for LET’S and soft lavender-pink for GAMBLE!, with dark blue outline and restrained cyan glow. Place the title in the lower third without covering the face or pointing hand. Letters bounce and briefly overshoot in a staggered rhythm, expand slightly on GAMBLE!, then settle. Animate the title independently from the character; never change a hand gesture to accommodate typography. Keep spelling and punctuation stable frame to frame."
+    },
+    {
+      "id": "layout_square_twelve_frame_loop",
+      "title": "形式: 正方形12コマGIFループ",
+      "role": "layout",
+      "category": "形式・レイアウト",
+      "content": "Square 1:1 animated output; twelve equal image cells arranged as a 3 × 4 spritesheet for GIF assembly. Use 130 ms per frame (about 1.56 seconds per cycle), with no gutters, captions outside the image or cell numbering. Keep camera position, crop and subject scale stable, and make adjacent frames a coherent temporal sequence with a brief final smile hold before looping."
+    },
+    {
+      "id": "background_kafka_cool_bright_room",
+      "title": "背景: 明るい青紫の室内",
+      "role": "background",
+      "category": "背景",
+      "content": "Bright softly blurred indoor evening backdrop with blue and lavender window highlights and gentle cyan accents. Maintain a readable, well-lit face and foreground hand, clear light-blue hair and lavender tips, soft depth of field and natural low-contrast shadows. Avoid heavy dark blue tint, murky underexposure, harsh neon overload or distracting objects."
     }
   ],
   "templates": [
@@ -9785,6 +9820,24 @@
       "summary": "【候補6種】全16種の16番。わーい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
       "artifacts": [],
       "generated_prompt": "Create one individual Discord sticker. The three characters must all appear, using the referenced identity and sticker layout blocks. Text: 「わーい！」 exactly, in large rounded legible Japanese lettering, on a clear plain text area. Scene: Kafka raises both hands a little; Sylfanel spins gently in celebration; the white dog jumps in the air with paws out. No additional lettering, no multi-panel sheet. Keep the background transparent and composition readable at small size."
+    },
+    {
+      "id": "kafka_lets_gamble_kinetic_gif",
+      "title": "Kafka「LET’S GAMBLE!」踊る文字GIF",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "background_kafka_cool_bright_room",
+        "pose_kafka_finger_point_reveal",
+        "animation_preserve_approved_character_motion",
+        "text_lets_gamble_animated",
+        "layout_square_twelve_frame_loop",
+        "rendering_soft_standard"
+      ],
+      "kind": "social",
+      "purpose": "明るいかふかの採用済み指差しアニメーションに、英語のLET’S GAMBLE!を独立レイヤーで踊らせる",
+      "summary": "12フレーム・130ms。指差しの開始→持ち上げ→維持→ウインクを保持し、文字のみバウンスさせる。文字編集で手の形が変わった過去の失敗を再発防止。",
+      "created_at": "2026-11-13T12:21:00+09:00"
     }
   ]
 }
