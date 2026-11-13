@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-13",
   "load_order": [
     "db/prompts.json",
     "db/machine_rules.json"
@@ -212,6 +212,18 @@
         "アイコン",
         "ブランド"
       ]
+    },
+    "animated_caption": {
+      "aliases": [
+        "animated caption",
+        "kinetic typography",
+        "踊る文字",
+        "文字を踊らせる",
+        "動く文字"
+      ],
+      "preferred_blocks": [
+        "animation_preserve_approved_character_motion"
+      ]
     }
   },
   "composition": {
@@ -324,6 +336,16 @@
       ],
       "level": "must",
       "instruction": "The current explicit user request overrides soft defaults, but does not silently override registered character hard_locks."
+    },
+    {
+      "id": "keep_approved_motion_when_animating_caption",
+      "priority": 920,
+      "applies_to": [
+        "animated_caption",
+        "iterative_generation"
+      ],
+      "level": "must",
+      "instruction": "When the user asks to add or animate text on an approved animated image, preserve the approved character-frame sequence and gesture anatomy as an unchanged base; move only the typography overlay. If rebuilding rather than compositing is required, disclose that exact motion retention cannot be guaranteed and compare hand frames before acceptance."
     }
   ]
 }
