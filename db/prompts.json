@@ -2085,14 +2085,14 @@
       "title": "しろい〜ぬ: Discordスタンプ用参照",
       "role": "identity",
       "category": "キャラクター核",
-      "content": "Shiroi~nu (しろい〜ぬ) is a small fluffy white dog mascot. Preserve the rounded fluffy silhouette, soft white fur, friendly compact face, and small paws. The blue scarf is a styling detail of the current Discord trio sticker series, not a global identity hard lock. When a user-supplied original character reference is available, use that as visual identity authority instead of inferring anatomy or breed from prior generated stickers. Do not replace the dog with a cat or a different mascot."
+      "content": "Shiroi~nu (しろい〜ぬ) is the established small, rounded, pure-white fluffy dog mascot. Soft drooping ears, short legs, tiny deep blue-green eyes and nose, a very small mouth, small paws and a plush-like 3D silhouette are defining reference traits. When an original user-provided image is available, treat it as the primary visual identity authority; do not invent a dog breed or replace the dog with a cat or another mascot. The blue scarf is optional styling in a Discord sticker series, not a global identity hard lock. Preserve recognizability even when adapting the rendering style."
     },
     {
       "id": "discord_trio_daily_sticker_layout",
       "title": "Discord 3人組・日常リアクションスタンプ",
       "role": "layout",
       "category": "形式・レイアウト",
-      "content": "One image is exactly one square Discord sticker, with Kafka, Sylfanel and Shiroi~nu visible together. Large readable faces and gestures, tightly grouped but distinct silhouettes, bold clean outlines and a white cutout sticker border; pastel blue and lavender accents, matte chibi anime finish, genuine transparent background, no scenery, no grid, no date, no watermark. One short Japanese reaction phrase placed prominently in a clean single text region, accurate spelling, strong contrast. Readable when reduced to 64px. Keep accents and props minimal. Preserve each character identity; do not treat a 4x4 preview sheet or cropped panel as a substitute for a correctly composed single sticker."
+      "content": "One image is exactly one square Discord sticker, with Kafka, Sylfanel and Shiroi~nu visible together. Large readable faces and gestures, tightly grouped but distinct silhouettes, bold clean outlines and a white cutout sticker border; pastel blue and lavender accents, matte chibi anime finish, genuine transparent background, no scenery, no grid, no date, no watermark. One short Japanese reaction phrase placed prominently in a clean single text region, accurate spelling, strong contrast. Readable when reduced to 64px. Keep accents and props minimal. The only visible letters must be the chosen reaction label, with no explanatory subtitle. Preserve each character identity; do not treat a 4x4 preview sheet or cropped panel as a substitute for a correctly composed single sticker."
     },
     {
       "id": "animation_preserve_approved_character_motion",
@@ -2128,6 +2128,62 @@
       "role": "background",
       "category": "背景",
       "content": "Bright softly blurred indoor evening backdrop with blue and lavender window highlights and gentle cyan accents. Maintain a readable, well-lit face and foreground hand, clear light-blue hair and lavender tips, soft depth of field and natural low-contrast shadows. Avoid heavy dark blue tint, murky underexposure, harsh neon overload or distracting objects."
+    },
+    {
+      "id": "kafka_quiet_cinematic_style",
+      "title": "かふか: 静かな映画的描写",
+      "role": "style",
+      "category": "描画",
+      "content": "Soft cinematic anime realism with emotionally grounded human presence, quiet emotional futurism, observational loneliness, muted blue-gray and lavender undertones, understated natural expressions, slight human facial asymmetry, subtle imperfect strands, soft skin texture, low-contrast natural light, matte non-glossy rendering, photographic framing, gentle depth of field. This is a scene style, not a universal style requirement. Keep Kafka's core appearance; outfit, season, place and genre may vary. Avoid idol posing, exaggerated eye size, plastic skin, strong neon, and generic polished anime."
+    },
+    {
+      "id": "character_system_separation",
+      "title": "キャラクターデザイン混同防止",
+      "role": "memory",
+      "category": "キャラクター固定",
+      "content": "Keep Kafka, Sylfanel, Shafuka, Miyu and Shiroi~nu as separate identities. Kafka's commonly referenced colors are white, pale blue, lavender, navy and silver; do not inherit another unnamed character's four-principle palette (cream, pale mint, dusty pink, deep navy), simplified curved-shape system or prescribed sleepy-expression range. Do not swap Kafka's blue hair and triangle hairpin with Shafuka's black/pink bob or Miyu's side ponytail. User-approved visual references outrank invented incidental costume details."
+    },
+    {
+      "id": "single_image_output_contract",
+      "title": "1パターン1画像・出力単位",
+      "role": "layout",
+      "category": "形式・レイアウト",
+      "content": "Default: make exactly one independent finished image per concept, not a multi-design grid, collage, sprite sheet or crop from a contact sheet. Each separately requested variant has its own composition and image. Use a grid, manga panels, contact sheet or animation spritesheet only when the user explicitly asks for that output. When producing distinct concepts in a batch, vary situation, viewpoint and rendering style without changing registered character identities."
+    },
+    {
+      "id": "nordic_travel_photogrid",
+      "title": "北欧旅行3×3フォトグリッド",
+      "role": "layout",
+      "category": "形式・レイアウト",
+      "content": "When an explicit 3x3 travel scene grid is requested: exactly nine complete independent visual scenes in a wide balanced 3x3 grid, separated by thin clean gutters; photographic, soft cinematic anime realism, natural winter lighting and textures, emotionally grounded compositions. Kafka and Sylfanel keep distinct locked identities. Show varied travel perspectives in northern Norway and Finland. No titles, captions, numbering, logos, UI or decorative footer. Do not use this grid for unrelated single-image requests."
+    },
+    {
+      "id": "manzai_comic_structure",
+      "title": "漫画: ボケ・ツッコミの構成",
+      "role": "situation",
+      "category": "漫画",
+      "content": "For humorous manga and reaction illustrations, preserve the actual given facts and develop the beats in this order: ordinary situation -> concrete oddity -> escalation or repetition -> sharp tsukkomi/punchline. Make the physical scene clear enough to understand immediately. Use readable Japanese speech bubbles; if lengthy or accuracy-critical, draw empty bubbles and typeset verified text afterward on pure solid white. Never invent factual claims just to support a joke."
+    },
+    {
+      "id": "trio_stamp_quality_contract",
+      "title": "3人スタンプ: 採用仕様と検収",
+      "role": "layout",
+      "category": "形式・レイアウト",
+      "content": "Each approved daily reaction is ONE standalone square sticker image, never a cropped panel or collage. Include all three locked identities: Kafka (long light-blue hair, silver triangular cat hairpin, blue-purple eyes), Sylfanel (very long silky silver-lilac hair, pale violet eyes, floral accessory), Shiroi~nu (small round pure-white fluffy dog with droopy ears, short legs, tiny deep blue-green eyes and nose, tiny mouth). Genuine transparent background / alpha, no scenery. The exact sole visible text is the sticker's approved Japanese name; no extra title, logo, number or notes. Verify three identities, Japanese text, actual transparency, anatomy, small-size readability and independence of asset. A wrong-character GIF or grid is rejected, not a finished deliverable."
+    },
+    {
+      "id": "trio_gif_frame_continuity",
+      "title": "GIF: 全フレームの同一性",
+      "role": "memory",
+      "category": "品質検証",
+      "content": "An animated trio sticker must keep Kafka, Sylfanel and Shiroi~nu visually consistent in every frame: hair, eyes, adornments, facial identity, character count, proportions and relative placement. Use the most recent user-approved individual sticker as appearance reference, generate a uniform spritesheet if necessary, and inspect sampled start/middle/end frames of the assembled transparent loop. A single incorrect character, missing member, visible grid or unintended text invalidates the GIF; redraw rather than passing a wrong identity forward."
+    },
+    {
+      "id": "visual_anatomy_composition_check",
+      "title": "構図・人体の修正基準",
+      "role": "memory",
+      "category": "品質検証",
+      "content": "Before accepting an illustration, check shoulders/arms/hands, finger count, perspective, interactions, hair continuity, cropping, ground contact and natural posture. If the scene's basic anatomy or viewpoint is incoherent, simplify or redesign the composition fundamentally rather than patching details repeatedly. After repeated drift, regenerate from identity locks and the last accepted reference; do not make an invalid edit the new reference."
     }
   ],
   "templates": [
@@ -9529,7 +9585,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:01】全16種の01番。りょうかい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9548,7 +9605,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:02】全16種の02番。ありがとう！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9567,7 +9625,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:03】全16種の03番。ごめんねの表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9586,7 +9645,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:05】全16種の04番。いま行く！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9605,7 +9665,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:04】全16種の05番。おねがい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9624,7 +9685,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の06番。おめでとう！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9643,7 +9705,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:06】全16種の07番。おかえり！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9662,7 +9725,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:07】全16種の08番。またね！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9681,7 +9745,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の09番。えらい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9700,7 +9765,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:08】全16種の10番。なんで！？の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9719,7 +9785,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:09】全16種の11番。だいじょうぶ？の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9738,7 +9805,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の12番。まかせて！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9757,7 +9825,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の13番。なるほど！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9776,7 +9845,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の14番。ひみつ！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9795,7 +9865,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【採用10種:10】全16種の15番。がんばれ！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9814,7 +9885,8 @@
         "emotional_direction",
         "shiroinu_sticker_identity",
         "discord_trio_daily_sticker_layout",
-        "negative_common"
+        "negative_common",
+        "trio_stamp_quality_contract"
       ],
       "purpose": "かふか・Sylfanel・しろい〜ぬの3人がそろう、日常会話用Discordスタンプ。",
       "summary": "【候補6種】全16種の16番。わーい！の表情・動作を1枚で表現。生成画像は別途作成済み、リポジトリへのPNG登録は未完了。",
@@ -9838,6 +9910,67 @@
       "purpose": "明るいかふかの採用済み指差しアニメーションに、英語のLET’S GAMBLE!を独立レイヤーで踊らせる",
       "summary": "12フレーム・130ms。指差しの開始→持ち上げ→維持→ウインクを保持し、文字のみバウンスさせる。文字編集で手の形が変わった過去の失敗を再発防止。",
       "created_at": "2026-11-13T12:21:00+09:00"
+    },
+    {
+      "id": "kafka_quiet_cinematic_portrait",
+      "title": "かふか: 静かなシネマティック1枚絵",
+      "kind": "standard",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "kafka_quiet_cinematic_style",
+        "single_image_output_contract",
+        "visual_anatomy_composition_check"
+      ],
+      "purpose": "表情・空気・写真的な構図を軸に、Kafkaの一枚絵を作る",
+      "summary": "水色髪とラベンダーの毛先、三角ヘアピン、青紫の瞳を維持し、衣装・背景・照明は都度変える。"
+    },
+    {
+      "id": "kafka_sylfanel_nordic_travel_photogrid",
+      "title": "Kafka×Sylfanel 北欧9シーン",
+      "kind": "standard",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "nordic_travel_photogrid",
+        "kafka_quiet_cinematic_style",
+        "visual_anatomy_composition_check"
+      ],
+      "purpose": "ノルウェー北部・フィンランド旅行の9シーンを文字なしのフォトグリッドで生成",
+      "summary": "3×3、9つの完全な場面、細い区切り線、風景・二人の外見を固定、文字なし。"
+    },
+    {
+      "id": "kafka_manzai_comic",
+      "title": "Kafka 漫才リアクション漫画",
+      "kind": "comic",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "comic_layout",
+        "manzai_comic_structure",
+        "visual_anatomy_composition_check"
+      ],
+      "purpose": "普通→違和感→誇張・反復→鋭いツッコミの流れを漫画にする",
+      "summary": "事実とセリフの根拠を保ち、1コマごとに視覚的に状況を伝える。"
+    },
+    {
+      "id": "discord_trio_daily_animation_contract",
+      "title": "Kafka×Sylfanel×しろい〜ぬ GIFの作成基準",
+      "kind": "system",
+      "blocks": [
+        "kafka_core",
+        "kafka_identity_lock",
+        "sylfanel_core",
+        "character_sylfanel",
+        "shiroinu_sticker_identity",
+        "discord_trio_daily_sticker_layout",
+        "trio_stamp_quality_contract",
+        "trio_gif_frame_continuity"
+      ],
+      "purpose": "3人スタンプのGIF化時にフレーム間の外見一致を保証する",
+      "summary": "別キャラ・人数欠け・位置の崩れがあるGIFは不採用。既存の承認済み一枚絵を参照する。"
     }
   ]
 }
