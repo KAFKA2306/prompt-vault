@@ -1,5 +1,7 @@
 import importlib.util
 import unittest
+from unittest.mock import Mock, patch
+import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,6 +12,26 @@ SPEC.loader.exec_module(mod)
 
 
 class AutomationCollectorTests(unittest.TestCase):
+    def test_gh_get_retries_transient_gateway_error(self):
+        response = Mock()
+        response.__enter__ = Mock(return_value=response)
+        response.__exit__ = Mock(return_value=False)
+        response.read = Mock(return_value=b'{"ok": true}')
+        error = urllib.error.HTTPError("url", 504, "gateway timeout", {}, None)
+        with patch.object(mod.urllib.request, "urlopen", side_effect=[error, response]) as urlopen, patch.object(mod.time, "sleep") as sleep:
+            self.assertEqual(mod.gh_get("/test"), {"ok": True})
+        self.assertEqual(urlopen.call_count, 2)
+        self.assertEqual(urlopen.call_args_list[0].kwargs["timeout"], 60)
+        sleep.assert_called_once_with(1)
+
+    def test_gh_get_raises_after_transient_retries_are_exhausted(self):
+        errors = [urllib.error.HTTPError("url", 502, "bad gateway", {}, None) for _ in range(5)]
+        with patch.object(mod.urllib.request, "urlopen", side_effect=errors) as urlopen, patch.object(mod.time, "sleep") as sleep:
+            with self.assertRaises(urllib.error.HTTPError):
+                mod.gh_get("/test")
+        self.assertEqual(urlopen.call_count, 5)
+        self.assertEqual([call.args[0] for call in sleep.call_args_list], [1, 2, 4, 8])
+
     def test_schedule_and_manual_dispatch_are_separate(self):
         runs = [
             {"id": 1, "html_url": "u1", "workflow_id": 10, "head_sha": "a", "event": "schedule", "status": "completed", "conclusion": "success", "run_attempt": 1, "created_at": "2026-08-01T00:00:00Z"},

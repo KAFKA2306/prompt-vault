@@ -1,4 +1,6 @@
 import unittest
+from unittest.mock import Mock, patch
+import urllib.error
 from datetime import datetime, timezone
 
 from scripts.results.collect_code_quality import (
@@ -8,9 +10,30 @@ from scripts.results.collect_code_quality import (
     ratchet_status,
     validate_native_evidence,
 )
+from scripts.results import collect_code_quality as collector
 
 
 class CodeQualityCollectorTests(unittest.TestCase):
+    def test_gh_get_retries_transient_gateway_error(self):
+        response = Mock()
+        response.__enter__ = Mock(return_value=response)
+        response.__exit__ = Mock(return_value=False)
+        response.read = Mock(return_value=b'{"ok": true}')
+        error = urllib.error.HTTPError("url", 502, "bad gateway", {}, None)
+        with patch.object(collector.urllib.request, "urlopen", side_effect=[error, response]) as urlopen, patch.object(collector.time, "sleep") as sleep:
+            self.assertEqual(collector.gh_get("/test"), {"ok": True})
+        self.assertEqual(urlopen.call_count, 2)
+        self.assertEqual(urlopen.call_args_list[0].kwargs["timeout"], 60)
+        sleep.assert_called_once_with(1)
+
+    def test_gh_get_raises_after_transient_retries_are_exhausted(self):
+        errors = [urllib.error.HTTPError("url", 504, "gateway timeout", {}, None) for _ in range(5)]
+        with patch.object(collector.urllib.request, "urlopen", side_effect=errors) as urlopen, patch.object(collector.time, "sleep") as sleep:
+            with self.assertRaises(urllib.error.HTTPError):
+                collector.gh_get("/test")
+        self.assertEqual(urlopen.call_count, 5)
+        self.assertEqual([call.args[0] for call in sleep.call_args_list], [1, 2, 4, 8])
+
     def test_quality_classifier(self):
         self.assertTrue(is_quality_run({"name": "Quality", "path": ".github/workflows/quality.yml"}))
         self.assertTrue(is_quality_run({"name": "Smoke", "path": ".github/workflows/smoke.yml"}))

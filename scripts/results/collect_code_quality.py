@@ -6,6 +6,9 @@ import json
 import os
 import urllib.parse
 import urllib.request
+import urllib.error
+import socket
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -16,6 +19,7 @@ OWNER = "KAFKA2306"
 QUALITY_HINTS = ("quality", "lint", "type", "test", "smoke", "validate", "check")
 MAX_WORKERS = 8
 NATIVE_SCHEMA_VERSION = "kafka.results.native-tool-metric.v1"
+TRANSIENT_HTTP = {429, 502, 503, 504}
 
 
 def gh_get(path: str, token: str | None = None):
@@ -24,17 +28,28 @@ def gh_get(path: str, token: str | None = None):
     req.add_header("X-GitHub-Api-Version", API_VERSION)
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return json.load(response)
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in TRANSIENT_HTTP or attempt == 4:
+                raise
+        except (TimeoutError, socket.timeout, urllib.error.URLError) as exc:
+            if isinstance(exc, urllib.error.URLError) and not isinstance(exc.reason, (TimeoutError, socket.timeout)):
+                raise
+            if attempt == 4:
+                raise
+        time.sleep(min(2 ** attempt, 16))
 
 
 def list_owner_repositories(owner: str, token: str | None = None) -> list[dict]:
     repositories: list[dict] = []
     page = 1
     while True:
-        batch = gh_get(f"/users/{owner}/repos?per_page=100&type=owner&sort=full_name&page={page}", token)
+        batch = gh_get(f"/users/{owner}/repos?per_page=50&type=owner&sort=full_name&page={page}", token)
         repositories.extend(batch)
-        if len(batch) < 100:
+        if len(batch) < 50:
             return repositories
         page += 1
 
@@ -45,12 +60,12 @@ def list_repository_runs(owner: str, repo: str, since: datetime, token: str | No
     page = 1
     while True:
         payload = gh_get(
-            f"/repos/{owner}/{repo}/actions/runs?per_page=100&page={page}&created={created}",
+            f"/repos/{owner}/{repo}/actions/runs?per_page=50&page={page}&created={created}",
             token,
         )
         batch = payload.get("workflow_runs", [])
         runs.extend(batch)
-        if len(batch) < 100:
+        if len(batch) < 50:
             return runs
         page += 1
 

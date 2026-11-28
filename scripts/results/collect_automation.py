@@ -6,6 +6,9 @@ import json
 import os
 import urllib.parse
 import urllib.request
+import time
+import socket
+import urllib.error
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -13,6 +16,7 @@ from pathlib import Path
 API = "https://api.github.com"
 OWNER = "KAFKA2306"
 MANUAL_EVENTS = {"workflow_dispatch", "repository_dispatch"}
+TRANSIENT_HTTP = {429, 502, 503, 504}
 
 
 def gh_get(path: str, token: str | None = None):
@@ -21,8 +25,19 @@ def gh_get(path: str, token: str | None = None):
     req.add_header("X-GitHub-Api-Version", "2026-03-10")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return json.load(response)
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in TRANSIENT_HTTP or attempt == 4:
+                raise
+        except (TimeoutError, socket.timeout, urllib.error.URLError) as exc:
+            if isinstance(exc, urllib.error.URLError) and not isinstance(exc.reason, (TimeoutError, socket.timeout)):
+                raise
+            if attempt == 4:
+                raise
+        time.sleep(min(2 ** attempt, 16))
 
 
 def aggregate(repo: str, runs: list[dict], since: datetime, generated_at: datetime) -> dict:
@@ -92,7 +107,14 @@ def aggregate(repo: str, runs: list[dict], since: datetime, generated_at: dateti
 def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[Path]:
     now = datetime.now(timezone.utc).replace(microsecond=0)
     since = now - timedelta(days=30)
-    repos = gh_get(f"/users/{owner}/repos?per_page=100&type=owner&sort=full_name", token)
+    repos = []
+    page = 1
+    while True:
+        batch = gh_get(f"/users/{owner}/repos?per_page=50&type=owner&sort=full_name&page={page}", token)
+        repos.extend(batch)
+        if len(batch) < 50:
+            break
+        page += 1
     written: list[Path] = []
     out_dir.mkdir(parents=True, exist_ok=True)
     created = urllib.parse.quote(f">={since.strftime('%Y-%m-%dT%H:%M:%SZ')}")
@@ -100,8 +122,16 @@ def collect_owner(owner: str, out_dir: Path, token: str | None = None) -> list[P
         if repo.get("archived"):
             continue
         name = repo["name"]
-        payload = gh_get(f"/repos/{owner}/{name}/actions/runs?per_page=100&created={created}", token)
-        report = aggregate(f"{owner}/{name}", payload.get("workflow_runs", []), since, now)
+        runs = []
+        page = 1
+        while True:
+            payload = gh_get(f"/repos/{owner}/{name}/actions/runs?per_page=50&page={page}&created={created}", token)
+            batch = payload.get("workflow_runs", [])
+            runs.extend(batch)
+            if len(batch) < 50:
+                break
+            page += 1
+        report = aggregate(f"{owner}/{name}", runs, since, now)
         path = out_dir / f"{name}.json"
         path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(path)
