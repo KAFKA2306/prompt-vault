@@ -9914,7 +9914,7 @@
     {
       "id": "kafka_quiet_cinematic_portrait",
       "title": "かふか: 静かなシネマティック1枚絵",
-      "kind": "standard",
+      "kind": "social",
       "blocks": [
         "kafka_core",
         "kafka_identity_lock",
@@ -9928,7 +9928,7 @@
     {
       "id": "kafka_sylfanel_nordic_travel_photogrid",
       "title": "Kafka×Sylfanel 北欧9シーン",
-      "kind": "standard",
+      "kind": "sheet",
       "blocks": [
         "kafka_core",
         "kafka_identity_lock",
